@@ -5,7 +5,7 @@
 #ifndef CPP_VECTOR2INT_H
 #define CPP_VECTOR2INT_H
 
-class Vector2int {
+struct Vector2int {
 public:
     int x;
     int y;

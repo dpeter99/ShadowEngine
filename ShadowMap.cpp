@@ -3,3 +3,7 @@
 //
 
 #include "ShadowMap.h"
+
+void ShadowMapLayer::SetTile(Vector2int pos, int tileID){
+    data[(pos.y * this->map->width) + pos.x]=tileID;
+}

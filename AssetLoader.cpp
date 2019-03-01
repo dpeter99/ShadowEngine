@@ -4,6 +4,7 @@
 
 #include <fstream>
 #include <iostream>
+#include <sstream>
 #include "list"
 
 #include "AssetLoader.h"
@@ -11,7 +12,7 @@
 
 void AssetLoader::LoadMap() {
 
-    ShadowMap map;
+    ShadowMap* map = new ShadowMap();
 
     Element& root = LoadFile();
 
@@ -20,21 +21,42 @@ void AssetLoader::LoadMap() {
     {
         auto mapElement = it->second;
 
-        map.height = std::stoi(mapElement->properties.find("Height")->second->value);
-        map.width = std::stoi(mapElement->properties.find("Width")->second->value);
+        map->height = std::stoi(mapElement->properties.find("Height")->second->value);
+        map->width = std::stoi(mapElement->properties.find("Width")->second->value);
 
-        map.tileWidth = std::stoi(mapElement->properties.find("TileWidth")->second->value);
-        map.tileHeight = std::stoi(mapElement->properties.find("TileHeight")->second->value);
+        map->tileWidth = std::stoi(mapElement->properties.find("TileWidth")->second->value);
+        map->tileHeight = std::stoi(mapElement->properties.find("TileHeight")->second->value);
 
 
-        map.layers = new std::vector<ShadowMapLayer*>(mapElement->properties.find("Layers")->second->properties.size());
+        map->layers = new std::vector<ShadowMapLayer*>(mapElement->properties.find("Layers")->second->properties.size());
+        int pos = 0;
         for (auto i : mapElement->properties.find("Layers")->second->properties) {
             auto layerElement = i.second;
 
+            auto layer = new ShadowMapLayer(*map);
+
+            layer->data = new int[map->width*map->height];
+            layer->name = layerElement->name;
+
+            std::stringstream parser(layerElement->properties.find("Map")->second->value);
+            for (int y = 0; y < map->height; ++y) {
+                for (int x = 0; x < map->width; ++x) {
+                    int a;
+                    parser >> a ;
+                    parser >> '.';
+                    layer->SetTile(Vector2int(x,y),0);
+                }
+            }
+
+            (*map->layers)[pos] = layer;
+
+            pos++;
         }
     }
 
     delete &root;
+
+    std::cout << "END" << std::endl;
 }
 
 //Property Name: Value

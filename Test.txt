@@ -1,15 +1,28 @@
-Map:{	Name:ASDASDASD.	Height:10.	Width:
-	10.
-	TileWidth:32.
-	TileHeight:32.
+Map:{
+	Name:ASDASDASD,
+	Height:10,
+	Width:
+	10,
+	TileWidth:32,
+	TileHeight:32,
 	Layers:{
-		ASD:{
-			Visible:1.
+		ASD1:{
+			Visible:1,
 			Map:
 				0.0.0.0.0
 				0.0.0.0.0
 				0.0.0.0.0
 				0.0.0.0.0
-				0.0.0.0.0
+				0.0.0.0.0,
 		}
-	}}
+		ASD2:{
+			Visible:1,
+			Map:
+				0.0.0.0.0
+				0.0.0.0.0
+				0.0.0.0.0
+				0.0.0.0.0
+				0.0.0.0.0,
+		}
+	}
+}

@@ -8,15 +8,27 @@
 
 #include <string>
 #include <vector>
+#include "ShadowMath/Vector2int.h"
 
+class ShadowMap;
 
 class ShadowMapLayer
 {
-    int(*map); //a row mayor flat 2d array
+public:
+    int(*data); //a row mayor flat 2d array
 
     std::string name;
 
     bool visible;
+
+    ShadowMap* map;
+
+    ShadowMapLayer(ShadowMap& m){
+        this->map = &m;
+    }
+
+
+    void SetTile(Vector2int pos, int tileID);
 };
 
 class ShadowMap {
@@ -29,7 +41,7 @@ public:
     int tileHeight;
     int tileWidth;
 
-    std::vector<ShadowMapLayer*>* layers;
+    std::vector<ShadowMapLayer*> *layers;
 };
 
 
