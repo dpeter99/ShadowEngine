@@ -3,6 +3,13 @@
 #include "AssetLoader.h"
 #include "ShadowMap/ShadowMapRenderer.h"
 
+// OpenGL headers
+#define GLEW_STATIC
+//#include "GL/glew.h"
+//#include "GL/glu.h"
+//#include "GL/gl.h"
+
+//#include <SDL2/SDL.h>
 
 int main() {
 
