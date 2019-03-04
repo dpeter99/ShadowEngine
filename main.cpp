@@ -6,7 +6,7 @@
 
 int main() {
 
-    //ShadowEntity::EntityRegistry registry;
+    ShadowEntity::EntityRegistry registry;
 
     //registry.ListPreRegisteredEntitys();
 
