@@ -8,7 +8,8 @@
 
 #include <string>
 #include <vector>
-#include "ShadowMath/Vector2int.h"
+#include "../ShadowMath/Vector2int.h"
+#include "../ShadowEntity/Entity.h"
 
 class ShadowMap;
 
@@ -29,6 +30,8 @@ public:
 
 
     void SetTile(Vector2int pos, int tileID);
+
+    int GetTile(Vector2int pos);
 };
 
 class ShadowMap {
@@ -41,7 +44,11 @@ public:
     int tileHeight;
     int tileWidth;
 
-    std::vector<ShadowMapLayer*> *layers;
+    std::vector<ShadowMapLayer*> layers;
+
+    std::vector<ShadowEntity::Entity*> entities;
+
+    ShadowMapLayer& GetLayer(int id);
 };
 
 

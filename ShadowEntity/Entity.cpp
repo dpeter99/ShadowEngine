@@ -24,8 +24,8 @@ namespace ShadowEntity {
 
     }
 
-    Entity& ShadowEntity::Entity::Create() {
-        std::cout << "Error: default reflection constructor";
+    Entity* ShadowEntity::Entity::Create() {
+        throw "The base entity cannot be instantiated";
     }
 
     Entity::~Entity() {

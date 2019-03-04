@@ -5,12 +5,14 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <algorithm>
 #include "list"
 
 #include "AssetLoader.h"
-#include "ShadowMap.h"
+#include "ShadowMap/ShadowMap.h"
+#include "ShadowEntity/EntityRegistry.h"
 
-void AssetLoader::LoadMap() {
+ShadowMap* AssetLoader::LoadMap() {
 
     ShadowMap* map = new ShadowMap();
 
@@ -28,7 +30,8 @@ void AssetLoader::LoadMap() {
         map->tileHeight = std::stoi(mapElement->properties.find("TileHeight")->second->value);
 
 
-        map->layers = new std::vector<ShadowMapLayer*>(mapElement->properties.find("Layers")->second->properties.size());
+        //map->layers = std::vector<ShadowMapLayer*>(mapElement->properties.find("Layers")->second->properties.size());
+        map->layers.reserve(mapElement->properties.find("Layers")->second->properties.size());
         int pos = 0;
         for (auto i : mapElement->properties.find("Layers")->second->properties) {
             auto layerElement = i.second;
@@ -38,25 +41,49 @@ void AssetLoader::LoadMap() {
             layer->data = new int[map->width*map->height];
             layer->name = layerElement->name;
 
-            std::stringstream parser(layerElement->properties.find("Map")->second->value);
+
+            std::string parse = layerElement->properties.find("Map")->second->value;
+            std::replace( parse.begin(), parse.end(), '.', ' ');
+            std::stringstream parser(parse);
             for (int y = 0; y < map->height; ++y) {
                 for (int x = 0; x < map->width; ++x) {
                     int a;
                     parser >> a ;
-                    parser >> '.';
-                    layer->SetTile(Vector2int(x,y),0);
+                    layer->SetTile(Vector2int(x,y),a);
                 }
             }
 
-            (*map->layers)[pos] = layer;
+            //map->layers[pos] = layer;
+            map->layers.push_back(layer);
 
             pos++;
         }
+
+        //Get the space for the entities
+        auto entities = mapElement->properties.find("Entities")->second->properties;
+        map->entities.reserve(entities.size());
+        //Load all the entities
+        for (auto i : entities) {
+            auto entityElement = i.second;
+
+            std::string name = entityElement->name;
+
+            ShadowEntity::Entity* ent;
+            ent = ShadowEntity::EntityRegistry::_registry->InstaciateEntity(name);
+
+
+
+            map->entities.push_back(ent);
+
+        }
+
     }
 
     delete &root;
 
     std::cout << "END" << std::endl;
+
+    return map;
 }
 
 //Property Name: Value

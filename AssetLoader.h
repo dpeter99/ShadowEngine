@@ -6,6 +6,7 @@
 #define SHADOWENGINE_MAPLOADER_H
 
 #include <map>
+#include "ShadowMap/ShadowMap.h"
 
 class Element{
 public:
@@ -28,7 +29,7 @@ class AssetLoader {
     Element& LoadFile();
 
 public:
-    void LoadMap();
+    ShadowMap* LoadMap();
 
 };
 

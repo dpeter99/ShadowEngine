@@ -9,24 +9,34 @@ namespace ShadowEntity {
 
     //PreRegistry
 
-    //std::map<std::string, int> EntityRegistry::PreEntityRegistryMap;
-
-    bool EntityRegistry::PreRegisterEntity(std::string id, Entity *entityTemplate) {
-        EntityRegistry::PreEntityRegistryMap[id]=entityTemplate;
+    bool EntityRegistry::RegisterEntity(std::string id, Entity *entityTemplate) {
+        EntityRegistry::EntityRegistryMap[id]=entityTemplate;
         return true;
     }
 
     void EntityRegistry::ListPreRegisteredEntitys() {
-        for (auto it=PreEntityRegistryMap.begin(); it != PreEntityRegistryMap.end(); ++it)
+        for (auto it=EntityRegistryMap.begin(); it != EntityRegistryMap.end(); ++it)
             std::cout << it->first << " => " << it->second << '\n';
     }
 
     //Registry
+    EntityRegistry* EntityRegistry::_registry = nullptr;
+
     EntityRegistry::EntityRegistry() {
         //Setup
-        printf("EntityRegistrySetup \n");
-        PreRegisterDefaults();
 
+        if(_registry != nullptr){
+            throw "Registry already present, there can only be one!";
+        }
+        else{
+            printf("EntityRegistrySetup \n");
+            PreRegisterDefaults();
+            _registry = this;
+        }
+    }
+
+    Entity *EntityRegistry::InstaciateEntity(std::string id) {
+        return this->EntityRegistryMap[id]->Create();
     }
 
 }

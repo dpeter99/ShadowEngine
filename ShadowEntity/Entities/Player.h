@@ -13,11 +13,9 @@ namespace ShadowEntity {
     public:
         static std::string id;
 
-        Entity& Create();
+        Entity* Create() override;
 
-    protected:
-
-        static bool registered;
+        void Draw() override;
     };
 }
 

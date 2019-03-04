@@ -8,9 +8,8 @@
 #include <string>
 #include <iostream>
 
-//#include "EntityRegistry.h"
+#include "EntityBase.h"
 
-//using namespace std;
 namespace ShadowEntity {
 
 
@@ -21,7 +20,7 @@ namespace ShadowEntity {
 
         //static std::string Register();
     public:
-        virtual Entity& Create();
+        virtual Entity* Create();
 
 
         Entity();

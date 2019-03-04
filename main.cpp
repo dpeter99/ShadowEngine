@@ -1,6 +1,7 @@
 #include <iostream>
 #include "ShadowEntity/EntityRegistry.h"
 #include "AssetLoader.h"
+#include "ShadowMap/ShadowMapRenderer.h"
 
 
 int main() {
@@ -10,7 +11,9 @@ int main() {
     //registry.ListPreRegisteredEntitys();
 
     AssetLoader loader;
-    loader.LoadMap();
+    ShadowMap* map = loader.LoadMap();
+
+    ShadowMapRenderer::RenderMap(*map);
 
     return 0;
 }
