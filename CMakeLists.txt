@@ -3,6 +3,13 @@ project(ShadowEngine)
 
 set(CMAKE_CXX_STANDARD 14)
 
+include(dependencies/dependencies.cmake)
+
+
+include_directories(dependencies/include)
+
+
+
 add_executable(ShadowEngine main.cpp
         ShadowMath/Vector2float.h ShadowMath/Vector2float.cpp
         ShadowMath/Vector2int.h ShadowMath/Vector2int.cpp
@@ -14,3 +21,10 @@ add_executable(ShadowEngine main.cpp
         ShadowMap/ShadowMapRenderer.cpp ShadowMap/ShadowMapRenderer.h
         ShadowEntity/Entities/Light.cpp ShadowEntity/Entities/Light.h
         ShadowEntity/EntityBase.h)
+
+
+target_link_libraries(ShadowEngine mingw32)
+target_link_libraries(ShadowEngine user32)
+target_link_libraries(ShadowEngine gdi32)
+target_link_libraries(ShadowEngine winmm)
+target_link_libraries(ShadowEngine dxguid)
