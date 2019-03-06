@@ -1,16 +1,18 @@
 cmake_minimum_required(VERSION 3.13)
-project(ShadowEngine)
+project(ShadowEngine LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 
+
 include(dependencies/dependencies.cmake)
 
+include_directories(${DEPENDENCIES_INCLUDES})
+include_directories(.)
 
-include_directories(dependencies/include)
 
-
-
-add_executable(ShadowEngine main.cpp
+add_executable(ShadowEngine
+        ${DEPENDENCIES_EXEC}
+        main.cpp
         ShadowMath/Vector2float.h ShadowMath/Vector2float.cpp
         ShadowMath/Vector2int.h ShadowMath/Vector2int.cpp
         ShadowEntity/Entity.cpp ShadowEntity/Entity.h
@@ -24,7 +26,27 @@ add_executable(ShadowEngine main.cpp
 
 
 target_link_libraries(ShadowEngine mingw32)
-target_link_libraries(ShadowEngine user32)
-target_link_libraries(ShadowEngine gdi32)
-target_link_libraries(ShadowEngine winmm)
-target_link_libraries(ShadowEngine dxguid)
+
+
+
+add_subdirectory(dependencies/GLAD/)
+target_link_libraries(ShadowEngine glad)
+
+target_link_libraries(ShadowEngine ${DEPENDENCIES_TARGETS})
+
+
+
+#target_link_libraries(ShadowEngine user32)
+#target_link_libraries(ShadowEngine gdi32)
+#target_link_libraries(ShadowEngine winmm)
+#target_link_libraries(ShadowEngine dxguid)
+
+
+
+
+ADD_CUSTOM_COMMAND(TARGET ShadowEngine POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${PROJECT_SOURCE_DIR}/dependencies/SDL2/bin"
+        $<TARGET_FILE_DIR:ShadowEngine>
+        COMMENT “copying dlls …”
+        )
