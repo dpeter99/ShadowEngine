@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.13)
-project(ShadowEngine LANGUAGES CXX)
+project(ShadowEngine)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -8,41 +8,35 @@ include(dependencies/dependencies.cmake)
 
 include_directories(${DEPENDENCIES_INCLUDES})
 include_directories(.)
-include_directories(GLAD/include)
+include_directories(dependencies/GLAD/include)
 
 add_executable(ShadowEngine
-        GLAD/src/glad.c
-        ${DEPENDENCIES_EXEC}
+        src/glad/glad.c
 
 
         main.cpp
-        ShadowMath/Vector2float.h ShadowMath/Vector2float.cpp
-        ShadowMath/Vector2int.h ShadowMath/Vector2int.cpp
-        ShadowEntity/Entity.cpp ShadowEntity/Entity.h
-        ShadowEntity/EntityRegistry.cpp ShadowEntity/EntityRegistry.h ShadowEntity/DefaultEntities.cpp
-        ShadowEntity/Entities/Player.cpp ShadowEntity/Entities/Player.h
-        ShadowMap/ShadowMap.cpp ShadowMap/ShadowMap.h
+
+        src/ShadowMath/Vector2float.h src/ShadowMath/Vector2float.cpp
+        src/ShadowMath/Vector2int.h src/ShadowMath/Vector2int.cpp
+        src/ShadowEntity/Entity.cpp src/ShadowEntity/Entity.h
+        src/ShadowEntity/EntityRegistry.cpp src/ShadowEntity/EntityRegistry.h src/ShadowEntity/DefaultEntities.cpp
+        src/ShadowEntity/Entities/Player.cpp src/ShadowEntity/Entities/Player.h
+        src/ShadowMap/ShadowMap.cpp src/ShadowMap/ShadowMap.h
         AssetLoader.cpp AssetLoader.h
-        ShadowMap/ShadowMapRenderer.cpp ShadowMap/ShadowMapRenderer.h
-        ShadowEntity/Entities/Light.cpp ShadowEntity/Entities/Light.h
-        ShadowEntity/EntityBase.h)
+        src/ShadowMap/ShadowMapRenderer.cpp src/ShadowMap/ShadowMapRenderer.h
+        src/ShadowEntity/Entities/Light.cpp src/ShadowEntity/Entities/Light.h
+        src/ShadowEntity/EntityBase.h
+        )
 
 
 target_link_libraries(ShadowEngine mingw32)
 
-
-
-#add_subdirectory(dependencies/GLAD/)
-#target_link_libraries(ShadowEngine glad)
-
 target_link_libraries(ShadowEngine ${DEPENDENCIES_TARGETS})
 
-
-
-#target_link_libraries(ShadowEngine user32)
-#target_link_libraries(ShadowEngine gdi32)
-#target_link_libraries(ShadowEngine winmm)
-#target_link_libraries(ShadowEngine dxguid)
+target_link_libraries(ShadowEngine user32)
+target_link_libraries(ShadowEngine gdi32)
+target_link_libraries(ShadowEngine winmm)
+target_link_libraries(ShadowEngine dxguid)
 
 
 

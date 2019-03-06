@@ -6,7 +6,8 @@
 #define SHADOWENGINE_MAPLOADER_H
 
 #include <map>
-#include "ShadowMap/ShadowMap.h"
+#include "list"
+#include "src/ShadowMap/ShadowMap.h"
 
 class Element{
 public:
