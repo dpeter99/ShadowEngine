@@ -8,4 +8,4 @@ add_executable(ShadowEngine main.cpp
         ShadowMath/Vector2int.h ShadowMath/Vector2int.cpp
         ShadowEntity/Entity.cpp ShadowEntity/Entity.h
         ShadowEntity/EntityRegistry.cpp ShadowEntity/EntityRegistry.h ShadowEntity/DefaultEntities.cpp
-        ShadowEntity/Entities/Player.cpp ShadowEntity/Entities/Player.h ShadowMap/ShadowMap.cpp ShadowMap/ShadowMap.h AssetLoader.cpp AssetLoader.h ShadowMap/ShadowMapRenderer.cpp ShadowMap/ShadowMapRenderer.h ShadowEntity/Entities/Light.cpp ShadowEntity/Entities/Light.h ShadowEntity/EntityBase.h)
+        ShadowEntity/Entities/Player.cpp ShadowEntity/Entities/Player.h ShadowMap/ShadowMap.cpp ShadowMap/ShadowMap.h AssetLoader.cpp AssetLoader.h ShadowMap/ShadowMapRenderer.cpp ShadowMap/ShadowMapRenderer.h ShadowEntity/Entities/Light.cpp ShadowEntity/Entities/Light.h ShadowEntity/EntityBase.h ShadowMap/ShadowWorld.cpp ShadowMap/ShadowWorld.h)
