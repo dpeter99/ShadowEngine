@@ -8,10 +8,13 @@ include(dependencies/dependencies.cmake)
 
 include_directories(${DEPENDENCIES_INCLUDES})
 include_directories(.)
-
+include_directories(GLAD/include)
 
 add_executable(ShadowEngine
+        GLAD/src/glad.c
         ${DEPENDENCIES_EXEC}
+
+
         main.cpp
         ShadowMath/Vector2float.h ShadowMath/Vector2float.cpp
         ShadowMath/Vector2int.h ShadowMath/Vector2int.cpp
@@ -29,8 +32,8 @@ target_link_libraries(ShadowEngine mingw32)
 
 
 
-add_subdirectory(dependencies/GLAD/)
-target_link_libraries(ShadowEngine glad)
+#add_subdirectory(dependencies/GLAD/)
+#target_link_libraries(ShadowEngine glad)
 
 target_link_libraries(ShadowEngine ${DEPENDENCIES_TARGETS})
 

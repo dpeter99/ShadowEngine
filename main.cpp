@@ -65,10 +65,14 @@ int main(int argc, char *argv[]) {
         // Display error message
         printf("OpenGL context could not be created! SDL Error: %s\n", SDL_GetError());
         return false;
-    } else {
-        // Initialize glew
-        //glewInit();
     }
+
+    // INITIALIZE GLAD:
+    gladLoadGLLoader(0);
+    if (!gladLoadGLLoader((GLADloadproc) SDL_GL_GetProcAddress)) {
+        throw (std::string("Failed to initialize GLAD"));
+    }
+
 
 
 
