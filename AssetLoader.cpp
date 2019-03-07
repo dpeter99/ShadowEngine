@@ -9,8 +9,8 @@
 #include "list"
 
 #include "AssetLoader.h"
-#include "ShadowMap/ShadowMap.h"
-#include "ShadowEntity/EntityRegistry.h"
+#include "src/ShadowMap/ShadowMap.h"
+#include "src/ShadowEntity/EntityRegistry.h"
 
 ShadowMap* AssetLoader::LoadMap() {
 
