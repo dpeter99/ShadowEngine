@@ -9,14 +9,14 @@
 #include "list"
 
 #include "AssetLoader.h"
-#include "src/ShadowMap/ShadowMap.h"
+#include "src/ShadowMap/ShadowMapChunk.h"
 #include "src/ShadowEntity/EntityRegistry.h"
 
-ShadowMap* AssetLoader::LoadMap() {
+ShadowMapChunk* AssetLoader::LoadMap(std::string name) {
 
-    ShadowMap* map = new ShadowMap();
+    ShadowMapChunk* map = new ShadowMapChunk();
 
-    Element& root = LoadFile();
+    Element& root = LoadFile(name);
 
     auto it = root.properties.find("Map");
     if(it != root.properties.end())
@@ -49,7 +49,7 @@ ShadowMap* AssetLoader::LoadMap() {
                 for (int x = 0; x < map->width; ++x) {
                     int a;
                     parser >> a ;
-                    layer->SetTile(Vector2int(x,y),a);
+                    layer->SetTile(ShadowMath::Vector2int(x,y),a);
                 }
             }
 
@@ -86,13 +86,43 @@ ShadowMap* AssetLoader::LoadMap() {
     return map;
 }
 
-//Property Name: Value
+ShadowWorld* AssetLoader::LoadWorld(std::string name) {
+    ShadowWorld* world = new ShadowWorld();
 
-//Name : {stuff in the block}
+    Element& root = LoadFile(name);
+
+    auto it = root.properties.find("Map");
+    if(it != root.properties.end()) {
+        auto worldElement = it->second;
+
+        world->name = worldElement->properties.find("Name")->second->value;
+
+        std::string parse = worldElement->properties.find("ChunkSize")->second->value;
+        std::replace( parse.begin(), parse.end(), 'x', ' ');
+        std::stringstream parser(parse);
+        parser >> world->chunkSizeX;
+        parser >> world->chunkSizeY;
+
+        world->maps.reserve(worldElement->properties.find("Maps")->second->properties.size());
+        int pos = 0;
+        for (auto i : worldElement->properties.find("Maps")->second->properties) {
+            auto layerElement = i.second;
+
+            auto map = new WorldMap(world);
+
+            map->name = layerElement->properties.find("Name")->second->value;
+            map->id = layerElement->properties.find("ID")->second->value;
+
+
+        }
+
+    }
+    return world;
+}
 
 ///Parses a file into DOM
 ///The caller has to call free on the returned Element tree
-Element& AssetLoader::LoadFile() {
+Element& AssetLoader::LoadFile(std::string name) {
     //The current node that we are building
     auto *context = new Element;
 
@@ -102,7 +132,7 @@ Element& AssetLoader::LoadFile() {
     //The new node that will be a child of the context
     auto *current = new Element;
 
-    std::ifstream inputFileStream("Test.txt");
+    std::ifstream inputFileStream(name+".txt");
 
 
 

@@ -10,22 +10,22 @@
 
 namespace ShadowMath{
 
-class Vector2Float {
+class Vector2float {
 public:
     float x;
     float y;
 
-    Vector2Float(float x, float y) {
+    Vector2float(float x, float y) {
         this->x = x;
         this->y = y;
     }
 
-    Vector2Float() {
+    Vector2float() {
         this->x = 0;
         this->y = 0;
     }
 
-    Vector2Float(const Vector2Float &cpy) {
+    Vector2float(const Vector2float &cpy) {
         this->x = cpy.x;
         this->y = cpy.y;
     }
@@ -36,27 +36,27 @@ public:
 
     void Normalize();
 
-    Vector2Float LeftNormal();
+    Vector2float LeftNormal();
 
-    Vector2Float RightNormal();
+    Vector2float RightNormal();
 
     float Angle();
 
-    const float DotProduct(Vector2Float a, Vector2Float b);
+    const float DotProduct(Vector2float a, Vector2float b);
 
-    const Vector2Float Lerp(Vector2Float a, Vector2Float b, int t);
+    const Vector2float Lerp(Vector2float a, Vector2float b, int t);
 
-    const float Distance(Vector2Float a, Vector2Float b);
+    const float Distance(Vector2float a, Vector2float b);
 
-    Vector2Float operator+(const Vector2Float &b);
+    Vector2float operator+(const Vector2float &b);
 
-    Vector2Float operator-(const Vector2Float &b);
+    Vector2float operator-(const Vector2float &b);
 
-    Vector2Float operator*(const Vector2Float &b);
+    Vector2float operator*(const Vector2float &b);
 
-    Vector2Float operator*(const int &b);
+    Vector2float operator*(const int &b);
 
-    Vector2Float operator*(const float &b);
+    Vector2float operator*(const float &b);
 
     operator Vector2int();
 };

@@ -21,11 +21,12 @@ add_executable(ShadowEngine
         src/ShadowEntity/Entity.cpp src/ShadowEntity/Entity.h
         src/ShadowEntity/EntityRegistry.cpp src/ShadowEntity/EntityRegistry.h src/ShadowEntity/DefaultEntities.cpp
         src/ShadowEntity/Entities/Player.cpp src/ShadowEntity/Entities/Player.h
-        src/ShadowMap/ShadowMap.cpp src/ShadowMap/ShadowMap.h
+        src/ShadowMap/ShadowMapChunk.cpp src/ShadowMap/ShadowMapChunk.h
         AssetLoader.cpp AssetLoader.h
         src/ShadowMap/ShadowMapRenderer.cpp src/ShadowMap/ShadowMapRenderer.h
         src/ShadowEntity/Entities/Light.cpp src/ShadowEntity/Entities/Light.h
         src/ShadowEntity/EntityBase.h
+        src/ShadowMap/ShadowWorld.h src/ShadowMap/ShadowWorld.cpp
         )
 
 
