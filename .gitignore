@@ -263,8 +263,8 @@ bin-int/
 
 *.sln
 
-dependencies/
-
 *.vcxproj
 
 *.filters
+
+*.zip
