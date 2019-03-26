@@ -7,7 +7,8 @@
 
 #include <map>
 #include "list"
-#include "src/ShadowMap/ShadowMap.h"
+#include "src/ShadowMap/ShadowMapChunk.h"
+#include "src/ShadowMap/ShadowWorld.h"
 
 class Element{
 public:
@@ -27,10 +28,12 @@ public:
 
 class AssetLoader {
 
-    Element& LoadFile();
+    static Element& LoadFile(std::string name);
 
 public:
-    ShadowMap* LoadMap();
+    static ShadowMapChunk* LoadMap(std::string name);
+
+    static ShadowWorld* LoadWorld(std::string name);
 
 };
 

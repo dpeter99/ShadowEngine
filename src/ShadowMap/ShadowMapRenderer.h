@@ -6,12 +6,12 @@
 #define SHADOWENGINE_SHADOWMAPRENDERER_H
 
 
-#include "ShadowMap.h"
+#include "ShadowMapChunk.h"
 
 class ShadowMapRenderer {
 
 public:
-    static void RenderMap(ShadowMap& map);
+    static void RenderMap(ShadowMapChunk& map);
 
 };
 

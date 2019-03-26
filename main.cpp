@@ -18,9 +18,9 @@ int main(int argc, char *argv[]) {
     //registry.ListPreRegisteredEntitys();
 
     AssetLoader loader;
-    ShadowMap *map = loader.LoadMap();
+    //ShadowMapChunk *map = loader.LoadMap();
 
-    ShadowMapRenderer::RenderMap(*map);
+    //ShadowMapRenderer::RenderMap(*map);
 
 
     //GL test

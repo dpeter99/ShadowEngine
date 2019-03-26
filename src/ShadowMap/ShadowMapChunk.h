@@ -11,7 +11,7 @@
 #include "../ShadowMath/Vector2int.h"
 #include "../ShadowEntity/Entity.h"
 
-class ShadowMap;
+class ShadowMapChunk;
 
 class ShadowMapLayer
 {
@@ -22,19 +22,19 @@ public:
 
     bool visible;
 
-    ShadowMap* map;
+    ShadowMapChunk* map;
 
-    ShadowMapLayer(ShadowMap& m){
+    ShadowMapLayer(ShadowMapChunk& m){
         this->map = &m;
     }
 
 
-    void SetTile(Vector2int pos, int tileID);
+    void SetTile(ShadowMath::Vector2int pos, int tileID);
 
-    int GetTile(Vector2int pos);
+    int GetTile(ShadowMath::Vector2int pos);
 };
 
-class ShadowMap {
+class ShadowMapChunk {
 public:
     std::string name;
 
