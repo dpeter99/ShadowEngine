@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using TiledSharp;
 
 
@@ -6,8 +7,10 @@ namespace ShadowEngineBuild
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
+            //Debugger.Launch();
+
             Console.WriteLine("Shadow Engine Build System");
 
             BuildEnviroment.SetBuildEnviroment(args[0],args[1]);
@@ -22,6 +25,7 @@ namespace ShadowEngineBuild
             Console.WriteLine("Press enter to close...");
             Console.ReadLine();
 #endif
+            return 0;
         }
     }
 }

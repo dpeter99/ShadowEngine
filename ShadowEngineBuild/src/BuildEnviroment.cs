@@ -19,8 +19,8 @@ namespace ShadowEngineBuild
 
         public static string ToString()
         {
-            return "Code Folder:\t" + baseCodePath + "\n" +
-                   "Content Folder:\t" + baseContentPath + "\n";
+            return "Code Folder:" + baseCodePath + "\n" +
+                   "Content Folder:" + baseContentPath + "\n";
         }
 
         public static string GetMapsFolder()

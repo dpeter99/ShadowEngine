@@ -21,7 +21,7 @@ IncludeDir["SDL2"] = "ShadowEngine/dependencies/SDL2/include"
 IncludeDir["GLAD"] = "ShadowEngine/dependencies/GLAD/include"
 
 include "ShadowEngine/dependencies/GLAD"
-include "ShadowEngineBuild/dependencies"
+include "ShadowEngineBuild/dependencies/TiledSharp"
 
 project "ShadowEngine"
 	location "ShadowEngine"
@@ -69,7 +69,7 @@ project "ShadowEngine"
 
 		postbuildcommands{
 			"{COPY} %{prj.location}/dependencies/SDL2/lib/VC/%{cfg.architecture}/SDL2.dll \"%{cfg.buildtarget.directory}\"",
-			"{COPY} %{wks.location}/DemoGame \"%{cfg.buildtarget.directory}\""
+			"{COPY} %{wks.location}/DemoGame/Resources \"%{cfg.buildtarget.directory}/Resources\""
 		}
 
 	filter "configurations:Debug"
@@ -95,7 +95,7 @@ project "ShadowEngineBuild"
 	location "ShadowEngineBuild"
 	kind "ConsoleApp"
 	language "C#"
-	dotnetframework "4.6"
+	
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -106,6 +106,7 @@ project "ShadowEngineBuild"
 	}
 
 	links{
+		"System.Xml.Linq",
 		"TiledSharp",
 	}
 	
@@ -143,10 +144,13 @@ project "ShadowEngineBuild"
 
 project "DemoGame"
 	location "DemoGame"
-	kind "None"
+	kind "Utility"
+
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	files{
-		"%{prj.name}/**"
+		"%{prj.name}/Resources/**"
 	}
 
 	links{
@@ -154,5 +158,6 @@ project "DemoGame"
 	}
 
 	prebuildcommands{
-		"bin/"..outputdir.."/ShadowEngineBuild/ShadowEngineBuild.exe A %{prj.loaction}"
+		"%{wks.location}bin/"..outputdir.."/ShadowEngineBuild/ShadowEngineBuild.exe A %{prj.location} ",
+		--"echo %{prj.location}"
 	}

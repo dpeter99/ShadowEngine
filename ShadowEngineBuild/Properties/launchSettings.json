@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "ShadowEngineBuild": {
-      "commandName": "Project",
-      "commandLineArgs": "C:\\Users\\dpete\\Documents\\programing\\cpp\\ShadowEngine\\src C:\\Users\\dpete\\Documents\\programing\\cpp\\ShadowEngine\\DemoGame"
-    }
-  }
-}
