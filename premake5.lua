@@ -48,6 +48,7 @@ project "ShadowEngine"
 	{ 
 		"SDL2",
 		"SDL2main",
+		"SDL2test",
 		"Glad",
 	}
 
