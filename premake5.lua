@@ -1,5 +1,8 @@
 workspace "ShadowEngine"
 	architecture "x64"
+	startproject "ShadowEngine"
+
+
 
 	configurations
 	{
@@ -7,6 +10,8 @@ workspace "ShadowEngine"
 		"Release",
 		"Dist"
 	}
+
+
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
@@ -94,6 +99,11 @@ project "ShadowEngineBuild"
 	{
 		"%{prj.name}/**.cs",
 	}
+
+	nuget{
+		"TiledSharp:1.0.1",
+	}
+	
 
 	excludes { "**/bin/**", "**/obj/**" } 
 

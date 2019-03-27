@@ -17,3 +17,7 @@ ShadowEngine/dependencies/GLAD/bin/
 bin/
 
 ShadowEngineBuild/obj/
+
+\.idea/
+
+*.csproj
