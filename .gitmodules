@@ -1,0 +1,3 @@
+[submodule "ShadowEngineBuild/dependencies/TiledSharp"]
+	path = ShadowEngineBuild/dependencies/TiledSharp
+	url = git@github.com:marshallward/TiledSharp.git

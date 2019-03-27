@@ -21,6 +21,7 @@ IncludeDir["SDL2"] = "ShadowEngine/dependencies/SDL2/include"
 IncludeDir["GLAD"] = "ShadowEngine/dependencies/GLAD/include"
 
 include "ShadowEngine/dependencies/GLAD"
+include "ShadowEngineBuild/dependencies"
 
 project "ShadowEngine"
 	location "ShadowEngine"
@@ -50,6 +51,7 @@ project "ShadowEngine"
 		"SDL2main",
 		"SDL2test",
 		"Glad",
+		"ShadowEngineBuild",
 	}
 
 	filter "system:windows"
@@ -66,7 +68,8 @@ project "ShadowEngine"
 		}
 
 		postbuildcommands{
-			("{COPY} %{prj.location}/dependencies/SDL2/lib/VC/%{cfg.architecture}/SDL2.dll \"%{cfg.buildtarget.directory}\"")
+			"{COPY} %{prj.location}/dependencies/SDL2/lib/VC/%{cfg.architecture}/SDL2.dll \"%{cfg.buildtarget.directory}\"",
+			"{COPY} %{wks.location}/DemoGame \"%{cfg.buildtarget.directory}\""
 		}
 
 	filter "configurations:Debug"
@@ -92,17 +95,18 @@ project "ShadowEngineBuild"
 	location "ShadowEngineBuild"
 	kind "ConsoleApp"
 	language "C#"
+	dotnetframework "4.6"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	files
 	{
-		"%{prj.name}/**.cs",
+		"%{prj.name}/src/**.cs",
 	}
 
-	nuget{
-		"TiledSharp:1.0.1",
+	links{
+		"TiledSharp",
 	}
 	
 
@@ -135,3 +139,20 @@ project "ShadowEngineBuild"
 		defines "HZ_DIST"
 		runtime "Release"
 		optimize "On"
+
+
+project "DemoGame"
+	location "DemoGame"
+	kind "None"
+
+	files{
+		"%{prj.name}/**"
+	}
+
+	links{
+		"ShadowEngineBuild"
+	}
+
+	prebuildcommands{
+		"bin/"..outputdir.."/ShadowEngineBuild/ShadowEngineBuild.exe A %{prj.loaction}"
+	}

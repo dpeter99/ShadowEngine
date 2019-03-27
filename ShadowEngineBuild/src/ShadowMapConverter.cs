@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using TiledSharp;
 
 namespace ShadowEngineBuild
 {
@@ -52,14 +53,19 @@ namespace ShadowEngineBuild
                 layerElement.name = layer.Name;
                 layerElement.AddProperty("Visible", layer.Visible.ToString());
 
-                string data = "";
-                for (int i = 0; i < layer.Tiles.Count; i++)
+                if (layer is TmxLayer tilelayer)
                 {
-                    data += layer.Tiles[i].Gid;
-                    if (i != layer.Tiles.Count-1) data += ".";
-                }
 
-                layerElement.AddProperty("map",data);
+                    string data = "";
+                    for (int i = 0; i < tilelayer.Tiles.Count; i++)
+                    {
+                        data += tilelayer.Tiles[i].Gid;
+                        if (i != tilelayer.Tiles.Count - 1) data += ".";
+                    }
+
+
+                    layerElement.AddProperty("map", data);
+                }
 
                 layers.AddProperty(layerElement);
             }
