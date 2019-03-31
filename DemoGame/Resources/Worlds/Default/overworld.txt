@@ -1,12 +1,11 @@
 World:{
     Name:OverWorld,
-    ChunkSize:5,5,
+	ID:base,
+    ChunkSize:5x5,
     Maps:{
-        Base:{
+        default:{
             Name:SimpleBase,
-            ID:base
             Base:true,
-            Prefix:base-default,
         }
         OrcCave-1:{
             Base:false,

@@ -19,10 +19,15 @@ ShadowMapChunk* AssetLoader::LoadMap(std::string name) {
 
     ShadowMapChunk* map = new ShadowMapChunk();
 
-    Element& root = LoadFile(name);
+    Element* root = LoadFile(name+".sef");
+	if (root == nullptr)
+	{
+		std::cerr << "Could not load the file" << std::endl;
+		return nullptr;
+	}
 
-    auto it = root.properties.find("Map");
-    if(it != root.properties.end())
+    auto it = root->properties.find("Map");
+    if(it != root->properties.end())
     {
         auto mapElement = it->second;
 
@@ -92,13 +97,18 @@ ShadowMapChunk* AssetLoader::LoadMap(std::string name) {
 ShadowWorld* AssetLoader::LoadWorld(std::string name) {
     ShadowWorld* world = new ShadowWorld();
 
-    Element& root = LoadFile(name);
+    Element* root = LoadFile(name);
+	if(root == nullptr)
+	{
+		std::cerr << "Could not load the file" << std::endl;
+	}
 
-    auto it = root.properties.find("Map");
-    if(it != root.properties.end()) {
+    auto it = root->properties.find("World");
+    if(it != root->properties.end()) {
         auto worldElement = it->second;
 
         world->name = worldElement->properties.find("Name")->second->value;
+		world->id = worldElement->GetStringProperty("ID");
 
         std::string parse = worldElement->properties.find("ChunkSize")->second->value;
         std::replace( parse.begin(), parse.end(), 'x', ' ');
@@ -106,15 +116,18 @@ ShadowWorld* AssetLoader::LoadWorld(std::string name) {
         parser >> world->chunkSizeX;
         parser >> world->chunkSizeY;
 
-        world->maps.reserve(worldElement->properties.find("Maps")->second->properties.size());
+        //world->maps.reserve(worldElement->properties.find("Maps")->second->properties.size());
         int pos = 0;
         for (auto i : worldElement->properties.find("Maps")->second->properties) {
             auto layerElement = i.second;
 
             auto map = new WorldMap(world);
 
-            map->name = layerElement->properties.find("Name")->second->value;
-            map->id = layerElement->properties.find("ID")->second->value;
+            //map->name = layerElement->properties.find("Name")->second->value;
+			map->name = layerElement->GetStringProperty("Name");
+			map->id = layerElement->name;
+
+			world->maps[map->id]= map;
 
 
         }
@@ -125,7 +138,7 @@ ShadowWorld* AssetLoader::LoadWorld(std::string name) {
 
 ///Parses a file into DOM
 ///The caller has to call free on the returned Element tree
-Element& AssetLoader::LoadFile(std::string name) {
+Element* AssetLoader::LoadFile(std::string name) {
     //The current node that we are building
     auto *context = new Element;
 
@@ -135,10 +148,13 @@ Element& AssetLoader::LoadFile(std::string name) {
     //The new node that will be a child of the context
     auto *current = new Element;
 
-    std::ifstream inputFileStream(name+".txt");
+    std::ifstream inputFileStream(name);
 
-
-
+	if (errno) {
+		std::cerr << "Error: " << strerror(errno) << std::endl;
+		std::cerr << "File: " << name << std::endl;
+		return nullptr;
+	}
     std::string buffer;
 
     char c;
@@ -180,8 +196,22 @@ Element& AssetLoader::LoadFile(std::string name) {
 
     std::cout << "END" << std::endl;
 
-    return base;
+    return &base;
 
+}
+
+std::string Element::GetStringProperty(std::string name)
+{
+	std::string res;
+		auto a = this->properties.find(name);
+		if (a != this->properties.end()) {
+			res = a->second->value;
+		}
+		else
+		{
+			res = "";
+		}
+	return res;
 }
 
 Element::~Element() {

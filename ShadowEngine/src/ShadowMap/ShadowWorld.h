@@ -9,6 +9,7 @@
 
 #include "ShadowMapChunk.h"
 #include "../ShadowMath/Vector2float.h"
+#include "../../ShadowAsset.h"
 
 //World
 // - Map
@@ -36,7 +37,6 @@ public:
     std::string name;
 
     //prefix to the chunk files
-    bool  hasPrefix;
     std::string prefix;
 
     //Containing world
@@ -67,16 +67,17 @@ public:
 
 
 //A single World that can have many maps and sizes
-class ShadowWorld {
+class ShadowWorld  : public ShadowAsset{
 public:
     //Properties #####################
         std::string name;
+		std::string id;
 
         //Active map
         WorldMap* activeMap;
 
         //All the maps in this World
-        std::vector<WorldMap*> maps;
+        std::map<std::string,WorldMap*> maps;
 
         //World settings
 
@@ -89,6 +90,8 @@ public:
 
         //Update the system to check if new maps need to be loaded
         void Update(ShadowMath::Vector2float pos);
+
+		void SetActiveMap(std::string name);
 
 };
 

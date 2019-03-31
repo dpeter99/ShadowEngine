@@ -23,12 +23,14 @@ public:
     std::list<Element*> properties_old;
     std::map<std::string, Element*> properties;
 
+	std::string GetStringProperty(std::string name);
+
     ~Element();
 };
 
 class AssetLoader {
 
-    static Element& LoadFile(std::string name);
+    static Element* LoadFile(std::string name);
 
 public:
     static ShadowMapChunk* LoadMap(std::string name);

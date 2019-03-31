@@ -18,8 +18,9 @@ int main(int argc, char *argv[]) {
     //registry.ListPreRegisteredEntitys();
 
     AssetLoader loader;
-    //ShadowMapChunk *map = loader.LoadMap();
-
+	ShadowWorld* w = loader.LoadWorld("Resources/Worlds/Default/overworld.txt");
+	w->SetActiveMap("default");
+	w->Update(ShadowMath::Vector2float(0, 0));
     //ShadowMapRenderer::RenderMap(*map);
 
 
