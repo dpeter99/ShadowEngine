@@ -17,7 +17,7 @@ namespace ShadowEngineBuild
             baseContentPath = contnent;
         }
 
-        public static string ToString()
+        public new static string ToString()
         {
             return "Code Folder:" + baseCodePath + "\n" +
                    "Content Folder:" + baseContentPath + "\n";
@@ -25,7 +25,7 @@ namespace ShadowEngineBuild
 
         public static string GetMapsFolder()
         {
-            return baseContentPath + "\\Worlds\\";
+            return baseContentPath + "/Worlds/";
         }
 
     }

@@ -32,6 +32,8 @@ project "ShadowEngine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	debugdir ("bin/" .. outputdir .. "/%{prj.name}")
+
 	files
 	{
 		"%{prj.name}/src/**.h",
@@ -158,6 +160,6 @@ project "DemoGame"
 	}
 
 	prebuildcommands{
-		"%{wks.location}bin/"..outputdir.."/ShadowEngineBuild/ShadowEngineBuild.exe A %{prj.location} ",
+		"%{wks.location}bin/"..outputdir.."/ShadowEngineBuild/ShadowEngineBuild.exe A %{prj.location}/Resources ",
 		--"echo %{prj.location}"
 	}
