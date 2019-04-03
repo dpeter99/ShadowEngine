@@ -1,6 +1,7 @@
 #include "SDLEventSource.h"
 #include <SDL2/SDL.h>
 #include "ShadowEvents/ShadowEventManager.h"
+#include "ShadowEvents/Events/KeyEvents.h"
 
 void SDLEventSource::PollEvents()
 {
@@ -10,8 +11,12 @@ void SDLEventSource::PollEvents()
 		switch (test_event.type)
 		{
 		case SDL_KEYDOWN:
-
-			ShadowEventManager::PushNewEvent();
+			KeyPressedEvent* e = new KeyPressedEvent(test_event.key.keysym.sym,test_event.key.repeat);
+			ShadowEventManager::PushNewEvent(e);
+			break;
+		case SDL_KEYUP:
+			KeyReleasedEvent* e = new KeyReleasedEvent(test_event.key.keysym.sym);
+			ShadowEventManager::PushNewEvent(e);
 			break;
 		}
 	}
