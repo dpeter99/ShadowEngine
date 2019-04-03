@@ -1,5 +1,5 @@
 #include <iostream>
-#include "AssetLoader.h"
+#include "ShadowAsset/AssetLoader.h"
 
 // OpenGL headers
 #include "glad/glad.h"
@@ -8,6 +8,7 @@
 #include <SDL2/SDL.h>
 #include <ShadowEntity/EntityRegistry.h>
 #include <ShadowMap/ShadowMapRenderer.h>
+#include "ShadowApplication.h"
 
 
 int main(int argc, char *argv[]) {
@@ -17,11 +18,15 @@ int main(int argc, char *argv[]) {
 
     //registry.ListPreRegisteredEntitys();
 
-    AssetLoader loader;
-	ShadowWorld* w = loader.LoadWorld("Resources/Worlds/Default/overworld.txt");
-	w->SetActiveMap("default");
-	w->Update(ShadowMath::Vector2float(0, 0));
+    //AssetLoader loader;
+	//ShadowWorld* w = loader.LoadWorld("Resources/Worlds/Default/overworld.txt");
+	//w->SetActiveMap("default");
+	//w->Update(ShadowMath::Vector2float(0, 0));
     //ShadowMapRenderer::RenderMap(*map);
+
+	ShadowApplication app;
+	app.Start();
+	
 
 
     //GL test

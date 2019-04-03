@@ -2,8 +2,11 @@
 #include "AssetLoader.h"
 
 
+AssetManager* AssetManager::instance = nullptr;
+
 AssetManager::AssetManager()
 {
+	instance = this;
 }
 
 
@@ -36,25 +39,25 @@ void AssetManager::UnloadAsset(ShadowAsset* asset)
 	this->loadedAssets.erase(v);
 	delete asset;
 }
+/*
 
-
-template <> ShadowWorld* AssetManager::GetAsset<ShadowWorld>(std::string path)
+template<class T>
+static T* AssetManager::GetAsset(std::string path)
 {
 	ShadowAsset* f;
 
-	if(CheckLoaded(path, &f))
+	if (CheckLoaded(path, &f))
 	{
-		return dynamic_cast<ShadowWorld*>(f);
+		return dynamic_cast<T*>(f);
 	}
 
-	ShadowWorld* w;
+	T* w;
 
-	w = AssetLoader::LoadWorld(path);
-	this->loadedAssets[nextID] = w;
+	w = AssetLoader::LoadAsset(path);
+	AssetManager::instance->loadedAssets[nextID] = w;
 	w->path = path;
 	w->id = nextID;
 	nextID++;
 	return w;
 }
-
-
+*/

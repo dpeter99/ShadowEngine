@@ -36,7 +36,7 @@ namespace ShadowEntity {
         void ListPreRegisteredEntitys();
 
 
-        //Create a instace of the specified Entity
+        //Create a instance of the specified Entity
         Entity* InstaciateEntity(std::string);
 
 

@@ -10,6 +10,8 @@
 #include <vector>
 #include "../ShadowMath/Vector2int.h"
 #include "../ShadowEntity/Entity.h"
+#include "../ShadowMath/Vector2int.h"
+#include "ShadowAsset/ShadowAsset.h"
 
 class ShadowMapChunk;
 
@@ -24,8 +26,10 @@ public:
 
     ShadowMapChunk* map;
 
-    ShadowMapLayer(ShadowMapChunk& m){
+    ShadowMapLayer(ShadowMapChunk& m, bool visible,int*data){
         this->map = &m;
+		this->visible = visible;
+		this->data = data;
     }
 
 
@@ -34,9 +38,12 @@ public:
     int GetTile(ShadowMath::Vector2int pos);
 };
 
-class ShadowMapChunk {
+class ShadowMapChunk : public ShadowAsset{
 public:
     std::string name;
+
+	//the position where this map should be drawn
+	ShadowMath::Vector2int pos;
 
     int height;
     int width;

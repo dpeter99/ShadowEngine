@@ -2,7 +2,7 @@
 // Created by dpete on 3/6/2019.
 //
 
-#include <AssetLoader.h>
+#include "ShadowAsset/AssetLoader.h"
 #include "ShadowWorld.h"
 
 #include "list"
@@ -10,8 +10,9 @@
 #include "sstream"
 #include <algorithm>
 #include <iomanip>
+#include "../ShadowAsset/AssetManager.h"
 
-void ShadowWorld::Update(ShadowMath::Vector2float pos) {
+void ShadowWorld::Update(const ShadowMath::Vector2int& pos) {
 	//Send the position to the active map so it can load i't chunks
 	if (this->activeMap != nullptr)
 	{
@@ -28,7 +29,7 @@ void ShadowWorld::SetActiveMap(std::string name)
 	}
 }
 
-void WorldMap::Update(ShadowMath::Vector2float pos) {
+void WorldMap::Update(const ShadowMath::Vector2int& pos) {
 	//Load chunks if nececerry
 	//xxxxx
 	//xLLLx
@@ -71,19 +72,19 @@ void WorldMap::Update(ShadowMath::Vector2float pos) {
 	}
 }
 
-void WorldMap::UnloadChunk(MapChunk* chunk) {
+void WorldMap::UnloadChunk(ShadowMapChunk* chunk) {
 	chunks.remove(chunk);
 
 	delete chunk;
 }
 
-void WorldMap::UnloadChunk(ShadowMath::Vector2int id) {
+void WorldMap::UnloadChunk(const ShadowMath::Vector2int& id) {
 	auto chunk = GetLoadedChunk(id);
 
 	UnloadChunk(chunk);
 }
 
-MapChunk* WorldMap::GetLoadedChunk(ShadowMath::Vector2int id) {
+ShadowMapChunk* WorldMap::GetLoadedChunk(const ShadowMath::Vector2int& id) {
 	for (auto i : this->chunks)
 	{
 		if (i->pos == id) {
@@ -93,16 +94,23 @@ MapChunk* WorldMap::GetLoadedChunk(ShadowMath::Vector2int id) {
 	return nullptr;
 }
 
-void WorldMap::LoadChunk(ShadowMath::Vector2int id) {
+void WorldMap::LoadChunk(const ShadowMath::Vector2int &id) {
 	std::string mapName = GenerateMapName(id);
-	AssetLoader::LoadMap(mapName);
+	auto c = AssetManager::GetAsset<ShadowMapChunk>(mapName);
+	if(c==nullptr)
+		return;
+
+	this->chunks.emplace_back(c);
+	
+	//AssetLoader::LoadMap(mapName);
 }
 
-std::string WorldMap::GenerateMapName(ShadowMath::Vector2int id) {
+std::string WorldMap::GenerateMapName(const ShadowMath::Vector2int &id) const
+{
 
 	std::stringstream ss;
 
-	ss << this->world->id << "-" << this->id << "_" 
+	ss << "Resources/Worlds/" << this->world->id << "/" << this->world->id << "-" << this->id << "_" 
 	   << (id.x < 0 ? "-" : "") << std::setw(3) << std::setfill('0') << std::internal << abs(id.x) << "_"
 	   << (id.x < 0 ? "-" : "") << std::setw(3) << std::setfill('0') << std::internal << abs(id.y);
 
