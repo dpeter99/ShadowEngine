@@ -12,6 +12,8 @@ class ShadowEventManager : public ShadowModule
 	std::queue<ShadowEvent*> eventQueue;
 	std::list<IShadowEventSource*> eventSources;
 
+	void PollEvents_();
+
 	void PushNewEvent_(ShadowEvent* e);
 
 	void AddNewEventSource_(IShadowEventSource* shadowEventSource);
@@ -21,6 +23,8 @@ public:
 	~ShadowEventManager();
 
 	void Init() const override;
+
+	static void PollEvents() { instance->PollEvents_(); };
 
 	static void PushNewEvent(ShadowEvent* e) { instance->PushNewEvent_(e); };
 

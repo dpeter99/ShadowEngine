@@ -25,6 +25,7 @@ int main(int argc, char *argv[]) {
     //ShadowMapRenderer::RenderMap(*map);
 
 	ShadowApplication app;
+	app.Init();
 	app.Start();
 	
 

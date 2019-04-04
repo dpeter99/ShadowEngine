@@ -30,6 +30,6 @@ void ShadowApplication::Start()
 
 	while(running)
 	{
-		
+		ShadowEventManager::PollEvents();
 	}
 }
