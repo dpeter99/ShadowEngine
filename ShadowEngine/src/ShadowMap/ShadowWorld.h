@@ -6,26 +6,17 @@
 #define SHADOWENGINE_SHADOWWORLD_H
 
 #include "list"
+#include <map>
 
 #include "ShadowMapChunk.h"
 #include "../ShadowMath/Vector2float.h"
-#include "../../ShadowAsset.h"
+#include "../ShadowAsset/ShadowAsset.h"
 
 //World
 // - Map
 //   - Chunk
 
 class ShadowWorld;
-
-//A single chunk file
-class MapChunk{
-public:
-    ShadowMath::Vector2int pos;
-    //Name of the file
-    //Reference to the object
-
-    ShadowMapChunk* chunk;
-};
 
 //A set of maps that are loaded together
 class WorldMap{
@@ -43,7 +34,7 @@ public:
     ShadowWorld* world;
 
     //List of loaded maps
-    std::list<MapChunk* > chunks;
+    std::list<ShadowMapChunk* > chunks;
 
 
     WorldMap(ShadowWorld *world);
@@ -51,18 +42,18 @@ public:
     //Update
     //Here we get the map loader point and check what maps we need
     //Than load up the maps that are not yet loaded.
-    void Update(ShadowMath::Vector2float pos);
+    void Update(const ShadowMath::Vector2int& pos);
 
     //Unload a chunk
-    void UnloadChunk(ShadowMath::Vector2int id);
-    void UnloadChunk(MapChunk* chunk);
+    void UnloadChunk(const ShadowMath::Vector2int& id);
+    void UnloadChunk(ShadowMapChunk* chunk);
 
     //Load new chunks
-    void LoadChunk(ShadowMath::Vector2int id);
+    void LoadChunk(const ShadowMath::Vector2int& id);
 
-    MapChunk* GetLoadedChunk(ShadowMath::Vector2int id);
+	ShadowMapChunk* GetLoadedChunk(const ShadowMath::Vector2int& id);
 
-    std::string GenerateMapName(ShadowMath::Vector2int id);
+    std::string GenerateMapName(const ShadowMath::Vector2int& id) const;
 };
 
 
@@ -89,7 +80,7 @@ public:
     // Functions #####################
 
         //Update the system to check if new maps need to be loaded
-        void Update(ShadowMath::Vector2float pos);
+        void Update(const ShadowMath::Vector2int& pos);
 
 		void SetActiveMap(std::string name);
 

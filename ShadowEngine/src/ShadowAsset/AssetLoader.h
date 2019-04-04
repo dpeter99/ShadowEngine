@@ -37,6 +37,10 @@ public:
 
     static ShadowWorld* LoadWorld(std::string name);
 
+	template <class T>
+	static T* LoadAsset(std::string name);
 };
 
 #endif //SHADOWENGINE_MAPLOADER_H
+
+
