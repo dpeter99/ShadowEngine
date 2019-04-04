@@ -4,6 +4,7 @@
 
 class ShadowApplication
 {
+	static ShadowApplication* instance;
 
 	ShadowModuleManager moduleManager;
 
@@ -14,6 +15,8 @@ class ShadowApplication
 public:
 	ShadowApplication();
 	virtual ~ShadowApplication();
+
+	static ShadowApplication& Get() { return  *instance; };
 
 	void Init();
 	void Start();

@@ -1,3 +1,7 @@
 [submodule "ShadowEngineBuild/dependencies/TiledSharp"]
 	path = ShadowEngineBuild/dependencies/TiledSharp
 	url = https://github.com/dpeter99/TiledSharp.git
+
+[submodule "ShadowEngine/dependencies/imgui"]
+	path = ShadowEngine/dependencies/imgui
+	url = git@github.com:dpeter99/imgui.git

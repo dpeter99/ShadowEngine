@@ -19,9 +19,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["SDL2"] = "ShadowEngine/dependencies/SDL2/include"
 IncludeDir["GLAD"] = "ShadowEngine/dependencies/GLAD/include"
+IncludeDir["ImGui"] = "ShadowEngine/dependencies/imgui"
 
 include "ShadowEngine/dependencies/GLAD"
+include "ShadowEngine/dependencies/IMGUI"
 include "ShadowEngineBuild/dependencies/TiledSharp"
+
 
 project "ShadowEngine"
 	location "ShadowEngine"
@@ -44,7 +47,8 @@ project "ShadowEngine"
 	{
 		"%{prj.name}/src",
 		"%{IncludeDir.SDL2}",
-		"%{IncludeDir.GLAD}"
+		"%{IncludeDir.GLAD}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links 
@@ -53,6 +57,7 @@ project "ShadowEngine"
 		"SDL2main",
 		"SDL2test",
 		"Glad",
+		"ImGui",
 		"ShadowEngineBuild",
 	}
 
