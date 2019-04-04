@@ -11,7 +11,6 @@ ShadowModuleManager::ShadowModuleManager()
 	instance = this;
 }
 
-
 ShadowModuleManager::~ShadowModuleManager()
 {
 }
@@ -19,4 +18,12 @@ ShadowModuleManager::~ShadowModuleManager()
 void ShadowModuleManager::PushModule(ShadowModule* module)
 {
 	modules.emplace_back(module);
+}
+
+void ShadowModuleManager::Init()
+{
+	for (auto module : modules)
+	{
+		module->Init();
+	}
 }

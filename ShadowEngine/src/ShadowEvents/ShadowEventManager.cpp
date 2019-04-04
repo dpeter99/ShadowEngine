@@ -21,7 +21,7 @@ ShadowEventManager::~ShadowEventManager()
 	}
 }
 
-void ShadowEventManager::Init() const
+void ShadowEventManager::Init()
 {
 	//instance = new ShadowEventManager();
 }
@@ -39,9 +39,27 @@ void ShadowEventManager::PushNewEvent_(ShadowEvent* e)
 	this->eventQueue.push(e);
 }
 
+void ShadowEventManager::ProcessEvents_()
+{
+	while(!eventQueue.empty())
+	{
+		auto e = eventQueue.front();
+		for (auto listener : eventConsumers)
+		{
+			listener->OnEvent(*e);
+		}
+		eventQueue.pop();
+	}
+}
+
 void ShadowEventManager::AddNewEventSource_(IShadowEventSource* shadowEventSource)
 {
 	eventSources.emplace_back(shadowEventSource);
+}
+
+void ShadowEventManager::AddNewEventListener_(IShadowEventListener* shadowEventSource)
+{
+	eventConsumers.emplace_back(shadowEventSource);
 }
 
 

@@ -13,5 +13,7 @@ public:
 	~ShadowModuleManager();
 
 	void PushModule(ShadowModule* module);
+
+	void Init();
 };
 

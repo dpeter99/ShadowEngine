@@ -9,7 +9,7 @@ class ShadowApplication
 
 	AssetManager asset;
 
-	bool running;
+	bool running = true;
 
 public:
 	ShadowApplication();
