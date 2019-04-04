@@ -2,6 +2,8 @@
 #include "Platform/SDL/SDLEventSource.h"
 
 
+ShadowEventManager* ShadowEventManager::instance = nullptr;
+
 ShadowEventManager::ShadowEventManager()
 {
 	IShadowEventSource* s = new SDLEventSource();
@@ -17,12 +19,17 @@ ShadowEventManager::~ShadowEventManager()
 	}
 }
 
-void ShadowEventManager::PushNewEvent(ShadowEvent* e)
+void ShadowEventManager::Init() const
+{
+	//instance = new ShadowEventManager();
+}
+
+void ShadowEventManager::PushNewEvent_(ShadowEvent* e)
 {
 	this->eventQueue.push(e);
 }
 
-void ShadowEventManager::AddNewEventSource(IShadowEventSource* shadowEventSource)
+void ShadowEventManager::AddNewEventSource_(IShadowEventSource* shadowEventSource)
 {
 	eventSources.emplace_back(shadowEventSource);
 }

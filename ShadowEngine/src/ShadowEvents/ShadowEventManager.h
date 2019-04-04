@@ -3,8 +3,9 @@
 #include "ShadowEvents/ShadowEvent.h"
 #include <list>
 #include "ShadowEvents/IShadowEventSource.h"
+#include "ShadowModules/ShadowModule.h"
 
-class ShadowEventManager
+class ShadowEventManager : public ShadowModule
 {
 	static  ShadowEventManager* instance;
 
@@ -18,6 +19,8 @@ class ShadowEventManager
 public:
 	ShadowEventManager();
 	~ShadowEventManager();
+
+	void Init() const override;
 
 	static void PushNewEvent(ShadowEvent* e) { instance->PushNewEvent_(e); };
 

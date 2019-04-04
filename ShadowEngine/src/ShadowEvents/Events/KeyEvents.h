@@ -42,6 +42,8 @@ public:
 	KeyReleasedEvent(int keycode)
 		: KeyEvent(keycode) {}
 
+	EVENT_CLASS_TYPE(EventSource::EventCategoryInput)
+
 	std::string ToString() const override
 	{
 		std::stringstream ss;

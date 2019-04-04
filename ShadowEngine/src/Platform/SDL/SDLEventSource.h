@@ -5,7 +5,7 @@ class SDLEventSource : public IShadowEventSource
 {
 public:
 
-	virtual void PollEvents() override;
+	virtual void PollEvents() const override;
 
 	SDLEventSource();
 	~SDLEventSource();

@@ -3,6 +3,7 @@
 #include "ShadowMap/ShadowWorld.h"
 #include "ShadowAsset/AssetManager.h"
 #include "ShadowMap/ShadowMapRenderer.h"
+#include "ShadowEvents/ShadowEventManager.h"
 
 
 ShadowApplication::ShadowApplication()
@@ -13,6 +14,11 @@ ShadowApplication::ShadowApplication()
 
 ShadowApplication::~ShadowApplication()
 {
+}
+
+void ShadowApplication::Init()
+{
+	moduleManager.PushModule(new ShadowEventManager());
 }
 
 void ShadowApplication::Start()

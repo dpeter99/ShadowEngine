@@ -15,6 +15,7 @@ public:
 	ShadowApplication();
 	virtual ~ShadowApplication();
 
+	void Init();
 	void Start();
 };
 
