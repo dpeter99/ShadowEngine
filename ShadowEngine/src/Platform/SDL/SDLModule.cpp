@@ -3,6 +3,7 @@
 #include <cstdio>
 #include "glad/glad.h"
 #include <string>
+#include "ShadowApplication.h"
 
 
 void SDLModule::Init()
@@ -15,8 +16,8 @@ void SDLModule::Init()
 	}
 
 	//Use OpenGL 3.1 core
-	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
-	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 1);
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 4);
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 
 	// Create window
@@ -27,6 +28,8 @@ void SDLModule::Init()
 		printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
 		//return false;
 	}
+
+	ShadowApplication::Get().SetWindow(new ShadowWindow(window,800, 600));
 
 	// Create OpenGL context
 	glContext = SDL_GL_CreateContext(window);

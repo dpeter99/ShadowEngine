@@ -2,6 +2,7 @@
 
 #include "ShadowEvents/ShadowEvent.h"
 #include <sstream>
+#include <winerror.h>
 
 class KeyEvent : public ShadowEvent
 {
@@ -55,8 +56,8 @@ public:
 class KeyTypedEvent : public KeyEvent
 {
 public:
-	KeyTypedEvent(int keycode)
-		: KeyEvent(keycode) {}
+	KeyTypedEvent(char* keycode)
+		: KeyEvent(keycode[0]), keys(keycode) {}
 
 	std::string ToString() const override
 	{
@@ -64,4 +65,13 @@ public:
 		ss << "KeyTypedEvent: " << (char)m_KeyCode;
 		return ss.str();
 	}
+
+	EVENT_CLASS_TYPE(EventSource::EventCategoryInput)
+
+	char* GetText()
+	{
+		return keys;
+	}
+private:
+	char* keys;
 };

@@ -1,15 +1,27 @@
 #pragma once
 #include "ShadowModules/ShadowModule.h"
 #include "ShadowEvents/IShadowEventListener.h"
+#include "ImGui/IShadowImGui.h"
 
 class Debug :
-	public ShadowModule , public IShadowEventListener
+	public ShadowModule ,
+	public IShadowEventListener,
+	public IShadowImGui
 {
 public:
 
-	virtual void Init() override;
+	bool active;
 
-	virtual void OnEvent(ShadowEvent& e) override;
+	void Init() override;
+
+	void Update() override{};
+
+	std::string GetName() override { return "Debug"; };
+
+	void OnEvent(ShadowEvent& e) override;
+
+	void OnGui() override;
+
 
 	Debug();
 	virtual ~Debug();

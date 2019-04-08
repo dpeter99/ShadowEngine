@@ -15,5 +15,6 @@ public:
 	void PushModule(ShadowModule* module);
 
 	void Init();
+	void Update();
 };
 

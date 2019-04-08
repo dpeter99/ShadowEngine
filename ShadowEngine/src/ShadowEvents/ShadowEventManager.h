@@ -31,6 +31,10 @@ public:
 
 	void Init() override;
 
+	void Update() override {};
+
+	std::string GetName() override { return "ShadowEventManager"; };
+
 	static void PollEvents() { instance->PollEvents_(); };
 
 	static void PushNewEvent(ShadowEvent* e) { instance->PushNewEvent_(e); };

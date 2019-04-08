@@ -27,3 +27,12 @@ void ShadowModuleManager::Init()
 		module->Init();
 	}
 }
+
+void ShadowModuleManager::Update()
+{
+	for (auto module : modules)
+	{
+		module->Update();
+	}
+
+}

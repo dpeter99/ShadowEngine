@@ -12,6 +12,10 @@ public:
 
 	virtual void Init() override;
 
+	void Update() override {};
+
+	std::string GetName() override { return "SDLModule"; };
+
 	SDLModule();
 	~SDLModule();
 };

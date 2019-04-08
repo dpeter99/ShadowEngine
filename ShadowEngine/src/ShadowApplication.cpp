@@ -6,11 +6,16 @@
 #include "ShadowEvents/ShadowEventManager.h"
 #include "Platform/SDL/SDLModule.h"
 #include "Debug.h"
+#include "Time.h"
+#include "ImGui/ImGuiModule.h"
+#include "glad/glad.h"
 
+
+ShadowApplication* ShadowApplication::instance = nullptr;
 
 ShadowApplication::ShadowApplication()
 {
-		
+	instance = this;
 }
 
 
@@ -22,6 +27,7 @@ void ShadowApplication::Init()
 {
 	moduleManager.PushModule(new ShadowEventManager());
 	moduleManager.PushModule(new SDLModule());
+	moduleManager.PushModule(new ImGuiModule());
 	moduleManager.PushModule(new Debug());
 	
 
@@ -37,7 +43,17 @@ void ShadowApplication::Start()
 
 	while(running)
 	{
+		Time::UpdateTime();
+
+		glClearColor(1, 0, 1, 1);
+		glClear(GL_COLOR_BUFFER_BIT);
+
 		ShadowEventManager::PollEvents();
 		ShadowEventManager::ProcessEvents();
+
+		moduleManager.Update();
+
+		// Update window with OpenGL rendering
+		SDL_GL_SwapWindow(window_->winPtr);
 	}
 }

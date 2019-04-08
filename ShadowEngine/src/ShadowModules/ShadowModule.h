@@ -9,6 +9,8 @@ public:
 
 	virtual void Update() = 0;
 
+	virtual std::string GetName() = 0;
+
 	ShadowModule();
 	virtual ~ShadowModule();
 };
