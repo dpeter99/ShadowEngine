@@ -1,7 +1,8 @@
 #pragma once
 
 template< typename Type, typename DataType >
-bool is(const DataType& data) {
-	if (&data == NULL) return false;
-	return typeid(data) == typeid(Type);
+bool is(DataType& data, Type** out) {
+	if (&data == nullptr) return false;
+	*out = dynamic_cast<Type*>(&data);
+	return *out == nullptr ? false : true;
 }
