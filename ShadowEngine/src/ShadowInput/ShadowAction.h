@@ -3,6 +3,7 @@
 
 namespace ShadowInput {
 
+	template<class T>
 	class ShadowAction
 	{
 
@@ -12,7 +13,7 @@ namespace ShadowInput {
 		//InputBinding& source_;
 
 	public:
-		ShadowAction(std::string a, ShadowInput::InputBinding& b, bool continous = false);
+		ShadowAction(std::string a, ShadowInput::InputBinding* b, bool continous = false);
 		~ShadowAction();
 	};
 

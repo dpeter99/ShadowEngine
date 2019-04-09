@@ -1,22 +1,25 @@
 #include <string>
-using namespace std;
 
-class Binding;
+class Modifier
+{
 
-template<class T>
-class InputAction {
-public:
-	InputAction(std::string a, Binding* b);
 };
-
-class Vector2float;
-class Modifier;
 
 class Binding
 {
 public:
 	Binding* AddModifier(const ::Modifier* b);
 };
+
+template<class T>
+class InputAction {
+public:
+	InputAction(const char* a, Binding* b, bool continous = false);
+};
+
+class Vector2float;
+class Modifier;
+
 
 class Binding1D : public Binding
 {
@@ -40,8 +43,9 @@ public:
 class BindingAND : public Binding
 {
 public:
-	BindingAND(const Binding& _a, const Binding& _b);
+	BindingAND(const Binding* _a, const Binding* _b);
 };
+
 
 class KeyboardBinding : public Binding {
 public:
@@ -55,15 +59,11 @@ public:
 };
 
 
-class Modifier
-{
-
-};
 
 class ModifierHold : public Modifier
 {
 public:
-	ModifierHold(float time);
+	ModifierHold(float time, bool cont = false);
 };
 
 class ModifierRepeat : public Modifier
@@ -75,7 +75,12 @@ public:
 
 void main() {
 
-	new InputAction<float>("Run", new Binding1D(new KeyboardBinding("W"), new KeyboardBinding("S")));
+	new InputAction<float>("Run",
+		new Binding1D(
+			new KeyboardBinding("W"),
+			new KeyboardBinding("S")
+		)
+		);
 
 	new InputAction<bool>("Fire", new KeyboardBinding("Space"));
 
@@ -112,9 +117,9 @@ void main() {
 	));
 
 
-	new InputAction<bool>("Combo", BindingAND(
-		InputMapBinding("F"),
-		InputMapBinding("G")
-	).AddModifier(ModifierHold(0.5, true)
+	new InputAction<bool>("Combo", (new BindingAND(
+		new InputMapBinding("F"),
+		new InputMapBinding("G")
+	))->AddModifier(new ModifierHold(0.5, true)
 	), true);
 }

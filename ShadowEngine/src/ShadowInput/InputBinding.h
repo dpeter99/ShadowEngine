@@ -5,13 +5,16 @@
 #include "ShadowEvents/ShadowEvent.h"
 
 
+class ShadowAction;
+
 namespace ShadowInput {
 
+	
 
 	class InputBinding
 	{
 	protected:
-		ShadowInput::ShadowAction* action_;
+		::ShadowAction* action_;
 
 		std::list<InputModifier*> modifiers_;
 

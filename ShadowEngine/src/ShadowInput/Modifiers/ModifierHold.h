@@ -1,17 +1,20 @@
 #pragma once
 #include "ShadowInput/InputModifier.h"
 
-class ModifierHold :
-	public InputModifier
-{
+namespace ShadowInput {
 
-	float wait_;	
+	class ModifierHold :
+		public InputModifier
+	{
 
-public:
+		float wait_;
 
-	void ProcessInput() override;
+	public:
 
-	ModifierHold(const float _wait) : InputModifier(), wait_(_wait) {};
-	~ModifierHold();
-};
+		void ProcessInput() override;
 
+		ModifierHold(const float time, bool cont = false) : InputModifier(), wait_(time) {};
+		~ModifierHold();
+	};
+
+}
