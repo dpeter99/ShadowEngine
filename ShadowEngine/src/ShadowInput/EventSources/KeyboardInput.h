@@ -1,8 +1,8 @@
 #pragma once
-#include "ShadowInput/InputEventSource.h"
+#include "ShadowInput/InputBinding.h"
 
 class KeyboardInput :
-	public InputEventSource
+	public InputBinding
 {
 
 	char* keycode;

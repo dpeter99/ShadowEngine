@@ -168,3 +168,24 @@ project "DemoGame"
 		"%{wks.location}bin/"..outputdir.."/ShadowEngineBuild/ShadowEngineBuild.exe A %{prj.location}/Resources ",
 		--"echo %{prj.location}"
 	}
+
+project "Planning"
+	location "Planning"
+	kind "ConsoleApp"
+	language "C++"
+	
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	debugdir ("bin/" .. outputdir .. "/%{prj.name}")
+
+	files
+	{
+		"%{prj.name}/src/**.h",
+		"%{prj.name}/src/**.cpp",
+	}
+
+	includedirs
+	{
+		"%{prj.name}/src",
+	}

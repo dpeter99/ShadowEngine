@@ -5,7 +5,7 @@
 #include "ShadowEvents/ShadowEvent.h"
 #include "ShadowAction.h"
 
-class InputEventSource
+class InputBinding
 {
 protected:
 	ShadowAction* action_;
@@ -21,7 +21,7 @@ public:
 	 * \param _m The new modifier that is added
 	 * \return Returns the same object so it can be chained
 	 */
-	InputEventSource& AddModifier(InputModifier* _m);
+	InputBinding& AddModifier(InputModifier* _m);
 
 	/**
 	 * \brief Processes a event
@@ -29,7 +29,7 @@ public:
 	 */
 	virtual void ProcessEvent(ShadowEvent& event) = 0;
 
-	InputEventSource();
-	~InputEventSource();
+	InputBinding();
+	~InputBinding();
 };
 

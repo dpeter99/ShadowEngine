@@ -1,16 +1,16 @@
-#include "InputEventSource.h"
+#include "InputBinding.h"
 
 
-void InputEventSource::ApplyModifiers()
+void InputBinding::ApplyModifiers()
 {
 
 }
 
-InputEventSource::InputEventSource()
+InputBinding::InputBinding()
 {
 }
 
 
-InputEventSource::~InputEventSource()
+InputBinding::~InputBinding()
 {
 }

@@ -1,16 +1,19 @@
 #pragma once
-#include "InputEventSource.h"
+#include "InputBinding.h"
 
-class ShadowAction
-{
+namespace ShadowInput {
 
-	bool active;
-	//TODO: Delegates to activate
-	//TODO: link to the activation tree
-	InputEventSource source_;
+	class ShadowAction
+	{
 
-public:
-	ShadowAction();
-	~ShadowAction();
-};
+		bool active;
+		//TODO: Delegates to activate
+		//TODO: link to the activation tree
+		//InputBinding& source_;
 
+	public:
+		ShadowAction(std::string a, ShadowInput::InputBinding& b, bool continous = false);
+		~ShadowAction();
+	};
+
+}
