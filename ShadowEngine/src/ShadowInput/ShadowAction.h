@@ -9,12 +9,21 @@ namespace ShadowInput {
 
 		bool active;
 		//TODO: Delegates to activate
-		//TODO: link to the activation tree
-		//InputBinding& source_;
+		
+		InputBinding<T>* binding_;
 
 	public:
-		ShadowAction(std::string a, ShadowInput::InputBinding* b, bool continous = false);
+
+
+		/**
+		 * \brief Updates the Action with the event passed in
+		 * \param e Event object
+		 */
+		void ProcessEvent(ShadowEvent& e);
+
+		ShadowAction(std::string a, ShadowInput::InputBinding<T>* b, bool continous = false);
 		~ShadowAction();
 	};
 
+	
 }

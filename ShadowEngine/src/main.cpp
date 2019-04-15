@@ -9,31 +9,41 @@
 #include <ShadowEntity/EntityRegistry.h>
 #include <ShadowMap/ShadowMapRenderer.h>
 #include "ShadowApplication.h"
+#include "ShadowInput/ShadowAction.h"
+#include "ShadowInput/Bindings/Binding2D.h"
+#include "ShadowInput/Bindings/Binding1D.h"
+#include "ShadowInput/Bindings/KeyboardBinding.h"
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
 
 
-    ShadowEntity::EntityRegistry registry;
+	ShadowEntity::EntityRegistry registry;
 
-    //registry.ListPreRegisteredEntitys();
+	//registry.ListPreRegisteredEntitys();
 
-    //AssetLoader loader;
+	//AssetLoader loader;
 	//ShadowWorld* w = loader.LoadWorld("Resources/Worlds/Default/overworld.txt");
 	//w->SetActiveMap("default");
 	//w->Update(ShadowMath::Vector2float(0, 0));
-    //ShadowMapRenderer::RenderMap(*map);
+	//ShadowMapRenderer::RenderMap(*map);
 
+	ShadowInput::ShadowAction<float>("Test",
+		new ShadowInput::Binding1D(
+			new ShadowInput::KeyboardBinding("A"),
+			new ShadowInput::KeyboardBinding("D")
+		)
+		);
 
 
 	ShadowApplication app;
 	app.Init();
 	app.Start();
-	
 
 
-    
-    char s;
-    std::cin >> s;
 
-    return 0;
+
+	char s;
+	std::cin >> s;
+
+	return 0;
 }

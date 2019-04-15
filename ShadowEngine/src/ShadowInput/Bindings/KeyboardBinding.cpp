@@ -1,18 +1,38 @@
+#include "KeyboardBinding.h"
 #include "Utility.h"
 #include "ShadowEvents/IShadowEventListener.h"
 #include "KeyboardBinding.h"
 
 namespace ShadowInput {
 
-	void KeyboardBinding::ProcessEvent(ShadowEvent& e)
+	void KeyboardBinding::ProcessEvent(InputContext<bool>* e)
 	{
-		EVENT_BIND(e, KeyPressedEvent,
-			{
-				if (this->keycode[0] == _event->GetKeyCode())
-				{
+		ShadowEvent* ev = e->GetEvent();
 
+		//"BIND" to the event
+		KeyPressedEvent* _event;
+		if(is<KeyPressedEvent>(ev,&_event))
+		{
+			if (this->keycode[0] == _event->GetKeyCode())
+			{
+				//We have a keystroke
+				e->state_ = ActionState::Started;
+				//Pass to the modifiers
+				for (auto modifier : modifiers_)
+				{
+					modifier->ProcessInput(e);
 				}
-			})
+			}
+		}
+	}
+
+	KeyboardBinding::KeyboardInput()
+	{
+	}
+
+
+	KeyboardBinding::~KeyboardInput()
+	{
 	}
 
 }
