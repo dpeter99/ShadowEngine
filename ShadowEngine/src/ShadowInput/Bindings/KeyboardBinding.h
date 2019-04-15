@@ -1,20 +1,20 @@
 #pragma once
 #include "ShadowInput/InputBinding.h"
+#include "ShadowInput/InputContext.h"
 
 namespace ShadowInput {
 
 	class KeyboardBinding :
-		public InputBinding
+		public InputBinding<bool>
 	{
 
 		char* keycode;
 
 	public:
 
-		void ProcessEvent(ShadowEvent& event_) override;
+		void ProcessEvent(InputContext<bool>* event_);
 
 		KeyboardBinding(const char* str);
 		~KeyboardBinding();
 	};
-
 }

@@ -10,7 +10,7 @@ class ShadowAction;
 namespace ShadowInput {
 
 	
-
+	template<class T>
 	class InputBinding
 	{
 	protected:
@@ -33,10 +33,9 @@ namespace ShadowInput {
 		 * \brief Processes a event
 		 * \param event Event to process
 		 */
-		virtual void ProcessEvent(ShadowEvent& event) = 0;
+		virtual void ProcessEvent(ShadowEvent& event);
 
 		InputBinding();
 		~InputBinding();
 	};
-
 }

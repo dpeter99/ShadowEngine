@@ -19,5 +19,5 @@ public:
 
 void main()
 {
-	new A(B(10).Add(3));
+	new A(B(10).Add(3).Add(4));
 }
