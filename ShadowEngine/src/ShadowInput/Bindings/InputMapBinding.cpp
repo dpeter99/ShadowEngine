@@ -1,12 +1,10 @@
 #include "InputMapBinding.h"
 
+namespace ShadowInput {
 
 
-InputMapBinding::InputMapBinding()
-{
-}
+	InputMapBinding::~InputMapBinding()
+	{
+	}
 
-
-InputMapBinding::~InputMapBinding()
-{
 }

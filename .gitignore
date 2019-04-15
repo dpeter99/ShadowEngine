@@ -23,3 +23,5 @@ ShadowEngineBuild/obj/
 *.csproj
 
 DemoGame/obj/
+
+packages/

@@ -1,12 +1,6 @@
 #include "Binding1D.h"
 
+namespace  ShadowInput {
 
-
-Binding1D::Binding1D()
-{
-}
-
-
-Binding1D::~Binding1D()
-{
+	
 }

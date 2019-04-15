@@ -6,7 +6,7 @@ class B
 public:
 	B(int g) { std::cout << "New B" << std::endl; };
 	~B() { std::cout << "Dest B" << std::endl; }
-	B& Add(int a) {};
+	B& Add(int a) { return *this; };
 };
 
 class A

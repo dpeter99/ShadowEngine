@@ -1,12 +1,6 @@
 #include "ModifierHold.h"
 
+namespace ShadowInput {
 
 
-ModifierHold::ModifierHold()
-{
-}
-
-
-ModifierHold::~ModifierHold()
-{
 }

@@ -65,8 +65,7 @@ project "ShadowEngine"
 		cppdialect "C++17"
 		systemversion "latest"
 
-		defines
-		{
+		defines{
 			"SE_WINDOWS"
 		}
 
@@ -189,3 +188,65 @@ project "Planning"
 	{
 		"%{prj.name}/src",
 	}
+
+	filter "system:windows"
+		cppdialect "C++17"
+		systemversion "latest"
+
+project "ShadowLight"
+	location "ShadowLight"
+	kind "ConsoleApp"
+	language "C#"
+	
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	files
+	{
+		"%{prj.name}/src/**",
+	}
+
+	links{
+		"Microsoft.CSharp",
+		"PresentationCore",
+		"PresentationFramework",
+		"System",
+		"System.Core",
+		"System.Data",
+		"System.Data.DataSetExtensions",
+		"System.Xaml",
+		"System.Xml",
+		"System.Xml.Linq",
+		"WindowsBase",
+	}
+	
+	excludes { "**/bin/**", "**/obj/**" } 
+
+	includedirs
+	{
+		"%{prj.name}",
+	}
+
+	filter "system:windows"
+		systemversion "latest"
+
+		defines
+		{
+			"SE_WINDOWS"
+		}
+
+	filter "configurations:Debug"
+		defines "HZ_DEBUG"
+		runtime "Debug"
+		symbols "On"
+
+	filter "configurations:Release"
+		defines "HZ_RELEASE"
+		runtime "Release"
+		optimize "On"
+
+	filter "configurations:Dist"
+		defines "HZ_DIST"
+		runtime "Release"
+		optimize "On"
+

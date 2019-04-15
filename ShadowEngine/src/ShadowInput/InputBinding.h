@@ -36,7 +36,7 @@ namespace ShadowInput {
 		virtual void ProcessEvent(ShadowEvent& event) = 0;
 
 		InputBinding();
-		~InputBinding();
+		virtual ~InputBinding();
 	};
 
 }

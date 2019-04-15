@@ -1,12 +1,5 @@
 #include "ShadowAction.h"
 
+namespace  ShadowInput {
 
-
-ShadowAction::ShadowAction()
-{
-}
-
-
-ShadowAction::~ShadowAction()
-{
 }

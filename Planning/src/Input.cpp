@@ -1,5 +1,5 @@
 #include <string>
-
+/*
 class Modifier
 {
 
@@ -123,3 +123,6 @@ void main() {
 	))->AddModifier(new ModifierHold(0.5, true)
 	), true);
 }
+
+
+*/

@@ -1,0 +1,82 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ShadowLight.src"
+             xmlns:Model="clr-namespace:ShadowLight.Model" x:Class="ShadowLight.src.UserControl1"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" IsEnabled="False">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Grid.Column="0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox IsChecked="{Binding Deleteable, Mode=TwoWay}" />
+                        <Label Content="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+
+        <WrapPanel Grid.Column="1">
+            <WrapPanel.DataContext>
+                <Model:Spell/>
+            </WrapPanel.DataContext>
+            <GroupBox Header="Base">
+                <StackPanel>
+                    <Grid Margin="0,5" Width="200">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Content="Name" Margin="0" Padding="0"/>
+                        <TextBox Grid.Column="1" Text="{Binding name}"/>
+                    </Grid>
+                </StackPanel>
+            </GroupBox>
+        </WrapPanel>
+
+        <!--
+
+        <Grid Grid.Column="1">
+            <Grid.DataContext>
+                <Model:Spell/>
+            </Grid.DataContext>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <StackPanel Grid.Column="0">
+                <GroupBox Header="Base">
+                    <StackPanel>
+                        <Grid Margin="0,5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="3*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Content="Name" Margin="0" Padding="0"/>
+                            <TextBox Grid.Column="1" Text="{Binding name}"/>
+                        </Grid>
+
+
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+
+
+
+        </Grid>
+
+-->
+
+    </Grid>
+</UserControl>

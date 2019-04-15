@@ -1,16 +1,10 @@
-#include "InputEventSource.h"
+#include "InputBinding.h"
 
+namespace ShadowInput {
 
-void InputEventSource::ApplyModifiers()
-{
+	void InputBinding::ApplyModifiers()
+	{
 
-}
+	}
 
-InputEventSource::InputEventSource()
-{
-}
-
-
-InputEventSource::~InputEventSource()
-{
 }

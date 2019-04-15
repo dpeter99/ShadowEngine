@@ -1,12 +1,6 @@
 #include "BindingAND.h"
 
+namespace ShadowInput {
 
 
-BindingAND::BindingAND()
-{
-}
-
-
-BindingAND::~BindingAND()
-{
 }
