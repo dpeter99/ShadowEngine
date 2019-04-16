@@ -1,4 +1,5 @@
 #include "ShadowAction.h"
+#include "../../ShadowActionManager.h"
 
 namespace ShadowInput {
 
@@ -8,4 +9,12 @@ namespace ShadowInput {
 		binding_->ProcessEvent(e);
 	}
 
+	template <class T>
+	ShadowAction<T>::ShadowAction(std::string a, ShadowInput::InputBinding<T>* b, bool continous)
+	{
+		name = a;
+		binding_ = b;
+
+		ShadowInput::ShadowActionManager::_instance->AddEvent(this);
+	}
 }

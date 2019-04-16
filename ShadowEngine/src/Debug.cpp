@@ -4,12 +4,16 @@
 #include "ImGui/ImGuiModule.h"
 #include "imgui.h"
 #include "ShadowModules/ShadowModuleManager.h"
+#include "ShadowInput/ShadowAction.h"
+#include "ShadowInput/Bindings/KeyboardBinding.h"
 
 
 void Debug::Init()
 {
 	ShadowEventManager::AddNewEventListener(this);
 	ImGuiModule::AddGUICall(this);
+
+	new ShadowInput::ShadowAction<bool>("Test", new ShadowInput::KeyboardBinding("a"));
 
 	active = true;
 }

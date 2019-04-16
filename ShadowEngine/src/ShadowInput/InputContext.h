@@ -2,16 +2,25 @@
 #include "InputBinding.h"
 #include "ShadowAction.h"
 
-template<class T>
+enum ActionState
+{
+	Idle,
+	Started,
+	Progress,
+	Ended,
+	Canceled,
+};
+
+//template<class T>
 class InputContext
 {
 public:
 	ShadowEvent* event_;
 
-	ShadowInput::ShadowAction<T>* action_;
+	//ShadowInput::ShadowAction<T>* action_;
 
 	ActionState state_;
-	T data_;
+	//T data_;
 
 
 
@@ -22,14 +31,4 @@ public:
 
 
 
-};
-
-
-enum ActionState
-{
-	Idle,
-	Started,
-	Progress,
-	Ended,
-	Canceled,
 };

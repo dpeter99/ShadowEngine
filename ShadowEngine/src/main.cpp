@@ -13,6 +13,7 @@
 #include "ShadowInput/Bindings/Binding2D.h"
 #include "ShadowInput/Bindings/Binding1D.h"
 #include "ShadowInput/Bindings/KeyboardBinding.h"
+#include "ShadowInput/Modifiers/ModifierRepeat.h"
 
 int main(int argc, char* argv[]) {
 
@@ -32,6 +33,11 @@ int main(int argc, char* argv[]) {
 			new ShadowInput::KeyboardBinding("A"),
 			new ShadowInput::KeyboardBinding("D")
 		)
+		);
+
+	ShadowInput::ShadowAction<bool>("Test2",
+			(new ShadowInput::KeyboardBinding("Q"))
+					->AddModifier(new ShadowInput::ModifierRepeat(4))
 		);
 
 

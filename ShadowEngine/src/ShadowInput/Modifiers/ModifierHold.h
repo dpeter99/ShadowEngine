@@ -11,7 +11,7 @@ namespace ShadowInput {
 
 	public:
 
-		void ProcessInput() override;
+		void ProcessInput(InputContext* ctx) override;
 
 		ModifierHold(const float time, bool cont = false) : InputModifier(), wait_(time) {};
 		~ModifierHold();
