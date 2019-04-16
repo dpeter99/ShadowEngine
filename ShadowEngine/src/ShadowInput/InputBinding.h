@@ -33,7 +33,7 @@ namespace ShadowInput {
 		 * \brief Processes a event
 		 * \param event Event to process
 		 */
-		virtual void ProcessEvent(ShadowEvent& event);
+		virtual void ProcessEvent(const ShadowEvent& event);
 
 		InputBinding();
 		virtual ~InputBinding();

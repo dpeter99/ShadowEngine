@@ -12,7 +12,7 @@ namespace ShadowInput {
 
 	public:
 
-		void ProcessEvent(InputContext<bool>* event_);
+		void ProcessEvent(const ShadowEvent& event_);
 
 		KeyboardBinding(const char* str);
 		~KeyboardBinding();

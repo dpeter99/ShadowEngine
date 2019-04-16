@@ -5,13 +5,13 @@
 
 namespace ShadowInput {
 
-	void KeyboardBinding::ProcessEvent(InputContext<bool>* e)
+	void KeyboardBinding::ProcessEvent(const ShadowEvent& e)
 	{
-		ShadowEvent* ev = e->GetEvent();
+		//ShadowEvent& ev = e;
 
 		//"BIND" to the event
 		KeyPressedEvent* _event;
-		if(is<KeyPressedEvent>(ev,&_event))
+		if(is<KeyPressedEvent>(e,&_event))
 		{
 			if (this->keycode[0] == _event->GetKeyCode())
 			{
