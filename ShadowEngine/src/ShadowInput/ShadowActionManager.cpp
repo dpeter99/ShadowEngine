@@ -2,7 +2,7 @@
 
 namespace ShadowInput {
 
-	ShadowActionManager* _instance = nullptr;
+	ShadowActionManager* ShadowActionManager::_instance = nullptr;
 
 	void ShadowActionManager::OnEvent(ShadowEvent& e)
 	{

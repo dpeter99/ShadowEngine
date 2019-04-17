@@ -1,5 +1,5 @@
 #pragma once
-#include "InputBinding.h"
+#include "ShadowInput/InputBinding.h"
 #include "ShadowEvents/ShadowEvent.h"
 
 namespace ShadowInput {
@@ -8,6 +8,11 @@ namespace ShadowInput {
 	{
 	public:
 		virtual  void ProcessEvent(ShadowEvent& e) = 0;
+
+		virtual void AddEventListener(ActionState state) = 0;
+		virtual void RemoveEventListener() = 0;
+
+		virtual void SetActive(bool set) = 0;
 	};
 
 
@@ -20,7 +25,7 @@ namespace ShadowInput {
 		bool active;
 		//TODO: Delegates to activate
 		
-		InputBinding<T>* binding_;
+		ShadowInput::InputBinding<T> *binding_;
 
 	public:
 
@@ -31,7 +36,14 @@ namespace ShadowInput {
 		 */
 		void ProcessEvent(ShadowEvent& e) override;
 
+
+		void AddEventListener(ActionState state) {};
+		void RemoveEventListener() {};
+		void SetActive(bool set) {};
+
 		ShadowAction(std::string a, ShadowInput::InputBinding<T>* b, bool continous = false);
+		
+
 		~ShadowAction();
 	};
 

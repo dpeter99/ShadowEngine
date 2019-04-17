@@ -8,8 +8,9 @@ namespace ShadowInput {
 	void KeyboardBinding::ProcessEvent(const ShadowEvent& e)
 	{
 		//"BIND" to the event
+		ShadowEvent& ev = const_cast<ShadowEvent&>(e);
 		KeyPressedEvent* _event;
-		if(is<KeyPressedEvent>(e,&_event))
+		if(is<KeyPressedEvent>(ev,&_event))
 		{
 			if (this->keycode[0] == _event->GetKeyCode())
 			{
@@ -25,4 +26,14 @@ namespace ShadowInput {
 		}
 	}
 
+	KeyboardBinding::KeyboardBinding(const char* str)
+	{
+		keycode = new char;
+		*keycode = *str;
+	}
+	
+	KeyboardBinding::~KeyboardBinding()
+	{
+		delete keycode;
+	}
 }

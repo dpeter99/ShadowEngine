@@ -6,9 +6,10 @@
 #include "ShadowEvents/ShadowEventManager.h"
 #include "Platform/SDL/SDLModule.h"
 #include "Debug.h"
-#include "Time.h"
 #include "ImGui/ImGuiModule.h"
 #include "glad/glad.h"
+#include "ShadowMath/Vector2float.h"
+#include "ShadowTime.h"
 
 
 ShadowApplication* ShadowApplication::instance = nullptr;

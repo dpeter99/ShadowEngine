@@ -1,5 +1,5 @@
 #include "ShadowAction.h"
-#include "../../ShadowActionManager.h"
+
 
 namespace ShadowInput {
 
@@ -16,5 +16,11 @@ namespace ShadowInput {
 		binding_ = b;
 
 		ShadowInput::ShadowActionManager::_instance->AddEvent(this);
+	}
+
+	template <class T>
+	ShadowAction<T>::~ShadowAction()
+	{
+		delete binding_;
 	}
 }

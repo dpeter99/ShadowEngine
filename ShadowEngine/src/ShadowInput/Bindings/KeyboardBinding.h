@@ -12,9 +12,9 @@ namespace ShadowInput {
 
 	public:
 
-		void ProcessEvent(const ShadowEvent& event_);
+		void ProcessEvent(const ShadowEvent& event_) override;
 
 		KeyboardBinding(const char* str);
-		~KeyboardBinding();
+		~KeyboardBinding() override;
 	};
 }

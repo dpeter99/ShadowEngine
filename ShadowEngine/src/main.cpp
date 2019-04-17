@@ -28,17 +28,11 @@ int main(int argc, char* argv[]) {
 	//w->Update(ShadowMath::Vector2float(0, 0));
 	//ShadowMapRenderer::RenderMap(*map);
 
-	ShadowInput::ShadowAction<float>("Test",
-		new ShadowInput::Binding1D(
-			new ShadowInput::KeyboardBinding("A"),
-			new ShadowInput::KeyboardBinding("D")
-		)
+	ShadowInput::ShadowAction<bool>("Test",
+			new ShadowInput::KeyboardBinding("A")
 		);
 
-	ShadowInput::ShadowAction<bool>("Test2",
-			(new ShadowInput::KeyboardBinding("Q"))
-					->AddModifier(new ShadowInput::ModifierRepeat(4))
-		);
+	
 
 
 	ShadowApplication app;

@@ -1,16 +1,10 @@
-//
-// Created by dpete on 3/6/2019.
-//
+#pragma once
 
-#ifndef SHADOWENGINE_SHADOWWORLD_H
-#define SHADOWENGINE_SHADOWWORLD_H
-
-#include "list"
+#include <list>
 #include <map>
 
 #include "ShadowMapChunk.h"
-#include "../ShadowMath/Vector2float.h"
-#include "../ShadowAsset/ShadowAsset.h"
+#include "ShadowAsset/ShadowAsset.h"
 
 //World
 // - Map
@@ -85,6 +79,3 @@ public:
 		void SetActiveMap(std::string name);
 
 };
-
-
-#endif //SHADOWENGINE_SHADOWWORLD_H

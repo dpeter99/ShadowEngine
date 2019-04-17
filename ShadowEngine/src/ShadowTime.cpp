@@ -1,4 +1,7 @@
 #include "Time.h"
+#include <SDL2/SDL_hints.h>
+#include <SDL2/SDL.h>
+#include "ShadowTime.h"
 
 Uint64 Time::NOW = SDL_GetPerformanceCounter();
 Uint64 Time::LAST = 0;

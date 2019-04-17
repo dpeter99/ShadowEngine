@@ -1,16 +1,13 @@
 //
 // Created by dpete on 3/6/2019.
 //
-
-#include "ShadowAsset/AssetLoader.h"
 #include "ShadowWorld.h"
 
-#include "list"
-#include "string"
-#include "sstream"
-#include <algorithm>
+#include <list>
+#include <string>
+#include <sstream>
 #include <iomanip>
-#include "../ShadowAsset/AssetManager.h"
+#include "ShadowAsset/AssetManager.h"
 
 void ShadowWorld::Update(const ShadowMath::Vector2int& pos) {
 	//Send the position to the active map so it can load i't chunks

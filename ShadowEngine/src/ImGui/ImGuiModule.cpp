@@ -3,11 +3,11 @@
 #include "imgui.h"
 #include "Platform/OpenGL/ImGuiOpenGLRenderer.h"
 #include "ShadowApplication.h"
-#include "Time.h"
 #include "Utility.h"
 #include "ShadowEvents/Events/KeyEvents.h"
 #include "ShadowEvents/Events/MouseEvents.h"
 #include "ShadowEvents/ShadowEventManager.h"
+#include "ShadowTime.h"
 
 ImGuiModule* ImGuiModule::instance = nullptr;
 

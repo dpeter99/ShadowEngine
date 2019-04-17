@@ -1,0 +1,1109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(@1 @138)" Category="CodeSchema_ProjectItem" Bounds="598.008666974983,1052.65550123326,112.744666743746,25.9980000770793" FilePath="$(VsSolution)\ShadowEngine\dependencies\GLAD\include\KHR\khrplatform.h" Label="khrplatform.h" />
+    <Node Id="(@1 @14)" Category="CodeSchema_ProjectItem" Bounds="598.008666974983,996.657501156186,72.288000077079,25.9980000770792" FilePath="$(VsSolution)\ShadowEngine\dependencies\GLAD\src\glad.c" Label="glad.c" />
+    <Node Id="(@1 @55)" Category="CodeSchema_ProjectItem" Bounds="700.296667052062,996.657501156186,73.5346667437457,25.9980000770792" FilePath="$(VsSolution)\ShadowEngine\dependencies\GLAD\include\glad\glad.h" Label="glad.h" />
+    <Node Id="(@3 @110)" Category="CodeSchema_ProjectItem" Bounds="454.448672266981,543.62450374578,85.9880000770791,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\Debug.h" Label="Debug.h" />
+    <Node Id="(@3 @127)" Category="CodeSchema_ProjectItem" Bounds="1225.86733924196,599.622503822859,127.081333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ImGui\IShadowImGui.h" Label="IShadowImGui.h" />
+    <Node Id="(@3 @132)" Category="CodeSchema_ProjectItem" Bounds="901.331339087807,823.614504131175,150.128000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowMap\ShadowMapChunk.h" Label="ShadowMapChunk.h" />
+    <Node Id="(@3 @139)" Category="CodeSchema_ProjectItem" Bounds="553.920672189902,711.618503977017,152.531333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowApplication.h" Label="ShadowApplication.h" />
+    <Node Id="(@3 @160)" Category="CodeSchema_ProjectItem" Bounds="164.504672035745,599.622503822859,114.961333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowAsset\AssetLoader.h" Label="AssetLoader.h" />
+    <Node Id="(@3 @161)" Category="CodeSchema_ProjectItem" Bounds="629.377338856569,767.616504054096,180.571333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowModules\ShadowModuleManager.h" Label="ShadowModuleManager.h" />
+    <Node Id="(@3 @164)" Category="CodeSchema_ProjectItem" Bounds="1069.91267249822,599.622503822859,125.954666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowAsset\AssetManager.h" Label="AssetManager.h" />
+    <Node Id="(@3 @165)" Category="CodeSchema_ProjectItem" Bounds="20.0000052919988,767.616504054096,168.674666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEvents\ShadowEventManager.h" Label="ShadowEventManager.h" />
+    <Node Id="(@3 @168)" Category="CodeSchema_ProjectItem" Bounds="20.0000052919988,879.612504208254,178.491333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEvents\IShadowEventConsumer.h" Label="IShadowEventConsumer.h" />
+    <Node Id="(@3 @169)" Category="CodeSchema_ProjectItem" Bounds="1316.82600583155,711.618503977017,165.804666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEvents\IShadowEventListener.h" Label="IShadowEventListener.h" />
+    <Node Id="(@3 @170)" Category="CodeSchema_ProjectItem" Bounds="1274.44733924196,823.614504131175,172.758000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\Platform\OpenGL\ImGuiOpenGLRenderer.h" Label="ImGuiOpenGLRenderer.h" />
+    <Node Id="(@3 @171)" Category="CodeSchema_ProjectItem" Bounds="927.210005677394,711.618503977017,164.224666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowMap\ShadowMapRenderer.h" Label="ShadowMapRenderer.h" />
+    <Node Id="(@3 @172)" Category="CodeSchema_ProjectItem" Bounds="20.0000052919988,823.614504131175,82.378000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEntity\Entities\Player.h" Label="Player.h" />
+    <Node Id="(@3 @193)" Category="CodeSchema_ProjectItem" Bounds="309.466005446157,599.622503822859,120.398000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEvents\Events\MouseEvents.h" Label="MouseEvents.h" />
+    <Node Id="(@3 @194)" Category="CodeSchema_ProjectItem" Bounds="1057.41200598571,543.62450374578,103.318000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEvents\Events\KeyEvents.h" Label="KeyEvents.h" />
+    <Node Id="(@3 @199)" Category="CodeSchema_ProjectItem" Bounds="20.0000052919988,599.622503822859,114.504666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowMath\Vector2float.h" Label="Vector2float.h" />
+    <Node Id="(@3 @206)" Category="CodeSchema_ProjectItem" Bounds="459.864005523236,599.622503822859,120.698000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowAsset\ShadowAsset.h" Label="ShadowAsset.h" />
+    <Node Id="(@3 @207)" Category="CodeSchema_ProjectItem" Bounds="126.194671671849,543.686431842206,76.868000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEntity\Entities\Light.h" Label="Light.h" />
+    <Node Id="(@3 @211)" Category="CodeSchema_ProjectItem" Bounds="132.378005369078,823.614504131175,104.401333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowMath\Vector2int.h" Label="Vector2int.h" />
+    <Node Id="(@3 @222)" Category="CodeSchema_ProjectItem" Bounds="1000.02467242114,655.620503899938,136.104666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowWindow.h" Label="ShadowWindow.h" />
+    <Node Id="(@3 @229)" Category="CodeSchema_ProjectItem" Bounds="610.562005600315,599.622503822859,122.311333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEntity\EntityRegistry.h" Label="EntityRegistry.h" />
+    <Node Id="(@3 @230)" Category="CodeSchema_ProjectItem" Bounds="343.157339061967,543.686431842206,81.2913334104124,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\Utility.h" Label="Utility.h" />
+    <Node Id="(@3 @231)" Category="CodeSchema_ProjectItem" Bounds="233.062672275834,543.686431842206,80.0946667437457,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEntity\Entity.h" Label="Entity.h" />
+    <Node Id="(@3 @258)" Category="CodeSchema_ProjectItem" Bounds="734.126672344061,823.614504131175,137.204666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowMap\ShadowWorld.cpp" Label="ShadowWorld.cpp" />
+    <Node Id="(@3 @261)" Category="CodeSchema_ProjectItem" Bounds="196.134672035744,711.618503977017,148.821333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\Platform\SDL\SDLEventSource.cpp" Label="SDLEventSource.cpp" />
+    <Node Id="(@3 @262)" Category="CodeSchema_ProjectItem" Bounds="218.674672035744,767.616504054096,173.618000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEvents\IShadowEventSource.cpp" Label="IShadowEventSource.cpp" />
+    <Node Id="(@3 @263)" Category="CodeSchema_ProjectItem" Bounds="568.572005600315,823.614504131175,135.554666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ImGui\ImGuiModule.cpp" Label="ImGuiModule.cpp" />
+    <Node Id="(@3 @264)" Category="CodeSchema_ProjectItem" Bounds="414.040672189903,823.614504131175,124.531333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\Platform\SDL\SDLModule.cpp" Label="SDLModule.cpp" />
+    <Node Id="(@3 @265)" Category="CodeSchema_ProjectItem" Bounds="20.0000052919988,711.618503977017,146.134666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowModules\ShadowModule.cpp" Label="ShadowModule.cpp" />
+    <Node Id="(@3 @266)" Category="CodeSchema_ProjectItem" Bounds="570.436672344061,543.62450374578,89.0546667437457,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\Time.cpp" Label="Time.cpp" />
+    <Node Id="(@3 @276)" Category="CodeSchema_ProjectItem" Bounds="1081.45933916489,823.614504131175,162.988000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowMap\ShadowMapChunk.cpp" Label="ShadowMapChunk.cpp" />
+    <Node Id="(@3 @280)" Category="CodeSchema_ProjectItem" Bounds="1121.43467242114,711.618503977017,165.391333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowApplication.cpp" Label="ShadowApplication.cpp" />
+    <Node Id="(@3 @284)" Category="CodeSchema_ProjectItem" Bounds="20.0000052919988,655.620503899938,127.821333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowAsset\AssetLoader.cpp" Label="AssetLoader.cpp" />
+    <Node Id="(@3 @285)" Category="CodeSchema_ProjectItem" Bounds="1267.10133908781,767.616504054096,193.431333410413,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowModules\ShadowModuleManager.cpp" Label="ShadowModuleManager.cpp" />
+    <Node Id="(@3 @286)" Category="CodeSchema_ProjectItem" Bounds="1166.12933916489,655.620503899938,138.814666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowAsset\AssetManager.cpp" Label="AssetManager.cpp" />
+    <Node Id="(@3 @287)" Category="CodeSchema_ProjectItem" Bounds="839.948672266981,767.616504054096,181.534666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEvents\ShadowEventManager.cpp" Label="ShadowEventManager.cpp" />
+    <Node Id="(@3 @290)" Category="CodeSchema_ProjectItem" Bounds="228.491338702412,879.612504208254,191.351333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEvents\IShadowEventConsumer.cpp" Label="IShadowEventConsumer.cpp" />
+    <Node Id="(@3 @291)" Category="CodeSchema_ProjectItem" Bounds="1051.48333901073,767.616504054096,185.618000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" Label="ImGuiOpenGLRenderer.cpp" />
+    <Node Id="(@3 @292)" Category="CodeSchema_ProjectItem" Bounds="422.292672112823,767.616504054096,177.084666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowMap\ShadowMapRenderer.cpp" Label="ShadowMapRenderer.cpp" />
+    <Node Id="(@3 @293)" Category="CodeSchema_ProjectItem" Bounds="932.174005908631,543.62450374578,95.2380000770791,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEntity\Entities\Player.cpp" Label="Player.cpp" />
+    <Node Id="(@3 @296)" Category="CodeSchema_ProjectItem" Bounds="1334.94400590863,655.620503899938,139.741333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEntity\DefaultEntities.cpp" Label="DefaultEntities.cpp" />
+    <Node Id="(@3 @300)" Category="CodeSchema_ProjectItem" Bounds="1382.94867265238,599.622503822859,127.364666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowMath\Vector2float.cpp" Label="Vector2float.cpp" />
+    <Node Id="(@3 @301)" Category="CodeSchema_ProjectItem" Bounds="341.096005446157,655.620503899938,133.558000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowAsset\ShadowAsset.cpp" Label="ShadowAsset.cpp" />
+    <Node Id="(@3 @302)" Category="CodeSchema_ProjectItem" Bounds="689.491339087806,543.62450374578,89.7280000770791,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEntity\Entities\Light.cpp" Label="Light.cpp" />
+    <Node Id="(@3 @303)" Category="CodeSchema_ProjectItem" Bounds="504.654005523236,655.620503899938,134.238000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEvents\ShadowEvent.cpp" Label="ShadowEvent.cpp" />
+    <Node Id="(@3 @304)" Category="CodeSchema_ProjectItem" Bounds="266.779338779491,823.614504131175,117.261333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowMath\Vector2int.cpp" Label="Vector2int.cpp" />
+    <Node Id="(@3 @309)" Category="CodeSchema_ProjectItem" Bounds="374.956005446157,711.618503977017,148.964666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowWindow.cpp" Label="ShadowWindow.cpp" />
+    <Node Id="(@3 @310)" Category="CodeSchema_ProjectItem" Bounds="668.892005600315,655.620503899938,135.171333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEntity\EntityRegistry.cpp" Label="EntityRegistry.cpp" />
+    <Node Id="(@3 @311)" Category="CodeSchema_ProjectItem" Bounds="809.219339164885,543.62450374578,92.9546667437457,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEntity\Entity.cpp" Label="Entity.cpp" />
+    <Node Id="(@3 @58)" Category="CodeSchema_ProjectItem" Bounds="915.568005754473,599.622503822859,124.344666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowMap\ShadowWorld.h" Label="ShadowWorld.h" />
+    <Node Id="(@3 @63)" Category="CodeSchema_ProjectItem" Bounds="834.063339010727,655.620503899938,135.961333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\Platform\SDL\SDLEventSource.h" Label="SDLEventSource.h" />
+    <Node Id="(@3 @64)" Category="CodeSchema_ProjectItem" Bounds="736.452005600314,711.618503977017,160.758000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEvents\IShadowEventSource.h" Label="IShadowEventSource.h" />
+    <Node Id="(@3 @67)" Category="CodeSchema_ProjectItem" Bounds="762.873339010727,599.622503822859,122.694666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ImGui\ImGuiModule.h" Label="ImGuiModule.h" />
+    <Node Id="(@3 @68)" Category="CodeSchema_ProjectItem" Bounds="1325.1813394732,543.62450374578,111.671333410413,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\Platform\SDL\SDLModule.h" Label="SDLModule.h" />
+    <Node Id="(@3 @69)" Category="CodeSchema_ProjectItem" Bounds="177.821338702411,655.620503899938,133.274666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowModules\ShadowModule.h" Label="ShadowModule.h" />
+    <Node Id="(@3 @74)" Category="CodeSchema_ProjectItem" Bounds="20.0000048977542,543.686431842206,76.1946667437457,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\Time.h" Label="Time.h" />
+    <Node Id="(@3 @88)" Category="CodeSchema_ProjectItem" Bounds="1190.73000606279,543.62450374578,104.451333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEntity\EntityBase.h" Label="EntityBase.h" />
+    <Node Id="(@5 @277)" Category="CodeSchema_ProjectItem" Bounds="428.620666897904,996.657501156186,89.388000077079,25.9980000770792" FilePath="$(VsSolution)\Planning\src\mian.cpp" Label="mian.cpp" />
+    <Node Id="(@5 @305)" Category="CodeSchema_ProjectItem" Bounds="428.620666897904,1052.65550123326,91.1413334104124,25.9980000770793" FilePath="$(VsSolution)\Planning\src\Input.cpp" Label="Input.cpp" />
+    <Node Id="(@7 @128)" Category="CodeSchema_ProjectItem" Bounds="20,996.657501156186,80.3946667437457,25.9980000770792" FilePath="$(VsSolution)\ShadowEngine\dependencies\imgui\imgui.h" Label="imgui.h" />
+    <Node Id="(@7 @129)" Category="CodeSchema_ProjectItem" Bounds="179.334666743746,1164.65150138742,129.551333410412,25.9980000770788" FilePath="$(VsSolution)\ShadowEngine\dependencies\imgui\imstb_rectpack.h" Label="imstb_rectpack.h" />
+    <Node Id="(@7 @133)" Category="CodeSchema_ProjectItem" Bounds="20,1108.65350131034,125.391333410412,25.9980000770793" FilePath="$(VsSolution)\ShadowEngine\dependencies\imgui\imgui_internal.h" Label="imgui_internal.h" />
+    <Node Id="(@7 @208)" Category="CodeSchema_ProjectItem" Bounds="174.254666743746,1052.65550123326,125.058000077079,25.9980000770788" FilePath="$(VsSolution)\ShadowEngine\dependencies\imgui\imstb_textedit.h" Label="imstb_textedit.h" />
+    <Node Id="(@7 @275)" Category="CodeSchema_ProjectItem" Bounds="130.394666743746,996.657501156186,93.2546667437457,25.9980000770792" FilePath="$(VsSolution)\ShadowEngine\dependencies\imgui\imgui.cpp" Label="imgui.cpp" />
+    <Node Id="(@7 @283)" Category="CodeSchema_ProjectItem" Bounds="175.391333410412,1108.65350131034,128.944666743746,25.9980000770793" FilePath="$(VsSolution)\ShadowEngine\dependencies\imgui\imgui_demo.cpp" Label="imgui_demo.cpp" />
+    <Node Id="(@7 @297)" Category="CodeSchema_ProjectItem" Bounds="20,1220.6495014645,139.384666743746,25.9980000770793" FilePath="$(VsSolution)\ShadowEngine\dependencies\imgui\imgui_widgets.cpp" Label="imgui_widgets.cpp" />
+    <Node Id="(@7 @308)" Category="CodeSchema_ProjectItem" Bounds="20,1052.65550123326,124.254666743746,25.9980000770788" FilePath="$(VsSolution)\ShadowEngine\dependencies\imgui\imgui_draw.cpp" Label="imgui_draw.cpp" />
+    <Node Id="(@7 @79)" Category="CodeSchema_ProjectItem" Bounds="20,1164.65150138742,129.334666743746,25.9980000770788" FilePath="$(VsSolution)\ShadowEngine\dependencies\imgui\imstb_truetype.h" Label="imstb_truetype.h" />
+    <Node Id="(@7 @95)" Category="CodeSchema_ProjectItem" Bounds="253.649333487491,996.657501156186,96.7246667437457,25.9980000770792" FilePath="$(VsSolution)\ShadowEngine\dependencies\imgui\imconfig.h" Label="imconfig.h" />
+    <Node Id="@101" Category="CodeSchema_ProjectItem" Bounds="1161.62667317447,207.698433416756,142.624666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\Bindings\InputMapBinding.h" Label="InputMapBinding.h" />
+    <Node Id="@103" Category="CodeSchema_ProjectItem" Bounds="465.595005604973,207.698422051048,118.688000077079,25.998000077079" ErrorMessage="Circular reference found involving:  InputBinding.h ((Assembly=file:///P:/SHADOWENGINE/SHADOWENGINE/SHADOWENGINE/SHADOWENGINE.VCXPROJ File=file:///P:/ShadowEngine/shadowengine/ShadowEngine/src/ShadowInput/InputBinding.h))" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\InputBinding.h" IsStronglyConnected="True" Label="InputBinding.h" />
+    <Node Id="@105" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wstring.h" Label="corecrt_wstring.h" />
+    <Node Id="@107" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\string.h" Label="string.h" />
+    <Node Id="@109" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\vcruntime_string.h" Label="vcruntime_string.h" />
+    <Node Id="@11" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xmemory0" Label="xmemory0" />
+    <Node Id="@112" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\vcruntime_new_debug.h" Label="vcruntime_new_debug.h" />
+    <Node Id="@114" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_search.h" Label="corecrt_search.h" />
+    <Node Id="@116" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\eh.h" Label="eh.h" />
+    <Node Id="@118" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xtgmath.h" Label="xtgmath.h" />
+    <Node Id="@120" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\ymath.h" Label="ymath.h" />
+    <Node Id="@122" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\math.h" Label="math.h" />
+    <Node Id="@124" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_math.h" Label="corecrt_math.h" />
+    <Node Id="@126" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\use_ansi.h" Label="use_ansi.h" />
+    <Node Id="@13" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\cstdlib" Label="cstdlib" />
+    <Node Id="@131" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xkeycheck.h" Label="xkeycheck.h" />
+    <Node Id="@135" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\concurrencysal.h" Label="concurrencysal.h" />
+    <Node Id="@137" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\sal.h" Label="sal.h" />
+    <Node Id="@141" Category="CodeSchema_ProjectItem" Bounds="681.686671082855,375.635568708494,126.504666743746,25.998000077079" ErrorMessage="Circular reference found involving:  ShadowAction.h ((Assembly=file:///P:/SHADOWENGINE/SHADOWENGINE/SHADOWENGINE/SHADOWENGINE.VCXPROJ File=file:///P:/ShadowEngine/shadowengine/ShadowEngine/src/ShadowInput/ShadowAction.h))" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\ShadowAction.h" IsStronglyConnected="True" Label="ShadowAction.h" />
+    <Node Id="@143" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\vcruntime_exception.h" Label="vcruntime_exception.h" />
+    <Node Id="@145" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xlocinfo.h" Label="xlocinfo.h" />
+    <Node Id="@147" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\vcruntime_typeinfo.h" Label="vcruntime_typeinfo.h" />
+    <Node Id="@149" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wstdio.h" Label="corecrt_wstdio.h" />
+    <Node Id="@151" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\stdio.h" Label="stdio.h" />
+    <Node Id="@153" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wconio.h" Label="corecrt_wconio.h" />
+    <Node Id="@155" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wio.h" Label="corecrt_wio.h" />
+    <Node Id="@157" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\errno.h" Label="errno.h" />
+    <Node Id="@159" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\wchar.h" Label="wchar.h" />
+    <Node Id="@16" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\iosfwd" Label="iosfwd" />
+    <Node Id="@163" Category="CodeSchema_ProjectItem" FilePath="$(VsSolution)\ShadowEngine\ShadowActionManager.h" Label="ShadowActionManager.h" />
+    <Node Id="@167" Category="CodeSchema_ProjectItem" Bounds="995.351673174471,263.69643220003,123.174666743746,25.998000077079" ErrorMessage="Circular reference found involving:  InputModifier.h ((Assembly=file:///P:/SHADOWENGINE/SHADOWENGINE/SHADOWENGINE/SHADOWENGINE.VCXPROJ File=file:///P:/ShadowEngine/shadowengine/ShadowEngine/src/ShadowInput/InputModifier.h))" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\InputModifier.h" IsStronglyConnected="True" Label="InputModifier.h" />
+    <Node Id="@174" Category="CodeSchema_ProjectItem" Bounds="26.4300049278487,151.700431330966,107.018000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\Bindings\BindingOR.h" Label="BindingOR.h" />
+    <Node Id="@176" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xpolymorphic_allocator.h" Label="xpolymorphic_allocator.h" />
+    <Node Id="@178" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_math_defines.h" Label="corecrt_math_defines.h" />
+    <Node Id="@18" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xlocale" Label="xlocale" />
+    <Node Id="@180" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\sys\types.h" Label="types.h" />
+    <Node Id="@182" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\vadefs.h" Label="vadefs.h" />
+    <Node Id="@184" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\crtdefs.h" Label="crtdefs.h" />
+    <Node Id="@186" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\yvals.h" Label="yvals.h" />
+    <Node Id="@188" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\CodeAnalysis\sourceannotations.h" Label="sourceannotations.h" />
+    <Node Id="@190" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wprocess.h" Label="corecrt_wprocess.h" />
+    <Node Id="@192" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\limits.h" Label="limits.h" />
+    <Node Id="@196" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_memcpy_s.h" Label="corecrt_memcpy_s.h" />
+    <Node Id="@198" Category="CodeSchema_ProjectItem" Bounds="998.995006507805,207.698431017072,131.888000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\Modifiers\ModifierRepeat.h" Label="ModifierRepeat.h" />
+    <Node Id="@2" Category="CodeSchema_PoundIncludeFile" Bounds="578.008666974983,956.657501156185,215.822666820825,141.996000154158" FilePath="$(VsSolution)\ShadowEngine\dependencies\GLAD\Glad.vcxproj" Group="Expanded" Label="Glad.vcxproj" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@20" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\tuple" Label="tuple" />
+    <Node Id="@201" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\float.h" Label="float.h" />
+    <Node Id="@203" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\sys\stat.h" Label="stat.h" />
+    <Node Id="@205" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wdirect.h" Label="corecrt_wdirect.h" />
+    <Node Id="@210" Category="CodeSchema_ProjectItem" Bounds="450.25000470214,431.690419014148,121.378000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowEvents\ShadowEvent.h" Label="ShadowEvent.h" />
+    <Node Id="@213" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\stdint.h" Label="stdint.h" />
+    <Node Id="@215" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt.h" Label="corecrt.h" />
+    <Node Id="@217" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xstring_insert.h" Label="xstring_insert.h" />
+    <Node Id="@219" Category="CodeSchema_ProjectItem" Bounds="776.215005736501,319.63756629877,119.448000077079,25.998000077079" ErrorMessage="Circular reference found involving:  InputContext.h ((Assembly=file:///P:/SHADOWENGINE/SHADOWENGINE/SHADOWENGINE/SHADOWENGINE.VCXPROJ File=file:///P:/ShadowEngine/shadowengine/ShadowEngine/src/ShadowInput/InputContext.h))" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\InputContext.h" IsStronglyConnected="True" Label="InputContext.h" />
+    <Node Id="@22" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xiosbase" Label="xiosbase" />
+    <Node Id="@221" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\vcruntime_new.h" Label="vcruntime_new.h" />
+    <Node Id="@224" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\shared\winpackagefamily.h" Label="winpackagefamily.h" />
+    <Node Id="@226" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\shared\winapifamily.h" Label="winapifamily.h" />
+    <Node Id="@228" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_memory.h" Label="corecrt_memory.h" />
+    <Node Id="@233" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\cmath" Label="cmath" />
+    <Node Id="@235" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\istream" Label="istream" />
+    <Node Id="@237" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\ostream" Label="ostream" />
+    <Node Id="@239" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xlocnum" Label="xlocnum" />
+    <Node Id="@24" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\cstddef" Label="cstddef" />
+    <Node Id="@241" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\exception" Label="exception" />
+    <Node Id="@243" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xtr1common" Label="xtr1common" />
+    <Node Id="@245" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xlocinfo" Label="xlocinfo" />
+    <Node Id="@247" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\typeinfo" Label="typeinfo" />
+    <Node Id="@249" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\cstdio" Label="cstdio" />
+    <Node Id="@251" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\cerrno" Label="cerrno" />
+    <Node Id="@253" Category="CodeSchema_ProjectItem" Bounds="601.67000470214,95.7024100632903,118.538000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\Bindings\Binding1D.cpp" Label="Binding1D.cpp" />
+    <Node Id="@255" Category="CodeSchema_ProjectItem" Bounds="452.670005604973,95.7024100632903,118.538000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\Bindings\Binding2D.cpp" Label="Binding2D.cpp" />
+    <Node Id="@257" Category="CodeSchema_ProjectItem" Bounds="1341.10667317447,151.700436933264,133.664666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\Modifiers\ModifierHold.cpp" Label="ModifierHold.cpp" />
+    <Node Id="@26" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xstddef" Label="xstddef" />
+    <Node Id="@260" Category="CodeSchema_ProjectItem" Bounds="293.546671368807,95.7024078846127,128.784666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\Bindings\BindingAND.cpp" Label="BindingAND.cpp" />
+    <Node Id="@268" Category="CodeSchema_ProjectItem" Bounds="869.95333852039,95.6411087161406,153.971333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\Bindings\KeyboardBinding.cpp" Label="KeyboardBinding.cpp" />
+    <Node Id="@270" Category="CodeSchema_ProjectItem" Bounds="1155.19666956314,151.700420212272,155.484666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\Bindings\InputMapBinding.cpp" Label="InputMapBinding.cpp" />
+    <Node Id="@272" Category="CodeSchema_ProjectItem" Bounds="164.165005153557,151.700429152288,131.548000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\InputBinding.cpp" Label="InputBinding.cpp" />
+    <Node Id="@274" Category="CodeSchema_ProjectItem" Bounds="1456.5150065078,95.7024309393852,98.848000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\Debug.cpp" Label="Debug.cpp" />
+    <Node Id="@279" Category="CodeSchema_ProjectItem" Bounds="750.245005266158,95.6411087161406,89.388000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\main.cpp" Label="main.cpp" />
+    <Node Id="@28" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\streambuf" Label="streambuf" />
+    <Node Id="@282" Category="CodeSchema_ProjectItem" Bounds="542.256671932825,319.633109236069,139.364666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\ShadowAction.cpp" Label="ShadowAction.cpp" />
+    <Node Id="@289" Category="CodeSchema_ProjectItem" Bounds="832.921672403168,207.641561813806,136.034666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\InputModifier.cpp" Label="InputModifier.cpp" />
+    <Node Id="@295" Category="CodeSchema_ProjectItem" Bounds="20.0000047021406,95.7024253370866,119.878000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\Bindings\BindingOR.cpp" Label="BindingOR.cpp" />
+    <Node Id="@299" Category="CodeSchema_ProjectItem" Bounds="979.565005266158,151.639109052419,144.748000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\Modifiers\ModifierRepeat.cpp" Label="ModifierRepeat.cpp" />
+    <Node Id="@30" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\cstring" Label="cstring" />
+    <Node Id="@307" Category="CodeSchema_ProjectItem" Bounds="832.785004416188,263.639564058491,132.308000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\InputContext.cpp" Label="InputContext.cpp" />
+    <Node Id="@313" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\cwchar" Label="cwchar" />
+    <Node Id="@315" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\system_error" Label="system_error" />
+    <Node Id="@317" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\ios" Label="ios" />
+    <Node Id="@319" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\type_traits" Label="type_traits" />
+    <Node Id="@32" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xstring" Label="xstring" />
+    <Node Id="@321" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\climits" Label="climits" />
+    <Node Id="@323" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\limits" Label="limits" />
+    <Node Id="@325" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\cfloat" Label="cfloat" />
+    <Node Id="@327" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xfacet" Label="xfacet" />
+    <Node Id="@329" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\cstdint" Label="cstdint" />
+    <Node Id="@331" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\stdexcept" Label="stdexcept" />
+    <Node Id="@333" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\list" Label="list" />
+    <Node Id="@335" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\initializer_list" Label="initializer_list" />
+    <Node Id="@337" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\new" Label="new" />
+    <Node Id="@339" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xmemory" Label="xmemory" />
+    <Node Id="@34" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\string" Label="string" />
+    <Node Id="@341" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\memory" Label="memory" />
+    <Node Id="@343" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xutility" Label="xutility" />
+    <Node Id="@345" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\utility" Label="utility" />
+    <Node Id="@36" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xatomic0.h" Label="xatomic0.h" />
+    <Node Id="@38" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\intrin0.h" Label="intrin0.h" />
+    <Node Id="@4" Category="CodeSchema_PoundIncludeFile" Bounds="4.70214059805949E-06,55.654318865144,1575.36300188274,870.018164262484" ErrorMessage="Circular reference found involving:  ShadowEngine.vcxproj ((Assembly=file:///P:/SHADOWENGINE/SHADOWENGINE/SHADOWENGINE/SHADOWENGINE.VCXPROJ))" FilePath="$(VsSolution)\ShadowEngine\ShadowEngine.vcxproj" Group="Expanded" IsStronglyConnected="True" Label="ShadowEngine.vcxproj" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" LayoutSettings="TopToBottom" UseManualLocation="True" />
+    <Node Id="@40" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wstdlib.h" Label="corecrt_wstdlib.h" />
+    <Node Id="@42" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\stdlib.h" Label="stdlib.h" />
+    <Node Id="@44" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xatomic.h" Label="xatomic.h" />
+    <Node Id="@46" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\malloc.h" Label="malloc.h" />
+    <Node Id="@48" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_malloc.h" Label="corecrt_malloc.h" />
+    <Node Id="@50" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xerrc.h" Label="xerrc.h" />
+    <Node Id="@52" Category="CodeSchema_ProjectItem" Bounds="608.100002896476,151.700416057169,105.678000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\Bindings\Binding1D.h" Label="Binding1D.h" />
+    <Node Id="@54" Category="CodeSchema_ProjectItem" Bounds="472.100005604973,151.700416057169,105.678000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\Bindings\Binding2D.h" Label="Binding2D.h" />
+    <Node Id="@57" Category="CodeSchema_ProjectItem" Bounds="1347.53666956314,207.698442927143,120.804666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\Modifiers\ModifierHold.h" Label="ModifierHold.h" />
+    <Node Id="@6" Category="CodeSchema_PoundIncludeFile" Bounds="400.374000231237,956.657501156185,147.634666743746,141.996000154158" FilePath="$(VsSolution)\Planning\Planning.vcxproj" Group="Expanded" Label="Planning.vcxproj" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@60" Category="CodeSchema_ProjectItem" Bounds="325.976670465975,151.700416057169,115.924666743746,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\Bindings\BindingAND.h" Label="BindingAND.h" />
+    <Node Id="@62" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\xcall_once.h" Label="xcall_once.h" />
+    <Node Id="@66" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\locale.h" Label="locale.h" />
+    <Node Id="@71" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\vcruntime.h" Label="vcruntime.h" />
+    <Node Id="@73" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wtime.h" Label="corecrt_wtime.h" />
+    <Node Id="@76" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_wctype.h" Label="corecrt_wctype.h" />
+    <Node Id="@78" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\ctype.h" Label="ctype.h" />
+    <Node Id="@8" Category="CodeSchema_PoundIncludeFile" Bounds="0,956.657501156186,370.374000231237,309.990000385395" FilePath="$(VsSolution)\ShadowEngine\dependencies\imgui\ImGui.vcxproj" Group="Expanded" Label="ImGui.vcxproj" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@81" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\share.h" Label="share.h" />
+    <Node Id="@83" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_share.h" Label="corecrt_share.h" />
+    <Node Id="@85" Category="CodeSchema_ProjectItem" Bounds="473.290005604972,487.688425008027,75.298000077079,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\Core.h" Label="Core.h" />
+    <Node Id="@87" Category="CodeSchema_ProjectItem" FilePath="D:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\yvals_core.h" Label="yvals_core.h" />
+    <Node Id="@90" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_terminate.h" Label="corecrt_terminate.h" />
+    <Node Id="@92" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\stddef.h" Label="stddef.h" />
+    <Node Id="@94" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\crtdbg.h" Label="crtdbg.h" />
+    <Node Id="@97" Category="CodeSchema_ProjectItem" FilePath="$(ProgramFiles)\Windows Kits\10\Include\10.0.17763.0\ucrt\corecrt_stdio_config.h" Label="corecrt_stdio_config.h" />
+    <Node Id="@99" Category="CodeSchema_ProjectItem" Bounds="776.383338678593,151.63910905242,141.111333410412,25.998000077079" FilePath="$(VsSolution)\ShadowEngine\src\ShadowInput\Bindings\KeyboardBinding.h" Label="KeyboardBinding.h" />
+    <Node Id="G4" Category="CodeSchema_PoundIncludeGroup" Group="Collapsed" Label="Windows SDK" />
+    <Node Id="OthersGroup" Category="CodeSchema_PoundIncludeGroup" Group="Collapsed" Label="Others" />
+    <Node Id="PoundIncludeGraphExternalsGroup" Category="Externals" Bounds="744.186504556898,0.547117772918234,86.99,25" ErrorMessage="Circular reference found involving:  Externals (PoundIncludeGraphExternalsGroup)" Group="Collapsed" IsStronglyConnected="True" Label="Externals" />
+    <Node Id="Windows SDK Indirectly Included" Category="CodeSchema_PoundIncludeGroup" Group="Collapsed" Label="Indirectly Included" />
+  </Nodes>
+  <Links>
+    <Link Source="@101" Target="@167" Category="PoundInclude" Bounds="1106.37084960938,233.758041381836,85.712646484375,27.2791290283203" />
+    <Link Source="@103" Target="@167" Category="PoundInclude" Bounds="584.283020019531,225.825881958008,402.77392578125,37.8356475830078" IsCircularLink="True" />
+    <Link Source="@103" Target="@210" Category="PoundInclude" Bounds="510.938995361328,233.758041381836,10.7501525878906,189.048599243164" />
+    <Link Source="@103" Target="@333" Category="PoundInclude" />
+    <Link Source="@103" Target="@34" Category="PoundInclude" />
+    <Link Source="@105" Target="@109" Category="PoundInclude" />
+    <Link Source="@105" Target="@215" Category="PoundInclude" />
+    <Link Source="@107" Target="@105" Category="PoundInclude" />
+    <Link Source="@107" Target="@109" Category="PoundInclude" />
+    <Link Source="@107" Target="@215" Category="PoundInclude" />
+    <Link Source="@107" Target="@228" Category="PoundInclude" />
+    <Link Source="@109" Target="@71" Category="PoundInclude" />
+    <Link Source="@11" Target="@13" Category="PoundInclude" />
+    <Link Source="@11" Target="@323" Category="PoundInclude" />
+    <Link Source="@11" Target="@329" Category="PoundInclude" />
+    <Link Source="@11" Target="@337" Category="PoundInclude" />
+    <Link Source="@11" Target="@343" Category="PoundInclude" />
+    <Link Source="@11" Target="@36" Category="PoundInclude" />
+    <Link Source="@11" Target="@38" Category="PoundInclude" />
+    <Link Source="@11" Target="@44" Category="PoundInclude" />
+    <Link Source="@112" Target="@221" Category="PoundInclude" />
+    <Link Source="@114" Target="@215" Category="PoundInclude" />
+    <Link Source="@114" Target="@92" Category="PoundInclude" />
+    <Link Source="@116" Target="@90" Category="PoundInclude" />
+    <Link Source="@118" Target="@13" Category="PoundInclude" />
+    <Link Source="@118" Target="@186" Category="PoundInclude" />
+    <Link Source="@118" Target="@243" Category="PoundInclude" />
+    <Link Source="@120" Target="@186" Category="PoundInclude" />
+    <Link Source="@122" Target="@124" Category="PoundInclude" />
+    <Link Source="@122" Target="@178" Category="PoundInclude" />
+    <Link Source="@124" Target="@215" Category="PoundInclude" />
+    <Link Source="@13" Target="@122" Category="PoundInclude" />
+    <Link Source="@13" Target="@42" Category="PoundInclude" />
+    <Link Source="@13" Target="@87" Category="PoundInclude" />
+    <Link Source="@137" Target="@135" Category="PoundInclude" />
+    <Link Source="@137" Target="@188" Category="PoundInclude" />
+    <Link Source="@141" Target="@103" Category="PoundInclude" Bounds="577.20556640625,236.327987670898,164.019287109375,139.467086791992" IsCircularLink="True" />
+    <Link Source="@141" Target="@210" Category="PoundInclude" Bounds="574.011047363281,401.800567626953,116.608764648438,27.9134521484375" />
+    <Link Source="@143" Target="@116" Category="PoundInclude" />
+    <Link Source="@143" Target="@221" Category="PoundInclude" />
+    <Link Source="@145" Target="@159" Category="PoundInclude" />
+    <Link Source="@145" Target="@186" Category="PoundInclude" />
+    <Link Source="@145" Target="@66" Category="PoundInclude" />
+    <Link Source="@145" Target="@78" Category="PoundInclude" />
+    <Link Source="@147" Target="@143" Category="PoundInclude" />
+    <Link Source="@147" Target="@71" Category="PoundInclude" />
+    <Link Source="@149" Target="@215" Category="PoundInclude" />
+    <Link Source="@149" Target="@97" Category="PoundInclude" />
+    <Link Source="@151" Target="@149" Category="PoundInclude" />
+    <Link Source="@151" Target="@215" Category="PoundInclude" />
+    <Link Source="@153" Target="@215" Category="PoundInclude" />
+    <Link Source="@153" Target="@97" Category="PoundInclude" />
+    <Link Source="@155" Target="@215" Category="PoundInclude" />
+    <Link Source="@155" Target="@83" Category="PoundInclude" />
+    <Link Source="@157" Target="@215" Category="PoundInclude" />
+    <Link Source="@159" Target="@105" Category="PoundInclude" />
+    <Link Source="@159" Target="@109" Category="PoundInclude" />
+    <Link Source="@159" Target="@149" Category="PoundInclude" />
+    <Link Source="@159" Target="@153" Category="PoundInclude" />
+    <Link Source="@159" Target="@155" Category="PoundInclude" />
+    <Link Source="@159" Target="@180" Category="PoundInclude" />
+    <Link Source="@159" Target="@190" Category="PoundInclude" />
+    <Link Source="@159" Target="@196" Category="PoundInclude" />
+    <Link Source="@159" Target="@203" Category="PoundInclude" />
+    <Link Source="@159" Target="@205" Category="PoundInclude" />
+    <Link Source="@159" Target="@215" Category="PoundInclude" />
+    <Link Source="@159" Target="@40" Category="PoundInclude" />
+    <Link Source="@159" Target="@73" Category="PoundInclude" />
+    <Link Source="@159" Target="@76" Category="PoundInclude" />
+    <Link Source="@16" Target="@186" Category="PoundInclude" />
+    <Link Source="@16" Target="@249" Category="PoundInclude" />
+    <Link Source="@16" Target="@26" Category="PoundInclude" />
+    <Link Source="@16" Target="@30" Category="PoundInclude" />
+    <Link Source="@16" Target="@313" Category="PoundInclude" />
+    <Link Source="@16" Target="@94" Category="PoundInclude" />
+    <Link Source="@163" Target="@141" Category="PoundInclude" />
+    <Link Source="@167" Target="@219" Category="PoundInclude" Bounds="895.964782714844,289.772216796875,109.672790527344,27.7974243164063" IsCircularLink="True" />
+    <Link Source="@174" Target="@103" Category="PoundInclude" Bounds="133.314697265625,175.62760925293,323.331146240234,37.8356475830078" />
+    <Link Source="@176" Target="@11" Category="PoundInclude" />
+    <Link Source="@176" Target="@20" Category="PoundInclude" />
+    <Link Source="@176" Target="@319" Category="PoundInclude" />
+    <Link Source="@176" Target="@345" Category="PoundInclude" />
+    <Link Source="@18" Target="@245" Category="PoundInclude" />
+    <Link Source="@18" Target="@247" Category="PoundInclude" />
+    <Link Source="@18" Target="@30" Category="PoundInclude" />
+    <Link Source="@18" Target="@321" Category="PoundInclude" />
+    <Link Source="@18" Target="@327" Category="PoundInclude" />
+    <Link Source="@18" Target="@331" Category="PoundInclude" />
+    <Link Source="@18" Target="@341" Category="PoundInclude" />
+    <Link Source="@184" Target="@215" Category="PoundInclude" />
+    <Link Source="@184" Target="@71" Category="PoundInclude" />
+    <Link Source="@186" Target="@126" Category="PoundInclude" />
+    <Link Source="@186" Target="@87" Category="PoundInclude" />
+    <Link Source="@186" Target="@94" Category="PoundInclude" />
+    <Link Source="@190" Target="@215" Category="PoundInclude" />
+    <Link Source="@192" Target="@71" Category="PoundInclude" />
+    <Link Source="@196" Target="@109" Category="PoundInclude" />
+    <Link Source="@196" Target="@157" Category="PoundInclude" />
+    <Link Source="@196" Target="@215" Category="PoundInclude" />
+    <Link Source="@198" Target="@167" Category="PoundInclude" Bounds="1060.06896972656,233.758041381836,3.012939453125,21.0965576171875" />
+    <Link Source="@2" Target="(@1 @138)" Category="Contains" />
+    <Link Source="@2" Target="(@1 @14)" Category="Contains" />
+    <Link Source="@2" Target="(@1 @55)" Category="Contains" />
+    <Link Source="@20" Target="@319" Category="PoundInclude" />
+    <Link Source="@20" Target="@337" Category="PoundInclude" />
+    <Link Source="@20" Target="@343" Category="PoundInclude" />
+    <Link Source="@201" Target="@215" Category="PoundInclude" />
+    <Link Source="@203" Target="@180" Category="PoundInclude" />
+    <Link Source="@203" Target="@215" Category="PoundInclude" />
+    <Link Source="@205" Target="@215" Category="PoundInclude" />
+    <Link Source="@210" Target="@237" Category="PoundInclude" />
+    <Link Source="@210" Target="@34" Category="PoundInclude" />
+    <Link Source="@210" Target="@85" Category="PoundInclude" Bounds="510.938995361328,457.814758300781,0,21.0060729980469" />
+    <Link Source="@213" Target="@71" Category="PoundInclude" />
+    <Link Source="@215" Target="@226" Category="PoundInclude" />
+    <Link Source="@215" Target="@71" Category="PoundInclude" />
+    <Link Source="@217" Target="@237" Category="PoundInclude" />
+    <Link Source="@219" Target="@141" Category="PoundInclude" Bounds="773.728149414063,345.786407470703,41.0867309570313,25.2905578613281" IsCircularLink="True" />
+    <Link Source="@22" Target="@18" Category="PoundInclude" />
+    <Link Source="@22" Target="@315" Category="PoundInclude" />
+    <Link Source="@22" Target="@81" Category="PoundInclude" />
+    <Link Source="@221" Target="@71" Category="PoundInclude" />
+    <Link Source="@226" Target="@224" Category="PoundInclude" />
+    <Link Source="@228" Target="@109" Category="PoundInclude" />
+    <Link Source="@228" Target="@196" Category="PoundInclude" />
+    <Link Source="@228" Target="@215" Category="PoundInclude" />
+    <Link Source="@233" Target="@118" Category="PoundInclude" />
+    <Link Source="@233" Target="@13" Category="PoundInclude" />
+    <Link Source="@233" Target="@186" Category="PoundInclude" />
+    <Link Source="@235" Target="@237" Category="PoundInclude" />
+    <Link Source="@237" Target="@317" Category="PoundInclude" />
+    <Link Source="@239" Target="@13" Category="PoundInclude" />
+    <Link Source="@239" Target="@233" Category="PoundInclude" />
+    <Link Source="@239" Target="@249" Category="PoundInclude" />
+    <Link Source="@239" Target="@28" Category="PoundInclude" />
+    <Link Source="@239" Target="@321" Category="PoundInclude" />
+    <Link Source="@24" Target="@243" Category="PoundInclude" />
+    <Link Source="@24" Target="@92" Category="PoundInclude" />
+    <Link Source="@241" Target="@143" Category="PoundInclude" />
+    <Link Source="@241" Target="@186" Category="PoundInclude" />
+    <Link Source="@241" Target="@319" Category="PoundInclude" />
+    <Link Source="@241" Target="@46" Category="PoundInclude" />
+    <Link Source="@243" Target="@87" Category="PoundInclude" />
+    <Link Source="@245" Target="@13" Category="PoundInclude" />
+    <Link Source="@245" Target="@145" Category="PoundInclude" />
+    <Link Source="@245" Target="@26" Category="PoundInclude" />
+    <Link Source="@247" Target="@147" Category="PoundInclude" />
+    <Link Source="@247" Target="@241" Category="PoundInclude" />
+    <Link Source="@249" Target="@151" Category="PoundInclude" />
+    <Link Source="@249" Target="@186" Category="PoundInclude" />
+    <Link Source="@251" Target="@157" Category="PoundInclude" />
+    <Link Source="@251" Target="@186" Category="PoundInclude" />
+    <Link Source="@253" Target="@52" Category="PoundInclude" Bounds="660.939025878906,121.729675292969,0,21.0060729980469" />
+    <Link Source="@255" Target="@54" Category="PoundInclude" Bounds="514.956726074219,121.729675292969,4.9293212890625,21.2392730712891" />
+    <Link Source="@257" Target="@57" Category="PoundInclude" Bounds="1407.93896484375,177.743865966797,0,21.0060577392578" />
+    <Link Source="@26" Target="@13" Category="PoundInclude" />
+    <Link Source="@26" Target="@24" Category="PoundInclude" />
+    <Link Source="@26" Target="@243" Category="PoundInclude" />
+    <Link Source="@26" Target="@335" Category="PoundInclude" />
+    <Link Source="@260" Target="@60" Category="PoundInclude" Bounds="363.974456787109,121.729675292969,10.1389770507813,21.8432769775391" />
+    <Link Source="@268" Target="@99" Category="PoundInclude" Bounds="878.004943847656,121.729675292969,45.7207641601563,25.6100921630859" />
+    <Link Source="@270" Target="@101" Category="PoundInclude" Bounds="1232.93896484375,177.743865966797,0,21.0060577392578" />
+    <Link Source="@272" Target="@103" Category="PoundInclude" Bounds="294.655944824219,177.02946472168,162.354858398438,30.8277130126953" />
+    <Link Source="@274" Target="@141" Category="PoundInclude" Bounds="817.167053222656,121.729675292969,688.771911621094,261.751739501953" />
+    <Link Source="@274" Target="@99" Category="PoundInclude" Bounds="926.070678710938,112.152633666992,530.4443359375,40.1088104248047" />
+    <Link Source="@279" Target="@141" Category="PoundInclude" Bounds="744.939025878906,121.729675292969,38.393310546875,245.062805175781" />
+    <Link Source="@279" Target="@198" Category="PoundInclude" Bounds="835.590698242188,121.729675292969,194.315795898438,82.1091003417969" />
+    <Link Source="@279" Target="@52" Category="PoundInclude" Bounds="700.348937988281,121.729675292969,63.4841918945313,26.5374450683594" />
+    <Link Source="@279" Target="@54" Category="PoundInclude" Bounds="586.442932128906,117.999137878418,163.802062988281,33.9823684692383" />
+    <Link Source="@279" Target="@99" Category="PoundInclude" Bounds="807.009948730469,121.729675292969,21.7339477539063,23.4117279052734" />
+    <Link Source="@28" Target="@22" Category="PoundInclude" />
+    <Link Source="@282" Target="@141" Category="PoundInclude" Bounds="642.812744140625,345.786407470703,62.957763671875,26.5152587890625" />
+    <Link Source="@282" Target="@163" Category="PoundInclude" />
+    <Link Source="@289" Target="@167" Category="PoundInclude" Bounds="937.151794433594,233.758041381836,75.1036376953125,26.9670867919922" />
+    <Link Source="@295" Target="@174" Category="PoundInclude" Bounds="79.9390029907227,121.729675292969,0,21.0060729980469" />
+    <Link Source="@299" Target="@198" Category="PoundInclude" Bounds="1054.95678710938,177.743865966797,4.92919921875,21.2392730712891" />
+    <Link Source="@30" Target="@107" Category="PoundInclude" />
+    <Link Source="@30" Target="@186" Category="PoundInclude" />
+    <Link Source="@307" Target="@219" Category="PoundInclude" Bounds="857.290222167969,289.772216796875,27.0244140625,24.0278015136719" />
+    <Link Source="@313" Target="@159" Category="PoundInclude" />
+    <Link Source="@313" Target="@186" Category="PoundInclude" />
+    <Link Source="@315" Target="@13" Category="PoundInclude" />
+    <Link Source="@315" Target="@251" Category="PoundInclude" />
+    <Link Source="@315" Target="@331" Category="PoundInclude" />
+    <Link Source="@315" Target="@50" Category="PoundInclude" />
+    <Link Source="@315" Target="@62" Category="PoundInclude" />
+    <Link Source="@317" Target="@239" Category="PoundInclude" />
+    <Link Source="@319" Target="@26" Category="PoundInclude" />
+    <Link Source="@32" Target="@11" Category="PoundInclude" />
+    <Link Source="@321" Target="@186" Category="PoundInclude" />
+    <Link Source="@321" Target="@192" Category="PoundInclude" />
+    <Link Source="@323" Target="@120" Category="PoundInclude" />
+    <Link Source="@323" Target="@233" Category="PoundInclude" />
+    <Link Source="@323" Target="@26" Category="PoundInclude" />
+    <Link Source="@323" Target="@313" Category="PoundInclude" />
+    <Link Source="@323" Target="@321" Category="PoundInclude" />
+    <Link Source="@323" Target="@325" Category="PoundInclude" />
+    <Link Source="@325" Target="@186" Category="PoundInclude" />
+    <Link Source="@325" Target="@201" Category="PoundInclude" />
+    <Link Source="@327" Target="@186" Category="PoundInclude" />
+    <Link Source="@329" Target="@186" Category="PoundInclude" />
+    <Link Source="@329" Target="@213" Category="PoundInclude" />
+    <Link Source="@331" Target="@241" Category="PoundInclude" />
+    <Link Source="@331" Target="@32" Category="PoundInclude" />
+    <Link Source="@333" Target="@176" Category="PoundInclude" />
+    <Link Source="@333" Target="@331" Category="PoundInclude" />
+    <Link Source="@333" Target="@339" Category="PoundInclude" />
+    <Link Source="@335" Target="@24" Category="PoundInclude" />
+    <Link Source="@337" Target="@221" Category="PoundInclude" />
+    <Link Source="@337" Target="@241" Category="PoundInclude" />
+    <Link Source="@339" Target="@11" Category="PoundInclude" />
+    <Link Source="@34" Target="@176" Category="PoundInclude" />
+    <Link Source="@34" Target="@217" Category="PoundInclude" />
+    <Link Source="@34" Target="@235" Category="PoundInclude" />
+    <Link Source="@341" Target="@241" Category="PoundInclude" />
+    <Link Source="@341" Target="@247" Category="PoundInclude" />
+    <Link Source="@341" Target="@319" Category="PoundInclude" />
+    <Link Source="@341" Target="@339" Category="PoundInclude" />
+    <Link Source="@343" Target="@13" Category="PoundInclude" />
+    <Link Source="@343" Target="@321" Category="PoundInclude" />
+    <Link Source="@343" Target="@345" Category="PoundInclude" />
+    <Link Source="@345" Target="@16" Category="PoundInclude" />
+    <Link Source="@345" Target="@26" Category="PoundInclude" />
+    <Link Source="@345" Target="@319" Category="PoundInclude" />
+    <Link Source="@36" Target="@186" Category="PoundInclude" />
+    <Link Source="@4" Target="(@3 @110)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @127)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @132)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @139)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @160)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @161)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @164)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @165)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @168)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @169)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @170)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @171)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @172)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @193)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @194)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @199)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @206)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @207)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @211)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @222)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @229)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @230)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @231)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @258)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @261)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @262)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @263)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @264)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @265)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @266)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @276)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @280)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @284)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @285)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @286)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @287)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @290)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @291)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @292)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @293)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @296)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @300)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @301)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @302)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @303)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @304)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @309)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @310)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @311)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @58)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @63)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @64)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @67)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @68)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @69)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @74)" Category="Contains" />
+    <Link Source="@4" Target="(@3 @88)" Category="Contains" />
+    <Link Source="@4" Target="@101" Category="Contains" />
+    <Link Source="@4" Target="@103" Category="Contains" />
+    <Link Source="@4" Target="@141" Category="Contains" />
+    <Link Source="@4" Target="@167" Category="Contains" />
+    <Link Source="@4" Target="@174" Category="Contains" />
+    <Link Source="@4" Target="@198" Category="Contains" />
+    <Link Source="@4" Target="@210" Category="Contains" />
+    <Link Source="@4" Target="@219" Category="Contains" />
+    <Link Source="@4" Target="@253" Category="Contains" />
+    <Link Source="@4" Target="@255" Category="Contains" />
+    <Link Source="@4" Target="@257" Category="Contains" />
+    <Link Source="@4" Target="@260" Category="Contains" />
+    <Link Source="@4" Target="@268" Category="Contains" />
+    <Link Source="@4" Target="@270" Category="Contains" />
+    <Link Source="@4" Target="@272" Category="Contains" />
+    <Link Source="@4" Target="@274" Category="Contains" />
+    <Link Source="@4" Target="@279" Category="Contains" />
+    <Link Source="@4" Target="@282" Category="Contains" />
+    <Link Source="@4" Target="@289" Category="Contains" />
+    <Link Source="@4" Target="@295" Category="Contains" />
+    <Link Source="@4" Target="@299" Category="Contains" />
+    <Link Source="@4" Target="@307" Category="Contains" />
+    <Link Source="@4" Target="@52" Category="Contains" />
+    <Link Source="@4" Target="@54" Category="Contains" />
+    <Link Source="@4" Target="@57" Category="Contains" />
+    <Link Source="@4" Target="@60" Category="Contains" />
+    <Link Source="@4" Target="@85" Category="Contains" />
+    <Link Source="@4" Target="@99" Category="Contains" />
+    <Link Source="@40" Target="@215" Category="PoundInclude" />
+    <Link Source="@42" Target="@114" Category="PoundInclude" />
+    <Link Source="@42" Target="@192" Category="PoundInclude" />
+    <Link Source="@42" Target="@215" Category="PoundInclude" />
+    <Link Source="@42" Target="@40" Category="PoundInclude" />
+    <Link Source="@42" Target="@48" Category="PoundInclude" />
+    <Link Source="@44" Target="@107" Category="PoundInclude" />
+    <Link Source="@44" Target="@343" Category="PoundInclude" />
+    <Link Source="@44" Target="@36" Category="PoundInclude" />
+    <Link Source="@44" Target="@38" Category="PoundInclude" />
+    <Link Source="@44" Target="@42" Category="PoundInclude" />
+    <Link Source="@44" Target="@92" Category="PoundInclude" />
+    <Link Source="@46" Target="@215" Category="PoundInclude" />
+    <Link Source="@46" Target="@48" Category="PoundInclude" />
+    <Link Source="@48" Target="@215" Category="PoundInclude" />
+    <Link Source="@50" Target="@186" Category="PoundInclude" />
+    <Link Source="@52" Target="@103" Category="PoundInclude" Bounds="564.831298828125,177.743865966797,64.53759765625,26.5810241699219" />
+    <Link Source="@54" Target="@103" Category="PoundInclude" Bounds="524.939025878906,177.743865966797,0,21.0060577392578" />
+    <Link Source="@57" Target="@167" Category="PoundInclude" Bounds="1127.41394042969,230.394561767578,220.122680664063,35.1282043457031" />
+    <Link Source="@6" Target="(@5 @277)" Category="Contains" />
+    <Link Source="@6" Target="(@5 @305)" Category="Contains" />
+    <Link Source="@60" Target="@103" Category="PoundInclude" Bounds="416.669799804688,177.743865966797,67.1739196777344,26.6857604980469" />
+    <Link Source="@62" Target="@186" Category="PoundInclude" />
+    <Link Source="@66" Target="@215" Category="PoundInclude" />
+    <Link Source="@71" Target="@137" Category="PoundInclude" />
+    <Link Source="@71" Target="@182" Category="PoundInclude" />
+    <Link Source="@73" Target="@215" Category="PoundInclude" />
+    <Link Source="@76" Target="@215" Category="PoundInclude" />
+    <Link Source="@78" Target="@215" Category="PoundInclude" />
+    <Link Source="@78" Target="@76" Category="PoundInclude" />
+    <Link Source="@8" Target="(@7 @128)" Category="Contains" />
+    <Link Source="@8" Target="(@7 @129)" Category="Contains" />
+    <Link Source="@8" Target="(@7 @133)" Category="Contains" />
+    <Link Source="@8" Target="(@7 @208)" Category="Contains" />
+    <Link Source="@8" Target="(@7 @275)" Category="Contains" />
+    <Link Source="@8" Target="(@7 @283)" Category="Contains" />
+    <Link Source="@8" Target="(@7 @297)" Category="Contains" />
+    <Link Source="@8" Target="(@7 @308)" Category="Contains" />
+    <Link Source="@8" Target="(@7 @79)" Category="Contains" />
+    <Link Source="@8" Target="(@7 @95)" Category="Contains" />
+    <Link Source="@81" Target="@83" Category="PoundInclude" />
+    <Link Source="@87" Target="@131" Category="PoundInclude" />
+    <Link Source="@87" Target="@184" Category="PoundInclude" />
+    <Link Source="@90" Target="@215" Category="PoundInclude" />
+    <Link Source="@92" Target="@215" Category="PoundInclude" />
+    <Link Source="@94" Target="@112" Category="PoundInclude" />
+    <Link Source="@94" Target="@215" Category="PoundInclude" />
+    <Link Source="@97" Target="@215" Category="PoundInclude" />
+    <Link Source="@99" Target="@103" Category="PoundInclude" Bounds="593.132995605469,176.862350463867,184.12646484375,32.0301055908203" />
+    <Link Source="@99" Target="@219" Category="PoundInclude" Bounds="801.939025878906,177.743865966797,34.553955078125,134.341796875" />
+    <Link Source="G4" Target="@107" Category="Contains" />
+    <Link Source="G4" Target="@122" Category="Contains" />
+    <Link Source="G4" Target="@151" Category="Contains" />
+    <Link Source="G4" Target="@157" Category="Contains" />
+    <Link Source="G4" Target="@159" Category="Contains" />
+    <Link Source="G4" Target="@201" Category="Contains" />
+    <Link Source="G4" Target="@215" Category="Contains" />
+    <Link Source="G4" Target="@42" Category="Contains" />
+    <Link Source="G4" Target="@46" Category="Contains" />
+    <Link Source="G4" Target="@66" Category="Contains" />
+    <Link Source="G4" Target="@78" Category="Contains" />
+    <Link Source="G4" Target="@81" Category="Contains" />
+    <Link Source="G4" Target="@90" Category="Contains" />
+    <Link Source="G4" Target="@92" Category="Contains" />
+    <Link Source="G4" Target="@94" Category="Contains" />
+    <Link Source="G4" Target="Windows SDK Indirectly Included" Category="Contains" />
+    <Link Source="OthersGroup" Target="@109" Category="Contains" />
+    <Link Source="OthersGroup" Target="@11" Category="Contains" />
+    <Link Source="OthersGroup" Target="@112" Category="Contains" />
+    <Link Source="OthersGroup" Target="@116" Category="Contains" />
+    <Link Source="OthersGroup" Target="@118" Category="Contains" />
+    <Link Source="OthersGroup" Target="@120" Category="Contains" />
+    <Link Source="OthersGroup" Target="@126" Category="Contains" />
+    <Link Source="OthersGroup" Target="@13" Category="Contains" />
+    <Link Source="OthersGroup" Target="@131" Category="Contains" />
+    <Link Source="OthersGroup" Target="@135" Category="Contains" />
+    <Link Source="OthersGroup" Target="@137" Category="Contains" />
+    <Link Source="OthersGroup" Target="@143" Category="Contains" />
+    <Link Source="OthersGroup" Target="@145" Category="Contains" />
+    <Link Source="OthersGroup" Target="@147" Category="Contains" />
+    <Link Source="OthersGroup" Target="@16" Category="Contains" />
+    <Link Source="OthersGroup" Target="@163" Category="Contains" />
+    <Link Source="OthersGroup" Target="@176" Category="Contains" />
+    <Link Source="OthersGroup" Target="@18" Category="Contains" />
+    <Link Source="OthersGroup" Target="@182" Category="Contains" />
+    <Link Source="OthersGroup" Target="@184" Category="Contains" />
+    <Link Source="OthersGroup" Target="@186" Category="Contains" />
+    <Link Source="OthersGroup" Target="@188" Category="Contains" />
+    <Link Source="OthersGroup" Target="@192" Category="Contains" />
+    <Link Source="OthersGroup" Target="@20" Category="Contains" />
+    <Link Source="OthersGroup" Target="@213" Category="Contains" />
+    <Link Source="OthersGroup" Target="@217" Category="Contains" />
+    <Link Source="OthersGroup" Target="@22" Category="Contains" />
+    <Link Source="OthersGroup" Target="@221" Category="Contains" />
+    <Link Source="OthersGroup" Target="@233" Category="Contains" />
+    <Link Source="OthersGroup" Target="@235" Category="Contains" />
+    <Link Source="OthersGroup" Target="@237" Category="Contains" />
+    <Link Source="OthersGroup" Target="@239" Category="Contains" />
+    <Link Source="OthersGroup" Target="@24" Category="Contains" />
+    <Link Source="OthersGroup" Target="@241" Category="Contains" />
+    <Link Source="OthersGroup" Target="@243" Category="Contains" />
+    <Link Source="OthersGroup" Target="@245" Category="Contains" />
+    <Link Source="OthersGroup" Target="@247" Category="Contains" />
+    <Link Source="OthersGroup" Target="@249" Category="Contains" />
+    <Link Source="OthersGroup" Target="@251" Category="Contains" />
+    <Link Source="OthersGroup" Target="@26" Category="Contains" />
+    <Link Source="OthersGroup" Target="@28" Category="Contains" />
+    <Link Source="OthersGroup" Target="@30" Category="Contains" />
+    <Link Source="OthersGroup" Target="@313" Category="Contains" />
+    <Link Source="OthersGroup" Target="@315" Category="Contains" />
+    <Link Source="OthersGroup" Target="@317" Category="Contains" />
+    <Link Source="OthersGroup" Target="@319" Category="Contains" />
+    <Link Source="OthersGroup" Target="@32" Category="Contains" />
+    <Link Source="OthersGroup" Target="@321" Category="Contains" />
+    <Link Source="OthersGroup" Target="@323" Category="Contains" />
+    <Link Source="OthersGroup" Target="@325" Category="Contains" />
+    <Link Source="OthersGroup" Target="@327" Category="Contains" />
+    <Link Source="OthersGroup" Target="@329" Category="Contains" />
+    <Link Source="OthersGroup" Target="@331" Category="Contains" />
+    <Link Source="OthersGroup" Target="@333" Category="Contains" />
+    <Link Source="OthersGroup" Target="@335" Category="Contains" />
+    <Link Source="OthersGroup" Target="@337" Category="Contains" />
+    <Link Source="OthersGroup" Target="@339" Category="Contains" />
+    <Link Source="OthersGroup" Target="@34" Category="Contains" />
+    <Link Source="OthersGroup" Target="@341" Category="Contains" />
+    <Link Source="OthersGroup" Target="@343" Category="Contains" />
+    <Link Source="OthersGroup" Target="@345" Category="Contains" />
+    <Link Source="OthersGroup" Target="@36" Category="Contains" />
+    <Link Source="OthersGroup" Target="@38" Category="Contains" />
+    <Link Source="OthersGroup" Target="@44" Category="Contains" />
+    <Link Source="OthersGroup" Target="@50" Category="Contains" />
+    <Link Source="OthersGroup" Target="@62" Category="Contains" />
+    <Link Source="OthersGroup" Target="@71" Category="Contains" />
+    <Link Source="OthersGroup" Target="@87" Category="Contains" />
+    <Link Source="PoundIncludeGraphExternalsGroup" Target="G4" Category="Contains" />
+    <Link Source="PoundIncludeGraphExternalsGroup" Target="OthersGroup" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@105" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@114" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@124" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@149" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@153" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@155" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@178" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@180" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@190" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@196" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@203" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@205" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@224" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@226" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@228" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@40" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@48" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@73" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@76" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@83" Category="Contains" />
+    <Link Source="Windows SDK Indirectly Included" Target="@97" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="CodeSchema_PoundIncludeFile" Label="C++ Project File" BasedOn="File" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="C++ Project File" />
+    <Category Id="CodeSchema_PoundIncludeGroup" Label="#include Group" BasedOn="Group" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="#include Group" />
+    <Category Id="CodeSchema_ProjectItem" Label="Project Item" BasedOn="File" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Type" Icon="File" NavigationActionLabel="Project Items" />
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="Externals" Label="Externals" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Externals" />
+    <Category Id="File" Label="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="File" NavigationActionLabel="Files" />
+    <Category Id="Group" Label="Group" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" IsProviderRoot="False" NavigationActionLabel="Groups" />
+    <Category Id="PoundInclude" Label="#include" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="#include By" OutgoingActionLabel="#include" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="ErrorMessage" Label="Error" Description="Error" DataType="System.String" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="FilePath" Label="File Path" Description="File Path" DataType="System.String" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="Icon" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsCircularLink" Label="Circular Link" Description="Link connects part of a strongly coupled component" DataType="System.Boolean" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="IsStronglyConnected" Label="Circular References" Description="Node is part of a strongly coupled component" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Language" Label="Language" Description="Language" DataType="System.String" />
+    <Property Id="LayoutSettings" DataType="Microsoft.VisualStudio.Diagrams.View.GroupLayoutStyle" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="ToolTip" DataType="System.String" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
+    <Name Id="File" Label="File" ValueType="Uri" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="1" Uri="Assembly=$(VsSolutionUri)/SHADOWENGINE/DEPENDENCIES/GLAD/GLAD.VCXPROJ" />
+    <Alias n="2" Id="(@1)" />
+    <Alias n="3" Uri="Assembly=$(VsSolutionUri)/SHADOWENGINE/SHADOWENGINE.VCXPROJ" />
+    <Alias n="4" Id="(@3)" />
+    <Alias n="5" Uri="Assembly=$(VsSolutionUri)/PLANNING/PLANNING.VCXPROJ" />
+    <Alias n="6" Id="(@5)" />
+    <Alias n="7" Uri="Assembly=$(VsSolutionUri)/SHADOWENGINE/DEPENDENCIES/IMGUI/IMGUI.VCXPROJ" />
+    <Alias n="8" Id="(@7)" />
+    <Alias n="9" Uri="Assembly=" />
+    <Alias n="10" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xmemory0" />
+    <Alias n="11" Id="(@9 @10)" />
+    <Alias n="12" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/cstdlib" />
+    <Alias n="13" Id="(@9 @12)" />
+    <Alias n="14" Uri="File=$(VsSolutionUri)/ShadowEngine/dependencies/GLAD/src/glad.c" />
+    <Alias n="15" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/iosfwd" />
+    <Alias n="16" Id="(@9 @15)" />
+    <Alias n="17" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xlocale" />
+    <Alias n="18" Id="(@9 @17)" />
+    <Alias n="19" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/tuple" />
+    <Alias n="20" Id="(@9 @19)" />
+    <Alias n="21" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xiosbase" />
+    <Alias n="22" Id="(@9 @21)" />
+    <Alias n="23" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/cstddef" />
+    <Alias n="24" Id="(@9 @23)" />
+    <Alias n="25" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xstddef" />
+    <Alias n="26" Id="(@9 @25)" />
+    <Alias n="27" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/streambuf" />
+    <Alias n="28" Id="(@9 @27)" />
+    <Alias n="29" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/cstring" />
+    <Alias n="30" Id="(@9 @29)" />
+    <Alias n="31" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xstring" />
+    <Alias n="32" Id="(@9 @31)" />
+    <Alias n="33" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/string" />
+    <Alias n="34" Id="(@9 @33)" />
+    <Alias n="35" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xatomic0.h" />
+    <Alias n="36" Id="(@9 @35)" />
+    <Alias n="37" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/intrin0.h" />
+    <Alias n="38" Id="(@9 @37)" />
+    <Alias n="39" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_wstdlib.h" />
+    <Alias n="40" Id="(@9 @39)" />
+    <Alias n="41" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/stdlib.h" />
+    <Alias n="42" Id="(@9 @41)" />
+    <Alias n="43" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xatomic.h" />
+    <Alias n="44" Id="(@9 @43)" />
+    <Alias n="45" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/malloc.h" />
+    <Alias n="46" Id="(@9 @45)" />
+    <Alias n="47" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_malloc.h" />
+    <Alias n="48" Id="(@9 @47)" />
+    <Alias n="49" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xerrc.h" />
+    <Alias n="50" Id="(@9 @49)" />
+    <Alias n="51" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/Bindings/Binding1D.h" />
+    <Alias n="52" Id="(@3 @51)" />
+    <Alias n="53" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" />
+    <Alias n="54" Id="(@3 @53)" />
+    <Alias n="55" Uri="File=$(VsSolutionUri)/ShadowEngine/dependencies/GLAD/include/glad/glad.h" />
+    <Alias n="56" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h" />
+    <Alias n="57" Id="(@3 @56)" />
+    <Alias n="58" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowMap/ShadowWorld.h" />
+    <Alias n="59" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" />
+    <Alias n="60" Id="(@3 @59)" />
+    <Alias n="61" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xcall_once.h" />
+    <Alias n="62" Id="(@9 @61)" />
+    <Alias n="63" Uri="File=$(VsSolutionUri)/ShadowEngine/src/Platform/SDL/SDLEventSource.h" />
+    <Alias n="64" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEvents/IShadowEventSource.h" />
+    <Alias n="65" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/locale.h" />
+    <Alias n="66" Id="(@9 @65)" />
+    <Alias n="67" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ImGui/ImGuiModule.h" />
+    <Alias n="68" Uri="File=$(VsSolutionUri)/ShadowEngine/src/Platform/SDL/SDLModule.h" />
+    <Alias n="69" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowModules/ShadowModule.h" />
+    <Alias n="70" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/vcruntime.h" />
+    <Alias n="71" Id="(@9 @70)" />
+    <Alias n="72" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_wtime.h" />
+    <Alias n="73" Id="(@9 @72)" />
+    <Alias n="74" Uri="File=$(VsSolutionUri)/ShadowEngine/src/Time.h" />
+    <Alias n="75" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_wctype.h" />
+    <Alias n="76" Id="(@9 @75)" />
+    <Alias n="77" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/ctype.h" />
+    <Alias n="78" Id="(@9 @77)" />
+    <Alias n="79" Uri="File=$(VsSolutionUri)/ShadowEngine/dependencies/imgui/imstb_truetype.h" />
+    <Alias n="80" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/share.h" />
+    <Alias n="81" Id="(@9 @80)" />
+    <Alias n="82" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_share.h" />
+    <Alias n="83" Id="(@9 @82)" />
+    <Alias n="84" Uri="File=$(VsSolutionUri)/ShadowEngine/src/Core.h" />
+    <Alias n="85" Id="(@3 @84)" />
+    <Alias n="86" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/yvals_core.h" />
+    <Alias n="87" Id="(@9 @86)" />
+    <Alias n="88" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEntity/EntityBase.h" />
+    <Alias n="89" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_terminate.h" />
+    <Alias n="90" Id="(@9 @89)" />
+    <Alias n="91" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/stddef.h" />
+    <Alias n="92" Id="(@9 @91)" />
+    <Alias n="93" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/crtdbg.h" />
+    <Alias n="94" Id="(@9 @93)" />
+    <Alias n="95" Uri="File=$(VsSolutionUri)/ShadowEngine/dependencies/imgui/imconfig.h" />
+    <Alias n="96" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_stdio_config.h" />
+    <Alias n="97" Id="(@9 @96)" />
+    <Alias n="98" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/Bindings/KeyboardBinding.h" />
+    <Alias n="99" Id="(@3 @98)" />
+    <Alias n="100" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/Bindings/InputMapBinding.h" />
+    <Alias n="101" Id="(@3 @100)" />
+    <Alias n="102" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/InputBinding.h" />
+    <Alias n="103" Id="(@3 @102)" />
+    <Alias n="104" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_wstring.h" />
+    <Alias n="105" Id="(@9 @104)" />
+    <Alias n="106" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/string.h" />
+    <Alias n="107" Id="(@9 @106)" />
+    <Alias n="108" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/vcruntime_string.h" />
+    <Alias n="109" Id="(@9 @108)" />
+    <Alias n="110" Uri="File=$(VsSolutionUri)/ShadowEngine/src/Debug.h" />
+    <Alias n="111" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/vcruntime_new_debug.h" />
+    <Alias n="112" Id="(@9 @111)" />
+    <Alias n="113" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_search.h" />
+    <Alias n="114" Id="(@9 @113)" />
+    <Alias n="115" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/eh.h" />
+    <Alias n="116" Id="(@9 @115)" />
+    <Alias n="117" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xtgmath.h" />
+    <Alias n="118" Id="(@9 @117)" />
+    <Alias n="119" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/ymath.h" />
+    <Alias n="120" Id="(@9 @119)" />
+    <Alias n="121" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/math.h" />
+    <Alias n="122" Id="(@9 @121)" />
+    <Alias n="123" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_math.h" />
+    <Alias n="124" Id="(@9 @123)" />
+    <Alias n="125" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/use_ansi.h" />
+    <Alias n="126" Id="(@9 @125)" />
+    <Alias n="127" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ImGui/IShadowImGui.h" />
+    <Alias n="128" Uri="File=$(VsSolutionUri)/ShadowEngine/dependencies/imgui/imgui.h" />
+    <Alias n="129" Uri="File=$(VsSolutionUri)/ShadowEngine/dependencies/imgui/imstb_rectpack.h" />
+    <Alias n="130" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xkeycheck.h" />
+    <Alias n="131" Id="(@9 @130)" />
+    <Alias n="132" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowMap/ShadowMapChunk.h" />
+    <Alias n="133" Uri="File=$(VsSolutionUri)/ShadowEngine/dependencies/imgui/imgui_internal.h" />
+    <Alias n="134" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/concurrencysal.h" />
+    <Alias n="135" Id="(@9 @134)" />
+    <Alias n="136" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/sal.h" />
+    <Alias n="137" Id="(@9 @136)" />
+    <Alias n="138" Uri="File=$(VsSolutionUri)/ShadowEngine/dependencies/GLAD/include/KHR/khrplatform.h" />
+    <Alias n="139" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowApplication.h" />
+    <Alias n="140" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/ShadowAction.h" />
+    <Alias n="141" Id="(@3 @140)" />
+    <Alias n="142" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/vcruntime_exception.h" />
+    <Alias n="143" Id="(@9 @142)" />
+    <Alias n="144" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xlocinfo.h" />
+    <Alias n="145" Id="(@9 @144)" />
+    <Alias n="146" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/vcruntime_typeinfo.h" />
+    <Alias n="147" Id="(@9 @146)" />
+    <Alias n="148" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_wstdio.h" />
+    <Alias n="149" Id="(@9 @148)" />
+    <Alias n="150" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/stdio.h" />
+    <Alias n="151" Id="(@9 @150)" />
+    <Alias n="152" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_wconio.h" />
+    <Alias n="153" Id="(@9 @152)" />
+    <Alias n="154" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_wio.h" />
+    <Alias n="155" Id="(@9 @154)" />
+    <Alias n="156" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/errno.h" />
+    <Alias n="157" Id="(@9 @156)" />
+    <Alias n="158" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/wchar.h" />
+    <Alias n="159" Id="(@9 @158)" />
+    <Alias n="160" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowAsset/AssetLoader.h" />
+    <Alias n="161" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowModules/ShadowModuleManager.h" />
+    <Alias n="162" Uri="File=$(VsSolutionUri)/ShadowEngine/ShadowActionManager.h" />
+    <Alias n="163" Id="(@9 @162)" />
+    <Alias n="164" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowAsset/AssetManager.h" />
+    <Alias n="165" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEvents/ShadowEventManager.h" />
+    <Alias n="166" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/InputModifier.h" />
+    <Alias n="167" Id="(@3 @166)" />
+    <Alias n="168" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEvents/IShadowEventConsumer.h" />
+    <Alias n="169" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEvents/IShadowEventListener.h" />
+    <Alias n="170" Uri="File=$(VsSolutionUri)/ShadowEngine/src/Platform/OpenGL/ImGuiOpenGLRenderer.h" />
+    <Alias n="171" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowMap/ShadowMapRenderer.h" />
+    <Alias n="172" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEntity/Entities/Player.h" />
+    <Alias n="173" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/Bindings/BindingOR.h" />
+    <Alias n="174" Id="(@3 @173)" />
+    <Alias n="175" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xpolymorphic_allocator.h" />
+    <Alias n="176" Id="(@9 @175)" />
+    <Alias n="177" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_math_defines.h" />
+    <Alias n="178" Id="(@9 @177)" />
+    <Alias n="179" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/sys/types.h" />
+    <Alias n="180" Id="(@9 @179)" />
+    <Alias n="181" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/vadefs.h" />
+    <Alias n="182" Id="(@9 @181)" />
+    <Alias n="183" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/crtdefs.h" />
+    <Alias n="184" Id="(@9 @183)" />
+    <Alias n="185" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/yvals.h" />
+    <Alias n="186" Id="(@9 @185)" />
+    <Alias n="187" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/CodeAnalysis/sourceannotations.h" />
+    <Alias n="188" Id="(@9 @187)" />
+    <Alias n="189" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_wprocess.h" />
+    <Alias n="190" Id="(@9 @189)" />
+    <Alias n="191" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/limits.h" />
+    <Alias n="192" Id="(@9 @191)" />
+    <Alias n="193" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" />
+    <Alias n="194" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEvents/Events/KeyEvents.h" />
+    <Alias n="195" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_memcpy_s.h" />
+    <Alias n="196" Id="(@9 @195)" />
+    <Alias n="197" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/Modifiers/ModifierRepeat.h" />
+    <Alias n="198" Id="(@3 @197)" />
+    <Alias n="199" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowMath/Vector2float.h" />
+    <Alias n="200" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/float.h" />
+    <Alias n="201" Id="(@9 @200)" />
+    <Alias n="202" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/sys/stat.h" />
+    <Alias n="203" Id="(@9 @202)" />
+    <Alias n="204" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_wdirect.h" />
+    <Alias n="205" Id="(@9 @204)" />
+    <Alias n="206" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowAsset/ShadowAsset.h" />
+    <Alias n="207" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEntity/Entities/Light.h" />
+    <Alias n="208" Uri="File=$(VsSolutionUri)/ShadowEngine/dependencies/imgui/imstb_textedit.h" />
+    <Alias n="209" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEvents/ShadowEvent.h" />
+    <Alias n="210" Id="(@3 @209)" />
+    <Alias n="211" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowMath/Vector2int.h" />
+    <Alias n="212" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/stdint.h" />
+    <Alias n="213" Id="(@9 @212)" />
+    <Alias n="214" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt.h" />
+    <Alias n="215" Id="(@9 @214)" />
+    <Alias n="216" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xstring_insert.h" />
+    <Alias n="217" Id="(@9 @216)" />
+    <Alias n="218" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/InputContext.h" />
+    <Alias n="219" Id="(@3 @218)" />
+    <Alias n="220" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/vcruntime_new.h" />
+    <Alias n="221" Id="(@9 @220)" />
+    <Alias n="222" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowWindow.h" />
+    <Alias n="223" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/shared/winpackagefamily.h" />
+    <Alias n="224" Id="(@9 @223)" />
+    <Alias n="225" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/shared/winapifamily.h" />
+    <Alias n="226" Id="(@9 @225)" />
+    <Alias n="227" Uri="File=$(ProgramFilesUri)/Windows Kits/10/Include/10.0.17763.0/ucrt/corecrt_memory.h" />
+    <Alias n="228" Id="(@9 @227)" />
+    <Alias n="229" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEntity/EntityRegistry.h" />
+    <Alias n="230" Uri="File=$(VsSolutionUri)/ShadowEngine/src/Utility.h" />
+    <Alias n="231" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEntity/Entity.h" />
+    <Alias n="232" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/cmath" />
+    <Alias n="233" Id="(@9 @232)" />
+    <Alias n="234" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/istream" />
+    <Alias n="235" Id="(@9 @234)" />
+    <Alias n="236" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/ostream" />
+    <Alias n="237" Id="(@9 @236)" />
+    <Alias n="238" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xlocnum" />
+    <Alias n="239" Id="(@9 @238)" />
+    <Alias n="240" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/exception" />
+    <Alias n="241" Id="(@9 @240)" />
+    <Alias n="242" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xtr1common" />
+    <Alias n="243" Id="(@9 @242)" />
+    <Alias n="244" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xlocinfo" />
+    <Alias n="245" Id="(@9 @244)" />
+    <Alias n="246" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/typeinfo" />
+    <Alias n="247" Id="(@9 @246)" />
+    <Alias n="248" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/cstdio" />
+    <Alias n="249" Id="(@9 @248)" />
+    <Alias n="250" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/cerrno" />
+    <Alias n="251" Id="(@9 @250)" />
+    <Alias n="252" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/Bindings/Binding1D.cpp" />
+    <Alias n="253" Id="(@3 @252)" />
+    <Alias n="254" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/Bindings/Binding2D.cpp" />
+    <Alias n="255" Id="(@3 @254)" />
+    <Alias n="256" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.cpp" />
+    <Alias n="257" Id="(@3 @256)" />
+    <Alias n="258" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowMap/ShadowWorld.cpp" />
+    <Alias n="259" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/Bindings/BindingAND.cpp" />
+    <Alias n="260" Id="(@3 @259)" />
+    <Alias n="261" Uri="File=$(VsSolutionUri)/ShadowEngine/src/Platform/SDL/SDLEventSource.cpp" />
+    <Alias n="262" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEvents/IShadowEventSource.cpp" />
+    <Alias n="263" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ImGui/ImGuiModule.cpp" />
+    <Alias n="264" Uri="File=$(VsSolutionUri)/ShadowEngine/src/Platform/SDL/SDLModule.cpp" />
+    <Alias n="265" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowModules/ShadowModule.cpp" />
+    <Alias n="266" Uri="File=$(VsSolutionUri)/ShadowEngine/src/Time.cpp" />
+    <Alias n="267" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/Bindings/KeyboardBinding.cpp" />
+    <Alias n="268" Id="(@3 @267)" />
+    <Alias n="269" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/Bindings/InputMapBinding.cpp" />
+    <Alias n="270" Id="(@3 @269)" />
+    <Alias n="271" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/InputBinding.cpp" />
+    <Alias n="272" Id="(@3 @271)" />
+    <Alias n="273" Uri="File=$(VsSolutionUri)/ShadowEngine/src/Debug.cpp" />
+    <Alias n="274" Id="(@3 @273)" />
+    <Alias n="275" Uri="File=$(VsSolutionUri)/ShadowEngine/dependencies/imgui/imgui.cpp" />
+    <Alias n="276" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowMap/ShadowMapChunk.cpp" />
+    <Alias n="277" Uri="File=$(VsSolutionUri)/Planning/src/mian.cpp" />
+    <Alias n="278" Uri="File=$(VsSolutionUri)/ShadowEngine/src/main.cpp" />
+    <Alias n="279" Id="(@3 @278)" />
+    <Alias n="280" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowApplication.cpp" />
+    <Alias n="281" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/ShadowAction.cpp" />
+    <Alias n="282" Id="(@3 @281)" />
+    <Alias n="283" Uri="File=$(VsSolutionUri)/ShadowEngine/dependencies/imgui/imgui_demo.cpp" />
+    <Alias n="284" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowAsset/AssetLoader.cpp" />
+    <Alias n="285" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowModules/ShadowModuleManager.cpp" />
+    <Alias n="286" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowAsset/AssetManager.cpp" />
+    <Alias n="287" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEvents/ShadowEventManager.cpp" />
+    <Alias n="288" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/InputModifier.cpp" />
+    <Alias n="289" Id="(@3 @288)" />
+    <Alias n="290" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEvents/IShadowEventConsumer.cpp" />
+    <Alias n="291" Uri="File=$(VsSolutionUri)/ShadowEngine/src/Platform/OpenGL/ImGuiOpenGLRenderer.cpp" />
+    <Alias n="292" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowMap/ShadowMapRenderer.cpp" />
+    <Alias n="293" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEntity/Entities/Player.cpp" />
+    <Alias n="294" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/Bindings/BindingOR.cpp" />
+    <Alias n="295" Id="(@3 @294)" />
+    <Alias n="296" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEntity/DefaultEntities.cpp" />
+    <Alias n="297" Uri="File=$(VsSolutionUri)/ShadowEngine/dependencies/imgui/imgui_widgets.cpp" />
+    <Alias n="298" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/Modifiers/ModifierRepeat.cpp" />
+    <Alias n="299" Id="(@3 @298)" />
+    <Alias n="300" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowMath/Vector2float.cpp" />
+    <Alias n="301" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowAsset/ShadowAsset.cpp" />
+    <Alias n="302" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEntity/Entities/Light.cpp" />
+    <Alias n="303" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEvents/ShadowEvent.cpp" />
+    <Alias n="304" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowMath/Vector2int.cpp" />
+    <Alias n="305" Uri="File=$(VsSolutionUri)/Planning/src/Input.cpp" />
+    <Alias n="306" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowInput/InputContext.cpp" />
+    <Alias n="307" Id="(@3 @306)" />
+    <Alias n="308" Uri="File=$(VsSolutionUri)/ShadowEngine/dependencies/imgui/imgui_draw.cpp" />
+    <Alias n="309" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowWindow.cpp" />
+    <Alias n="310" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEntity/EntityRegistry.cpp" />
+    <Alias n="311" Uri="File=$(VsSolutionUri)/ShadowEngine/src/ShadowEntity/Entity.cpp" />
+    <Alias n="312" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/cwchar" />
+    <Alias n="313" Id="(@9 @312)" />
+    <Alias n="314" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/system_error" />
+    <Alias n="315" Id="(@9 @314)" />
+    <Alias n="316" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/ios" />
+    <Alias n="317" Id="(@9 @316)" />
+    <Alias n="318" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/type_traits" />
+    <Alias n="319" Id="(@9 @318)" />
+    <Alias n="320" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/climits" />
+    <Alias n="321" Id="(@9 @320)" />
+    <Alias n="322" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/limits" />
+    <Alias n="323" Id="(@9 @322)" />
+    <Alias n="324" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/cfloat" />
+    <Alias n="325" Id="(@9 @324)" />
+    <Alias n="326" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xfacet" />
+    <Alias n="327" Id="(@9 @326)" />
+    <Alias n="328" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/cstdint" />
+    <Alias n="329" Id="(@9 @328)" />
+    <Alias n="330" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/stdexcept" />
+    <Alias n="331" Id="(@9 @330)" />
+    <Alias n="332" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/list" />
+    <Alias n="333" Id="(@9 @332)" />
+    <Alias n="334" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/initializer_list" />
+    <Alias n="335" Id="(@9 @334)" />
+    <Alias n="336" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/new" />
+    <Alias n="337" Id="(@9 @336)" />
+    <Alias n="338" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xmemory" />
+    <Alias n="339" Id="(@9 @338)" />
+    <Alias n="340" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/memory" />
+    <Alias n="341" Id="(@9 @340)" />
+    <Alias n="342" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/xutility" />
+    <Alias n="343" Id="(@9 @342)" />
+    <Alias n="344" Uri="File=file:///D:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/include/utility" />
+    <Alias n="345" Id="(@9 @344)" />
+  </IdentifierAliases>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Circular References" ToolTip="Node is part of a strongly coupled component" ValueLabel="Nodes">
+      <Condition Expression="IsStronglyConnected" />
+      <Setter Property="Stroke" Value="#D02030" />
+      <Setter Property="StrokeThickness" Value="2" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Circular References" ToolTip="Node is part of a strongly coupled component" ValueLabel="Links">
+      <Condition Expression="IsCircularLink" />
+      <Setter Property="Stroke" Value="#D02030" />
+      <Setter Property="StrokeThickness" Value="2" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="C++ Project File" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_PoundIncludeFile')" />
+      <Setter Property="Background" Value="#FFEFEFEF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Externals" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Externals')" />
+      <Setter Property="Background" Value="#FFA08080" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Source File" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_ProjectItem')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="#include Group" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_PoundIncludeGroup')" />
+      <Setter Property="Background" Value="#FFEFEFEF" />
+    </Style>
+  </Styles>
+  <Paths>
+    <Path Id="ProgramFiles" Value="C:\Program Files (x86)" />
+    <Path Id="ProgramFilesUri" Value="file:///C:/Program Files (x86)" />
+    <Path Id="VsSolution" Value="P:\ShadowEngine\shadowengine" />
+    <Path Id="VsSolutionUri" Value="file:///P:/ShadowEngine/shadowengine" />
+  </Paths>
+</DirectedGraph>

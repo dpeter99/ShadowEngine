@@ -2,9 +2,5 @@
 
 namespace ShadowInput {
 
-	void InputBinding::ApplyModifiers()
-	{
-
-	}
 
 }

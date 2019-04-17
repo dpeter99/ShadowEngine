@@ -13,7 +13,7 @@ void Debug::Init()
 	ShadowEventManager::AddNewEventListener(this);
 	ImGuiModule::AddGUICall(this);
 
-	new ShadowInput::ShadowAction<bool>("Test", new ShadowInput::KeyboardBinding("a"));
+	//new ShadowInput::ShadowAction<bool>("Test", new ShadowInput::KeyboardBinding("a"));
 
 	active = true;
 }

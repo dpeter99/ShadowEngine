@@ -1,6 +1,7 @@
 #pragma once
-#include "InputBinding.h"
-#include "ShadowAction.h"
+#include "ShadowEvents/ShadowEvent.h"
+
+//#include "ShadowAction.h"
 
 enum ActionState
 {
@@ -10,6 +11,8 @@ enum ActionState
 	Ended,
 	Canceled,
 };
+
+class ShadowAction;
 
 //template<class T>
 class InputContext
@@ -28,7 +31,5 @@ public:
 	~InputContext();
 
 	ShadowEvent* GetEvent() { return event_; };
-
-
 
 };

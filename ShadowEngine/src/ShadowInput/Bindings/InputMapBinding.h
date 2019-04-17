@@ -1,10 +1,11 @@
 #pragma once
-#include "ShadowInput/InputModifier.h"
+#include "ShadowInput/InputBinding.h"
 
 namespace ShadowInput {
 
+	template<class T>
 	class InputMapBinding
-		: public InputModifier
+		: public InputBinding<T>
 	{
 	public:
 		InputMapBinding(const char* map);

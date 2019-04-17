@@ -2,9 +2,4 @@
 
 namespace ShadowInput {
 
-
-	InputMapBinding::~InputMapBinding()
-	{
-	}
-
 }

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ShadowInput::InputBinding&lt;T&gt;">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIgCAAAIAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\ShadowInput\InputBinding.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputContext" Collapsed="true">
+    <Position X="15.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEgAAAAAAACAA=</HashCode>
+      <FileName>src\ShadowInput\InputContext.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputModifier">
+    <Position X="2" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAgAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>src\ShadowInput\InputModifier.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShadowInput::IShadowAction">
+    <Position X="5.75" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAJAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>src\ShadowInput\ShadowAction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShadowInput::ShadowAction&lt;T&gt;">
+    <Position X="5.75" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAJAAAAAAAAAAAAAAAAgAAAAAEAAAAAAAAIIAAAAQ=</HashCode>
+      <FileName>src\ShadowInput\ShadowAction.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShadowInput::ModifierHold">
+    <Position X="0.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAACAAAAAAAAAAAAAAAAACAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\ShadowInput\Modifiers\ModifierHold.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShadowInput::ModifierRepeat">
+    <Position X="3" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAACAAAAAAAQAAAA=</HashCode>
+      <FileName>src\ShadowInput\Modifiers\ModifierRepeat.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShadowInput::Binding1D">
+    <Position X="1.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAgAIAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>src\ShadowInput\Bindings\Binding1D.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShadowInput::Binding2D">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAIAAAAAAAQAAAAAAAAAAAAAAACAAQAAAAIA=</HashCode>
+      <FileName>src\ShadowInput\Bindings\Binding2D.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShadowInput::KeyboardBinding">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAACAA=</HashCode>
+      <FileName>src\ShadowInput\Bindings\KeyboardBinding.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BindingAND">
+    <Position X="8.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAABAAAAAgAAAAAAg=</HashCode>
+      <FileName>src\ShadowInput\Bindings\BindingAND.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BindingOR">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAgAAAg=</HashCode>
+      <FileName>src\ShadowInput\Bindings\BindingOR.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShadowInput::InputMapBinding&lt;T&gt;">
+    <Position X="5.75" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>src\ShadowInput\Bindings\InputMapBinding.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ActionState">
+    <Position X="15.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAEAgAAAAAAAAAIAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>src\ShadowInput\InputContext.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
