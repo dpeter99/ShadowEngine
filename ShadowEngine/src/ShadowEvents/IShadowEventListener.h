@@ -5,9 +5,7 @@ class ShadowEvent;
 #define EVENT_BIND(Event,Type,Func)		\
 	Type *_event;					\
 	if(is<Type>(Event, &_event))	\
-	Func	\
-		
-	
+	Func
 
 
 class IShadowEventListener
@@ -19,4 +17,3 @@ public:
 	IShadowEventListener() = default;
 	~IShadowEventListener() = default;
 };
-

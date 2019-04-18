@@ -1,4 +1,5 @@
 #include "ShadowActionSystem.h"
+#include "ShadowEvents/ShadowEventManager.h"
 
 namespace ShadowInput
 {
@@ -19,7 +20,7 @@ namespace ShadowInput
 
 	void ShadowActionSystem::Init()
 	{
-
+		ShadowEventManager::AddNewEventListener(this);
 	}
 
 	ShadowActionSystem::ShadowActionSystem()

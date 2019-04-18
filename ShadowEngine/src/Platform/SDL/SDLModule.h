@@ -10,13 +10,14 @@ class SDLModule : public ShadowModule
 
 public:
 
-	virtual void Init() override;
+	void Init() override;
 
-	void Update() override {};
+	void Update() override
+	{
+	};
 
 	std::string GetName() override { return "SDLModule"; };
 
 	SDLModule();
 	~SDLModule();
 };
-

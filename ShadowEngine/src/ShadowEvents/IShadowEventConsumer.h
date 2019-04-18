@@ -10,4 +10,3 @@ public:
 	IShadowEventListener();
 	~IShadowEventListener();
 };
-

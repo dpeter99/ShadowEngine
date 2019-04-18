@@ -1,7 +1,6 @@
 #include "ShadowAsset.h"
 
 
-
 ShadowAsset::ShadowAsset()
 {
 }

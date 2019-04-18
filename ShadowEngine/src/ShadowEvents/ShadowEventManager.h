@@ -8,7 +8,7 @@
 
 class ShadowEventManager : public ShadowModule
 {
-	static  ShadowEventManager* instance;
+	static ShadowEventManager* instance;
 
 	std::queue<ShadowEvent*> eventQueue;
 	std::list<IShadowEventSource*> eventSources;
@@ -31,7 +31,9 @@ public:
 
 	void Init() override;
 
-	void Update() override {};
+	void Update() override
+	{
+	};
 
 	std::string GetName() override { return "ShadowEventManager"; };
 
@@ -41,7 +43,13 @@ public:
 
 	static void ProcessEvents() { instance->ProcessEvents_(); };
 
-	static void AddNewEventSource(IShadowEventSource* shadowEventSource) { instance->AddNewEventSource_(shadowEventSource); };
+	static void AddNewEventSource(IShadowEventSource* shadowEventSource)
+	{
+		instance->AddNewEventSource_(shadowEventSource);
+	};
 
-	static void AddNewEventListener(IShadowEventListener* shadowEventListener) { instance->AddNewEventListener_(shadowEventListener); };
+	static void AddNewEventListener(IShadowEventListener* shadowEventListener)
+	{
+		instance->AddNewEventListener_(shadowEventListener);
+	};
 };

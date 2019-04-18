@@ -1,7 +1,6 @@
 #include "InputContext.h"
 
 
-
 InputContext::InputContext()
 {
 }

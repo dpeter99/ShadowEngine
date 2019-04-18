@@ -10,7 +10,8 @@ public:
 
 	SDL_Window* winPtr;
 
-	ShadowWindow(SDL_Window* ptr,int W,int H):winPtr(ptr),Height(H),Width(W){};
+	ShadowWindow(SDL_Window* ptr, int W, int H): Height(H), Width(W), winPtr(ptr)
+	{
+	};
 	~ShadowWindow();
 };
-

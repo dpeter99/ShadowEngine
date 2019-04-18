@@ -26,4 +26,3 @@ public:
 	ImGuiModule();
 	~ImGuiModule();
 };
-

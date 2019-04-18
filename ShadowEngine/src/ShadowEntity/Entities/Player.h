@@ -8,15 +8,17 @@
 #include "../EntityRegistry.h"
 #include "../Entity.h"
 
-namespace ShadowEntity {
-    class Player : public Entity {
-    public:
-        static std::string id;
+namespace ShadowEntity
+{
+	class Player : public Entity
+	{
+	public:
+		static std::string id;
 
-        Entity* Create() override;
+		Entity* Create() override;
 
-        void Draw() override;
-    };
+		void Draw() override;
+	};
 }
 
 #endif //SHADOWENGINE_PLAYER_H

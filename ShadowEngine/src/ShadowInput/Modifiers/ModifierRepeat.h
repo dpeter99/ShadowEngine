@@ -1,8 +1,8 @@
 #pragma once
 #include "ShadowInput/InputModifier.h"
 
-namespace ShadowInput {
-
+namespace ShadowInput
+{
 	class ModifierRepeat
 		: public InputModifier
 	{
@@ -13,5 +13,4 @@ namespace ShadowInput {
 		ModifierRepeat(int count);
 		~ModifierRepeat();
 	};
-
 }

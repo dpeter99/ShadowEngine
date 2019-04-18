@@ -41,7 +41,7 @@ void ShadowEventManager::PushNewEvent_(ShadowEvent* e)
 
 void ShadowEventManager::ProcessEvents_()
 {
-	while(!eventQueue.empty())
+	while (!eventQueue.empty())
 	{
 		auto e = eventQueue.front();
 		for (auto listener : eventConsumers)
@@ -61,5 +61,3 @@ void ShadowEventManager::AddNewEventListener_(IShadowEventListener* shadowEventS
 {
 	eventConsumers.emplace_back(shadowEventSource);
 }
-
-

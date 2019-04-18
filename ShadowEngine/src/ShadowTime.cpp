@@ -14,5 +14,5 @@ void Time::UpdateTime()
 
 	double m_time = (double)((NOW - LAST) * 1000 / (double)SDL_GetPerformanceFrequency());
 
-	deltaTime = m_time > 0?m_time:(1.0/60.0);
+	deltaTime = m_time > 0 ? m_time : (1.0 / 60.0);
 }

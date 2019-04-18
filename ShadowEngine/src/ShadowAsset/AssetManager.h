@@ -14,7 +14,6 @@ private:
 	static AssetManager* instance;
 
 
-
 public:
 
 	static AssetManager* getInstance()
@@ -32,9 +31,6 @@ public:
 	~AssetManager();
 
 
-
-
-
 	//Checks if the asset is loaded
 	bool CheckLoaded(std::string path, ShadowAsset** asset);
 
@@ -45,8 +41,9 @@ public:
 	//Gets the needed asset based on it's path
 	//Makes sure it will be cleaned up when the game exits
 	//This sets up the ShadowAsset base class
-	template<class T>
-	static T* GetAsset(std::string path) {
+	template <class T>
+	static T* GetAsset(std::string path)
+	{
 		ShadowAsset* f;
 
 		if (instance->CheckLoaded(path, &f))
@@ -65,5 +62,3 @@ public:
 		return w;
 	}
 };
-
-

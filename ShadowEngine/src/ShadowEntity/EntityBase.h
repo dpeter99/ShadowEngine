@@ -10,13 +10,11 @@
 ShadowEntity::Entity* Type::Create() {  \
 Type* res = new Type();                 \
 return res;                             \
-}                                       \
-
+}
 #define SHADOW_FUNC_DEC(Type)   \
 public:                         \
 Entity* Create() override;      \
-private:                        \
-
+private:
 
 
 #endif //SHADOWENGINE_ENTITYBASE_H

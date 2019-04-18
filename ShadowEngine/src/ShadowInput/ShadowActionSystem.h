@@ -10,20 +10,26 @@ namespace ShadowInput
 		public ShadowModule,
 		public IShadowEventListener
 	{
-		std::list<IShadowAction*> actions;
+		
 
 	public:
 		static ShadowActionSystem* _instance;
 
+		std::list<IShadowAction*> actions;
+
 		ShadowActionSystem();
 		~ShadowActionSystem();
 
-		void OnEvent(ShadowEvent& e) override;
-
 		void AddEvent(IShadowAction* a);
 
+		IShadowAction* GetAction(std::string name);
+
+
+
+		void OnEvent(ShadowEvent& e) override;
+
 		void Init() override;
-		void Update() override;
+		void Update() override {};
 		std::string GetName() override { return  "ActionSystem"; };
 
 

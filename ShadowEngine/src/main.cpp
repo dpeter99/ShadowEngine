@@ -15,9 +15,10 @@
 #include "ShadowInput/Bindings/KeyboardBinding.h"
 #include "ShadowInput/Modifiers/ModifierRepeat.h"
 
-int main(int argc, char* argv[]) {
 
 
+int main(int argc, char* argv[])
+{
 	ShadowEntity::EntityRegistry registry;
 
 	//registry.ListPreRegisteredEntitys();
@@ -27,19 +28,11 @@ int main(int argc, char* argv[]) {
 	//w->SetActiveMap("default");
 	//w->Update(ShadowMath::Vector2float(0, 0));
 	//ShadowMapRenderer::RenderMap(*map);
-
-	ShadowInput::ShadowAction<bool>("Test",
-			new ShadowInput::KeyboardBinding("A")
-		);
-
 	
-
 
 	ShadowApplication app;
 	app.Init();
 	app.Start();
-
-
 
 
 	char s;

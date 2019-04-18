@@ -3,23 +3,19 @@
 #include <list>
 #include "ShadowInput/InputModifier.h"
 #include "ShadowEvents/ShadowEvent.h"
+#include "IShadowAction.h"
 
 
 class ShadowAction;
 
-namespace ShadowInput {
-
-	
-	template<class T>
+namespace ShadowInput
+{
+	template <class T>
 	class InputBinding
 	{
 	protected:
-		//ShadowAction<bool>* action_;
-
+		IShadowAction* action_;
 		std::list<InputModifier*> modifiers_;
-
-		
-
 	public:
 
 		/**
@@ -27,7 +23,7 @@ namespace ShadowInput {
 		 * \param _m The new modifier that is added
 		 * \return Returns the same object so it can be chained
 		 */
-		InputBinding& AddModifier(InputModifier* _m);
+		InputBinding* AddModifier(InputModifier* _m);
 
 		/**
 		 * \brief Processes a event
@@ -35,12 +31,30 @@ namespace ShadowInput {
 		 */
 		virtual void ProcessEvent(const ShadowEvent& event) = 0;
 
-		InputBinding();
-		virtual ~InputBinding() =0;
+		virtual void Init(IShadowAction* action)
+		{
+			action_ = action;
+		}
+
+		InputModifier* GetModifier(int i);
+
+		//InputBinding();
+		virtual ~InputBinding()
+		{
+		}
 	};
 
 	template <class T>
-	InputBinding<T>::InputBinding()
+	InputBinding<T>* InputBinding<T>::AddModifier(InputModifier* _m)
 	{
+		this->modifiers_.emplace_front(_m);
+
+		return this;
+	}
+
+	template <class T>
+	InputModifier* InputBinding<T>::GetModifier(int i)
+	{
+		return this->modifiers_[i];
 	}
 }

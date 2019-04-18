@@ -51,7 +51,6 @@ void ImGuiModule::Init()
 
 void ImGuiModule::Update()
 {
-	
 	ImGuiIO& io = ImGui::GetIO();
 	ShadowApplication& app = ShadowApplication::Get();
 	io.DisplaySize = ImVec2(app.GetWindow().Width, app.GetWindow().Height);
@@ -71,7 +70,6 @@ void ImGuiModule::Update()
 
 	ImGui::Render();
 	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-	
 }
 
 void ImGuiModule::OnEvent(ShadowEvent& e)
@@ -97,7 +95,8 @@ void ImGuiModule::OnEvent(ShadowEvent& e)
 		io.KeysDown[key] = true;
 	}
 
-	else*/ if(is<KeyReleasedEvent>(e, &released))
+	else*/
+	if (is<KeyReleasedEvent>(e, &released))
 	{
 		int key = released->GetKeyCode();
 		io.KeysDown[key] = false;
@@ -109,7 +108,7 @@ void ImGuiModule::OnEvent(ShadowEvent& e)
 		if (key == SDL_BUTTON_RIGHT) io.MouseDown[1] = true;
 		if (key == SDL_BUTTON_MIDDLE) io.MouseDown[2] = true;
 	}
-	else if(is<MouseButtonReleasedEvent>(e, &buttonReleased))
+	else if (is<MouseButtonReleasedEvent>(e, &buttonReleased))
 	{
 		int key = buttonReleased->GetMouseButton();
 
@@ -117,7 +116,7 @@ void ImGuiModule::OnEvent(ShadowEvent& e)
 		if (key == SDL_BUTTON_RIGHT) io.MouseDown[1] = false;
 		if (key == SDL_BUTTON_MIDDLE) io.MouseDown[2] = false;
 	}
-	else if(is<MouseMovedEvent>(e, &moved))
+	else if (is<MouseMovedEvent>(e, &moved))
 	{
 		io.MousePos = ImVec2(moved->GetX(), moved->GetY());
 	}

@@ -1,8 +1,8 @@
 #pragma once
 #include "ShadowInput/InputBinding.h"
 
-namespace ShadowInput {
-
+namespace ShadowInput
+{
 	class Binding1D
 		: public InputBinding<float>
 	{
@@ -15,7 +15,6 @@ namespace ShadowInput {
 		void ProcessEvent(const ShadowEvent& event) override;
 
 		Binding1D(InputBinding<bool>* _xpositive, InputBinding<bool>* _xnegative);
-		~Binding1D();
+		~Binding1D() override;
 	};
-
 }

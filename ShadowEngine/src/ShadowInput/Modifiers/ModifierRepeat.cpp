@@ -1,6 +1,7 @@
 #include "ModifierRepeat.h"
 
-namespace ShadowInput {
+namespace ShadowInput
+{
 	void ModifierRepeat::ProcessInput(InputContext* ctx)
 	{
 	}
@@ -8,5 +9,4 @@ namespace ShadowInput {
 	ModifierRepeat::~ModifierRepeat()
 	{
 	}
-
 }

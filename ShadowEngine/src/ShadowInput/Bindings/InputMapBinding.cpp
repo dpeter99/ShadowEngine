@@ -1,5 +1,5 @@
 #include "InputMapBinding.h"
 
-namespace ShadowInput {
-
+namespace ShadowInput
+{
 }

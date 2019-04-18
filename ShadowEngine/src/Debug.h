@@ -4,17 +4,20 @@
 #include "ImGui/IShadowImGui.h"
 
 class Debug :
-	public ShadowModule ,
+	public ShadowModule,
 	public IShadowEventListener,
 	public IShadowImGui
 {
+
+	void Debug::ActionDebug();
+
 public:
 
 	bool active;
 
 	void Init() override;
 
-	void Update() override{};
+	void Update() override {};
 
 	std::string GetName() override { return "Debug"; };
 
@@ -26,4 +29,3 @@ public:
 	Debug();
 	virtual ~Debug();
 };
-

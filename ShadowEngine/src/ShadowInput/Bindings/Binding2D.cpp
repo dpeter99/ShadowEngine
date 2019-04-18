@@ -1,6 +1,5 @@
 #include "Binding2D.h"
 
-namespace ShadowInput {
-
-
+namespace ShadowInput
+{
 }

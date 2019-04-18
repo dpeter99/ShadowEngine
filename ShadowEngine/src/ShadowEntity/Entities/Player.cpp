@@ -4,23 +4,23 @@
 
 #include "Player.h"
 
-namespace ShadowEntity {
+namespace ShadowEntity
+{
+	SHADOW_FUNC_IMPL(Player)
 
-    SHADOW_FUNC_IMPL(Player)
+	/*
+	Entity* Player::Create() {
+	    Player* res = new Player();
 
-    /*
-    Entity* Player::Create() {
-        Player* res = new Player();
+	    return res;
+	}
+	*/
 
-        return res;
-    }
-    */
-
-    void Player::Draw() {
-        std::cout<<"Player";
-    }
+	void Player::Draw()
+	{
+		std::cout << "Player";
+	}
 
 
-    //bool Player::registered = ShadowEntity::EntityRegistry::PreRegisterEntity("Player");
-
+	//bool Player::registered = ShadowEntity::EntityRegistry::PreRegisterEntity("Player");
 }

@@ -1,7 +1,6 @@
 #include "InputModifier.h"
 
 
-
 InputModifier::InputModifier()
 {
 }

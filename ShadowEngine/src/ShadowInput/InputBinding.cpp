@@ -1,6 +1,5 @@
 #include "InputBinding.h"
 
-namespace ShadowInput {
-
-
+namespace ShadowInput
+{
 }

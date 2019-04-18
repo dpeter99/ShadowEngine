@@ -16,10 +16,11 @@ AssetManager::~AssetManager()
 
 bool AssetManager::CheckLoaded(std::string path, ShadowAsset** asset = nullptr)
 {
-	for (auto item : this->loadedAssets) {
+	for (auto item : this->loadedAssets)
+	{
 		if (item.second->path == path) return true;
-		if(asset != nullptr)
-		* asset = item.second;
+		if (asset != nullptr)
+			* asset = item.second;
 	}
 
 	if (asset != nullptr)
@@ -30,7 +31,6 @@ bool AssetManager::CheckLoaded(std::string path, ShadowAsset** asset = nullptr)
 
 void AssetManager::UnloadAsset(std::string)
 {
-
 }
 
 void AssetManager::UnloadAsset(ShadowAsset* asset)
@@ -39,6 +39,7 @@ void AssetManager::UnloadAsset(ShadowAsset* asset)
 	this->loadedAssets.erase(v);
 	delete asset;
 }
+
 /*
 
 template<class T>

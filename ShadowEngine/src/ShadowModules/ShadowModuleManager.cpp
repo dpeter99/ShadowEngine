@@ -34,5 +34,4 @@ void ShadowModuleManager::Update()
 	{
 		module->Update();
 	}
-
 }

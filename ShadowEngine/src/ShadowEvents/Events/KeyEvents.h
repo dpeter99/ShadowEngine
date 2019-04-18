@@ -7,11 +7,13 @@
 class KeyEvent : public ShadowEvent
 {
 public:
-	inline int GetKeyCode() const { return m_KeyCode; }
+	int GetKeyCode() const { return m_KeyCode; }
 
 protected:
 	KeyEvent(int keycode)
-		: m_KeyCode(keycode) {}
+		: m_KeyCode(keycode)
+	{
+	}
 
 	int m_KeyCode;
 };
@@ -20,16 +22,18 @@ class KeyPressedEvent : public KeyEvent
 {
 public:
 	KeyPressedEvent(int keycode, int repeatCount)
-		: KeyEvent(keycode), m_RepeatCount(repeatCount) {}
+		: KeyEvent(keycode), m_RepeatCount(repeatCount)
+	{
+	}
 
-	inline int GetRepeatCount() const { return m_RepeatCount; }
+	int GetRepeatCount() const { return m_RepeatCount; }
 
 	EVENT_CLASS_TYPE(EventSource::EventCategoryInput)
 
 	std::string ToString() const override
 	{
 		std::stringstream ss;
-		ss << "KeyPressedEvent: " << (char)m_KeyCode << " (" << m_RepeatCount << " repeats)";
+		ss << "KeyPressedEvent: " << (int)m_KeyCode << " (" << m_RepeatCount << " repeats)";
 		return ss.str();
 	}
 
@@ -41,14 +45,16 @@ class KeyReleasedEvent : public KeyEvent
 {
 public:
 	KeyReleasedEvent(int keycode)
-		: KeyEvent(keycode) {}
+		: KeyEvent(keycode)
+	{
+	}
 
 	EVENT_CLASS_TYPE(EventSource::EventCategoryInput)
 
 	std::string ToString() const override
 	{
 		std::stringstream ss;
-		ss << "KeyReleasedEvent: " << (char)m_KeyCode;
+		ss << "KeyReleasedEvent: " << (int)m_KeyCode;
 		return ss.str();
 	}
 };
@@ -57,7 +63,9 @@ class KeyTypedEvent : public KeyEvent
 {
 public:
 	KeyTypedEvent(char* keycode)
-		: KeyEvent(keycode[0]), keys(keycode) {}
+		: KeyEvent(keycode[0]), keys(keycode)
+	{
+	}
 
 	std::string ToString() const override
 	{
@@ -72,6 +80,7 @@ public:
 	{
 		return keys;
 	}
+
 private:
 	char* keys;
 };

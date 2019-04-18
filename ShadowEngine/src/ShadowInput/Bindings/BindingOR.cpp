@@ -1,6 +1,5 @@
 #include "BindingOR.h"
 
-namespace ShadowInput {
-
-
+namespace ShadowInput
+{
 }

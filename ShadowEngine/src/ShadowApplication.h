@@ -19,7 +19,7 @@ public:
 	ShadowApplication();
 	virtual ~ShadowApplication();
 
-	static ShadowApplication& Get() { return  *instance; };
+	static ShadowApplication& Get() { return *instance; };
 
 	ShadowWindow& GetWindow() const { return *window_; };
 	void SetWindow(ShadowWindow* w) { window_ = w; }
@@ -27,4 +27,3 @@ public:
 	void Init();
 	void Start();
 };
-

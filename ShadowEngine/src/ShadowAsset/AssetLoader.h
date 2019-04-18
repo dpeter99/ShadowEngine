@@ -10,37 +10,36 @@
 #include "ShadowMap/ShadowMapChunk.h"
 #include "ShadowMap/ShadowWorld.h"
 
-class Element{
+class Element
+{
 public:
-    Element* parent;
+	Element* parent;
 
-    std::string name;
+	std::string name;
 
-    bool isBlock;
+	bool isBlock;
 
-    std::string value;
+	std::string value;
 
-    std::list<Element*> properties_old;
-    std::map<std::string, Element*> properties;
+	std::list<Element*> properties_old;
+	std::map<std::string, Element*> properties;
 
 	std::string GetStringProperty(std::string name);
 
-    ~Element();
+	~Element();
 };
 
-class AssetLoader {
-
-    static Element* LoadFile(std::string name);
+class AssetLoader
+{
+	static Element* LoadFile(std::string name);
 
 public:
-    static ShadowMapChunk* LoadMap(std::string name);
+	static ShadowMapChunk* LoadMap(std::string name);
 
-    static ShadowWorld* LoadWorld(std::string name);
+	static ShadowWorld* LoadWorld(std::string name);
 
 	template <class T>
 	static T* LoadAsset(std::string name);
 };
 
 #endif //SHADOWENGINE_MAPLOADER_H
-
-

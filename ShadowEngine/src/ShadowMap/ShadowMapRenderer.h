@@ -8,11 +8,10 @@
 
 #include "ShadowMapChunk.h"
 
-class ShadowMapRenderer {
-
+class ShadowMapRenderer
+{
 public:
-    static void RenderMap(ShadowMapChunk& map);
-
+	static void RenderMap(ShadowMapChunk& map);
 };
 
 

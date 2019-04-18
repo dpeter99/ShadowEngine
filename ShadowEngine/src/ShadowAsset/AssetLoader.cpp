@@ -138,7 +138,7 @@ ShadowWorld* AssetLoader::LoadWorld(std::string name) {
 }
 */
 
-template<>
+template <>
 ShadowWorld* AssetLoader::LoadAsset<ShadowWorld>(std::string name)
 {
 	ShadowWorld* world = new ShadowWorld();
@@ -151,7 +151,8 @@ ShadowWorld* AssetLoader::LoadAsset<ShadowWorld>(std::string name)
 	}
 
 	auto it = root->properties.find("World");
-	if (it != root->properties.end()) {
+	if (it != root->properties.end())
+	{
 		auto worldElement = it->second;
 
 		world->name = worldElement->properties.find("Name")->second->value;
@@ -165,7 +166,8 @@ ShadowWorld* AssetLoader::LoadAsset<ShadowWorld>(std::string name)
 
 		//world->maps.reserve(worldElement->properties.find("Maps")->second->properties.size());
 		int pos = 0;
-		for (auto i : worldElement->properties.find("Maps")->second->properties) {
+		for (auto i : worldElement->properties.find("Maps")->second->properties)
+		{
 			auto layerElement = i.second;
 
 			auto map = new WorldMap(world);
@@ -175,15 +177,12 @@ ShadowWorld* AssetLoader::LoadAsset<ShadowWorld>(std::string name)
 			map->id = layerElement->name;
 
 			world->maps[map->id] = map;
-
-
 		}
-
 	}
 	return world;
 }
 
-template<>
+template <>
 ShadowMapChunk* AssetLoader::LoadAsset<ShadowMapChunk>(std::string name)
 {
 	ShadowMapChunk* map = new ShadowMapChunk();
@@ -210,10 +209,11 @@ ShadowMapChunk* AssetLoader::LoadAsset<ShadowMapChunk>(std::string name)
 		//map->layers = std::vector<ShadowMapLayer*>(mapElement->properties.find("Layers")->second->properties.size());
 		map->layers.reserve(mapElement->properties.find("Layers")->second->properties.size());
 		int pos = 0;
-		for (auto i : mapElement->properties.find("Layers")->second->properties) {
+		for (auto i : mapElement->properties.find("Layers")->second->properties)
+		{
 			auto layerElement = i.second;
 
-			auto layer = new ShadowMapLayer(*map, true,nullptr);
+			auto layer = new ShadowMapLayer(*map, true, nullptr);
 
 			layer->data = new int[map->width * map->height];
 			layer->name = layerElement->name;
@@ -222,8 +222,10 @@ ShadowMapChunk* AssetLoader::LoadAsset<ShadowMapChunk>(std::string name)
 			std::string parse = layerElement->properties.find("Map")->second->value;
 			std::replace(parse.begin(), parse.end(), '.', ' ');
 			std::stringstream parser(parse);
-			for (int y = 0; y < map->height; ++y) {
-				for (int x = 0; x < map->width; ++x) {
+			for (int y = 0; y < map->height; ++y)
+			{
+				for (int x = 0; x < map->width; ++x)
+				{
 					int a;
 					parser >> a;
 					layer->SetTile(ShadowMath::Vector2int(x, y), a);
@@ -240,7 +242,8 @@ ShadowMapChunk* AssetLoader::LoadAsset<ShadowMapChunk>(std::string name)
 		auto entities = mapElement->properties.find("Entities")->second->properties;
 		map->entities.reserve(entities.size());
 		//Load all the entities
-		for (auto i : entities) {
+		for (auto i : entities)
+		{
 			auto entityElement = i.second;
 
 			std::string name = entityElement->name;
@@ -249,11 +252,8 @@ ShadowMapChunk* AssetLoader::LoadAsset<ShadowMapChunk>(std::string name)
 			ent = ShadowEntity::EntityRegistry::_registry->InstaciateEntity(name);
 
 
-
 			map->entities.push_back(ent);
-
 		}
-
 	}
 
 	delete root;
@@ -266,86 +266,101 @@ ShadowMapChunk* AssetLoader::LoadAsset<ShadowMapChunk>(std::string name)
 
 ///Parses a file into DOM
 ///The caller has to call free on the returned Element tree
-Element* AssetLoader::LoadFile(std::string name) {
-    //The current node that we are building
-    auto *context = new Element;
+Element* AssetLoader::LoadFile(std::string name)
+{
+	//The current node that we are building
+	auto* context = new Element;
 
-    //Top level Element
-    Element* base = context;
+	//Top level Element
+	Element* base = context;
 
-    //The new node that will be a child of the context
-    auto *current = new Element;
+	//The new node that will be a child of the context
+	auto* current = new Element;
 
-    std::ifstream inputFileStream(name);
+	std::ifstream inputFileStream(name);
 
-	if (errno) {
+	if (errno)
+	{
 		std::cerr << "Error: " << strerror(errno) << std::endl;
 		std::cerr << "File: " << name << std::endl;
 		return nullptr;
 	}
-    std::string buffer;
+	std::string buffer;
 
-    char c;
-    while (!inputFileStream.eof()) {
-        inputFileStream.get(c);
-        if (c == ':') {
-            //The stuff in the buffer is a parameter name
-            std::cout <<"Name: "<< buffer;
-            current->name = buffer;
-            buffer = "";
-        } else if (c == '{') {
-            //Start of a new block
-            current->isBlock = true;
-            current->parent = context;
-            context->properties[current->name]=current;
-            context = current;
+	char c;
+	while (!inputFileStream.eof())
+	{
+		inputFileStream.get(c);
+		if (c == ':')
+		{
+			//The stuff in the buffer is a parameter name
+			std::cout << "Name: " << buffer;
+			current->name = buffer;
+			buffer = "";
+		}
+		else if (c == '{')
+		{
+			//Start of a new block
+			current->isBlock = true;
+			current->parent = context;
+			context->properties[current->name] = current;
+			context = current;
 
-            current = new Element;
+			current = new Element;
+		}
+		else if (c == ',')
+		{
+			// End of a property
+			//The stuff is the value
+			std::cout << "Value: " << buffer << std::endl;
+			current->value = buffer;
+			current->parent = context;
+			current->isBlock = false;
+			buffer = "";
 
-        } else if (c == ',') { // End of a property
-            //The stuff is the value
-            std::cout<< "Value: " << buffer<<std::endl;
-            current->value = buffer;
-            current->parent = context;
-            current->isBlock = false;
-            buffer = "";
+			context->properties[current->name] = current;
 
-            context->properties[current->name]=current;
+			current = new Element();
+		}
+		else if (c == '}')
+		{
+			// End of a block
+			context = context->parent;
+		}
+		else
+		{
+			if (std::isspace(c) == 0)
+			{
+				buffer += c;
+			}
+		}
+	}
 
-            current = new Element();
-        } else if(c == '}'){ // End of a block
-            context = context->parent;
-        } else {
-            if (std::isspace(c) == 0) {
-                buffer += c;
-            }
-        }
-    }
+	std::cout << "END" << std::endl;
 
-    std::cout << "END" << std::endl;
-
-    return base;
-
+	return base;
 }
 
 std::string Element::GetStringProperty(std::string name)
 {
 	std::string res;
-		auto a = this->properties.find(name);
-		if (a != this->properties.end()) {
-			res = a->second->value;
-		}
-		else
-		{
-			res = "";
-		}
+	auto a = this->properties.find(name);
+	if (a != this->properties.end())
+	{
+		res = a->second->value;
+	}
+	else
+	{
+		res = "";
+	}
 	return res;
 }
 
-Element::~Element() {
-    //now onto the recursion
-    for (auto const& i : this->properties) {
-        delete i.second;
-    }
-
+Element::~Element()
+{
+	//now onto the recursion
+	for (auto const& i : this->properties)
+	{
+		delete i.second;
+	}
 }

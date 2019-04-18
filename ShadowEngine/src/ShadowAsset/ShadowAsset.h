@@ -11,6 +11,4 @@ public:
 
 	ShadowAsset();
 	virtual ~ShadowAsset();
-
 };
-

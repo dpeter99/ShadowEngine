@@ -26,10 +26,8 @@ public:
 	//T data_;
 
 
-
 	InputContext();
 	~InputContext();
 
 	ShadowEvent* GetEvent() { return event_; };
-
 };

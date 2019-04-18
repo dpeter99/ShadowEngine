@@ -8,10 +8,11 @@
 #include "Entities/Player.h"
 #include "Entities/Light.h"
 
-namespace ShadowEntity {
-
-    void ShadowEntity::EntityRegistry::PreRegisterDefaults() {
-        this->RegisterEntity("info_player_start",new Player());
-        this->RegisterEntity("light",new Light());
-    }
+namespace ShadowEntity
+{
+	void EntityRegistry::PreRegisterDefaults()
+	{
+		this->RegisterEntity("info_player_start", new Player());
+		this->RegisterEntity("light", new Light());
+	}
 }

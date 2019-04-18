@@ -10,6 +10,9 @@
 #include "glad/glad.h"
 #include "ShadowMath/Vector2float.h"
 #include "ShadowTime.h"
+#include "ShadowInput/ShadowActionSystem.h"
+#include "ShadowInput/Bindings/KeyboardBinding.h"
+#include "ShadowInput/Modifiers/ModifierHold.h"
 
 
 ShadowApplication* ShadowApplication::instance = nullptr;
@@ -29,20 +32,32 @@ void ShadowApplication::Init()
 	moduleManager.PushModule(new ShadowEventManager());
 	moduleManager.PushModule(new SDLModule());
 	moduleManager.PushModule(new ImGuiModule());
+	moduleManager.PushModule(new ShadowInput::ShadowActionSystem());
 	moduleManager.PushModule(new Debug());
-	
+
 
 	moduleManager.Init();
+
+
+	new ShadowInput::ShadowAction<bool>("Test",
+		new ShadowInput::KeyboardBinding(SDL_SCANCODE_A),
+		true
+		);
+
+	new ShadowInput::ShadowAction<bool>("Test2",
+		(new ShadowInput::KeyboardBinding(SDL_SCANCODE_D))->AddModifier(new ShadowInput::ModifierHold(3.0f))
+		);
+
 }
 
 void ShadowApplication::Start()
 {
-	ShadowWorld* w = AssetManager::GetAsset<ShadowWorld>("Resources/Worlds/Default/overworld.txt");
-	w->SetActiveMap("default");
-	w->Update(ShadowMath::Vector2float(0, 0));
+	//ShadowWorld* w = AssetManager::GetAsset<ShadowWorld>("Resources/Worlds/Default/overworld.txt");
+	//w->SetActiveMap("default");
+	//w->Update(ShadowMath::Vector2float(0, 0));
 	//ShadowMapRenderer::RenderMap(*map);
 
-	while(running)
+	while (running)
 	{
 		Time::UpdateTime();
 

@@ -1,7 +1,6 @@
 #include "ShadowEvent.h"
 
 
-
 ShadowEvent::ShadowEvent()
 {
 }

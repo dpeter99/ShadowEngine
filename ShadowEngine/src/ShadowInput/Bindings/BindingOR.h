@@ -10,4 +10,3 @@ public:
 	BindingOR(const InputBinding* _a, const InputBinding* _b);
 	~BindingOR();
 };
-

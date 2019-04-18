@@ -8,4 +8,3 @@ public:
 	IShadowEventSource();
 	virtual ~IShadowEventSource();
 };
-

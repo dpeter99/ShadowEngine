@@ -13,69 +13,70 @@
 class ShadowWorld;
 
 //A set of maps that are loaded together
-class WorldMap{
+class WorldMap
+{
 public:
-    //id
-    std::string id;
+	//id
+	std::string id;
 
-    //name
-    std::string name;
+	//name
+	std::string name;
 
-    //prefix to the chunk files
-    std::string prefix;
+	//prefix to the chunk files
+	std::string prefix;
 
-    //Containing world
-    ShadowWorld* world;
+	//Containing world
+	ShadowWorld* world;
 
-    //List of loaded maps
-    std::list<ShadowMapChunk* > chunks;
+	//List of loaded maps
+	std::list<ShadowMapChunk*> chunks;
 
 
-    WorldMap(ShadowWorld *world);
+	WorldMap(ShadowWorld* world);
 
-    //Update
-    //Here we get the map loader point and check what maps we need
-    //Than load up the maps that are not yet loaded.
-    void Update(const ShadowMath::Vector2int& pos);
+	//Update
+	//Here we get the map loader point and check what maps we need
+	//Than load up the maps that are not yet loaded.
+	void Update(const ShadowMath::Vector2int& pos);
 
-    //Unload a chunk
-    void UnloadChunk(const ShadowMath::Vector2int& id);
-    void UnloadChunk(ShadowMapChunk* chunk);
+	//Unload a chunk
+	void UnloadChunk(const ShadowMath::Vector2int& id);
+	void UnloadChunk(ShadowMapChunk* chunk);
 
-    //Load new chunks
-    void LoadChunk(const ShadowMath::Vector2int& id);
+	//Load new chunks
+	void LoadChunk(const ShadowMath::Vector2int& id);
 
 	ShadowMapChunk* GetLoadedChunk(const ShadowMath::Vector2int& id);
 
-    std::string GenerateMapName(const ShadowMath::Vector2int& id) const;
+	std::string GenerateMapName(const ShadowMath::Vector2int& id) const;
 };
 
 
 //A single World that can have many maps and sizes
-class ShadowWorld  : public ShadowAsset{
+class ShadowWorld : public ShadowAsset
+{
 public:
-    //Properties #####################
-        std::string name;
-		std::string id;
+	//Properties #####################
+	std::string name;
+	std::string id;
 
-        //Active map
-        WorldMap* activeMap;
+	//Active map
+	WorldMap* activeMap;
 
-        //All the maps in this World
-        std::map<std::string,WorldMap*> maps;
+	//All the maps in this World
+	std::map<std::string, WorldMap*> maps;
 
-        //World settings
+	//World settings
 
-        int chunkSizeX;
-        int chunkSizeY;
-        //What map files are in this world
-        //where they are placed
+	int chunkSizeX;
+	int chunkSizeY;
+	//What map files are in this world
+	//where they are placed
 
-    // Functions #####################
+	// Functions #####################
 
-        //Update the system to check if new maps need to be loaded
-        void Update(const ShadowMath::Vector2int& pos);
+	//Update the system to check if new maps need to be loaded
+	void Update(const ShadowMath::Vector2int& pos);
 
-		void SetActiveMap(std::string name);
-
+	void SetActiveMap(std::string name);
 };

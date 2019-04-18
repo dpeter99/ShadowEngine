@@ -11,40 +11,40 @@
 
 
 #include "Entity.h"
+
 //#include "Entities/Player.h"
 
 
-namespace ShadowEntity {
-
-    class EntityRegistry {
-    private:
-
-
-    public:
-        static EntityRegistry* _registry;
-
-        EntityRegistry();
+namespace ShadowEntity
+{
+	class EntityRegistry
+	{
+	private:
 
 
-        //Pre registry
-        std::map<std::string,ShadowEntity::Entity*> EntityRegistryMap;
+	public:
+		static EntityRegistry* _registry;
+
+		EntityRegistry();
 
 
-
-        bool RegisterEntity(std::string, Entity *entityTemplate);
-
-        void ListPreRegisteredEntitys();
+		//Pre registry
+		std::map<std::string, Entity*> EntityRegistryMap;
 
 
-        //Create a instance of the specified Entity
-        Entity* InstaciateEntity(std::string);
+		bool RegisterEntity(std::string, Entity* entityTemplate);
+
+		void ListPreRegisteredEntitys();
 
 
-        //Will be generated at compile time
-        //For now manually made
-        void PreRegisterDefaults();
-    };
+		//Create a instance of the specified Entity
+		Entity* InstaciateEntity(std::string);
 
+
+		//Will be generated at compile time
+		//For now manually made
+		void PreRegisterDefaults();
+	};
 }
 
 #endif //SHADOWENGINE_ENTITYMANAGER_H

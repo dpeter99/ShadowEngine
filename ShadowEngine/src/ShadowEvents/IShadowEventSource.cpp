@@ -1,7 +1,6 @@
 #include "IShadowEventSource.h"
 
 
-
 IShadowEventSource::IShadowEventSource()
 {
 }

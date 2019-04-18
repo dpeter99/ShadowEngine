@@ -6,44 +6,44 @@
 #include "Entity.h"
 #include "EntityRegistry.h"
 
-namespace ShadowEntity {
+namespace ShadowEntity
+{
+	void Entity::Start()
+	{
+	}
 
-    void Entity::Start() {
+	void Entity::Update()
+	{
+	}
 
-    }
+	void Entity::LateUpdate()
+	{
+	}
 
-    void Entity::Update() {
+	void Entity::Draw()
+	{
+	}
 
-    }
+	Entity* Entity::Create()
+	{
+		throw "The base entity cannot be instantiated";
+	}
 
-    void Entity::LateUpdate() {
+	Entity::~Entity()
+	{
+	}
 
-    }
+	Entity::Entity()
+	{
+	}
 
-    void Entity::Draw() {
+	std::string Entity::id = "Base";
 
-    }
+	std::ostream& operator<<(std::ostream& os, const Entity& dt)
+	{
+		os << dt.id;
+		return os;
+	}
 
-    Entity* ShadowEntity::Entity::Create() {
-        throw "The base entity cannot be instantiated";
-    }
-
-    Entity::~Entity() {
-
-    }
-
-    Entity::Entity() {
-
-    }
-
-    std::string Entity::id = "Base";
-
-    std::ostream& operator<<(std::ostream& os, const Entity& dt)
-    {
-        os << dt.id;
-        return os;
-    }
-
-    //bool Entity::registered = ShadowEntity::EntityRegistry::PreRegisterEntity(id);
-
+	//bool Entity::registered = ShadowEntity::EntityRegistry::PreRegisterEntity(id);
 }
