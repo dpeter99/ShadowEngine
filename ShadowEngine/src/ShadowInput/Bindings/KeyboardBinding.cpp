@@ -5,44 +5,66 @@
 
 namespace ShadowInput
 {
+	int KeyboardBinding::GetKeycode()
+	{
+		return SDLKey;
+	}
+
 	void KeyboardBinding::ProcessEvent(const ShadowEvent& e)
 	{
 		//"BIND" to the event
 		ShadowEvent& ev = const_cast<ShadowEvent&>(e);
 
+		InputContext bindingContext;
+		bindingContext.event_ = &e;
+
+		bool processed = false;
+
 		KeyPressedEvent* _pressedEvent;
 		if (is<KeyPressedEvent>(ev, &_pressedEvent))
 		{
+			
 			if (this->SDLKey == _pressedEvent->GetKeyCode())
 			{
 				//We have a keystroke
-				//Pass to the modifiers
-				InputContext bindingContext;
-				bindingContext.state_ = Started;
-				for (auto modifier : modifiers_)
+				processed = true;
+				bindingContext.bindingState_ = true;
+				if(action_->IsContinuous())
 				{
-					modifier->ProcessInput(&bindingContext);
+						natureState = ActionState::Performed;
 				}
-				action_->SetState(bindingContext.state_);
+				else
+				{
+					if(_pressedEvent->GetRepeatCount() == 0)
+					natureState = ActionState::Performed;
+				}
 			}
 		}
 
 		KeyReleasedEvent* _releasedEvent;
 		if (is<KeyReleasedEvent>(ev, &_releasedEvent))
 		{
+			
 			if (this->SDLKey == _releasedEvent->GetKeyCode())
 			{
+				
 				//We have a keystroke
-				//Pass to the modifiers
-				InputContext bindingContext;
-				bindingContext.state_ = Ended;
-				for (auto modifier : modifiers_)
+				processed = true;
+				bindingContext.bindingState_ = false;
+				if (action_->IsContinuous())
 				{
-					modifier->ProcessInput(&bindingContext);
+					natureState = ActionState::Idle;
 				}
-				action_->SetState(bindingContext.state_);
 			}
 		}
+
+		if(processed)
+		ProcessContext(&bindingContext);
+	}
+
+	void KeyboardBinding::DefaultBehaviour(InputContext* ctx)
+	{
+		ctx->outstate_ = natureState;
 	}
 
 	KeyboardBinding::KeyboardBinding(const char* str)

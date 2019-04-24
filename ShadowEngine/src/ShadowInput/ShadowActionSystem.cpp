@@ -22,7 +22,15 @@ namespace ShadowInput
 	{
 		ShadowEventManager::AddNewEventListener(this);
 	}
-
+	
+	void ShadowActionSystem::Update()
+	{
+		for (auto action : actions)
+		{
+			//action->Update();
+		}
+	}
+	
 	ShadowActionSystem::ShadowActionSystem()
 	{
 		_instance = this;

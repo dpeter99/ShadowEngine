@@ -6,9 +6,9 @@
 enum ActionState
 {
 	Idle,
-	Started,
+	Started, //Shadow state
 	Progress,
-	Ended,
+	Performed, //Shadow state
 	Canceled,
 };
 
@@ -18,16 +18,17 @@ class ShadowAction;
 class InputContext
 {
 public:
-	ShadowEvent* event_;
+	const ShadowEvent* event_;
 
 	//ShadowInput::ShadowAction<T>* action_;
 
-	ActionState state_;
+	bool bindingState_;
+	ActionState outstate_;
 	//T data_;
 
 
 	InputContext();
 	~InputContext();
 
-	ShadowEvent* GetEvent() { return event_; };
+	const ShadowEvent* GetEvent() { return event_; };
 };

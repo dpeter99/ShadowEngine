@@ -3,18 +3,34 @@
 
 namespace ShadowInput
 {
+	float ModifierHold::GetWaitTime()
+	{
+		return wait_;
+	}
+
+	float ModifierHold::GetDeltaTime()
+	{
+		return deltaTime;
+	}
+
 	void ModifierHold::ProcessInput(InputContext* ctx)
 	{
-		if(ctx->state_==ActionState::Started||ctx->state_==ActionState::Progress)
+		if(ctx->bindingState_ == false)
+		{
+			ctx->outstate_ = ActionState::Canceled;
+			deltaTime = 0;
+		}
+		else if(ctx->bindingState_==true)
 		{
 			deltaTime += Time::deltaTime;
 			if(deltaTime >= wait_)
 			{
-				ctx->state_ = ActionState::Progress;
+				ctx->outstate_ = ActionState::Performed;
+				deltaTime = 0;
 			}
 			else
 			{
-				ctx->state_ = ActionState::Progress;
+				ctx->outstate_ = ActionState::Progress;
 			}
 		}
 	}

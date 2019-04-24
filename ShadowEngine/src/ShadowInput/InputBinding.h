@@ -10,7 +10,7 @@ class ShadowAction;
 
 namespace ShadowInput
 {
-	template <class T>
+	//template <class T>
 	class InputBinding
 	{
 	protected:
@@ -31,12 +31,18 @@ namespace ShadowInput
 		 */
 		virtual void ProcessEvent(const ShadowEvent& event) = 0;
 
+		virtual  void DefaultBehaviour(InputContext* ctx) = 0;
+
 		virtual void Init(IShadowAction* action)
 		{
 			action_ = action;
 		}
 
-		InputModifier* GetModifier(int i);
+		InputModifier& GetModifier(int i);
+
+		int ModifierCount();
+
+		void ProcessContext(InputContext* ctx);
 
 		//InputBinding();
 		virtual ~InputBinding()
@@ -44,17 +50,5 @@ namespace ShadowInput
 		}
 	};
 
-	template <class T>
-	InputBinding<T>* InputBinding<T>::AddModifier(InputModifier* _m)
-	{
-		this->modifiers_.emplace_front(_m);
-
-		return this;
-	}
-
-	template <class T>
-	InputModifier* InputBinding<T>::GetModifier(int i)
-	{
-		return this->modifiers_[i];
-	}
+	
 }

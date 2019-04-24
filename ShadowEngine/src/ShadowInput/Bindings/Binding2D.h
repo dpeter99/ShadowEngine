@@ -4,17 +4,17 @@
 namespace ShadowInput
 {
 	class Binding2D
-		: public InputBinding<float>
+		: public InputBinding
 	{
-		InputBinding<bool>* xpos_;
-		InputBinding<bool>* xneg_;
+		InputBinding* xpos_;
+		InputBinding* xneg_;
 
-		InputBinding<bool>* ypos_;
-		InputBinding<bool>* yneg_;
+		InputBinding* ypos_;
+		InputBinding* yneg_;
 
 	public:
-		Binding2D(const InputBinding<bool>* _xpositive, const InputBinding<bool>* _xnegative,
-		          const InputBinding<bool>* _ypositive, const InputBinding<bool>* _ynegative);
+		Binding2D(const InputBinding* _xpositive, const InputBinding* _xnegative,
+		          const InputBinding* _ypositive, const InputBinding* _ynegative);
 		~Binding2D();
 	};
 }

@@ -32,7 +32,7 @@ namespace ShadowEntity
 		{
 			throw "Registry already present, there can only be one!";
 		}
-		printf("EntityRegistrySetup \n");
+		std::cout << "EntityRegistrySetup \n";
 		PreRegisterDefaults();
 		_registry = this;
 	}

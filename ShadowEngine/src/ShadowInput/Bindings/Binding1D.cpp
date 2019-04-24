@@ -7,7 +7,7 @@ namespace ShadowInput
 	{
 	}
 
-	Binding1D::Binding1D(InputBinding<bool>* _xpositive, InputBinding<bool>* _xnegative): pos(_xpositive),
+	Binding1D::Binding1D(InputBinding* _xpositive, InputBinding* _xnegative): pos(_xpositive),
 	                                                                                      neg(_xnegative)
 	{
 	}

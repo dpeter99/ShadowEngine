@@ -3,23 +3,37 @@
 #include "ShadowEvents/ShadowEvent.h"
 #include "ShadowInput/IShadowAction.h"
 #include "ShadowInput/ShadowActionSystem.h"
+#include "Callback.h"
 
 namespace ShadowInput
 {
 	template <class T>
-	class ShadowAction :
+	class ShadowAction final :
 		public IShadowAction
 	{
 		std::string name;
 
+		/**
+		 * \brief weather this action is active and listening
+		 */
 		bool active;
-		//TODO: Delegates to activate
 
-		InputBinding<T>* binding_;
+		/**
+		 * \brief Weather it was active in the current frame
+		 */
+		bool performed_b;
+
+		bool performed_b_last;
+		//TODO: Delegates to activate
+		
+
+		InputBinding* binding_;
 		ActionState state_;
 
-	public:
+		bool continuous_;
 
+	public:
+		Callback performed;
 
 		/**
 		 * \brief Updates the Action with the event passed in
@@ -41,13 +55,17 @@ namespace ShadowInput
 
 		void SetActive(bool set) override
 		{
+			active = set;
 		};
 
-		ShadowAction(std::string a, InputBinding<T>* b, bool continous = false)
+		ShadowAction(std::string a, InputBinding* b, bool continuous = false)
 		{
 			name = a;
 			binding_ = b;
 			binding_->Init(this);
+			state_ = ActionState::Idle;
+			performed_b = false;
+			continuous_ = continuous;
 
 			ShadowInput::ShadowActionSystem::_instance->AddEvent(this);
 		};
@@ -69,7 +87,61 @@ namespace ShadowInput
 
 		void SetState(ActionState state) override
 		{
-			state_ = state;
-		};
+			switch (state)
+			{
+			case ActionState::Idle:
+				performed_b = false;
+				break;
+			case ActionState::Started:
+				//TODO: call started
+				performed_b = false;
+				state = ActionState::Progress;
+				break;
+			case ActionState::Progress:
+				performed_b = false;
+				state = ActionState::Progress;
+				break;
+			case ActionState::Performed:
+				//TODO: call performed
+				performed();
+				performed_b = true;
+				state = ActionState::Idle;
+				break;
+			case ActionState::Canceled:
+				//TODO: call canceled
+				performed_b = false;
+				state = ActionState::Idle;
+				break;
+			}
+		}
+
+		InputBinding& GetBinding() override
+		{
+			return *binding_;
+		}
+
+		bool IsContinuous() override
+		{
+			return continuous_;
+		}
+
+		void SetContinuous(bool set) override
+		{
+			continuous_ = set;
+		}
+
+		bool GetPerformed() override
+		{
+			return performed_b;
+		}
+
+		void Update() override
+		{
+			if(performed_b_last)
+			{
+				performed_b = false;
+			}
+			performed_b_last = performed_b;
+		}
 	};
 }

@@ -3,9 +3,9 @@
 
 namespace ShadowInput
 {
-	template <class T>
+	
 	class InputMapBinding
-		: public InputBinding<T>
+		: public InputBinding
 	{
 	public:
 		InputMapBinding(const char* map);

@@ -6,6 +6,8 @@
 #include "ShadowModules/ShadowModuleManager.h"
 #include "ShadowInput/ShadowAction.h"
 #include "ShadowInput/Bindings/KeyboardBinding.h"
+#include "ShadowInput/Modifiers/ModifierHold.h"
+#include "Utility.h"
 
 
 void Debug::Init()
@@ -32,7 +34,31 @@ void Debug::ActionDebug()
 	for (auto element : evMan->actions)
 	{
 		ImGui::Text("%s \t %d", element->GetName().c_str(), element->GetState());
+		bool actionActive = element->GetPerformed();
+		ImGui::Checkbox("", &actionActive);
+		
 
+
+		auto& binding = element->GetBinding();
+
+		ShadowInput::KeyboardBinding* keyboard;
+		if (is<ShadowInput::KeyboardBinding>(binding, &keyboard))
+		{
+			ImGui::Text("KeyboardBinding: %c", keyboard->GetKeycode());
+		}
+
+		if (binding.ModifierCount() > 0) {
+			auto& mod = binding.GetModifier(0);
+
+			ShadowInput::ModifierHold* hold;
+			if (is<ShadowInput::ModifierHold>(mod, &hold))
+			{
+				ImGui::Text("ModifierHold: %c", hold->GetWaitTime());
+				ImGui::ProgressBar(hold->GetDeltaTime() / hold->GetWaitTime());
+			}
+		}
+
+		ImGui::Separator();
 	}
 
 	ImGui::End();
@@ -40,6 +66,8 @@ void Debug::ActionDebug()
 
 void Debug::OnGui()
 {
+	ImGui::ShowDemoWindow();
+
 	// Create a window called "My First Tool", with a menu bar.
 	ImGui::Begin("Active Modules", &active, ImGuiWindowFlags_MenuBar);
 

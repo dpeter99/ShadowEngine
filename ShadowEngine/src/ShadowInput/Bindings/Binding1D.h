@@ -4,17 +4,17 @@
 namespace ShadowInput
 {
 	class Binding1D
-		: public InputBinding<float>
+		: public InputBinding
 	{
 	private:
-		InputBinding<bool>* pos;
-		InputBinding<bool>* neg;
+		InputBinding* pos;
+		InputBinding* neg;
 
 	public:
 
 		void ProcessEvent(const ShadowEvent& event) override;
 
-		Binding1D(InputBinding<bool>* _xpositive, InputBinding<bool>* _xnegative);
+		Binding1D(InputBinding* _xpositive, InputBinding* _xnegative);
 		~Binding1D() override;
 	};
 }

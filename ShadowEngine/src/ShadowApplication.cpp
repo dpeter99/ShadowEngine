@@ -39,13 +39,17 @@ void ShadowApplication::Init()
 	moduleManager.Init();
 
 
-	new ShadowInput::ShadowAction<bool>("Test",
+	new ShadowInput::ShadowAction<bool>("Test_continuous",
 		new ShadowInput::KeyboardBinding(SDL_SCANCODE_A),
 		true
 		);
 
+	new ShadowInput::ShadowAction<bool>("Test_base",
+		new ShadowInput::KeyboardBinding(SDL_SCANCODE_Q)
+		);
+
 	new ShadowInput::ShadowAction<bool>("Test2",
-		(new ShadowInput::KeyboardBinding(SDL_SCANCODE_D))->AddModifier(new ShadowInput::ModifierHold(3.0f))
+		(new ShadowInput::KeyboardBinding(SDL_SCANCODE_D))->AddModifier(new ShadowInput::ModifierHold(500.0f))
 		);
 
 }

@@ -12,9 +12,13 @@ namespace ShadowInput
 
 	public:
 
+		float GetWaitTime();
+
+		float GetDeltaTime();
+
 		void ProcessInput(InputContext* ctx) override;
 
-		ModifierHold(const float time, bool cont = false) : InputModifier(), wait_(time)
+		ModifierHold(const float time, bool cont = false) : InputModifier(), wait_(time), deltaTime(0)
 		{
 		};
 		~ModifierHold();
