@@ -1,27 +1,19 @@
 *.sln
-
 *.vcxproj
-
+*.csproj
 *.filters
-
+*.user
 *.zip
 
 \.vs/
-
-bin-int/
-
-*.user
-
-ShadowEngine/dependencies/GLAD/bin/
-
-bin/
-
-ShadowEngineBuild/obj/
-
 \.idea/
 
-*.csproj
+bin-int/
+bin/
 
-DemoGame/obj/
+!/dependencies/**
+dependencies/**/*.zip
 
 packages/
+
+
