@@ -27,7 +27,7 @@ namespace ShadowInput
 	{
 		for (auto action : actions)
 		{
-			//action->Update();
+			action->Update();
 		}
 	}
 	

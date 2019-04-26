@@ -37,6 +37,8 @@ namespace ShadowInput
 				{
 					if(_pressedEvent->GetRepeatCount() == 0)
 					natureState = ActionState::Performed;
+					else
+						natureState = ActionState::Idle;
 				}
 			}
 		}
@@ -51,10 +53,9 @@ namespace ShadowInput
 				//We have a keystroke
 				processed = true;
 				bindingContext.bindingState_ = false;
-				if (action_->IsContinuous())
-				{
+				
 					natureState = ActionState::Idle;
-				}
+				
 			}
 		}
 

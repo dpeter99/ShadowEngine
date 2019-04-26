@@ -33,11 +33,12 @@ void Debug::ActionDebug()
 
 	for (auto element : evMan->actions)
 	{
-		ImGui::Text("%s \t %d", element->GetName().c_str(), element->GetState());
 		bool actionActive = element->GetPerformed();
-		ImGui::Checkbox("", &actionActive);
-		
 
+		ImGui::Checkbox("", &actionActive);
+		ImGui::SameLine(); ImGui::Text("%s \t %d", element->GetName().c_str(), element->GetState());
+		
+		
 
 		auto& binding = element->GetBinding();
 

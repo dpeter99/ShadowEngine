@@ -24,6 +24,12 @@ namespace ShadowInput
 		bool performed_b;
 
 		bool performed_b_last;
+
+		/**
+		 * \brief The data state of the action
+		 */
+		T data;
+
 		//TODO: Delegates to activate
 		
 
@@ -34,29 +40,6 @@ namespace ShadowInput
 
 	public:
 		Callback performed;
-
-		/**
-		 * \brief Updates the Action with the event passed in
-		 * \param e Event object
-		 */
-		void ProcessEvent(ShadowEvent& e) override {
-			binding_->ProcessEvent(e);
-		};
-
-
-
-		void AddEventListener(ActionState state) override
-		{
-		};
-
-		void RemoveEventListener() override
-		{
-		};
-
-		void SetActive(bool set) override
-		{
-			active = set;
-		};
 
 		ShadowAction(std::string a, InputBinding* b, bool continuous = false)
 		{
@@ -70,10 +53,32 @@ namespace ShadowInput
 			ShadowInput::ShadowActionSystem::_instance->AddEvent(this);
 		};
 
-		~ShadowAction() 
+		~ShadowAction()
 		{
 			delete binding_;
 		}
+
+
+		/**
+		 * \brief Updates the Action with the event passed in
+		 * \param e Event object
+		 */
+		void ProcessEvent(ShadowEvent& e) override {
+			binding_->ProcessEvent(e);
+		};
+
+		void AddEventListener(ActionState state) override
+		{
+		};
+
+		void RemoveEventListener() override
+		{
+		};
+
+		void SetActive(bool set) override
+		{
+			active = set;
+		};
 
 		std::string GetName() override
 		{
@@ -137,7 +142,7 @@ namespace ShadowInput
 
 		void Update() override
 		{
-			if(performed_b_last)
+			if(performed_b_last && !continuous_)
 			{
 				performed_b = false;
 			}
