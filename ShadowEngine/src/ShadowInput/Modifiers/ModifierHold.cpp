@@ -13,7 +13,7 @@ namespace ShadowInput
 		return deltaTime;
 	}
 
-	void ModifierHold::ProcessInput(InputContext* ctx)
+	void ModifierHold::ProcessInput(BindingContext* ctx)
 	{
 		if(ctx->bindingState_ == false)
 		{

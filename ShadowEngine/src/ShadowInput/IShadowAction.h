@@ -1,10 +1,9 @@
 #pragma once
-
+#include "IInputBinding.h"
 
 
 namespace ShadowInput
 {
-	class InputBinding;
 
 	class IShadowAction
 	{
@@ -29,6 +28,6 @@ namespace ShadowInput
 		virtual bool IsContinuous() = 0;
 		virtual void SetContinuous(bool set) = 0;
 
-		virtual InputBinding& GetBinding() = 0;
+		virtual IInputBinding& GetBinding() = 0;
 	};
 }

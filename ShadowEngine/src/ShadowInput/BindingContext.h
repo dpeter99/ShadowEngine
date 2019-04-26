@@ -14,7 +14,7 @@ enum ActionState
 
 class ShadowAction;
 
-//template<class T>
+template<class T>
 class InputContext
 {
 public:
@@ -24,7 +24,7 @@ public:
 
 	bool bindingState_;
 	ActionState outstate_;
-	//T data_;
+	T data_;
 
 
 	InputContext();

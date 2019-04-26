@@ -1,12 +1,13 @@
 #pragma once
-#include "InputContext.h"
+#include "BindingContext.h"
+#include "ShadowInput/ModifierContext.h"
 
 class InputModifier
 {
 protected:
 
 public:
-	virtual void ProcessInput(InputContext* ctx) = 0;
+	virtual void ProcessInput(ModifierContext* ctx) = 0;
 
 	InputModifier();
 	~InputModifier();

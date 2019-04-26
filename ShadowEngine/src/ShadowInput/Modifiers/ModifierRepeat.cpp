@@ -2,7 +2,7 @@
 
 namespace ShadowInput
 {
-	void ModifierRepeat::ProcessInput(InputContext* ctx)
+	void ModifierRepeat::ProcessInput(BindingContext* ctx)
 	{
 	}
 

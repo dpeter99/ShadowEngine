@@ -41,7 +41,7 @@ namespace ShadowInput
 	public:
 		Callback performed;
 
-		ShadowAction(std::string a, InputBinding* b, bool continuous = false)
+		ShadowAction(std::string a, InputBinding<T>* b, bool continuous = false)
 		{
 			name = a;
 			binding_ = b;
@@ -64,7 +64,10 @@ namespace ShadowInput
 		 * \param e Event object
 		 */
 		void ProcessEvent(ShadowEvent& e) override {
-			binding_->ProcessEvent(e);
+			BindingContext inpCtx;
+			inpCtx.event_ = &e;
+			inpCtx.bindingState_ = state_;
+			binding_->ProcessEvent(inpCtx);
 		};
 
 		void AddEventListener(ActionState state) override
@@ -120,7 +123,7 @@ namespace ShadowInput
 			}
 		}
 
-		InputBinding& GetBinding() override
+		IInputBinding& GetBinding() override
 		{
 			return *binding_;
 		}

@@ -4,45 +4,85 @@
 #include "ShadowInput/InputModifier.h"
 #include "ShadowEvents/ShadowEvent.h"
 #include "IShadowAction.h"
+#include "IInputBinding.h"
+#include "ModifierContext.h"
 
 
 class ShadowAction;
 
 namespace ShadowInput
 {
-	//template <class T>
-	class InputBinding
+	template <class T>
+	class InputBinding:
+		public IInputBinding
 	{
 	protected:
-		IShadowAction* action_;
+		IShadowAction* action_ = nullptr;
 		std::list<InputModifier*> modifiers_;
 	public:
 
-		/**
-		 * \brief Adds a new input modifier to the events modifier list
-		 * \param _m The new modifier that is added
-		 * \return Returns the same object so it can be chained
-		 */
-		InputBinding* AddModifier(InputModifier* _m);
-
+		
 		/**
 		 * \brief Processes a event
 		 * \param event Event to process
 		 */
-		virtual void ProcessEvent(const ShadowEvent& event) = 0;
+		virtual void ProcessEvent(InputContext<T>& event) = 0;
 
-		virtual  void DefaultBehaviour(InputContext* ctx) = 0;
+
+		/**
+		 * \brief The default behaviour of this binding without modifiers
+		 * \param ctx The Input Context that this will use
+		 */
+		virtual  void DefaultBehaviour(ModifierContext& ctx) = 0;
+
+
+		InputBinding* AddModifier(InputModifier* _m) override
+		{
+			this->modifiers_.emplace_front(_m);
+
+			return this;
+		}
+
+		InputModifier& GetModifier(int index) override
+		{
+			std::list<InputModifier*>::iterator ptr;
+			int i;
+			for (i = 0, ptr = modifiers_.begin(); i < index && ptr != modifiers_.end(); i++, ptr++);
+
+			if (ptr != modifiers_.end()) {
+
+
+			}
+
+			return **ptr;
+		}
+
+		int ModifierCount() override
+		{
+			return modifiers_.size();
+		}
+
 
 		virtual void Init(IShadowAction* action)
 		{
 			action_ = action;
 		}
 
-		InputModifier& GetModifier(int i);
+		void ProcessContext(ModifierContext* ctx)
+		{
+			if (modifiers_.size() > 0) {
+				for (auto modifier : modifiers_)
+				{
+					modifier->ProcessInput(ctx);
+				}
+			}
+			else
+			{
+				DefaultBehaviour(ctx);
+			}
 
-		int ModifierCount();
-
-		void ProcessContext(InputContext* ctx);
+			action_->SetState(ctx->outstate_);
+		}
 
 		//InputBinding();
 		virtual ~InputBinding()

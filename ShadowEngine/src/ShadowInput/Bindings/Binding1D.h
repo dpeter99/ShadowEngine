@@ -3,18 +3,37 @@
 
 namespace ShadowInput
 {
+	template <class I>
 	class Binding1D
-		: public InputBinding
+		: public InputBinding<float>
 	{
 	private:
-		InputBinding* pos;
-		InputBinding* neg;
+		InputBinding<I>* pos;
+		InputBinding<I>* neg;
 
 	public:
 
-		void ProcessEvent(const ShadowEvent& event) override;
+		void Binding1D::ProcessEvent(const InputContext& event)
+		{
+			//Call both bindings in this composite binding
+			//Check the values they returned
 
-		Binding1D(InputBinding* _xpositive, InputBinding* _xnegative);
-		~Binding1D() override;
+			//Call the first one
+			BindingContext<float> bindingContextPos;
+			pos->ProcessEvent(bindingContextPos);
+
+
+
+
+		}
+
+		Binding1D(InputBinding<bool>* _positive, InputBinding<bool>* _negative) : pos(_positive),
+			neg(_negative)
+		{
+		}
+
+		~Binding1D()
+		{
+		}
 	};
 }
