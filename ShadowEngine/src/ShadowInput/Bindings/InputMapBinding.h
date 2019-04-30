@@ -5,7 +5,7 @@ namespace ShadowInput
 {
 	
 	class InputMapBinding
-		: public InputBinding
+		: public InputBinding<bool>
 	{
 	public:
 		InputMapBinding(const char* map);

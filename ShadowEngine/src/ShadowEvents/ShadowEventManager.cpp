@@ -1,3 +1,5 @@
+#include "shpch.h"
+
 #include "ShadowEventManager.h"
 #include "Platform/SDL/SDLEventSource.h"
 

@@ -16,7 +16,7 @@ namespace ShadowInput
 
 		float GetDeltaTime();
 
-		void ProcessInput(BindingContext* ctx) override;
+		void ProcessInput(ModifierContext& ctx) override;
 
 		ModifierHold(const float time, bool cont = false) : InputModifier(), wait_(time), deltaTime(0)
 		{

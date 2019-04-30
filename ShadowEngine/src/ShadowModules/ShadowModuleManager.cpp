@@ -1,3 +1,5 @@
+#include "shpch.h"
+
 #include "ShadowModuleManager.h"
 
 ShadowModuleManager* ShadowModuleManager::instance = nullptr;

@@ -1,3 +1,5 @@
+#include "shpch.h"
+
 #include "Debug.h"
 #include <iostream>
 #include "ShadowEvents/ShadowEventManager.h"
@@ -40,19 +42,19 @@ void Debug::ActionDebug()
 		
 		
 
-		auto& binding = element->GetBinding();
+		auto* binding = &(element->GetBinding());
 
 		ShadowInput::KeyboardBinding* keyboard;
-		if (is<ShadowInput::KeyboardBinding>(binding, &keyboard))
+		if (is(*binding, &keyboard))
 		{
 			ImGui::Text("KeyboardBinding: %c", keyboard->GetKeycode());
 		}
 
-		if (binding.ModifierCount() > 0) {
-			auto& mod = binding.GetModifier(0);
+		if (binding->ModifierCount() > 0) {
+			auto* mod = &(binding->GetModifier(0));
 
 			ShadowInput::ModifierHold* hold;
-			if (is<ShadowInput::ModifierHold>(mod, &hold))
+			if (is(*mod, &hold))
 			{
 				ImGui::Text("ModifierHold: %c", hold->GetWaitTime());
 				ImGui::ProgressBar(hold->GetDeltaTime() / hold->GetWaitTime());

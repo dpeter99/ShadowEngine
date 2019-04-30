@@ -3,13 +3,14 @@
 
 namespace ShadowInput {
 
+	template <class I>
 	class BindingAND :
-		public InputBinding
+		public InputBinding<I>
 	{
-		InputBinding* aBinding;
-		InputBinding* bBinding;
+		InputBinding<I>* aBinding;
+		InputBinding<I>* bBinding;
 	public:
-		BindingAND(const InputBinding* _a, const InputBinding* _b);
+		BindingAND<I>(const InputBinding<I>* _a, const InputBinding<I>* _b);
 		~BindingAND();
 	};
 

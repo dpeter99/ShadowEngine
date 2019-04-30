@@ -1,3 +1,5 @@
+#include "shpch.h"
+
 #include "Time.h"
 #include <SDL2/SDL_hints.h>
 #include <SDL2/SDL.h>

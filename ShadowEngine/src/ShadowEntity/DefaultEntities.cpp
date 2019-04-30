@@ -2,6 +2,8 @@
 // Created by dpete on 2/22/2019.
 //
 
+#include "shpch.h"
+
 #include "EntityRegistry.h"
 #include "Entity.h"
 

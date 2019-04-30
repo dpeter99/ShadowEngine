@@ -8,7 +8,7 @@ namespace ShadowInput
 	{
 	public:
 
-		void ProcessInput(BindingContext* ctx) override;
+		void ProcessInput(ModifierContext& ctx) override;
 
 		ModifierRepeat(int count);
 		~ModifierRepeat();

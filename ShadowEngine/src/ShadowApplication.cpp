@@ -1,3 +1,5 @@
+#include "shpch.h"
+
 #include "ShadowApplication.h"
 #include "ShadowModules/ShadowModuleManager.h"
 #include "ShadowMap/ShadowWorld.h"
@@ -5,7 +7,6 @@
 #include "ShadowMap/ShadowMapRenderer.h"
 #include "ShadowEvents/ShadowEventManager.h"
 #include "Platform/SDL/SDLModule.h"
-#include "Debug.h"
 #include "ImGui/ImGuiModule.h"
 #include "glad/glad.h"
 #include "ShadowMath/Vector2float.h"
@@ -13,7 +14,8 @@
 #include "ShadowInput/ShadowActionSystem.h"
 #include "ShadowInput/Bindings/KeyboardBinding.h"
 #include "ShadowInput/Modifiers/ModifierHold.h"
-
+#include "ShadowInput/Bindings/Binding1D.h"
+#include "Debug.h"
 
 ShadowApplication* ShadowApplication::instance = nullptr;
 
@@ -50,7 +52,13 @@ void ShadowApplication::Init()
 
 	new ShadowInput::ShadowAction<bool>("Test2",
 		(new ShadowInput::KeyboardBinding(SDL_SCANCODE_D))->AddModifier(new ShadowInput::ModifierHold(500.0f))
-		);
+	);
+
+	new ShadowInput::ShadowAction<float>("Test_float",
+		new ShadowInput::Binding1D(
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_W),
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_S)
+		));
 
 }
 

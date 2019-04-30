@@ -1,3 +1,5 @@
+#include "shpch.h"
+
 #include <iostream>
 #include "ShadowAsset/AssetLoader.h"
 

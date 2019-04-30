@@ -2,6 +2,8 @@
 // Created by dpete on 2/26/2019.
 //
 
+#include "shpch.h"
+
 #include <fstream>
 #include <iostream>
 #include <sstream>

@@ -15,7 +15,7 @@ enum ActionState
 class ShadowAction;
 
 template<class T>
-class InputContext
+class BindingContext
 {
 public:
 	const ShadowEvent* event_;
@@ -27,8 +27,8 @@ public:
 	T data_;
 
 
-	InputContext();
-	~InputContext();
+	BindingContext();
+	~BindingContext();
 
 	const ShadowEvent* GetEvent() { return event_; };
 };

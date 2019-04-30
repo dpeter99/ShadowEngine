@@ -33,7 +33,7 @@ namespace ShadowInput
 		//TODO: Delegates to activate
 		
 
-		InputBinding* binding_;
+		InputBinding<T>* binding_;
 		ActionState state_;
 
 		bool continuous_;
@@ -64,7 +64,7 @@ namespace ShadowInput
 		 * \param e Event object
 		 */
 		void ProcessEvent(ShadowEvent& e) override {
-			BindingContext inpCtx;
+			BindingContext<T> inpCtx;
 			inpCtx.event_ = &e;
 			inpCtx.bindingState_ = state_;
 			binding_->ProcessEvent(inpCtx);

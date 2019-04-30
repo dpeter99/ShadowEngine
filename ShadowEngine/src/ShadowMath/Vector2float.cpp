@@ -2,6 +2,8 @@
 // Created by dpete on 2/8/2019.
 //
 
+#include "shpch.h"
+
 #include <cmath>
 #include "Vector2float.h"
 #include "Vector2int.h"

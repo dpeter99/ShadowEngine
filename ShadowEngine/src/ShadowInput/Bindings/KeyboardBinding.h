@@ -1,8 +1,9 @@
 #pragma once
+#include "shpch.h"
+
 #include "ShadowInput/InputBinding.h"
 #include "ShadowInput/BindingContext.h"
 #include "ShadowEvents/Events/KeyEvents.h"
-#include "Utility.h"
 #include "ShadowInput/ModifierContext.h"
 
 //class ModifierContext;
@@ -19,9 +20,9 @@ namespace ShadowInput
 
 	public:
 
-		int GetKeycode();
+		int GetKeycode() const;
 
-		void ProcessEvent(InputContext<bool>& event_) override;
+		void ProcessEvent(BindingContext<bool>& event_) override;
 
 		void DefaultBehaviour(ModifierContext& ctx) override;
 
@@ -32,22 +33,22 @@ namespace ShadowInput
 
 	};
 
-	int KeyboardBinding::GetKeycode()
+	int KeyboardBinding::GetKeycode() const
 	{
 		return SDLKey;
 	}
 
-	void KeyboardBinding::ProcessEvent(InputContext<bool>& event_)
+	void KeyboardBinding::ProcessEvent(BindingContext<bool>& event_)
 	{
 		ModifierContext modifier_context;
 		modifier_context.event_ = (event_.event_);
 
 		bool processed = false;
 
-		KeyPressedEvent* _pressedEvent;
-		if (is<KeyPressedEvent>(event_.event_, &_pressedEvent))
+		
+		if (event_.GetEvent()->GetType() == KeyPressedEvent::GetStaticType())
 		{
-
+			const KeyPressedEvent* _pressedEvent = dynamic_cast<const KeyPressedEvent*>(event_.event_);
 			if (this->SDLKey == _pressedEvent->GetKeyCode())
 			{
 				//We have a keystroke
@@ -67,10 +68,9 @@ namespace ShadowInput
 			}
 		}
 
-		KeyReleasedEvent* _releasedEvent;
-		if (is<KeyReleasedEvent>(event_.event_, &_releasedEvent))
+		if (event_.GetEvent()->GetType() == KeyReleasedEvent::GetStaticType())
 		{
-
+			const KeyReleasedEvent* _releasedEvent = dynamic_cast<const KeyReleasedEvent*>(event_.event_);
 			if (this->SDLKey == _releasedEvent->GetKeyCode())
 			{
 
@@ -84,7 +84,7 @@ namespace ShadowInput
 		}
 
 		if (processed)
-			ProcessContext(&modifier_context);
+			ProcessContext(modifier_context);
 	}
 
 	void KeyboardBinding::DefaultBehaviour(ModifierContext& ctx)

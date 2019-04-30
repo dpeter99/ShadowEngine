@@ -2,6 +2,8 @@
 // Created by dpete on 2/26/2019.
 //
 
+#include "shpch.h"
+
 #include "ShadowMapChunk.h"
 
 void ShadowMapLayer::SetTile(ShadowMath::Vector2int pos, int tileID)

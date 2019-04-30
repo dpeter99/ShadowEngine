@@ -1,20 +1,23 @@
 #pragma once
 #include "ShadowInput/InputBinding.h"
+#include "ShadowMap/ShadowWorld.h"
+#include "ShadowMath/Vector2float.h"
 
 namespace ShadowInput
 {
+	template <class I>
 	class Binding2D
-		: public InputBinding
+		: public InputBinding<ShadowMath::Vector2float>
 	{
-		InputBinding* xpos_;
-		InputBinding* xneg_;
+		InputBinding<I>* xpos_;
+		InputBinding<I>* xneg_;
 
-		InputBinding* ypos_;
-		InputBinding* yneg_;
+		InputBinding<I>* ypos_;
+		InputBinding<I>* yneg_;
 
 	public:
-		Binding2D(const InputBinding* _xpositive, const InputBinding* _xnegative,
-		          const InputBinding* _ypositive, const InputBinding* _ynegative);
+		Binding2D<I>(const InputBinding<I>* _xpositive, const InputBinding<I>* _xnegative,
+					const InputBinding<I>* _ypositive, const InputBinding<I>* _ynegative);
 		~Binding2D();
 	};
 }

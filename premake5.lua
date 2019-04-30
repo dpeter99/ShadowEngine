@@ -37,6 +37,10 @@ project "ShadowEngine"
 
 	debugdir ("bin/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "shpch.h"
+	pchsource "ShadowEngine/src/shpch.cpp"
+
+
 	files
 	{
 		"%{prj.name}/src/**.h",

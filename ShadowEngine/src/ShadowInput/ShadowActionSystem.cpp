@@ -1,3 +1,5 @@
+#include "shpch.h"
+
 #include "ShadowActionSystem.h"
 #include "ShadowEvents/ShadowEventManager.h"
 

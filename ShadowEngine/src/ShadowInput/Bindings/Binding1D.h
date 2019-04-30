@@ -13,13 +13,13 @@ namespace ShadowInput
 
 	public:
 
-		void Binding1D::ProcessEvent(const InputContext& event)
+		void ProcessEvent(BindingContext<float>& event) override
 		{
 			//Call both bindings in this composite binding
 			//Check the values they returned
 
 			//Call the first one
-			BindingContext<float> bindingContextPos;
+			BindingContext<I> bindingContextPos;
 			pos->ProcessEvent(bindingContextPos);
 
 
@@ -27,7 +27,12 @@ namespace ShadowInput
 
 		}
 
-		Binding1D(InputBinding<bool>* _positive, InputBinding<bool>* _negative) : pos(_positive),
+		void DefaultBehaviour(ModifierContext& ctx) override
+		{
+			
+		}
+
+		Binding1D<I>(InputBinding<I>* _positive, InputBinding<I>* _negative) : pos(_positive),
 			neg(_negative)
 		{
 		}

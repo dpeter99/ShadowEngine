@@ -28,7 +28,7 @@ public:
 
 	int GetRepeatCount() const { return m_RepeatCount; }
 
-	EVENT_CLASS_TYPE(EventSource::EventCategoryInput)
+	EVENT_CLASS_TYPE(KeyPressedEvent)
 
 	std::string ToString() const override
 	{
@@ -49,7 +49,7 @@ public:
 	{
 	}
 
-	EVENT_CLASS_TYPE(EventSource::EventCategoryInput)
+	EVENT_CLASS_TYPE(KeyReleasedEvent)
 
 	std::string ToString() const override
 	{

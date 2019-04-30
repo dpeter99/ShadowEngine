@@ -7,7 +7,7 @@ class InputModifier
 protected:
 
 public:
-	virtual void ProcessInput(ModifierContext* ctx) = 0;
+	virtual void ProcessInput(ModifierContext& ctx) = 0;
 
 	InputModifier();
 	~InputModifier();

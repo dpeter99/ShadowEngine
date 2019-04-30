@@ -1,3 +1,5 @@
+#include "shpch.h"
+
 #include "ModifierHold.h"
 #include "ShadowTime.h"
 
@@ -13,24 +15,24 @@ namespace ShadowInput
 		return deltaTime;
 	}
 
-	void ModifierHold::ProcessInput(BindingContext* ctx)
+	void ModifierHold::ProcessInput(ModifierContext& ctx)
 	{
-		if(ctx->bindingState_ == false)
+		if(ctx.bindingState_ == false)
 		{
-			ctx->outstate_ = ActionState::Canceled;
+			ctx.outstate_ = ActionState::Canceled;
 			deltaTime = 0;
 		}
-		else if(ctx->bindingState_==true)
+		else if(ctx.bindingState_==true)
 		{
 			deltaTime += Time::deltaTime;
 			if(deltaTime >= wait_)
 			{
-				ctx->outstate_ = ActionState::Performed;
+				ctx.outstate_ = ActionState::Performed;
 				deltaTime = 0;
 			}
 			else
 			{
-				ctx->outstate_ = ActionState::Progress;
+				ctx.outstate_ = ActionState::Progress;
 			}
 		}
 	}

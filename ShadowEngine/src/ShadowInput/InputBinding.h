@@ -26,7 +26,7 @@ namespace ShadowInput
 		 * \brief Processes a event
 		 * \param event Event to process
 		 */
-		virtual void ProcessEvent(InputContext<T>& event) = 0;
+		virtual void ProcessEvent(BindingContext<T>& event) = 0;
 
 
 		/**
@@ -68,7 +68,7 @@ namespace ShadowInput
 			action_ = action;
 		}
 
-		void ProcessContext(ModifierContext* ctx)
+		void ProcessContext(ModifierContext& ctx)
 		{
 			if (modifiers_.size() > 0) {
 				for (auto modifier : modifiers_)
@@ -81,7 +81,7 @@ namespace ShadowInput
 				DefaultBehaviour(ctx);
 			}
 
-			action_->SetState(ctx->outstate_);
+			action_->SetState(ctx.outstate_);
 		}
 
 		//InputBinding();

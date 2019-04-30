@@ -3,13 +3,14 @@
 
 namespace ShadowInput {
 
+	template<class I>
 	class BindingOR :
-		public ShadowInput::InputBinding
+		public InputBinding<I>
 	{
-		InputBinding* aBinding;
-		InputBinding* bBinding;
+		InputBinding<I>* aBinding;
+		InputBinding<I>* bBinding;
 	public:
-		BindingOR(const InputBinding* _a, const InputBinding* _b);
+		BindingOR(const InputBinding<I>* _a, const InputBinding<I>* _b);
 		~BindingOR();
 	};
 

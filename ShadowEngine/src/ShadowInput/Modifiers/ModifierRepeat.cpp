@@ -1,8 +1,9 @@
+#include "shpch.h"
 #include "ModifierRepeat.h"
 
 namespace ShadowInput
 {
-	void ModifierRepeat::ProcessInput(BindingContext* ctx)
+	void ModifierRepeat::ProcessInput(ModifierContext& ctx)
 	{
 	}
 

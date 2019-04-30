@@ -5,6 +5,7 @@ namespace ShadowInput
 {
 	class IInputBinding
 	{
+		public:
 		/**
 		 * \brief Adds a new input modifier to the events modifier list
 		 * \param _m The new modifier that is added
