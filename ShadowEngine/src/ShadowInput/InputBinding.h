@@ -16,7 +16,11 @@ namespace ShadowInput
 	class InputBinding:
 		public IInputBinding
 	{
+		SHObject_Base(InputBinding)
+
 	protected:
+		T data_;
+
 		IShadowAction* action_ = nullptr;
 		std::list<InputModifier*> modifiers_;
 	public:
@@ -62,13 +66,18 @@ namespace ShadowInput
 			return modifiers_.size();
 		}
 
+		T GetData()
+		{
+			return data_;
+		}
+
 
 		virtual void Init(IShadowAction* action)
 		{
 			action_ = action;
 		}
 
-		void ProcessContext(ModifierContext& ctx)
+		void ProcessContext(BindingContext<T>& bdgCtx ,ModifierContext& ctx)
 		{
 			if (modifiers_.size() > 0) {
 				for (auto modifier : modifiers_)
@@ -81,7 +90,9 @@ namespace ShadowInput
 				DefaultBehaviour(ctx);
 			}
 
-			action_->SetState(ctx.outstate_);
+			bdgCtx.outState_ = ctx.outState_;
+
+			//action_->SetState(ctx.outstate_);
 		}
 
 		//InputBinding();

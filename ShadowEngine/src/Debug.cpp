@@ -10,6 +10,7 @@
 #include "ShadowInput/Bindings/KeyboardBinding.h"
 #include "ShadowInput/Modifiers/ModifierHold.h"
 #include "Utility.h"
+#include "ShadowInput/Bindings/Binding1D.h"
 
 
 void Debug::Init()
@@ -44,11 +45,17 @@ void Debug::ActionDebug()
 
 		auto* binding = &(element->GetBinding());
 
-		ShadowInput::KeyboardBinding* keyboard;
-		if (is(*binding, &keyboard))
+		if (binding->GetType() == ShadowInput::KeyboardBinding::Type())
 		{
+			const auto keyboard = dynamic_cast<ShadowInput::KeyboardBinding*>(binding);
 			ImGui::Text("KeyboardBinding: %c", keyboard->GetKeycode());
 		}
+		else if (binding->GetType() == ShadowInput::Binding1D<bool>::Type())
+		{
+			auto binding1d = dynamic_cast<ShadowInput::Binding1D<bool>*>(binding);
+			ImGui::Text("Binding1D: %f", binding1d->GetData());
+		}
+
 
 		if (binding->ModifierCount() > 0) {
 			auto* mod = &(binding->GetModifier(0));

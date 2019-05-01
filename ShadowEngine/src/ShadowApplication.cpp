@@ -42,23 +42,35 @@ void ShadowApplication::Init()
 
 
 	new ShadowInput::ShadowAction<bool>("Test_continuous",
-		new ShadowInput::KeyboardBinding(SDL_SCANCODE_A),
+		new ShadowInput::KeyboardBinding(SDL_SCANCODE_Q),
 		true
 		);
 
 	new ShadowInput::ShadowAction<bool>("Test_base",
-		new ShadowInput::KeyboardBinding(SDL_SCANCODE_Q)
+		new ShadowInput::KeyboardBinding(SDL_SCANCODE_W)
 		);
 
 	new ShadowInput::ShadowAction<bool>("Test2",
-		(new ShadowInput::KeyboardBinding(SDL_SCANCODE_D))->AddModifier(new ShadowInput::ModifierHold(500.0f))
+		(new ShadowInput::KeyboardBinding(SDL_SCANCODE_E))->AddModifier(new ShadowInput::ModifierHold(500.0f))
 	);
 
-	new ShadowInput::ShadowAction<float>("Test_float",
+	new ShadowInput::ShadowAction<float>("Test1D_float",
 		new ShadowInput::Binding1D(
-			new ShadowInput::KeyboardBinding(SDL_SCANCODE_W),
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_A),
 			new ShadowInput::KeyboardBinding(SDL_SCANCODE_S)
 		));
+
+	new ShadowInput::ShadowAction<float>("Test1D_float_continuous",
+		new ShadowInput::Binding1D(
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_D),
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_F)
+		),true);
+
+	new ShadowInput::ShadowAction<float>("Test1D_float_hold",
+		(new ShadowInput::Binding1D(
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_G),
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_H)
+		))->AddModifier(new ShadowInput::ModifierHold(500.0f)));
 
 }
 
@@ -73,7 +85,8 @@ void ShadowApplication::Start()
 	{
 		Time::UpdateTime();
 
-		glClearColor(1, 0, 1, 1);
+		//glClearColor(1, 0.3, 0.45, 0.92);
+		glClearColor(0.09, 0.23, 0.90,1);
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		ShadowEventManager::PollEvents();

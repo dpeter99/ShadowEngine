@@ -3,3 +3,4 @@
 // For more information see https://go.microsoft.com/fwlink/?linkid=865984
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; } virtual EventType GetEventType() const override { return GetStaticType(); } virtual const char* GetName() const override { return #type; }
+#define SHObject_Base(type) public: static const std::string& Type() { static const std::string t = #type; return t; } static uint64_t TypeId() { static const uint64_t id = GenerateId(); return id; } const std::string& GetType() override { return Type(); } const uint64_t GetTypeId() override { return type::TypeId(); }

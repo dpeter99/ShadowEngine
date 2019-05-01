@@ -2,13 +2,17 @@
 #include "BindingContext.h"
 #include "ShadowInput/ModifierContext.h"
 
-class InputModifier
-{
-protected:
+namespace ShadowInput {
 
-public:
-	virtual void ProcessInput(ModifierContext& ctx) = 0;
+	class InputModifier
+	{
+	protected:
 
-	InputModifier();
-	~InputModifier();
-};
+	public:
+		virtual void ProcessInput(ModifierContext& ctx) = 0;
+
+		InputModifier();
+		~InputModifier();
+	};
+
+}

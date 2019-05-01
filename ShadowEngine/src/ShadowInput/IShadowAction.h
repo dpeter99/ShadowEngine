@@ -5,8 +5,10 @@
 namespace ShadowInput
 {
 
-	class IShadowAction
+	class IShadowAction : public SHObject
 	{
+		SHObject_Base(IShadowAction)
+
 	public:
 		virtual ~IShadowAction() = default;
 		virtual void ProcessEvent(ShadowEvent& e) = 0;

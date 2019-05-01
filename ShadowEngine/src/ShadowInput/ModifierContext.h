@@ -1,16 +1,17 @@
 #pragma once
 #include "ShadowInput/BindingContext.h"
 
-class ModifierContext
-{
-public:
+namespace ShadowInput {
 
-	const ShadowEvent* event_;
+	class ModifierContext
+	{
+	public:
 
-	bool bindingState_;
-	ActionState outstate_;
+		const ShadowEvent* event_;
 
-	ModifierContext();
-	~ModifierContext();
-};
+		bool continuous_;
+		bool bindingState_;
+		ActionState outState_;
+	};
 
+}

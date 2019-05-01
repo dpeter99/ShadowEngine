@@ -5,6 +5,7 @@
 
 enum ActionState
 {
+	UnInit,
 	Idle,
 	Started, //Shadow state
 	Progress,
@@ -20,15 +21,25 @@ class BindingContext
 public:
 	const ShadowEvent* event_;
 
-	//ShadowInput::ShadowAction<T>* action_;
+	bool continuous_;
 
 	bool bindingState_;
-	ActionState outstate_;
+	ActionState outState_;
 	T data_;
 
+	bool processed_;
 
-	BindingContext();
-	~BindingContext();
+	BindingContext(const ShadowEvent* event, bool cont)
+	{
+		event_ = event;
+		continuous_ = cont;
+		data_ = 0;
+		processed_ = false;
+	}
+
+	~BindingContext()
+	{
+	}
 
 	const ShadowEvent* GetEvent() { return event_; };
 };

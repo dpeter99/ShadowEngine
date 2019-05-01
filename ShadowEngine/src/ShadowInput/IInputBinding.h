@@ -1,10 +1,13 @@
 #pragma once
+#include "SHObject.h"
 
 
 namespace ShadowInput
 {
-	class IInputBinding
+	class IInputBinding : public SHObject
 	{
+		SHObject_Base(IInputBinding)
+
 		public:
 		/**
 		 * \brief Adds a new input modifier to the events modifier list

@@ -11,6 +11,8 @@ namespace ShadowInput
 	class ShadowAction final :
 		public IShadowAction
 	{
+		SHObject_Base(ShadowAction)
+
 		std::string name;
 
 		/**
@@ -64,10 +66,14 @@ namespace ShadowInput
 		 * \param e Event object
 		 */
 		void ProcessEvent(ShadowEvent& e) override {
-			BindingContext<T> inpCtx;
-			inpCtx.event_ = &e;
+			BindingContext<T> inpCtx(&e, continuous_);
 			inpCtx.bindingState_ = state_;
+			inpCtx.outState_ = ActionState::UnInit;
+
 			binding_->ProcessEvent(inpCtx);
+
+			if(inpCtx.outState_ != UnInit)
+			SetState(inpCtx.outState_);
 		};
 
 		void AddEventListener(ActionState state) override

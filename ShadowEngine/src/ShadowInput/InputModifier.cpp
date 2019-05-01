@@ -3,11 +3,11 @@
 #include "InputModifier.h"
 
 
-InputModifier::InputModifier()
+ShadowInput::InputModifier::InputModifier()
 {
 }
 
 
-InputModifier::~InputModifier()
+ShadowInput::InputModifier::~InputModifier()
 {
 }

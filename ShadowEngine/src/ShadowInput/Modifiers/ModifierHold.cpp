@@ -17,22 +17,22 @@ namespace ShadowInput
 
 	void ModifierHold::ProcessInput(ModifierContext& ctx)
 	{
-		if(ctx.bindingState_ == false)
+		if(!ctx.bindingState_)
 		{
-			ctx.outstate_ = ActionState::Canceled;
+			ctx.outState_ = ActionState::Canceled;
 			deltaTime = 0;
 		}
-		else if(ctx.bindingState_==true)
+		else if(ctx.bindingState_)
 		{
 			deltaTime += Time::deltaTime;
 			if(deltaTime >= wait_)
 			{
-				ctx.outstate_ = ActionState::Performed;
+				ctx.outState_ = ActionState::Performed;
 				deltaTime = 0;
 			}
 			else
 			{
-				ctx.outstate_ = ActionState::Progress;
+				ctx.outState_ = ActionState::Progress;
 			}
 		}
 	}
