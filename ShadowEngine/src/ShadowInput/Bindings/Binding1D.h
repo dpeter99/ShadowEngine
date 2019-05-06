@@ -32,7 +32,7 @@ namespace ShadowInput
 			BindingContext<I> bindingContextPos(event.event_,event.continuous_);
 			//Call the binding
 			pos->ProcessEvent(bindingContextPos);
-			//Chak if it was succesfull
+			//Check if it was sucesfull
 			if (bindingContextPos.processed_) {
 				data += bindingContextPos.data_ ? 1 : 0;
 				processed = true;

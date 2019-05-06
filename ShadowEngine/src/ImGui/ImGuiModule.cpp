@@ -57,7 +57,7 @@ void ImGuiModule::Update()
 	ShadowApplication& app = ShadowApplication::Get();
 	io.DisplaySize = ImVec2(app.GetWindow().Width, app.GetWindow().Height);
 
-	float time = Time::deltaTime;
+	float time = Time::deltaTime_ms;
 	io.DeltaTime = time;
 
 	ImGui_ImplOpenGL3_NewFrame();

@@ -10,6 +10,7 @@ namespace ShadowInput {
 
 	public:
 		virtual void ProcessInput(ModifierContext& ctx) = 0;
+		virtual bool RequieresContinous() = 0;
 
 		InputModifier();
 		~InputModifier();

@@ -11,6 +11,7 @@
 #include "ShadowInput/Modifiers/ModifierHold.h"
 #include "Utility.h"
 #include "ShadowInput/Bindings/Binding1D.h"
+#include "ShadowTime.h"
 
 
 void Debug::Init()
@@ -77,6 +78,14 @@ void Debug::ActionDebug()
 void Debug::OnGui()
 {
 	ImGui::ShowDemoWindow();
+
+	ImGui::Begin("Time", &active, ImGuiWindowFlags_MenuBar);
+
+	ImGui::Text("delta time in ms: %lf", Time::deltaTime_ms);
+	ImGui::Text("delta time in s: %lf", Time::deltaTime);
+	ImGui::Text("LAST time in: %ld", Time::LAST);
+
+	ImGui::End();
 
 	// Create a window called "My First Tool", with a menu bar.
 	ImGui::Begin("Active Modules", &active, ImGuiWindowFlags_MenuBar);

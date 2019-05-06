@@ -10,6 +10,8 @@
 
 namespace ShadowMath
 {
+	const Vector2float Vector2float::zero = Vector2float(0, 0);
+
 	float Vector2float::MagnitudeSqr()
 	{
 		return sqrtf(this->x * this->x + this->y * this->y);
@@ -89,6 +91,29 @@ namespace ShadowMath
 	Vector2float Vector2float::operator*(const float& b)
 	{
 		return Vector2float();
+	}
+
+
+	bool Vector2float::operator==(const Vector2float b) const
+	{
+		return this->x == b.x && this->y == b.y;
+	}
+
+	bool Vector2float::operator!=(const Vector2float b) const
+	{
+		return !(*this == b);
+	}
+
+	float& Vector2float::operator[](int i)
+	{
+		if (i == 0) 
+			return x;
+		else if (i == 1)
+			return y;
+		else
+		{
+			throw std::out_of_range("Only 0-1");
+		}
 	}
 
 	Vector2float Vector2float::operator*(const int& b)

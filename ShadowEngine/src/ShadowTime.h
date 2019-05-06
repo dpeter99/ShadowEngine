@@ -6,10 +6,13 @@
 class Time
 {
 	static Uint64 NOW;
-	static Uint64 LAST;
+	
 
 public:
+	static Uint64 LAST;
+
 	static double deltaTime;
+	static double deltaTime_ms;
 
 	static void UpdateTime();
 };

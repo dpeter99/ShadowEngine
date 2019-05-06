@@ -51,7 +51,7 @@ void ShadowApplication::Init()
 		);
 
 	new ShadowInput::ShadowAction<bool>("Test2",
-		(new ShadowInput::KeyboardBinding(SDL_SCANCODE_E))->AddModifier(new ShadowInput::ModifierHold(500.0f))
+		(new ShadowInput::KeyboardBinding(SDL_SCANCODE_E))->AddModifier(new ShadowInput::ModifierHold(5.0f))
 	);
 
 	new ShadowInput::ShadowAction<float>("Test1D_float",
@@ -70,7 +70,7 @@ void ShadowApplication::Init()
 		(new ShadowInput::Binding1D(
 			new ShadowInput::KeyboardBinding(SDL_SCANCODE_G),
 			new ShadowInput::KeyboardBinding(SDL_SCANCODE_H)
-		))->AddModifier(new ShadowInput::ModifierHold(500.0f)));
+		))->AddModifier(new ShadowInput::ModifierHold(5.0)));
 
 }
 

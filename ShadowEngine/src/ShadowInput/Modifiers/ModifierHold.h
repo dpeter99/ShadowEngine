@@ -6,9 +6,9 @@ namespace ShadowInput
 	class ModifierHold :
 		public InputModifier
 	{
-		float wait_;
+		double wait_;
 
-		float deltaTime;
+		double deltaTime;
 
 	public:
 
@@ -18,9 +18,11 @@ namespace ShadowInput
 
 		void ProcessInput(ModifierContext& ctx) override;
 
-		ModifierHold(const float time, bool cont = false) : InputModifier(), wait_(time), deltaTime(0)
+		ModifierHold(const double time, bool cont = false) : InputModifier(), wait_(time), deltaTime(0)
 		{
 		};
 		~ModifierHold();
+
+		bool RequieresContinous() override;
 	};
 }

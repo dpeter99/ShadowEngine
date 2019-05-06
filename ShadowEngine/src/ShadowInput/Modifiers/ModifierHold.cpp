@@ -36,4 +36,13 @@ namespace ShadowInput
 			}
 		}
 	}
+
+	ModifierHold::~ModifierHold()
+	{
+	}
+
+	bool ModifierHold::RequieresContinous()
+	{
+		return true;
+	}
 }
