@@ -22,6 +22,15 @@ void ShadowModuleManager::PushModule(ShadowModule* module)
 	modules.emplace_back(module);
 }
 
+ShadowModule& ShadowModuleManager::GetModule(std::string name)
+{
+	for (auto module : modules)
+	{
+		if (module->GetName() == name)
+			return *module;
+	}
+}
+
 void ShadowModuleManager::Init()
 {
 	for (auto module : modules)

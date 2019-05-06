@@ -35,6 +35,7 @@ namespace ShadowInput
 		std::string GetName() override { return  "ActionSystem"; };
 
 
+		void RegisterInspectors();
 
 	};
 }

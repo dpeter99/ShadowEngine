@@ -15,7 +15,7 @@
 #include "ShadowInput/Bindings/KeyboardBinding.h"
 #include "ShadowInput/Modifiers/ModifierHold.h"
 #include "ShadowInput/Bindings/Binding1D.h"
-#include "Debug.h"
+#include "Debug/Debug.h"
 
 ShadowApplication* ShadowApplication::instance = nullptr;
 

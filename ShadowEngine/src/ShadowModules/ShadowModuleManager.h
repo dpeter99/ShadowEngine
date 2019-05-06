@@ -14,6 +14,17 @@ public:
 
 	void PushModule(ShadowModule* module);
 
+	ShadowModule& GetModule(std::string name);
+
+	template<class T>
+	T& GetModule()
+	{
+		for (auto module : modules)
+		{
+			
+		}
+	}
+
 	void Init();
 	void Update();
 };

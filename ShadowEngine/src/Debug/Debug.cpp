@@ -14,6 +14,17 @@
 #include "ShadowTime.h"
 
 
+
+Debug::Debug()
+{
+}
+
+Debug::~Debug()
+{
+}
+
+
+
 void Debug::Init()
 {
 	ShadowEventManager::AddNewEventListener(this);
@@ -105,11 +116,7 @@ void Debug::OnGui()
 	ActionDebug();
 }
 
-Debug::Debug()
+void Debug::AddInspector(std::string name, Inspector* inspector)
 {
-}
-
-
-Debug::~Debug()
-{
+	inspectors[name] = inspector;
 }
