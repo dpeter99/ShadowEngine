@@ -33,7 +33,7 @@ public:
 	{
 		event_ = event;
 		continuous_ = cont;
-		data_ = 0;
+		//data_ = 0;
 		processed_ = false;
 	}
 

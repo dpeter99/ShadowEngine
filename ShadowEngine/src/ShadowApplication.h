@@ -24,6 +24,8 @@ public:
 	ShadowWindow& GetWindow() const { return *window_; };
 	void SetWindow(ShadowWindow* w) { window_ = w; }
 
+	ShadowModuleManager& GetModuleManager() { return moduleManager; };
+
 	void Init();
 	void Start();
 };

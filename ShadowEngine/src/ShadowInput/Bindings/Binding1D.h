@@ -15,6 +15,16 @@ namespace ShadowInput
 
 	public:
 
+		Binding1D<I>(InputBinding<I>* _positive, InputBinding<I>* _negative) : pos(_positive),
+			neg(_negative)
+		{
+		}
+
+		~Binding1D()
+		{
+		}
+
+
 		void ProcessEvent(BindingContext<float>& event) override
 		{
 			//Call both bindings in this composite binding
@@ -69,6 +79,8 @@ namespace ShadowInput
 					}
 				}
 
+				event.data_ = data_;
+
 				ProcessContext(event, modCtx);
 			}
 		}
@@ -99,13 +111,14 @@ namespace ShadowInput
 			}
 		}
 
-		Binding1D<I>(InputBinding<I>* _positive, InputBinding<I>* _negative) : pos(_positive),
-			neg(_negative)
+		InputBinding<I>& GetPositiveBinding()
 		{
+			return *pos;
 		}
 
-		~Binding1D()
+		InputBinding<I>& GetNegativeBinding()
 		{
+			return *neg;
 		}
 	};
 }

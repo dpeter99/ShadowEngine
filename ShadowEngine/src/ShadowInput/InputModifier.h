@@ -1,12 +1,13 @@
 #pragma once
 #include "BindingContext.h"
 #include "ShadowInput/ModifierContext.h"
+#include "SHObject.h"
 
 namespace ShadowInput {
 
-	class InputModifier
+	class InputModifier : public SHObject
 	{
-	protected:
+		SHObject_Base(InputModifier)
 
 	public:
 		virtual void ProcessInput(ModifierContext& ctx) = 0;

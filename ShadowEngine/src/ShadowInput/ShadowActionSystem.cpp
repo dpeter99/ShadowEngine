@@ -23,6 +23,8 @@ namespace ShadowInput
 	void ShadowActionSystem::Init()
 	{
 		ShadowEventManager::AddNewEventListener(this);
+
+		RegisterInspectors();
 	}
 	
 	void ShadowActionSystem::Update()

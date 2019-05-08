@@ -2,7 +2,6 @@
 #include "ShadowModules/ShadowModule.h"
 #include "ShadowEvents/IShadowEventListener.h"
 #include "ImGui/IShadowImGui.h"
-#include "Inspector.h"
 #include <map>
 
 class Debug :
@@ -10,8 +9,6 @@ class Debug :
 	public IShadowEventListener,
 	public IShadowImGui
 {
-
-	std::map<std::string, Inspector*> inspectors;
 
 	void Debug::ActionDebug();
 
@@ -29,9 +26,6 @@ public:
 
 	void OnGui() override;
 
-
-	//Inspector Stuff
-	void AddInspector(std::string name, Inspector* inspector);
 
 	Debug();
 	virtual ~Debug();

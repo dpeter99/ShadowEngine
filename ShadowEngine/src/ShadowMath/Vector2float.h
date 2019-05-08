@@ -1,10 +1,4 @@
-//
-// Created by dpete on 2/8/2019.
-//
-
-#ifndef CPP_VECTOR2FLOAT_H
-#define CPP_VECTOR2FLOAT_H
-
+#pragma once
 
 #include "Vector2int.h"
 
@@ -73,6 +67,3 @@ namespace ShadowMath
 		operator Vector2int();
 	};
 }
-
-
-#endif //CPP_VECTOR2FLOAT_H

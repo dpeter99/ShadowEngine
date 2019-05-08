@@ -16,6 +16,8 @@
 #include "ShadowInput/Modifiers/ModifierHold.h"
 #include "ShadowInput/Bindings/Binding1D.h"
 #include "Debug/Debug.h"
+#include "ShadowInput/Bindings/Binding2D.h"
+#include "ShadowInput/Bindings/BindingAND.h"
 
 ShadowApplication* ShadowApplication::instance = nullptr;
 
@@ -41,13 +43,13 @@ void ShadowApplication::Init()
 	moduleManager.Init();
 
 
+	new ShadowInput::ShadowAction<bool>("Test_base",
+		new ShadowInput::KeyboardBinding(SDL_SCANCODE_W)
+		);
+
 	new ShadowInput::ShadowAction<bool>("Test_continuous",
 		new ShadowInput::KeyboardBinding(SDL_SCANCODE_Q),
 		true
-		);
-
-	new ShadowInput::ShadowAction<bool>("Test_base",
-		new ShadowInput::KeyboardBinding(SDL_SCANCODE_W)
 		);
 
 	new ShadowInput::ShadowAction<bool>("Test2",
@@ -71,6 +73,28 @@ void ShadowApplication::Init()
 			new ShadowInput::KeyboardBinding(SDL_SCANCODE_G),
 			new ShadowInput::KeyboardBinding(SDL_SCANCODE_H)
 		))->AddModifier(new ShadowInput::ModifierHold(5.0)));
+
+	new ShadowInput::ShadowAction<ShadowMath::Vector2float>("Test2D",
+		new ShadowInput::Binding2D(
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_KP_4),
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_KP_6),
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_KP_8),
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_KP_2)
+		));
+
+	new ShadowInput::ShadowAction<ShadowMath::Vector2float>("Test2D_continuous",
+		new ShadowInput::Binding2D(
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_KP_4),
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_KP_6),
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_KP_8),
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_KP_2)
+		),true);
+
+	new ShadowInput::ShadowAction<bool>("Test_and",
+		new ShadowInput::BindingAND(
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_R),
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_T)
+		));
 
 }
 

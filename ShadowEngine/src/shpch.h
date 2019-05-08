@@ -13,7 +13,3 @@
 #include <unordered_set>
 
 #include "Utility.h"
-
-#ifdef HZ_PLATFORM_WINDOWS
-	#include <Windows.h>
-#endif

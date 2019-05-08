@@ -15,7 +15,7 @@ public:
 
 #define SHObject_Base(type)	\
 public: \
-	static const std::string& Type() { static const std::string t = #type; return t; } \
+	static const std::string& Type() { static const std::string t = typeid(type).name(); return t; } \
 	static uint64_t TypeId() { static const uint64_t id = GenerateId(); return id; } \
 	const std::string& GetType() override { return Type();  } \
 	const uint64_t GetTypeId() override { return  type::TypeId(); } \

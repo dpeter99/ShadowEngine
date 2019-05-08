@@ -11,7 +11,7 @@ namespace ShadowInput
 	class ShadowAction final :
 		public IShadowAction
 	{
-		SHObject_Base(ShadowAction)
+		SHObject_Base(ShadowAction<T>)
 
 		std::string name;
 
@@ -57,7 +57,7 @@ namespace ShadowInput
 
 		~ShadowAction()
 		{
-			delete binding_;
+			//delete binding_;
 		}
 
 
@@ -73,7 +73,10 @@ namespace ShadowInput
 			binding_->ProcessEvent(inpCtx);
 
 			if(inpCtx.outState_ != UnInit)
-			SetState(inpCtx.outState_);
+			{
+				SetState(inpCtx.outState_);
+				data = inpCtx.data_;
+			}
 		};
 
 		void AddEventListener(ActionState state) override
@@ -147,6 +150,11 @@ namespace ShadowInput
 		bool GetPerformed() override
 		{
 			return performed_b;
+		}
+
+		const T GetData()
+		{
+			return data;
 		}
 
 		void Update() override

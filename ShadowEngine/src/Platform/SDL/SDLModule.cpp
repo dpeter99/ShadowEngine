@@ -24,7 +24,7 @@ void SDLModule::Init()
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 
 	// Create window
-	window = SDL_CreateWindow("Hello World!", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1000, 500,
+	window = SDL_CreateWindow("Hello World!", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1000, 800,
 	                          SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN);
 	if (window == nullptr)
 	{
@@ -33,7 +33,7 @@ void SDLModule::Init()
 		//return false;
 	}
 
-	ShadowApplication::Get().SetWindow(new ShadowWindow(window, 1000, 500));
+	ShadowApplication::Get().SetWindow(new ShadowWindow(window, 1000, 800));
 
 	// Create OpenGL context
 	glContext = SDL_GL_CreateContext(window);

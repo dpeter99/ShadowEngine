@@ -99,7 +99,7 @@ namespace ShadowInput
 
 		~KeyboardBinding() override
 		{
-			delete keycode;
+			//delete keycode;
 		}
 
 

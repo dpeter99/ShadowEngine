@@ -6,6 +6,8 @@ namespace ShadowInput
 	class ModifierHold :
 		public InputModifier
 	{
+		SHObject_Base(ModifierHold)
+
 		double wait_;
 
 		double deltaTime;

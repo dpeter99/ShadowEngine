@@ -26,6 +26,8 @@ void Time::UpdateTime()
 
 	NOW = SDL_GetTicks();
 	deltaTime_ms = LAST > 0 ? (NOW - LAST) *10 : (1.0f / 60.0f);
+	deltaTime_ms = deltaTime_ms == 0 ? (1.0f / 60.0f) : deltaTime_ms;
+
 	LAST = NOW;
 	deltaTime = deltaTime_ms * 0.001;
 }
