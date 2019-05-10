@@ -41,6 +41,8 @@ namespace ShadowInput
 		bool continuous_;
 
 	public:
+		friend class InputActionInspector;
+
 		Callback performed;
 
 		ShadowAction(std::string a, InputBinding<T>* b, bool continuous = false)

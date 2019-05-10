@@ -11,6 +11,10 @@ namespace ShadowInput {
 
 		InputBinding<I>* aBinding;
 		InputBinding<I>* bBinding;
+
+		ActionState aState = ActionState::UnInit;
+		ActionState bState = ActionState::UnInit;
+
 	public:
 		BindingAND<I>(InputBinding<I>* _a, InputBinding<I>* _b):aBinding(_a), bBinding(_b)
 		{
@@ -28,9 +32,7 @@ namespace ShadowInput {
 
 			I data;
 
-			ActionState aState;
-
-			BindingContext<I> bindingContextA(event.event_, event.continuous_);
+			BindingContext<I> bindingContextA(event.event_, true);
 			//Call the binding
 			aBinding->ProcessEvent(bindingContextA);
 			//Check if it was sucesfull
@@ -40,9 +42,7 @@ namespace ShadowInput {
 				processed = true;
 			}
 
-			ActionState bState;
-
-			BindingContext<I> bindingContextB(event.event_, event.continuous_);
+			BindingContext<I> bindingContextB(event.event_, true);
 			//Call the binding
 			bBinding->ProcessEvent(bindingContextB);
 			//Check if it was sucesfull
@@ -59,14 +59,21 @@ namespace ShadowInput {
 				modCtx.continuous_ = event.continuous_;
 
 				modCtx.bindingState_ = false;
+			
+				event.data_ = false;
+			
 
 				if(aState == bState)
 				{
 					event.outState_ = aState;
 
-					if (aState == ActionState::Performed || aState == ActionState::Progress)
+					if (aState == ActionState::Performed || aState == ActionState::Progress) {
+						event.data_ = true;
 						modCtx.bindingState_ = true;
+					}
 				}
+
+				modCtx.outState_ = event.outState_;
 
 				ProcessContext(event, modCtx);
 			}
@@ -88,6 +95,8 @@ namespace ShadowInput {
 			return *bBinding;
 		}
 
+
+		friend class BindingANDInspector;
 	};
 
 }

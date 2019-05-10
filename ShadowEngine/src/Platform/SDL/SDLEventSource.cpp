@@ -45,8 +45,8 @@ void SDLEventSource::PollEvents() const
 			break;
 		case SDL_TEXTINPUT:
 			{
-				auto e = new KeyTypedEvent(test_event.text.text);
-				ShadowEventManager::PushNewEvent(e);
+				//auto e = new KeyTypedEvent(test_event.text.text);
+				//ShadowEventManager::PushNewEvent(e);
 			}
 			break;
 		}

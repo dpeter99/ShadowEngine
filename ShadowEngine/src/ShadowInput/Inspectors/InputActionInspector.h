@@ -22,7 +22,7 @@ namespace ShadowInput {
 			bool actionActive = action->GetPerformed();
 
 			ImGui::Checkbox("", &actionActive);
-			ImGui::SameLine(); ImGui::Text("%s", action->GetName().c_str());
+			ImGui::SameLine(); ImGui::Text("%s %d", action->GetName().c_str(), action->GetState());
 
 			if(action->GetType() == ShadowAction<bool>::Type())
 			{

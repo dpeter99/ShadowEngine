@@ -96,6 +96,18 @@ void ShadowApplication::Init()
 			new ShadowInput::KeyboardBinding(SDL_SCANCODE_T)
 		));
 
+	new ShadowInput::ShadowAction<bool>("Test_and_continuous",
+		new ShadowInput::BindingAND(
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_R),
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_T)
+		),true);
+
+	new ShadowInput::ShadowAction<bool>("Test_and_continuous",
+		(new ShadowInput::BindingAND(
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_R),
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_T)
+		))->AddModifier(new ShadowInput::ModifierHold(5)));
+
 }
 
 void ShadowApplication::Start()

@@ -3,6 +3,7 @@
 #include "ShadowEvents/ShadowEvent.h"
 #include <sstream>
 #include <winerror.h>
+#include <SDL2/SDL.h>
 
 class KeyEvent : public ShadowEvent
 {
@@ -33,7 +34,7 @@ public:
 	std::string ToString() const override
 	{
 		std::stringstream ss;
-		ss << "KeyPressedEvent: " << (int)m_KeyCode << " (" << m_RepeatCount << " repeats)";
+		ss << "KeyPressedEvent: " << "\t" << (char)SDL_GetKeyFromScancode((SDL_Scancode)m_KeyCode)  << " (" << m_RepeatCount << " repeats)";
 		return ss.str();
 	}
 
@@ -54,7 +55,7 @@ public:
 	std::string ToString() const override
 	{
 		std::stringstream ss;
-		ss << "KeyReleasedEvent: " << (int)m_KeyCode;
+		ss << "KeyReleasedEvent: " << "\t" << (char)SDL_GetKeyFromScancode((SDL_Scancode)m_KeyCode);
 		return ss.str();
 	}
 };
