@@ -64,7 +64,7 @@ namespace ShadowInput
 				}
 				else
 				{
-					if ((event.continuous_ || modifiers_.size() > 0) && data != 0)
+					if ((event.continuous_ || (modifiers_.size() > 0 && modifiers_.front()->RequieresContinous()) && data != 0))
 					{
 						modCtx.bindingState_ = true;
 					}

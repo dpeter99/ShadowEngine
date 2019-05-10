@@ -54,6 +54,8 @@ namespace ShadowInput
 			performed_b = false;
 			continuous_ = continuous;
 
+			data = T();
+
 			ShadowInput::ShadowActionSystem::_instance->AddEvent(this);
 		};
 
@@ -81,14 +83,16 @@ namespace ShadowInput
 			}
 		};
 
+		//TODO: Change this to c# style event subsciption
 		void AddEventListener(ActionState state) override
 		{
 		};
-
+		
 		void RemoveEventListener() override
 		{
 		};
 
+		//TODO: Should this be exposed?
 		void SetActive(bool set) override
 		{
 			active = set;
@@ -104,32 +108,41 @@ namespace ShadowInput
 			return state_;
 		}
 
+		//TODO: Should this be exposed?
 		void SetState(ActionState state) override
 		{
 			switch (state)
 			{
 			case ActionState::Idle:
 				performed_b = false;
+				state_ = ActionState::Idle;
 				break;
 			case ActionState::Started:
-				//TODO: call started
 				performed_b = false;
-				state = ActionState::Progress;
+				Started();
+				state_ = ActionState::Progress;
 				break;
 			case ActionState::Progress:
 				performed_b = false;
-				state = ActionState::Progress;
+				if (state_ != ActionState::Progress)
+					Started();
+				state_ = ActionState::Progress;
 				break;
 			case ActionState::Performed:
-				//TODO: call performed
-				performed();
+				
 				performed_b = true;
-				state = ActionState::Idle;
+
+				if (state_ != ActionState::Performed && state_ != ActionState::Progress)
+					Started();
+
+				Performed();
+
+				state_ = ActionState::Idle;
 				break;
 			case ActionState::Canceled:
-				//TODO: call canceled
+				Canceled();
 				performed_b = false;
-				state = ActionState::Idle;
+				state_ = ActionState::Idle;
 				break;
 			}
 		}
@@ -144,6 +157,7 @@ namespace ShadowInput
 			return continuous_;
 		}
 
+		//TODO: Should this be exposed?
 		void SetContinuous(bool set) override
 		{
 			continuous_ = set;
@@ -166,6 +180,22 @@ namespace ShadowInput
 				performed_b = false;
 			}
 			performed_b_last = performed_b;
+		}
+
+
+		void Performed()
+		{
+			std::cout << GetName() << " Was performed !" << std::endl;
+		}
+
+		void Started()
+		{
+			std::cout << GetName() << " Was started !" << std::endl;
+		}
+
+		void Canceled()
+		{
+			std::cout << GetName() << " Was canceled !" << std::endl;
 		}
 	};
 }
