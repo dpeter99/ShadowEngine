@@ -3,6 +3,10 @@
 
 //#include "ShadowAction.h"
 
+//TODO: move to InputAction
+/**
+ * \brief These describe the possible states of a binging
+ */
 enum ActionState
 {
 	UnInit,
@@ -15,6 +19,10 @@ enum ActionState
 
 class ShadowAction;
 
+/**
+ * \brief 
+ * \tparam T The type of the data stored
+ */
 template<class T>
 class BindingContext
 {

@@ -39,9 +39,10 @@ namespace ShadowInput
 
 	ModifierHold::~ModifierHold()
 	{
+		//TODO: clean
 	}
 
-	bool ModifierHold::RequieresContinous()
+	bool ModifierHold::RequiresContinuous()
 	{
 		return true;
 	}

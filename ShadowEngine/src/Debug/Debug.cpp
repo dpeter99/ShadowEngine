@@ -38,7 +38,7 @@ void Debug::Init()
 
 void Debug::OnEvent(ShadowEvent& e)
 {
-	std::cout << e.ToString() << std::endl;
+	//std::cout << e.ToString() << std::endl;
 }
 
 void Debug::ActionDebug()

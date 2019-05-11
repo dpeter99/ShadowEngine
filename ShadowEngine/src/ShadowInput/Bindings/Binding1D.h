@@ -3,6 +3,10 @@
 
 namespace ShadowInput
 {
+	/**
+	 * \brief This Binding represents a 1D value, in a float
+	 * \tparam I The type that the sub bindings will provide. It must have float addition and substraction operators
+	 */
 	template <class I>
 	class Binding1D
 		: public InputBinding<float>
@@ -10,18 +14,34 @@ namespace ShadowInput
 		SHObject_Base(Binding1D)
 
 	private:
+
+		/**
+		 * \brief This is the positive side binding
+		 */
 		InputBinding<I>* pos;
+		/**
+		 * \brief This is the negative side binding
+		 */
 		InputBinding<I>* neg;
 
 	public:
 
+		/**
+		 * \brief Constructor. The suplied pointers will be cleaned automatically.
+		 * \param _positive Pointer to the positive binding
+		 * \param _negative Pointer to the negative binding
+		 */
 		Binding1D<I>(InputBinding<I>* _positive, InputBinding<I>* _negative) : pos(_positive),
 			neg(_negative)
 		{
 		}
 
+		/**
+		 * \brief This should only be called by the Input system
+		 */
 		~Binding1D()
 		{
+			//TODO: clean
 		}
 
 
@@ -64,7 +84,7 @@ namespace ShadowInput
 				}
 				else
 				{
-					if ((event.continuous_ || (modifiers_.size() > 0 && modifiers_.front()->RequieresContinous()) && data != 0))
+					if ((event.continuous_ || (modifiers_.size() > 0 && modifiers_.front()->RequiresContinuous()) && data != 0))
 					{
 						modCtx.bindingState_ = true;
 					}
@@ -111,11 +131,19 @@ namespace ShadowInput
 			}
 		}
 
+		/**
+		 * \brief Gets the Positive side binding
+		 * \return Reference of the Binding
+		 */
 		InputBinding<I>& GetPositiveBinding()
 		{
 			return *pos;
 		}
 
+		/**
+		* \brief Gets the Negative side binding
+		* \return Reference of the Binding
+		*/
 		InputBinding<I>& GetNegativeBinding()
 		{
 			return *neg;

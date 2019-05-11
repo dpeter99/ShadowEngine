@@ -3,27 +3,53 @@
 
 namespace ShadowInput {
 
+	/**
+	 * \brief This Binding only actives when both of it's inputs are active
+	 * \tparam I The type of the sub bindings
+	 */
 	template <class I>
 	class BindingAND :
 		public InputBinding<I>
 	{
 		SHObject_Base(BindingAND<I>)
 
+		/**
+		 * \brief The A side of the AND
+		 */
 		InputBinding<I>* aBinding;
+		/**
+		 * \brief The B side of the AND
+		 */
 		InputBinding<I>* bBinding;
 
+		/**
+		 * \brief The last state of A
+		 */
 		ActionState aState = ActionState::UnInit;
+
+		/**
+		 * \brief The last state of B
+		 */
 		ActionState bState = ActionState::UnInit;
 
 	public:
+
+		/**
+		 * \brief Constructor for the BindingAND. The pointers will be freed up by the binding
+		 * \param _a A side binding
+		 * \param _b B side binding
+		 */
 		BindingAND<I>(InputBinding<I>* _a, InputBinding<I>* _b):aBinding(_a), bBinding(_b)
 		{
 			
 		}
 
+		/**
+		 * \brief This should only be called by the Input system
+		 */
 		~BindingAND()
 		{
-			
+			//TODO: clean
 		}
 
 		void ProcessEvent(BindingContext<I>& event) override
@@ -127,12 +153,19 @@ namespace ShadowInput {
 			
 		}
 
-
+		/**
+		 * \brief Gets the A binding
+		 * \return Reference of the binding
+		 */
 		InputBinding<I>& GetABinding()
 		{
 			return *aBinding;
 		}
 
+		/**
+		 * \brief Gets the B binding
+		 * \return Reference of the binding
+		 */
 		InputBinding<I>& GetBBinding()
 		{
 			return *bBinding;

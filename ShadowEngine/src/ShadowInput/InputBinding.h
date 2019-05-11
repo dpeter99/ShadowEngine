@@ -19,9 +19,18 @@ namespace ShadowInput
 		SHObject_Base(InputBinding)
 
 	protected:
+		/**
+		 * \brief The data that this binding holds, for example a float or a bool
+		 */
 		T data_;
 
-		IShadowAction* action_ = nullptr;
+		//TODO: remove this link is no longer needed
+		[[deprecated]] IShadowAction* action_ = nullptr;
+
+		/**
+		 * \brief A list of modifiers that process the binding
+		 * This might be shortened to a single modifier
+		 */
 		std::list<InputModifier*> modifiers_;
 	public:
 
@@ -40,6 +49,11 @@ namespace ShadowInput
 		virtual  void DefaultBehaviour(ModifierContext& ctx) = 0;
 
 
+		/**
+		 * \brief Adds a modifier to the binding. The binding will free up the memory of the modifier
+		 * \param _m Pointer to the modifier
+		 * \return Returns the binding itself for easier chaining
+		 */
 		InputBinding* AddModifier(InputModifier* _m) override
 		{
 			this->modifiers_.emplace_front(_m);
@@ -47,6 +61,12 @@ namespace ShadowInput
 			return this;
 		}
 
+
+		/**
+		 * \brief Gets a modifier form the list, at the given index
+		 * \param index The index of the modifier
+		 * \return Reference to the modifier
+		 */
 		InputModifier& GetModifier(int index) override
 		{
 			std::list<InputModifier*>::iterator ptr;
@@ -61,22 +81,40 @@ namespace ShadowInput
 			return **ptr;
 		}
 
+		/**
+		 * \brief Gets the number of the modifiers in this Binding
+		 * \return Number of the modifiers
+		 */
 		int ModifierCount() override
 		{
 			return modifiers_.size();
 		}
 
+		/**
+		 * \brief Gets the data form this binding
+		 * \return The data
+		 */
 		T GetData()
 		{
 			return data_;
 		}
 
 
-		virtual void Init(IShadowAction* action)
+		/**
+		 * \brief Initialise the Binging.
+		 * \param action 
+		 */
+		[[deprecated]] virtual void Init(IShadowAction* action)
 		{
 			action_ = action;
 		}
 
+
+		/**
+		 * \brief Internal function to make the modifer handling easier. It 
+		 * \param bdgCtx The binding context, got in ProcessEvent
+		 * \param ctx The ModifierContect that will be given to the Modifiers to process
+		 */
 		void ProcessContext(BindingContext<T>& bdgCtx ,ModifierContext& ctx)
 		{
 			if (modifiers_.size() > 0) {

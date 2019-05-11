@@ -18,6 +18,7 @@
 #include "Debug/Debug.h"
 #include "ShadowInput/Bindings/Binding2D.h"
 #include "ShadowInput/Bindings/BindingAND.h"
+#include "ShadowInput/Bindings/BindingOR.h"
 
 ShadowApplication* ShadowApplication::instance = nullptr;
 
@@ -102,10 +103,28 @@ void ShadowApplication::Init()
 			new ShadowInput::KeyboardBinding(SDL_SCANCODE_U)
 		),true);
 
-	new ShadowInput::ShadowAction<bool>("Test_and_continuous",
+	new ShadowInput::ShadowAction<bool>("Test_and_hold",
 		(new ShadowInput::BindingAND(
 			new ShadowInput::KeyboardBinding(SDL_SCANCODE_X),
 			new ShadowInput::KeyboardBinding(SDL_SCANCODE_C)
+		))->AddModifier(new ShadowInput::ModifierHold(5)));
+
+	new ShadowInput::ShadowAction<bool>("Test_OR",
+		new ShadowInput::BindingOR(
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_V),
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_B)
+		));
+
+	new ShadowInput::ShadowAction<bool>("Test_OR_continuous",
+		new ShadowInput::BindingOR(
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_N),
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_M)
+		),true);
+
+	new ShadowInput::ShadowAction<bool>("Test_OR_hold",
+		(new ShadowInput::BindingOR(
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_J),
+			new ShadowInput::KeyboardBinding(SDL_SCANCODE_K)
 		))->AddModifier(new ShadowInput::ModifierHold(5)));
 
 }

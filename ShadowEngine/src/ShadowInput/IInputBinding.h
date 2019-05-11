@@ -4,6 +4,9 @@
 
 namespace ShadowInput
 {
+	/**
+	 * \brief Interface for the Bindings.
+	 */
 	class IInputBinding : public SHObject
 	{
 		SHObject_Base(IInputBinding)
@@ -24,6 +27,10 @@ namespace ShadowInput
 		virtual InputModifier& GetModifier(int index) = 0;
 
 
+		/**
+		 * \brief Gets the modifier count of the InputBinding
+		 * \return The count of the added modifiers
+		 */
 		virtual int ModifierCount() = 0;
 		
 

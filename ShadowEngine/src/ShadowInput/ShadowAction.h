@@ -126,16 +126,17 @@ namespace ShadowInput
 				performed_b = false;
 				if (state_ != ActionState::Progress)
 					Started();
+
+				Progress();
+
 				state_ = ActionState::Progress;
 				break;
 			case ActionState::Performed:
-				
-				performed_b = true;
-
-				if (state_ != ActionState::Performed && state_ != ActionState::Progress)
+				if (state_ != ActionState::Performed && state_ != ActionState::Progress && performed_b == false)
 					Started();
 
 				Performed();
+				performed_b = true;
 
 				state_ = ActionState::Idle;
 				break;
@@ -191,6 +192,11 @@ namespace ShadowInput
 		void Started()
 		{
 			std::cout << GetName() << " Was started !" << std::endl;
+		}
+
+		void Progress()
+		{
+			std::cout << GetName() << " Progress !" << std::endl;
 		}
 
 		void Canceled()

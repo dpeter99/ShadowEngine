@@ -14,6 +14,7 @@
 #include "Binding2DInspector.h"
 #include "ShadowInput/Bindings/BindingAND.h"
 #include "BindingANDInspector.h"
+#include "BindingORInspector.h"
 
 void ShadowInput::ShadowActionSystem::RegisterInspectors()
 {
@@ -32,5 +33,7 @@ void ShadowInput::ShadowActionSystem::RegisterInspectors()
 	InspectorSystem::AddInspector(Binding2D<ShadowMath::Vector2float>::Type(), new Binding2DInspector());
 
 	InspectorSystem::AddInspector(BindingAND<bool>::Type(), new BindingANDInspector());
+
+	InspectorSystem::AddInspector(BindingOR<bool>::Type(), new BindingORInspector());
 }
 
