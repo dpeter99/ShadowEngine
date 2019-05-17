@@ -5,7 +5,7 @@
 #include "IShadowImGui.h"
 
 class ImGuiModule :
-	public ShadowModule, public IShadowEventListener
+	public ShadowModule, public ShadowEventSystem::IShadowEventListener
 {
 	static ImGuiModule* instance;
 
@@ -17,7 +17,7 @@ public:
 
 	void Update() override;
 
-	void OnEvent(ShadowEvent& e) override;
+	void OnEvent(ShadowEventSystem::ShadowEvent& e) override;
 
 	std::string GetName() override { return "ImGuiModule"; };
 

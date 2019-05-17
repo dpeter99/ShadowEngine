@@ -7,7 +7,7 @@ namespace ShadowInput
 {
 	ShadowActionSystem* ShadowActionSystem::_instance = nullptr;
 
-	void ShadowActionSystem::OnEvent(ShadowEvent& e)
+	void ShadowActionSystem::OnEvent(ShadowEventSystem::ShadowEvent& e)
 	{
 		for (auto action : actions)
 		{
@@ -22,7 +22,7 @@ namespace ShadowInput
 
 	void ShadowActionSystem::Init()
 	{
-		ShadowEventManager::AddNewEventListener(this);
+		ShadowEventSystem::ShadowEventManager::AddNewEventListener(this);
 
 		RegisterInspectors();
 	}
@@ -43,5 +43,9 @@ namespace ShadowInput
 
 	ShadowActionSystem::~ShadowActionSystem()
 	{
+		for (auto action : actions)
+		{
+			delete action;
+		}
 	}
 }

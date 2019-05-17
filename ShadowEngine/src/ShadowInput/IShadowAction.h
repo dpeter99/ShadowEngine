@@ -1,5 +1,7 @@
 #pragma once
 #include "IInputBinding.h"
+#include "ShadowEvents/ShadowEvent.h"
+#include "BindingContext.h"
 
 
 namespace ShadowInput
@@ -11,7 +13,7 @@ namespace ShadowInput
 
 	public:
 		virtual ~IShadowAction() = default;
-		virtual void ProcessEvent(ShadowEvent& e) = 0;
+		virtual void ProcessEvent(ShadowEventSystem::ShadowEvent& e) = 0;
 
 		virtual void Update() = 0;
 

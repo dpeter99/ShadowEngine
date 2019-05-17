@@ -2,98 +2,105 @@
 #include "ShadowEvents/ShadowEvent.h"
 #include <sstream>
 
-class MouseMovedEvent : public ShadowEvent
-{
-public:
-	MouseMovedEvent(float x, float y)
-		: m_MouseX(x), m_MouseY(y)
+namespace ShadowEventSystem {
+
+	class MouseMovedEvent : public ShadowEvent
 	{
-	}
+		SHObject_Base(MouseMovedEvent)
 
-	float GetX() const { return m_MouseX; }
-	float GetY() const { return m_MouseY; }
+	public:
+		MouseMovedEvent(float x, float y, SDL_Event* ev)
+			: m_MouseX(x), m_MouseY(y), ShadowEvent(ev)
+		{
+		}
 
-	std::string ToString() const override
+		float GetX() const { return m_MouseX; }
+		float GetY() const { return m_MouseY; }
+
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "MouseMovedEvent: " << m_MouseX << ", " << m_MouseY;
+			return ss.str();
+		}
+	private:
+		float m_MouseX, m_MouseY;
+	};
+
+	class MouseScrolledEvent : public ShadowEvent
 	{
-		std::stringstream ss;
-		ss << "MouseMovedEvent: " << m_MouseX << ", " << m_MouseY;
-		return ss.str();
-	}
+		SHObject_Base(MouseScrolledEvent)
 
-	EVENT_CLASS_TYPE(MouseMoved)
-private:
-	float m_MouseX, m_MouseY;
-};
+	public:
+		MouseScrolledEvent(float xOffset, float yOffset, SDL_Event* ev)
+			: m_XOffset(xOffset), m_YOffset(yOffset), ShadowEvent(ev)
+		{
+		}
 
-class MouseScrolledEvent : public ShadowEvent
-{
-public:
-	MouseScrolledEvent(float xOffset, float yOffset)
-		: m_XOffset(xOffset), m_YOffset(yOffset)
+		float GetXOffset() const { return m_XOffset; }
+		float GetYOffset() const { return m_YOffset; }
+
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "MouseScrolledEvent: " << GetXOffset() << ", " << GetYOffset();
+			return ss.str();
+		}
+
+	private:
+		float m_XOffset, m_YOffset;
+	};
+
+	class MouseButtonEvent : public ShadowEvent
 	{
-	}
+		SHObject_Base(MouseButtonEvent)
 
-	float GetXOffset() const { return m_XOffset; }
-	float GetYOffset() const { return m_YOffset; }
+	public:
+		int GetMouseButton() const { return m_Button; }
 
-	std::string ToString() const override
+	protected:
+		MouseButtonEvent(int button, SDL_Event* ev)
+			: m_Button(button), ShadowEvent(ev)
+		{
+		}
+
+		int m_Button;
+	};
+
+	class MouseButtonPressedEvent : public MouseButtonEvent
 	{
-		std::stringstream ss;
-		ss << "MouseScrolledEvent: " << GetXOffset() << ", " << GetYOffset();
-		return ss.str();
-	}
+		SHObject_Base(MouseButtonPressedEvent)
 
-	EVENT_CLASS_TYPE(MouseScrolled)
-private:
-	float m_XOffset, m_YOffset;
-};
+	public:
+		MouseButtonPressedEvent(int button, SDL_Event* ev)
+			: MouseButtonEvent(button, ev)
+		{
+		}
 
-class MouseButtonEvent : public ShadowEvent
-{
-public:
-	int GetMouseButton() const { return m_Button; }
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "MouseButtonPressedEvent: " << m_Button;
+			return ss.str();
+		}
+	};
 
-protected:
-	MouseButtonEvent(int button)
-		: m_Button(button)
+	class MouseButtonReleasedEvent : public MouseButtonEvent
 	{
-	}
+		SHObject_Base(MouseButtonReleasedEvent)
 
-	int m_Button;
-};
+	public:
+		MouseButtonReleasedEvent(int button, SDL_Event* ev)
+			: MouseButtonEvent(button, ev)
+		{
+		}
 
-class MouseButtonPressedEvent : public MouseButtonEvent
-{
-public:
-	MouseButtonPressedEvent(int button)
-		: MouseButtonEvent(button)
-	{
-	}
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "MouseButtonReleasedEvent: " << m_Button;
+			return ss.str();
+		}
+	};
 
-	std::string ToString() const override
-	{
-		std::stringstream ss;
-		ss << "MouseButtonPressedEvent: " << m_Button;
-		return ss.str();
-	}
-
-	EVENT_CLASS_TYPE(MouseButtonPressed)
-};
-
-class MouseButtonReleasedEvent : public MouseButtonEvent
-{
-public:
-	MouseButtonReleasedEvent(int button)
-		: MouseButtonEvent(button)
-	{
-	}
-
-	std::string ToString() const override
-	{
-		std::stringstream ss;
-		ss << "MouseButtonReleasedEvent: " << m_Button;
-		return ss.str();
-	}
-
-	EVENT_CLASS_TYPE(MouseButtonReleased)
-};
+}

@@ -5,12 +5,12 @@
 
 namespace ShadowInput
 {
-	float ModifierHold::GetWaitTime()
+	double ModifierHold::GetWaitTime()
 	{
 		return wait_;
 	}
 
-	float ModifierHold::GetDeltaTime()
+	double ModifierHold::GetDeltaTime()
 	{
 		return deltaTime;
 	}
@@ -35,11 +35,6 @@ namespace ShadowInput
 				ctx.outState_ = ActionState::Progress;
 			}
 		}
-	}
-
-	ModifierHold::~ModifierHold()
-	{
-		//TODO: clean
 	}
 
 	bool ModifierHold::RequiresContinuous()

@@ -49,7 +49,8 @@ namespace ShadowInput {
 		 */
 		~BindingAND()
 		{
-			//TODO: clean
+			delete aBinding;
+			delete bBinding;
 		}
 
 		void ProcessEvent(BindingContext<I>& event) override
@@ -102,7 +103,7 @@ namespace ShadowInput {
 					if (aStateNew == ActionState::Performed || aStateNew == ActionState::Progress)
 					{
 						//If the action is cont. than we relicate the State every time
-						if (event.continuous_ || (modifiers_.size() > 0 && modifiers_.front()->RequieresContinous()))
+						if (event.continuous_ || (this->modifiers_.size() > 0 && this->modifiers_.front()->RequiresContinuous()))
 						{
 							event.data_ = true;
 							modCtx.bindingState_ = true;
@@ -144,7 +145,7 @@ namespace ShadowInput {
 				*/
 				modCtx.outState_ = event.outState_;
 
-				ProcessContext(event, modCtx);
+				this->ProcessContext(event, modCtx);
 			}
 		}
 

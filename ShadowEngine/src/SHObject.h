@@ -1,5 +1,5 @@
 #pragma once
-
+#include  "shpch.h"
 
 
 /**
@@ -23,12 +23,12 @@ public:
 	 * \brief Returns the top level class type name of the object
 	 * \return Class name string
 	 */
-	virtual const std::string& GetType() = 0;
+	virtual const std::string& GetType() const = 0;
 	/**
 	 * \brief Gets the top level type ID
 	 * \return UID of the class
 	 */
-	virtual const uint64_t GetTypeId() = 0;
+	virtual const uint64_t GetTypeId() const = 0;
 };
 
 
@@ -38,8 +38,8 @@ public:
  */
 #define SHObject_Base(type)	\
 public: \
-	static const std::string& Type() { static const std::string t = typeid(type).name(); return t; } \
-	static uint64_t TypeId() { static const uint64_t id = GenerateId(); return id; } \
-	const std::string& GetType() override { return Type();  } \
-	const uint64_t GetTypeId() override { return  type::TypeId(); } \
+	static const std::string& Type()				{ static const std::string t = typeid(type).name(); return t; } \
+	static uint64_t TypeId()						{ static const uint64_t id = GenerateId(); return id; } \
+	const std::string& GetType() const override		{ return Type();  } \
+	const uint64_t GetTypeId() const override		{ return  type::TypeId(); } \
 private:

@@ -27,13 +27,13 @@ namespace ShadowInput
 		 * \brief Gets the time this will wait for
 		 * \return 
 		 */
-		float GetWaitTime();
+		double GetWaitTime();
 
 		/**
 		 * \brief Gets the current delta time.
 		 * \return 
 		 */
-		float GetDeltaTime();
+		double GetDeltaTime();
 
 		void ProcessInput(ModifierContext& ctx) override;
 
@@ -45,11 +45,11 @@ namespace ShadowInput
 		{
 			
 		};
-		
-		/**
-		 * \brief This should only be called by the Input system
-		 */
-		~ModifierHold();
+
+		~ModifierHold()
+		{
+			
+		}
 
 		bool RequiresContinuous() override;
 	};

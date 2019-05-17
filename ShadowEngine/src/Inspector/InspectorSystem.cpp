@@ -1,6 +1,7 @@
 #include "shpch.h"
 #include "InspectorSystem.h"
-#include "Platform/OpenGL/ImGuiOpenGLRenderer.h"
+#include "imgui.h"
+
 
 std::map<std::string, Inspector*> InspectorSystem::inspectors;
 

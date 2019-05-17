@@ -7,9 +7,12 @@
 #include <string>
 #include "ShadowApplication.h"
 
+SDLModule* SDLModule::instance = nullptr;
 
 void SDLModule::Init()
 {
+	instance = this;
+
 	// Initialize video subsystem
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
 	{

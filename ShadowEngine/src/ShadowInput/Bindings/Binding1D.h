@@ -41,7 +41,8 @@ namespace ShadowInput
 		 */
 		~Binding1D()
 		{
-			//TODO: clean
+			delete pos;
+			delete neg;
 		}
 
 
@@ -84,7 +85,7 @@ namespace ShadowInput
 				}
 				else
 				{
-					if ((event.continuous_ || (modifiers_.size() > 0 && modifiers_.front()->RequiresContinuous()) && data != 0))
+					if (event.continuous_ || (modifiers_.size() > 0 && modifiers_.front()->RequiresContinuous() && data != 0))
 					{
 						modCtx.bindingState_ = true;
 					}

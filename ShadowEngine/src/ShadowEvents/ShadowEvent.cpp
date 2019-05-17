@@ -2,12 +2,7 @@
 
 #include "ShadowEvent.h"
 
-
-ShadowEvent::ShadowEvent()
-{
-}
+namespace ShadowEventSystem {
 
 
-ShadowEvent::~ShadowEvent()
-{
 }

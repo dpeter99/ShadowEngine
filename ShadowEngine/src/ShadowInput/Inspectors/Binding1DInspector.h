@@ -19,7 +19,7 @@ namespace ShadowInput {
 	public:
 		void Draw(SHObject& obj) override
 		{
-			auto keyboard = dynamic_cast<ShadowInput::Binding1D<bool>&>(obj);
+			auto& keyboard = dynamic_cast<ShadowInput::Binding1D<bool>&>(obj);
 			//ImGui::Text("-");
 
 			

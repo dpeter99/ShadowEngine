@@ -24,8 +24,14 @@ namespace ShadowInput {
 		 */
 		virtual bool RequiresContinuous() = 0;
 
-		InputModifier();
-		~InputModifier();
+		InputModifier()
+		{
+			
+		};
+		virtual  ~InputModifier()
+		{
+			
+		};
 	};
 
 }

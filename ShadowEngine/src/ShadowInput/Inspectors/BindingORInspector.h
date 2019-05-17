@@ -17,7 +17,7 @@ namespace ShadowInput {
 	public:
 		void Draw(SHObject& obj) override
 		{
-			auto binding_and = dynamic_cast<BindingOR<bool>&>(obj);
+			auto& binding_and = dynamic_cast<BindingOR<bool>&>(obj);
 			//ImGui::Text("-");
 
 			

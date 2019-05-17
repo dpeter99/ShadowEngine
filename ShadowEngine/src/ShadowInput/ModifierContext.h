@@ -7,7 +7,7 @@ namespace ShadowInput {
 	{
 	public:
 
-		const ShadowEvent* event_;
+		const ShadowEventSystem::ShadowEvent* event_;
 
 		bool continuous_;
 		bool bindingState_;

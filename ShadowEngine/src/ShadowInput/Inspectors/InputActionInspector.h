@@ -40,7 +40,7 @@ namespace ShadowInput {
 				ImGui::AlignTextToFramePadding();
 				ImGui::Text("Data:");
 				float data = float_action->GetData();
-				ImGui::SameLine(); ImGui::TextColored(ImVec4(0.5, 0.1, 0.7, 1), "%.2f",data);
+				ImGui::SameLine(); ImGui::TextColored(ImVec4(0.5f, 0.1f, 0.7f, 1.0f), "%.2f",data);
 			}
 			else if (action->GetType() == ShadowAction<ShadowMath::Vector2float>::Type())
 			{
@@ -50,7 +50,7 @@ namespace ShadowInput {
 				ImGui::Text("Data:");
 				float xdata = float_action->GetData().x;
 				float ydata = float_action->GetData().y;
-				ImGui::SameLine(); ImGui::TextColored(ImVec4(0.5, 0.1, 0.7, 1), "X: %.2f \t Y: %.2f", xdata,ydata);
+				ImGui::SameLine(); ImGui::TextColored(ImVec4(0.5f, 0.1f, 0.7f, 1.0f), "X: %.2f \t Y: %.2f", xdata,ydata);
 			}
 
 

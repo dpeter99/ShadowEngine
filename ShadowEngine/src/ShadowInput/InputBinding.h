@@ -24,9 +24,6 @@ namespace ShadowInput
 		 */
 		T data_;
 
-		//TODO: remove this link is no longer needed
-		[[deprecated]] IShadowAction* action_ = nullptr;
-
 		/**
 		 * \brief A list of modifiers that process the binding
 		 * This might be shortened to a single modifier
@@ -99,17 +96,6 @@ namespace ShadowInput
 			return data_;
 		}
 
-
-		/**
-		 * \brief Initialise the Binging.
-		 * \param action 
-		 */
-		[[deprecated]] virtual void Init(IShadowAction* action)
-		{
-			action_ = action;
-		}
-
-
 		/**
 		 * \brief Internal function to make the modifer handling easier. It 
 		 * \param bdgCtx The binding context, got in ProcessEvent
@@ -133,9 +119,17 @@ namespace ShadowInput
 			//action_->SetState(ctx.outstate_);
 		}
 
-		//InputBinding();
+		InputBinding()
+		{
+			data_ = T();
+		}
+		
 		virtual ~InputBinding()
 		{
+			for (auto modifier : modifiers_)
+			{
+				delete modifier;
+			}
 		}
 	};
 

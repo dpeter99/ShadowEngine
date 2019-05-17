@@ -2,18 +2,22 @@
 #include "Events/KeyEvents.h"
 class ShadowEvent;
 
-#define EVENT_BIND(Event,Type,Func)		\
-	Type *_event;					\
-	if(is<Type>(Event, &_event))	\
-	Func
+namespace ShadowEventSystem {
+
+#define EVENT_BIND(Event,Type,Func)					\
+	if(Event.GetType() == Type::Type())				\
+	{ Type *_event = dynamig_cast<Type>(Event);		\
+	Func											\
+	}
 
 
-class IShadowEventListener
-{
-public:
+	class IShadowEventListener
+	{
+	public:
 
-	virtual void OnEvent(ShadowEvent& e) = 0;
+		virtual void OnEvent(ShadowEvent& e) = 0;
 
-	IShadowEventListener() = default;
-	~IShadowEventListener() = default;
-};
+		IShadowEventListener() = default;
+		~IShadowEventListener() = default;
+	};
+}

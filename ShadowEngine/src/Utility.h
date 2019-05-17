@@ -1,5 +1,6 @@
 #pragma once
 
+/*
 template <typename CheckType, typename DataType>
 bool is(DataType& data, CheckType** out)
 {
@@ -8,6 +9,18 @@ bool is(DataType& data, CheckType** out)
 
 	*out = dynamic_cast<CheckType*>(&data);
 	return *out == nullptr ? false : true;
+}
+*/
+
+template <typename OutType, typename InType>
+bool is(InType& data, OutType** out)
+{
+	if(data.GetType() == OutType::Type())
+	{
+		*out = dynamic_cast<OutType*>(&data);
+		return true;
+	}
+	return false;
 }
 
 

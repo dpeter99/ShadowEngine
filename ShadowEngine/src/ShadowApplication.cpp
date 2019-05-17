@@ -34,7 +34,7 @@ ShadowApplication::~ShadowApplication()
 
 void ShadowApplication::Init()
 {
-	moduleManager.PushModule(new ShadowEventManager());
+	moduleManager.PushModule(new ShadowEventSystem::ShadowEventManager());
 	moduleManager.PushModule(new SDLModule());
 	moduleManager.PushModule(new ImGuiModule());
 	moduleManager.PushModule(new ShadowInput::ShadowActionSystem());
@@ -141,11 +141,11 @@ void ShadowApplication::Start()
 		Time::UpdateTime();
 
 		//glClearColor(1, 0.3, 0.45, 0.92);
-		glClearColor(0.09, 0.23, 0.90,1);
+		glClearColor(0.09f, 0.23f, 0.90f,1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		ShadowEventManager::PollEvents();
-		ShadowEventManager::ProcessEvents();
+		ShadowEventSystem::ShadowEventManager::PollEvents();
+		ShadowEventSystem::ShadowEventManager::ProcessEvents();
 
 		moduleManager.Update();
 

@@ -1,7 +1,7 @@
 #pragma once
 #include "ShadowEvents/IShadowEventSource.h"
 
-class SDLEventSource : public IShadowEventSource
+class SDLEventSource : public ShadowEventSystem::IShadowEventSource
 {
 public:
 

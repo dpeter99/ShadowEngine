@@ -5,51 +5,65 @@
 #include "ShadowEvents/ShadowEventManager.h"
 #include "ShadowEvents/Events/KeyEvents.h"
 #include "ShadowEvents/Events/MouseEvents.h"
+#include "ShadowEvents/Events/ApplicationEvent.h"
 
 void SDLEventSource::PollEvents() const
 {
 	SDL_Event test_event;
 	while (SDL_PollEvent(&test_event))
 	{
+		ShadowEventSystem::ShadowEvent* event = nullptr;
 		switch (test_event.type)
 		{
 		case SDL_KEYDOWN:
-			{
-				auto e_KeyPressedEvent = new KeyPressedEvent(test_event.key.keysym.scancode, test_event.key.repeat);
-				ShadowEventManager::PushNewEvent(e_KeyPressedEvent);
-			}
-			break;
+		{
+			event = new ShadowEventSystem::KeyPressedEvent(test_event.key.keysym.scancode, test_event.key.repeat, &test_event);
+		}
+		break;
 		case SDL_KEYUP:
-			{
-				auto e_KeyReleasedEvent = new KeyReleasedEvent(test_event.key.keysym.scancode);
-				ShadowEventManager::PushNewEvent(e_KeyReleasedEvent);
-			}
-			break;
+		{
+			event = new ShadowEventSystem::KeyReleasedEvent(test_event.key.keysym.scancode, &test_event);
+		}
+		break;
 		case SDL_MOUSEMOTION:
-			{
-				auto e = new MouseMovedEvent(test_event.motion.x, test_event.motion.y);
-				ShadowEventManager::PushNewEvent(e);
-			}
-			break;
+		{
+			event = new ShadowEventSystem::MouseMovedEvent(test_event.motion.x, test_event.motion.y, &test_event);
+		}
+		break;
 		case SDL_MOUSEBUTTONDOWN:
-			{
-				auto e = new MouseButtonPressedEvent(test_event.button.button);
-				ShadowEventManager::PushNewEvent(e);
-			}
-			break;
+		{
+			event = new ShadowEventSystem::MouseButtonPressedEvent(test_event.button.button, &test_event);
+		}
+		break;
 		case SDL_MOUSEBUTTONUP:
-			{
-				auto e = new MouseButtonReleasedEvent(test_event.button.button);
-				ShadowEventManager::PushNewEvent(e);
-			}
-			break;
+		{
+			event = new ShadowEventSystem::MouseButtonReleasedEvent(test_event.button.button, &test_event);
+		}
+		break;
 		case SDL_TEXTINPUT:
-			{
-				//auto e = new KeyTypedEvent(test_event.text.text);
-				//ShadowEventManager::PushNewEvent(e);
-			}
+		{
+			event = new ShadowEventSystem::KeyTypedEvent(test_event.text.text, &test_event);
+		}
+		break;
+		case SDL_WINDOWEVENT_CLOSE:
+		{
+			event = new ShadowEventSystem::WindowCloseEvent(&test_event);
+			
+		}
+		break;
+		case SDL_WINDOWEVENT_RESIZED:
+		{
+			event = new ShadowEventSystem::WindowResizeEvent(test_event.window.data1, test_event.window.data2, &test_event);
+		}
+		break;
+		default:
+			event = new ShadowEventSystem::ShadowEvent(&test_event);
 			break;
 		}
+
+
+		if(event != nullptr)
+		ShadowEventSystem::ShadowEventManager::PushNewEvent(event);
 	}
 }
 

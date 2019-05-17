@@ -8,10 +8,10 @@ class ModifierHoldInspector : public Inspector
 public:
 	void Draw(SHObject& obj) override
 	{
-		auto hold = dynamic_cast<ShadowInput::ModifierHold&>(obj);
+		auto& hold = dynamic_cast<ShadowInput::ModifierHold&>(obj);
 
 		ImGui::AlignTextToFramePadding();
 		ImGui::Text("ModifierHold: %.2f/%.2f", hold.GetWaitTime(), hold.GetDeltaTime());
-		ImGui::SameLine(0,10); ImGui::ProgressBar(hold.GetDeltaTime() / hold.GetWaitTime());
+		ImGui::SameLine(0.0f,10.0f); ImGui::ProgressBar(hold.GetDeltaTime() / hold.GetWaitTime());
 	}
 };

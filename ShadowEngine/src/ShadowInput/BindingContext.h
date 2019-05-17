@@ -1,53 +1,79 @@
 #pragma once
 #include "ShadowEvents/ShadowEvent.h"
 
-//#include "ShadowAction.h"
-
-//TODO: move to InputAction
-/**
- * \brief These describe the possible states of a binging
- */
-enum ActionState
-{
-	UnInit,
-	Idle,
-	Started, //Shadow state
-	Progress,
-	Performed, //Shadow state
-	Canceled,
-};
-
-class ShadowAction;
-
-/**
- * \brief 
- * \tparam T The type of the data stored
- */
-template<class T>
-class BindingContext
-{
-public:
-	const ShadowEvent* event_;
-
-	bool continuous_;
-
-	bool bindingState_;
-	ActionState outState_;
-	T data_;
-
-	bool processed_;
-
-	BindingContext(const ShadowEvent* event, bool cont)
+namespace ShadowInput {
+	/**
+	 * \brief Possible states of a Action
+	 */
+	enum ActionState
 	{
-		event_ = event;
-		continuous_ = cont;
-		//data_ = 0;
-		processed_ = false;
-	}
+		/**
+		 * \brief Default state
+		 */
+		UnInit,
+		/**
+		 * \brief Idle binding
+		 */
+		Idle,
+		Started, //Shadow state
+		Progress,
+		Performed, //Shadow state
+		Canceled,
+	};
 
-	~BindingContext()
+	/**
+	 * This stores the data passed to input bindings.
+	 * \brief Context of the Binding calls
+	 * \tparam T The type of the data stored
+	 */
+	template<class T>
+	class BindingContext
 	{
-	}
+	public:
+		/**
+		 * \brief The event that triggered this call
+		 */
+		const ShadowEventSystem::ShadowEvent* event_;
 
-	const ShadowEvent* GetEvent() { return event_; };
-};
+		/**
+		 * \brief Weather this binding should behave continuously
+		 */
+		bool continuous_;
+
+		/**
+		 * \brief The state of the binding
+		 */
+		bool bindingState_;
+
+		/**
+		 * \brief The output state form this binding
+		 */
+		ActionState outState_;
+
+		/**
+		 * \brief The data this binding gives the action
+		 */
+		T data_;
+
+		/**
+		 * \brief If the binding actually activated
+		 */
+		bool processed_;
+
+		BindingContext(const ShadowEventSystem::ShadowEvent* event, bool cont)
+		{
+			event_ = event;
+			continuous_ = cont;
+			bindingState_ = false;
+			data_ = T();
+			processed_ = false;
+			outState_ = ActionState::UnInit;
+		}
+
+		~BindingContext()
+		{
+		}
+
+		const ShadowEventSystem::ShadowEvent* GetEvent() { return event_; };
+	};
+}

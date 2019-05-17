@@ -1,87 +1,91 @@
 #pragma once
-
+#include  "shpch.h"
 #include "ShadowEvents/ShadowEvent.h"
-#include <sstream>
-#include <winerror.h>
 #include <SDL2/SDL.h>
 
-class KeyEvent : public ShadowEvent
-{
-public:
-	int GetKeyCode() const { return m_KeyCode; }
+namespace ShadowEventSystem {
 
-protected:
-	KeyEvent(int keycode)
-		: m_KeyCode(keycode)
+	class KeyEvent : public ShadowEvent
 	{
-	}
+		SHObject_Base(KeyEvent)
 
-	int m_KeyCode;
-};
+	public:
+		int GetKeyCode() const { return m_KeyCode; }
 
-class KeyPressedEvent : public KeyEvent
-{
-public:
-	KeyPressedEvent(int keycode, int repeatCount)
-		: KeyEvent(keycode), m_RepeatCount(repeatCount)
+	protected:
+		KeyEvent(int keycode, SDL_Event* ev)
+			: m_KeyCode(keycode), ShadowEvent(ev)
+		{
+		}
+
+		int m_KeyCode;
+	};
+
+	class KeyPressedEvent : public KeyEvent
 	{
-	}
+		SHObject_Base(KeyPressedEvent)
 
-	int GetRepeatCount() const { return m_RepeatCount; }
+	public:
+		KeyPressedEvent(int keycode, int repeatCount, SDL_Event* ev)
+			: KeyEvent(keycode, ev), m_RepeatCount(repeatCount)
+		{
+		}
 
-	EVENT_CLASS_TYPE(KeyPressedEvent)
+		int GetRepeatCount() const { return m_RepeatCount; }
 
-	std::string ToString() const override
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "KeyPressedEvent: " << "\t" << (char)SDL_GetKeyFromScancode((SDL_Scancode)m_KeyCode) << " (" << m_RepeatCount << " repeats)";
+			return ss.str();
+		}
+
+	private:
+		int m_RepeatCount;
+	};
+
+	class KeyReleasedEvent : public KeyEvent
 	{
-		std::stringstream ss;
-		ss << "KeyPressedEvent: " << "\t" << (char)SDL_GetKeyFromScancode((SDL_Scancode)m_KeyCode)  << " (" << m_RepeatCount << " repeats)";
-		return ss.str();
-	}
+		SHObject_Base(KeyReleasedEvent)
 
-private:
-	int m_RepeatCount;
-};
+	public:
+		KeyReleasedEvent(int keycode, SDL_Event* ev)
+			: KeyEvent(keycode, ev)
+		{
+		}
 
-class KeyReleasedEvent : public KeyEvent
-{
-public:
-	KeyReleasedEvent(int keycode)
-		: KeyEvent(keycode)
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "KeyReleasedEvent: " << "\t" << (char)SDL_GetKeyFromScancode((SDL_Scancode)m_KeyCode);
+			return ss.str();
+		}
+	};
+
+	class KeyTypedEvent : public KeyEvent
 	{
-	}
+		SHObject_Base(KeyTypedEvent)
 
-	EVENT_CLASS_TYPE(KeyReleasedEvent)
+	public:
+		KeyTypedEvent(char* keycode, SDL_Event* ev)
+			: KeyEvent(keycode[0],ev), keys(keycode)
+		{
+		}
 
-	std::string ToString() const override
-	{
-		std::stringstream ss;
-		ss << "KeyReleasedEvent: " << "\t" << (char)SDL_GetKeyFromScancode((SDL_Scancode)m_KeyCode);
-		return ss.str();
-	}
-};
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "KeyTypedEvent: " << (char)m_KeyCode;
+			return ss.str();
+		}
 
-class KeyTypedEvent : public KeyEvent
-{
-public:
-	KeyTypedEvent(char* keycode)
-		: KeyEvent(keycode[0]), keys(keycode)
-	{
-	}
+		char* GetText()
+		{
+			return keys;
+		}
 
-	std::string ToString() const override
-	{
-		std::stringstream ss;
-		ss << "KeyTypedEvent: " << (char)m_KeyCode;
-		return ss.str();
-	}
+	private:
+		char* keys;
+	};
 
-	EVENT_CLASS_TYPE(EventSource::EventCategoryInput)
-
-	char* GetText()
-	{
-		return keys;
-	}
-
-private:
-	char* keys;
-};
+}

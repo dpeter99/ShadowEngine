@@ -28,7 +28,7 @@ Debug::~Debug()
 
 void Debug::Init()
 {
-	ShadowEventManager::AddNewEventListener(this);
+	ShadowEventSystem::ShadowEventManager::AddNewEventListener(this);
 	ImGuiModule::AddGUICall(this);
 
 	//new ShadowInput::ShadowAction<bool>("Test", new ShadowInput::KeyboardBinding("a"));
@@ -36,7 +36,7 @@ void Debug::Init()
 	active = true;
 }
 
-void Debug::OnEvent(ShadowEvent& e)
+void Debug::OnEvent(ShadowEventSystem::ShadowEvent& e)
 {
 	//std::cout << e.ToString() << std::endl;
 }

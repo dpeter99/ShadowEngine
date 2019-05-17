@@ -16,7 +16,7 @@ namespace ShadowInput
 	class KeyboardBinding :
 		public InputBinding<bool>
 	{
-		char* keycode;
+		//char* keycode;
 		int SDLKey;
 
 	public:
@@ -30,7 +30,7 @@ namespace ShadowInput
 			return SDLKey;
 		}
 
-		void ProcessEvent(BindingContext<bool>& event_) override
+		void ProcessEvent(BindingContext<bool>& event_)
 		{
 
 			ModifierContext modifier_context;
@@ -39,9 +39,9 @@ namespace ShadowInput
 
 			bool processed = false;
 
-			if (event_.GetEvent()->GetType() == KeyPressedEvent::GetStaticType())
+			if (event_.GetEvent()->GetType() == ShadowEventSystem::KeyPressedEvent::Type())
 			{
-				const KeyPressedEvent* _pressedEvent = dynamic_cast<const KeyPressedEvent*>(event_.event_);
+				const ShadowEventSystem::KeyPressedEvent* _pressedEvent = dynamic_cast<const ShadowEventSystem::KeyPressedEvent*>(event_.event_);
 				if (this->SDLKey == _pressedEvent->GetKeyCode())
 				{
 					//We have a keystroke
@@ -51,9 +51,9 @@ namespace ShadowInput
 				}
 			}
 
-			if (event_.GetEvent()->GetType() == KeyReleasedEvent::GetStaticType())
+			if (event_.GetEvent()->GetType() == ShadowEventSystem::KeyReleasedEvent::Type())
 			{
-				const KeyReleasedEvent* _releasedEvent = dynamic_cast<const KeyReleasedEvent*>(event_.event_);
+				const ShadowEventSystem::KeyReleasedEvent* _releasedEvent = dynamic_cast<const ShadowEventSystem::KeyReleasedEvent*>(event_.event_);
 				if (this->SDLKey == _releasedEvent->GetKeyCode())
 				{
 					//We have a keystroke
@@ -80,7 +80,7 @@ namespace ShadowInput
 				}
 				else
 				{
-					if (dynamic_cast<const KeyPressedEvent*>(ctx.event_)->GetRepeatCount() == 0)
+					if (dynamic_cast<const ShadowEventSystem::KeyPressedEvent*>(ctx.event_)->GetRepeatCount() == 0)
 						ctx.outState_ = ActionState::Performed;
 					else
 						ctx.outState_ = ActionState::Idle;
@@ -91,12 +91,6 @@ namespace ShadowInput
 				ctx.outState_ = ActionState::Idle;
 			}
 
-		}
-
-		KeyboardBinding(const char* str)
-		{
-			keycode = new char;
-			*keycode = *str;
 		}
 
 		/**

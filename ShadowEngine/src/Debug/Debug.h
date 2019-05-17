@@ -6,7 +6,7 @@
 
 class Debug :
 	public ShadowModule,
-	public IShadowEventListener,
+	public ShadowEventSystem::IShadowEventListener,
 	public IShadowImGui
 {
 
@@ -22,7 +22,7 @@ public:
 
 	std::string GetName() override { return "Debug"; };
 
-	void OnEvent(ShadowEvent& e) override;
+	void OnEvent(ShadowEventSystem::ShadowEvent& e) override;
 
 	void OnGui() override;
 

@@ -19,7 +19,7 @@ namespace ShadowInput {
 	public:
 		void Draw(SHObject& obj) override
 		{
-			auto keyboard = dynamic_cast<Binding2D<bool>&>(obj);			
+			auto& keyboard = dynamic_cast<Binding2D<bool>&>(obj);			
 
 			if (ImGui::TreeNode(&obj,"Binding 2D")) {
 

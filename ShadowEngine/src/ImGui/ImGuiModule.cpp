@@ -1,21 +1,28 @@
 #include "shpch.h"
 
-#include "ImGuiModule.h"
-#include "SDL2/SDL.h"
-#include "imgui.h"
-#include "Platform/OpenGL/ImGuiOpenGLRenderer.h"
+
+
 #include "ShadowApplication.h"
 #include "Utility.h"
 #include "ShadowEvents/Events/KeyEvents.h"
 #include "ShadowEvents/Events/MouseEvents.h"
 #include "ShadowEvents/ShadowEventManager.h"
 #include "ShadowTime.h"
+#include "ShadowEvents/Events/ApplicationEvent.h"
+
+#include "imgui.h"
+#include "examples/imgui_impl_sdl.h"
+#include "examples/imgui_impl_opengl3.h"
+
+#include "ImGuiModule.h"
+#include "SDL2/SDL.h"
+#include "Platform/SDL/SDLModule.h"
 
 ImGuiModule* ImGuiModule::instance = nullptr;
 
 void ImGuiModule::Init()
 {
-	ShadowEventManager::AddNewEventListener(this);
+	ShadowEventSystem::ShadowEventManager::AddNewEventListener(this);
 
 	ImGui::CreateContext();
 	ImGui::StyleColorsDark();
@@ -23,9 +30,12 @@ void ImGuiModule::Init()
 	ImGuiIO& io = ImGui::GetIO();
 	io.BackendFlags |= ImGuiBackendFlags_HasMouseCursors;
 	io.BackendFlags |= ImGuiBackendFlags_HasSetMousePos;
+	io.ConfigFlags |= ImGuiConfigFlags_::ImGuiConfigFlags_DockingEnable;           // Enable Docking
+	io.ConfigFlags |= ImGuiConfigFlags_::ImGuiConfigFlags_ViewportsEnable;         // Enable Multi-Viewport / Platform Windows
 
 	// TEMPORARY: should eventually use Hazel key codes
 	// Keyboard mapping. ImGui will use those indices to peek into the io.KeysDown[] array.
+	
 	io.KeyMap[ImGuiKey_Tab] = SDL_SCANCODE_TAB;
 	io.KeyMap[ImGuiKey_LeftArrow] = SDL_SCANCODE_LEFT;
 	io.KeyMap[ImGuiKey_RightArrow] = SDL_SCANCODE_RIGHT;
@@ -47,20 +57,27 @@ void ImGuiModule::Init()
 	io.KeyMap[ImGuiKey_X] = SDL_SCANCODE_X;
 	io.KeyMap[ImGuiKey_Y] = SDL_SCANCODE_Y;
 	io.KeyMap[ImGuiKey_Z] = SDL_SCANCODE_Z;
+	
+	
 
+	ImGui_ImplSDL2_InitForOpenGL(ShadowApplication::Get().GetWindow().winPtr, SDLModule::GetInstance().GetGlContext());
 	ImGui_ImplOpenGL3_Init("#version 410");
 }
 
 void ImGuiModule::Update()
-{
+{	
+	
 	ImGuiIO& io = ImGui::GetIO();
+	/*
 	ShadowApplication& app = ShadowApplication::Get();
 	io.DisplaySize = ImVec2(app.GetWindow().Width, app.GetWindow().Height);
 
 	float time = Time::deltaTime_ms;
 	io.DeltaTime = time;
-
+	*/
+	// Start the Dear ImGui frame
 	ImGui_ImplOpenGL3_NewFrame();
+	ImGui_ImplSDL2_NewFrame(ShadowApplication::Get().GetWindow().winPtr);
 	ImGui::NewFrame();
 
 	static bool show = true;
@@ -70,47 +87,60 @@ void ImGuiModule::Update()
 		gui_call->OnGui();
 	}
 
+	
+
 	ImGui::Render();
 	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
+	if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
+	{
+		SDL_Window* backup_current_window = SDL_GL_GetCurrentWindow();
+		SDL_GLContext backup_current_context = SDL_GL_GetCurrentContext();
+		ImGui::UpdatePlatformWindows();
+		ImGui::RenderPlatformWindowsDefault();
+		SDL_GL_MakeCurrent(backup_current_window, backup_current_context);
+	}
 }
 
-void ImGuiModule::OnEvent(ShadowEvent& e)
+void ImGuiModule::OnEvent(ShadowEventSystem::ShadowEvent& e)
 {
+	
+
+	ImGui_ImplSDL2_ProcessEvent(e.GetSDLEvnet());
+
+	/*
 	ImGuiIO& io = ImGui::GetIO();
 
-	KeyPressedEvent* pressed;
-	KeyReleasedEvent* released;
+	ShadowEventSystem::KeyPressedEvent* pressed;
+	ShadowEventSystem::KeyReleasedEvent* released;
 
-	MouseButtonPressedEvent* buttonPressed;
-	MouseButtonReleasedEvent* buttonReleased;
-	MouseMovedEvent* moved;
+	ShadowEventSystem::MouseButtonPressedEvent* buttonPressed;
+	ShadowEventSystem::MouseButtonReleasedEvent* buttonReleased;
+	ShadowEventSystem::MouseMovedEvent* moved;
 
-	EVENT_BIND(e,KeyPressedEvent, {
-		int key = _event->GetKeyCode();
-		io.KeysDown[key] = true;
-		return;
-	})
+	ShadowEventSystem::WindowResizeEvent* resize;
 
-	/*if(is<KeyPressedEvent>(e, &pressed))
+	if(e.GetType() == ShadowEventSystem::KeyPressedEvent::Type())
 	{
-		int key = pressed->GetKeyCode();
-		io.KeysDown[key] = true;
+		ShadowEventSystem::KeyPressedEvent* _event = dynamic_cast<ShadowEventSystem::KeyPressedEvent*>(&e);
+		{
+			int key = _event->GetKeyCode(); io.KeysDown[key] = true;
+			return;
+		}
 	}
-
-	else*/
-	if (is<KeyReleasedEvent>(e, &released))
+	if (is<ShadowEventSystem::KeyReleasedEvent>(e, &released))
 	{
 		int key = released->GetKeyCode();
 		io.KeysDown[key] = false;
 	}
-	else if (is<MouseButtonPressedEvent>(e, &buttonPressed))
+	else if (is<ShadowEventSystem::MouseButtonPressedEvent>(e, &buttonPressed))
 	{
 		int key = buttonPressed->GetMouseButton();
 		if (key == SDL_BUTTON_LEFT) io.MouseDown[0] = true;
 		if (key == SDL_BUTTON_RIGHT) io.MouseDown[1] = true;
 		if (key == SDL_BUTTON_MIDDLE) io.MouseDown[2] = true;
 	}
-	else if (is<MouseButtonReleasedEvent>(e, &buttonReleased))
+	else if (is<ShadowEventSystem::MouseButtonReleasedEvent>(e, &buttonReleased))
 	{
 		int key = buttonReleased->GetMouseButton();
 
@@ -118,10 +148,15 @@ void ImGuiModule::OnEvent(ShadowEvent& e)
 		if (key == SDL_BUTTON_RIGHT) io.MouseDown[1] = false;
 		if (key == SDL_BUTTON_MIDDLE) io.MouseDown[2] = false;
 	}
-	else if (is<MouseMovedEvent>(e, &moved))
+	else if (is<ShadowEventSystem::MouseMovedEvent>(e, &moved))
 	{
 		io.MousePos = ImVec2(moved->GetX(), moved->GetY());
 	}
+	else if(is(e, &resize))
+	{
+		
+	}
+	*/
 }
 
 void ImGuiModule::AddGUICall(IShadowImGui* g)

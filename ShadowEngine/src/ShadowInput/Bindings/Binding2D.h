@@ -51,7 +51,10 @@ namespace ShadowInput
 		 */
 		~Binding2D()
 		{
-			//TODO: clean
+			delete xpos_;
+			delete xneg_;
+			delete ypos_;
+			delete yneg_;
 		}
 
 		void ProcessEvent(BindingContext<ShadowMath::Vector2float>& event) override

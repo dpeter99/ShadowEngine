@@ -15,7 +15,7 @@ class KeyboardBindingInspector :
 public:
 	void Draw(SHObject& obj)
 	{
-		auto keyboard = dynamic_cast<ShadowInput::KeyboardBinding&>(obj);
+		auto& keyboard = dynamic_cast<ShadowInput::KeyboardBinding&>(obj);
 		ImGui::Text("KeyboardBinding: %c", SDL_GetKeyFromScancode((SDL_Scancode)keyboard.GetKeycode()));
 
 		for (int i = 0; i < keyboard.ModifierCount(); ++i)

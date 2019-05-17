@@ -6,9 +6,13 @@
 
 namespace ShadowInput
 {
+	/**
+	 * This stores and processes the events
+	 * \brief The Action system
+	 */
 	class ShadowActionSystem :
 		public ShadowModule,
-		public IShadowEventListener
+		public ShadowEventSystem::IShadowEventListener
 	{
 		
 
@@ -26,7 +30,7 @@ namespace ShadowInput
 
 
 
-		void OnEvent(ShadowEvent& e) override;
+		void OnEvent(ShadowEventSystem::ShadowEvent& e) override;
 
 		void Init() override;
 
