@@ -1,15 +1,8 @@
-//
-// Created by dpete on 3/6/2019.
-//
 #include "shpch.h"
-
 
 #include "ShadowWorld.h"
 
-#include <list>
-#include <string>
-#include <sstream>
-#include <iomanip>
+
 #include "ShadowAsset/AssetManager.h"
 
 void ShadowWorld::Update(const ShadowMath::Vector2int& pos)
@@ -30,7 +23,7 @@ void ShadowWorld::SetActiveMap(std::string name)
 	}
 }
 
-void WorldMap::Update(const ShadowMath::Vector2int& pos)
+void LevelMap::Update(const ShadowMath::Vector2int& pos)
 {
 	//Load chunks if nececerry
 	//xxxxx
@@ -58,12 +51,13 @@ void WorldMap::Update(const ShadowMath::Vector2int& pos)
 	for (auto i : this->chunks)
 	{
 		bool needed = false;
-		for (auto s : neededChunks)
+		for (ShadowMath::Vector2int s : neededChunks)
 		{
 			if (i->pos == s)
 			{
 				needed = true;
-				neededChunks.remove(s);
+				//TODO:This part causes errors, probalby because destructing the sample
+				//neededChunks.remove(s);
 			}
 		}
 		if (!needed)
@@ -80,21 +74,21 @@ void WorldMap::Update(const ShadowMath::Vector2int& pos)
 	}
 }
 
-void WorldMap::UnloadChunk(ShadowMapChunk* chunk)
+void LevelMap::UnloadChunk(ShadowMapChunk* chunk)
 {
 	chunks.remove(chunk);
 
 	delete chunk;
 }
 
-void WorldMap::UnloadChunk(const ShadowMath::Vector2int& id)
+void LevelMap::UnloadChunk(const ShadowMath::Vector2int& id)
 {
 	auto chunk = GetLoadedChunk(id);
 
 	UnloadChunk(chunk);
 }
 
-ShadowMapChunk* WorldMap::GetLoadedChunk(const ShadowMath::Vector2int& id)
+ShadowMapChunk* LevelMap::GetLoadedChunk(const ShadowMath::Vector2int& id)
 {
 	for (auto i : this->chunks)
 	{
@@ -106,7 +100,7 @@ ShadowMapChunk* WorldMap::GetLoadedChunk(const ShadowMath::Vector2int& id)
 	return nullptr;
 }
 
-void WorldMap::LoadChunk(const ShadowMath::Vector2int& id)
+void LevelMap::LoadChunk(const ShadowMath::Vector2int& id)
 {
 	std::string mapName = GenerateMapName(id);
 	auto c = AssetManager::GetAsset<ShadowMapChunk>(mapName);
@@ -118,7 +112,7 @@ void WorldMap::LoadChunk(const ShadowMath::Vector2int& id)
 	//AssetLoader::LoadMap(mapName);
 }
 
-std::string WorldMap::GenerateMapName(const ShadowMath::Vector2int& id) const
+std::string LevelMap::GenerateMapName(const ShadowMath::Vector2int& id) const
 {
 	std::stringstream ss;
 
@@ -129,6 +123,6 @@ std::string WorldMap::GenerateMapName(const ShadowMath::Vector2int& id) const
 	return ss.str();
 }
 
-WorldMap::WorldMap(ShadowWorld* world) : world(world)
+LevelMap::LevelMap(ShadowWorld* world) : world(world)
 {
 }

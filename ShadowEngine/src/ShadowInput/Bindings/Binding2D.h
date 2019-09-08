@@ -2,7 +2,7 @@
 #include "ShadowInput/InputBinding.h"
 #include "ShadowMap/ShadowWorld.h"
 #include "ShadowMath/Vector2float.h"
-#include "Utility.h"
+#include "Util/Utility.h"
 
 namespace ShadowInput
 {

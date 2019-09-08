@@ -14,8 +14,10 @@ class ImGuiModule :
 public:
 
 	void Init() override;
-
-	void Update() override;
+	void Update() override {};
+	void Render() override {};
+	void LateRender() override;
+	
 
 	void OnEvent(ShadowEventSystem::ShadowEvent& e) override;
 

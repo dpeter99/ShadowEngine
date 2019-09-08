@@ -1,6 +1,6 @@
 #include "shpch.h"
 #include "ShadowInput/ShadowActionSystem.h"
-#include "ShadowApplication.h"
+#include "Core/ShadowApplication.h"
 #include "Debug/Debug.h"
 #include "InputActionInspector.h"
 #include "Inspector/InspectorSystem.h"

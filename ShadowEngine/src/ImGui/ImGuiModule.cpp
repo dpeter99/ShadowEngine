@@ -1,9 +1,8 @@
 #include "shpch.h"
 
 
-
-#include "ShadowApplication.h"
-#include "Utility.h"
+#include "Core/ShadowApplication.h"
+#include "Util/Utility.h"
 #include "ShadowEvents/Events/KeyEvents.h"
 #include "ShadowEvents/Events/MouseEvents.h"
 #include "ShadowEvents/ShadowEventManager.h"
@@ -33,7 +32,7 @@ void ImGuiModule::Init()
 	io.ConfigFlags |= ImGuiConfigFlags_::ImGuiConfigFlags_DockingEnable;           // Enable Docking
 	io.ConfigFlags |= ImGuiConfigFlags_::ImGuiConfigFlags_ViewportsEnable;         // Enable Multi-Viewport / Platform Windows
 
-	// TEMPORARY: should eventually use Hazel key codes
+	// TEMPORARY: should eventually use ShadowRenderer key codes
 	// Keyboard mapping. ImGui will use those indices to peek into the io.KeysDown[] array.
 	
 	io.KeyMap[ImGuiKey_Tab] = SDL_SCANCODE_TAB;
@@ -64,7 +63,7 @@ void ImGuiModule::Init()
 	ImGui_ImplOpenGL3_Init("#version 410");
 }
 
-void ImGuiModule::Update()
+void ImGuiModule::LateRender()
 {	
 	
 	ImGuiIO& io = ImGui::GetIO();

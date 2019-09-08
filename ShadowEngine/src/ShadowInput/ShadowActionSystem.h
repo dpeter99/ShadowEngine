@@ -33,8 +33,9 @@ namespace ShadowInput
 		void OnEvent(ShadowEventSystem::ShadowEvent& e) override;
 
 		void Init() override;
-
 		void Update() override;
+		void Render() override {};
+		void LateRender() override {};
 
 		std::string GetName() override { return  "ActionSystem"; };
 

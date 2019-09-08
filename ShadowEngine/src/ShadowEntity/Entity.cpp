@@ -31,14 +31,6 @@ namespace ShadowEntity
 		throw "The base entity cannot be instantiated";
 	}
 
-	Entity::~Entity()
-	{
-	}
-
-	Entity::Entity()
-	{
-	}
-
 	std::string Entity::id = "Base";
 
 	std::ostream& operator<<(std::ostream& os, const Entity& dt)

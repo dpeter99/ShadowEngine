@@ -9,7 +9,7 @@
 #include "ShadowInput/ShadowAction.h"
 #include "ShadowInput/Bindings/KeyboardBinding.h"
 #include "ShadowInput/Modifiers/ModifierHold.h"
-#include "Utility.h"
+#include "Util/Utility.h"
 #include "ShadowInput/Bindings/Binding1D.h"
 #include "ShadowTime.h"
 #include "Inspector/Inspector.h"

@@ -1,7 +1,7 @@
 #pragma once
 #include "BindingContext.h"
 #include "ShadowInput/ModifierContext.h"
-#include "SHObject.h"
+#include "Core/SHObject.h"
 
 namespace ShadowInput {
 

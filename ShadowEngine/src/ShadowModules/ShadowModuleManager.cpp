@@ -29,6 +29,8 @@ ShadowModule& ShadowModuleManager::GetModule(std::string name)
 		if (module->GetName() == name)
 			return *module;
 	}
+	SH_ASSERT(false, "Can't find the module");
+	//return NULL;
 }
 
 void ShadowModuleManager::Init()
@@ -44,5 +46,13 @@ void ShadowModuleManager::Update()
 	for (auto module : modules)
 	{
 		module->Update();
+	}
+}
+
+void ShadowModuleManager::LateRender()
+{
+	for (auto module : modules)
+	{
+		module->LateRender();
 	}
 }

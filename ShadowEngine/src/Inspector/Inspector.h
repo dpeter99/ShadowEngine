@@ -1,5 +1,5 @@
 #pragma once
-#include "SHObject.h"
+#include "Core/SHObject.h"
 
 class Inspector :
 	public SHObject

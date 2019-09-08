@@ -3,7 +3,7 @@
 
 
 /**
- * \brief This is the base class for the classes that runtime runtime reflection.
+ * \brief This is the base class for the classes that runtime runtime ShadowEngine::Reflection.
  */
 class SHObject
 {
@@ -29,6 +29,8 @@ public:
 	 * \return UID of the class
 	 */
 	virtual const uint64_t GetTypeId() const = 0;
+
+	virtual ~SHObject() = default;
 };
 
 

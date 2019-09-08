@@ -33,9 +33,9 @@ namespace ShadowEventSystem {
 
 		void Init() override;
 
-		void Update() override
-		{
-		};
+		void Update() override {};
+		void Render() override {};
+		void LateRender() override {};
 
 		std::string GetName() override { return "ShadowEventManager"; };
 

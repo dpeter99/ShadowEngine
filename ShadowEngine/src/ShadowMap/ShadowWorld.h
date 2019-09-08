@@ -13,7 +13,9 @@
 class ShadowWorld;
 
 //A set of maps that are loaded together
-class WorldMap
+//Like the overworld
+//Separate Levels would be the dungeons and interiors
+class LevelMap
 {
 public:
 	//id
@@ -32,10 +34,10 @@ public:
 	std::list<ShadowMapChunk*> chunks;
 
 
-	WorldMap(ShadowWorld* world);
+	LevelMap(ShadowWorld* world);
 
 	//Update
-	//Here we get the map loader point and check what maps we need
+	//Here we get the map loader point(most cases the player pos) and check what maps we need
 	//Than load up the maps that are not yet loaded.
 	void Update(const ShadowMath::Vector2int& pos);
 
@@ -52,7 +54,7 @@ public:
 };
 
 
-//A single World that can have many maps and sizes
+//A single World that can have many levels
 class ShadowWorld : public ShadowAsset
 {
 public:
@@ -61,10 +63,10 @@ public:
 	std::string id;
 
 	//Active map
-	WorldMap* activeMap;
+	LevelMap* activeMap;
 
 	//All the maps in this World
-	std::map<std::string, WorldMap*> maps;
+	std::map<std::string, LevelMap*> maps;
 
 	//World settings
 

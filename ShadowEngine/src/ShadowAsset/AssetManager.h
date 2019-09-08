@@ -9,7 +9,7 @@
 
 class AssetManager
 {
-	//Singletom object reference
+	//Singletom object ShadowEngine::Reference
 private:
 	static AssetManager* instance;
 

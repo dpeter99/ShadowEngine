@@ -1,19 +1,16 @@
-//
-// Created by dpete on 2/12/2019.
-//
-
-#ifndef SHADOWENGINE_ENTITY_H
-#define SHADOWENGINE_ENTITY_H
+#pragma once
 
 #include <string>
 #include <iostream>
 
 #include "EntityBase.h"
 
-namespace ShadowEntity
+namespace ShadowEntity 
 {
-	class Entity
+	class Entity : public SHObject
 	{
+		SHObject_Base(Entity)
+		
 	public:
 
 		static std::string id;
@@ -21,11 +18,6 @@ namespace ShadowEntity
 		//static std::string Register();
 	public:
 		virtual Entity* Create();
-
-
-		Entity();
-
-		~Entity();
 
 		virtual void Start();
 
@@ -38,4 +30,3 @@ namespace ShadowEntity
 		friend std::ostream& operator<<(std::ostream& os, const Entity& dt);
 	};
 }
-#endif //SHADOWENGINE_ENTITY_H

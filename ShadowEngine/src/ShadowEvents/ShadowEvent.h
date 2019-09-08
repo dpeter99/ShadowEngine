@@ -1,7 +1,7 @@
 #pragma once
 #include  "shpch.h"
-#include "../Core.h"
-#include "SHObject.h"
+#include "Core/Core.h"
+#include "Core/SHObject.h"
 #include <SDL2/SDL.h>
 
 namespace ShadowEventSystem {

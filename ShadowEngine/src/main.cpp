@@ -8,7 +8,7 @@
 
 #include <SDL2/SDL.h>
 #include <ShadowEntity/EntityRegistry.h>
-#include "ShadowApplication.h"
+#include "Core/ShadowApplication.h"
 
 
 

@@ -124,7 +124,7 @@ ShadowWorld* AssetLoader::LoadWorld(std::string name) {
         for (auto i : worldElement->properties.find("Maps")->second->properties) {
             auto layerElement = i.second;
 
-            auto map = new WorldMap(world);
+            auto map = new LevelMap(world);
 
             //map->name = layerElement->properties.find("Name")->second->value;
 			map->name = layerElement->GetStringProperty("Name");
@@ -172,7 +172,7 @@ ShadowWorld* AssetLoader::LoadAsset<ShadowWorld>(std::string name)
 		{
 			auto layerElement = i.second;
 
-			auto map = new WorldMap(world);
+			auto map = new LevelMap(world);
 
 			//map->name = layerElement->properties.find("Name")->second->value;
 			map->name = layerElement->GetStringProperty("Name");
