@@ -16,6 +16,7 @@
 #include "ShadowRenderer/Renderer.h"
 
 #include "../TestRenderer.h"
+#include "ShadowScene/SceneManager.h"
 
 
 ShadowApplication* ShadowApplication::instance = nullptr;
@@ -39,6 +40,7 @@ void ShadowApplication::Init()
 	moduleManager.PushModule(new ImGuiModule());
 	moduleManager.PushModule(new ShadowInput::ShadowActionSystem());
 	moduleManager.PushModule(new Debug());
+	moduleManager.PushModule(new SceneManager());
 
 	moduleManager.Init();
 

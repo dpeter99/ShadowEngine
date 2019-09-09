@@ -25,7 +25,9 @@ namespace ShadowEntity
 
 		virtual void LateUpdate();
 
-		virtual void Draw();
+		virtual void Render();
+
+		virtual  void LateRender();
 
 		friend std::ostream& operator<<(std::ostream& os, const Entity& dt);
 	};
