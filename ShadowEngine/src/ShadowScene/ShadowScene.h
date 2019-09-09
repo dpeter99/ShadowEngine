@@ -9,5 +9,6 @@ class ShadowScene : public SHObject
 public:
 		std::list<ShadowEntity::Entity> entities_;
 		
+		//Main Camera ref
 };
 

@@ -22,7 +22,11 @@ void Camera::SetupOrthographic()
 	float height = ShadowApplication::Get().GetWindow().Height;
 	float width = ShadowApplication::Get().GetWindow().Width;
 	
-	m_ProjectionMatrix = glm::mat4(glm::ortho(-1.6f, 1.6f, -0.9f, 0.9f, -1.0f, 10.0f));
+	float vertical = (SceneHeight / 2);
+	float horizontal = width / height * (SceneHeight / 2);
+
+	//m_ProjectionMatrix = glm::mat4(glm::ortho(-1.6f, 1.6f, -0.9f, 0.9f, -1.0f, 10.0f));
+	m_ProjectionMatrix = glm::mat4(glm::ortho(-horizontal, horizontal, -vertical, vertical, -1.0f, 10.0f));
 	m_ViewMatrix = glm::mat4(1.0f);
 	m_ViewProjectionMatrix = m_ProjectionMatrix * m_ViewMatrix;
 

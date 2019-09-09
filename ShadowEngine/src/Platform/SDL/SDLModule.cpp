@@ -21,7 +21,7 @@ void SDLModule::Init()
 		//return false;
 	}
 
-	ShadowApplication::Get().SetWindow(new ShadowWindow(600, 300));
+	ShadowApplication::Get().SetWindow(new ShadowWindow(1000, 600));
 }
 
 SDLModule::SDLModule()

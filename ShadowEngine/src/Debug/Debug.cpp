@@ -64,7 +64,7 @@ void Debug::ActionDebug()
 
 void Debug::OnGui()
 {
-	ImGui::ShowDemoWindow();
+	//ImGui::ShowDemoWindow();
 
 	ImGui::Begin("Time", &active, ImGuiWindowFlags_MenuBar);
 

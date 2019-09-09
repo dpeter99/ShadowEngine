@@ -79,14 +79,10 @@ void ImGuiModule::LateRender()
 	ImGui_ImplSDL2_NewFrame(ShadowApplication::Get().GetWindow().winPtr);
 	ImGui::NewFrame();
 
-	static bool show = true;
-	//ImGui::ShowDemoWindow(&show);
 	for (auto gui_call : guiCalls)
 	{
 		gui_call->OnGui();
 	}
-
-	
 
 	ImGui::Render();
 	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
