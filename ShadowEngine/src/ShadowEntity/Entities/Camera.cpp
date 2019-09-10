@@ -19,8 +19,8 @@ void Camera::SetupOrthographic()
 {
 	float SceneHeight = 2;
 	
-	int height = ShadowApplication::Get().GetWindow().Height;
-	int width = ShadowApplication::Get().GetWindow().Width;
+	float height = ShadowApplication::Get().GetWindow().Height;
+	float width = ShadowApplication::Get().GetWindow().Width;
 	
 	float vertical = (SceneHeight / 2);
 	float horizontal = width / height * (SceneHeight / 2);

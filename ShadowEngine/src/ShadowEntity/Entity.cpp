@@ -22,7 +22,11 @@ namespace ShadowEntity
 	{
 	}
 
-	void Entity::Draw()
+	void Entity::Render()
+	{
+	}
+
+	void Entity::LateRender()
 	{
 	}
 
@@ -31,11 +35,9 @@ namespace ShadowEntity
 		throw "The base entity cannot be instantiated";
 	}
 
-	std::string Entity::id = "Base";
-
 	std::ostream& operator<<(std::ostream& os, const Entity& dt)
 	{
-		os << dt.id;
+		os << dt.GetType();
 		return os;
 	}
 

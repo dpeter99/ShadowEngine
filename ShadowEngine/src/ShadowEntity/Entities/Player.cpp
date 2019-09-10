@@ -17,7 +17,7 @@ namespace ShadowEntity
 	}
 	*/
 
-	void Player::Draw()
+	void Player::Render()
 	{
 		std::cout << "Player";
 	}

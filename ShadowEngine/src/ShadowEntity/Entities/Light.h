@@ -12,7 +12,7 @@ class Light : public ShadowEntity::Entity
 SHADOW_FUNC_DEC(Light)
 
 public:
-	void Draw() override;
+	void Render() override;
 };
 
 

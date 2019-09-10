@@ -5,6 +5,8 @@
 
 #include "EntityBase.h"
 
+class ShadowScene;
+
 namespace ShadowEntity 
 {
 	class Entity : public SHObject
@@ -13,9 +15,9 @@ namespace ShadowEntity
 		
 	public:
 
-		static std::string id;
+		ShadowEngine::Ref<ShadowScene> scene;
 
-		//static std::string Register();
+
 	public:
 		virtual Entity* Create();
 
@@ -28,6 +30,9 @@ namespace ShadowEntity
 		virtual void Render();
 
 		virtual  void LateRender();
+
+	public:
+		void SetScene(ShadowScene* scene);
 
 		friend std::ostream& operator<<(std::ostream& os, const Entity& dt);
 	};

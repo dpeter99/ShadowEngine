@@ -17,7 +17,7 @@ namespace ShadowEntity
 
 		Entity* Create() override;
 
-		void Draw() override;
+		void Render() override;
 	};
 }
 

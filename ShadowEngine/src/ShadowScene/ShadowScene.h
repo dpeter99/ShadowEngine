@@ -27,6 +27,7 @@ public:
 	void AddNewInstance(_Types&&... _Args)
 	{
 		auto ent = make_shared <T>(_Args);
+		ent->SetScene(this);
 		entities_.push_back(ent);
 	}
 };

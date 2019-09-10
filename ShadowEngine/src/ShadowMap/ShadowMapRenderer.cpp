@@ -22,6 +22,6 @@ void ShadowMapRenderer::RenderMap(ShadowMapChunk& map)
 
 	for (auto i : map.entities)
 	{
-		i->Draw();
+		i->Render();
 	}
 }

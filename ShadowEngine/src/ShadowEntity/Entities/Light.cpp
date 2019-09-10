@@ -9,7 +9,7 @@
 
 SHADOW_FUNC_IMPL(Light)
 
-void Light::Draw()
+void Light::Render()
 {
 	std::cout << "Light";
 }
