@@ -32,6 +32,7 @@ group "Dependencies"
 	
 	include "ShadowEngineBuild/dependencies/TiledSharp"
 
+group ""
 
 project "ShadowEngine"
 	location "ShadowEngine"
@@ -117,61 +118,6 @@ project "ShadowEngine"
 		runtime "Release"
 		optimize "On"
 
-
-
-
-
-project "ShadowEngineBuild"
-	location "ShadowEngineBuild"
-	kind "ConsoleApp"
-	language "C#"
-	
-
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
-
-	files
-	{
-		"%{prj.name}/src/**.cs",
-	}
-
-	links{
-		"System.Xml.Linq",
-		"TiledSharp",
-	}
-	
-
-	excludes { "**/bin/**", "**/obj/**" } 
-
-	includedirs
-	{
-		"%{prj.name}",
-	}
-
-	filter "system:windows"
-		systemversion "latest"
-
-		defines
-		{
-			"SE_WINDOWS"
-		}
-
-	filter "configurations:Debug"
-		defines "HZ_DEBUG"
-		runtime "Debug"
-		symbols "On"
-
-	filter "configurations:Release"
-		defines "HZ_RELEASE"
-		runtime "Release"
-		optimize "On"
-
-	filter "configurations:Dist"
-		defines "HZ_DIST"
-		runtime "Release"
-		optimize "On"
-
-
 project "DemoGame"
 	location "DemoGame"
 	kind "Utility"
@@ -191,6 +137,14 @@ project "DemoGame"
 		"%{wks.location}bin/"..outputdir.."/ShadowEngineBuild/ShadowEngineBuild.exe A %{prj.location}/Resources ",
 		--"echo %{prj.location}"
 	}
+
+externalproject "ShadowEngineBuild"
+   location "ShadowEngineBuild"
+   uuid "D11098AF-3D27-9645-869E-2167F2F366CD"
+   kind "ConsoleApp"
+   language "C#"
+
+
 
 project "Planning"
 	location "Planning"

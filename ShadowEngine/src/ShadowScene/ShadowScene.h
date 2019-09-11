@@ -10,7 +10,7 @@ class ShadowScene : public SHObject, public std::enable_shared_from_this<ShadowS
 	SHObject_Base(ShadowScene)
 
 public:
-	std::list<ShadowEngine::Ref<ShadowEntity::Entity>> entities_;
+	std::list<ShadowEngine::Scope<ShadowEntity::Entity>> entities_;
 
 	//Main Camera ref
 	Camera* mainCamera;
