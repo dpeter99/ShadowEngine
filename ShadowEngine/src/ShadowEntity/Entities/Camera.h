@@ -31,6 +31,7 @@ private:
 	glm::mat4 m_ViewProjectionMatrix;
 
 public:
+	void Init() override;
 	
 };
 

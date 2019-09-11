@@ -17,6 +17,7 @@
 
 #include "../TestRenderer.h"
 #include "ShadowScene/SceneManager.h"
+#include "ShadowScene/TestScene.h"
 
 
 ShadowApplication* ShadowApplication::instance = nullptr;
@@ -57,6 +58,9 @@ void ShadowApplication::Start()
 
 	auto& renderer = moduleManager.GetModuleByType<ShadowRenderer::Renderer>();
 
+	auto& scenemg = moduleManager.GetModuleByType<SceneManager>();
+	scenemg.LoadScene(new TestScene());
+
 	TestRenderer test;
 	
 	Camera w_camera(Camera::Orthographic);
@@ -65,14 +69,16 @@ void ShadowApplication::Start()
 	{
 		Time::UpdateTime();
 
-		renderer.BeginScene(w_camera);
+		renderer.BeginScene(*scenemg.GetActiveScene()->mainCamera);
 
 		ShadowEventSystem::ShadowEventManager::PollEvents();
 		ShadowEventSystem::ShadowEventManager::ProcessEvents();
 
 		moduleManager.Update();
 
-		test.Update();
+		//test.Update();
+
+		moduleManager.Render();
 
 		moduleManager.LateRender();
 		

@@ -3,8 +3,9 @@
 
 #include "Core/SHObject.h"
 #include "ShadowEntity/Entity.h"
+#include "ShadowEntity/Entities/Camera.h"
 
-class ShadowScene : public SHObject
+class ShadowScene : public SHObject, public std::enable_shared_from_this<ShadowScene>
 {
 	SHObject_Base(ShadowScene)
 
@@ -12,6 +13,7 @@ public:
 	std::list<ShadowEngine::Ref<ShadowEntity::Entity>> entities_;
 
 	//Main Camera ref
+	Camera* mainCamera;
 
 	virtual void Init();
 
@@ -26,7 +28,7 @@ public:
 	template<class T, class... _Types>
 	void AddNewInstance(_Types&&... _Args)
 	{
-		auto ent = make_shared <T>(_Args);
+		ShadowEngine::Ref<T> ent = std::make_unique<T>(_Args...);
 		ent->SetScene(this);
 		entities_.push_back(ent);
 	}

@@ -6,7 +6,7 @@
 
 class SceneManager : public ShadowModule
 {
-	ShadowScene* activeScene;
+	ShadowEngine::Scope<ShadowScene> activeScene;
 
 	
 public:
@@ -20,5 +20,7 @@ public:
 
 	void LoadEmptyScene();
 	void LoadScene(ShadowScene* scene);
+
+	ShadowEngine::Scope<ShadowScene>& GetActiveScene();
 };
 

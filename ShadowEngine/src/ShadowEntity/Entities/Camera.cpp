@@ -3,6 +3,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include "Core/ShadowApplication.h"
+#include "ShadowScene/ShadowScene.h"
 
 void Camera::TransformChanged()
 {
@@ -37,4 +38,11 @@ void Camera::RecalculateViewMatrix()
 {
 	m_ViewMatrix = glm::inverse(transform.GetTransformMatrix());
 	m_ViewProjectionMatrix = m_ProjectionMatrix * m_ViewMatrix;
+}
+
+void Camera::Init()
+{
+	ShadowEntity::Entity::Init();
+	scene->mainCamera = this;
+	
 }

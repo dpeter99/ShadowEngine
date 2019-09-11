@@ -15,12 +15,14 @@ namespace ShadowEntity
 		
 	public:
 
-		ShadowEngine::Ref<ShadowScene> scene;
+		ShadowScene* scene;
 
 
 	public:
 		virtual Entity* Create();
 
+		virtual  void Init();
+		
 		virtual void Start();
 
 		virtual void Update();
@@ -32,7 +34,7 @@ namespace ShadowEntity
 		virtual  void LateRender();
 
 	public:
-		void SetScene(ShadowScene* scene);
+		void SetScene(ShadowScene* se);
 
 		friend std::ostream& operator<<(std::ostream& os, const Entity& dt);
 	};

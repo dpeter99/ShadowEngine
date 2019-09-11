@@ -30,9 +30,18 @@ namespace ShadowEntity
 	{
 	}
 
+	void Entity::SetScene(ShadowScene* se)
+	{
+		this->scene = se;
+	}
+
 	Entity* Entity::Create()
 	{
 		throw "The base entity cannot be instantiated";
+	}
+
+	void Entity::Init()
+	{
 	}
 
 	std::ostream& operator<<(std::ostream& os, const Entity& dt)

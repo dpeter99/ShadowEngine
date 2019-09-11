@@ -56,3 +56,11 @@ void ShadowModuleManager::LateRender()
 		module->LateRender();
 	}
 }
+
+void ShadowModuleManager::Render()
+{
+	for (auto module : modules)
+	{
+		module->Render();
+	}
+}

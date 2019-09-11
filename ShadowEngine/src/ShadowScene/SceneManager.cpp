@@ -10,6 +10,11 @@ void SceneManager::Update()
 {
 }
 
+ShadowEngine::Scope<ShadowScene>& SceneManager::GetActiveScene()
+{
+	return activeScene;
+}
+
 void SceneManager::LoadEmptyScene()
 {
 	if(activeScene != NULL)
@@ -17,15 +22,17 @@ void SceneManager::LoadEmptyScene()
 		SH_CORE_CRITICAL("Scene wasn't unloaded.");
 	}
 
-	activeScene = new ShadowScene();
+	activeScene = std::make_unique<ShadowScene>();
 }
 
-void SceneManager::LoadScene(ShadowScene* scene)
+void SceneManager::LoadScene(std::unique_ptr<ShadowScene> scene)
 {
 	if (activeScene != NULL)
 	{
-		SH_CORE_CRITICAL("Scene wasn't unloaded.");
+		//SH_CORE_CRITICAL("Scene wasn't unloaded.");
 	}
 	
+	//activeScene.reset(scene);
+
 	activeScene = scene;
 }
