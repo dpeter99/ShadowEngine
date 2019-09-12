@@ -3,7 +3,7 @@
 
 void ShadowScene::Start()
 {
-	for(auto entity: entities_)
+	for(auto& entity: entities_)
 	{
 		entity->Start();
 	}
@@ -11,7 +11,7 @@ void ShadowScene::Start()
 
 void ShadowScene::Update()
 {
-	for (auto entity : entities_)
+	for (auto& entity : entities_)
 	{
 		entity->Update();
 	}
@@ -19,7 +19,7 @@ void ShadowScene::Update()
 
 void ShadowScene::LateUpdate()
 {
-	for (auto entity : entities_)
+	for (auto& entity : entities_)
 	{
 		entity->LateUpdate();
 	}
@@ -27,7 +27,7 @@ void ShadowScene::LateUpdate()
 
 void ShadowScene::Render()
 {
-	for (auto entity : entities_)
+	for (auto& entity : entities_)
 	{
 		entity->Render();
 	}
@@ -35,7 +35,7 @@ void ShadowScene::Render()
 
 void ShadowScene::LateRender()
 {
-	for (auto entity : entities_)
+	for (auto& entity : entities_)
 	{
 		entity->LateRender();
 	}

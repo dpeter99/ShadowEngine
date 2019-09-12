@@ -10,7 +10,7 @@ class ShadowScene : public SHObject, public std::enable_shared_from_this<ShadowS
 	SHObject_Base(ShadowScene)
 
 public:
-	std::list<ShadowEngine::Scope<ShadowEntity::Entity>> entities_;
+	std::vector<ShadowEngine::Scope<ShadowEntity::Entity>> entities_;
 
 	//Main Camera ref
 	Camera* mainCamera;
@@ -27,10 +27,8 @@ public:
 
 	template<class T, class... _Types>
 	void AddNewInstance(_Types&&... _Args)
-	{
-		ShadowEngine::Ref<T> ent = std::make_unique<T>(_Args...);
-		ent->SetScene(this);
-		entities_.push_back(ent);
+	{	
+		entities_.push_back(std::make_shared<T>(this));
 	}
 };
 

@@ -10,6 +10,8 @@ class SceneManager : public ShadowModule
 
 	
 public:
+	SceneManager();
+
 	std::string GetName() override { return "SceneManager"; };
 	
 	void Init() override;
