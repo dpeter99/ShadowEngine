@@ -8,7 +8,7 @@
 
 namespace ShadowEventSystem {
 
-	class ShadowEventManager : public ShadowModule
+	class ShadowEventManager : public ShadowEngine::ShadowModule
 	{
 		static ShadowEventManager* instance;
 

@@ -4,25 +4,30 @@
 #include "ShadowScene/ShadowScene.h"
 //Holds the reference to the active scene
 
-class SceneManager : public ShadowModule
-{
-	ShadowEngine::Scope<ShadowScene> activeScene;
+namespace ShadowScene {
 
-	
-public:
-	SceneManager();
+	class SceneManager : public ShadowEngine::ShadowModule
+	{
+		SHObject_Base(SceneManager)
 
-	std::string GetName() override { return "SceneManager"; };
-	
-	void Init() override;
-	void Update() override;
+			ShadowEngine::Scope<ShadowScene> activeScene;
 
-	void Render() override {};
-	void LateRender() override {};
 
-	void LoadEmptyScene();
-	void LoadScene(ShadowScene* scene);
+	public:
+		SceneManager();
 
-	ShadowEngine::Scope<ShadowScene>& GetActiveScene();
-};
+		std::string GetName() override { return "SceneManager"; };
 
+		void Init() override;
+		void Update() override;
+
+		void Render() override {};
+		void LateRender() override {};
+
+		void LoadEmptyScene();
+		void LoadScene(ShadowScene* scene);
+
+		ShadowEngine::Scope<ShadowScene>& GetActiveScene();
+	};
+
+}

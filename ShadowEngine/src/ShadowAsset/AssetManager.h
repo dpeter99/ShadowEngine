@@ -7,7 +7,7 @@
 
 //Responsible for loading and unloading assets at runtime
 
-class AssetManager
+class AssetManager : public ShadowEngine::ShadowModule
 {
 	//Singletom object ShadowEngine::Reference
 private:

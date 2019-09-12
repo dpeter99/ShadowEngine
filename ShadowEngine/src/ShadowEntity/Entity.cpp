@@ -35,7 +35,17 @@ namespace ShadowEntity
 		this->scene = se;
 	}
 
-	Entity* Entity::Create()
+	Entity::Entity()
+	{
+
+	}
+
+	Entity::Entity(ShadowScene* scene)
+	{
+		this->scene = scene;
+	}
+
+	Entity* Entity::Create(ShadowScene* scene)
 	{
 		throw "The base entity cannot be instantiated";
 	}

@@ -6,16 +6,17 @@
 #define SHADOWENGINE_PLAYER_H
 
 #include "../EntityRegistry.h"
-#include "../Entity.h"
+#include "ShadowEntity/SceneEntity.h"
 
 namespace ShadowEntity
 {
-	class Player : public Entity
+	class Player : public ShadowEntity::SceneEntity
 	{
+		SHObject_Base(Player)
+		Entity_Base(Player, ShadowEntity::SceneEntity)
+
 	public:
 		static std::string id;
-
-		Entity* Create() override;
 
 		void Render() override;
 	};

@@ -41,6 +41,7 @@ namespace ShadowEntity
 
 	Entity* EntityRegistry::InstaciateEntity(std::string id)
 	{
-		return this->EntityRegistryMap[id]->Create();
+		//return this->EntityRegistryMap[id]->Create();
+		return nullptr;
 	}
 }

@@ -3,6 +3,8 @@
 
 class TestScene : public ShadowScene
 {
+	virtual ~TestScene() = default;
+
 	void Init() override;
 };
 

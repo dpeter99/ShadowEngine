@@ -19,7 +19,6 @@ class TestRenderer
 
 	ShadowEngine::Ref<ShadowRenderer::Texture2D> m_Texture, m_ChernoLogoTexture;
 
-	Camera m_Camera;
 	glm::vec3 m_CameraPosition;
 	float m_CameraMoveSpeed = 5.0f;
 

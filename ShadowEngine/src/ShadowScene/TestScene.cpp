@@ -4,5 +4,9 @@
 
 void TestScene::Init()
 {
-	AddNewInstance<Camera>(Camera::CameraType::Orthographic);
+	Camera* c = AddNewInstance<Camera>();
+	c->SetupOrthographic();
+
+
+	ShadowScene::Init();
 }

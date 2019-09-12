@@ -2,9 +2,9 @@
 
 #include "ShadowModuleManager.h"
 
-ShadowModuleManager* ShadowModuleManager::instance = nullptr;
+ShadowEngine::ShadowModuleManager* ShadowEngine::ShadowModuleManager::instance = nullptr;
 
-ShadowModuleManager::ShadowModuleManager()
+ShadowEngine::ShadowModuleManager::ShadowModuleManager()
 {
 	if (instance != nullptr)
 	{
@@ -13,18 +13,18 @@ ShadowModuleManager::ShadowModuleManager()
 	instance = this;
 }
 
-ShadowModuleManager::~ShadowModuleManager()
+ShadowEngine::ShadowModuleManager::~ShadowModuleManager()
 {
 }
 
-void ShadowModuleManager::PushModule(ShadowModule* module)
+void ShadowEngine::ShadowModuleManager::PushModule(ShadowModule* module)
 {
 	modules.emplace_back(module);
 }
 
-ShadowModule& ShadowModuleManager::GetModule(std::string name)
+ShadowEngine::ShadowModule& ShadowEngine::ShadowModuleManager::GetModule(std::string name)
 {
-	for (auto module : modules)
+	for (auto& module : modules)
 	{
 		if (module->GetName() == name)
 			return *module;
@@ -33,33 +33,33 @@ ShadowModule& ShadowModuleManager::GetModule(std::string name)
 	//return NULL;
 }
 
-void ShadowModuleManager::Init()
+void ShadowEngine::ShadowModuleManager::Init()
 {
-	for (auto module : modules)
+	for (auto& module : modules)
 	{
 		module->Init();
 	}
 }
 
-void ShadowModuleManager::Update()
+void ShadowEngine::ShadowModuleManager::Update()
 {
-	for (auto module : modules)
+	for (auto& module : modules)
 	{
 		module->Update();
 	}
 }
 
-void ShadowModuleManager::LateRender()
+void ShadowEngine::ShadowModuleManager::LateRender()
 {
-	for (auto module : modules)
+	for (auto& module : modules)
 	{
 		module->LateRender();
 	}
 }
 
-void ShadowModuleManager::Render()
+void ShadowEngine::ShadowModuleManager::Render()
 {
-	for (auto module : modules)
+	for (auto& module : modules)
 	{
 		module->Render();
 	}

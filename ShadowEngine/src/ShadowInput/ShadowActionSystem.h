@@ -11,7 +11,7 @@ namespace ShadowInput
 	 * \brief The Action system
 	 */
 	class ShadowActionSystem :
-		public ShadowModule,
+		public ShadowEngine::ShadowModule,
 		public ShadowEventSystem::IShadowEventListener
 	{
 		

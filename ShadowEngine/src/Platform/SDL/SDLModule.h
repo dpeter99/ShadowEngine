@@ -2,28 +2,31 @@
 #include "ShadowModules/ShadowModule.h"
 #include <SDL2/SDL.h>
 
-class SDLModule : public ShadowModule
-{
-	SDL_Window* window;
-	SDL_GLContext glContext;
-	//SDL_Event sdlEvent;
+namespace SDLModule {
 
-	static SDLModule* instance;
+	class SDLModule : public ShadowEngine::ShadowModule
+	{
+		SDL_Window* window;
+		SDL_GLContext glContext;
+		//SDL_Event sdlEvent;
 
-public:
+		static SDLModule* instance;
 
-	static SDLModule& GetInstance(){ return *instance; };
+	public:
 
-	void Init() override;
+		static SDLModule& GetInstance() { return *instance; };
 
-	void Update() override {};
-	void Render() override {};
-	void LateRender() override {}; 
+		void Init() override;
 
-	std::string GetName() override { return "SDLModule"; };
+		void Update() override {};
+		void Render() override {};
+		void LateRender() override {};
 
-	SDL_GLContext& GetGlContext() { return glContext; };
+		std::string GetName() override { return "SDLModule"; };
 
-	SDLModule();
-	~SDLModule();
-};
+		SDL_GLContext& GetGlContext() { return glContext; };
+
+		SDLModule();
+		~SDLModule();
+	};
+}

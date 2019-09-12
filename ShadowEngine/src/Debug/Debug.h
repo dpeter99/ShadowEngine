@@ -5,7 +5,7 @@
 #include <map>
 
 class Debug :
-	public ShadowModule,
+	public ShadowEngine::ShadowModule,
 	public ShadowEventSystem::IShadowEventListener,
 	public IShadowImGui
 {

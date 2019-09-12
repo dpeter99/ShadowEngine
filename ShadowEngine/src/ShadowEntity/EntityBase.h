@@ -1,20 +1,20 @@
-//
-// Created by dpete on 3/4/2019.
-//
-
-#ifndef SHADOWENGINE_ENTITYBASE_H
-#define SHADOWENGINE_ENTITYBASE_H
+#pragma once
 
 
-#define SHADOW_FUNC_IMPL(Type)          \
-ShadowEntity::Entity* Type::Create() {  \
-Type* res = new Type();                 \
-return res;                             \
-}
-#define SHADOW_FUNC_DEC(Type)   \
-public:                         \
-Entity* Create() override;      \
+#define Entity_Base(Type, BaseType)		\
+public:											\
+Type(ShadowScene* scene) : BaseType(scene) {}	\
+Type() : BaseType() {}	\
+ShadowEntity::Entity* Type::Create(ShadowScene* scene) {			\
+Type* res = new Type(scene);							\
+return res;									    \
+}												\
 private:
 
-
-#endif //SHADOWENGINE_ENTITYBASE_H
+#define Entity_Base_NoCtor(Type, BaseType)		\
+public:											\
+ShadowEntity::Entity* Type::Create(ShadowScene* scene) {			\
+Type* res = new Type(scene);							\
+return res;									    \
+}												\
+private:

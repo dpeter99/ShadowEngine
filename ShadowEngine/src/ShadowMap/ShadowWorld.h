@@ -6,79 +6,83 @@
 #include "ShadowMapChunk.h"
 #include "ShadowAsset/ShadowAsset.h"
 
-//World
-// - Map
-//   - Chunk
+namespace ShadowWorld {
 
-class ShadowWorld;
+	//World
+	// - Map
+	//   - Chunk
 
-//A set of maps that are loaded together
-//Like the overworld
-//Separate Levels would be the dungeons and interiors
-class LevelMap
-{
-public:
-	//id
-	std::string id;
+	class ShadowWorld;
 
-	//name
-	std::string name;
+	//A set of maps that are loaded together
+	//Like the overworld
+	//Separate Levels would be the dungeons and interiors
+	class LevelMap
+	{
+	public:
+		//id
+		std::string id;
 
-	//prefix to the chunk files
-	std::string prefix;
+		//name
+		std::string name;
 
-	//Containing world
-	ShadowWorld* world;
+		//prefix to the chunk files
+		std::string prefix;
 
-	//List of loaded maps
-	std::list<ShadowMapChunk*> chunks;
+		//Containing world
+		ShadowWorld* world;
 
-
-	LevelMap(ShadowWorld* world);
-
-	//Update
-	//Here we get the map loader point(most cases the player pos) and check what maps we need
-	//Than load up the maps that are not yet loaded.
-	void Update(const ShadowMath::Vector2int& pos);
-
-	//Unload a chunk
-	void UnloadChunk(const ShadowMath::Vector2int& id);
-	void UnloadChunk(ShadowMapChunk* chunk);
-
-	//Load new chunks
-	void LoadChunk(const ShadowMath::Vector2int& id);
-
-	ShadowMapChunk* GetLoadedChunk(const ShadowMath::Vector2int& id);
-
-	std::string GenerateMapName(const ShadowMath::Vector2int& id) const;
-};
+		//List of loaded maps
+		std::list<ShadowMapChunk*> chunks;
 
 
-//A single World that can have many levels
-class ShadowWorld : public ShadowAsset
-{
-public:
-	//Properties #####################
-	std::string name;
-	std::string id;
+		LevelMap(ShadowWorld* world);
 
-	//Active map
-	LevelMap* activeMap;
+		//Update
+		//Here we get the map loader point(most cases the player pos) and check what maps we need
+		//Than load up the maps that are not yet loaded.
+		void Update(const ShadowMath::Vector2int& pos);
 
-	//All the maps in this World
-	std::map<std::string, LevelMap*> maps;
+		//Unload a chunk
+		void UnloadChunk(const ShadowMath::Vector2int& id);
+		void UnloadChunk(ShadowMapChunk* chunk);
 
-	//World settings
+		//Load new chunks
+		void LoadChunk(const ShadowMath::Vector2int& id);
 
-	int chunkSizeX;
-	int chunkSizeY;
-	//What map files are in this world
-	//where they are placed
+		ShadowMapChunk* GetLoadedChunk(const ShadowMath::Vector2int& id);
 
-	// Functions #####################
+		std::string GenerateMapName(const ShadowMath::Vector2int& id) const;
+	};
 
-	//Update the system to check if new maps need to be loaded
-	void Update(const ShadowMath::Vector2int& pos);
 
-	void SetActiveMap(std::string name);
-};
+	//A single World that can have many levels
+	class ShadowWorld : public ShadowAsset
+	{
+	public:
+		//Properties #####################
+		std::string name;
+		std::string id;
+
+		//Active map
+		LevelMap* activeMap;
+
+		//All the maps in this World
+		std::map<std::string, LevelMap*> maps;
+
+		//World settings
+
+		int chunkSizeX;
+		int chunkSizeY;
+		//What map files are in this world
+		//where they are placed
+
+		// Functions #####################
+
+		//Update the system to check if new maps need to be loaded
+		void Update(const ShadowMath::Vector2int& pos);
+
+		void SetActiveMap(std::string name);
+	};
+
+}

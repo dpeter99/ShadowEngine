@@ -1,43 +1,44 @@
 #pragma once
 #include  "shpch.h"
 
+namespace ShadowEngine {
 
-/**
- * \brief This is the base class for the classes that runtime runtime ShadowEngine::Reflection.
- */
-class SHObject
-{
-protected:
 	/**
-	 * \brief Generates a new UID for each call
-	 * \return Unique ID
+	 * \brief This is the base class for the classes that runtime runtime ShadowEngine::Reflection.
 	 */
-	static uint64_t GenerateId()
+	class SHObject
 	{
-		static uint64_t count = 0;
-		return ++count;
-	}
+	protected:
+		/**
+		 * \brief Generates a new UID for each call
+		 * \return Unique ID
+		 */
+		static uint64_t GenerateId()
+		{
+			static uint64_t count = 0;
+			return ++count;
+		}
 
-public:
+	public:
+		/**
+		 * \brief Returns the top level class type name of the object
+		 * \return Class name string
+		 */
+		virtual const std::string& GetType() const = 0;
+		/**
+		 * \brief Gets the top level type ID
+		 * \return UID of the class
+		 */
+		virtual const uint64_t GetTypeId() const = 0;
+
+		virtual ~SHObject() = default;
+	};
+
+
 	/**
-	 * \brief Returns the top level class type name of the object
-	 * \return Class name string
+	 * \brief Macro to make the override functions of SHObject. This should be added in each derived class
+	 * \param type The type of the class
 	 */
-	virtual const std::string& GetType() const = 0;
-	/**
-	 * \brief Gets the top level type ID
-	 * \return UID of the class
-	 */
-	virtual const uint64_t GetTypeId() const = 0;
-
-	virtual ~SHObject() = default;
-};
-
-
-/**
- * \brief Macro to make the override functions of SHObject. This should be added in each derived class
- * \param type The type of the class
- */
 #define SHObject_Base(type)	\
 public: \
 	static const std::string& Type()				{ static const std::string t = typeid(type).name(); return t; } \
@@ -45,3 +46,5 @@ public: \
 	const std::string& GetType() const override		{ return Type();  } \
 	const uint64_t GetTypeId() const override		{ return  type::TypeId(); } \
 private:
+
+}

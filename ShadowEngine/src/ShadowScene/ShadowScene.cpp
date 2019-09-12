@@ -43,4 +43,8 @@ void ShadowScene::LateRender()
 
 void ShadowScene::Init() {
 
+	for (auto& entity : entities_)
+	{
+		entity->Init();
+	}
 }

@@ -5,7 +5,7 @@
 
 namespace ShadowInput {
 
-	class InputModifier : public SHObject
+	class InputModifier : public ShadowEngine::SHObject
 	{
 		SHObject_Base(InputModifier)
 

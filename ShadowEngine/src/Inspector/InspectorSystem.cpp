@@ -10,7 +10,7 @@ void InspectorSystem::AddInspector(std::string name, Inspector* inspector)
 	inspectors[name] = inspector;
 }
 
-void InspectorSystem::Draw(SHObject& obj)
+void InspectorSystem::Draw(ShadowEngine::SHObject& obj)
 {
 	if(inspectors.find(obj.GetType()) != inspectors.end())
 	{
@@ -19,7 +19,7 @@ void InspectorSystem::Draw(SHObject& obj)
 
 }
 
-void InspectorSystem::DrawSub(SHObject& obj)
+void InspectorSystem::DrawSub(ShadowEngine::SHObject& obj)
 {
 	ImGui::Indent();
 	Draw(obj);

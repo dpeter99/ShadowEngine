@@ -7,6 +7,9 @@
 class Camera :
 	public ShadowEntity::SceneEntity
 {
+	SHObject_Base(Camera)
+	Entity_Base(Camera, ShadowEntity::SceneEntity);
+
 public:
 	const glm::mat4& GetProjectionMatrix() const { return m_ProjectionMatrix; }
 	const glm::mat4& GetViewMatrix() const { return m_ViewMatrix; }
@@ -17,7 +20,6 @@ public:
 
 	enum CameraType { Orthographic };
 
-	Camera(CameraType t);
 	void SetupOrthographic();
 
 	CameraType type;

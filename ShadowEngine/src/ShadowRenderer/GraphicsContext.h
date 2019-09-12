@@ -1,6 +1,6 @@
 #pragma once
 #include "RendererAPI.h"
-
+#include "SDL2/SDL.h"
 
 namespace ShadowRenderer {
 
@@ -11,7 +11,5 @@ namespace ShadowRenderer {
 		virtual void SwapBuffers() = 0;
 
 		static GraphicsContext* Create(SDL_Window* window);
-	};
-
-	
+	};	
 }

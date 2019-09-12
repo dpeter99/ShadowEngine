@@ -56,27 +56,26 @@ void ShadowApplication::Start()
 	//w->Update(ShadowMath::Vector2float(0, 0));
 	//ShadowMapRenderer::RenderMap(*map);
 
-	auto& renderer = moduleManager.GetModuleByType<ShadowRenderer::Renderer>();
+	auto renderer = moduleManager.GetModuleByType<ShadowRenderer::Renderer>();
 
-	auto& scenemg = moduleManager.GetModuleByType<SceneManager>();
-	scenemg.LoadScene(new TestScene());
+	auto scenemg = moduleManager.GetModuleByType<SceneManager>();
+	scenemg->LoadScene(new TestScene());
+	
 
 	TestRenderer test;
-	
-	Camera w_camera(Camera::Orthographic);
 	
 	while (running)
 	{
 		Time::UpdateTime();
 
-		renderer.BeginScene(*scenemg.GetActiveScene()->mainCamera);
+		renderer->BeginScene(*scenemg->GetActiveScene()->mainCamera);
 
 		ShadowEventSystem::ShadowEventManager::PollEvents();
 		ShadowEventSystem::ShadowEventManager::ProcessEvents();
 
 		moduleManager.Update();
 
-		//test.Update();
+		test.Update();
 
 		moduleManager.Render();
 

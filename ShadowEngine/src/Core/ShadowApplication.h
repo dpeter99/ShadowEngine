@@ -3,29 +3,32 @@
 #include "ShadowAsset/AssetManager.h"
 #include "ShadowWindow.h"
 
-class ShadowApplication
-{
-	static ShadowApplication* instance;
+namespace ShadowEngine {
 
-	ShadowWindow* window_;
+	class ShadowApplication
+	{
+		static ShadowApplication* instance;
 
-	ShadowModuleManager moduleManager;
+		ShadowWindow* window_;
 
-	AssetManager asset;
+		ShadowEngine::ShadowModuleManager moduleManager;
 
-	bool running = true;
+		//AssetManager asset;
 
-public:
-	ShadowApplication();
-	virtual ~ShadowApplication();
+		bool running = true;
 
-	static ShadowApplication& Get() { return *instance; };
+	public:
+		ShadowApplication();
+		virtual ~ShadowApplication();
 
-	ShadowWindow& GetWindow() const { return *window_; };
-	void SetWindow(ShadowWindow* w) { window_ = w; }
+		static ShadowApplication& Get() { return *instance; };
 
-	ShadowModuleManager& GetModuleManager() { return moduleManager; };
+		ShadowWindow& GetWindow() const { return *window_; };
+		void SetWindow(ShadowWindow* w) { window_ = w; }
 
-	void Init();
-	void Start();
-};
+		ShadowEngine::ShadowModuleManager& GetModuleManager() { return moduleManager; };
+
+		void Init();
+		void Start();
+	};
+}

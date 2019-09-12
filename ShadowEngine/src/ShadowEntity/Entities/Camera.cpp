@@ -10,14 +10,10 @@ void Camera::TransformChanged()
 	RecalculateViewMatrix();
 }
 
-Camera::Camera(CameraType t) : type(t)
-{
-	if (t == CameraType::Orthographic)
-		SetupOrthographic();
-}
-
 void Camera::SetupOrthographic()
 {
+	type = CameraType::Orthographic;
+
 	float SceneHeight = 2;
 	
 	float height = ShadowApplication::Get().GetWindow().Height;

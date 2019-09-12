@@ -13,7 +13,7 @@ class Camera;
 
 namespace ShadowRenderer {
 
-	class Renderer : public ShadowModule
+	class Renderer : public ShadowEngine::ShadowModule
 	{
 		SHObject_Base(Renderer)
 		

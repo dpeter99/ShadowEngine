@@ -5,30 +5,40 @@
 #include "ShadowEntity/Entity.h"
 #include "ShadowEntity/Entities/Camera.h"
 
-class ShadowScene : public SHObject, public std::enable_shared_from_this<ShadowScene>
-{
-	SHObject_Base(ShadowScene)
+namespace ShadowScene {
 
-public:
-	std::vector<ShadowEngine::Scope<ShadowEntity::Entity>> entities_;
+	class ShadowScene : public ShadowEngine::SHObject, public std::enable_shared_from_this<ShadowScene>
+	{
+		SHObject_Base(ShadowScene)
 
-	//Main Camera ref
-	Camera* mainCamera;
+	public:
+		std::vector<ShadowEngine::Scope<ShadowEntity::Entity>> entities_;
 
-	virtual void Init();
+		//Main Camera ref
+		Camera* mainCamera;
 
-	//Functions called for each entity
-	virtual void Start();
-	virtual void Update();
-	virtual void LateUpdate();
+		ShadowScene() : mainCamera(nullptr) {
 
-	virtual void Render();
-	virtual void LateRender();
+		}
+		virtual ~ShadowScene() = default;
 
-	template<class T, class... _Types>
-	void AddNewInstance(_Types&&... _Args)
-	{	
-		entities_.push_back(std::make_shared<T>(this));
-	}
-};
 
+		virtual void Init();
+
+		//Functions called for each entity
+		virtual void Start();
+		virtual void Update();
+		virtual void LateUpdate();
+
+		virtual void Render();
+		virtual void LateRender();
+
+		template<class T>
+		T* AddNewInstance()
+		{
+			entities_.push_back(std::make_unique<T>(this));
+			return dynamic_cast<T*>(entities_.back().get());
+		}
+	};
+
+}

@@ -9,14 +9,16 @@
 
 namespace ShadowEngine {
 
-	class Log : public ShadowModule
+	class Log : public ShadowEngine::ShadowModule
 	{
+		SHObject_Base(Log)
+
 	public:
 		void Init() override;
 		void Update() override {};
 		void LateRender() override {};
 		void Render() override {};
-		std::string GetName() { return "Log"; }
+		std::string GetName() override { return "Log"; }
 
 		inline static std::shared_ptr<spdlog::logger>& GetCoreLogger() { return s_CoreLogger; }
 		inline static std::shared_ptr<spdlog::logger>& GetClientLogger() { return s_ClientLogger; }

@@ -7,7 +7,7 @@ namespace ShadowInput
 	/**
 	 * \brief Interface for the Bindings.
 	 */
-	class IInputBinding : public SHObject
+	class IInputBinding : public ShadowEngine::SHObject
 	{
 		SHObject_Base(IInputBinding)
 

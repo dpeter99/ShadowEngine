@@ -3,17 +3,20 @@
 #include <map>
 #include "Inspector.h"
 
-class InspectorSystem
-{
+namespace Inspector {
 
-	static std::map<std::string, Inspector*> inspectors;
+	class InspectorSystem
+	{
 
-public:
+		static std::map<std::string, Inspector*> inspectors;
 
-	static void AddInspector(std::string name, Inspector* inspector);
+	public:
 
-	static void Draw(SHObject& obj);
+		static void AddInspector(std::string name, Inspector* inspector);
 
-	static void DrawSub(SHObject& obj);
-};
+		static void Draw(ShadowEngine::SHObject& obj);
 
+		static void DrawSub(ShadowEngine::SHObject& obj);
+	};
+
+}

@@ -5,7 +5,7 @@
 
 #include <glm/gtx/quaternion.hpp>
 
-TestRenderer::TestRenderer() :m_Camera(Camera::Orthographic), m_CameraPosition(0.0f) {
+TestRenderer::TestRenderer() : m_CameraPosition(0.0f) {
 
 	m_VertexArray.reset(ShadowRenderer::VertexArray::Create());
 

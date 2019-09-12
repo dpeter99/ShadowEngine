@@ -1,7 +1,6 @@
 #include "shpch.h"
 
 #include "Debug.h"
-#include <iostream>
 #include "ShadowEvents/ShadowEventManager.h"
 #include "ImGui/ImGuiModule.h"
 #include "imgui.h"
@@ -74,18 +73,18 @@ void Debug::OnGui()
 
 	ImGui::End();
 
-	// Create a window called "My First Tool", with a menu bar.
 	ImGui::Begin("Active Modules", &active, ImGuiWindowFlags_MenuBar);
 
-	ShadowModuleManager* m = ShadowModuleManager::instance;
+	ShadowEngine::ShadowModuleManager* m = ShadowEngine::ShadowModuleManager::instance;
 
-	//ImGui::BeginChild("Scrolling");
+	
+	
 	ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.4f, 1.0f), "Active Modules:");
-	for (auto module : m->modules)
+	for (auto& module : m->modules)
 	{
 		ImGui::Text("%s", module->GetName().c_str());
 	}
-	//ImGui::EndChild();
+	
 
 	ImGui::End();
 

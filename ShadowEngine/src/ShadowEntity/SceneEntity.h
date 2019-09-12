@@ -12,12 +12,15 @@ namespace ShadowEntity {
 		public Entity
 	{
 		SHObject_Base(SceneEntity)
+		Entity_Base_NoCtor(SceneEntity,Entity)
 
-			void virtual TransformChanged() = 0;
+		void virtual TransformChanged() {};
 
 
 	public:
-		SceneEntity()
+		SceneEntity():Entity(){}
+
+		SceneEntity(ShadowScene* scene) : Entity(scene)
 		{
 			transform.transformChanged += std::bind(&SceneEntity::TransformChanged, this);
 		};

@@ -5,23 +5,26 @@
 #include "Inspector/Inspector.h"
 #include "imgui.h"
 
-class KeyboardBindingInspector :
-	public Inspector
+namespace ShadowInput {
 
-{
-	SHObject_Base(KeyboardBindingInspector)
+	class KeyboardBindingInspector :
+		public Inspector
 
-
-public:
-	void Draw(SHObject& obj)
 	{
-		auto& keyboard = dynamic_cast<ShadowInput::KeyboardBinding&>(obj);
-		ImGui::Text("KeyboardBinding: %c", SDL_GetKeyFromScancode((SDL_Scancode)keyboard.GetKeycode()));
+		SHObject_Base(KeyboardBindingInspector)
 
-		for (int i = 0; i < keyboard.ModifierCount(); ++i)
+
+	public:
+		void Draw(SHObject& obj)
 		{
-			InspectorSystem::DrawSub(keyboard.GetModifier(i));
+			auto& keyboard = dynamic_cast<ShadowInput::KeyboardBinding&>(obj);
+			ImGui::Text("KeyboardBinding: %c", SDL_GetKeyFromScancode((SDL_Scancode)keyboard.GetKeycode()));
+
+			for (int i = 0; i < keyboard.ModifierCount(); ++i)
+			{
+				InspectorSystem::DrawSub(keyboard.GetModifier(i));
+			}
+
 		}
-		
-	}
-};
+	};
+}

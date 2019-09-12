@@ -1,6 +1,8 @@
 #include "shpch.h"
 #include "SceneManager.h"
 
+
+
 SceneManager::SceneManager() : activeScene(std::make_unique<ShadowScene>())
 {
 
@@ -27,7 +29,7 @@ void SceneManager::LoadEmptyScene()
 		SH_CORE_CRITICAL("Scene wasn't unloaded.");
 	}
 
-	activeScene = std::make_unique<ShadowScene>();
+	//activeScene = std::make_unique<ShadowScene>();
 }
 
 void SceneManager::LoadScene(ShadowScene* scene)
@@ -38,4 +40,8 @@ void SceneManager::LoadScene(ShadowScene* scene)
 	}
 	
 	activeScene.reset(scene);
+
+	scene->Init();
+
+	SH_CORE_TRACE("SceneLoaded");
 }

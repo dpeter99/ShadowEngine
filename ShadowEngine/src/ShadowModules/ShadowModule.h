@@ -1,22 +1,25 @@
 #pragma once
-#include "ShadowEvents/ShadowEvent.h"
+#include "Core/SHObject.h"
 
-class ShadowModule : public SHObject
-{
-	SHObject_Base(ShadowModule)
-	
-public:
+namespace ShadowEngine {
 
-	virtual void Init() = 0;
+	class ShadowModule : public SHObject
+	{
+		SHObject_Base(ShadowModule)
 
-	virtual void Update() = 0;
+	public:
 
-	virtual void Render() = 0;
+		virtual void Init() = 0;
 
-	virtual void LateRender() = 0;
+		virtual void Update() = 0;
 
-	virtual std::string GetName() = 0;
+		virtual void Render() = 0;
 
-	ShadowModule();
-	virtual ~ShadowModule();
-};
+		virtual void LateRender() = 0;
+
+		virtual std::string GetName() = 0;
+
+		ShadowModule();
+		virtual ~ShadowModule();
+	};
+}

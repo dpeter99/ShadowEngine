@@ -10,10 +10,17 @@
 #include <ShadowEntity/EntityRegistry.h>
 #include "Core/ShadowApplication.h"
 
-
+#include "ShadowScene/TestScene.h"
 
 int main(int argc, char* argv[])
 {
+	std::unique_ptr<ShadowScene> a = std::make_unique<ShadowScene>();
+
+	ShadowScene* i = new TestScene();
+
+	a.reset(i);
+
+
 	ShadowEntity::EntityRegistry registry;
 	
 

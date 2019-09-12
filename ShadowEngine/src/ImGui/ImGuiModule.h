@@ -5,7 +5,7 @@
 #include "IShadowImGui.h"
 
 class ImGuiModule :
-	public ShadowModule, public ShadowEventSystem::IShadowEventListener
+	public ShadowEngine::ShadowModule, public ShadowEventSystem::IShadowEventListener
 {
 	static ImGuiModule* instance;
 

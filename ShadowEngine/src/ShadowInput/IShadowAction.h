@@ -7,7 +7,7 @@
 namespace ShadowInput
 {
 
-	class IShadowAction : public SHObject
+	class IShadowAction : public ShadowEngine::SHObject
 	{
 		SHObject_Base(IShadowAction)
 

@@ -9,7 +9,7 @@ class ShadowScene;
 
 namespace ShadowEntity 
 {
-	class Entity : public SHObject
+	class Entity : public ShadowEngine::SHObject
 	{
 		SHObject_Base(Entity)
 		
@@ -19,7 +19,11 @@ namespace ShadowEntity
 
 
 	public:
-		virtual Entity* Create();
+		Entity();
+
+		Entity(ShadowScene* scene);
+
+		virtual Entity* Create(ShadowScene* scene);
 
 		virtual  void Init();
 		

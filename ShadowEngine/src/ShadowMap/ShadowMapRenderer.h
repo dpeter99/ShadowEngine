@@ -5,6 +5,6 @@
 class ShadowMapRenderer
 {
 public:
-	static void RenderMap(ShadowMapChunk& map);
+	static void RenderMap(ShadowWorld::ShadowMapChunk& map);
 };
 
