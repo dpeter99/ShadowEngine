@@ -14,17 +14,10 @@
 
 int main(int argc, char* argv[])
 {
-	std::unique_ptr<ShadowScene> a = std::make_unique<ShadowScene>();
-
-	ShadowScene* i = new TestScene();
-
-	a.reset(i);
-
-
 	ShadowEntity::EntityRegistry registry;
 	
 
-	ShadowApplication app;
+	ShadowEngine::ShadowApplication app;
 	app.Init();
 	app.Start();
 

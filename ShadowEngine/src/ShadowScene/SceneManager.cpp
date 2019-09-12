@@ -3,26 +3,26 @@
 
 
 
-SceneManager::SceneManager() : activeScene(std::make_unique<ShadowScene>())
+ShadowScene::SceneManager::SceneManager() : activeScene(std::make_unique<ShadowScene>())
 {
 
 }
 
-void SceneManager::Init()
+void ShadowScene::SceneManager::Init()
 {
 	
 }
 
-void SceneManager::Update()
+void ShadowScene::SceneManager::Update()
 {
 }
 
-ShadowEngine::Scope<ShadowScene>& SceneManager::GetActiveScene()
+ShadowEngine::Scope<ShadowScene::ShadowScene>& ShadowScene::SceneManager::GetActiveScene()
 {
 	return activeScene;
 }
 
-void SceneManager::LoadEmptyScene()
+void ShadowScene::SceneManager::LoadEmptyScene()
 {
 	if(activeScene != NULL)
 	{
@@ -32,7 +32,7 @@ void SceneManager::LoadEmptyScene()
 	//activeScene = std::make_unique<ShadowScene>();
 }
 
-void SceneManager::LoadScene(ShadowScene* scene)
+void ShadowScene::SceneManager::LoadScene(ShadowScene* scene)
 {
 	if (activeScene != NULL)
 	{

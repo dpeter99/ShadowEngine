@@ -11,7 +11,7 @@ namespace ShadowEventSystem {
 	{
 		instance = this;
 
-		IShadowEventSource* s = new SDLEventSource();
+		IShadowEventSource* s = new SDLModule::SDLEventSource();
 		AddNewEventSource(s);
 	}
 

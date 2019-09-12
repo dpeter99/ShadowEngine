@@ -33,7 +33,7 @@ namespace ShadowWorld {
 		int GetTile(ShadowMath::Vector2int pos);
 	};
 
-	class ShadowMapChunk : public ShadowAsset
+	class ShadowMapChunk : public ShadowAssets::ShadowAsset
 	{
 	public:
 		std::string name;

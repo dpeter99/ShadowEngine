@@ -5,10 +5,12 @@
 
 #include "EntityBase.h"
 
-class ShadowScene;
+
 
 namespace ShadowEntity 
 {
+	class ShadowScene;
+
 	class Entity : public ShadowEngine::SHObject
 	{
 		SHObject_Base(Entity)

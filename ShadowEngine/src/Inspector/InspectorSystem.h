@@ -3,7 +3,7 @@
 #include <map>
 #include "Inspector.h"
 
-namespace Inspector {
+namespace InspectorSystem {
 
 	class InspectorSystem
 	{

@@ -5,7 +5,7 @@
 #include "ShadowEntity/Entity.h"
 #include "ShadowEntity/Entities/Camera.h"
 
-namespace ShadowScene {
+namespace ShadowEngine::ShadowScene {
 
 	class ShadowScene : public ShadowEngine::SHObject, public std::enable_shared_from_this<ShadowScene>
 	{

@@ -20,28 +20,28 @@
 #include "ShadowScene/TestScene.h"
 
 
-ShadowApplication* ShadowApplication::instance = nullptr;
+ShadowEngine::ShadowApplication* ShadowEngine::ShadowApplication::instance = nullptr;
 
-ShadowApplication::ShadowApplication()
+ShadowEngine::ShadowApplication::ShadowApplication()
 {
 	instance = this;
 }
 
 
-ShadowApplication::~ShadowApplication()
+ShadowEngine::ShadowApplication::~ShadowApplication()
 {
 }
 
-void ShadowApplication::Init()
+void ShadowEngine::ShadowApplication::Init()
 {
 	moduleManager.PushModule(new ShadowEngine::Log());
 	moduleManager.PushModule(new ShadowEventSystem::ShadowEventManager());
-	moduleManager.PushModule(new SDLModule());
+	moduleManager.PushModule(new SDLModule::SDLModule());
 	moduleManager.PushModule(new ShadowRenderer::Renderer());
 	moduleManager.PushModule(new ImGuiModule());
 	moduleManager.PushModule(new ShadowInput::ShadowActionSystem());
 	moduleManager.PushModule(new Debug());
-	moduleManager.PushModule(new SceneManager());
+	moduleManager.PushModule(new ShadowScene::SceneManager());
 
 	moduleManager.Init();
 
@@ -49,7 +49,7 @@ void ShadowApplication::Init()
 	
 }
 
-void ShadowApplication::Start()
+void ShadowEngine::ShadowApplication::Start()
 {
 	//ShadowWorld* w = AssetManager::GetAsset<ShadowWorld>("Resources/Worlds/Default/overworld.txt");
 	//w->SetActiveMap("default");
@@ -58,7 +58,7 @@ void ShadowApplication::Start()
 
 	auto renderer = moduleManager.GetModuleByType<ShadowRenderer::Renderer>();
 
-	auto scenemg = moduleManager.GetModuleByType<SceneManager>();
+	auto scenemg = moduleManager.GetModuleByType<ShadowScene::SceneManager>();
 	scenemg->LoadScene(new TestScene());
 	
 

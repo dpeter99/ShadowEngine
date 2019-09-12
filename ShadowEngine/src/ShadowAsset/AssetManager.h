@@ -23,7 +23,7 @@ public:
 
 	//A map where the loaded assets are stored
 	//Maps the id to the ShadowAsset
-	std::map<int, ShadowAsset*> loadedAssets;
+	std::map<int, ShadowAssets::ShadowAsset*> loadedAssets;
 
 	int nextID = 0;
 
@@ -32,11 +32,11 @@ public:
 
 
 	//Checks if the asset is loaded
-	bool CheckLoaded(std::string path, ShadowAsset** asset);
+	bool CheckLoaded(std::string path, ShadowAssets::ShadowAsset** asset);
 
 	//Cleans up a asset based on it's path
 	void UnloadAsset(std::string);
-	void UnloadAsset(ShadowAsset* asset);
+	void UnloadAsset(ShadowAssets::ShadowAsset* asset);
 
 	//Gets the needed asset based on it's path
 	//Makes sure it will be cleaned up when the game exits

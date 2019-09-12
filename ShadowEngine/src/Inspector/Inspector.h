@@ -1,7 +1,7 @@
 #pragma once
 #include "Core/SHObject.h"
 
-namespace Inspector {
+namespace InspectorSystem {
 
 	class Inspector :
 		public ShadowEngine::SHObject

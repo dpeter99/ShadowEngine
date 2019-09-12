@@ -7,9 +7,9 @@
 #include <string>
 #include "Core/ShadowApplication.h"
 
-SDLModule* SDLModule::instance = nullptr;
+SDLModule::SDLModule* SDLModule::SDLModule::instance = nullptr;
 
-void SDLModule::Init()
+void SDLModule::SDLModule::Init()
 {
 	instance = this;
 
@@ -21,14 +21,14 @@ void SDLModule::Init()
 		//return false;
 	}
 
-	ShadowApplication::Get().SetWindow(new ShadowWindow(1000, 600));
+	ShadowEngine::ShadowApplication::Get().SetWindow(new ShadowWindow(1000, 600));
 }
 
-SDLModule::SDLModule()
+SDLModule::SDLModule::SDLModule()
 {
 }
 
 
-SDLModule::~SDLModule()
+SDLModule::SDLModule::~SDLModule()
 {
 }

@@ -3,14 +3,14 @@
 #include "imgui.h"
 
 
-std::map<std::string, Inspector*> InspectorSystem::inspectors;
+std::map<std::string, InspectorSystem::Inspector*> InspectorSystem::InspectorSystem::inspectors;
 
-void InspectorSystem::AddInspector(std::string name, Inspector* inspector)
+void InspectorSystem::InspectorSystem::AddInspector(std::string name, Inspector* inspector)
 {
 	inspectors[name] = inspector;
 }
 
-void InspectorSystem::Draw(ShadowEngine::SHObject& obj)
+void InspectorSystem::InspectorSystem::Draw(ShadowEngine::SHObject& obj)
 {
 	if(inspectors.find(obj.GetType()) != inspectors.end())
 	{
@@ -19,7 +19,7 @@ void InspectorSystem::Draw(ShadowEngine::SHObject& obj)
 
 }
 
-void InspectorSystem::DrawSub(ShadowEngine::SHObject& obj)
+void InspectorSystem::InspectorSystem::DrawSub(ShadowEngine::SHObject& obj)
 {
 	ImGui::Indent();
 	Draw(obj);

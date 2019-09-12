@@ -3,11 +3,11 @@
 #include "ShadowAsset.h"
 
 
-ShadowAsset::ShadowAsset()
+ShadowAssets::ShadowAsset::ShadowAsset()
 {
 }
 
 
-ShadowAsset::~ShadowAsset()
+ShadowAssets::ShadowAsset::~ShadowAsset()
 {
 }

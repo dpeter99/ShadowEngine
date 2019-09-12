@@ -4,11 +4,12 @@
 #include "ShadowInput/Bindings/KeyboardBinding.h"
 #include "Inspector/Inspector.h"
 #include "imgui.h"
+#include <Inspector\InspectorSystem.cpp>
 
 namespace ShadowInput {
 
 	class KeyboardBindingInspector :
-		public Inspector
+		public Inspector::Inspector
 
 	{
 		SHObject_Base(KeyboardBindingInspector)

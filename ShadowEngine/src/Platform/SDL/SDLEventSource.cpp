@@ -7,7 +7,7 @@
 #include "ShadowEvents/Events/MouseEvents.h"
 #include "ShadowEvents/Events/ApplicationEvent.h"
 
-void SDLEventSource::PollEvents() const
+void SDLModule::SDLEventSource::PollEvents() const
 {
 	SDL_Event test_event;
 	while (SDL_PollEvent(&test_event))
@@ -67,11 +67,11 @@ void SDLEventSource::PollEvents() const
 	}
 }
 
-SDLEventSource::SDLEventSource()
+SDLModule::SDLEventSource::SDLEventSource()
 {
 }
 
 
-SDLEventSource::~SDLEventSource()
+SDLModule::SDLEventSource::~SDLEventSource()
 {
 }

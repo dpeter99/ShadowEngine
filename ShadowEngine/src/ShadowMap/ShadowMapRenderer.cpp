@@ -7,9 +7,9 @@
 #include "ShadowMapRenderer.h"
 
 
-void ShadowMapRenderer::RenderMap(ShadowMapChunk& map)
+void ShadowMapRenderer::RenderMap(ShadowWorld::ShadowMapChunk& map)
 {
-	ShadowMapLayer layer = map.GetLayer(0);
+	ShadowWorld::ShadowMapLayer layer = map.GetLayer(0);
 
 	for (int y = 0; y < map.height; ++y)
 	{

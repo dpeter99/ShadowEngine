@@ -141,9 +141,9 @@ ShadowWorld* AssetLoader::LoadWorld(std::string name) {
 */
 
 template <>
-ShadowWorld* AssetLoader::LoadAsset<ShadowWorld>(std::string name)
+ShadowWorld::ShadowWorld* ShadowAssets::AssetLoader::LoadAsset<ShadowWorld::ShadowWorld>(std::string name)
 {
-	ShadowWorld* world = new ShadowWorld();
+	ShadowWorld::ShadowWorld* world = new ShadowWorld::ShadowWorld();
 
 	Element* root = LoadFile(name);
 	if (root == nullptr)
@@ -172,7 +172,7 @@ ShadowWorld* AssetLoader::LoadAsset<ShadowWorld>(std::string name)
 		{
 			auto layerElement = i.second;
 
-			auto map = new LevelMap(world);
+			auto map = new ShadowWorld::LevelMap(world);
 
 			//map->name = layerElement->properties.find("Name")->second->value;
 			map->name = layerElement->GetStringProperty("Name");
@@ -185,9 +185,9 @@ ShadowWorld* AssetLoader::LoadAsset<ShadowWorld>(std::string name)
 }
 
 template <>
-ShadowMapChunk* AssetLoader::LoadAsset<ShadowMapChunk>(std::string name)
+ShadowWorld::ShadowMapChunk* ShadowAssets::AssetLoader::LoadAsset<ShadowWorld::ShadowMapChunk>(std::string name)
 {
-	ShadowMapChunk* map = new ShadowMapChunk();
+	ShadowWorld::ShadowMapChunk* map = new ShadowWorld::ShadowMapChunk();
 
 	Element* root = LoadFile(name + ".sef");
 	if (root == nullptr)
@@ -215,7 +215,7 @@ ShadowMapChunk* AssetLoader::LoadAsset<ShadowMapChunk>(std::string name)
 		{
 			auto layerElement = i.second;
 
-			auto layer = new ShadowMapLayer(*map, true, nullptr);
+			auto layer = new ShadowWorld::ShadowMapLayer(*map, true, nullptr);
 
 			layer->data = new int[map->width * map->height];
 			layer->name = layerElement->name;
@@ -268,7 +268,7 @@ ShadowMapChunk* AssetLoader::LoadAsset<ShadowMapChunk>(std::string name)
 
 ///Parses a file into DOM
 ///The caller has to call free on the returned Element tree
-Element* AssetLoader::LoadFile(std::string name)
+ShadowAssets::Element* ShadowAssets::AssetLoader::LoadFile(std::string name)
 {
 	//The current node that we are building
 	auto* context = new Element;
@@ -343,7 +343,7 @@ Element* AssetLoader::LoadFile(std::string name)
 	return base;
 }
 
-std::string Element::GetStringProperty(std::string name)
+std::string ShadowAssets::Element::GetStringProperty(std::string name)
 {
 	std::string res;
 	auto a = this->properties.find(name);
@@ -358,7 +358,7 @@ std::string Element::GetStringProperty(std::string name)
 	return res;
 }
 
-Element::~Element()
+ShadowAssets::Element::~Element()
 {
 	//now onto the recursion
 	for (auto const& i : this->properties)

@@ -50,7 +50,7 @@ void Debug::ActionDebug()
 	{
 		if (ImGui::TreeNode(element, element->GetName().c_str())) {
 
-			InspectorSystem::Draw(*element);
+			InspectorSystem::InspectorSystem::Draw(*element);
 
 			ImGui::TreePop();
 		}

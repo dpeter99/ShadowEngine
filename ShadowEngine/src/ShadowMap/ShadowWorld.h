@@ -57,7 +57,7 @@ namespace ShadowWorld {
 
 
 	//A single World that can have many levels
-	class ShadowWorld : public ShadowAsset
+	class ShadowWorld : public ShadowAssets::ShadowAsset
 	{
 	public:
 		//Properties #####################

@@ -59,7 +59,7 @@ void ImGuiModule::Init()
 	
 	
 
-	ImGui_ImplSDL2_InitForOpenGL(ShadowApplication::Get().GetWindow().winPtr, SDLModule::GetInstance().GetGlContext());
+	ImGui_ImplSDL2_InitForOpenGL(ShadowEngine::ShadowApplication::Get().GetWindow().winPtr, SDLModule::SDLModule::GetInstance().GetGlContext());
 	ImGui_ImplOpenGL3_Init("#version 410");
 }
 
@@ -76,7 +76,7 @@ void ImGuiModule::LateRender()
 	*/
 	// Start the Dear ImGui frame
 	ImGui_ImplOpenGL3_NewFrame();
-	ImGui_ImplSDL2_NewFrame(ShadowApplication::Get().GetWindow().winPtr);
+	ImGui_ImplSDL2_NewFrame(ShadowEngine::ShadowApplication::Get().GetWindow().winPtr);
 	ImGui::NewFrame();
 
 	for (auto gui_call : guiCalls)
