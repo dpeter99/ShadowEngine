@@ -16,24 +16,27 @@
 #include "BindingANDInspector.h"
 #include "BindingORInspector.h"
 
-void ShadowInput::ShadowActionSystem::RegisterInspectors()
-{
-	//auto debug = dynamic_cast<Debug&>(ShadowApplication::Get().GetModuleManager().GetModule("Debug"));
+namespace  ShadowEngine::InputSystem {
 
-	InspectorSystem::AddInspector(ShadowAction<bool>::Type(), new InputActionInspector());
-	InspectorSystem::AddInspector(ShadowAction<float>::Type(), new InputActionInspector());
-	InspectorSystem::AddInspector(ShadowAction<ShadowMath::Vector2float>::Type(), new InputActionInspector());
+	void ShadowActionSystem::RegisterInspectors()
+	{
+		//auto debug = dynamic_cast<Debug&>(ShadowApplication::Get().GetModuleManager().GetModule("Debug"));
 
-	InspectorSystem::AddInspector(KeyboardBinding::Type(), new KeyboardBindingInspector());
-	InspectorSystem::AddInspector(ModifierHold::Type(), new ModifierHoldInspector());
+		Debug::InspectorSystem::AddInspector(ShadowAction<bool>::Type(), new InputActionInspector());
+		Debug::InspectorSystem::AddInspector(ShadowAction<float>::Type(), new InputActionInspector());
+		Debug::InspectorSystem::AddInspector(ShadowAction<ShadowMath::Vector2float>::Type(), new InputActionInspector());
 
-	InspectorSystem::AddInspector(Binding1D<bool>::Type(), new Binding1DInspector());
-	InspectorSystem::AddInspector(Binding1D<float>::Type(), new Binding1DInspector());
+		Debug::InspectorSystem::AddInspector(KeyboardBinding::Type(), new KeyboardBindingInspector());
+		Debug::InspectorSystem::AddInspector(ModifierHold::Type(), new ModifierHoldInspector());
 
-	InspectorSystem::AddInspector(Binding2D<ShadowMath::Vector2float>::Type(), new Binding2DInspector());
+		Debug::InspectorSystem::AddInspector(Binding1D<bool>::Type(), new Binding1DInspector());
+		Debug::InspectorSystem::AddInspector(Binding1D<float>::Type(), new Binding1DInspector());
 
-	InspectorSystem::AddInspector(BindingAND<bool>::Type(), new BindingANDInspector());
+		Debug::InspectorSystem::AddInspector(Binding2D<ShadowMath::Vector2float>::Type(), new Binding2DInspector());
 
-	InspectorSystem::AddInspector(BindingOR<bool>::Type(), new BindingORInspector());
+		Debug::InspectorSystem::AddInspector(BindingAND<bool>::Type(), new BindingANDInspector());
+
+		Debug::InspectorSystem::AddInspector(BindingOR<bool>::Type(), new BindingORInspector());
+	}
+
 }
-

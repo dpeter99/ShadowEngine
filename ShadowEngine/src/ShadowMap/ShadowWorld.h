@@ -6,7 +6,7 @@
 #include "ShadowMapChunk.h"
 #include "ShadowAsset/ShadowAsset.h"
 
-namespace ShadowWorld {
+namespace ShadowEngine::World {
 
 	//World
 	// - Map
@@ -33,7 +33,7 @@ namespace ShadowWorld {
 		ShadowWorld* world;
 
 		//List of loaded maps
-		std::list<ShadowMapChunk*> chunks;
+		std::list<MapChunk*> chunks;
 
 
 		LevelMap(ShadowWorld* world);
@@ -45,19 +45,19 @@ namespace ShadowWorld {
 
 		//Unload a chunk
 		void UnloadChunk(const ShadowMath::Vector2int& id);
-		void UnloadChunk(ShadowMapChunk* chunk);
+		void UnloadChunk(MapChunk* chunk);
 
 		//Load new chunks
 		void LoadChunk(const ShadowMath::Vector2int& id);
 
-		ShadowMapChunk* GetLoadedChunk(const ShadowMath::Vector2int& id);
+		MapChunk* GetLoadedChunk(const ShadowMath::Vector2int& id);
 
 		std::string GenerateMapName(const ShadowMath::Vector2int& id) const;
 	};
 
 
 	//A single World that can have many levels
-	class ShadowWorld : public ShadowAssets::ShadowAsset
+	class ShadowWorld : public ShadowEngine::Assets::ShadowAsset
 	{
 	public:
 		//Properties #####################

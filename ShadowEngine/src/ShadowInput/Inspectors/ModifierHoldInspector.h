@@ -3,14 +3,15 @@
 #include "Inspector/Inspector.h"
 #include "imgui.h"
 
-namespace ShadowInput {
+namespace ShadowEngine::InputSystem
+{
 
-	class ModifierHoldInspector : public Inspector
+	class ModifierHoldInspector : public Debug::Inspector
 	{
 	public:
 		void Draw(SHObject& obj) override
 		{
-			auto& hold = dynamic_cast<ShadowInput::ModifierHold&>(obj);
+			auto& hold = dynamic_cast<ModifierHold&>(obj);
 
 			ImGui::AlignTextToFramePadding();
 			ImGui::Text("ModifierHold: %.2f/%.2f", hold.GetWaitTime(), hold.GetDeltaTime());

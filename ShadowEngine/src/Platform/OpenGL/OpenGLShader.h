@@ -1,9 +1,9 @@
 #pragma once
 
-#include "ShadowRenderer/Shader.h"
 #include <glm/glm.hpp>
+#include "ShadowRenderer/Shader.h"
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering::OpenGL {
 
 	class OpenGLShader : public Shader
 	{

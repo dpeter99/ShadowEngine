@@ -3,7 +3,7 @@
 #include "ModifierHold.h"
 #include "ShadowTime.h"
 
-namespace ShadowInput
+namespace ShadowEngine::InputSystem
 {
 	double ModifierHold::GetWaitTime()
 	{

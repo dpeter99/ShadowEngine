@@ -1,10 +1,10 @@
 #pragma once
 
-#include "ShadowRenderer/GraphicsContext.h"
 
 #include "SDL2/SDL.h"
+#include "ShadowRenderer/GraphicsContext.h"
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering::OpenGL {
 
 	class OpenGLContext : public GraphicsContext
 	{

@@ -2,12 +2,15 @@
 
 #include "ShadowAsset.h"
 
+namespace ShadowEngine::Assets {
 
-ShadowAssets::ShadowAsset::ShadowAsset()
-{
-}
+	ShadowAsset::ShadowAsset()
+	{
+	}
 
 
-ShadowAssets::ShadowAsset::~ShadowAsset()
-{
+	ShadowAsset::~ShadowAsset()
+	{
+	}
+
 }

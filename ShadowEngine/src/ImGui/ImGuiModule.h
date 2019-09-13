@@ -4,27 +4,30 @@
 #include <list>
 #include "IShadowImGui.h"
 
-class ImGuiModule :
-	public ShadowEngine::ShadowModule, public ShadowEventSystem::IShadowEventListener
-{
-	static ImGuiModule* instance;
+namespace ShadowEngine::DebugGui {
 
-	std::list<IShadowImGui*> guiCalls;
+	class ImGuiModule :
+		public ShadowEngine::ShadowModule, public EventSystem::IShadowEventListener
+	{
+		static ImGuiModule* instance;
 
-public:
+		std::list<IShadowImGui*> guiCalls;
 
-	void Init() override;
-	void Update() override {};
-	void Render() override {};
-	void LateRender() override;
-	
+	public:
 
-	void OnEvent(ShadowEventSystem::ShadowEvent& e) override;
+		void Init() override;
+		void Update() override {};
+		void Render() override {};
+		void LateRender() override;
 
-	std::string GetName() override { return "ImGuiModule"; };
 
-	static void AddGUICall(IShadowImGui* g);
+		void OnEvent(EventSystem::ShadowEvent& e) override;
 
-	ImGuiModule();
-	~ImGuiModule();
-};
+		std::string GetName() override { return "ImGuiModule"; };
+
+		static void AddGUICall(IShadowImGui* g);
+
+		ImGuiModule();
+		~ImGuiModule();
+	};
+}

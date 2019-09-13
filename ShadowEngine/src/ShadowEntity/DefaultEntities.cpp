@@ -10,7 +10,7 @@
 #include "Entities/Player.h"
 #include "Entities/Light.h"
 
-namespace ShadowEntity
+namespace ShadowEngine::ShadowEntity
 {
 	void EntityRegistry::PreRegisterDefaults()
 	{

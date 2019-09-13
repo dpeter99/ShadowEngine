@@ -2,7 +2,7 @@
 
 #include <glm/glm.hpp>
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering {
 
 	class OrthographicCamera
 	{

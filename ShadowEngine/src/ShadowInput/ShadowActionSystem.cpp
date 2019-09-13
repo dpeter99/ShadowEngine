@@ -3,11 +3,11 @@
 #include "ShadowActionSystem.h"
 #include "ShadowEvents/ShadowEventManager.h"
 
-namespace ShadowInput
+namespace ShadowEngine::InputSystem
 {
 	ShadowActionSystem* ShadowActionSystem::_instance = nullptr;
 
-	void ShadowActionSystem::OnEvent(ShadowEventSystem::ShadowEvent& e)
+	void ShadowActionSystem::OnEvent(EventSystem::ShadowEvent& e)
 	{
 		for (auto action : actions)
 		{
@@ -22,7 +22,7 @@ namespace ShadowInput
 
 	void ShadowActionSystem::Init()
 	{
-		ShadowEventSystem::ShadowEventManager::AddNewEventListener(this);
+		EventSystem::ShadowEventManager::AddNewEventListener(this);
 
 		RegisterInspectors();
 	}

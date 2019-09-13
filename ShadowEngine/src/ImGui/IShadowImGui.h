@@ -1,7 +1,11 @@
 ﻿#pragma once
 
-class IShadowImGui
-{
-public:
-	virtual void OnGui() = 0;
-};
+namespace ShadowEngine::DebugGui {
+
+	class IShadowImGui
+	{
+	public:
+		virtual void OnGui() = 0;
+	};
+
+}

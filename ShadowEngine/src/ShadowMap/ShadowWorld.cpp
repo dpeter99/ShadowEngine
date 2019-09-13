@@ -5,124 +5,128 @@
 
 #include "ShadowAsset/AssetManager.h"
 
-void ShadowWorld::Update(const ShadowMath::Vector2int& pos)
-{
-	//Send the position to the active map so it can load i't chunks
-	if (this->activeMap != nullptr)
+namespace ShadowEngine::World {
+
+	void ShadowWorld::Update(const ShadowMath::Vector2int& pos)
 	{
-		this->activeMap->Update(pos);
-	}
-}
-
-void ShadowWorld::SetActiveMap(std::string name)
-{
-	auto m = this->maps.find(name);
-	if (m != this->maps.end())
-	{
-		this->activeMap = m->second;
-	}
-}
-
-void LevelMap::Update(const ShadowMath::Vector2int& pos)
-{
-	//Load chunks if nececerry
-	//xxxxx
-	//xLLLx
-	//xLPLx
-	//xLLLx
-	//xxxxx
-
-	ShadowMath::Vector2int playerChunk;
-
-	playerChunk.x = pos.x / this->world->chunkSizeX;
-	playerChunk.y = pos.y / this->world->chunkSizeY;
-
-	std::list<ShadowMath::Vector2int> neededChunks;
-
-	for (int x = playerChunk.x - 1; x <= playerChunk.x + 1; x++)
-	{
-		for (int y = playerChunk.y - 1; y <= playerChunk.y + 1; y++)
+		//Send the position to the active map so it can load i't chunks
+		if (this->activeMap != nullptr)
 		{
-			neededChunks.emplace_back(x, y);
+			this->activeMap->Update(pos);
 		}
 	}
 
-
-	for (auto i : this->chunks)
+	void ShadowWorld::SetActiveMap(std::string name)
 	{
-		bool needed = false;
-		for (ShadowMath::Vector2int s : neededChunks)
+		auto m = this->maps.find(name);
+		if (m != this->maps.end())
 		{
-			if (i->pos == s)
+			this->activeMap = m->second;
+		}
+	}
+
+	void LevelMap::Update(const ShadowMath::Vector2int& pos)
+	{
+		//Load chunks if nececerry
+		//xxxxx
+		//xLLLx
+		//xLPLx
+		//xLLLx
+		//xxxxx
+
+		ShadowMath::Vector2int playerChunk;
+
+		playerChunk.x = pos.x / this->world->chunkSizeX;
+		playerChunk.y = pos.y / this->world->chunkSizeY;
+
+		std::list<ShadowMath::Vector2int> neededChunks;
+
+		for (int x = playerChunk.x - 1; x <= playerChunk.x + 1; x++)
+		{
+			for (int y = playerChunk.y - 1; y <= playerChunk.y + 1; y++)
 			{
-				needed = true;
-				//TODO:This part causes errors, probalby because destructing the sample
-				//neededChunks.remove(s);
+				neededChunks.emplace_back(x, y);
 			}
 		}
-		if (!needed)
+
+
+		for (auto i : this->chunks)
 		{
-			//Unload cause it is not needed
-			UnloadChunk(i);
+			bool needed = false;
+			for (ShadowMath::Vector2int s : neededChunks)
+			{
+				if (i->pos == s)
+				{
+					needed = true;
+					//TODO:This part causes errors, probalby because destructing the sample
+					//neededChunks.remove(s);
+				}
+			}
+			if (!needed)
+			{
+				//Unload cause it is not needed
+				UnloadChunk(i);
+			}
+		}
+
+		for (auto i : neededChunks)
+		{
+			//Load the new ones
+			LoadChunk(i);
 		}
 	}
 
-	for (auto i : neededChunks)
+	void LevelMap::UnloadChunk(World::MapChunk* chunk)
 	{
-		//Load the new ones
-		LoadChunk(i);
+		chunks.remove(chunk);
+
+		delete chunk;
 	}
-}
 
-void LevelMap::UnloadChunk(ShadowMapChunk* chunk)
-{
-	chunks.remove(chunk);
-
-	delete chunk;
-}
-
-void LevelMap::UnloadChunk(const ShadowMath::Vector2int& id)
-{
-	auto chunk = GetLoadedChunk(id);
-
-	UnloadChunk(chunk);
-}
-
-ShadowMapChunk* LevelMap::GetLoadedChunk(const ShadowMath::Vector2int& id)
-{
-	for (auto i : this->chunks)
+	void LevelMap::UnloadChunk(const ShadowMath::Vector2int& id)
 	{
-		if (i->pos == id)
+		auto chunk = GetLoadedChunk(id);
+
+		UnloadChunk(chunk);
+	}
+
+	MapChunk* LevelMap::GetLoadedChunk(const ShadowMath::Vector2int& id)
+	{
+		for (auto i : this->chunks)
 		{
-			return i;
+			if (i->pos == id)
+			{
+				return i;
+			}
 		}
+		return nullptr;
 	}
-	return nullptr;
-}
 
-void LevelMap::LoadChunk(const ShadowMath::Vector2int& id)
-{
-	std::string mapName = GenerateMapName(id);
-	auto c = AssetManager::GetAsset<ShadowMapChunk>(mapName);
-	if (c == nullptr)
-		return;
+	void LevelMap::LoadChunk(const ShadowMath::Vector2int& id)
+	{
+		std::string mapName = GenerateMapName(id);
+		auto c = AssetManager::GetAsset<MapChunk>(mapName);
+		if (c == nullptr)
+			return;
 
-	this->chunks.emplace_back(c);
+		this->chunks.emplace_back(c);
 
-	//AssetLoader::LoadMap(mapName);
-}
+		//AssetLoader::LoadMap(mapName);
+	}
 
-std::string LevelMap::GenerateMapName(const ShadowMath::Vector2int& id) const
-{
-	std::stringstream ss;
+	std::string LevelMap::GenerateMapName(const ShadowMath::Vector2int& id) const
+	{
+		std::stringstream ss;
 
-	ss << "Resources/Worlds/" << this->world->id << "/" << this->world->id << "-" << this->id << "_"
-		<< (id.x < 0 ? "-" : "") << std::setw(3) << std::setfill('0') << std::internal << abs(id.x) << "_"
-		<< (id.x < 0 ? "-" : "") << std::setw(3) << std::setfill('0') << std::internal << abs(id.y);
+		ss << "Resources/Worlds/" << this->world->id << "/" << this->world->id << "-" << this->id << "_"
+			<< (id.x < 0 ? "-" : "") << std::setw(3) << std::setfill('0') << std::internal << abs(id.x) << "_"
+			<< (id.x < 0 ? "-" : "") << std::setw(3) << std::setfill('0') << std::internal << abs(id.y);
 
-	return ss.str();
-}
+		return ss.str();
+	}
 
-LevelMap::LevelMap(ShadowWorld* world) : world(world)
-{
+	LevelMap::LevelMap(ShadowWorld* world) : world(world)
+	{
+	}
+
 }

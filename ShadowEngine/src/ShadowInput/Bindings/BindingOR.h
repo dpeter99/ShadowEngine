@@ -1,7 +1,8 @@
 #pragma once
 #include "ShadowInput/InputBinding.h"
 
-namespace ShadowInput {
+namespace ShadowEngine::InputSystem
+{
 
 	/**
 	 * \brief This Binding only actives if either of the sub bindings are active

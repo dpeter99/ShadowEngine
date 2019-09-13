@@ -4,7 +4,7 @@
 #include "Platform/OpenGL/OpenGLShader.h"
 #include "Platform/OpenGL/OpenGLRendererAPI.h"
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering {
 
 	Renderer::SceneData* Renderer::s_SceneData = new Renderer::SceneData;
 
@@ -42,8 +42,8 @@ namespace ShadowRenderer {
 		shader->Bind();
 
 		//TODO: this should not need a cast
-		std::dynamic_pointer_cast<OpenGLShader>(shader)->UploadUniformMat4("u_ViewProjection", s_SceneData->ViewProjectionMatrix);
-		std::dynamic_pointer_cast<OpenGLShader>(shader)->UploadUniformMat4("u_Transform", transform);
+		std::dynamic_pointer_cast<OpenGL::OpenGLShader>(shader)->UploadUniformMat4("u_ViewProjection", s_SceneData->ViewProjectionMatrix);
+		std::dynamic_pointer_cast<OpenGL::OpenGLShader>(shader)->UploadUniformMat4("u_Transform", transform);
 
 		vertexArray->Bind();
 		s_RendererAPI->DrawIndexed(vertexArray);

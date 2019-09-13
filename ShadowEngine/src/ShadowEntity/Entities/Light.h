@@ -2,10 +2,10 @@
 
 #include "ShadowEntity/SceneEntity.h"
 
-class Light : public ShadowEntity::SceneEntity
+class Light : public ShadowEngine::ShadowEntity::SceneEntity
 {
 	SHObject_Base(Light)
-	Entity_Base(Light, ShadowEntity::SceneEntity)
+	Entity_Base(Light, SceneEntity)
 
 public:
 	void Render() override;

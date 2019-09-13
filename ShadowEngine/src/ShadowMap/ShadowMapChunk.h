@@ -1,3 +1,6 @@
+#pragma once
+
+
 #include <string>
 #include <vector>
 #include "../ShadowMath/Vector2int.h"
@@ -5,9 +8,9 @@
 #include "../ShadowMath/Vector2int.h"
 #include "ShadowAsset/ShadowAsset.h"
 
-namespace ShadowWorld {
+namespace ShadowEngine::World {
 
-	class ShadowMapChunk;
+	class MapChunk;
 
 	class ShadowMapLayer
 	{
@@ -18,9 +21,9 @@ namespace ShadowWorld {
 
 		bool visible;
 
-		ShadowMapChunk* map;
+		MapChunk* map;
 
-		ShadowMapLayer(ShadowMapChunk& m, bool visible, int* data)
+		ShadowMapLayer(MapChunk& m, bool visible, int* data)
 		{
 			this->map = &m;
 			this->visible = visible;
@@ -33,7 +36,7 @@ namespace ShadowWorld {
 		int GetTile(ShadowMath::Vector2int pos);
 	};
 
-	class ShadowMapChunk : public ShadowAssets::ShadowAsset
+	class MapChunk : public ShadowEngine::Assets::ShadowAsset
 	{
 	public:
 		std::string name;

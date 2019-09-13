@@ -1,5 +1,6 @@
 #pragma once
 #include <SDL2/SDL.h>
+
 #include "ShadowRenderer/GraphicsContext.h"
 
 class ShadowWindow
@@ -11,7 +12,7 @@ public:
 
 	SDL_Window* winPtr;
 
-	ShadowRenderer::GraphicsContext* context;
+	ShadowEngine::Rendering::GraphicsContext* context;
 
 	ShadowWindow(int W, int H);
 	

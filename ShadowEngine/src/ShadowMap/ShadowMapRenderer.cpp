@@ -5,23 +5,27 @@
 
 #include <iostream>
 #include "ShadowMapRenderer.h"
+#include "ShadowMapChunk.h"
 
+namespace ShadowEngine::World {
 
-void ShadowMapRenderer::RenderMap(ShadowWorld::ShadowMapChunk& map)
-{
-	ShadowWorld::ShadowMapLayer layer = map.GetLayer(0);
-
-	for (int y = 0; y < map.height; ++y)
+	void ShadowMapRenderer::RenderMap(MapChunk& map)
 	{
-		for (int x = 0; x < map.width; ++x)
+		World::ShadowMapLayer layer = map.GetLayer(0);
+
+		for (int y = 0; y < map.height; ++y)
 		{
-			std::cout << layer.GetTile(ShadowMath::Vector2int(x, y)) << ' ';
+			for (int x = 0; x < map.width; ++x)
+			{
+				std::cout << layer.GetTile(ShadowMath::Vector2int(x, y)) << ' ';
+			}
+			std::cout << "\n";
 		}
-		std::cout << "\n";
+
+		for (auto i : map.entities)
+		{
+			i->Render();
+		}
 	}
 
-	for (auto i : map.entities)
-	{
-		i->Render();
-	}
 }

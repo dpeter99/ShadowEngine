@@ -1,7 +1,7 @@
 #include "shpch.h"
 #include "ModifierRepeat.h"
 
-namespace ShadowInput
+namespace ShadowEngine::InputSystem
 {
 	void ModifierRepeat::ProcessInput(ModifierContext& ctx)
 	{

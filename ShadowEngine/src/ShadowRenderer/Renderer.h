@@ -11,7 +11,7 @@
 
 class Camera;
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering {
 
 	class Renderer : public ShadowEngine::ShadowModule
 	{

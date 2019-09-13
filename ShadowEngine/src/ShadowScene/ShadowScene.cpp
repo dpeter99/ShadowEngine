@@ -1,50 +1,53 @@
 #include "shpch.h"
 #include "ShadowScene.h"
 
-void ShadowScene::Start()
-{
-	for(auto& entity: entities_)
+namespace ShadowEngine::Scene {
+
+	void ShadowScene::Start()
 	{
-		entity->Start();
+		for (auto& entity : entities_)
+		{
+			entity->Start();
+		}
 	}
-}
 
-void ShadowScene::Update()
-{
-	for (auto& entity : entities_)
+	void ShadowScene::Update()
 	{
-		entity->Update();
+		for (auto& entity : entities_)
+		{
+			entity->Update();
+		}
 	}
-}
 
-void ShadowScene::LateUpdate()
-{
-	for (auto& entity : entities_)
+	void ShadowScene::LateUpdate()
 	{
-		entity->LateUpdate();
+		for (auto& entity : entities_)
+		{
+			entity->LateUpdate();
+		}
 	}
-}
 
-void ShadowScene::Render()
-{
-	for (auto& entity : entities_)
+	void ShadowScene::Render()
 	{
-		entity->Render();
+		for (auto& entity : entities_)
+		{
+			entity->Render();
+		}
 	}
-}
 
-void ShadowScene::LateRender()
-{
-	for (auto& entity : entities_)
+	void ShadowScene::LateRender()
 	{
-		entity->LateRender();
+		for (auto& entity : entities_)
+		{
+			entity->LateRender();
+		}
 	}
-}
 
-void ShadowScene::Init() {
+	void ShadowScene::Init() {
 
-	for (auto& entity : entities_)
-	{
-		entity->Init();
+		for (auto& entity : entities_)
+		{
+			entity->Init();
+		}
 	}
 }

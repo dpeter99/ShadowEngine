@@ -7,10 +7,11 @@
 #include <SDL2/SDL.h>
 #include "ShadowInput/Bindings/Binding1D.h"
 
-namespace ShadowInput {
+namespace ShadowEngine::InputSystem
+{
 
 	class Binding1DInspector :
-		public Inspector
+		public Debug::Inspector
 
 	{
 		SHObject_Base(Binding1DInspector)
@@ -19,23 +20,23 @@ namespace ShadowInput {
 	public:
 		void Draw(SHObject& obj) override
 		{
-			auto& keyboard = dynamic_cast<ShadowInput::Binding1D<bool>&>(obj);
+			auto& keyboard = dynamic_cast<Binding1D<bool>&>(obj);
 			//ImGui::Text("-");
 
 			
 			if (ImGui::TreeNode(&obj,"Binding 1D")) {
 				ImGui::Text("Positive binding:");
-				InspectorSystem::DrawSub(keyboard.GetPositiveBinding());
+				Debug::InspectorSystem::DrawSub(keyboard.GetPositiveBinding());
 
 				ImGui::Text("Negative binding:");
-				InspectorSystem::DrawSub(keyboard.GetPositiveBinding());
+				Debug::InspectorSystem::DrawSub(keyboard.GetPositiveBinding());
 				ImGui::TreePop();
 			}
 			
 			ImGui::Indent();
 			for (int i = 0; i < keyboard.ModifierCount(); ++i)
 			{
-				InspectorSystem::DrawSub(keyboard.GetModifier(i));
+				Debug::InspectorSystem::DrawSub(keyboard.GetModifier(i));
 			}
 			ImGui::Unindent();
 

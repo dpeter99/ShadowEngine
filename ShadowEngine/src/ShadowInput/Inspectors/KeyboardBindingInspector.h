@@ -4,12 +4,13 @@
 #include "ShadowInput/Bindings/KeyboardBinding.h"
 #include "Inspector/Inspector.h"
 #include "imgui.h"
-#include <Inspector\InspectorSystem.cpp>
+#include <Inspector\InspectorSystem.h>
 
-namespace ShadowInput {
+namespace ShadowEngine::InputSystem
+{
 
 	class KeyboardBindingInspector :
-		public Inspector::Inspector
+		public Debug::Inspector
 
 	{
 		SHObject_Base(KeyboardBindingInspector)
@@ -18,12 +19,12 @@ namespace ShadowInput {
 	public:
 		void Draw(SHObject& obj)
 		{
-			auto& keyboard = dynamic_cast<ShadowInput::KeyboardBinding&>(obj);
+			auto& keyboard = dynamic_cast<KeyboardBinding&>(obj);
 			ImGui::Text("KeyboardBinding: %c", SDL_GetKeyFromScancode((SDL_Scancode)keyboard.GetKeycode()));
 
 			for (int i = 0; i < keyboard.ModifierCount(); ++i)
 			{
-				InspectorSystem::DrawSub(keyboard.GetModifier(i));
+				Debug::InspectorSystem::DrawSub(keyboard.GetModifier(i));
 			}
 
 		}

@@ -2,7 +2,7 @@
 #include "Core/SHObject.h"
 
 
-namespace ShadowInput
+namespace ShadowEngine::InputSystem
 {
 	/**
 	 * \brief Interface for the Bindings.

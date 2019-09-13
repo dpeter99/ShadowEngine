@@ -1,9 +1,9 @@
 #pragma once
 #include "ShadowEvents/IShadowEventSource.h"
 
-namespace SDLModule {
+namespace ShadowEngine::SDLPlatform {
 
-	class SDLEventSource : public ShadowEventSystem::IShadowEventSource
+	class SDLEventSource : public EventSystem::IShadowEventSource
 	{
 	public:
 

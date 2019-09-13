@@ -4,7 +4,7 @@
 #include "ShadowMath/Vector2float.h"
 #include "Util/Utility.h"
 
-namespace ShadowInput
+namespace ShadowEngine::InputSystem
 {
 	/**
 	* \brief This Binding represents a 2D value, in a Vector2float

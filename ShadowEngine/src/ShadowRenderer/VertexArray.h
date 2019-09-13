@@ -1,9 +1,9 @@
 #pragma once
 
 #include <memory>
-#include "ShadowRenderer/Buffer.h"
+#include "Buffer.h"
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering {
 
 	class VertexArray
 	{

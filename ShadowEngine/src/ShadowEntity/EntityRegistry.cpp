@@ -7,7 +7,7 @@
 #include <iostream>
 #include "EntityRegistry.h"
 
-namespace ShadowEntity
+namespace ShadowEngine::ShadowEntity
 {
 	//PreRegistry
 

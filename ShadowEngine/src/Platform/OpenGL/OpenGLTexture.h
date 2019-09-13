@@ -2,7 +2,7 @@
 
 #include "ShadowRenderer/Texture.h"
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering::OpenGL {
 
 	class OpenGLTexture2D : public Texture2D
 	{

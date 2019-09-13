@@ -2,9 +2,9 @@
 #include "ShadowModules/ShadowModule.h"
 #include <SDL2/SDL.h>
 
-namespace SDLModule {
+namespace ShadowEngine::SDLPlatform {
 
-	class SDLModule : public ShadowEngine::ShadowModule
+	class SDLModule : public ShadowModule
 	{
 		SDL_Window* window;
 		SDL_GLContext glContext;

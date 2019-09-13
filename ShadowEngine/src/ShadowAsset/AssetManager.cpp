@@ -16,7 +16,7 @@ AssetManager::~AssetManager()
 {
 }
 
-bool AssetManager::CheckLoaded(std::string path, ShadowAssets::ShadowAsset** asset = nullptr)
+bool AssetManager::CheckLoaded(std::string path, ShadowEngine::Assets::ShadowAsset** asset = nullptr)
 {
 	for (auto item : this->loadedAssets)
 	{
@@ -35,7 +35,7 @@ void AssetManager::UnloadAsset(std::string)
 {
 }
 
-void AssetManager::UnloadAsset(ShadowAssets::ShadowAsset* asset)
+void AssetManager::UnloadAsset(ShadowEngine::Assets::ShadowAsset* asset)
 {
 	auto v = this->loadedAssets.find(asset->runtimeAssetID);
 	this->loadedAssets.erase(v);

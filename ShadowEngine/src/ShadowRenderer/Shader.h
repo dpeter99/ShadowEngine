@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering {
 
 	class Shader
 	{

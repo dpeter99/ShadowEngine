@@ -2,8 +2,9 @@
 
 #include "ShadowEventManager.h"
 #include "Platform/SDL/SDLEventSource.h"
+#include "Platform/SDL/SDLModule.h"
 
-namespace ShadowEventSystem {
+namespace ShadowEngine::EventSystem {
 
 	ShadowEventManager* ShadowEventManager::instance = nullptr;
 
@@ -11,7 +12,7 @@ namespace ShadowEventSystem {
 	{
 		instance = this;
 
-		IShadowEventSource* s = new SDLModule::SDLEventSource();
+		IShadowEventSource* s = new SDLPlatform::SDLEventSource();
 		AddNewEventSource(s);
 	}
 

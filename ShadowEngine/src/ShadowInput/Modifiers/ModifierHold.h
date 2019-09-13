@@ -1,7 +1,7 @@
 #pragma once
 #include "ShadowInput/InputModifier.h"
 
-namespace ShadowInput
+namespace ShadowEngine::InputSystem
 {
 	/**
 	 * \brief Hold modifier. Only activates when the binding has been active for the specified time

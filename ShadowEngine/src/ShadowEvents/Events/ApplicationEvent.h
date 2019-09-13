@@ -3,7 +3,7 @@
 #include "ShadowEvents/ShadowEvent.h"
 
 
-namespace ShadowEventSystem {
+namespace ShadowEngine::EventSystem::Events {
 
 	class WindowResizeEvent : public ShadowEvent
 	{

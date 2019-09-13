@@ -4,7 +4,7 @@
 #include "Core/SHObject.h"
 #include <SDL2/SDL.h>
 
-namespace ShadowEventSystem {
+namespace ShadowEngine::EventSystem {
 
 	class ShadowEvent : public ShadowEngine::SHObject
 	{

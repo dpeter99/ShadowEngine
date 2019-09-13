@@ -11,7 +11,7 @@ ShadowWindow::ShadowWindow(int W, int H) : Height(H), Width(W)
 		SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN);
 	SH_CORE_ASSERT(winPtr, "Window could not be created! SDL_Error: %s\n", SDL_GetError());
 
-	context = ShadowRenderer::GraphicsContext::Create(winPtr);
+	context = ShadowEngine::Rendering::GraphicsContext::Create(winPtr);
 	context->Init();
 }
 

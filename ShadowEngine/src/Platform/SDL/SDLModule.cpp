@@ -7,28 +7,31 @@
 #include <string>
 #include "Core/ShadowApplication.h"
 
-SDLModule::SDLModule* SDLModule::SDLModule::instance = nullptr;
+namespace ShadowEngine::SDLPlatform {
 
-void SDLModule::SDLModule::Init()
-{
-	instance = this;
+	SDLModule* SDLModule::instance = nullptr;
 
-	// Initialize video subsystem
-	if (SDL_Init(SDL_INIT_VIDEO) < 0)
+	void SDLModule::Init()
 	{
-		// Display error message
-		printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
-		//return false;
+		instance = this;
+
+		// Initialize video subsystem
+		if (SDL_Init(SDL_INIT_VIDEO) < 0)
+		{
+			// Display error message
+			printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
+			//return false;
+		}
+
+		ShadowApplication::Get().SetWindow(new ShadowWindow(1000, 600));
 	}
 
-	ShadowEngine::ShadowApplication::Get().SetWindow(new ShadowWindow(1000, 600));
-}
-
-SDLModule::SDLModule::SDLModule()
-{
-}
+	SDLModule::SDLModule()
+	{
+	}
 
 
-SDLModule::SDLModule::~SDLModule()
-{
+	SDLModule::~SDLModule()
+	{
+	}
 }

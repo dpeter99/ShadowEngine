@@ -4,7 +4,7 @@
 
 #include "VertexArray.h"
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering {
 
 	class RendererAPI
 	{

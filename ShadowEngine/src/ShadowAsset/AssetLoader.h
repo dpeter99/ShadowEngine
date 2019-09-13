@@ -1,9 +1,12 @@
+#pragma once
+
+
 #include <map>
 #include "list"
 #include "ShadowMap/ShadowMapChunk.h"
 #include "ShadowMap/ShadowWorld.h"
 
-namespace ShadowAssets {
+namespace ShadowEngine::Assets {
 
 	class Element
 	{
@@ -29,9 +32,9 @@ namespace ShadowAssets {
 		static Element* LoadFile(std::string name);
 
 	public:
-		static ShadowWorld::ShadowMapChunk* LoadMap(std::string name);
+		static World::MapChunk* LoadMap(std::string name);
 
-		static ShadowWorld::ShadowWorld* LoadWorld(std::string name);
+		static World::ShadowWorld* LoadWorld(std::string name);
 
 		template <class T>
 		static T* LoadAsset(std::string name);

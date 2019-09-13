@@ -1,7 +1,7 @@
 #pragma once
 #include "ShadowInput/InputBinding.h"
 
-namespace ShadowInput
+namespace ShadowEngine::InputSystem
 {
 	
 	class InputMapBinding

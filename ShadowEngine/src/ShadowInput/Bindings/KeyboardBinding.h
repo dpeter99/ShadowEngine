@@ -6,9 +6,7 @@
 #include "ShadowEvents/Events/KeyEvents.h"
 #include "ShadowInput/ModifierContext.h"
 
-//class ModifierContext;
-
-namespace ShadowInput
+namespace ShadowEngine::InputSystem
 {
 	/**
 	 * \brief Binding to a keyboard key press
@@ -39,9 +37,9 @@ namespace ShadowInput
 
 			bool processed = false;
 
-			if (event_.GetEvent()->GetType() == ShadowEventSystem::KeyPressedEvent::Type())
+			if (event_.GetEvent()->GetType() == EventSystem::Events::KeyPressedEvent::Type())
 			{
-				const ShadowEventSystem::KeyPressedEvent* _pressedEvent = dynamic_cast<const ShadowEventSystem::KeyPressedEvent*>(event_.event_);
+				const EventSystem::Events::KeyPressedEvent* _pressedEvent = dynamic_cast<const EventSystem::Events::KeyPressedEvent*>(event_.event_);
 				if (this->SDLKey == _pressedEvent->GetKeyCode())
 				{
 					//We have a keystroke
@@ -51,9 +49,9 @@ namespace ShadowInput
 				}
 			}
 
-			if (event_.GetEvent()->GetType() == ShadowEventSystem::KeyReleasedEvent::Type())
+			if (event_.GetEvent()->GetType() == EventSystem::Events::KeyReleasedEvent::Type())
 			{
-				const ShadowEventSystem::KeyReleasedEvent* _releasedEvent = dynamic_cast<const ShadowEventSystem::KeyReleasedEvent*>(event_.event_);
+				const EventSystem::Events::KeyReleasedEvent* _releasedEvent = dynamic_cast<const EventSystem::Events::KeyReleasedEvent*>(event_.event_);
 				if (this->SDLKey == _releasedEvent->GetKeyCode())
 				{
 					//We have a keystroke
@@ -80,7 +78,7 @@ namespace ShadowInput
 				}
 				else
 				{
-					if (dynamic_cast<const ShadowEventSystem::KeyPressedEvent*>(ctx.event_)->GetRepeatCount() == 0)
+					if (dynamic_cast<const EventSystem::Events::KeyPressedEvent*>(ctx.event_)->GetRepeatCount() == 0)
 						ctx.outState_ = ActionState::Performed;
 					else
 						ctx.outState_ = ActionState::Idle;

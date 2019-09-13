@@ -3,29 +3,35 @@
 #include <string>
 #include <iostream>
 
+//#include "ShadowScene/ShadowScene.h"
+
 #include "EntityBase.h"
 
-
-
-namespace ShadowEntity 
+namespace ShadowEngine::Scene
 {
 	class ShadowScene;
+}
 
-	class Entity : public ShadowEngine::SHObject
+namespace ShadowEngine::ShadowEntity
+{
+
+	
+
+	class Entity : public SHObject
 	{
 		SHObject_Base(Entity)
 		
 	public:
 
-		ShadowScene* scene;
+		Scene::ShadowScene* scene;
 
 
 	public:
 		Entity();
 
-		Entity(ShadowScene* scene);
+		Entity(Scene::ShadowScene* scene);
 
-		virtual Entity* Create(ShadowScene* scene);
+		virtual Entity* Create(Scene::ShadowScene* scene);
 
 		virtual  void Init();
 		
@@ -40,7 +46,7 @@ namespace ShadowEntity
 		virtual  void LateRender();
 
 	public:
-		void SetScene(ShadowScene* se);
+		void SetScene(Scene::ShadowScene* se);
 
 		friend std::ostream& operator<<(std::ostream& os, const Entity& dt);
 	};

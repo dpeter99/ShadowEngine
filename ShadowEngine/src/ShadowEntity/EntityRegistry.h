@@ -15,7 +15,7 @@
 //#include "Entities/Player.h"
 
 
-namespace ShadowEntity
+namespace ShadowEngine::ShadowEntity
 {
 	class EntityRegistry
 	{

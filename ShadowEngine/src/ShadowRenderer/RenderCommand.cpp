@@ -2,9 +2,10 @@
 #include "RenderCommand.h"
 
 #include "Platform/OpenGL/OpenGLRendererAPI.h"
+#include "Renderer.h"
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering {
 
-	RendererAPI* RenderCommand::s_RendererAPI = new OpenGLRendererAPI;
+	RendererAPI* RenderCommand::s_RendererAPI = new OpenGL::OpenGLRendererAPI;
 
 }

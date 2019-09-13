@@ -1,7 +1,7 @@
 #pragma once
 #include "ShadowScene/ShadowScene.h"
 
-class TestScene : public ShadowScene::ShadowScene
+class TestScene : public ShadowEngine::Scene::ShadowScene
 {
 	virtual ~TestScene() = default;
 

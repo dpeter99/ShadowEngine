@@ -3,7 +3,8 @@
 #include "ShadowInput/ModifierContext.h"
 #include "Core/SHObject.h"
 
-namespace ShadowInput {
+namespace ShadowEngine::InputSystem
+{
 
 	class InputModifier : public ShadowEngine::SHObject
 	{

@@ -4,15 +4,15 @@
 #include "ShadowInput/ShadowAction.h"
 #include "ShadowModules/ShadowModule.h"
 
-namespace ShadowInput
+namespace ShadowEngine::InputSystem
 {
 	/**
 	 * This stores and processes the events
 	 * \brief The Action system
 	 */
 	class ShadowActionSystem :
-		public ShadowEngine::ShadowModule,
-		public ShadowEventSystem::IShadowEventListener
+		public ShadowModule,
+		public EventSystem::IShadowEventListener
 	{
 		
 
@@ -30,7 +30,7 @@ namespace ShadowInput
 
 
 
-		void OnEvent(ShadowEventSystem::ShadowEvent& e) override;
+		void OnEvent(EventSystem::ShadowEvent& e) override;
 
 		void Init() override;
 		void Update() override;
@@ -40,7 +40,7 @@ namespace ShadowInput
 		std::string GetName() override { return  "ActionSystem"; };
 
 
-		void RegisterInspectors();
+		static void RegisterInspectors();
 
 	};
 }

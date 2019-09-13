@@ -4,7 +4,7 @@
 #include <glm/gtc/quaternion.hpp>
 #include "Util/Callback.h"
 
-namespace ShadowEntity {
+namespace ShadowEngine::ShadowEntity {
 
 	class Transform
 	{

@@ -1,8 +1,9 @@
 #pragma once
 
+
 #include "ShadowRenderer/VertexArray.h"
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering::OpenGL {
 
 	class OpenGLVertexArray : public VertexArray
 	{

@@ -1,7 +1,7 @@
 #pragma once
 #include "ShadowInput/InputBinding.h"
 
-namespace ShadowInput
+namespace ShadowEngine::InputSystem
 {
 	/**
 	 * \brief This Binding represents a 1D value, in a float

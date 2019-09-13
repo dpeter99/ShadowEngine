@@ -8,16 +8,17 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include "ShadowEntity/Entities/Camera.h"
+#include <ShadowRenderer\Shader.h>
 
 class TestRenderer
 {
-	ShadowEngine::Ref<ShadowRenderer::Shader> m_Shader;
-	ShadowEngine::Ref<ShadowRenderer::VertexArray> m_VertexArray;
+	ShadowEngine::Ref<ShadowEngine::Rendering::Shader> m_Shader;
+	ShadowEngine::Ref<ShadowEngine::Rendering::VertexArray> m_VertexArray;
 
-	ShadowEngine::Ref<ShadowRenderer::Shader> m_FlatColorShader, m_TextureShader;
-	ShadowEngine::Ref<ShadowRenderer::VertexArray> m_SquareVA;
+	ShadowEngine::Ref<ShadowEngine::Rendering::Shader> m_FlatColorShader, m_TextureShader;
+	ShadowEngine::Ref<ShadowEngine::Rendering::VertexArray> m_SquareVA;
 
-	ShadowEngine::Ref<ShadowRenderer::Texture2D> m_Texture, m_ChernoLogoTexture;
+	ShadowEngine::Ref<ShadowEngine::Rendering::Texture2D> m_Texture, m_ChernoLogoTexture;
 
 	glm::vec3 m_CameraPosition;
 	float m_CameraMoveSpeed = 5.0f;

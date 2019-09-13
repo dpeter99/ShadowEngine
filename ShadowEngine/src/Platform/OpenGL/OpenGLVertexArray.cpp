@@ -3,23 +3,23 @@
 
 #include <glad/glad.h>
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering::OpenGL {
 
 	static GLenum ShaderDataTypeToOpenGLBaseType(ShaderDataType type)
 	{
 		switch (type)
 		{
-			case ShadowRenderer::ShaderDataType::Float:    return GL_FLOAT;
-			case ShadowRenderer::ShaderDataType::Float2:   return GL_FLOAT;
-			case ShadowRenderer::ShaderDataType::Float3:   return GL_FLOAT;
-			case ShadowRenderer::ShaderDataType::Float4:   return GL_FLOAT;
-			case ShadowRenderer::ShaderDataType::Mat3:     return GL_FLOAT;
-			case ShadowRenderer::ShaderDataType::Mat4:     return GL_FLOAT;
-			case ShadowRenderer::ShaderDataType::Int:      return GL_INT;
-			case ShadowRenderer::ShaderDataType::Int2:     return GL_INT;
-			case ShadowRenderer::ShaderDataType::Int3:     return GL_INT;
-			case ShadowRenderer::ShaderDataType::Int4:     return GL_INT;
-			case ShadowRenderer::ShaderDataType::Bool:     return GL_BOOL;
+			case ShadowEngine::Rendering::ShaderDataType::Float:    return GL_FLOAT;
+			case ShadowEngine::Rendering::ShaderDataType::Float2:   return GL_FLOAT;
+			case ShadowEngine::Rendering::ShaderDataType::Float3:   return GL_FLOAT;
+			case ShadowEngine::Rendering::ShaderDataType::Float4:   return GL_FLOAT;
+			case ShadowEngine::Rendering::ShaderDataType::Mat3:     return GL_FLOAT;
+			case ShadowEngine::Rendering::ShaderDataType::Mat4:     return GL_FLOAT;
+			case ShadowEngine::Rendering::ShaderDataType::Int:      return GL_INT;
+			case ShadowEngine::Rendering::ShaderDataType::Int2:     return GL_INT;
+			case ShadowEngine::Rendering::ShaderDataType::Int3:     return GL_INT;
+			case ShadowEngine::Rendering::ShaderDataType::Int4:     return GL_INT;
+			case ShadowEngine::Rendering::ShaderDataType::Bool:     return GL_BOOL;
 		}
 
 		SH_CORE_ASSERT(false, "Unknown ShaderDataType!");

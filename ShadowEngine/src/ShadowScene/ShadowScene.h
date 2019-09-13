@@ -5,14 +5,14 @@
 #include "ShadowEntity/Entity.h"
 #include "ShadowEntity/Entities/Camera.h"
 
-namespace ShadowEngine::ShadowScene {
-
+namespace ShadowEngine::Scene {
+	
 	class ShadowScene : public ShadowEngine::SHObject, public std::enable_shared_from_this<ShadowScene>
 	{
 		SHObject_Base(ShadowScene)
 
 	public:
-		std::vector<ShadowEngine::Scope<ShadowEntity::Entity>> entities_;
+		std::vector<Scope<ShadowEntity::Entity>> entities_;
 
 		//Main Camera ref
 		Camera* mainCamera;

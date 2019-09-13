@@ -2,7 +2,7 @@
 #include "ShadowEvents/ShadowEvent.h"
 #include <sstream>
 
-namespace ShadowEventSystem {
+namespace ShadowEngine::EventSystem::Events {
 
 	class MouseMovedEvent : public ShadowEvent
 	{

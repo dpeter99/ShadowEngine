@@ -8,7 +8,7 @@
 #include "Entity.h"
 #include "EntityRegistry.h"
 
-namespace ShadowEntity
+namespace ShadowEngine::ShadowEntity
 {
 	void Entity::Start()
 	{
@@ -30,7 +30,7 @@ namespace ShadowEntity
 	{
 	}
 
-	void Entity::SetScene(ShadowScene* se)
+	void Entity::SetScene(Scene::ShadowScene* se)
 	{
 		this->scene = se;
 	}
@@ -40,12 +40,12 @@ namespace ShadowEntity
 
 	}
 
-	Entity::Entity(ShadowScene* scene)
+	Entity::Entity(Scene::ShadowScene* scene)
 	{
 		this->scene = scene;
 	}
 
-	Entity* Entity::Create(ShadowScene* scene)
+	Entity* Entity::Create(Scene::ShadowScene* scene)
 	{
 		throw "The base entity cannot be instantiated";
 	}

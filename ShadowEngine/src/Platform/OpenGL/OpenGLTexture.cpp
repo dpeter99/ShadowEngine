@@ -5,7 +5,7 @@
 
 #include <glad/glad.h>
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering::OpenGL {
 
 	OpenGLTexture2D::OpenGLTexture2D(const std::string& path)
 		: m_Path(path)

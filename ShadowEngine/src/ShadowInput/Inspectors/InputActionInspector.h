@@ -6,10 +6,11 @@
 #include "Inspector/InspectorSystem.h"
 #include "ShadowMath/Vector2float.h"
 
-namespace ShadowInput {
+namespace ShadowEngine::InputSystem
+{
 
 	class InputActionInspector :
-		public Inspector
+		public Debug::Inspector
 
 	{
 		SHObject_Base(InputActionInspector)
@@ -54,8 +55,8 @@ namespace ShadowInput {
 			}
 
 
-			auto* binding = &(action->GetBinding());			
-			InspectorSystem::DrawSub(*binding);
+			auto* binding = &(action->GetBinding());
+			Debug::InspectorSystem::DrawSub(*binding);
 			
 
 		}

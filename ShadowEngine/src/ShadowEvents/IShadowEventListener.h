@@ -2,7 +2,7 @@
 #include "Events/KeyEvents.h"
 class ShadowEvent;
 
-namespace ShadowEventSystem {
+namespace ShadowEngine::EventSystem {
 
 #define EVENT_BIND(Event,Type,Func)					\
 	if(Event.GetType() == Type::Type())				\

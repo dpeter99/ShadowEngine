@@ -1,7 +1,7 @@
 #pragma once
 #include "ShadowEvents/ShadowEvent.h"
 
-namespace ShadowInput {
+namespace ShadowEngine::InputSystem {
 	/**
 	 * \brief Possible states of a Action
 	 */
@@ -33,7 +33,7 @@ namespace ShadowInput {
 		/**
 		 * \brief The event that triggered this call
 		 */
-		const ShadowEventSystem::ShadowEvent* event_;
+		const EventSystem::ShadowEvent* event_;
 
 		/**
 		 * \brief Weather this binding should behave continuously
@@ -60,7 +60,7 @@ namespace ShadowInput {
 		 */
 		bool processed_;
 
-		BindingContext(const ShadowEventSystem::ShadowEvent* event, bool cont)
+		BindingContext(const EventSystem::ShadowEvent* event, bool cont)
 		{
 			event_ = event;
 			continuous_ = cont;
@@ -74,6 +74,6 @@ namespace ShadowInput {
 		{
 		}
 
-		const ShadowEventSystem::ShadowEvent* GetEvent() { return event_; };
+		const EventSystem::ShadowEvent* GetEvent() { return event_; };
 	};
 }

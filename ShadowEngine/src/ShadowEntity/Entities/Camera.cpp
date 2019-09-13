@@ -16,8 +16,8 @@ void Camera::SetupOrthographic()
 
 	float SceneHeight = 2;
 	
-	float height = ShadowApplication::Get().GetWindow().Height;
-	float width = ShadowApplication::Get().GetWindow().Width;
+	float height = ShadowEngine::ShadowApplication::Get().GetWindow().Height;
+	float width = ShadowEngine::ShadowApplication::Get().GetWindow().Width;
 	
 	float vertical = (SceneHeight / 2);
 	float horizontal = width / height * (SceneHeight / 2);
@@ -38,7 +38,7 @@ void Camera::RecalculateViewMatrix()
 
 void Camera::Init()
 {
-	ShadowEntity::Entity::Init();
+	Entity::Init();
 	scene->mainCamera = this;
 	
 }

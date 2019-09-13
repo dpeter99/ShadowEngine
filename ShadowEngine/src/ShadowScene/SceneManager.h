@@ -4,7 +4,7 @@
 #include "ShadowScene/ShadowScene.h"
 //Holds the reference to the active scene
 
-namespace ShadowScene {
+namespace ShadowEngine::Scene {
 
 	class SceneManager : public ShadowEngine::ShadowModule
 	{

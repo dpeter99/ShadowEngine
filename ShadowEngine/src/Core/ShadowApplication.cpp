@@ -19,70 +19,72 @@
 #include "ShadowScene/SceneManager.h"
 #include "ShadowScene/TestScene.h"
 
+namespace ShadowEngine {
 
-ShadowEngine::ShadowApplication* ShadowEngine::ShadowApplication::instance = nullptr;
+	ShadowApplication* ShadowApplication::instance = nullptr;
 
-ShadowEngine::ShadowApplication::ShadowApplication()
-{
-	instance = this;
-}
-
-
-ShadowEngine::ShadowApplication::~ShadowApplication()
-{
-}
-
-void ShadowEngine::ShadowApplication::Init()
-{
-	moduleManager.PushModule(new ShadowEngine::Log());
-	moduleManager.PushModule(new ShadowEventSystem::ShadowEventManager());
-	moduleManager.PushModule(new SDLModule::SDLModule());
-	moduleManager.PushModule(new ShadowRenderer::Renderer());
-	moduleManager.PushModule(new ImGuiModule());
-	moduleManager.PushModule(new ShadowInput::ShadowActionSystem());
-	moduleManager.PushModule(new Debug());
-	moduleManager.PushModule(new ShadowScene::SceneManager());
-
-	moduleManager.Init();
-
-	
-	
-}
-
-void ShadowEngine::ShadowApplication::Start()
-{
-	//ShadowWorld* w = AssetManager::GetAsset<ShadowWorld>("Resources/Worlds/Default/overworld.txt");
-	//w->SetActiveMap("default");
-	//w->Update(ShadowMath::Vector2float(0, 0));
-	//ShadowMapRenderer::RenderMap(*map);
-
-	auto renderer = moduleManager.GetModuleByType<ShadowRenderer::Renderer>();
-
-	auto scenemg = moduleManager.GetModuleByType<ShadowScene::SceneManager>();
-	scenemg->LoadScene(new TestScene());
-	
-
-	TestRenderer test;
-	
-	while (running)
+	ShadowApplication::ShadowApplication()
 	{
-		Time::UpdateTime();
+		instance = this;
+	}
 
-		renderer->BeginScene(*scenemg->GetActiveScene()->mainCamera);
 
-		ShadowEventSystem::ShadowEventManager::PollEvents();
-		ShadowEventSystem::ShadowEventManager::ProcessEvents();
+	ShadowApplication::~ShadowApplication()
+	{
+	}
 
-		moduleManager.Update();
+	void ShadowApplication::Init()
+	{
+		moduleManager.PushModule(new ShadowEngine::Log());
+		moduleManager.PushModule(new EventSystem::ShadowEventManager());
+		moduleManager.PushModule(new SDLPlatform::SDLModule());
+		moduleManager.PushModule(new ShadowEngine::Rendering::Renderer());
+		moduleManager.PushModule(new DebugGui::ImGuiModule());
+		moduleManager.PushModule(new InputSystem::ShadowActionSystem());
+		moduleManager.PushModule(new Debug::DebugModule());
+		moduleManager.PushModule(new Scene::SceneManager());
 
-		test.Update();
+		moduleManager.Init();
 
-		moduleManager.Render();
 
-		moduleManager.LateRender();
-		
-		ShadowRenderer::Renderer::EndScene();
 
-		SDL_GL_SwapWindow(window_->winPtr);
+	}
+
+	void ShadowApplication::Start()
+	{
+		//ShadowWorld* w = AssetManager::GetAsset<ShadowWorld>("Resources/Worlds/Default/overworld.txt");
+		//w->SetActiveMap("default");
+		//w->Update(ShadowMath::Vector2float(0, 0));
+		//ShadowMapRenderer::RenderMap(*map);
+
+		auto renderer = moduleManager.GetModuleByType<ShadowEngine::Rendering::Renderer>();
+
+		auto scenemg = moduleManager.GetModuleByType<Scene::SceneManager>();
+		scenemg->LoadScene(new TestScene());
+
+
+		TestRenderer test;
+
+		while (running)
+		{
+			Time::UpdateTime();
+
+			renderer->BeginScene(*scenemg->GetActiveScene()->mainCamera);
+
+			EventSystem::ShadowEventManager::PollEvents();
+			EventSystem::ShadowEventManager::ProcessEvents();
+
+			moduleManager.Update();
+
+			test.Update();
+
+			moduleManager.Render();
+
+			moduleManager.LateRender();
+
+			ShadowEngine::Rendering::Renderer::EndScene();
+
+			SDL_GL_SwapWindow(window_->winPtr);
+		}
 	}
 }

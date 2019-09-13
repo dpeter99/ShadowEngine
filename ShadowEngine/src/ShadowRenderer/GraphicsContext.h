@@ -2,7 +2,7 @@
 #include "RendererAPI.h"
 #include "SDL2/SDL.h"
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering {
 
 	class GraphicsContext
 	{

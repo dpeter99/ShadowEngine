@@ -5,10 +5,11 @@
 
 
 class Camera :
-	public ShadowEntity::SceneEntity
+	public ShadowEngine::ShadowEntity::SceneEntity
 {
+	
 	SHObject_Base(Camera)
-	Entity_Base(Camera, ShadowEntity::SceneEntity);
+	Entity_Base(Camera, ShadowEngine::ShadowEntity::SceneEntity);
 
 public:
 	const glm::mat4& GetProjectionMatrix() const { return m_ProjectionMatrix; }

@@ -6,7 +6,7 @@
 #include "ShadowModules/ShadowModule.h"
 #include "IShadowEventListener.h"
 
-namespace ShadowEventSystem {
+namespace ShadowEngine::EventSystem {
 
 	class ShadowEventManager : public ShadowEngine::ShadowModule
 	{

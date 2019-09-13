@@ -4,7 +4,7 @@
 #include "BindingContext.h"
 
 
-namespace ShadowInput
+namespace ShadowEngine::InputSystem
 {
 
 	class IShadowAction : public ShadowEngine::SHObject
@@ -13,7 +13,7 @@ namespace ShadowInput
 
 	public:
 		virtual ~IShadowAction() = default;
-		virtual void ProcessEvent(ShadowEventSystem::ShadowEvent& e) = 0;
+		virtual void ProcessEvent(EventSystem::ShadowEvent& e) = 0;
 
 		virtual void Update() = 0;
 

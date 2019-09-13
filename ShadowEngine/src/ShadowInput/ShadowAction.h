@@ -1,11 +1,12 @@
 #pragma once
+
 #include "ShadowInput/InputBinding.h"
 #include "ShadowEvents/ShadowEvent.h"
 #include "ShadowInput/IShadowAction.h"
 #include "ShadowInput/ShadowActionSystem.h"
 #include "Util/Callback.h"
 
-namespace ShadowInput
+namespace ShadowEngine::InputSystem
 {
 	template <class T>
 	class ShadowAction final :
@@ -71,7 +72,7 @@ namespace ShadowInput
 		 * \brief Updates the Action with the event passed in
 		 * \param e Event object
 		 */
-		void ProcessEvent(ShadowEventSystem::ShadowEvent& e) override {
+		void ProcessEvent(EventSystem::ShadowEvent& e) override {
 			BindingContext<T> inpCtx(&e, continuous_);
 			inpCtx.bindingState_ = state_;
 			inpCtx.outState_ = ActionState::UnInit;

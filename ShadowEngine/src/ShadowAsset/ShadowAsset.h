@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace ShadowAssets {
+namespace ShadowEngine::Assets {
 
 	class ShadowAsset
 	{

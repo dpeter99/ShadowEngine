@@ -2,7 +2,7 @@
 
 #include "ShadowRenderer/RendererAPI.h"
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering::OpenGL {
 
 	class OpenGLRendererAPI : public RendererAPI
 	{

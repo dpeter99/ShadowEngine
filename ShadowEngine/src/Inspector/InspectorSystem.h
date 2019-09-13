@@ -3,7 +3,7 @@
 #include <map>
 #include "Inspector.h"
 
-namespace InspectorSystem {
+namespace ShadowEngine::Debug {
 
 	class InspectorSystem
 	{

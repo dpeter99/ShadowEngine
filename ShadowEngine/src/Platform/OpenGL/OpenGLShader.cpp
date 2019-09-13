@@ -5,7 +5,7 @@
 
 #include <glm/gtc/type_ptr.hpp>
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering::OpenGL {
 
 	OpenGLShader::OpenGLShader(const std::string& vertexSrc, const std::string& fragmentSrc)
 	{

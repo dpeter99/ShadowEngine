@@ -2,6 +2,6 @@
 
 #include "InputMapBinding.h"
 
-namespace ShadowInput
+namespace ShadowEngine::InputSystem
 {
 }

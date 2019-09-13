@@ -5,21 +5,19 @@
 
 #include "Player.h"
 
-namespace ShadowEntity
-{
 	/*
 	Entity* Player::Create() {
-	    Player* res = new Player();
+		Player* res = new Player();
 
-	    return res;
+		return res;
 	}
 	*/
 
-	void Player::Render()
-	{
-		std::cout << "Player";
-	}
-
-
-	//bool Player::registered = ShadowEntity::EntityRegistry::PreRegisterEntity("Player");
+void Player::Render()
+{
+	std::cout << "Player";
 }
+
+
+//bool Player::registered = ShadowEntity::EntityRegistry::PreRegisterEntity("Player");
+

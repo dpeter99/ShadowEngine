@@ -1,13 +1,13 @@
 #pragma once
 #include "ShadowInput/BindingContext.h"
 
-namespace ShadowInput {
+namespace ShadowEngine::InputSystem {
 
 	class ModifierContext
 	{
 	public:
 
-		const ShadowEventSystem::ShadowEvent* event_;
+		const EventSystem::ShadowEvent* event_;
 
 		bool continuous_;
 		bool bindingState_;

@@ -2,7 +2,7 @@
 
 #include "Log.h"
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering {
 
 	enum class ShaderDataType
 	{

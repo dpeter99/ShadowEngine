@@ -2,7 +2,7 @@
 
 #include "IShadowEventSource.h"
 
-namespace ShadowEventSystem {
+namespace ShadowEngine::EventSystem {
 
 	IShadowEventSource::IShadowEventSource()
 	{

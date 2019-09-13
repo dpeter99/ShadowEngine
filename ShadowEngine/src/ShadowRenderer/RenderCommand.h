@@ -2,7 +2,7 @@
 
 #include "RendererAPI.h"
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering {
 
 	class RenderCommand
 	{

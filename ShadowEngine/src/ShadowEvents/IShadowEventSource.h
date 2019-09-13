@@ -1,5 +1,5 @@
 #pragma once
-namespace ShadowEventSystem {
+namespace ShadowEngine::EventSystem {
 
 	class IShadowEventSource
 	{

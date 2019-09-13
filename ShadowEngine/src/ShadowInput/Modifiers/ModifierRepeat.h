@@ -1,7 +1,7 @@
 #pragma once
 #include "ShadowInput/InputModifier.h"
 
-namespace ShadowInput
+namespace ShadowEngine::InputSystem
 {
 	class ModifierRepeat
 		: public InputModifier

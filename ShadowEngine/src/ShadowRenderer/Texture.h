@@ -4,7 +4,7 @@
 
 #include "Core/Core.h"
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering {
 
 	class Texture
 	{

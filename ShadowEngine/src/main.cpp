@@ -14,7 +14,7 @@
 
 int main(int argc, char* argv[])
 {
-	ShadowEntity::EntityRegistry registry;
+	ShadowEngine::ShadowEntity::EntityRegistry registry;
 	
 
 	ShadowEngine::ShadowApplication app;

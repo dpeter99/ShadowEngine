@@ -4,30 +4,33 @@
 #include "ImGui/IShadowImGui.h"
 #include <map>
 
-class Debug :
-	public ShadowEngine::ShadowModule,
-	public ShadowEventSystem::IShadowEventListener,
-	public IShadowImGui
-{
+namespace ShadowEngine::Debug {
 
-	void Debug::ActionDebug();
+	class DebugModule :
+		public ShadowModule,
+		public EventSystem::IShadowEventListener,
+		public DebugGui::IShadowImGui
+	{
 
-public:
+		void DebugModule::ActionDebug();
 
-	bool active;
+	public:
 
-	void Init() override;
-	void Update() override {};
-	void Render() override {};
-	void LateRender() override {};
+		bool active;
 
-	std::string GetName() override { return "Debug"; };
+		void Init() override;
+		void Update() override {};
+		void Render() override {};
+		void LateRender() override {};
 
-	void OnEvent(ShadowEventSystem::ShadowEvent& e) override;
+		std::string GetName() override { return "Debug"; };
 
-	void OnGui() override;
+		void OnEvent(EventSystem::ShadowEvent& e) override;
+
+		void OnGui() override;
 
 
-	Debug();
-	virtual ~Debug();
-};
+		DebugModule();
+		virtual ~DebugModule();
+	};
+}

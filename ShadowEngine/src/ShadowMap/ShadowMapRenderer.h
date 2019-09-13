@@ -1,10 +1,14 @@
 #pragma once
 
 #include "ShadowMapChunk.h"
+#include "ShadowWorld.h"
 
-class ShadowMapRenderer
-{
-public:
-	static void RenderMap(ShadowWorld::ShadowMapChunk& map);
-};
+namespace ShadowEngine::World {
 
+	class ShadowMapRenderer
+	{
+	public:
+		static void RenderMap(MapChunk& map);
+	};
+
+}

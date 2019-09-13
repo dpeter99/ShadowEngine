@@ -8,10 +8,13 @@
 #include "ModifierContext.h"
 
 
-class ShadowAction;
 
-namespace ShadowInput
+
+namespace ShadowEngine::InputSystem
 {
+	template<class T>
+	class ShadowAction;
+	
 	template <class T>
 	class InputBinding:
 		public IInputBinding

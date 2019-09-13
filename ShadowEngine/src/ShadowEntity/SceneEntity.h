@@ -6,13 +6,14 @@
 
 #define BIND_EVENT_FN(x, ...) std::bind(&x, this, __VA_ARGS__)
 
-namespace ShadowEntity {
+namespace ShadowEngine::ShadowEntity {
 
 	class SceneEntity :
 		public Entity
 	{
-		SHObject_Base(SceneEntity)
-		Entity_Base_NoCtor(SceneEntity,Entity)
+		SHObject_Base(SceneEntity);
+
+		Entity_Base_NoCtor(SceneEntity, Entity);
 
 		void virtual TransformChanged() {};
 
@@ -20,7 +21,7 @@ namespace ShadowEntity {
 	public:
 		SceneEntity():Entity(){}
 
-		SceneEntity(ShadowScene* scene) : Entity(scene)
+		SceneEntity(Scene::ShadowScene* scene) : Entity(scene)
 		{
 			transform.transformChanged += std::bind(&SceneEntity::TransformChanged, this);
 		};

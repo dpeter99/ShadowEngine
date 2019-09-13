@@ -7,10 +7,11 @@
 #include <SDL2/SDL.h>
 #include "ShadowInput/Bindings/Binding2D.h"
 
-namespace ShadowInput {
+namespace ShadowEngine::InputSystem
+{
 
 	class Binding2DInspector :
-		public Inspector
+		public Debug::Inspector
 
 	{
 		SHObject_Base(Binding2DInspector)
@@ -25,18 +26,18 @@ namespace ShadowInput {
 
 				if (ImGui::TreeNode("X direction")) {
 					ImGui::Text("Positive binding:");
-					InspectorSystem::DrawSub(keyboard.GetXPositiveBinding());
+					Debug::InspectorSystem::DrawSub(keyboard.GetXPositiveBinding());
 
 					ImGui::Text("Negative binding:");
-					InspectorSystem::DrawSub(keyboard.GetXNegativeBinding());
+					Debug::InspectorSystem::DrawSub(keyboard.GetXNegativeBinding());
 					ImGui::TreePop();
 				}
 				if (ImGui::TreeNode("Y direction")) {
 					ImGui::Text("Positive binding:");
-					InspectorSystem::DrawSub(keyboard.GetYPositiveBinding());
+					Debug::InspectorSystem::DrawSub(keyboard.GetYPositiveBinding());
 
 					ImGui::Text("Negative binding:");
-					InspectorSystem::DrawSub(keyboard.GetYNegativeBinding());
+					Debug::InspectorSystem::DrawSub(keyboard.GetYNegativeBinding());
 					ImGui::TreePop();
 				}
 				ImGui::TreePop();
@@ -45,7 +46,7 @@ namespace ShadowInput {
 			ImGui::Indent();
 			for (int i = 0; i < keyboard.ModifierCount(); ++i)
 			{
-				InspectorSystem::DrawSub(keyboard.GetModifier(i));
+				Debug::InspectorSystem::DrawSub(keyboard.GetModifier(i));
 			}
 			ImGui::Unindent();
 

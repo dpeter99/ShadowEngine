@@ -1,27 +1,30 @@
 #include "shpch.h"
 #include "InspectorSystem.h"
-#include "imgui.h"
 
+#include <imgui.h>
 
-std::map<std::string, InspectorSystem::Inspector*> InspectorSystem::InspectorSystem::inspectors;
+namespace ShadowEngine::Debug {
 
-void InspectorSystem::InspectorSystem::AddInspector(std::string name, Inspector* inspector)
-{
-	inspectors[name] = inspector;
-}
+	std::map<std::string, Inspector*> InspectorSystem::inspectors;
 
-void InspectorSystem::InspectorSystem::Draw(ShadowEngine::SHObject& obj)
-{
-	if(inspectors.find(obj.GetType()) != inspectors.end())
+	void InspectorSystem::AddInspector(std::string name, Inspector* inspector)
 	{
-		inspectors[obj.GetType()]->Draw(obj);
+		inspectors[name] = inspector;
 	}
 
-}
+	void InspectorSystem::Draw(SHObject& obj)
+	{
+		if (inspectors.find(obj.GetType()) != inspectors.end())
+		{
+			inspectors[obj.GetType()]->Draw(obj);
+		}
 
-void InspectorSystem::InspectorSystem::DrawSub(ShadowEngine::SHObject& obj)
-{
-	ImGui::Indent();
-	Draw(obj);
-	ImGui::Unindent();
+	}
+
+	void InspectorSystem::DrawSub(SHObject& obj)
+	{
+		::ImGui::Indent();
+		Draw(obj);
+		::ImGui::Unindent();
+	}
 }

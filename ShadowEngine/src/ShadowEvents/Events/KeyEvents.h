@@ -3,7 +3,7 @@
 #include "ShadowEvents/ShadowEvent.h"
 #include <SDL2/SDL.h>
 
-namespace ShadowEventSystem {
+namespace ShadowEngine::EventSystem::Events {
 
 	class KeyEvent : public ShadowEvent
 	{

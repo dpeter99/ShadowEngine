@@ -5,7 +5,7 @@
 #include <glad/glad.h>
 #include <GL/GL.h>
 
-namespace ShadowRenderer {
+namespace ShadowEngine::Rendering::OpenGL {
 
 	OpenGLContext::OpenGLContext(SDL_Window* windowHandle)
 		: m_WindowHandle(windowHandle)
