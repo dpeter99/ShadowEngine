@@ -1,12 +1,11 @@
+#include "shpch.h"
+
 #include "ShadowModule.h"
 
-
-
-ShadowModule::ShadowModule()
+ShadowEngine::ShadowModule::ShadowModule()
 {
 }
 
-
-ShadowModule::~ShadowModule()
+ShadowEngine::ShadowModule::~ShadowModule()
 {
 }

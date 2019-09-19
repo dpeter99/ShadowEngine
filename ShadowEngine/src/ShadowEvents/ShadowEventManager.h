@@ -6,38 +6,54 @@
 #include "ShadowModules/ShadowModule.h"
 #include "IShadowEventListener.h"
 
-class ShadowEventManager : public ShadowModule
-{
-	static  ShadowEventManager* instance;
+namespace ShadowEngine::EventSystem {
 
-	std::queue<ShadowEvent*> eventQueue;
-	std::list<IShadowEventSource*> eventSources;
-	std::list<IShadowEventListener*> eventConsumers;
+	class ShadowEventManager : public ShadowEngine::ShadowModule
+	{
+		static ShadowEventManager* instance;
+
+		std::queue<ShadowEvent*> eventQueue;
+		std::list<IShadowEventSource*> eventSources;
+		std::list<IShadowEventListener*> eventConsumers;
 
 
-	void PollEvents_();
+		void PollEvents_();
 
-	void PushNewEvent_(ShadowEvent* e);
+		void PushNewEvent_(ShadowEvent* e);
 
-	void ProcessEvents_();
+		void ProcessEvents_();
 
-	void AddNewEventSource_(IShadowEventSource* shadowEventSource);
+		void AddNewEventSource_(IShadowEventSource* shadowEventSource);
 
-	void AddNewEventListener_(IShadowEventListener* shadowEventSource);
+		void AddNewEventListener_(IShadowEventListener* shadowEventSource);
 
-public:
-	ShadowEventManager();
-	~ShadowEventManager();
+	public:
+		ShadowEventManager();
+		~ShadowEventManager();
 
-	void Init() override;
+		void Init() override;
 
-	static void PollEvents() { instance->PollEvents_(); };
+		void Update() override {};
+		void Render() override {};
+		void LateRender() override {};
 
-	static void PushNewEvent(ShadowEvent* e) { instance->PushNewEvent_(e); };
+		std::string GetName() override { return "ShadowEventManager"; };
 
-	static void ProcessEvents() { instance->ProcessEvents_(); };
+		static void PollEvents() { instance->PollEvents_(); };
 
-	static void AddNewEventSource(IShadowEventSource* shadowEventSource) { instance->AddNewEventSource_(shadowEventSource); };
+		static void PushNewEvent(ShadowEvent* e) { instance->PushNewEvent_(e); };
 
-	static void AddNewEventListener(IShadowEventListener* shadowEventListener) { instance->AddNewEventListener_(shadowEventListener); };
-};
+		static void ProcessEvents() { instance->ProcessEvents_(); };
+
+		static void AddNewEventSource(IShadowEventSource* shadowEventSource)
+		{
+			instance->AddNewEventSource_(shadowEventSource);
+		};
+
+		static void AddNewEventListener(IShadowEventListener* shadowEventListener)
+		{
+			instance->AddNewEventListener_(shadowEventListener);
+		};
+	};
+
+}

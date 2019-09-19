@@ -1,13 +1,15 @@
 #pragma once
 #include "ShadowEvents/IShadowEventSource.h"
 
-class SDLEventSource : public IShadowEventSource
-{
-public:
+namespace ShadowEngine::SDLPlatform {
 
-	virtual void PollEvents() const override;
+	class SDLEventSource : public EventSystem::IShadowEventSource
+	{
+	public:
 
-	SDLEventSource();
-	~SDLEventSource();
-};
+		void PollEvents() const override;
 
+		SDLEventSource();
+		~SDLEventSource();
+	};
+}

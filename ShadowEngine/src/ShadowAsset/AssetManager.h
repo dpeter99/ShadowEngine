@@ -7,12 +7,11 @@
 
 //Responsible for loading and unloading assets at runtime
 
-class AssetManager
+class AssetManager : public ShadowEngine::ShadowModule
 {
-	//Singletom object reference
+	//Singletom object ShadowEngine::Reference
 private:
 	static AssetManager* instance;
-
 
 
 public:
@@ -24,7 +23,7 @@ public:
 
 	//A map where the loaded assets are stored
 	//Maps the id to the ShadowAsset
-	std::map<int, ShadowAsset*> loadedAssets;
+	std::map<int, ShadowEngine::Assets::ShadowAsset*> loadedAssets;
 
 	int nextID = 0;
 
@@ -32,29 +31,27 @@ public:
 	~AssetManager();
 
 
-
-
-
 	//Checks if the asset is loaded
-	bool CheckLoaded(std::string path, ShadowAsset** asset);
+	bool CheckLoaded(std::string path, ShadowEngine::Assets::ShadowAsset** asset);
 
 	//Cleans up a asset based on it's path
 	void UnloadAsset(std::string);
-	void UnloadAsset(ShadowAsset* asset);
+	void UnloadAsset(ShadowEngine::Assets::ShadowAsset* asset);
 
 	//Gets the needed asset based on it's path
 	//Makes sure it will be cleaned up when the game exits
 	//This sets up the ShadowAsset base class
-	template<class T>
-	static T* GetAsset(std::string path) {
-		ShadowAsset* f;
+	template <class T>
+	static T* GetAsset(std::string path)
+	{
+		ShadowEngine::Assets::ShadowAsset* f;
 
 		if (instance->CheckLoaded(path, &f))
 		{
 			return dynamic_cast<T*>(f);
 		}
 
-		T* w = AssetLoader::LoadAsset<T>(path);
+		T* w = ShadowEngine::Assets::AssetLoader::LoadAsset<T>(path);
 		if (w == nullptr)
 			return nullptr;
 
@@ -65,5 +62,3 @@ public:
 		return w;
 	}
 };
-
-

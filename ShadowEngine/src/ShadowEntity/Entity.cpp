@@ -2,48 +2,63 @@
 // Created by dpete on 2/12/2019.
 //
 
+#include "shpch.h"
+
 #include <iostream>
 #include "Entity.h"
 #include "EntityRegistry.h"
 
-namespace ShadowEntity {
+namespace ShadowEngine::ShadowEntity
+{
+	void Entity::Start()
+	{
+	}
 
-    void Entity::Start() {
+	void Entity::Update()
+	{
+	}
 
-    }
+	void Entity::LateUpdate()
+	{
+	}
 
-    void Entity::Update() {
+	void Entity::Render()
+	{
+	}
 
-    }
+	void Entity::LateRender()
+	{
+	}
 
-    void Entity::LateUpdate() {
+	void Entity::SetScene(Scene::ShadowScene* se)
+	{
+		this->scene = se;
+	}
 
-    }
+	Entity::Entity()
+	{
 
-    void Entity::Draw() {
+	}
 
-    }
+	Entity::Entity(Scene::ShadowScene* scene)
+	{
+		this->scene = scene;
+	}
 
-    Entity* ShadowEntity::Entity::Create() {
-        throw "The base entity cannot be instantiated";
-    }
+	Entity* Entity::Create(Scene::ShadowScene* scene)
+	{
+		throw "The base entity cannot be instantiated";
+	}
 
-    Entity::~Entity() {
+	void Entity::Init()
+	{
+	}
 
-    }
+	std::ostream& operator<<(std::ostream& os, const Entity& dt)
+	{
+		os << dt.GetType();
+		return os;
+	}
 
-    Entity::Entity() {
-
-    }
-
-    std::string Entity::id = "Base";
-
-    std::ostream& operator<<(std::ostream& os, const Entity& dt)
-    {
-        os << dt.id;
-        return os;
-    }
-
-    //bool Entity::registered = ShadowEntity::EntityRegistry::PreRegisterEntity(id);
-
+	//bool Entity::registered = ShadowEntity::EntityRegistry::PreRegisterEntity(id);
 }

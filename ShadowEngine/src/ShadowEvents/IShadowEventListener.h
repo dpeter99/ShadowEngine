@@ -1,13 +1,23 @@
 #pragma once
+#include "Events/KeyEvents.h"
 class ShadowEvent;
 
-class IShadowEventListener
-{
-public:
+namespace ShadowEngine::EventSystem {
 
-	virtual void OnEvent(ShadowEvent& e) = 0;
+#define EVENT_BIND(Event,Type,Func)					\
+	if(Event.GetType() == Type::Type())				\
+	{ Type *_event = dynamig_cast<Type>(Event);		\
+	Func											\
+	}
 
-	IShadowEventListener() = default;
-	~IShadowEventListener() = default;
-};
 
+	class IShadowEventListener
+	{
+	public:
+
+		virtual void OnEvent(ShadowEvent& e) = 0;
+
+		IShadowEventListener() = default;
+		~IShadowEventListener() = default;
+	};
+}

@@ -2,16 +2,25 @@
 // Created by dpete on 2/26/2019.
 //
 
+#include "shpch.h"
+
 #include "ShadowMapChunk.h"
 
-void ShadowMapLayer::SetTile(ShadowMath::Vector2int pos, int tileID){
-    data[(pos.y * this->map->width) + pos.x]=tileID;
-}
+namespace ShadowEngine::World {
 
-int ShadowMapLayer::GetTile(ShadowMath::Vector2int pos) {
-    return this->data[(pos.y * this->map->width) + pos.x];
-}
+	void ShadowMapLayer::SetTile(ShadowMath::Vector2int pos, int tileID)
+	{
+		data[(pos.y * this->map->width) + pos.x] = tileID;
+	}
 
-ShadowMapLayer& ShadowMapChunk::GetLayer(int id) {
-    return *this->layers[id];
+	int ShadowMapLayer::GetTile(ShadowMath::Vector2int pos)
+	{
+		return this->data[(pos.y * this->map->width) + pos.x];
+	}
+
+	ShadowMapLayer& MapChunk::GetLayer(int id)
+	{
+		return *this->layers[id];
+	}
+
 }

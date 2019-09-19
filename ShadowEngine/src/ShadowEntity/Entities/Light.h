@@ -1,18 +1,12 @@
-//
-// Created by dpete on 3/4/2019.
-//
+#pragma once
 
-#ifndef SHADOWENGINE_LIGHT_H
-#define SHADOWENGINE_LIGHT_H
+#include "ShadowEntity/SceneEntity.h"
 
-#include "../Entity.h"
-
-class Light : public ShadowEntity::Entity{
-SHADOW_FUNC_DEC(Light)
+class Light : public ShadowEngine::ShadowEntity::SceneEntity
+{
+	SHObject_Base(Light)
+	Entity_Base(Light, SceneEntity)
 
 public:
-    void Draw() override;
+	void Render() override;
 };
-
-
-#endif //SHADOWENGINE_LIGHT_H

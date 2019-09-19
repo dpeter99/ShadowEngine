@@ -1,12 +1,8 @@
+#include "shpch.h"
+
 #include "ShadowEvent.h"
 
+namespace ShadowEngine::EventSystem {
 
 
-ShadowEvent::ShadowEvent()
-{
-}
-
-
-ShadowEvent::~ShadowEvent()
-{
 }

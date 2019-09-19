@@ -1,8 +1,10 @@
+#include "shpch.h"
+
 #include "ShadowModuleManager.h"
 
-ShadowModuleManager* ShadowModuleManager::instance = nullptr;
+ShadowEngine::ShadowModuleManager* ShadowEngine::ShadowModuleManager::instance = nullptr;
 
-ShadowModuleManager::ShadowModuleManager()
+ShadowEngine::ShadowModuleManager::ShadowModuleManager()
 {
 	if (instance != nullptr)
 	{
@@ -11,19 +13,54 @@ ShadowModuleManager::ShadowModuleManager()
 	instance = this;
 }
 
-ShadowModuleManager::~ShadowModuleManager()
+ShadowEngine::ShadowModuleManager::~ShadowModuleManager()
 {
 }
 
-void ShadowModuleManager::PushModule(ShadowModule* module)
+void ShadowEngine::ShadowModuleManager::PushModule(ShadowModule* module)
 {
 	modules.emplace_back(module);
 }
 
-void ShadowModuleManager::Init()
+ShadowEngine::ShadowModule& ShadowEngine::ShadowModuleManager::GetModule(std::string name)
 {
-	for (auto module : modules)
+	for (auto& module : modules)
+	{
+		if (module->GetName() == name)
+			return *module;
+	}
+	SH_ASSERT(false, "Can't find the module");
+	//return NULL;
+}
+
+void ShadowEngine::ShadowModuleManager::Init()
+{
+	for (auto& module : modules)
 	{
 		module->Init();
+	}
+}
+
+void ShadowEngine::ShadowModuleManager::Update()
+{
+	for (auto& module : modules)
+	{
+		module->Update();
+	}
+}
+
+void ShadowEngine::ShadowModuleManager::LateRender()
+{
+	for (auto& module : modules)
+	{
+		module->LateRender();
+	}
+}
+
+void ShadowEngine::ShadowModuleManager::Render()
+{
+	for (auto& module : modules)
+	{
+		module->Render();
 	}
 }

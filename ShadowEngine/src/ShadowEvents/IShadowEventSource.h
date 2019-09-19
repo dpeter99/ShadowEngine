@@ -1,11 +1,13 @@
 #pragma once
-class IShadowEventSource
-{
-public:
+namespace ShadowEngine::EventSystem {
 
-	virtual void PollEvents() const = 0;
+	class IShadowEventSource
+	{
+	public:
 
-	IShadowEventSource();
-	virtual ~IShadowEventSource();
-};
+		virtual void PollEvents() const = 0;
 
+		IShadowEventSource();
+		virtual ~IShadowEventSource();
+	};
+}

@@ -1,3 +1,5 @@
+#include "shpch.h"
+
 #include "AssetManager.h"
 #include "AssetLoader.h"
 
@@ -14,12 +16,13 @@ AssetManager::~AssetManager()
 {
 }
 
-bool AssetManager::CheckLoaded(std::string path, ShadowAsset** asset = nullptr)
+bool AssetManager::CheckLoaded(std::string path, ShadowEngine::Assets::ShadowAsset** asset = nullptr)
 {
-	for (auto item : this->loadedAssets) {
+	for (auto item : this->loadedAssets)
+	{
 		if (item.second->path == path) return true;
-		if(asset != nullptr)
-		* asset = item.second;
+		if (asset != nullptr)
+			* asset = item.second;
 	}
 
 	if (asset != nullptr)
@@ -30,15 +33,15 @@ bool AssetManager::CheckLoaded(std::string path, ShadowAsset** asset = nullptr)
 
 void AssetManager::UnloadAsset(std::string)
 {
-
 }
 
-void AssetManager::UnloadAsset(ShadowAsset* asset)
+void AssetManager::UnloadAsset(ShadowEngine::Assets::ShadowAsset* asset)
 {
 	auto v = this->loadedAssets.find(asset->runtimeAssetID);
 	this->loadedAssets.erase(v);
 	delete asset;
 }
+
 /*
 
 template<class T>

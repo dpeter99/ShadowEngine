@@ -1,46 +1,42 @@
-//
-// Created by dpete on 2/26/2019.
-//
+#pragma once
 
-#ifndef SHADOWENGINE_MAPLOADER_H
-#define SHADOWENGINE_MAPLOADER_H
 
 #include <map>
 #include "list"
 #include "ShadowMap/ShadowMapChunk.h"
 #include "ShadowMap/ShadowWorld.h"
 
-class Element{
-public:
-    Element* parent;
+namespace ShadowEngine::Assets {
 
-    std::string name;
+	class Element
+	{
+	public:
+		Element* parent;
 
-    bool isBlock;
+		std::string name;
 
-    std::string value;
+		bool isBlock;
 
-    std::list<Element*> properties_old;
-    std::map<std::string, Element*> properties;
+		std::string value;
 
-	std::string GetStringProperty(std::string name);
+		std::list<Element*> properties_old;
+		std::map<std::string, Element*> properties;
 
-    ~Element();
-};
+		std::string GetStringProperty(std::string name);
 
-class AssetLoader {
+		~Element();
+	};
 
-    static Element* LoadFile(std::string name);
+	class AssetLoader
+	{
+		static Element* LoadFile(std::string name);
 
-public:
-    static ShadowMapChunk* LoadMap(std::string name);
+	public:
+		static World::MapChunk* LoadMap(std::string name);
 
-    static ShadowWorld* LoadWorld(std::string name);
+		static World::ShadowWorld* LoadWorld(std::string name);
 
-	template <class T>
-	static T* LoadAsset(std::string name);
-};
-
-#endif //SHADOWENGINE_MAPLOADER_H
-
-
+		template <class T>
+		static T* LoadAsset(std::string name);
+	};
+}

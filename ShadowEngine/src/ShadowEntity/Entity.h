@@ -1,43 +1,53 @@
-//
-// Created by dpete on 2/12/2019.
-//
-
-#ifndef SHADOWENGINE_ENTITY_H
-#define SHADOWENGINE_ENTITY_H
+#pragma once
 
 #include <string>
 #include <iostream>
 
+//#include "ShadowScene/ShadowScene.h"
+
 #include "EntityBase.h"
 
-namespace ShadowEntity {
-
-
-    class Entity {
-    public:
-
-        static std::string id;
-
-        //static std::string Register();
-    public:
-        virtual Entity* Create();
-
-
-        Entity();
-
-        ~Entity();
-
-        virtual void Start();
-
-        virtual void Update();
-
-        virtual void LateUpdate();
-
-        virtual void Draw();
-
-        friend std::ostream& operator<<(std::ostream& os, const Entity& dt);
-
-    };
-
+namespace ShadowEngine::Scene
+{
+	class ShadowScene;
 }
-#endif //SHADOWENGINE_ENTITY_H
+
+namespace ShadowEngine::ShadowEntity
+{
+
+	
+
+	class Entity : public SHObject
+	{
+		SHObject_Base(Entity)
+		
+	public:
+
+		Scene::ShadowScene* scene;
+
+
+	public:
+		Entity();
+
+		Entity(Scene::ShadowScene* scene);
+
+		virtual Entity* Create(Scene::ShadowScene* scene);
+
+		virtual  void Init();
+		
+		virtual void Start();
+
+		virtual void Update();
+
+		virtual void LateUpdate();
+
+		virtual void Render();
+
+		virtual  void LateRender();
+
+	public:
+		void SetScene(Scene::ShadowScene* se);
+
+		friend std::ostream& operator<<(std::ostream& os, const Entity& dt);
+	};
+}

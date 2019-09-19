@@ -1,9 +1,4 @@
-//
-// Created by dpete on 2/26/2019.
-//
-
-#ifndef SHADOWENGINE_SHADOWMAP_H
-#define SHADOWENGINE_SHADOWMAP_H
+#pragma once
 
 
 #include <string>
@@ -13,50 +8,53 @@
 #include "../ShadowMath/Vector2int.h"
 #include "ShadowAsset/ShadowAsset.h"
 
-class ShadowMapChunk;
+namespace ShadowEngine::World {
 
-class ShadowMapLayer
-{
-public:
-    int(*data); //a row mayor flat 2d array
+	class MapChunk;
 
-    std::string name;
+	class ShadowMapLayer
+	{
+	public:
+		int(*data); //a row mayor flat 2d array
 
-    bool visible;
+		std::string name;
 
-    ShadowMapChunk* map;
+		bool visible;
 
-    ShadowMapLayer(ShadowMapChunk& m, bool visible,int*data){
-        this->map = &m;
-		this->visible = visible;
-		this->data = data;
-    }
+		MapChunk* map;
 
-
-    void SetTile(ShadowMath::Vector2int pos, int tileID);
-
-    int GetTile(ShadowMath::Vector2int pos);
-};
-
-class ShadowMapChunk : public ShadowAsset{
-public:
-    std::string name;
-
-	//the position where this map should be drawn
-	ShadowMath::Vector2int pos;
-
-    int height;
-    int width;
-
-    int tileHeight;
-    int tileWidth;
-
-    std::vector<ShadowMapLayer*> layers;
-
-    std::vector<ShadowEntity::Entity*> entities;
-
-    ShadowMapLayer& GetLayer(int id);
-};
+		ShadowMapLayer(MapChunk& m, bool visible, int* data)
+		{
+			this->map = &m;
+			this->visible = visible;
+			this->data = data;
+		}
 
 
-#endif //SHADOWENGINE_SHADOWMAP_H
+		void SetTile(ShadowMath::Vector2int pos, int tileID);
+
+		int GetTile(ShadowMath::Vector2int pos);
+	};
+
+	class MapChunk : public ShadowEngine::Assets::ShadowAsset
+	{
+	public:
+		std::string name;
+
+		//the position where this map should be drawn
+		ShadowMath::Vector2int pos;
+
+		int height;
+		int width;
+
+		int tileHeight;
+		int tileWidth;
+
+		std::vector<ShadowMapLayer*> layers;
+
+		std::vector<ShadowEntity::Entity*> entities;
+
+		ShadowMapLayer& GetLayer(int id);
+	};
+
+}

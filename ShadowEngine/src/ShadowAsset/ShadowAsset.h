@@ -2,15 +2,16 @@
 
 #include <string>
 
-class ShadowAsset
-{
-public:
-	int runtimeAssetID;
-	std::string path;
+namespace ShadowEngine::Assets {
+
+	class ShadowAsset
+	{
+	public:
+		int runtimeAssetID;
+		std::string path;
 
 
-	ShadowAsset();
-	virtual ~ShadowAsset();
-
-};
-
+		ShadowAsset();
+		virtual ~ShadowAsset();
+	};
+}

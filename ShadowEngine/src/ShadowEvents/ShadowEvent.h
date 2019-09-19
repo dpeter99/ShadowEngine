@@ -1,26 +1,36 @@
 #pragma once
-#include <ostream>
-#include <string>
-#include "../Core.h"
+#include  "shpch.h"
+#include "Core/Core.h"
+#include "Core/SHObject.h"
+#include <SDL2/SDL.h>
 
+namespace ShadowEngine::EventSystem {
 
-#define EVENT_CLASS_TYPE(type) virtual const char* GetName() const override { return #type; }
+	class ShadowEvent : public ShadowEngine::SHObject
+	{
+		SHObject_Base(ShadowEvent)
 
-class ShadowEvent
-{
-public:
-	bool Handled = false;
+	private:
+		SDL_Event* sdl_event;
 
-	virtual const char* GetName() const = 0;
-	//virtual int GetCategoryFlags() const = 0;
-	virtual std::string ToString() const { return GetName(); }
+	public:
+		bool Handled = false;
 
-public:
-	ShadowEvent();
-	virtual ~ShadowEvent();
-};
+		virtual std::string ToString() const { return GetType(); }
 
-inline std::ostream& operator<<(std::ostream& os, const class ShadowEvent& e)
-{
-	return os << e.ToString();
+		SDL_Event* GetSDLEvnet() { return sdl_event; };
+
+		ShadowEvent(SDL_Event* ev)
+		{
+			sdl_event = ev;
+		};
+
+		virtual ~ShadowEvent(){}
+	};
+
+	inline std::ostream& operator<<(std::ostream& os, const class ShadowEvent& e)
+	{
+		return os << e.ToString();
+	}
+
 }
