@@ -12,7 +12,7 @@ namespace ShadowEngineBuild
         {
             Console.WriteLine("Converting Map Files");
 
-            string path = BuildEnviroment.GetMapsFolder();
+            string path = "";
 
             var files = System.IO.Directory.GetFiles(path, "*.tmx",
                 SearchOption.AllDirectories);

@@ -7,26 +7,42 @@ namespace ShadowEngineBuild
 {
     public static class BuildEnviroment
     {
-        private static string baseCodePath;
+        private static string engineFolder;
+        private static string buildFolder;
+        private static string includePaths;
 
-        private static string baseContentPath;
-
-        public static void SetBuildEnviroment(string code, string contnent)
+        public static void SetBuildEnviroment(string engineFolder, string buildFolder, string includePaths)
         {
-            baseCodePath = code;
-            baseContentPath = contnent;
+            BuildEnviroment.engineFolder = engineFolder;
+            BuildEnviroment.buildFolder = buildFolder;
+            BuildEnviroment.includePaths = includePaths;
         }
 
         public new static string ToString()
         {
-            return "Code Folder:" + baseCodePath + "\n" +
-                   "Content Folder:" + baseContentPath + "\n";
+            return "Code Folder:" + GetCodeFolder() + "\n";
         }
 
-        public static string GetMapsFolder()
+        public static string GetCodeFolder()
         {
-            return baseContentPath + "/Worlds/";
+            return engineFolder + "/src";
         }
 
+        public static string GetBuildOutput()
+        {
+            return buildFolder;
+        }
+
+        public static List<string> GetIncludePaths()
+        {
+            List<string> inc = new List<string>();
+            inc.Add(engineFolder + "/dependencies/GLAD/include");
+            inc.Add(engineFolder + "/dependencies/glm");
+            inc.Add(engineFolder + "/dependencies/imgui");
+            inc.Add(engineFolder + "/dependencies/SDL2/include");
+            inc.Add(engineFolder + "/dependencies/spdlog/include");
+
+            return inc;
+        }
     }
 }

@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using TiledSharp;
 
+using ShadowEngineBuild.Interop;
 
 namespace ShadowEngineBuild
 {
@@ -13,15 +14,15 @@ namespace ShadowEngineBuild
 
             Console.WriteLine("Shadow Engine Build System");
 
-            BuildEnviroment.SetBuildEnviroment(args[0],args[1]);
+            BuildEnviroment.SetBuildEnviroment(args[0],args[1], args[2]);
             
             Console.WriteLine(BuildEnviroment.ToString());
 
 
-            ShadowMapConverter.ConvertMaps();
+            Interop.InteropGenerator.Generate();
 
 
-#if DEBUG
+#if HZ_DEBUG
             Console.WriteLine("Press enter to close...");
             Console.ReadLine();
 #endif

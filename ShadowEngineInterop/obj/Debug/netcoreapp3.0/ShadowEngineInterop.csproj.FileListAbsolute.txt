@@ -1,0 +1,8 @@
+P:\ShadowEngine\shadowengine\ShadowEngineInterop\bin\Debug\netcoreapp3.0\ShadowEngineInterop.deps.json
+P:\ShadowEngine\shadowengine\ShadowEngineInterop\bin\Debug\netcoreapp3.0\ShadowEngineInterop.dll
+P:\ShadowEngine\shadowengine\ShadowEngineInterop\bin\Debug\netcoreapp3.0\ShadowEngineInterop.pdb
+P:\ShadowEngine\shadowengine\ShadowEngineInterop\obj\Debug\netcoreapp3.0\ShadowEngineInterop.csprojAssemblyReference.cache
+P:\ShadowEngine\shadowengine\ShadowEngineInterop\obj\Debug\netcoreapp3.0\ShadowEngineInterop.AssemblyInfoInputs.cache
+P:\ShadowEngine\shadowengine\ShadowEngineInterop\obj\Debug\netcoreapp3.0\ShadowEngineInterop.AssemblyInfo.cs
+P:\ShadowEngine\shadowengine\ShadowEngineInterop\obj\Debug\netcoreapp3.0\ShadowEngineInterop.dll
+P:\ShadowEngine\shadowengine\ShadowEngineInterop\obj\Debug\netcoreapp3.0\ShadowEngineInterop.pdb
