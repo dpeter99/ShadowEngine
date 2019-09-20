@@ -85,7 +85,7 @@ namespace ShadowEngine::InputSystem
 		 * \brief Gets the number of the modifiers in this Binding
 		 * \return Number of the modifiers
 		 */
-		int ModifierCount() override
+		size_t ModifierCount() override
 		{
 			return modifiers_.size();
 		}
