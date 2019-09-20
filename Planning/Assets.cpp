@@ -45,7 +45,9 @@ class AssetManager
 	
 	void LoadAssetDatabase()
 	{
-		std::unique_ptr<AssetData> a = std::make_unique<AssetData>("./Texture/test");
+		//This is loaded form a file containing all of the assets in the game
+		std::shared_ptr<AssetData> a = std::make_shared<AssetData>("./Texture/test");
+		assetRegistry[a->GetUID()] = a;
 	}
 
 public:
