@@ -30,7 +30,7 @@ inline float convert(T value);
 
 inline float convert(bool value)
 {
-	return value ? 1 : 0;
+	return value ? 1.0f : 0.0f;
 }
 
 inline float convert(float value)

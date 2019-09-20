@@ -31,7 +31,7 @@ namespace ShadowEngine::InputSystem
 		 * \brief Gets the modifier count of the InputBinding
 		 * \return The count of the added modifiers
 		 */
-		virtual int ModifierCount() = 0;
+		virtual size_t ModifierCount() = 0;
 		
 
 	};
