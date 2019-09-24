@@ -11,14 +11,8 @@ using System.Runtime.CompilerServices;
 
 namespace ShadowLight.Model
 {
-    public class AssetHierarchy : INotifyPropertyChanged
+    public class AssetHierarchy
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
         Asset assetroot;
 
         private Project m_project;
@@ -33,7 +27,6 @@ namespace ShadowLight.Model
         public void UpdateAssetsList()
         {
             RecursiveAssetDiscovery(assetroot);
-            NotifyPropertyChanged("assetroot");
         }
 
         public void RecursiveAssetDiscovery(Asset asset)
