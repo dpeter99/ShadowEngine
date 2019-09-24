@@ -8,12 +8,26 @@ namespace ShadowLight.Model
 {
     public class Project
     {
-        public string path;
-        public string name;
+        private string m_folderPath;
+        public string folderPath
+        {
+            get => m_folderPath;
+        }
+
+
+        private string m_name;
+
+        private AssetHierarchy m_assetHierarchy;
+
+        public AssetHierarchy AssetHierarchy
+        {
+            get => m_assetHierarchy;
+        }
 
         public Project(string path)
         {
-            this.path = path;
+            m_folderPath = System.IO.Path.GetDirectoryName(path);
+            m_assetHierarchy = new AssetHierarchy(this);
         }
     }
 }

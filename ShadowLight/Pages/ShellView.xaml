@@ -1,0 +1,19 @@
+﻿<Window x:Class="ShadowLight.Pages.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShadowLight.Pages"
+        xmlns:s="https://github.com/canton7/Stylet"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance local:ShellViewModel}"
+        Title="Stylet Start Project"
+        Width="800" Height="450">
+    <Grid>
+        <DockPanel>
+            <ContentControl DockPanel.Dock="Top" s:View.Model="{Binding menuBar}"/>
+            <ContentControl DockPanel.Dock="Left" s:View.Model="{Binding assetBrowser}" Width="200"/>
+        </DockPanel>
+
+    </Grid>
+</Window>
