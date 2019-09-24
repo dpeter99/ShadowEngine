@@ -1,0 +1,15 @@
+P:\ShadowEngine\shadowengine\ShadowLight\bin\Debug\ShadowLight.exe.config
+P:\ShadowEngine\shadowengine\ShadowLight\bin\Debug\ShadowLight.exe
+P:\ShadowEngine\shadowengine\ShadowLight\bin\Debug\ShadowLight.pdb
+P:\ShadowEngine\shadowengine\ShadowLight\obj\Debug\ShadowLight.csprojAssemblyReference.cache
+P:\ShadowEngine\shadowengine\ShadowLight\obj\Debug\MainWindow.g.cs
+P:\ShadowEngine\shadowengine\ShadowLight\obj\Debug\App.g.cs
+P:\ShadowEngine\shadowengine\ShadowLight\obj\Debug\ShadowLight_MarkupCompile.cache
+P:\ShadowEngine\shadowengine\ShadowLight\obj\Debug\ShadowLight_MarkupCompile.lref
+P:\ShadowEngine\shadowengine\ShadowLight\obj\Debug\MainWindow.baml
+P:\ShadowEngine\shadowengine\ShadowLight\obj\Debug\ShadowLight.g.resources
+P:\ShadowEngine\shadowengine\ShadowLight\obj\Debug\ShadowLight.Properties.Resources.resources
+P:\ShadowEngine\shadowengine\ShadowLight\obj\Debug\ShadowLight.csproj.GenerateResource.cache
+P:\ShadowEngine\shadowengine\ShadowLight\obj\Debug\ShadowLight.exe
+P:\ShadowEngine\shadowengine\ShadowLight\obj\Debug\ShadowLight.pdb
+P:\ShadowEngine\shadowengine\ShadowLight\obj\Debug\GeneratedInternalTypeHelper.g.cs
