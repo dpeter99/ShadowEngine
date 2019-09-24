@@ -14,7 +14,7 @@ namespace ShadowEngineBuild
 
             Console.WriteLine("Shadow Engine Build System");
 
-            BuildEnviroment.SetBuildEnviroment(args[0],args[1], args[2]);
+            BuildEnviroment.SetBuildEnviroment(args[0],args[1]);
             
             Console.WriteLine(BuildEnviroment.ToString());
 

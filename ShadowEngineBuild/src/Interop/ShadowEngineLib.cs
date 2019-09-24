@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using CppSharp;
 using CppSharp.AST;
 using CppSharp.Generators;
+using CppSharp.Parser;
 
 namespace ShadowEngineBuild.Interop
 {
@@ -17,6 +18,7 @@ namespace ShadowEngineBuild.Interop
             var parseroptions = driver.ParserOptions;
             parseroptions.EnableRTTI = true;
             parseroptions.AddArguments("-fcxx-exceptions");
+            parseroptions.LanguageVersion = LanguageVersion.CPP17;
 
             var options = driver.Options;
             options.GeneratorKind = GeneratorKind.CSharp;
@@ -26,7 +28,8 @@ namespace ShadowEngineBuild.Interop
             module.IncludeDirs.Add(BuildEnviroment.GetCodeFolder());
             module.IncludeDirs.AddRange(BuildEnviroment.GetIncludePaths());
 
-            module.Headers.Add("ShadowWindow.h");
+            //module.Headers.AddRange(BuildEnviroment.GetHeaders());
+            //module.Headers.Add("Core/ShadowApplication.h");
 
             module.LibraryDirs.Add(BuildEnviroment.GetBuildOutput());
             module.Libraries.Add("ShadowEngine.lib");

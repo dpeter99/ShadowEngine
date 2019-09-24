@@ -9,13 +9,13 @@ namespace ShadowEngineBuild
     {
         private static string engineFolder;
         private static string buildFolder;
-        private static string includePaths;
 
-        public static void SetBuildEnviroment(string engineFolder, string buildFolder, string includePaths)
+
+        public static void SetBuildEnviroment(string engineFolder, string buildFolder)
         {
             BuildEnviroment.engineFolder = engineFolder;
             BuildEnviroment.buildFolder = buildFolder;
-            BuildEnviroment.includePaths = includePaths;
+
         }
 
         public new static string ToString()
@@ -43,6 +43,16 @@ namespace ShadowEngineBuild
             inc.Add(engineFolder + "/dependencies/spdlog/include");
 
             return inc;
+        }
+
+        public static List<string> GetHeaders()
+        {
+            List<string> headers = new List<string>();
+
+
+            string directory = Path.GetDirectoryName(GetCodeFolder());
+            headers.AddRange(Directory.GetFiles(directory, @"*.h",SearchOption.AllDirectories));
+            return headers;
         }
     }
 }
