@@ -21,3 +21,5 @@ packages/
 ShadowEngine/doc/
 
 ShadowLight/obj/
+
+ShadowEngineInterop/obj/

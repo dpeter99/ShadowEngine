@@ -1,14 +1,18 @@
 ﻿using Microsoft.Win32;
 using ShadowLight.Model;
+using Stylet;
 
 namespace ShadowLight.Pages.Controlls.Menu
 {
-    public class MenuBarViewModel
+    public class MenuBarViewModel : Screen 
     {
+        private IEventAggregator events;
+
         private ApplicationState app;
 
-        public MenuBarViewModel(ApplicationState state)
+        public MenuBarViewModel(IEventAggregator events, ApplicationState state)
         {
+            this.events = events;
             this.app = state;
         }
 
