@@ -6,13 +6,10 @@ namespace ShadowLight.Pages.Controlls.Menu
 {
     public class MenuBarViewModel : Screen 
     {
-        private IEventAggregator events;
-
         private ApplicationState app;
 
-        public MenuBarViewModel(IEventAggregator events, ApplicationState state)
+        public MenuBarViewModel(ApplicationState state)
         {
-            this.events = events;
             this.app = state;
         }
 

@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
+using Stylet;
 
 namespace ShadowLight.Pages.Controlls
 {
-    public class AssetBrowserViewModel
+    public class AssetBrowserViewModel : Screen
     {
         ApplicationState state;
 
@@ -26,7 +28,18 @@ namespace ShadowLight.Pages.Controlls
             }
         }
 
-        public List<AssetHierachyItem> Assets { get; set; }
+        List<AssetHierachyItem> _assets;
+        public List<AssetHierachyItem> Assets {
+            get
+            {
+                return _assets;
+            } 
+
+            private set
+            {
+
+            }
+        }
 
         public bool hasProject
         {
