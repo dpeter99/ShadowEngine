@@ -19,6 +19,7 @@ namespace ShadowLight.Controls.MenuBar
         public void OpenProject()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Shadow Project File|*.shadowproj";
             if (openFileDialog.ShowDialog() == true)
             {
                 ((ShellViewModel)this.Parent).OpenProject(openFileDialog.FileName);

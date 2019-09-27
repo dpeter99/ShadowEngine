@@ -1,0 +1,22 @@
+ShadowFormat_0_0_1
+Asset:{
+	UID:123456789,
+	Type:Chunk,
+}
+Chunk:{
+	Width:5,
+	Height:5,
+	TileWidth:32,
+	TileHeight:32,
+	Layers:{
+		Tile Layer 1:{
+			Visible:True,
+			map:7.7.7.7.7.7.7.7.7.7.7.7.7.7.7.7.7.7.7.7.7.7.7.7.7,
+		}
+		Tile Layer 2:{
+			Visible:True,
+			map:7.0.7.0.7.0.7.0.7.0.7.0.7.0.7.7.7.7.7.7.7.7.7.7.7,
+		}
+	}
+	InfoText:@{This is a sample text containing " , . : special characters},
+}
