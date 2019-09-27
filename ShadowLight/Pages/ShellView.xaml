@@ -9,11 +9,15 @@
         d:DataContext="{d:DesignInstance local:ShellViewModel}"
         Title="Stylet Start Project"
         Width="800" Height="450">
-    <Grid>
-        <DockPanel>
-            <ContentControl DockPanel.Dock="Top" s:View.Model="{Binding menuBar}"/>
-            <ContentControl DockPanel.Dock="Left" s:View.Model="{Binding assetBrowser}" Width="200"/>
-        </DockPanel>
+    <DockPanel>
+        <ContentControl DockPanel.Dock="Top" s:View.Model="{Binding MenuBar}"/>
 
-    </Grid>
+        <StatusBar DockPanel.Dock="Bottom">
+            <Label Padding="0" FontSize="{DynamicResource {x:Static SystemFonts.StatusFontSizeKey}}">ASD</Label>
+        </StatusBar>
+
+        <ContentControl DockPanel.Dock="Left" s:View.Model="{Binding AssetBrowser}"/>
+
+        
+    </DockPanel>
 </Window>
