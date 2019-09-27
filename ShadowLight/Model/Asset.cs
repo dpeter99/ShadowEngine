@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,6 +10,28 @@ namespace ShadowLight.Model
 {
     public class Asset
     {
+        public static Dictionary<string, System.Type> _assetTypeDictionary;
+        public static Dictionary<string, System.Type> AssetTypeDictionary
+        {
+            get
+            {
+                if (_assetTypeDictionary == null)
+                {
+                    var typesWithMyAttribute =
+                        // Note the AsParallel here, this will parallelize everything after.
+                        from a in AppDomain.CurrentDomain.GetAssemblies().AsParallel()
+                        from t in a.GetTypes()
+                        let attributes = t.GetCustomAttributes(typeof(AssetTypeAttribute), true)
+                        where attributes != null && attributes.Length > 0
+                        select new { Type = t, Attribute = ((AssetTypeAttribute)attributes[0]) };
+                    _assetTypeDictionary = typesWithMyAttribute.ToDictionary(a => a.Attribute.ext, a => a.Type);
+                }
+
+                return _assetTypeDictionary;
+
+            }
+        }
+
         public enum Type
         {
             Folder,
@@ -46,9 +69,23 @@ namespace ShadowLight.Model
                 var files = Directory.GetFiles(path);
                 foreach (var item in files)
                 {
-                    Asset c = new Asset(item, Type.File);
-                    this.childs.Add(c);
+                    string ext = Path.GetExtension(item);
+
+                    
+                    if (AssetTypeDictionary.ContainsKey(ext))
+                    {
+                        System.Type t = AssetTypeDictionary[ext];
+
+                        Asset c = Activator.CreateInstance(t, item, Type.File) as Asset;
+
+                        //Asset c = new Asset(item, Type.File);
+                        this.childs.Add(c);
+                    }
                 }
+            }
+            else
+            {
+
             }
         }
     }

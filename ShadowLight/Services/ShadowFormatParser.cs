@@ -44,6 +44,10 @@ namespace ShadowLight.Services
                         current.name = buffer;
                         buffer = "";
                     }
+                    else
+                    {
+                        buffer += (char)c;
+                    }
                 }
                 else if (c == '{')
                 {
@@ -73,6 +77,10 @@ namespace ShadowLight.Services
                         context.properties[current.name] = current;
 
                         current = new Element();
+                    }
+                    else
+                    {
+                        buffer += (char)c;
                     }
                 }
                 else if (c == '}')
@@ -144,6 +152,16 @@ namespace ShadowLight.Services
             public string value;
 
             public Dictionary<string, Element> properties = new Dictionary<string, Element>();
+
+            public int GetIntProperty(string key)
+            {
+                return int.Parse(properties[key].value);
+            }
+
+            public string GetStringProperty(string key)
+            {
+                return properties[key].value;
+            }
         }
     }
 }

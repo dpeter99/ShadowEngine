@@ -38,7 +38,9 @@ namespace ShadowLight.Model
 
             UID = int.Parse(root.properties["Asset"].properties["UID"].value);
 
-            m_folderPath = System.IO.Path.GetDirectoryName(path);
+            var p = root.properties["Project"];
+
+            m_folderPath = p.GetStringProperty("AssetsFolder");
             m_assetHierarchy = new AssetHierarchy(this);
         }
     }
