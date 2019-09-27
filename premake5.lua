@@ -143,6 +143,12 @@ externalproject "ShadowEngineBuild"
    uuid "D11098AF-3D27-9645-869E-2167F2F366CD"
    kind "ConsoleApp"
    language "C#"
+   
+externalproject "ShadowLight"
+   location "ShadowLight"
+   uuid "79BC9CDF-8A46-442E-83B9-E2D360B9A433"
+   kind "WindowedApp"
+   language "C#"
 
 
 

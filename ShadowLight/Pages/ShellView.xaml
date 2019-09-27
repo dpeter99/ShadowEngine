@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ShadowLight.Pages"
         xmlns:s="https://github.com/canton7/Stylet"
         mc:Ignorable="d"
-        d:DataContext="{d:DesignInstance local:ShellViewModel}"
+        d:DataContext="{d:DesignInstance local:ShellViewModel, IsDesignTimeCreatable=True}"
         Title="Stylet Start Project"
         Width="800" Height="450">
     <DockPanel>

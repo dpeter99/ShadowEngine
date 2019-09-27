@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ShadowLight.Controls.AssetBrowser"
              mc:Ignorable="d" 
+             d:DataContext="{d:DesignInstance local:AssetBrowserViewModel, IsDesignTimeCreatable=True}"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
@@ -14,8 +15,12 @@
         <Border Grid.Row="0" Background="{DynamicResource Accent}">
             <Label Content="Label" Padding="0" VerticalContentAlignment="Center" Margin="10,0,0,0"/>
         </Border>
-        <TreeView Grid.Row="1">
-            
+        <TreeView Grid.Row="1" ItemsSource="{Binding AssetsList, Mode=OneWay}">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate DataType="{x:Type local:AssetViewModel}" ItemsSource="{Binding Assets}">
+                    <TextBlock Text="{Binding name}" />
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
         </TreeView>
     </Grid>
 </UserControl>
