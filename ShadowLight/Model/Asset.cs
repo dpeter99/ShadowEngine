@@ -61,31 +61,57 @@ namespace ShadowLight.Model
                 var folders = Directory.GetDirectories(path);
                 foreach (var item in folders)
                 {
-                    Asset c = new Asset(item, Type.Folder);
-                    this.childs.Add(c);
+                    var owningFile = Directory.GetFiles(item).FirstOrDefault(a => Path.GetFileNameWithoutExtension(a) == Path.GetFileName(item));
+                    if (owningFile != null)
+                    {
+                        var c = InstanciateCorrectAsset(item);
+                        if (c == null)
+                        {
+                            c = new Asset(item, Type.Folder);
+                            this.childs.Add(c);
+                        }
+                        else
+                        {
+                            this.childs.Add(c);
+                        }
+                    }
+                    else
+                    {
+                        Asset c = new Asset(item, Type.Folder);
+                        this.childs.Add(c);
+                    }
                 }
 
 
                 var files = Directory.GetFiles(path);
                 foreach (var item in files)
                 {
-                    string ext = Path.GetExtension(item);
-
-                    
-                    if (AssetTypeDictionary.ContainsKey(ext))
+                    if (Path.GetFileName(item) == _name)
                     {
-                        System.Type t = AssetTypeDictionary[ext];
-
-                        Asset c = Activator.CreateInstance(t, item, Type.File) as Asset;
-
-                        //Asset c = new Asset(item, Type.File);
+                        var c = InstanciateCorrectAsset(item);
                         this.childs.Add(c);
                     }
                 }
             }
+        }
+
+        Asset InstanciateCorrectAsset(string item)
+        {
+            string ext = Path.GetExtension(item);
+
+            if (AssetTypeDictionary.ContainsKey(ext))
+            {
+                System.Type t = AssetTypeDictionary[ext];
+
+                Asset c = Activator.CreateInstance(t, item, Type.File) as Asset;
+
+                //Asset c = new Asset(item, Type.File);
+                return c;
+            }
             else
             {
-
+                //TODO: no correct asset
+                return null;
             }
         }
     }
