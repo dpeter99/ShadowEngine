@@ -1,5 +1,4 @@
 #pragma once
-#include "RendererAPI.h"
 #include "SDL2/SDL.h"
 
 namespace ShadowEngine::Rendering {

@@ -7,9 +7,9 @@ namespace ShadowEngine::Rendering {
 	class RenderCommand
 	{
 	public:
-		inline static void Init()
+		inline static void Init(GraphicsContext& ctx)
 		{
-			s_RendererAPI->Init();
+			s_RendererAPI->Init(ctx);
 		}
 
 		inline static void SetClearColor(const glm::vec4& color)

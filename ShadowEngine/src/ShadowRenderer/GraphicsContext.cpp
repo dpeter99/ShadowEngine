@@ -3,6 +3,7 @@
 
 #include "Platform/OpenGL/OpenGLContext.h"
 #include "GraphicsContext.h"
+#include "RendererAPI.h"
 
 namespace ShadowEngine::Rendering {
 

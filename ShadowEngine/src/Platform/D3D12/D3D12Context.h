@@ -1,9 +1,8 @@
 #pragma once
-#include "Common.h"
-
-#include "SDL2/SDL.h"
 #include "ShadowRenderer/GraphicsContext.h"
 
+#include "Common.h"
+#include "SDL2/SDL.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
@@ -14,11 +13,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		virtual void Init() override;
 		virtual void SwapBuffers() override;
-	private:
+	public:
 		SDL_Window* m_WindowHandle;
 
 		com_ptr<IDXGIFactory6> dxgiFactory{ nullptr };
-		com_ptr<ID3D12Device> device{ nullptr };
+		
 	};
 
 }

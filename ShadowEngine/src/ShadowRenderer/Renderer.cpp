@@ -3,6 +3,7 @@
 #include "ShadowEntity/Entities/Camera.h"
 #include "Platform/OpenGL/OpenGLShader.h"
 #include "Platform/OpenGL/OpenGLRendererAPI.h"
+#include "Core/ShadowApplication.h"
 
 namespace ShadowEngine::Rendering {
 
@@ -19,7 +20,7 @@ namespace ShadowEngine::Rendering {
 
 		s_RendererAPI = RendererAPI::MakeRendererAPI();
 
-		s_RendererAPI->Init();
+		s_RendererAPI->Init(*ShadowApplication::Get().GetWindow().context);
 
 		
 	}
