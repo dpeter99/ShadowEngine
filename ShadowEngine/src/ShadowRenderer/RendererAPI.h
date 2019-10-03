@@ -16,7 +16,7 @@ namespace ShadowEngine::Rendering {
 			D3D12 = 2
 		};
 	public:
-		virtual void Init(GraphicsContext& ctx) = 0;
+		virtual void Init(ShadowEngine::Ref<GraphicsContext> ctx) = 0;
 		virtual void SetClearColor(const glm::vec4& color) = 0;
 		virtual void Clear() = 0;
 

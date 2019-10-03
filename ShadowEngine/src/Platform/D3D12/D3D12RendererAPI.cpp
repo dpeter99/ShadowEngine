@@ -1,4 +1,7 @@
 #include "shpch.h"
+
+#include "Core/Core.h"
+
 #include "D3D12RendererAPI.h"
 #include "D3D12Context.h"
 
@@ -38,13 +41,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 		} while (adapterQueryResult != DXGI_ERROR_NOT_FOUND);
 	}
 	
-	void D3D12RendererAPI::Init(GraphicsContext& _ctx)
+	void D3D12RendererAPI::Init(ShadowEngine::Ref<GraphicsContext> _ctx)
 	{
-		D3D12::D3D12Context& ctx = dynamic_cast<D3D12::D3D12Context&>(_ctx);
+		this->ctx = std::dynamic_pointer_cast<D3D12Context>(_ctx);
 		
 		//Load in the GPU adapters
 		std::vector<com_ptr<IDXGIAdapter1>> adapters;
-		GetAdapters(ctx.dxgiFactory.Get(), adapters);
+		GetAdapters(ctx->dxgiFactory.Get(), adapters);	
 
 		// select your adapter here, NULL = system default
 		// Using the first adapter for now
@@ -53,6 +56,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//Create the D3D device
 		DX_API("Failed to create D3D Device")
 			D3D12CreateDevice(selectedAdapter, D3D_FEATURE_LEVEL_11_0, IID_PPV_ARGS(device.GetAddressOf()));
+
+		
 	}
 
 	void D3D12RendererAPI::SetClearColor(const glm::vec4& color)

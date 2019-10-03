@@ -2,7 +2,7 @@
 #include "ShadowRenderer/RendererAPI.h"
 
 #include "Common.h"
-
+#include "Platform/D3D12/D3D12Context.h"
 
 
 namespace ShadowEngine::Rendering::D3D12 {
@@ -11,8 +11,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 	public:
 		static com_ptr<ID3D12Device> device;
+		static ShadowEngine::Ref<D3D12::D3D12Context> ctx;
 		
-		virtual void Init(GraphicsContext& ctx) override;
+		virtual void Init(ShadowEngine::Ref<GraphicsContext> ctx) override;
 
 		virtual void SetClearColor(const glm::vec4& color) override;
 		virtual void Clear() override;

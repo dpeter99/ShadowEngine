@@ -62,7 +62,8 @@ project "ShadowEngine"
 
 	defines
 	{
-		"_CRT_SECURE_NO_WARNINGS"
+		"_CRT_SECURE_NO_WARNINGS",
+		"SH_ENABLE_ASSERTS"
 	}
 
 	includedirs
@@ -84,7 +85,9 @@ project "ShadowEngine"
 		"Glad",
 		"ImGui",
 		"ShadowEngineBuild",
-		"opengl32.lib"
+		"opengl32.lib",
+		"D3D12.lib",
+		"DXGI.lib"
 	}
 
 	filter "system:windows"

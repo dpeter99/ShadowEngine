@@ -39,9 +39,9 @@ namespace ShadowEngine {
 		moduleManager.PushModule(new EventSystem::ShadowEventManager());
 		moduleManager.PushModule(new SDLPlatform::SDLModule());
 		moduleManager.PushModule(new ShadowEngine::Rendering::Renderer());
-		moduleManager.PushModule(new DebugGui::ImGuiModule());
+		//moduleManager.PushModule(new DebugGui::ImGuiModule());
 		moduleManager.PushModule(new InputSystem::ShadowActionSystem());
-		moduleManager.PushModule(new Debug::DebugModule());
+		//moduleManager.PushModule(new Debug::DebugModule());
 		moduleManager.PushModule(new Scene::SceneManager());
 
 		moduleManager.Init();
