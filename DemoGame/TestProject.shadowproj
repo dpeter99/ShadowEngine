@@ -4,6 +4,6 @@ Asset:{
 	Type:Project,
 }
 Project:{
-	AssetsFolder:@{C:\Users\dpete\Documents\programing\ShadowEngine\DemoGame\Resources}
+	AssetsFolder:@{.\Resources}
 	Name:TestProject,
 }

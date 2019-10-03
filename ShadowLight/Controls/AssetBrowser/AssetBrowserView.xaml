@@ -18,7 +18,10 @@
         <TreeView Grid.Row="1" ItemsSource="{Binding AssetsList, Mode=OneWay}">
             <TreeView.ItemTemplate>
                 <HierarchicalDataTemplate DataType="{x:Type local:AssetViewModel}" ItemsSource="{Binding Assets}">
-                    <TextBlock Text="{Binding name}" />
+                    <StackPanel Orientation="Horizontal">
+                        <ContentPresenter Content="{StaticResource OpenProjectIcon}"/>
+                        <TextBlock VerticalAlignment="Center" Text="{Binding Name}" />
+                    </StackPanel>
                 </HierarchicalDataTemplate>
             </TreeView.ItemTemplate>
         </TreeView>

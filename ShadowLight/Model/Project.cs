@@ -40,7 +40,7 @@ namespace ShadowLight.Model
 
             var p = root.properties["Project"];
 
-            m_folderPath = p.GetStringProperty("AssetsFolder");
+            m_folderPath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(path), p.GetStringProperty("AssetsFolder"));
             m_assetHierarchy = new AssetHierarchy(this);
         }
     }
