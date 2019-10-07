@@ -16,5 +16,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include <fstream>
+
 #include "Util/Utility.h"
 #include "Log.h"

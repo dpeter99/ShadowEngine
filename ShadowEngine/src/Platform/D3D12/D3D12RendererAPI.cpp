@@ -4,10 +4,16 @@
 
 #include "D3D12RendererAPI.h"
 #include "D3D12Context.h"
+#include "D3D12CommandQueue.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
 	com_ptr<ID3D12Device> D3D12RendererAPI::device{ nullptr };
+	Ref<D3D12::D3D12Context> D3D12RendererAPI::ctx {nullptr};
+	BufferLayout D3D12RendererAPI::input_layout {
+		{ ShadowEngine::Rendering::ShaderDataType::Float3, "a_Position" },
+		{ ShadowEngine::Rendering::ShaderDataType::Float4, "a_Color" }
+	};
 	
 	/**
 	 * \brief Loads the GPU adapters
@@ -57,6 +63,21 @@ namespace ShadowEngine::Rendering::D3D12 {
 		DX_API("Failed to create D3D Device")
 			D3D12CreateDevice(selectedAdapter, D3D_FEATURE_LEVEL_11_0, IID_PPV_ARGS(device.GetAddressOf()));
 
+		command_queue = std::make_shared<D3D12::D3D12CommandQueue>();
+
+		swap_chain = std::make_shared<D3D12::D3D12SwapChain>(command_queue);
+
+		fence = std::make_unique<D3D12::D3D12Fence>();
+		fenceValue = 1;
+
+		fenceEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
+		if (fenceEvent == NULL) {
+			DX_API("Failed to create windows event") HRESULT_FROM_WIN32(GetLastError());
+		}
+
+		dsvHeap = std::make_unique<D3D12DescriptorHeap>(D3D12_DESCRIPTOR_HEAP_FLAG_NONE, D3D12_DESCRIPTOR_HEAP_TYPE_DSV, 1);
+
+		depthBuffer = std::make_unique<D3D12DepthStencilBuffer>(dsvHeap, swap_chain);
 		
 	}
 

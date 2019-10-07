@@ -20,7 +20,7 @@ namespace ShadowEngine::Rendering {
 
 		s_RendererAPI = RendererAPI::MakeRendererAPI();
 
-		s_RendererAPI->Init(*ShadowApplication::Get().GetWindow().context);
+		s_RendererAPI->Init(ShadowApplication::Get().GetWindow().context);
 
 		
 	}

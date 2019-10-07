@@ -7,7 +7,7 @@ namespace ShadowEngine::Rendering {
 	class RenderCommand
 	{
 	public:
-		inline static void Init(GraphicsContext& ctx)
+		inline static void Init(Ref<GraphicsContext> ctx)
 		{
 			s_RendererAPI->Init(ctx);
 		}

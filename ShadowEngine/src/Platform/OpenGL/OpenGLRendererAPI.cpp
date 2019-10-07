@@ -5,7 +5,7 @@
 
 namespace ShadowEngine::Rendering::OpenGL {
 
-	void OpenGLRendererAPI::Init(GraphicsContext& ctx)
+	void OpenGLRendererAPI::Init(Ref<GraphicsContext> ctx)
 	{
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);

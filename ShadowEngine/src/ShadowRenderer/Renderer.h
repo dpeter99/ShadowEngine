@@ -18,8 +18,8 @@ namespace ShadowEngine::Rendering {
 		SHObject_Base(Renderer)
 		
 	public:
+		//Singleton Instance
 		Renderer* instance;
-
 		
 		void Init() override;
 		void Update() override {};
@@ -28,6 +28,8 @@ namespace ShadowEngine::Rendering {
 		
 		std::string GetName() override { return "Renderer"; }
 
+
+		
 		static void BeginScene(Camera& camera);
 		static void EndScene();
 

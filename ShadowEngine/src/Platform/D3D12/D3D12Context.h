@@ -15,6 +15,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		virtual void SwapBuffers() override;
 	public:
 		SDL_Window* m_WindowHandle;
+		HWND hwnd;		
 
 		com_ptr<IDXGIFactory6> dxgiFactory{ nullptr };
 		

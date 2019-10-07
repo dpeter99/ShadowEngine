@@ -1,5 +1,6 @@
 #include "shpch.h"
 #include "D3D12Context.h"
+#include <SDL2/SDL_syswm.h>
 
 namespace ShadowEngine::Rendering::D3D12 {
 
@@ -8,6 +9,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 		//Check the window we got
 		SH_CORE_ASSERT(windowHandle, "Window handle is null!")
+
+		SDL_SysWMinfo wmInfo;
+		SDL_VERSION(&wmInfo.version);
+		SDL_GetWindowWMInfo(windowHandle, &wmInfo);
+		hwnd = (HWND)wmInfo.info.win.window;
 	}
 	
 	void D3D12Context::Init()
