@@ -5,7 +5,7 @@
 
 namespace ShadowEngine::Rendering::D3D12 {
 
-	static GLenum ShaderDataTypeToOpenGLBaseType(ShaderDataType type)
+	static DXGI_FORMAT ShaderDataTypeToD3D12BaseType(ShaderDataType type)
 	{
 		switch (type)
 		{
@@ -13,20 +13,21 @@ namespace ShadowEngine::Rendering::D3D12 {
 		case ShadowEngine::Rendering::ShaderDataType::Float2:   return DXGI_FORMAT_R32G32_FLOAT;
 		case ShadowEngine::Rendering::ShaderDataType::Float3:   return DXGI_FORMAT_R32G32B32_FLOAT;
 		case ShadowEngine::Rendering::ShaderDataType::Float4:   return DXGI_FORMAT_R32G32B32A32_FLOAT;
-		case ShadowEngine::Rendering::ShaderDataType::Mat3:     return ;
-		case ShadowEngine::Rendering::ShaderDataType::Mat3:     return ;
-		case ShadowEngine::Rendering::ShaderDataType::Mat4:     return GL_FLOAT;
-		case ShadowEngine::Rendering::ShaderDataType::Int:      return GL_INT;
-		case ShadowEngine::Rendering::ShaderDataType::Int2:     return GL_INT;
-		case ShadowEngine::Rendering::ShaderDataType::Int3:     return GL_INT;
-		case ShadowEngine::Rendering::ShaderDataType::Int4:     return GL_INT;
-		case ShadowEngine::Rendering::ShaderDataType::Bool:     return DXGI_FORMAT_1;
+		case ShadowEngine::Rendering::ShaderDataType::Int:      return DXGI_FORMAT_R32_SINT;
+		case ShadowEngine::Rendering::ShaderDataType::Int2:     return DXGI_FORMAT_R32G32_SINT;
+		case ShadowEngine::Rendering::ShaderDataType::Int3:     return DXGI_FORMAT_R32G32B32_SINT;
+		case ShadowEngine::Rendering::ShaderDataType::Int4:     return DXGI_FORMAT_R32G32B32A32_SINT;
 		}
 
 		SH_CORE_ASSERT(false, "Unknown ShaderDataType!");
-		return 0;
+		return DXGI_FORMAT_UNKNOWN;
 	}
 	
+	/**
+	 * \brief Loads a HLSL shader code from a compiled cso file
+	 * \param VSfilePath Path to the code file (.cso)
+	 * \return Com pointer to the code blob
+	 */
 	com_ptr<ID3DBlob> D3D12Shader::LoadCso(const std::string& VSfilePath)
 	{
 		std::ifstream file{ VSfilePath, std::ios::binary | std::ios::ate };
@@ -50,7 +51,17 @@ namespace ShadowEngine::Rendering::D3D12 {
 		}
 	}
 
-	void D3D12Shader::ApplyToDescriptor(D3D12_GRAPHICS_PIPELINE_STATE_DESC& psoDesc) {
+	/**
+	 * \brief Populates a Pipeline state Descriptor for this shader
+	 * \param psoDesc The Pipeline State Descriptor to populate
+	 */
+	void D3D12Shader::CreatePipelineDescriptor(D3D12_GRAPHICS_PIPELINE_STATE_DESC& psoDesc) const
+	{
+		psoDesc.NumRenderTargets = 1;
+		psoDesc.PrimitiveTopologyType = D3D12_PRIMITIVE_TOPOLOGY_TYPE_TRIANGLE;
+		psoDesc.RTVFormats[0] = DXGI_FORMAT_R8G8B8A8_UNORM;
+		psoDesc.InputLayout = CreateInputDescriptor(D3D12RendererAPI::input_layout);
+
 		psoDesc.pRootSignature = rootSig.Get();
 		psoDesc.VS = CD3DX12_SHADER_BYTECODE(VertexShaderByteCode.Get());
 		/*
@@ -68,25 +79,52 @@ namespace ShadowEngine::Rendering::D3D12 {
 		psoDesc.SampleMask = UINT_MAX;
 	}
 
-	D3D12_INPUT_LAYOUT_DESC& D3D12Shader::CreateInputDescriptor()
+	/**
+	 * \brief Creates a Input Layout descriptor form BufferLayout
+	 * \param layout The buffer layout to be converted
+	 * \return The Input Layout
+	 */
+	D3D12_INPUT_LAYOUT_DESC& D3D12Shader::CreateInputDescriptor(BufferLayout& layout)
 	{
-		
-	}
+		D3D12_INPUT_LAYOUT_DESC layout_desc;
 
-	void ApplyInputLaout()
-	{
+		std::vector<D3D12_INPUT_ELEMENT_DESC> elements;
 		
+		for (const auto& element : layout)
+		{
+			D3D12_INPUT_ELEMENT_DESC e;
+			e.SemanticName = element.Name.c_str();
+			e.SemanticIndex = 0;
+			e.Format = ShaderDataTypeToD3D12BaseType(element.Type);
+			e.InputSlot = 0;
+			e.AlignedByteOffset = element.Offset;
+			e.InputSlotClass = D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA;
+			e.InstanceDataStepRate = 0;
+
+			elements.push_back(e);
+		}
+
+		layout_desc.NumElements = elements.size();
+		layout_desc.pInputElementDescs = &(elements.at(0));
+		return layout_desc;
 	}
 	
+	/**
+	 * \brief Constructor for D3D12 Shaders.
+	 * \param VSfilePath File path to the Compiled HLSL Vertex shader
+	 * \param PSfilePath File path to the Compiled HLSL Fragment shader
+	 */
 	D3D12Shader::D3D12Shader(const std::string& VSfilePath, const std::string& PSfilePath)
 	{
+		//Load in the default values for now
 		blendState = CD3DX12_BLEND_DESC(D3D12_DEFAULT);
 		rasterizerState = CD3DX12_RASTERIZER_DESC(D3D12_DEFAULT);
 		depthStencilState = CD3DX12_DEPTH_STENCIL_DESC(D3D12_DEFAULT);
 		depthStencilState.DepthEnable = FALSE;
 		depthStencilState.StencilEnable = FALSE;
 		dsvFormat = DXGI_FORMAT_UNKNOWN;
-		
+
+		//Load Up the shader codes
 		VertexShaderByteCode = LoadCso(VSfilePath);
 		FragmentShaderByteCode = LoadCso(PSfilePath);
 		
@@ -96,12 +134,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 			VertexShaderByteCode->GetBufferSize(), IID_PPV_ARGS(rootSig.GetAddressOf()));
 
 
+		//Create the Pipeline State Descriptor
 		ZeroMemory(&gpsoDesc, sizeof(D3D12_GRAPHICS_PIPELINE_STATE_DESC));
-		gpsoDesc.NumRenderTargets = 1;
-		gpsoDesc.PrimitiveTopologyType = D3D12_PRIMITIVE_TOPOLOGY_TYPE_TRIANGLE;
-		gpsoDesc.RTVFormats[0] = DXGI_FORMAT_R8G8B8A8_UNORM;
-		gpsoDesc.InputLayout = D3D12RendererAPI::input_layout;
-		ApplyToDescriptor(gpsoDesc);
+		CreatePipelineDescriptor(gpsoDesc);
+		
 
 		DX_API("Failed to reflect vertex shader")
 			D3DReflect(gpsoDesc.VS.pShaderBytecode, gpsoDesc.VS.BytecodeLength, IID_PPV_ARGS(vsReflection.GetAddressOf()));
@@ -117,9 +153,25 @@ namespace ShadowEngine::Rendering::D3D12 {
 		DX_API("Failed to deserialize root signature")
 			D3D12CreateRootSignatureDeserializer(gpsoDesc.VS.pShaderBytecode, gpsoDesc.VS.BytecodeLength, IID_PPV_ARGS(rsDeserializer.GetAddressOf()));
 
-		pipelineState = psoMan->Get(gpsoDesc);
+		//Create the pipeline state object from the descriptor
+		
+		DX_API("PSOManager: Failed to create GPSO")
+		D3D12RendererAPI::device->CreateGraphicsPipelineState(&gpsoDesc, IID_PPV_ARGS(pipelineState.GetAddressOf()));
 		
 	}
 
-	
+	D3D12Shader::~D3D12Shader()
+	{
+		
+	}
+
+	void D3D12Shader::Bind() const
+	{
+		
+	}
+
+	void D3D12Shader::Unbind() const
+	{
+		
+	}
 }
