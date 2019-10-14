@@ -7,7 +7,7 @@
 
 namespace ShadowEngine::Rendering {
 
-	VertexBuffer* VertexBuffer::Create(float* vertices, uint32_t size)
+	VertexBuffer* VertexBuffer::Create(void* vertices, uint32_t size)
 	{
 		switch (ShadowEngine::Rendering::Renderer::GetAPI())
 		{

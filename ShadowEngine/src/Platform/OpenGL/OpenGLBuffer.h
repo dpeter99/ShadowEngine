@@ -7,7 +7,7 @@ namespace ShadowEngine::Rendering::OpenGL {
 	class OpenGLVertexBuffer : public ShadowEngine::Rendering::VertexBuffer
 	{
 	public:
-		OpenGLVertexBuffer(float* vertices, uint32_t size);
+		OpenGLVertexBuffer(void* vertices, uint32_t size);
 		virtual ~OpenGLVertexBuffer();
 
 		virtual void Bind() const override;

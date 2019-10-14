@@ -87,7 +87,8 @@ project "ShadowEngine"
 		"ShadowEngineBuild",
 		"opengl32.lib",
 		"D3D12.lib",
-		"DXGI.lib"
+		"DXGI.lib",
+		"D3DCompiler.lib"
 	}
 
 	filter "system:windows"

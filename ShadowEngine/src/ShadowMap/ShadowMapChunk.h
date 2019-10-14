@@ -1,11 +1,11 @@
 #pragma once
-
+#include "Core/Core.h"
 
 #include <string>
 #include <vector>
-#include "../ShadowMath/Vector2int.h"
-#include "../ShadowEntity/Entity.h"
-#include "../ShadowMath/Vector2int.h"
+#include "ShadowMath/Vector2int.h"
+#include "ShadowEntity/Entity.h"
+#include "ShadowMath/Vector2int.h"
 #include "ShadowAsset/ShadowAsset.h"
 
 namespace ShadowEngine::World {
@@ -36,8 +36,9 @@ namespace ShadowEngine::World {
 		int GetTile(ShadowMath::Vector2int pos);
 	};
 
-	class MapChunk : public ShadowEngine::Assets::ShadowAsset
+	class MapChunk : public Assets::ShadowAsset
 	{
+		SHObject_Base(MapChunk)
 	public:
 		std::string name;
 

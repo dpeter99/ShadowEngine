@@ -4,7 +4,7 @@
 namespace ShadowEngine {
 
 	/**
-	 * \brief This is the base class for the classes that runtime runtime ShadowEngine::Reflection.
+	 * \brief This is the base class for every class in the Engine that uses runtime reflection.
 	 */
 	class SHObject
 	{
