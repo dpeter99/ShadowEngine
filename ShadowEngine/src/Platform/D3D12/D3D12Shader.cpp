@@ -84,11 +84,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 	 * \param layout The buffer layout to be converted
 	 * \return The Input Layout
 	 */
-	D3D12_INPUT_LAYOUT_DESC& D3D12Shader::CreateInputDescriptor(BufferLayout& layout)
+	D3D12_INPUT_LAYOUT_DESC D3D12Shader::CreateInputDescriptor(BufferLayout& layout)
 	{
 		D3D12_INPUT_LAYOUT_DESC layout_desc;
 
-		std::vector<D3D12_INPUT_ELEMENT_DESC> elements;
+		auto elements = new std::vector<D3D12_INPUT_ELEMENT_DESC>();
 		
 		for (const auto& element : layout)
 		{
@@ -101,11 +101,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 			e.InputSlotClass = D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA;
 			e.InstanceDataStepRate = 0;
 
-			elements.push_back(e);
+			elements->push_back(e);
 		}
 
-		layout_desc.NumElements = elements.size();
-		layout_desc.pInputElementDescs = &(elements.at(0));
+		layout_desc.NumElements = elements->size();
+		layout_desc.pInputElementDescs = &(elements->at(0));
 		return layout_desc;
 	}
 	
@@ -154,9 +154,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 			D3D12CreateRootSignatureDeserializer(gpsoDesc.VS.pShaderBytecode, gpsoDesc.VS.BytecodeLength, IID_PPV_ARGS(rsDeserializer.GetAddressOf()));
 
 		//Create the pipeline state object from the descriptor
+		com_ptr<ID3D12PipelineState> pso{ nullptr };
 		
 		DX_API("PSOManager: Failed to create GPSO")
-		D3D12RendererAPI::device->CreateGraphicsPipelineState(&gpsoDesc, IID_PPV_ARGS(pipelineState.GetAddressOf()));
+		D3D12RendererAPI::device->CreateGraphicsPipelineState(&gpsoDesc, IID_PPV_ARGS(pso.GetAddressOf()));
+
+		pipelineState = pso;
 		
 	}
 

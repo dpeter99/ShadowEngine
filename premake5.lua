@@ -92,12 +92,21 @@ project "ShadowEngine"
 		"D3DCompiler.lib"
 	}
 
-	shaderobjectfileoutput ("../bin/" .. outputdir .. "/%{prj.name}/Shaders")
+	local shader_dir = "../bin/" .. outputdir .. "/%{prj.name}/Shaders/"
+	
+	shadermodel "5.0"
+	shaderentry "main"
+	
+	filter "files:**.hlsl"
+		flags "ExcludeFromBuild"
+		shaderobjectfileoutput (shader_dir .. "%{file.basename}.cso")
 		
 	filter "files:**-FS.hlsl"
+		removeflags "ExcludeFromBuild"
 		shadertype "Pixel"
 		
 	filter "files:**-VS.hlsl"
+		removeflags "ExcludeFromBuild"
 		shadertype "Vertex"
 
 	filter "system:windows"

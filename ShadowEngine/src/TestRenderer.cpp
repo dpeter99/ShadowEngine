@@ -86,7 +86,8 @@ TestRenderer::TestRenderer() : m_CameraPosition(0.0f) {
 			}
 		)";
 
-	m_Shader.reset(ShadowEngine::Rendering::Shader::Create(vertexSrc, fragmentSrc));
+	//m_Shader.reset(ShadowEngine::Rendering::Shader::Create(vertexSrc, fragmentSrc));
+	m_Shader.reset(ShadowEngine::Rendering::Shader::CreateFromCompiled("Shaders/Default-VS.cso", "Shaders/Default-FS.cso"));
 
 	std::string flatColorShaderVertexSrc = R"(
 			#version 330 core
@@ -120,7 +121,7 @@ TestRenderer::TestRenderer() : m_CameraPosition(0.0f) {
 			}
 		)";
 
-	m_FlatColorShader.reset(ShadowEngine::Rendering::Shader::Create(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
+	//m_FlatColorShader.reset(ShadowEngine::Rendering::Shader::Create(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
 
 	std::string textureShaderVertexSrc = R"(
 			#version 330 core
@@ -155,13 +156,13 @@ TestRenderer::TestRenderer() : m_CameraPosition(0.0f) {
 			}
 		)";
 
-	m_TextureShader.reset(ShadowEngine::Rendering::Shader::Create(textureShaderVertexSrc, textureShaderFragmentSrc));
+	//m_TextureShader.reset(ShadowEngine::Rendering::Shader::Create(textureShaderVertexSrc, textureShaderFragmentSrc));
 
 	m_Texture = ShadowEngine::Rendering::Texture2D::Create("Resources/Textures/Checkerboard.png");
 	m_ChernoLogoTexture = ShadowEngine::Rendering::Texture2D::Create("Resources/Textures/ChernoLogo.png");
 
-	std::dynamic_pointer_cast<ShadowEngine::Rendering::OpenGL::OpenGLShader>(m_TextureShader)->Bind();
-	std::dynamic_pointer_cast<ShadowEngine::Rendering::OpenGL::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
+	//std::dynamic_pointer_cast<ShadowEngine::Rendering::OpenGL::OpenGLShader>(m_TextureShader)->Bind();
+	//std::dynamic_pointer_cast<ShadowEngine::Rendering::OpenGL::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
 
 }
 
@@ -174,8 +175,8 @@ void TestRenderer::Update() {
 
 	glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
 
-	std::dynamic_pointer_cast<ShadowEngine::Rendering::OpenGL::OpenGLShader>(m_FlatColorShader)->Bind();
-	std::dynamic_pointer_cast<ShadowEngine::Rendering::OpenGL::OpenGLShader>(m_FlatColorShader)->UploadUniformFloat3("u_Color", m_SquareColor);
+	//std::dynamic_pointer_cast<ShadowEngine::Rendering::OpenGL::OpenGLShader>(m_FlatColorShader)->Bind();
+	//std::dynamic_pointer_cast<ShadowEngine::Rendering::OpenGL::OpenGLShader>(m_FlatColorShader)->UploadUniformFloat3("u_Color", m_SquareColor);
 
 	for (int y = 0; y < 20; y++)
 	{
