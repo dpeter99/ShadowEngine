@@ -54,6 +54,7 @@ project "ShadowEngine"
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
 		"%{prj.name}/src/**.cd",
+		"%{prj.name}/src/**.hlsl",
 		"%{prj.name}/dependencies/stb_image/**.h",
 		"%{prj.name}/dependencies/stb_image/**.cpp",
 		"%{prj.name}/dependencies/glm/glm/**.hpp",
@@ -90,6 +91,14 @@ project "ShadowEngine"
 		"DXGI.lib",
 		"D3DCompiler.lib"
 	}
+
+	shaderobjectfileoutput ("../bin/" .. outputdir .. "/%{prj.name}/Shaders")
+		
+	filter "files:**-FS.hlsl"
+		shadertype "Pixel"
+		
+	filter "files:**-VS.hlsl"
+		shadertype "Vertex"
 
 	filter "system:windows"
 		systemversion "latest"

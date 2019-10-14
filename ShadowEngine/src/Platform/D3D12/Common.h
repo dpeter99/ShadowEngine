@@ -11,6 +11,8 @@
 #include <memory>
 #include <vector>
 
+#include <string>
+
 
 #include <dxgi1_5.h>
 
@@ -52,4 +54,16 @@ namespace ShadowEngine::Rendering::D3D12
 	
 	#define DX_API(msg) HResultTester(msg, __FILE__, __LINE__) <<
 
+	#define OUTPUT_BUFFER_SIZE 1024
+	
+	inline std::wstring WFormat(const wchar_t* format, ...) {
+		va_list va;
+		va_start(va, format);
+		std::wstring wstr;
+		wstr.resize(OUTPUT_BUFFER_SIZE);
+		vswprintf_s(&(wstr.at(0)), OUTPUT_BUFFER_SIZE, format, va);
+		va_end(va);
+		wstr.shrink_to_fit();
+		return wstr;
+	}
 }
