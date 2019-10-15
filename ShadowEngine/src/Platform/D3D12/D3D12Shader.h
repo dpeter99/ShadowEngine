@@ -24,7 +24,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		D3D12_DEPTH_STENCIL_DESC depthStencilState{};
 		DXGI_FORMAT dsvFormat;
 
-		com_ptr<ID3D12PipelineState> pipelineState;
+		com_ptr<ID3D12PipelineState> pipelineState{nullptr};
 		D3D12_GRAPHICS_PIPELINE_STATE_DESC gpsoDesc{};
 
 		com_ptr<ID3D12ShaderReflection> vsReflection;
@@ -38,7 +38,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		static com_ptr<ID3DBlob> D3D12Shader::LoadCso(const std::string& VSfilePath);
 		void CreatePipelineDescriptor(D3D12_GRAPHICS_PIPELINE_STATE_DESC& psoDesc) const;
-		static D3D12_INPUT_LAYOUT_DESC& CreateInputDescriptor(BufferLayout& layout);
+		static D3D12_INPUT_LAYOUT_DESC CreateInputDescriptor(BufferLayout& layout);
 
 
 		virtual void Bind() const;

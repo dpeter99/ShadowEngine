@@ -59,6 +59,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 		// Using the first adapter for now
 		IUnknown* selectedAdapter = (adapters.size() > 0) ? adapters[0].Get() : NULL;
 
+		com_ptr<ID3D12Debug> debug_controller;
+		D3D12GetDebugInterface(IID_PPV_ARGS(&debug_controller));
+		debug_controller->EnableDebugLayer();
+		
 		//Create the D3D device
 		DX_API("Failed to create D3D Device")
 			D3D12CreateDevice(selectedAdapter, D3D_FEATURE_LEVEL_11_0, IID_PPV_ARGS(device.GetAddressOf()));
