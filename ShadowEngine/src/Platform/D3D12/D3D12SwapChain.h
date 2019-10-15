@@ -33,7 +33,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		D3D12_RECT GetScissorRect() { return scissorRect; }
 		void SetAspectRatio() override;
-		void SetFrameIndex() override;;
+		void SetFrameIndex() override;
+		
+		~D3D12SwapChain() override;
 	};
 
 }

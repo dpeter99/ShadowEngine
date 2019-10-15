@@ -4,6 +4,7 @@
 #include "Platform/OpenGL/OpenGLShader.h"
 #include "Platform/OpenGL/OpenGLRendererAPI.h"
 #include "Core/ShadowApplication.h"
+#include "CommandList.h"
 
 namespace ShadowEngine::Rendering {
 
@@ -23,13 +24,15 @@ namespace ShadowEngine::Rendering {
 		s_RendererAPI->Init(ShadowApplication::Get().GetWindow().context);
 
 		commandQueue = CommandQueue::Create();
+		commandList = CommandList::Create();
 
 		swapChain = SwapChain::Create(commandQueue);
 	}
 
 	void Renderer::BeginScene(Camera& camera)
 	{
-
+		s_RendererAPI->StartFrame();
+		
 		s_RendererAPI->SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 		s_RendererAPI->Clear();
 		
@@ -45,8 +48,8 @@ namespace ShadowEngine::Rendering {
 		shader->Bind();
 
 		//TODO: this should not need a cast
-		std::dynamic_pointer_cast<OpenGL::OpenGLShader>(shader)->UploadUniformMat4("u_ViewProjection", s_SceneData->ViewProjectionMatrix);
-		std::dynamic_pointer_cast<OpenGL::OpenGLShader>(shader)->UploadUniformMat4("u_Transform", transform);
+		//std::dynamic_pointer_cast<OpenGL::OpenGLShader>(shader)->UploadUniformMat4("u_ViewProjection", s_SceneData->ViewProjectionMatrix);
+		//std::dynamic_pointer_cast<OpenGL::OpenGLShader>(shader)->UploadUniformMat4("u_Transform", transform);
 
 		vertexArray->Bind();
 		s_RendererAPI->DrawIndexed(vertexArray);

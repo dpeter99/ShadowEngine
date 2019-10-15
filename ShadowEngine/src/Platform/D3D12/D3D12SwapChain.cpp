@@ -90,6 +90,20 @@ namespace ShadowEngine::Rendering::D3D12 {
 		frameIndex = swapChain->GetCurrentBackBufferIndex();
 	}
 
+	void D3D12SwapChain::SetAspectRatio()
+	{
+		//TODO: Implement resetting the aspect ratio
+	}
+
+	void D3D12SwapChain::SetFrameIndex()
+	{
+		//This shouldn't be possible
+	}
+
+	D3D12SwapChain::~D3D12SwapChain()
+	{
+	}
+
 	D3D12SwapChain::D3D12SwapChain(Ref<D3D12CommandQueue> commandQueue)
 	{
 		CreateSwapchain(commandQueue);

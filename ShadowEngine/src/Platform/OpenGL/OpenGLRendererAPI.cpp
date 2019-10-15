@@ -26,4 +26,8 @@ namespace ShadowEngine::Rendering::OpenGL {
 		glDrawElements(GL_TRIANGLES, vertexArray->GetIndexBuffer()->GetCount(), GL_UNSIGNED_INT, nullptr);
 	}
 
+	void OpenGLRendererAPI::StartFrame()
+	{
+	}
+
 }

@@ -2,6 +2,7 @@
 #include "D3D12CommandQueue.h"
 #include "Common.h"
 #include "D3D12RendererAPI.h"
+#include "D3D12CommandList.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
@@ -15,5 +16,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		DX_API("Failed to create command queue")
 		D3D12RendererAPI::device->CreateCommandQueue(&commandQueueDesc, IID_PPV_ARGS(commandQueue.GetAddressOf()));
+	}
+
+	void D3D12CommandQueue::Execute(Ref<CommandList> commandList)
+	{
+		
 	}
 }

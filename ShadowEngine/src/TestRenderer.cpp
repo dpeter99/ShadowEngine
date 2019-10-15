@@ -158,8 +158,8 @@ TestRenderer::TestRenderer() : m_CameraPosition(0.0f) {
 
 	//m_TextureShader.reset(ShadowEngine::Rendering::Shader::Create(textureShaderVertexSrc, textureShaderFragmentSrc));
 
-	m_Texture = ShadowEngine::Rendering::Texture2D::Create("Resources/Textures/Checkerboard.png");
-	m_ChernoLogoTexture = ShadowEngine::Rendering::Texture2D::Create("Resources/Textures/ChernoLogo.png");
+	//m_Texture = ShadowEngine::Rendering::Texture2D::Create("Resources/Textures/Checkerboard.png");
+	//m_ChernoLogoTexture = ShadowEngine::Rendering::Texture2D::Create("Resources/Textures/ChernoLogo.png");
 
 	//std::dynamic_pointer_cast<ShadowEngine::Rendering::OpenGL::OpenGLShader>(m_TextureShader)->Bind();
 	//std::dynamic_pointer_cast<ShadowEngine::Rendering::OpenGL::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
@@ -184,14 +184,14 @@ void TestRenderer::Update() {
 		{
 			glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
 			glm::mat4 transform = glm::translate(glm::mat4(1.0f), pos) * scale;
-			ShadowEngine::Rendering::Renderer::Submit(m_FlatColorShader, m_SquareVA, transform);
+			ShadowEngine::Rendering::Renderer::Submit(m_Shader, m_SquareVA, transform);
 		}
 	}
 
-	m_Texture->Bind();
-	ShadowEngine::Rendering::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
-	m_ChernoLogoTexture->Bind();
-	ShadowEngine::Rendering::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+	//m_Texture->Bind();
+	//ShadowEngine::Rendering::Renderer::Submit(m_Shader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+	//m_ChernoLogoTexture->Bind();
+	//ShadowEngine::Rendering::Renderer::Submit(m_Shader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 
 	// Triangle

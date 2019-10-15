@@ -12,7 +12,7 @@ namespace ShadowEngine::Rendering {
 		unsigned int frameIndex;
 
 	public:
-		virtual ~SwapChain();
+		virtual ~SwapChain() = default;
 	public:		
 		float GetAspectRatio() const { return aspectRatio; };
 		virtual void SetAspectRatio() = 0;

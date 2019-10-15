@@ -11,7 +11,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	com_ptr<ID3D12Device> D3D12RendererAPI::device{ nullptr };
 	Ref<D3D12::D3D12Context> D3D12RendererAPI::ctx {nullptr};
 	BufferLayout D3D12RendererAPI::input_layout {
-		{ ShadowEngine::Rendering::ShaderDataType::Float3, "a_Position" },
+		{ ShadowEngine::Rendering::ShaderDataType::Float3, "POSITION" },
 		{ ShadowEngine::Rendering::ShaderDataType::Float4, "a_Color" }
 	};
 	
@@ -96,5 +96,14 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	void D3D12RendererAPI::DrawIndexed(const std::shared_ptr<VertexArray>& vertexArray)
 	{
+		
+	}
+
+	void D3D12RendererAPI::StartFrame()
+	{
+		/*
+		commandAllocator->Reset();
+		commandList->Reset(commandAllocator.Get(), nullptr);
+		*/
 	}
 }

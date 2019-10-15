@@ -13,5 +13,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		D3D12CommandQueue();
 
 		com_ptr<ID3D12CommandQueue> GetInternalPtr() { return commandQueue; }
+
+		void Execute(Ref<CommandList> commandList) override;
 	};
 }
