@@ -7,6 +7,8 @@
 
 #include "OrthographicCamera.h"
 #include "Shader.h"
+#include "CommandQueue.h"
+#include "SwapChain.h"
 
 
 class Camera;
@@ -16,20 +18,24 @@ namespace ShadowEngine::Rendering {
 	class Renderer : public ShadowEngine::ShadowModule
 	{
 		SHObject_Base(Renderer)
-		
+
+	private:
+		Ref<CommandQueue> commandQueue;
+		Ref<SwapChain> swapChain;
+
 	public:
 		//Singleton Instance
 		Renderer* instance;
-		
+
 		void Init() override;
 		void Update() override {};
 		void Render() override {};
 		void LateRender() override {};
-		
+
 		std::string GetName() override { return "Renderer"; }
 
 
-		
+
 		static void BeginScene(Camera& camera);
 		static void EndScene();
 

@@ -22,7 +22,9 @@ namespace ShadowEngine::Rendering {
 
 		s_RendererAPI->Init(ShadowApplication::Get().GetWindow().context);
 
-		
+		commandQueue = CommandQueue::Create();
+
+		swapChain = SwapChain::Create(commandQueue);
 	}
 
 	void Renderer::BeginScene(Camera& camera)

@@ -2,10 +2,15 @@
 #include "Platform/D3D12/Common.h"
 #include "D3D12CommandQueue.h"
 #include "D3D12DescriptorHeap.h"
+#include "ShadowRenderer/SwapChain.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
-	class D3D12SwapChain
+	/**
+	 * \brief Dx12 Swap Chain
+	 * Used for swapping the render and present render targets
+	 */
+	class D3D12SwapChain : public SwapChain
 	{
 		com_ptr<IDXGISwapChain3> swapChain{ nullptr };
 
@@ -17,16 +22,18 @@ namespace ShadowEngine::Rendering::D3D12 {
 		D3D12_CPU_DESCRIPTOR_HANDLE rtvHandle;
 		Ref<D3D12DescriptorHeap> rtvDescriptorHeap;
 		std::vector<com_ptr<ID3D12Resource>> renderTargets;
-		float aspectRatio;
-
-		unsigned int frameIndex;
+		
 	public:
-		void CreateSwapchain(ShadowEngine::Ref<D3D12::D3D12CommandQueue> commandQueue);
+		D3D12SwapChain(Ref<D3D12CommandQueue> commandQueue);
+		
+		void CreateSwapchain(Ref<D3D12CommandQueue> commandQueue);
 		void CreateSwapchainResources();
 		
-		D3D12SwapChain(ShadowEngine::Ref<D3D12::D3D12CommandQueue> commandQueue);
+		
 
-		D3D12_RECT GetScissorRect() { return scissorRect; };
+		D3D12_RECT GetScissorRect() { return scissorRect; }
+		void SetAspectRatio() override;
+		void SetFrameIndex() override;;
 	};
 
 }
