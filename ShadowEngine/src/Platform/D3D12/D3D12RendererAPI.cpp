@@ -117,5 +117,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 			D3D12_RESOURCE_STATE_RENDER_TARGET);
 		
 		command_list->ResourceBarrier(&entry_barrier);
+
+		
 	}
 }

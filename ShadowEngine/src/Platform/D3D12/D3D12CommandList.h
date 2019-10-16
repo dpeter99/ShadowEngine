@@ -3,6 +3,7 @@
 #include "Common.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
+	class D3D12SwapChain;
 
 	class D3D12CommandList
 	{
@@ -10,16 +11,16 @@ namespace ShadowEngine::Rendering::D3D12 {
 		com_ptr<ID3D12GraphicsCommandList> commandList;
 	public:
 		D3D12CommandList();
-		
+
 		/**
 		 * \brief Resets the Command List
 		 * Should only be used when we are sure it is not in use
 		 */
 		void Reset();
 
-		
+
 		void SetViewports(D3D12_VIEWPORT viewPort);
-		
+
 		void SetScissorRects(D3D12_RECT scissorRect);
 
 		/**
@@ -29,11 +30,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		 */
 		void ResourceBarrier(D3D12_RESOURCE_BARRIER* barrier);
 
-		void SetRenderTargets(
-			unsigned int NumRenderTargetDescriptors,
-			const D3D12_CPU_DESCRIPTOR_HANDLE* pRenderTargetDescriptors,
-			bool RTsSingleHandleToDescriptorRange,
-			const D3D12_CPU_DESCRIPTOR_HANDLE* pDepthStencilDescriptor);
+		void SetRenderTargets(Ref<D3D12SwapChain> swapchain);
 	};
 
 }

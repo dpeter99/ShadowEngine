@@ -103,6 +103,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 		frameIndex = swapChain->GetCurrentBackBufferIndex();
 	}
 
+	CD3DX12_CPU_DESCRIPTOR_HANDLE D3D12SwapChain::GetCurrentRenderTargetDescriptor() const
+	{
+		CD3DX12_CPU_DESCRIPTOR_HANDLE r_handle(rtvDescriptorHeap->GetCPUDescriptorHandleForHeapStart(), frameIndex, rtvDescriptorHandleIncrementSize);
+		
+		return r_handle;
+	}
+
 	void D3D12SwapChain::ReleaseSwapChainResources()
 	{
 		for (com_ptr<ID3D12Resource>& i : renderTargets)

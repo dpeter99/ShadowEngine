@@ -32,4 +32,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 		commandList->ResourceBarrier(1, barrier);
 	}
+
+	void D3D12CommandList::SetRenderTargets(Ref<D3D12SwapChain> swapchain)
+	{
+		auto rHandle = swapchain->GetCurrentRenderTargetDescriptor();
+		auto 
+		commandList->OMSetRenderTargets(1, &rHandle, FALSE, &dsvHandle);
+	}
 }

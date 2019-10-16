@@ -96,6 +96,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 			return renderTargets[frameIndex];
 		}
 
+		/**
+		 * \brief Returns a new Descriptor handle to the active render target
+		 * \return The Descriptor handle
+		 */
+		CD3DX12_CPU_DESCRIPTOR_HANDLE GetCurrentRenderTargetDescriptor() const;
+
 		void ReleaseSwapChainResources();
 
 		virtual void Resize(int width, int height);
