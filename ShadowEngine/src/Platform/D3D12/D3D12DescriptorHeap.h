@@ -11,6 +11,8 @@ namespace  ShadowEngine::Rendering::D3D12 {
 		~D3D12DescriptorHeap();
 		
 		D3D12_CPU_DESCRIPTOR_HANDLE GetCPUDescriptorHandleForHeapStart();
+
+		void Reset();
 	};
 
 }

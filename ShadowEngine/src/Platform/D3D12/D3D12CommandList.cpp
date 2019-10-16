@@ -17,5 +17,19 @@ namespace ShadowEngine::Rendering::D3D12 {
 		commandAllocator->Reset();
 		commandList->Reset(commandAllocator.Get(), nullptr);
 	}
-	
+
+	void D3D12CommandList::SetViewports(D3D12_VIEWPORT viewPort)
+	{
+		commandList->RSSetViewports(1, &viewPort);
+	}
+
+	void D3D12CommandList::SetScissorRects(D3D12_RECT scissorRect)
+	{
+		commandList->RSSetScissorRects(1, &scissorRect);
+	}
+
+	void D3D12CommandList::ResourceBarrier(D3D12_RESOURCE_BARRIER* barrier)
+	{
+		commandList->ResourceBarrier(1, barrier);
+	}
 }

@@ -10,6 +10,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	com_ptr<ID3D12Device> D3D12RendererAPI::device{ nullptr };
 	Ref<D3D12::D3D12Context> D3D12RendererAPI::ctx {nullptr};
+	
 	BufferLayout D3D12RendererAPI::input_layout {
 		{ ShadowEngine::Rendering::ShaderDataType::Float3, "POSITION" },
 		{ ShadowEngine::Rendering::ShaderDataType::Float4, "a_Color" }
@@ -67,8 +68,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 		DX_API("Failed to create D3D Device")
 			D3D12CreateDevice(selectedAdapter, D3D_FEATURE_LEVEL_11_0, IID_PPV_ARGS(device.GetAddressOf()));
 
-		command_queue = std::make_shared<D3D12::D3D12CommandQueue>();
 
+		//Create dx12 render resources
+		
+		command_queue = std::make_shared<D3D12::D3D12CommandQueue>();
+		command_list = std::make_shared<D3D12::D3D12CommandList>();
+		
 		swap_chain = std::make_shared<D3D12::D3D12SwapChain>(command_queue);
 
 		fence = std::make_unique<D3D12::D3D12Fence>();
@@ -79,9 +84,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 			DX_API("Failed to create windows event") HRESULT_FROM_WIN32(GetLastError());
 		}
 
-		dsvHeap = std::make_unique<D3D12DescriptorHeap>(D3D12_DESCRIPTOR_HEAP_FLAG_NONE, D3D12_DESCRIPTOR_HEAP_TYPE_DSV, 1);
+		dsv_heap = std::make_unique<D3D12DescriptorHeap>(D3D12_DESCRIPTOR_HEAP_FLAG_NONE, D3D12_DESCRIPTOR_HEAP_TYPE_DSV, 1);
 
-		depthBuffer = std::make_unique<D3D12DepthStencilBuffer>(dsvHeap, swap_chain);
+		depthBuffer = std::make_unique<D3D12DepthStencilBuffer>(dsv_heap, swap_chain);
 		
 	}
 
@@ -101,9 +106,16 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	void D3D12RendererAPI::StartFrame()
 	{
-		/*
-		commandAllocator->Reset();
-		commandList->Reset(commandAllocator.Get(), nullptr);
-		*/
+		command_list->Reset();
+
+		command_list->SetViewports(swap_chain->GetViewPort());
+		command_list->SetScissorRects(swap_chain->GetScissorRect());
+
+		auto entry_barrier = CD3DX12_RESOURCE_BARRIER::Transition(
+			swap_chain->GetCurrentRenderTarget().Get(),
+			D3D12_RESOURCE_STATE_PRESENT,
+			D3D12_RESOURCE_STATE_RENDER_TARGET);
+		
+		command_list->ResourceBarrier(&entry_barrier);
 	}
 }

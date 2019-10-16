@@ -25,4 +25,9 @@ namespace  ShadowEngine::Rendering::D3D12 {
 	{
 		return  _descriptorHeap->GetCPUDescriptorHandleForHeapStart();
 	}
+
+	void D3D12DescriptorHeap::Reset()
+	{
+		_descriptorHeap.Reset();
+	}
 }

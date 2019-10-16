@@ -19,20 +19,6 @@ namespace ShadowEngine::Rendering {
 	{
 		SHObject_Base(Renderer)
 
-	private:
-		/**
-		 * \brief Command queue for graphics
-		 */
-		Ref<CommandQueue> commandQueue;
-
-		/**
-		 * \brief List of graphics commands
-		 */
-		Ref<CommandList> commandList;
-
-		
-		Ref<SwapChain> swapChain;
-
 	public:
 		//Singleton Instance
 		Renderer* instance;
