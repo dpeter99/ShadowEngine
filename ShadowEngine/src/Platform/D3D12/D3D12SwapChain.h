@@ -18,13 +18,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 		com_ptr<IDXGISwapChain3> swapChain{ nullptr };
 
 		// swap chain resources
-
-		//Rects
-		
-		D3D12_VIEWPORT viewPort;
-		D3D12_RECT scissorRect;
-
-		float aspectRatio;
 		
 		/**
 		 * \brief The number of render targets
@@ -61,7 +54,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		unsigned int frameIndex;
 
 	public:
-		D3D12SwapChain(Ref<D3D12CommandQueue> commandQueue);
+		D3D12SwapChain(Ref<D3D12CommandQueue> commandQueue, int width, int height);
 		~D3D12SwapChain();
 
 		

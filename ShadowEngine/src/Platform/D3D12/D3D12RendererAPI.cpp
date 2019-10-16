@@ -68,26 +68,37 @@ namespace ShadowEngine::Rendering::D3D12 {
 		DX_API("Failed to create D3D Device")
 			D3D12CreateDevice(selectedAdapter, D3D_FEATURE_LEVEL_11_0, IID_PPV_ARGS(device.GetAddressOf()));
 
+		
+		
+		viewPort.TopLeftX = 0;
+		viewPort.TopLeftY = 0;
+		viewPort.Width = ctx->window->Width;
+		viewPort.Height = ctx->window->Height;
+		viewPort.MinDepth = 0.0f;
+		viewPort.MaxDepth = 1.0f;
 
+		aspectRatio = viewPort.Width / (float)viewPort.Height;
+
+		scissorRect.left = 0;
+		scissorRect.top = 0;
+		scissorRect.right = ctx->window->Width;
+		scissorRect.bottom = ctx->window->Height;
+		
 		//Create dx12 render resources
 		
 		command_queue = std::make_shared<D3D12::D3D12CommandQueue>();
 		command_list = std::make_shared<D3D12::D3D12CommandList>();
 		
-		swap_chain = std::make_shared<D3D12::D3D12SwapChain>(command_queue);
-
+		swap_chain = std::make_shared<D3D12::D3D12SwapChain>(command_queue,ctx->window->Width, ctx->window->Height);
+		depth_buffer = std::make_shared<D3D12::D3D12DepthBuffer>(scissorRect);
+		
 		fence = std::make_unique<D3D12::D3D12Fence>();
 		fenceValue = 1;
 
 		fenceEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
 		if (fenceEvent == NULL) {
 			DX_API("Failed to create windows event") HRESULT_FROM_WIN32(GetLastError());
-		}
-
-		dsv_heap = std::make_unique<D3D12DescriptorHeap>(D3D12_DESCRIPTOR_HEAP_FLAG_NONE, D3D12_DESCRIPTOR_HEAP_TYPE_DSV, 1);
-
-		depthBuffer = std::make_unique<D3D12DepthStencilBuffer>(dsv_heap, swap_chain);
-		
+		}		
 	}
 
 	void D3D12RendererAPI::SetClearColor(const glm::vec4& color)
@@ -118,6 +129,23 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 		command_list->ResourceBarrier(&entry_barrier);
 
+		command_list->SetRenderTargets(swap_chain, depth_buffer);
+
+		const float clearColor[] = { 0.0f, 0.2f, 0.4f, 1.0f };
+		command_list->ClearRenderTargetView(clearColor);
+		command_list->ClearDepthStencilView(1.0f,0);
+
+
+		//Do the render calls
+
+
+		auto end_barrier = CD3DX12_RESOURCE_BARRIER::Transition(
+			swap_chain->GetCurrentRenderTarget().Get(),
+			D3D12_RESOURCE_STATE_RENDER_TARGET,
+			D3D12_RESOURCE_STATE_PRESENT);
 		
+		command_list->ResourceBarrier(&end_barrier);
+
+		command_list->Close();
 	}
 }

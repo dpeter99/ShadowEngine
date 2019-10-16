@@ -6,7 +6,6 @@
 #include "D3D12CommandQueue.h"
 #include "D3D12SwapChain.h"
 #include "D3D12Fence.h"
-#include "D3D12DepthStencilBuffer.h"
 #include "D3D12CommandList.h"
 
 
@@ -48,21 +47,22 @@ namespace ShadowEngine::Rendering::D3D12 {
 		 */
 		Ref<D3D12::D3D12SwapChain> swap_chain;
 
+		/**
+		 * \brief The depth buffer used
+		 */
+		Ref<D3D12::D3D12DepthBuffer> depth_buffer;
 
+		D3D12_VIEWPORT viewPort;
+		D3D12_RECT scissorRect;
+
+		float aspectRatio;
+		
 		//Fence stuff
 		//TODO: abstract these
 		Ref<D3D12::D3D12Fence> fence;
 		HANDLE fenceEvent;
 		unsigned long long fenceValue;
 		unsigned int frameIndex;
-
-		/**
-		 * \brief The allocator for Descriptors
-		 */
-		Ref<D3D12DescriptorHeap> dsv_heap;
-
-		
-		Ref<D3D12::D3D12DepthStencilBuffer> depthBuffer;
 		
 		virtual void Init(ShadowEngine::Ref<GraphicsContext> ctx) override;
 

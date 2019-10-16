@@ -5,24 +5,13 @@
 
 namespace ShadowEngine::Rendering::D3D12 {
 
-	D3D12SwapChain::D3D12SwapChain(Ref<D3D12CommandQueue> commandQueue)
-	{
-		CreateSwapchain(commandQueue);
-
-		CreateSwapchainResources();
-	}
-
-	D3D12SwapChain::~D3D12SwapChain()
-	{
-	}
-	
-	void D3D12SwapChain::CreateSwapchain(Ref<D3D12CommandQueue> commandQueue)
+	D3D12SwapChain::D3D12SwapChain(Ref<D3D12CommandQueue> commandQueue, int width, int height)
 	{
 		// swap chain creation
 		DXGI_SWAP_CHAIN_DESC1 swapChainDesc = { 0 };
 		// if you specify width/height as 0, the CreateSwapChainForHwnd will query it from the output window
-		swapChainDesc.Width = 0;
-		swapChainDesc.Height = 0;
+		swapChainDesc.Width = width;
+		swapChainDesc.Height = height;
 		swapChainDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
 		swapChainDesc.Stereo = false;
 		swapChainDesc.SampleDesc.Count = 1;
@@ -34,7 +23,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		swapChainDesc.AlphaMode = DXGI_ALPHA_MODE_IGNORE;
 		swapChainDesc.Flags = 0;
 
-		DXGI_SWAP_CHAIN_FULLSCREEN_DESC swapChainFullscreenDesc = {0};
+		DXGI_SWAP_CHAIN_FULLSCREEN_DESC swapChainFullscreenDesc = { 0 };
 		swapChainFullscreenDesc.RefreshRate = DXGI_RATIONAL{ 60, 1 };
 		swapChainFullscreenDesc.Windowed = true;
 		swapChainFullscreenDesc.Scaling = DXGI_MODE_SCALING_CENTERED;
@@ -54,26 +43,18 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		DX_API("Failed to cast swap chain")
 			tempSwapChain.As(&swapChain);
+
+		CreateSwapchainResources();
+	}
+
+	D3D12SwapChain::~D3D12SwapChain()
+	{
 	}
 
 	void D3D12SwapChain::CreateSwapchainResources()
 	{
 		DXGI_SWAP_CHAIN_DESC scDesc;
-		swapChain->GetDesc(&scDesc);
-
-		viewPort.TopLeftX = 0;
-		viewPort.TopLeftY = 0;
-		viewPort.Width = (float)scDesc.BufferDesc.Width;
-		viewPort.Height = (float)scDesc.BufferDesc.Height;
-		viewPort.MinDepth = 0.0f;
-		viewPort.MaxDepth = 1.0f;
-
-		aspectRatio = viewPort.Width / (float)viewPort.Height;
-
-		scissorRect.left = 0;
-		scissorRect.top = 0;
-		scissorRect.right = scDesc.BufferDesc.Width;
-		scissorRect.bottom = scDesc.BufferDesc.Height;
+		swapChain->GetDesc(&scDesc);		
 
 		// Create Render Target View Descriptor Heap, like a RenderTargetView** on the GPU. A set of pointers.
 		rtvDescriptorHeap = std::make_unique<D3D12DescriptorHeap>(D3D12_DESCRIPTOR_HEAP_FLAG_NONE, D3D12_DESCRIPTOR_HEAP_TYPE_RTV, backBufferDepth);

@@ -33,10 +33,26 @@ namespace ShadowEngine::Rendering::D3D12 {
 		commandList->ResourceBarrier(1, barrier);
 	}
 
-	void D3D12CommandList::SetRenderTargets(Ref<D3D12SwapChain> swapchain)
+	void D3D12CommandList::SetRenderTargets(Ref<D3D12SwapChain> swapchain, Ref<D3D12DepthBuffer> depthBuffer)
 	{
-		auto rHandle = swapchain->GetCurrentRenderTargetDescriptor();
-		auto 
-		commandList->OMSetRenderTargets(1, &rHandle, FALSE, &dsvHandle);
+		renderTarget = swapchain->GetCurrentRenderTargetDescriptor();
+		this->depthBuffer = depthBuffer->GetDescriptorHandle();
+		commandList->OMSetRenderTargets(1, &renderTarget, FALSE, &this->depthBuffer);
+	}
+
+	void D3D12CommandList::ClearRenderTargetView(const float* color)
+	{
+		commandList->ClearRenderTargetView(renderTarget, color, 0, nullptr);
+	}
+
+	void D3D12CommandList::ClearDepthStencilView(float depth, uint8_t stencil)
+	{
+		commandList->ClearDepthStencilView(depthBuffer, D3D12_CLEAR_FLAG_DEPTH, depth, stencil, 0, nullptr);
+	}
+
+	void D3D12CommandList::Close()
+	{
+		DX_API("Failed to close command list")
+			commandList->Close();
 	}
 }

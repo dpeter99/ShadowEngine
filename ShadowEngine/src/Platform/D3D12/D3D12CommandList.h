@@ -1,6 +1,7 @@
 #pragma once
 #include "ShadowRenderer/CommandList.h"
 #include "Common.h"
+#include "D3D12DepthBuffer.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 	class D3D12SwapChain;
@@ -9,6 +10,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 		com_ptr<ID3D12CommandAllocator> commandAllocator;
 		com_ptr<ID3D12GraphicsCommandList> commandList;
+
+		D3D12_CPU_DESCRIPTOR_HANDLE renderTarget;
+		D3D12_CPU_DESCRIPTOR_HANDLE depthBuffer;
 	public:
 		D3D12CommandList();
 
@@ -30,7 +34,19 @@ namespace ShadowEngine::Rendering::D3D12 {
 		 */
 		void ResourceBarrier(D3D12_RESOURCE_BARRIER* barrier);
 
-		void SetRenderTargets(Ref<D3D12SwapChain> swapchain);
+		/**
+		 * \brief Set the render targets used in this command list
+		 * \param swapchain The swap chain to get the render target form
+		 * \param depthBuffer The depth buffer to use
+		 */
+		void SetRenderTargets(
+			Ref<D3D12SwapChain> swapchain,
+			Ref<D3D12DepthBuffer> depthBuffer);
+
+		void ClearRenderTargetView(const float* color);
+
+		void ClearDepthStencilView(float depth, uint8_t stencil);
+		void Close();
 	};
 
 }
