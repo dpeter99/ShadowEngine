@@ -109,8 +109,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		CreateSwapchainResources();
 	}
 
-
-
-	
-
+	void D3D12SwapChain::Present(UINT SyncInterval, UINT Flags)
+	{
+		DX_API("Failed to present swap chain")
+			swapChain->Present(1, 0);
+	}
 }

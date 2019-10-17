@@ -9,7 +9,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	D3D12Context::D3D12Context(ShadowWindow* windowHandle)
 		: m_WindowHandle(windowHandle->winPtr)
 	{
-
+		window = windowHandle;
 		
 		//Check the window we got
 		SH_CORE_ASSERT(windowHandle, "Window handle is null!")

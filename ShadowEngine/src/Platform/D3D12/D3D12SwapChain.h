@@ -16,16 +16,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 		 * \brief The actual Dx12 swap chain pointer
 		 */
 		com_ptr<IDXGISwapChain3> swapChain{ nullptr };
-
-		// swap chain resources
 		
 		/**
 		 * \brief The number of render targets
 		 */
 		unsigned int backBufferDepth = 2;
 		
-		
-
 		
 		/**
 		 * \brief DescriptorHeap for Render targets views
@@ -65,20 +61,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 		void CreateSwapchain(Ref<D3D12CommandQueue> commandQueue);
 		void CreateSwapchainResources();
 
-
-		void SetViewPort(D3D12_VIEWPORT rect)
-		{
-			viewPort = rect;
-		}
-		D3D12_VIEWPORT GetViewPort() { return viewPort; }
-
-		
-		void SetScissorRect(D3D12_RECT rect)
-		{
-			scissorRect = rect;
-		}
-		D3D12_RECT GetScissorRect() { return scissorRect; }
-
 		com_ptr<ID3D12Resource> GetRenderTarget(int i)
 		{
 			return renderTargets[i];
@@ -97,9 +79,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		void ReleaseSwapChainResources();
 
-		virtual void Resize(int width, int height);
+		void Resize(int width, int height);
 		
-		
+		void Present(UINT SyncInterval, UINT Flags);
 	};
 
 }

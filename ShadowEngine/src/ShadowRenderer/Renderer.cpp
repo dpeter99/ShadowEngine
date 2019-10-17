@@ -38,6 +38,8 @@ namespace ShadowEngine::Rendering {
 	void Renderer::EndScene()
 	{
 		s_RendererAPI->EndFrame();
+
+		
 	}
 
 	void Renderer::Submit(const std::shared_ptr<Shader>& shader, const std::shared_ptr<VertexArray>& vertexArray, const glm::mat4& transform)

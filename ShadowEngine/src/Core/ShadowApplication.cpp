@@ -69,7 +69,7 @@ namespace ShadowEngine {
 		{
 			Time::UpdateTime();
 
-			renderer->BeginScene(*scenemg->GetActiveScene()->mainCamera);
+			renderer->BeginScene();
 
 			EventSystem::ShadowEventManager::PollEvents();
 			EventSystem::ShadowEventManager::ProcessEvents();

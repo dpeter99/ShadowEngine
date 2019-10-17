@@ -17,6 +17,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 		D3D12CommandList();
 
 		/**
+		 * \brief 
+		 * \return The dx12 command list
+		 */
+		com_ptr<ID3D12GraphicsCommandList> GetCommandList() { return commandList; };
+		
+		/**
 		 * \brief Resets the Command List
 		 * Should only be used when we are sure it is not in use
 		 */

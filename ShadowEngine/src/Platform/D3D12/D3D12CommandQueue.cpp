@@ -18,8 +18,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 		D3D12RendererAPI::device->CreateCommandQueue(&commandQueueDesc, IID_PPV_ARGS(commandQueue.GetAddressOf()));
 	}
 
-	void D3D12CommandQueue::Execute(Ref<CommandList> commandList)
+	void D3D12CommandQueue::Execute(Ref<D3D12CommandList> commandList)
 	{
-		
+		// Execute
+		ID3D12CommandList* cLists[] = { commandList->GetCommandList().Get() };
+		commandQueue->ExecuteCommandLists(_countof(cLists), cLists);
 	}
 }

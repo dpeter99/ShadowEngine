@@ -120,8 +120,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 		command_list->Reset();
 
-		command_list->SetViewports(swap_chain->GetViewPort());
-		command_list->SetScissorRects(swap_chain->GetScissorRect());
+		command_list->SetViewports(viewPort);
+		command_list->SetScissorRects(scissorRect);
 
 		auto entry_barrier = CD3DX12_RESOURCE_BARRIER::Transition(
 			swap_chain->GetCurrentRenderTarget().Get(),
@@ -147,5 +147,28 @@ namespace ShadowEngine::Rendering::D3D12 {
 		command_list->ResourceBarrier(&end_barrier);
 
 		command_list->Close();
+
+		//TODO:move this to submitting code
+		command_queue->Execute(command_list);
+
+		swap_chain->Present(1, 0);
+
 	}
+
+	void D3D12RendererAPI::WaitForPreviousFrame() {
+		const UINT64 fv = fenceValue;
+		DX_API("Failed to signal from command queue")
+			command_queue->Signal(fence, fv);
+
+		fenceValue++;
+
+		if (fence->GetCompletedValue() < fv) {
+			DX_API("Failed to sign up for event completion")
+				fence->SetEventOnCompletion(fv, fenceEvent);
+			WaitForSingleObject(fenceEvent, INFINITE);
+		}
+
+		frameIndex = swapChain->GetCurrentBackBufferIndex();
+	}
+
 }

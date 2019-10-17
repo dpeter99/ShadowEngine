@@ -13,7 +13,7 @@ namespace ShadowEngine::Rendering {
 		switch (RendererAPI::GetAPI())
 		{
 			case RendererAPI::API::None:    SH_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-			case RendererAPI::API::OpenGL:  return new OpenGL::OpenGLRendererAPI();
+			//case RendererAPI::API::OpenGL:  return new OpenGL::OpenGLRendererAPI();
 			case RendererAPI::API::D3D12:  return new D3D12::D3D12RendererAPI();
 		}
 

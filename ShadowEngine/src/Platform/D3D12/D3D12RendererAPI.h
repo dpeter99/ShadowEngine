@@ -73,5 +73,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 		void StartFrame() override;
 		void EndFrame() override;
+		
+		void WaitForPreviousFrame();
 	};
 }
