@@ -4,6 +4,7 @@
 #include "D3D12CommandList.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
+	class D3D12Fence;
 
 	class D3D12CommandQueue
 	{
@@ -29,6 +30,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 		 */
 		void Execute(Ref<D3D12CommandList> commandList);
 
-		void Signal(D3D12Fence fence, uint64_t Value);
+		void Signal(Ref<D3D12Fence> fence, uint64_t Value);
 	};
 }

@@ -153,22 +153,23 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		swap_chain->Present(1, 0);
 
+		WaitForPreviousFrame();
 	}
 
 	void D3D12RendererAPI::WaitForPreviousFrame() {
 		const UINT64 fv = fenceValue;
-		DX_API("Failed to signal from command queue")
-			command_queue->Signal(fence, fv);
+		
+		command_queue->Signal(fence, fv);
 
 		fenceValue++;
 
 		if (fence->GetCompletedValue() < fv) {
-			DX_API("Failed to sign up for event completion")
+			
 				fence->SetEventOnCompletion(fv, fenceEvent);
 			WaitForSingleObject(fenceEvent, INFINITE);
 		}
 
-		frameIndex = swapChain->GetCurrentBackBufferIndex();
+		frameIndex = swap_chain->GetCurrentBackBufferIndex();
 	}
 
 }

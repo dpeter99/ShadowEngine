@@ -24,4 +24,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		ID3D12CommandList* cLists[] = { commandList->GetCommandList().Get() };
 		commandQueue->ExecuteCommandLists(_countof(cLists), cLists);
 	}
+	
+	void D3D12CommandQueue::Signal(Ref<D3D12Fence> fence, uint64_t Value)
+	{
+		commandQueue->Signal(fence->GetFencePointer().Get(), Value);
+	}
 }

@@ -82,6 +82,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		void Resize(int width, int height);
 		
 		void Present(UINT SyncInterval, UINT Flags);
+
+		int GetCurrentBackBufferIndex();
 	};
 
 }

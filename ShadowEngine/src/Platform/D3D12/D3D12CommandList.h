@@ -13,6 +13,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		D3D12_CPU_DESCRIPTOR_HANDLE renderTarget;
 		D3D12_CPU_DESCRIPTOR_HANDLE depthBuffer;
+
+		bool isBeingRecorded;
 	public:
 		D3D12CommandList();
 
@@ -28,7 +30,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		 */
 		void Reset();
 
-
+		void StartRecording();
+		
 		void SetViewports(D3D12_VIEWPORT viewPort);
 
 		void SetScissorRects(D3D12_RECT scissorRect);

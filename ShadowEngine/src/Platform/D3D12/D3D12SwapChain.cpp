@@ -114,4 +114,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		DX_API("Failed to present swap chain")
 			swapChain->Present(1, 0);
 	}
+	int D3D12SwapChain::GetCurrentBackBufferIndex()
+	{
+		return swapChain->GetCurrentBackBufferIndex();
+	}
 }

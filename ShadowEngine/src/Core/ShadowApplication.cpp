@@ -82,7 +82,7 @@ namespace ShadowEngine {
 
 			moduleManager.LateRender();
 
-			ShadowEngine::Rendering::Renderer::EndScene();
+			Rendering::Renderer::EndScene();
 
 			SDL_GL_SwapWindow(window_->winPtr);
 		}

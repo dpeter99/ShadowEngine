@@ -9,4 +9,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 		DX_API("Failed to create fence")
 		D3D12RendererAPI::device->CreateFence(0, D3D12_FENCE_FLAG_NONE, IID_PPV_ARGS(fence.GetAddressOf()));
 	}
+	UINT64 D3D12Fence::GetCompletedValue()
+	{
+		return fence->GetCompletedValue();
+	}
+	void D3D12Fence::SetEventOnCompletion(const UINT64 fv, HANDLE fenceEvent)
+	{
+		DX_API("Failed to sign up for event completion")
+		fence->SetEventOnCompletion(fv, fenceEvent);
+	}
 }

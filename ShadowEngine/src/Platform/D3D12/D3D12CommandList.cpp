@@ -10,12 +10,26 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		DX_API("Failed to greate graphics command list")
 		D3D12RendererAPI::device->CreateCommandList(0, D3D12_COMMAND_LIST_TYPE_DIRECT, commandAllocator.Get(), nullptr, IID_PPV_ARGS(commandList.GetAddressOf()));
+
+		isBeingRecorded = false;
 	}
 
 	void D3D12CommandList::Reset()
 	{
+		if (isBeingRecorded)
+			isBeingRecorded = false;
+		
 		commandAllocator->Reset();
 		commandList->Reset(commandAllocator.Get(), nullptr);
+	}
+
+	void D3D12CommandList::StartRecording()
+	{
+		SH_CORE_ASSERT(isBeingRecorded, "Command list is already recording");
+		
+		if(!isBeingRecorded)
+		isBeingRecorded = true;
+			
 	}
 
 	void D3D12CommandList::SetViewports(D3D12_VIEWPORT viewPort)
