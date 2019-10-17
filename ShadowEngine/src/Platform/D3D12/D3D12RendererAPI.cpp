@@ -62,6 +62,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		com_ptr<ID3D12Debug> debug_controller;
 		D3D12GetDebugInterface(IID_PPV_ARGS(&debug_controller));
+		
 		debug_controller->EnableDebugLayer();
 		
 		//Create the D3D device
