@@ -118,4 +118,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 		return swapChain->GetCurrentBackBufferIndex();
 	}
+
+	void D3D12SwapChain::UpdateCurrentBackBufferIndex()
+	{
+		frameIndex = swapChain->GetCurrentBackBufferIndex();
+	}
 }

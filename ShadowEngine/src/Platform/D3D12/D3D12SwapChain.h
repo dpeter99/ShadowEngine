@@ -84,6 +84,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		void Present(UINT SyncInterval, UINT Flags);
 
 		int GetCurrentBackBufferIndex();
+		void UpdateCurrentBackBufferIndex();
 	};
 
 }

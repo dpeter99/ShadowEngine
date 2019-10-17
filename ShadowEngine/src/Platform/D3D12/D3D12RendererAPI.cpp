@@ -94,7 +94,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		depth_buffer = std::make_shared<D3D12::D3D12DepthBuffer>(scissorRect);
 		
 		fence = std::make_unique<D3D12::D3D12Fence>();
-		fenceValue = 1;
+		fenceValue = 0;
 
 		fenceEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
 		if (fenceEvent == NULL) {
@@ -170,7 +170,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 			WaitForSingleObject(fenceEvent, INFINITE);
 		}
 
-		frameIndex = swap_chain->GetCurrentBackBufferIndex();
+		swap_chain->UpdateCurrentBackBufferIndex();
 	}
 
 }

@@ -62,7 +62,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		Ref<D3D12::D3D12Fence> fence;
 		HANDLE fenceEvent;
 		unsigned long long fenceValue;
-		unsigned int frameIndex;
+		//unsigned int frameIndex;
 		
 		virtual void Init(ShadowEngine::Ref<GraphicsContext> ctx) override;
 
