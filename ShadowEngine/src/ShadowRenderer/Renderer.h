@@ -32,10 +32,19 @@ namespace ShadowEngine::Rendering {
 
 
 
-		static void BeginScene(Camera& camera);
+		/**
+		 * \brief Starts the Rendering scene
+		 * Sets up the render API
+		 * Sets up the render graph for the new frame
+		 */
+		static void BeginScene();
+		
+		/**
+		 * \brief Finishes the draw recording
+		 */
 		static void EndScene();
 
-		static void Submit(const std::shared_ptr<Shader>& shader, const std::shared_ptr<VertexArray>& vertexArray, const glm::mat4& transform = glm::mat4(1.0f));
+		static void Submit(const Ref<Shader>& shader, const Ref<VertexArray>& vertexArray, const glm::mat4& transform = glm::mat4(1.0f));
 
 		inline static RendererAPI::API GetAPI() { return RendererAPI::GetAPI(); }
 

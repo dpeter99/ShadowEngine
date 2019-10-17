@@ -72,5 +72,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 		virtual void DrawIndexed(const std::shared_ptr<VertexArray>& vertexArray) override;
 		
 		void StartFrame() override;
+		void EndFrame() override;
 	};
 }

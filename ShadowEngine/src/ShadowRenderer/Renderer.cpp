@@ -24,18 +24,20 @@ namespace ShadowEngine::Rendering {
 		s_RendererAPI->Init(ShadowApplication::Get().GetWindow().context);
 	}
 
-	void Renderer::BeginScene(Camera& camera)
+	
+	void Renderer::BeginScene()
 	{
 		s_RendererAPI->StartFrame();
 		
 		s_RendererAPI->SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 		s_RendererAPI->Clear();
 		
-		s_SceneData->ViewProjectionMatrix = camera.GetViewProjectionMatrix();
+		//s_SceneData->ViewProjectionMatrix = camera.GetViewProjectionMatrix();
 	}
 
 	void Renderer::EndScene()
 	{
+		s_RendererAPI->EndFrame();
 	}
 
 	void Renderer::Submit(const std::shared_ptr<Shader>& shader, const std::shared_ptr<VertexArray>& vertexArray, const glm::mat4& transform)

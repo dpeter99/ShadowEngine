@@ -21,7 +21,16 @@ namespace ShadowEngine::Rendering {
 		virtual void Clear() = 0;
 
 		virtual void DrawIndexed(const std::shared_ptr<VertexArray>& vertexArray) = 0;
+		
+		/**
+		 * \brief Starts recording the draw commands
+		 */
 		virtual  void StartFrame() = 0;
+		
+		/**
+		 * \brief Finalizes the render command recording
+		 */
+		virtual void EndFrame() =0;
 
 		inline static API GetAPI() { return s_API; }
 

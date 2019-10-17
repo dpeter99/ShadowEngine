@@ -108,6 +108,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	void D3D12RendererAPI::Clear()
 	{
+		
 	}
 
 	void D3D12RendererAPI::DrawIndexed(const std::shared_ptr<VertexArray>& vertexArray)
@@ -134,16 +135,15 @@ namespace ShadowEngine::Rendering::D3D12 {
 		const float clearColor[] = { 0.0f, 0.2f, 0.4f, 1.0f };
 		command_list->ClearRenderTargetView(clearColor);
 		command_list->ClearDepthStencilView(1.0f,0);
+	}
 
-
-		//Do the render calls
-
-
+	void D3D12RendererAPI::EndFrame()
+	{
 		auto end_barrier = CD3DX12_RESOURCE_BARRIER::Transition(
 			swap_chain->GetCurrentRenderTarget().Get(),
 			D3D12_RESOURCE_STATE_RENDER_TARGET,
 			D3D12_RESOURCE_STATE_PRESENT);
-		
+
 		command_list->ResourceBarrier(&end_barrier);
 
 		command_list->Close();
