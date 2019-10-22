@@ -42,16 +42,9 @@ namespace ShadowEngine::Rendering {
 		
 	}
 
-	void Renderer::Submit(const std::shared_ptr<Shader>& shader, const std::shared_ptr<VertexArray>& vertexArray, const glm::mat4& transform)
+	void Renderer::Submit(const Ref<Assets::Mesh> mesh, const Ref<Shader> shader, const glm::mat4& transform)
 	{
-		shader->Bind();
-
-		//TODO: this should not need a cast
-		//std::dynamic_pointer_cast<OpenGL::OpenGLShader>(shader)->UploadUniformMat4("u_ViewProjection", s_SceneData->ViewProjectionMatrix);
-		//std::dynamic_pointer_cast<OpenGL::OpenGLShader>(shader)->UploadUniformMat4("u_Transform", transform);
-
-		vertexArray->Bind();
-		s_RendererAPI->DrawIndexed(vertexArray);
+		s_RendererAPI->Draw(mesh, shader, transform);
 	}
 
 }

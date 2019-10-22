@@ -2,7 +2,6 @@
 #include "Platform/D3D12/Common.h"
 #include "D3D12CommandQueue.h"
 #include "D3D12DescriptorHeap.h"
-#include "ShadowRenderer/SwapChain.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
@@ -83,7 +82,16 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 		void Present(UINT SyncInterval, UINT Flags);
 
+		/**
+		 * \brief Returns the active Render Target index
+		 * \return The index of the current render target
+		 */
 		int GetCurrentBackBufferIndex();
+		
+		/**
+		 * \brief Updates the Current render target index
+		 * Call this after you changed the active render target
+		 */
 		void UpdateCurrentBackBufferIndex();
 	};
 

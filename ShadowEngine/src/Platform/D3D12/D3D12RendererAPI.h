@@ -7,6 +7,8 @@
 #include "D3D12SwapChain.h"
 #include "D3D12Fence.h"
 #include "D3D12CommandList.h"
+#include "ShadowAsset/Assets/Mesh.h"
+#include "ShadowRenderer/Shader.h"
 
 
 namespace ShadowEngine::Rendering::D3D12 {
@@ -24,11 +26,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		static ShadowEngine::Ref<D3D12::D3D12Context> ctx;
 
 		
-		/**
-		 * \brief The default layout of the meshes being used
-		 * TODO: Move this to global Renderer
-		 */
-		static BufferLayout input_layout;
+		
 	public:
 		/**
 		 * \brief The Graphics command queue
@@ -69,7 +67,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		virtual void SetClearColor(const glm::vec4& color) override;
 		virtual void Clear() override;
 
-		virtual void DrawIndexed(const std::shared_ptr<VertexArray>& vertexArray) override;
+		virtual void Draw(const Ref<Assets::Mesh> mesh, const Ref<Shader> shader, const glm::mat4& transform = glm::mat4(1.0f)) override;
 		
 		void StartFrame() override;
 		void EndFrame() override;

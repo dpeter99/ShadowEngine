@@ -51,7 +51,7 @@ namespace ShadowEngine::Rendering::OpenGL {
 		SH_CORE_ASSERT(vertexBuffer->GetLayout().GetElements().size(), "Vertex Buffer has no layout!");
 
 		glBindVertexArray(m_RendererID);
-		vertexBuffer->Bind();
+		//vertexBuffer->Bind();
 
 		const auto& layout = vertexBuffer->GetLayout();
 		for (const auto& element : layout)
@@ -72,7 +72,7 @@ namespace ShadowEngine::Rendering::OpenGL {
 	void OpenGLVertexArray::SetIndexBuffer(const std::shared_ptr<IndexBuffer>& indexBuffer)
 	{
 		glBindVertexArray(m_RendererID);
-		indexBuffer->Bind();
+		//indexBuffer->Bind();
 
 		m_IndexBuffer = indexBuffer;
 	}

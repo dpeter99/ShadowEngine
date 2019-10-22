@@ -9,22 +9,12 @@
 #include <glm/gtc/type_ptr.hpp>
 #include "ShadowEntity/Entities/Camera.h"
 #include <ShadowRenderer\Shader.h>
+#include "ShadowAsset/Assets/Mesh.h"
 
 class TestRenderer
 {
 	ShadowEngine::Ref<ShadowEngine::Rendering::Shader> m_Shader;
-	ShadowEngine::Ref<ShadowEngine::Rendering::VertexArray> m_VertexArray;
-
-	ShadowEngine::Ref<ShadowEngine::Rendering::Shader> m_FlatColorShader, m_TextureShader;
-	ShadowEngine::Ref<ShadowEngine::Rendering::VertexArray> m_SquareVA;
-
-	ShadowEngine::Ref<ShadowEngine::Rendering::Texture2D> m_Texture, m_ChernoLogoTexture;
-
-	glm::vec3 m_CameraPosition;
-	float m_CameraMoveSpeed = 5.0f;
-
-	float m_CameraRotation = 0.0f;
-	float m_CameraRotationSpeed = 180.0f;
+	ShadowEngine::Ref<ShadowEngine::Assets::Mesh> m_mesh;
 
 	glm::vec3 m_SquareColor = { 0.2f, 0.3f, 0.8f };
 

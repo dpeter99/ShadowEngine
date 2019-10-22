@@ -10,8 +10,9 @@ namespace ShadowEngine::Rendering::OpenGL {
 		OpenGLVertexBuffer(void* vertices, uint32_t size);
 		virtual ~OpenGLVertexBuffer();
 
-		virtual void Bind() const override;
-		virtual void Unbind() const override;
+		//TODO: fix
+		//virtual void Bind() const override;
+		//virtual void Unbind() const override;
 
 		virtual const BufferLayout& GetLayout() const override { return m_Layout; }
 		virtual void SetLayout(const BufferLayout& layout) override { m_Layout = layout; }
@@ -26,8 +27,9 @@ namespace ShadowEngine::Rendering::OpenGL {
 		OpenGLIndexBuffer(uint32_t* indices, uint32_t count);
 		virtual ~OpenGLIndexBuffer();
 
-		virtual void Bind() const;
-		virtual void Unbind() const;
+		//TODO: fix
+		//virtual void Bind() const;
+		//virtual void Unbind() const;
 
 		virtual uint32_t GetCount() const { return m_Count; }
 	private:

@@ -20,7 +20,7 @@ namespace ShadowEngine::Rendering::OpenGL {
 	{
 		glDeleteBuffers(1, &m_RendererID);
 	}
-
+	/*
 	void OpenGLVertexBuffer::Bind() const
 	{
 		glBindBuffer(GL_ARRAY_BUFFER, m_RendererID);
@@ -30,7 +30,7 @@ namespace ShadowEngine::Rendering::OpenGL {
 	{
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 	}
-
+	*/
 	/////////////////////////////////////////////////////////////////////////////
 	// IndexBuffer //////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////
@@ -47,7 +47,7 @@ namespace ShadowEngine::Rendering::OpenGL {
 	{
 		glDeleteBuffers(1, &m_RendererID);
 	}
-
+	/*
 	void OpenGLIndexBuffer::Bind() const
 	{
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_RendererID);
@@ -57,5 +57,5 @@ namespace ShadowEngine::Rendering::OpenGL {
 	{
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 	}
-
+	*/
 }

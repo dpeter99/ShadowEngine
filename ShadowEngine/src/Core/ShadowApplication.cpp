@@ -23,7 +23,7 @@ namespace ShadowEngine {
 
 	ShadowApplication* ShadowApplication::instance = nullptr;
 
-	ShadowApplication::ShadowApplication()
+	ShadowApplication::ShadowApplication() : window_(nullptr)
 	{
 		instance = this;
 	}

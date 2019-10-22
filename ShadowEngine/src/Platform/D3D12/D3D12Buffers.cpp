@@ -51,14 +51,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 	}
 
-	void D3D12VertexBuffer::Bind() const
-	{
-	}
-
-	void D3D12VertexBuffer::Unbind() const
-	{
-	}
-
 	/**
 	 * \brief Constructor for Dx12 Index Buffer
 	 * \param indexData The index data for this buffer to store
@@ -102,14 +94,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 	}
 
 	D3D12IndexBuffer::~D3D12IndexBuffer()
-	{
-	}
-
-	void D3D12IndexBuffer::Bind() const
-	{
-	}
-
-	void D3D12IndexBuffer::Unbind() const
 	{
 	}
 }

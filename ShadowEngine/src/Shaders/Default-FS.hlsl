@@ -1,5 +1,8 @@
+#include "RootSig.hlsli"
+#include "Structs.hlsli"
 
-float4 main() : SV_TARGET
+[RootSignature(RootSig0)]
+float4 main(VSOutput input):SV_Target
 {
-	return float4(1.0f, 1.0f, 1.0f, 1.0f);
+	return input.color;
 }

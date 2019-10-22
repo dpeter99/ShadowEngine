@@ -2,10 +2,18 @@
 #include "ShadowRenderer/CommandList.h"
 #include "Common.h"
 #include "D3D12DepthBuffer.h"
+#include "ShadowRenderer/Shader.h"
+#include <memory>
+#include "D3D12Shader.h"
+#include "ShadowAsset/Assets/Mesh.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 	class D3D12SwapChain;
 
+	/**
+	 * \brief A list of commands
+	 * Used to record graphics/compute commands and than submit them at once
+	 */
 	class D3D12CommandList
 	{
 		com_ptr<ID3D12CommandAllocator> commandAllocator;
@@ -22,7 +30,15 @@ namespace ShadowEngine::Rendering::D3D12 {
 		 * \brief 
 		 * \return The dx12 command list
 		 */
-		com_ptr<ID3D12GraphicsCommandList> GetCommandList() { return commandList; };
+		com_ptr<ID3D12GraphicsCommandList> GetCommandList() { return commandList; }
+
+		
+		/**
+		 * \brief Binds a new shader to the command list to use
+		 * \param shader The shader to be used
+		 * 
+		 */
+		void UseShader(const Ref<D3D12Shader>& shader);
 		
 		/**
 		 * \brief Resets the Command List
@@ -56,6 +72,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		void ClearDepthStencilView(float depth, uint8_t stencil);
 		void Close();
+		void DrawMesh(const std::shared_ptr<Assets::Mesh>& mesh);
 	};
 
 }

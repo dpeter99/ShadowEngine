@@ -1,7 +1,15 @@
-#include "RootSig.hlsl"
+#include "RootSig.hlsli"
+#include "Structs.hlsli"
+
 
 [RootSignature(RootSig0)]
-float4 main( float4 pos : POSITION ) : SV_POSITION
+VSOutput main( Vertex vert )
 {
-	return pos;
+    VSOutput o;
+    o.position = float4(vert.position.xyz, 1);
+    o.normal = vert.normal;
+    o.texCoord = vert.texCoord;
+    o.color = vert.color;
+
+	return o;
 }

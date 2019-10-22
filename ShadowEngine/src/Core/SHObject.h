@@ -13,7 +13,7 @@ namespace ShadowEngine {
 		 * \brief Generates a new UID for each call
 		 * \return Unique ID
 		 */
-		static uint64_t GenerateId()
+		static uint64_t GenerateId() noexcept
 		{
 			static uint64_t count = 0;
 			return ++count;

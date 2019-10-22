@@ -5,16 +5,15 @@
 #include "D3D12RendererAPI.h"
 #include "D3D12Context.h"
 #include "D3D12CommandQueue.h"
+#include "ShadowAsset/Assets/Mesh.h"
+#include "D3D12Shader.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
 	com_ptr<ID3D12Device> D3D12RendererAPI::device{ nullptr };
 	Ref<D3D12::D3D12Context> D3D12RendererAPI::ctx {nullptr};
 	
-	BufferLayout D3D12RendererAPI::input_layout {
-		{ ShadowEngine::Rendering::ShaderDataType::Float3, "POSITION" },
-		{ ShadowEngine::Rendering::ShaderDataType::Float4, "a_Color" }
-	};
+	
 	
 	/**
 	 * \brief Loads the GPU adapters
@@ -62,7 +61,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		com_ptr<ID3D12Debug> debug_controller;
 		D3D12GetDebugInterface(IID_PPV_ARGS(&debug_controller));
-		
 		debug_controller->EnableDebugLayer();
 		
 		//Create the D3D device
@@ -112,9 +110,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 	}
 
-	void D3D12RendererAPI::DrawIndexed(const std::shared_ptr<VertexArray>& vertexArray)
+	void D3D12RendererAPI::Draw(const Ref<Assets::Mesh> mesh, const Ref<Shader> shader, const glm::mat4& transform)
 	{
-		
+		Ref<D3D12Shader> dx12_shader = std::dynamic_pointer_cast<D3D12::D3D12Shader>(shader);
+		command_list->UseShader(dx12_shader);
+		command_list->DrawMesh(mesh);
 	}
 
 	void D3D12RendererAPI::StartFrame()

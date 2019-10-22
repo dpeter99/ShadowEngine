@@ -2,6 +2,7 @@
 
 #include "D3D12Shader.h"
 #include "D3D12RendererAPI.h"
+#include "ShadowRenderer/Vertex.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
@@ -60,7 +61,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		psoDesc.NumRenderTargets = 1;
 		psoDesc.PrimitiveTopologyType = D3D12_PRIMITIVE_TOPOLOGY_TYPE_TRIANGLE;
 		psoDesc.RTVFormats[0] = DXGI_FORMAT_R8G8B8A8_UNORM;
-		psoDesc.InputLayout = CreateInputDescriptor(D3D12RendererAPI::input_layout);
+		psoDesc.InputLayout = CreateInputDescriptor(Vertex::input_layout);
 
 		psoDesc.pRootSignature = rootSig.Get();
 		psoDesc.VS = CD3DX12_SHADER_BYTECODE(VertexShaderByteCode.Get());
@@ -166,6 +167,16 @@ namespace ShadowEngine::Rendering::D3D12 {
 	D3D12Shader::~D3D12Shader()
 	{
 		
+	}
+
+	com_ptr<ID3D12PipelineState> D3D12Shader::GetPipelineState()
+	{
+		return pipelineState;
+	}
+
+	com_ptr<ID3D12RootSignature> D3D12Shader::GetRootSignature()
+	{
+		return rootSig;
 	}
 
 	void D3D12Shader::Bind() const

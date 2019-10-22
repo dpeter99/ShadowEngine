@@ -5,6 +5,7 @@
 
 namespace ShadowEngine::Rendering {
 
+	DECLSPEC_DEPRECATED
 	class VertexArray
 	{
 	public:

@@ -16,7 +16,7 @@
 
 namespace ShadowEngine::Debug {
 
-	DebugModule::DebugModule()
+	DebugModule::DebugModule() : active(false)
 	{
 	}
 

@@ -1,6 +1,8 @@
 #include "shpch.h"
 #include "D3D12CommandList.h"
 #include "D3D12RendererAPI.h"
+#include "D3D12Shader.h"
+#include "D3D12Buffers.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 	D3D12CommandList::D3D12CommandList()
@@ -14,6 +16,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 		commandList->Close();
 		
 		isBeingRecorded = false;
+	}
+
+	void D3D12CommandList::UseShader(const Ref<D3D12Shader>& shader)
+	{
+		commandList->SetPipelineState(shader->GetPipelineState().Get());
+		commandList->SetGraphicsRootSignature(shader->GetRootSignature().Get());
 	}
 
 	void D3D12CommandList::Reset()
@@ -70,5 +78,16 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 		DX_API("Failed to close command list")
 			commandList->Close();
+	}
+
+	void D3D12CommandList::DrawMesh(const std::shared_ptr<Assets::Mesh>& mesh)
+	{
+		auto index = std::dynamic_pointer_cast<D3D12IndexBuffer>(mesh->index_buffer);
+		auto vert = std::dynamic_pointer_cast<D3D12VertexBuffer>(mesh->vertex_buffer);
+		
+		commandList->IASetPrimitiveTopology(D3D10_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+		commandList->IASetIndexBuffer(&index->GetBufferView());
+		commandList->IASetVertexBuffers(0, 1, &vert->GetBufferView());
+		commandList->DrawIndexedInstanced(index->GetCount(), 1, 0, 0, 0);
 	}
 }
