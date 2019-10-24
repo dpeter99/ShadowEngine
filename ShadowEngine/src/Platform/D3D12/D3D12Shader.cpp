@@ -120,6 +120,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//Load in the default values for now
 		blendState = CD3DX12_BLEND_DESC(D3D12_DEFAULT);
 		rasterizerState = CD3DX12_RASTERIZER_DESC(D3D12_DEFAULT);
+		rasterizerState.CullMode = D3D12_CULL_MODE_FRONT;
 		depthStencilState = CD3DX12_DEPTH_STENCIL_DESC(D3D12_DEFAULT);
 		depthStencilState.DepthEnable = FALSE;
 		depthStencilState.StencilEnable = FALSE;
