@@ -7,9 +7,9 @@
 TestRenderer::TestRenderer() {
 
 	ShadowEngine::Rendering::Vertex verts[3] = {
-		{glm::vec3(-0.5f, -0.5f, 0.0f),glm::vec3(),glm::vec2(),glm::vec4(0.8f, 0.2f, 0.8f, 1.0)},
-		{glm::vec3(0.5f, -0.5f, 0.0f),glm::vec3(),glm::vec2(),glm::vec4(0.2f,0.3f, 0.8f, 1.0f)},
-		{glm::vec3(0.0f,  0.5f, 0.0f),glm::vec3(),glm::vec2(),glm::vec4(0.8f, 0.2f, 0.8f, 1.0)}
+		{glm::vec3(-0.5f, -0.5f, 0.0f),glm::vec3(),glm::vec2(),glm::vec4(1, 0, 0, 1.0)},
+		{glm::vec3(0.5f, -0.5f, 0.0f),glm::vec3(),glm::vec2(),glm::vec4(0,1, 0, 1.0f)},
+		{glm::vec3(0.0f,  0.5f, 0.0f),glm::vec3(),glm::vec2(),glm::vec4(0, 0, 1, 1.0)}
 	};
 	uint32_t indices[3] = { 0, 1, 2 };
 

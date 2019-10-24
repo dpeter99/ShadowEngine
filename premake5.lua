@@ -25,6 +25,8 @@ IncludeDir["glm"] = "ShadowEngine/dependencies/glm"
 IncludeDir["stb_image"] = "ShadowEngine/dependencies/stb_image"
 IncludeDir["spdlog"] = "ShadowEngine/dependencies/spdlog/include"
 
+IncludeDir["ShadowEngine"] = "ShadowEngine/src"
+
 
 group "Dependencies"
 	include "ShadowEngine/dependencies/Glad"
@@ -187,6 +189,11 @@ project "Planning"
 	includedirs
 	{
 		"%{prj.name}/src",
+	}
+	
+	links 
+	{ 
+		"ShadowEngine"
 	}
 
 	filter "system:windows"
