@@ -57,6 +57,7 @@ project "ShadowEngine"
 		"%{prj.name}/src/**.cpp",
 		"%{prj.name}/src/**.cd",
 		"%{prj.name}/src/**.hlsl",
+		"%{prj.name}/src/**.hlsli",
 		"%{prj.name}/dependencies/stb_image/**.h",
 		"%{prj.name}/dependencies/stb_image/**.cpp",
 		"%{prj.name}/dependencies/glm/glm/**.hpp",
@@ -102,6 +103,7 @@ project "ShadowEngine"
 	filter "files:**.hlsl"
 		flags "ExcludeFromBuild"
 		shaderobjectfileoutput (shader_dir .. "%{file.basename}.cso")
+		shaderheaderfileoutput ("src/Shaders/%{file.basename}.h")
 		
 	filter "files:**-FS.hlsl"
 		removeflags "ExcludeFromBuild"

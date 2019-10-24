@@ -2,10 +2,16 @@
 #include "Material.h"
 
 namespace  ShadowEngine::Assets {
-
-	Material::Material(Ref<Rendering::Shader> shader): shader(shader)
+	Ref<ShaderPropertySheet>& Material::GetProperties()
 	{
+		return properties;
+	}
+
+	Material::Material(const Ref<Rendering::Shader>& shader)
+	{
+		this->shader = shader;
 		
+		this->properties.reset(shader->GetPropertiesCopy());
 	}
 
 }

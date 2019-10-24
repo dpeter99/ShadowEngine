@@ -162,7 +162,35 @@ namespace ShadowEngine::Rendering::D3D12 {
 		D3D12RendererAPI::device->CreateGraphicsPipelineState(&gpsoDesc, IID_PPV_ARGS(pso.GetAddressOf()));
 
 		pipelineState = pso;
-		
+
+		D3D12_SHADER_DESC shader_desc;
+		psReflection->GetDesc(&shader_desc);
+
+		for (int i = 0; i < shader_desc.ConstantBuffers; ++i)
+		{
+			ID3D12ShaderReflectionConstantBuffer* a = psReflection->GetConstantBufferByIndex(i);
+
+			D3D12_SHADER_BUFFER_DESC desc;
+			a->GetDesc(&desc);
+
+			for (int j = 0; j < desc.Variables; ++j)
+			{
+				ID3D12ShaderReflectionVariable* var = a->GetVariableByIndex(0);
+
+				ID3D12ShaderReflectionType* type = var->GetType();
+				D3D12_SHADER_TYPE_DESC type_desc;
+
+				D3D12_SHADER_VARIABLE_DESC var_desc;
+				var->GetDesc(&var_desc);
+				
+				type->GetDesc(&type_desc);
+
+				if (strcmp(type_desc.Name, "float4") == 0)
+				{
+					this->properties.AddProperty(new ShaderProperty<glm::vec4>(var_desc.Name));
+				}
+			}
+		}
 	}
 
 	D3D12Shader::~D3D12Shader()

@@ -10,12 +10,17 @@
 #include "ShadowEntity/Entities/Camera.h"
 #include <ShadowRenderer\Shader.h>
 #include "ShadowAsset/Assets/Mesh.h"
+#include "ShadowAsset/Assets/Material.h"
 
 class TestRenderer
 {
-	ShadowEngine::Ref<ShadowEngine::Rendering::Shader> m_Shader;
+	
 	ShadowEngine::Ref<ShadowEngine::Assets::Mesh> m_mesh;
 
+	ShadowEngine::Ref<ShadowEngine::Rendering::Shader> m_Shader;
+
+	ShadowEngine::Ref<ShadowEngine::Assets::Material> m_Material;
+	
 	glm::vec3 m_SquareColor = { 0.2f, 0.3f, 0.8f };
 
 public:

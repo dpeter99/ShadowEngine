@@ -6,6 +6,11 @@
 #include "Platform/D3D12/D3D12Shader.h"
 
 namespace ShadowEngine::Rendering {
+	
+	ShaderPropertySheet* Shader::GetPropertiesCopy()
+	{
+		return new ShaderPropertySheet(properties);
+	}
 
 	Shader* Shader::Create(const std::string& vertexSrc, const std::string& fragmentSrc)
 	{

@@ -1,14 +1,19 @@
 #pragma once
 
 #include <string>
+#include "ShaderPropertySheet.h"
 
 namespace ShadowEngine::Rendering {
 
 	class Shader
 	{
+	protected:
+		ShaderPropertySheet properties;
 	public:
 		virtual ~Shader() = default;
 
+		ShaderPropertySheet* GetPropertiesCopy();
+		
 		virtual void Bind() const = 0;
 		virtual void Unbind() const = 0;
 

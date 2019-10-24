@@ -64,8 +64,10 @@ protected:
 		std::string name;
 public:
 	IShaderProperty(const std::string& name):name(name){}
-	IShaderProperty(){};
-	virtual const std::string& GetName() = 0;
+	IShaderProperty() = default;
+	
+	const std::string& GetName() const { return name; };
+	virtual IShaderProperty* Clone() = 0;
 };
 
 template<class T>
@@ -76,20 +78,38 @@ class ShaderProperty : public IShaderProperty
 	T value;
 
 public:
-	explicit ShaderProperty(const std::string& name) : IShaderProperty(name){}
+	ShaderProperty(const std::string& name) : IShaderProperty(name){}
+	ShaderProperty(const ShaderProperty& a)
+	{
+		this->name = a.name;
+		this->value = a.value;
+	}
 	
 	void SetValue(const T& data)
 	{
 		value = data;
 	}
 
-	const std::string& GetName() override { return name; }
+	IShaderProperty* Clone() override
+	{
+		return new ShaderProperty<T>(*this);
+	};
 };
 
 class ShaderPropertySheet
 {
 	std::vector<std::unique_ptr<IShaderProperty>> shaderProperties;
 public:
+	ShaderPropertySheet(const ShaderPropertySheet& a)
+	{
+		for (auto & property : a.shaderProperties)
+		{	
+			this->shaderProperties.push_back(std::unique_ptr<IShaderProperty>(property->Clone()));
+		}
+	}
+
+	ShaderPropertySheet() = default;
+	
 	template<class T>
 	ShaderProperty<T>* GetProperty(std::string name)
 	{
@@ -121,5 +141,8 @@ void main()
 	
 	auto p = sheet.GetProperty<bool>("asd");
 
+	ShaderPropertySheet sheet_copy = sheet;
+
+	p->SetValue(true);
 	
 }

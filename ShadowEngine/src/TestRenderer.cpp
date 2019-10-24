@@ -16,6 +16,10 @@ TestRenderer::TestRenderer() {
 	m_mesh.reset(new ShadowEngine::Assets::Mesh(verts, sizeof(verts), sizeof(ShadowEngine::Rendering::Vertex), indices, sizeof(indices)));
 	
 	m_Shader.reset(ShadowEngine::Rendering::Shader::CreateFromCompiled("Shaders/Default-VS.cso", "Shaders/Default-FS.cso"));
+
+	m_Material.reset(new ShadowEngine::Assets::Material(m_Shader));
+
+	m_Material->GetProperties()->GetProperty<glm::vec4>("tint")->SetValue(glm::vec4(1,1,1,1));
 }
 
 void TestRenderer::Update() {
@@ -25,6 +29,6 @@ void TestRenderer::Update() {
 	glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
 
 	// Triangle
-	ShadowEngine::Rendering::Renderer::Submit(m_mesh,m_Shader);
+	ShadowEngine::Rendering::Renderer::Submit(m_mesh,m_Material);
 
 }

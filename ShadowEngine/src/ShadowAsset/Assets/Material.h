@@ -5,6 +5,7 @@
 
 #include "ShadowRenderer/Buffer.h"
 #include "ShadowRenderer/Shader.h"
+#include "ShadowRenderer/ShaderPropertySheet.h"
 
 namespace ShadowEngine::Assets {
 
@@ -15,10 +16,13 @@ namespace ShadowEngine::Assets {
 		
 		std::shared_ptr<ShadowEngine::Rendering::Shader> shader;
 
+		Ref<ShaderPropertySheet> properties;
+		
 	public:
+		Ref<ShaderPropertySheet>& GetProperties();
+	
+		
+		Material(const Ref<Rendering::Shader>& shader);
 
-		
-		Material(Ref<Rendering::Shader> shader);
-		
 	};
 }
