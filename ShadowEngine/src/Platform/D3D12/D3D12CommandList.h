@@ -6,6 +6,8 @@
 #include <memory>
 #include "D3D12Shader.h"
 #include "ShadowAsset/Assets/Mesh.h"
+#include "ShadowRenderer/ConstantBuffer.h"
+#include <memory>
 
 namespace ShadowEngine::Rendering::D3D12 {
 	class D3D12SwapChain;
@@ -73,6 +75,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		void ClearDepthStencilView(float depth, uint8_t stencil);
 		void Close();
 		void DrawMesh(const std::shared_ptr<Assets::Mesh>& mesh);
+		void BindConstantBuffer(const Ref<ConstantBuffer>& buffer, int materialSlotIndex);
 	};
 
 }

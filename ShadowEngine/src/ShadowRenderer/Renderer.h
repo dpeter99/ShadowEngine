@@ -45,7 +45,7 @@ namespace ShadowEngine::Rendering {
 		static void EndScene();
 
 		//TODO:use materials
-		static void Submit(const Ref<Assets::Mesh> mesh, const Ref<Shader> shader, const glm::mat4& transform = glm::mat4(1.0f));
+		static void Submit(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4& transform = glm::mat4(1.0f));
 
 		inline static RendererAPI::API GetAPI() { return RendererAPI::GetAPI(); }
 

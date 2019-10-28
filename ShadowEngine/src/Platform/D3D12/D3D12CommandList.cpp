@@ -3,6 +3,7 @@
 #include "D3D12RendererAPI.h"
 #include "D3D12Shader.h"
 #include "D3D12Buffers.h"
+#include "D3D12ConstantBuffer.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 	D3D12CommandList::D3D12CommandList()
@@ -89,5 +90,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 		commandList->IASetIndexBuffer(&index->GetBufferView());
 		commandList->IASetVertexBuffers(0, 1, &vert->GetBufferView());
 		commandList->DrawIndexedInstanced(index->GetCount(), 1, 0, 0, 0);
+	}
+
+	void D3D12CommandList::BindConstantBuffer(const Ref<ConstantBuffer>& buffer, int getMaterialSlotIndex)
+	{
+		Ref<D3D12ConstantBuffer> dx12_buffer = std::dynamic_pointer_cast<D3D12::D3D12ConstantBuffer>(buffer->GetImpl());
+		commandList->SetGraphicsRootConstantBufferView(getMaterialSlotIndex, dx12_buffer->GetGPUVirtualAddress());
 	}
 }

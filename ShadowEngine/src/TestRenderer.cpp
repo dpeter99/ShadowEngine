@@ -19,16 +19,24 @@ TestRenderer::TestRenderer() {
 
 	m_Material.reset(new ShadowEngine::Assets::Material(m_Shader));
 
-	m_Material->GetProperties()->GetProperty<glm::vec4>("tint")->SetValue(glm::vec4(1,1,1,1));
+	m_Material->SetProperty("tint", glm::vec4(1, 0, 0, 1));
+	m_Material->UpdateBufferIfDirty();
 }
 
 void TestRenderer::Update() {
-
-	
+	static int t = 0;
+	t++;
+	m_Material->SetProperty("tint", glm::vec4(t/1000.0f, 0, 0, 1));
+	m_Material->UpdateBufferIfDirty();
 
 	glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
 
 	// Triangle
 	ShadowEngine::Rendering::Renderer::Submit(m_mesh,m_Material);
+
+	// Triangle
+	glm::mat4x4 trans;
+	glm::translate(trans,{ 0.2,0.2,0 });
+	ShadowEngine::Rendering::Renderer::Submit(m_mesh, m_Material,trans);
 
 }

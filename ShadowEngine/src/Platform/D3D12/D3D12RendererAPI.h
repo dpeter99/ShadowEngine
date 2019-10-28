@@ -9,6 +9,7 @@
 #include "D3D12CommandList.h"
 #include "ShadowAsset/Assets/Mesh.h"
 #include "ShadowRenderer/Shader.h"
+#include "ShadowAsset/Assets/Material.h"
 
 
 namespace ShadowEngine::Rendering::D3D12 {
@@ -67,7 +68,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		virtual void SetClearColor(const glm::vec4& color) override;
 		virtual void Clear() override;
 
-		virtual void Draw(const Ref<Assets::Mesh> mesh, const Ref<Shader> shader, const glm::mat4& transform = glm::mat4(1.0f)) override;
+		virtual void Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4& transform = glm::mat4(1.0f)) override;
 		
 		void StartFrame() override;
 		void EndFrame() override;

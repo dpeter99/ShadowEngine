@@ -23,7 +23,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		SH_CORE_ASSERT(false, "Unknown ShaderDataType!");
 		return DXGI_FORMAT_UNKNOWN;
 	}
-	
+
 	/**
 	 * \brief Loads a HLSL shader code from a compiled cso file
 	 * \param VSfilePath Path to the code file (.cso)
@@ -90,7 +90,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		D3D12_INPUT_LAYOUT_DESC layout_desc;
 
 		auto elements = new std::vector<D3D12_INPUT_ELEMENT_DESC>();
-		
+
 		for (const auto& element : layout)
 		{
 			D3D12_INPUT_ELEMENT_DESC e;
@@ -109,7 +109,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		layout_desc.pInputElementDescs = &(elements->at(0));
 		return layout_desc;
 	}
-	
+
 	/**
 	 * \brief Constructor for D3D12 Shaders.
 	 * \param VSfilePath File path to the Compiled HLSL Vertex shader
@@ -129,17 +129,17 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//Load Up the shader codes
 		VertexShaderByteCode = LoadCso(VSfilePath);
 		FragmentShaderByteCode = LoadCso(PSfilePath);
-		
+
 		//Load Root signature
 		DX_API("Failed to create root signature")
-		D3D12RendererAPI::device->CreateRootSignature(0, VertexShaderByteCode->GetBufferPointer(),
-			VertexShaderByteCode->GetBufferSize(), IID_PPV_ARGS(rootSig.GetAddressOf()));
+			D3D12RendererAPI::device->CreateRootSignature(0, VertexShaderByteCode->GetBufferPointer(),
+				VertexShaderByteCode->GetBufferSize(), IID_PPV_ARGS(rootSig.GetAddressOf()));
 
 
 		//Create the Pipeline State Descriptor
 		ZeroMemory(&gpsoDesc, sizeof(D3D12_GRAPHICS_PIPELINE_STATE_DESC));
 		CreatePipelineDescriptor(gpsoDesc);
-		
+
 
 		DX_API("Failed to reflect vertex shader")
 			D3DReflect(gpsoDesc.VS.pShaderBytecode, gpsoDesc.VS.BytecodeLength, IID_PPV_ARGS(vsReflection.GetAddressOf()));
@@ -157,45 +157,67 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		//Create the pipeline state object from the descriptor
 		com_ptr<ID3D12PipelineState> pso{ nullptr };
-		
+
 		DX_API("PSOManager: Failed to create GPSO")
-		D3D12RendererAPI::device->CreateGraphicsPipelineState(&gpsoDesc, IID_PPV_ARGS(pso.GetAddressOf()));
+			D3D12RendererAPI::device->CreateGraphicsPipelineState(&gpsoDesc, IID_PPV_ARGS(pso.GetAddressOf()));
 
 		pipelineState = pso;
 
+
+		//Extract the Material data form the shader
+
+		//Get the shader description
 		D3D12_SHADER_DESC shader_desc;
 		psReflection->GetDesc(&shader_desc);
 
-		for (int i = 0; i < shader_desc.ConstantBuffers; ++i)
-		{
-			ID3D12ShaderReflectionConstantBuffer* a = psReflection->GetConstantBufferByIndex(i);
+		//Get the correctly named Constant buffer reflection
+		ID3D12ShaderReflectionConstantBuffer* a = psReflection->GetConstantBufferByName("MaterialData");
 
-			D3D12_SHADER_BUFFER_DESC desc;
-			a->GetDesc(&desc);
+		D3D12_SHADER_INPUT_BIND_DESC bindDesc;
+		psReflection->GetResourceBindingDescByName("MaterialData", &bindDesc);
+		
+		//The description of the Constant buffer
+		D3D12_SHADER_BUFFER_DESC desc;
+		a->GetDesc(&desc);
 
-			for (int j = 0; j < desc.Variables; ++j)
-			{
-				ID3D12ShaderReflectionVariable* var = a->GetVariableByIndex(0);
-
-				ID3D12ShaderReflectionType* type = var->GetType();
-				D3D12_SHADER_TYPE_DESC type_desc;
-
-				D3D12_SHADER_VARIABLE_DESC var_desc;
-				var->GetDesc(&var_desc);
-				
-				type->GetDesc(&type_desc);
-
-				if (strcmp(type_desc.Name, "float4") == 0)
-				{
-					this->properties.AddProperty(new ShaderProperty<glm::vec4>(var_desc.Name));
-				}
+		//Find the binding index of the constant buffer binding
+		const D3D12_ROOT_SIGNATURE_DESC& rootSignatureDesc = *(rsDeserializer->GetRootSignatureDesc());
+		for (unsigned int i = 0; i < rootSignatureDesc.NumParameters; ++i) {
+			const D3D12_ROOT_PARAMETER& param = rootSignatureDesc.pParameters[i];
+			if (param.ParameterType == D3D12_ROOT_PARAMETER_TYPE_CBV &&
+				param.Descriptor.ShaderRegister == bindDesc.BindPoint &&
+				param.Descriptor.RegisterSpace == bindDesc.Space) {
+				this->materialDataIndex = i;
+				break;
 			}
 		}
+
+
+		
+		for (int j = 0; j < desc.Variables; ++j)
+		{
+			ID3D12ShaderReflectionVariable* var = a->GetVariableByIndex(0);
+
+			ID3D12ShaderReflectionType* type = var->GetType();
+			D3D12_SHADER_TYPE_DESC type_desc;
+
+			D3D12_SHADER_VARIABLE_DESC var_desc;
+			var->GetDesc(&var_desc);
+
+			type->GetDesc(&type_desc);
+
+			if (strcmp(type_desc.Name, "float4") == 0)
+			{
+				this->properties.AddProperty(new ShaderProperty<glm::vec4>(var_desc.Name));
+			}
+		}
+
+		properties.Finalize();
 	}
 
 	D3D12Shader::~D3D12Shader()
 	{
-		
+
 	}
 
 	com_ptr<ID3D12PipelineState> D3D12Shader::GetPipelineState()
@@ -208,13 +230,20 @@ namespace ShadowEngine::Rendering::D3D12 {
 		return rootSig;
 	}
 
+	int D3D12Shader::GetMaterialSlotIndex()
+	{
+		return materialDataIndex;
+	}
+
 	void D3D12Shader::Bind() const
 	{
-		
+
 	}
 
 	void D3D12Shader::Unbind() const
 	{
-		
+
 	}
+
+
 }

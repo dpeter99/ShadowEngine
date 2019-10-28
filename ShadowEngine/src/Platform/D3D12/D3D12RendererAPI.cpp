@@ -110,10 +110,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 	}
 
-	void D3D12RendererAPI::Draw(const Ref<Assets::Mesh> mesh, const Ref<Shader> shader, const glm::mat4& transform)
+	void D3D12RendererAPI::Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> material, const glm::mat4& transform)
 	{
-		Ref<D3D12Shader> dx12_shader = std::dynamic_pointer_cast<D3D12::D3D12Shader>(shader);
+
+		
+		Ref<D3D12Shader> dx12_shader = std::dynamic_pointer_cast<D3D12::D3D12Shader>(material->GetShader());
 		command_list->UseShader(dx12_shader);
+		command_list->BindConstantBuffer(material->GetBuffer(), dx12_shader->GetMaterialSlotIndex());
 		command_list->DrawMesh(mesh);
 	}
 

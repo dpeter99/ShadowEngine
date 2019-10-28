@@ -43,11 +43,14 @@ namespace ShadowEngine::Rendering::D3D12 {
 		com_ptr<ID3D12ShaderReflection> psReflection;
 		com_ptr<ID3D12RootSignatureDeserializer> rsDeserializer;
 
+		int materialDataIndex;
+		
 	private:
 		static com_ptr<ID3DBlob> D3D12Shader::LoadCso(const std::string& VSfilePath);
 		void CreatePipelineDescriptor(D3D12_GRAPHICS_PIPELINE_STATE_DESC& psoDesc) const;
 		static D3D12_INPUT_LAYOUT_DESC CreateInputDescriptor(BufferLayout& layout);
 
+		
 	public:
 		D3D12Shader(const std::string& VSfilePath, const std::string& PSfilePath);
 		virtual ~D3D12Shader();
@@ -70,9 +73,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 		*/
 		com_ptr<ID3D12RootSignature> GetRootSignature();
 
-
+		int GetMaterialSlotIndex();
+		
 		virtual void Bind() const;
 		virtual void Unbind() const;
+		
 	};
 
 }

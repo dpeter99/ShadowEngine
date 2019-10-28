@@ -4,11 +4,15 @@
 #include <memory>
 #include <utility>
 
+/**
+* This is the actual asset object
+*/
 class Asset
 {
 	
 };
 
+//This is a proxy calss to store the asset regystry data
 class AssetData
 {
 	uint64_t m_UID;
@@ -26,12 +30,12 @@ class AssetData
 	}
 	
 public:
-	AssetData(std::string path) :m_path(std::move(path)), m_loaded(false)
+	AssetData(const std::string& path) :m_path(path), m_loaded(false)
 	{
 		m_UID = GenerateId();
 	}
 
-	AssetData(std::string path, const uint64_t& UID) :m_UID(UID), m_path(std::move(path)), m_loaded(false) {}
+	AssetData(const std::string& path, const uint64_t& UID) :m_UID(UID), m_path(path), m_loaded(false) {}
 
 	//Actually loads in the asset
 	Asset GetAsset();
@@ -39,13 +43,18 @@ public:
 	int GetUID();
 };
 
+/** Holds the complleate list of registered assets.
+* Loads the list at startup
+* Loades the actual asset data when asked
+* Unloads when asked, or new bundle is loaded
+*/
 class AssetManager
 {
-	std::map<int, std::shared_ptr<AssetData>> assetRegistry;
+	std::map<int, std::unique_ptr<AssetData>> assetRegistry;
 	
 	void LoadAssetDatabase()
 	{
-		std::unique_ptr<AssetData> a = std::make_unique<AssetData>("./Texture/test");
+		
 	}
 
 public:
@@ -54,7 +63,7 @@ public:
 		LoadAssetDatabase();
 	}
 
-	std::shared_ptr<AssetData> FindAsset(std::string path)
+	std::unique_ptr<AssetData>& FindAsset(std::string path)
 	{
 		for (auto& asset : assetRegistry)
 		{

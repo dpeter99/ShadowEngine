@@ -8,7 +8,7 @@ cbuffer PerFrameCb : register(b0)
 	float4 cameraPos;
 }
 
-cbuffer Shaderdata : register(b0)
+cbuffer MaterialData : register(b1)
 {
 	float4 tint;
 }
@@ -16,5 +16,5 @@ cbuffer Shaderdata : register(b0)
 [RootSignature(RootSig0)]
 float4 main(VSOutput input):SV_Target
 {
-	return input.color * tint;
+	return tint;
 }
