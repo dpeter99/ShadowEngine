@@ -1,7 +1,7 @@
 #include "shpch.h"
 #include "RendererAPI.h"
 
-#include "Platform/OpenGL/OpenGLRendererAPI.h"
+//#include "Platform/OpenGL/OpenGLRendererAPI.h"
 #include "Platform/D3D12/D3D12RendererAPI.h"
 
 namespace ShadowEngine::Rendering {

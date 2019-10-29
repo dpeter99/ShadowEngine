@@ -1,7 +1,7 @@
 #pragma once
 #include "Core/Core.h"
 #include "ShadowRenderer/Shader.h"
-#include "ShadowRenderer/VertexArray.h"
+//#include "ShadowRenderer/VertexArray.h"
 #include "ShadowRenderer/Texture.h"
 #include "ShadowRenderer/OrthographicCamera.h"
 #include "glm/glm.hpp"

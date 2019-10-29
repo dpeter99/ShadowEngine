@@ -1,8 +1,8 @@
 #pragma once
-#include "ShadowRenderer/VertexArray.h"
+//#include "ShadowRenderer/VertexArray.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
-
+	/*
 	class D3D12VertexArray : public VertexArray
 	{
 	public:
@@ -18,5 +18,5 @@ namespace ShadowEngine::Rendering::D3D12 {
 		std::vector<std::shared_ptr<VertexBuffer>> m_VertexBuffers;
 		std::shared_ptr<IndexBuffer> m_IndexBuffer;
 	};
-
+	*/
 }

@@ -1,8 +1,8 @@
 #include "shpch.h"
 #include "Renderer.h"
 #include "ShadowEntity/Entities/Camera.h"
-#include "Platform/OpenGL/OpenGLShader.h"
-#include "Platform/OpenGL/OpenGLRendererAPI.h"
+//#include "Platform/OpenGL/OpenGLShader.h"
+//#include "Platform/OpenGL/OpenGLRendererAPI.h"
 #include "Core/ShadowApplication.h"
 #include "CommandList.h"
 

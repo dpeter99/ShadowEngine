@@ -2,7 +2,6 @@
 
 #include <glm/glm.hpp>
 
-#include "VertexArray.h"
 #include "GraphicsContext.h"
 #include "Shader.h"
 #include "ShadowAsset/Assets/Mesh.h"

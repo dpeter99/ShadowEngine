@@ -1,7 +1,7 @@
 #include "shpch.h"
 #include "Core/Core.h"
 
-#include "Platform/OpenGL/OpenGLContext.h"
+//#include "Platform/OpenGL/OpenGLContext.h"
 #include "Platform/D3D12/D3D12Context.h"
 
 #include "GraphicsContext.h"

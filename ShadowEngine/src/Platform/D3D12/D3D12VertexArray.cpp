@@ -1,6 +1,6 @@
 #include "shpch.h"
 #include "D3D12VertexArray.h"
-
+/*
 void ShadowEngine::Rendering::D3D12::D3D12VertexArray::Bind() const
 {
 	
@@ -21,3 +21,5 @@ void ShadowEngine::Rendering::D3D12::D3D12VertexArray::SetIndexBuffer(const std:
 {
 	m_IndexBuffer = indexBuffer;
 }
+
+*/
