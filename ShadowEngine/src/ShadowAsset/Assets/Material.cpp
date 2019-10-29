@@ -1,6 +1,6 @@
 #include "shpch.h"
 #include "Material.h"
-#include "ShadowRenderer/Vertex.h"
+#include "ShadowRenderer/DataStructs.h"
 #include "ShadowRenderer/ConstantBuffer.h"
 
 namespace  ShadowEngine::Assets {

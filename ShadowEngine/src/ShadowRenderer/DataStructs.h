@@ -15,9 +15,12 @@ namespace ShadowEngine::Rendering {
 
 		/**
 		 * \brief The default layout of the meshes being used
-		 * TODO: Move this to global Renderer
 		 */
 		static BufferLayout input_layout;
 	};
 
+	struct ModelData
+	{
+		glm::mat4x4 modelToWorld;
+	};
 }

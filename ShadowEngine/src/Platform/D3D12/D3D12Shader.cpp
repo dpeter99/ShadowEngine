@@ -2,7 +2,7 @@
 
 #include "D3D12Shader.h"
 #include "D3D12RendererAPI.h"
-#include "ShadowRenderer/Vertex.h"
+#include "ShadowRenderer/DataStructs.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 

@@ -1,6 +1,6 @@
 #include "shpch.h"
-#include "ShadowRenderer/Vertex.h"
 #include "Buffer.h"
+#include "DataStructs.h"
 
 namespace ShadowEngine::Rendering {
 

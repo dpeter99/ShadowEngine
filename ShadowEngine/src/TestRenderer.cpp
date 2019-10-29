@@ -32,11 +32,16 @@ void TestRenderer::Update() {
 	glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
 
 	// Triangle
-	ShadowEngine::Rendering::Renderer::Submit(m_mesh,m_Material);
-
-	// Triangle
+	if(!tri_one)
+		tri_one = ShadowEngine::Rendering::Renderer::AddRenderNode(m_mesh,m_Material);
+	
 	glm::mat4x4 trans;
-	glm::translate(trans,{ 0.2,0.2,0 });
+	glm::translate(trans, { t/100,0.2,0 });
+	tri_one->GetCB()->modelToWorld = trans;
+	tri_one->GetCB().Upload();
+	
+	// Triangle
+
 	ShadowEngine::Rendering::Renderer::Submit(m_mesh, m_Material,trans);
 
 }

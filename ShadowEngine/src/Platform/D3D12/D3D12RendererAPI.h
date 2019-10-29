@@ -69,10 +69,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 		virtual void Clear() override;
 
 		virtual void Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4& transform = glm::mat4(1.0f)) override;
+
+		void Draw(const std::shared_ptr<Assets::Mesh>& mesh, const std::shared_ptr<Assets::Material>& shader, Ref<ConstantBuffer> materialData) override;
 		
 		void StartFrame() override;
 		void EndFrame() override;
 		
 		void WaitForPreviousFrame();
+		
 	};
 }

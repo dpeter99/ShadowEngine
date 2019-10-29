@@ -23,7 +23,8 @@ namespace ShadowEngine::Rendering {
 		virtual void Clear() = 0;
 
 		virtual void Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4& transform = glm::mat4(1.0f)) =0;
-		
+		virtual void Draw(const std::shared_ptr<Assets::Mesh>& mesh, const std::shared_ptr<Assets::Material>& shader, Ref<ConstantBuffer> materialData) =0;
+
 		/**
 		 * \brief Starts recording the draw commands
 		 */
@@ -33,6 +34,7 @@ namespace ShadowEngine::Rendering {
 		 * \brief Finalizes the render command recording
 		 */
 		virtual void EndFrame() =0;
+		
 
 		inline static API GetAPI() { return s_API; }
 
