@@ -13,3 +13,14 @@ struct VSOutput
     float2 texCoord : TEXCOORD;
     float4 color : COLOR;
 };
+
+cbuffer PerFrameCb : register(b0)
+{
+	float4x4 viewProjMat;
+	float4x4 rayDir;
+	float4 cameraPos;
+}
+
+cbuffer PerObjectCb : register(b1) {
+	float4x4 modelMat;
+}

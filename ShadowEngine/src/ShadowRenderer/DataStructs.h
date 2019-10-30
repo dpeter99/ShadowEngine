@@ -23,4 +23,8 @@ namespace ShadowEngine::Rendering {
 	{
 		glm::mat4x4 modelToWorld;
 	};
+
+	struct WorldData {
+		glm::mat4x4 viewProjection;
+	};
 }

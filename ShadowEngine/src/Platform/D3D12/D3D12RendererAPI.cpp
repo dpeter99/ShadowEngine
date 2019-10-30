@@ -118,16 +118,17 @@ namespace ShadowEngine::Rendering::D3D12 {
 		command_list->DrawMesh(mesh);
 	}
 
-	void D3D12RendererAPI::Draw(const std::shared_ptr<Assets::Mesh>& mesh, const std::shared_ptr<Assets::Material>& material, Ref<ConstantBuffer> materialData)
+	void D3D12RendererAPI::Draw(const std::shared_ptr<Assets::Mesh>& mesh, const std::shared_ptr<Assets::Material>& material, const ConstantBuffer& meshData)
 	{
 		Ref<D3D12Shader> dx12_shader = std::dynamic_pointer_cast<D3D12::D3D12Shader>(material->GetShader());
 		command_list->UseShader(dx12_shader);
-		command_list->BindConstantBuffer(materialData, 1);
+		command_list->BindConstantBuffer(worldData, 0);
+		command_list->BindConstantBuffer(meshData, 1);
 		command_list->BindConstantBuffer(material->GetBuffer(), dx12_shader->GetMaterialSlotIndex());
 		command_list->DrawMesh(mesh);
 	}
 
-	void D3D12RendererAPI::StartFrame()
+	void D3D12RendererAPI::StartFrame(Ref<ConstantBuffer> worldCB)
 	{
 		command_list->Reset();
 
@@ -146,6 +147,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		const float clearColor[] = { 0.0f, 0.2f, 0.4f, 1.0f };
 		command_list->ClearRenderTargetView(clearColor);
 		command_list->ClearDepthStencilView(1.0f,0);
+
+		worldData=worldCB;
 	}
 
 	void D3D12RendererAPI::EndFrame()

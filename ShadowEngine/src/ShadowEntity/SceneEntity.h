@@ -8,6 +8,9 @@
 
 namespace ShadowEngine::ShadowEntity {
 
+	/// <summary>
+	/// Entitys that have a world positon
+	/// </summary>
 	class SceneEntity :
 		public Entity
 	{
@@ -19,6 +22,8 @@ namespace ShadowEngine::ShadowEntity {
 
 
 	public:
+		Transform transform;
+
 		SceneEntity():Entity(){}
 
 		SceneEntity(Scene::ShadowScene* scene) : Entity(scene)
@@ -26,7 +31,7 @@ namespace ShadowEngine::ShadowEntity {
 			transform.transformChanged += std::bind(&SceneEntity::TransformChanged, this);
 		};
 
-		Transform transform;
+		
 	};
 
 }

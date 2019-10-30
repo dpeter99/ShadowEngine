@@ -63,6 +63,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		unsigned long long fenceValue;
 		//unsigned int frameIndex;
 		
+		Ref<ConstantBuffer> worldData;
+
 		virtual void Init(ShadowEngine::Ref<GraphicsContext> ctx) override;
 
 		virtual void SetClearColor(const glm::vec4& color) override;
@@ -70,9 +72,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		virtual void Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4& transform = glm::mat4(1.0f)) override;
 
-		void Draw(const std::shared_ptr<Assets::Mesh>& mesh, const std::shared_ptr<Assets::Material>& shader, Ref<ConstantBuffer> materialData) override;
+		virtual void Draw(const std::shared_ptr<Assets::Mesh>& mesh, const std::shared_ptr<Assets::Material>& shader,const ConstantBuffer& materialData) override;
 		
-		void StartFrame() override;
+		void StartFrame(Ref<ConstantBuffer> worldCB) override;
 		void EndFrame() override;
 		
 		void WaitForPreviousFrame();

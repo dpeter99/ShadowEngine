@@ -92,9 +92,15 @@ namespace ShadowEngine::Rendering::D3D12 {
 		commandList->DrawIndexedInstanced(index->GetCount(), 1, 0, 0, 0);
 	}
 
-	void D3D12CommandList::BindConstantBuffer(const Ref<ConstantBuffer>& buffer, int getMaterialSlotIndex)
+	void D3D12CommandList::BindConstantBuffer(const Ref<ConstantBuffer>& buffer, int registerIndex)
 	{
 		Ref<D3D12ConstantBuffer> dx12_buffer = std::dynamic_pointer_cast<D3D12::D3D12ConstantBuffer>(buffer->GetImpl());
-		commandList->SetGraphicsRootConstantBufferView(getMaterialSlotIndex, dx12_buffer->GetGPUVirtualAddress());
+		commandList->SetGraphicsRootConstantBufferView(registerIndex, dx12_buffer->GetGPUVirtualAddress());
+	}
+
+	void D3D12CommandList::BindConstantBuffer(const ConstantBuffer& buffer, int registerIndex)
+	{
+		Ref<D3D12ConstantBuffer> dx12_buffer = std::dynamic_pointer_cast<D3D12::D3D12ConstantBuffer>(buffer.GetImpl());
+		commandList->SetGraphicsRootConstantBufferView(registerIndex, dx12_buffer->GetGPUVirtualAddress());
 	}
 }

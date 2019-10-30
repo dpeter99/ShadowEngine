@@ -18,7 +18,7 @@ namespace ShadowEngine::Rendering {
 		return mat;
 	}
 
-	ConstantBuffer_Typed<ModelData> RenderNode::GetCB()
+	ConstantBuffer_Typed<ModelData>& RenderNode::GetCB()
 	{
 		return modelDataCB;
 	}
@@ -29,6 +29,15 @@ namespace ShadowEngine::Rendering {
 		modelDataCB.Upload();
 	}
 
+	//------------------------------------------
+	//Render Scene
+	//------------------------------------------
+
+	RenderScene::RenderScene()
+	{
+		worldData.reset(new ConstantBuffer_Typed<WorldData>());
+	}
+
 	Ref<RenderNode> RenderScene::AddRenderNode(
 		Ref<Assets::Mesh> mesh, Ref<Assets::Material> material)
 	{
@@ -37,5 +46,10 @@ namespace ShadowEngine::Rendering {
 		nodes.push_back(node);
 
 		return node;
+	}
+
+	Ref<ConstantBuffer_Typed<WorldData>> RenderScene::GetWorldData()
+	{
+		return worldData;
 	}
 }

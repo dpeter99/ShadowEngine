@@ -23,12 +23,12 @@ namespace ShadowEngine::Rendering {
 		virtual void Clear() = 0;
 
 		virtual void Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4& transform = glm::mat4(1.0f)) =0;
-		virtual void Draw(const std::shared_ptr<Assets::Mesh>& mesh, const std::shared_ptr<Assets::Material>& shader, Ref<ConstantBuffer> materialData) =0;
+		virtual void Draw(const std::shared_ptr<Assets::Mesh>& mesh, const std::shared_ptr<Assets::Material>& shader, const ConstantBuffer& materialData) =0;
 
 		/**
 		 * \brief Starts recording the draw commands
 		 */
-		virtual  void StartFrame() = 0;
+		virtual  void StartFrame(Ref<ConstantBuffer> worldCB) = 0;
 		
 		/**
 		 * \brief Finalizes the render command recording

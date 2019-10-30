@@ -8,33 +8,48 @@
 
 namespace ShadowEngine::Rendering {
 
-	Renderer::SceneData* Renderer::s_SceneData = new Renderer::SceneData;
-
-	RendererAPI* Renderer::s_RendererAPI = NULL;
-
 	Renderer* Renderer::instance = NULL;
 	
+	Renderer::Renderer()
+	{
+	}
+
 	void Renderer::Init()
 	{
 		SH_CORE_ASSERT(instance == NULL, "There is already a renderer instance");
-		if (instance != NULL) {
+		if (instance == NULL) {
 			instance = this;
 		}
+
+
 
 		s_RendererAPI = RendererAPI::MakeRendererAPI();
 
 		s_RendererAPI->Init(ShadowApplication::Get().GetWindow().context);
+
+		scene = new RenderScene();
+	}
+
+	void Renderer::Render()
+	{
+		RenderNodes();
 	}
 
 	
-	void Renderer::BeginScene()
+	void Renderer::BeginScene(Camera* camera)
 	{
-		s_RendererAPI->StartFrame();
+		auto cb = scene->GetWorldData().get();
+		(*cb)->viewProjection = camera->GetViewProjectionMatrix();
+		cb->Upload();
+
+		s_RendererAPI->StartFrame(scene->GetWorldData());
 		
 		s_RendererAPI->SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 		s_RendererAPI->Clear();
 		
-		//s_SceneData->ViewProjectionMatrix = camera.GetViewProjectionMatrix();
+		
+		
+
 	}
 
 	void Renderer::EndScene()
@@ -46,22 +61,22 @@ namespace ShadowEngine::Rendering {
 
 	void Renderer::RenderNodes()
 	{
-		for (auto& node : instance->scene)
+		for (auto& node : *instance->scene)
 		{
-			s_RendererAPI->Draw(node->GetMesh(), node->GetMaterial());
+			ConstantBuffer& cb = node->GetCB();
+			s_RendererAPI->Draw(node->GetMesh(), node->GetMaterial(),cb);
 		}
-		
 	}
 
 	void Renderer::Submit(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4& transform)
 	{
-		s_RendererAPI->Draw(mesh, shader, transform);
+		instance->s_RendererAPI->Draw(mesh, shader, transform);
 	}
 
 	Ref<RenderNode> Renderer::AddRenderNode(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> material,
 		const glm::mat4& transform)
 	{
-		auto node = instance->scene.AddRenderNode(mesh, material);
+		auto node = instance->scene->AddRenderNode(mesh, material);
 		node->UpdateTransform(transform);
 		return  node;
 	}

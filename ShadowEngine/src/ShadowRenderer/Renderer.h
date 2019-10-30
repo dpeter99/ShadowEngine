@@ -22,15 +22,19 @@ namespace ShadowEngine::Rendering {
 		SHObject_Base(Renderer)
 		
 	private:
-		RenderScene scene;
+		RendererAPI* s_RendererAPI;
+
+		RenderScene* scene;
 		
 	public:
+		Renderer();
+
 		//Singleton Instance
 		static Renderer* instance;
 
 		void Init() override;
 		void Update() override {};
-		void Render() override {};
+		void Render() override;
 		void LateRender() override {};
 
 		std::string GetName() override { return "Renderer"; }
@@ -42,14 +46,14 @@ namespace ShadowEngine::Rendering {
 		 * Sets up the render API
 		 * Sets up the render graph for the new frame
 		 */
-		static void BeginScene();
+		void BeginScene(Camera* camera);
 		
 		/**
 		 * \brief Finishes the draw recording
 		 */
-		static void EndScene();
+		void EndScene();
 
-		static void RenderNodes();
+		void RenderNodes();
 		
 		static void Submit(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4& transform = glm::mat4(1.0f));
 
@@ -57,17 +61,6 @@ namespace ShadowEngine::Rendering {
 		
 		inline static RendererAPI::API GetAPI() { return RendererAPI::GetAPI(); }
 
-
-	private:
-
-		static RendererAPI* s_RendererAPI;
-
-		struct SceneData
-		{
-			glm::mat4 ViewProjectionMatrix;
-		};
-
-		static SceneData* s_SceneData;
 	};
 
 

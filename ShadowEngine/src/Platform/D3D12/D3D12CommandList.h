@@ -75,7 +75,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		void ClearDepthStencilView(float depth, uint8_t stencil);
 		void Close();
 		void DrawMesh(const std::shared_ptr<Assets::Mesh>& mesh);
+
 		void BindConstantBuffer(const Ref<ConstantBuffer>& buffer, int materialSlotIndex);
+		void BindConstantBuffer(const ConstantBuffer& buffer, int registerIndex);
 	};
 
 }

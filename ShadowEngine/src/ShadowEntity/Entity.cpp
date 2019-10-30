@@ -30,6 +30,11 @@ namespace ShadowEngine::ShadowEntity
 	{
 	}
 
+	EntityFlags Entity::GetFlags()
+	{
+		return EntityFlags::NONE;
+	}
+
 	void Entity::SetScene(Scene::ShadowScene* se)
 	{
 		this->scene = se;

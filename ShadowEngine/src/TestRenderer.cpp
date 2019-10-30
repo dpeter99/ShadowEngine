@@ -3,6 +3,7 @@
 
 #include <glm/gtx/quaternion.hpp>
 #include "ShadowRenderer/Renderer.h"
+#include <glm\gtx\euler_angles.hpp>
 
 TestRenderer::TestRenderer() {
 
@@ -35,13 +36,21 @@ void TestRenderer::Update() {
 	if(!tri_one)
 		tri_one = ShadowEngine::Rendering::Renderer::AddRenderNode(m_mesh,m_Material);
 	
-	glm::mat4x4 trans;
-	glm::translate(trans, { t/100,0.2,0 });
-	tri_one->GetCB()->modelToWorld = trans;
+	static bool second = false;
+	if (!second) {
+		ShadowEngine::Rendering::Renderer::AddRenderNode(m_mesh, m_Material);
+		second = true;
+	}
+
+	glm::mat4x4 mat(1.0f);
+	mat = glm::translate(glm::mat4(1.0f), glm::vec3(t/1000.0f,0,-10));
+	//mat *= glm::eulerAngleYXZ(t / 20.0f, 0.0f, 0.0f);
+
+	tri_one->GetCB()->modelToWorld = mat;
 	tri_one->GetCB().Upload();
 	
 	// Triangle
 
-	ShadowEngine::Rendering::Renderer::Submit(m_mesh, m_Material,trans);
+	//ShadowEngine::Rendering::Renderer::Submit(m_mesh, m_Material,trans);
 
 }

@@ -1,9 +1,4 @@
-//
-// Created by dpete on 2/17/2019.
-//
-
-#ifndef SHADOWENGINE_PLAYER_H
-#define SHADOWENGINE_PLAYER_H
+#pragma once
 
 #include "../EntityRegistry.h"
 #include "ShadowEntity/SceneEntity.h"
@@ -17,7 +12,15 @@ class Player : public ShadowEngine::ShadowEntity::SceneEntity
 public:
 	static std::string id;
 
-	void Render() override;
-};
 
-#endif //SHADOWENGINE_PLAYER_H
+
+	void Render() override;
+
+	// Inherited via SceneEntity
+	virtual void Init() override;
+	virtual void Start() override;
+	virtual void Update() override;
+	virtual void LateUpdate() override;
+	virtual void LateRender() override;
+	virtual ShadowEngine::ShadowEntity::EntityFlags GetFlags() override;
+};

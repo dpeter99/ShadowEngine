@@ -19,7 +19,7 @@ namespace ShadowEngine::Rendering
 
 		Ref<Assets::Material> GetMaterial();
 
-		ConstantBuffer_Typed<ModelData> GetCB();
+		ConstantBuffer_Typed<ModelData>& GetCB();
 
 		void UpdateTransform(glm::mat4x4 trans);
 	};
@@ -30,11 +30,16 @@ namespace ShadowEngine::Rendering
 		
 		RenderNodeList nodes;
 
+		Ref<ConstantBuffer_Typed<WorldData>> worldData;
+
 	public:
+		RenderScene();
+		
 		size_t GetNodeCount();
 
 		Ref<RenderNode> AddRenderNode(Ref<Assets::Mesh> mesh, Ref<Assets::Material> material);
 
+		Ref<ConstantBuffer_Typed<WorldData>> GetWorldData();
 
 		using iterator = RenderNodeList::iterator;
 		using const_iterator = RenderNodeList::const_iterator;
@@ -45,8 +50,5 @@ namespace ShadowEngine::Rendering
 		const_iterator end() const { return nodes.end(); }
 		const_iterator cbegin() const { return nodes.cbegin(); }
 		const_iterator cend() const { return nodes.cend(); }
-
-
-
 	};
 }

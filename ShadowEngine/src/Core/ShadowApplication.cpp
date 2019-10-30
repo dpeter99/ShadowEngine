@@ -62,14 +62,13 @@ namespace ShadowEngine {
 		auto scenemg = moduleManager.GetModuleByType<Scene::SceneManager>();
 		scenemg->LoadScene(new TestScene());
 
-
 		TestRenderer test;
 
 		while (running)
 		{
 			Time::UpdateTime();
 
-			renderer->BeginScene();
+			renderer->BeginScene(scenemg->GetActiveScene()->mainCamera);
 
 			EventSystem::ShadowEventManager::PollEvents();
 			EventSystem::ShadowEventManager::ProcessEvents();
@@ -82,7 +81,7 @@ namespace ShadowEngine {
 
 			moduleManager.LateRender();
 
-			Rendering::Renderer::EndScene();
+			renderer->EndScene();
 
 			SDL_GL_SwapWindow(window_->winPtr);
 		}

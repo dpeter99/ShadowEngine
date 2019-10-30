@@ -24,7 +24,7 @@ namespace ShadowEngine::Rendering {
 			impl.reset(ConstantBufferImpl::Create(size));
 		}
 		
-		Ref<ConstantBufferImpl> GetImpl() { return impl; };
+		virtual Ref<ConstantBufferImpl> GetImpl() const { return impl; };
 
 		template <class T>
 		T* As()
