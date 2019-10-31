@@ -19,7 +19,10 @@ public:
 	
 	
 
-	enum CameraType { Orthographic };
+	enum class CameraType { 
+		Orthographic,
+		Perspective
+	};
 
 	void SetupOrthographic();
 
