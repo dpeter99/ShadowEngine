@@ -16,10 +16,7 @@ dependencies/**/*.zip
 
 packages/
 
-
-
-ShadowEngine/doc/
-
 ShadowEngine/docs/html/
+ShadowEngine/src/Shaders/**.h
 
 Captures/
