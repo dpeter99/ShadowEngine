@@ -24,6 +24,7 @@ IncludeDir["ImGui"] = "ShadowEngine/dependencies/imgui"
 IncludeDir["glm"] = "ShadowEngine/dependencies/glm"
 IncludeDir["stb_image"] = "ShadowEngine/dependencies/stb_image"
 IncludeDir["spdlog"] = "ShadowEngine/dependencies/spdlog/include"
+IncludeDir["assimp"] = "ShadowEngine/dependencies/assimp/include"
 
 IncludeDir["ShadowEngine"] = "ShadowEngine/src"
 
@@ -33,6 +34,10 @@ group "Dependencies"
 	include "ShadowEngine/dependencies/imgui"
 	
 	include "ShadowEngineBuild/dependencies/TiledSharp"
+	
+	externalproject "assimp"
+		location "ShadowEngine/dependencies/assimp/code"
+		kind "SharedLib"
 
 group ""
 
@@ -78,7 +83,8 @@ project "ShadowEngine"
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.stb_image}",
-		"%{IncludeDir.spdlog}"
+		"%{IncludeDir.spdlog}",
+		"%{IncludeDir.assimp}"
 	}
 
 	links 
@@ -88,7 +94,10 @@ project "ShadowEngine"
 		"SDL2test",
 		"Glad",
 		"ImGui",
+		"assimp",
+		
 		"ShadowEngineBuild",
+		
 		"opengl32.lib",
 		"D3D12.lib",
 		"DXGI.lib",
