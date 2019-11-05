@@ -10,7 +10,7 @@ namespace ShadowEngine::ShadowEntity {
 	{
 		position = glm::vec3(0, 0, 0);
 		scale = glm::vec3(1, 1, 1);
-		rot = glm::quat(0, 0, 0, 0);
+		rot = glm::quat(0, 0, 0, 1);
 
 		UpdateMatrix();
 	}
@@ -18,13 +18,13 @@ namespace ShadowEngine::ShadowEntity {
 	Transform::Transform(glm::vec3 pos) : position(pos)
 	{
 		scale = glm::vec3(1, 1, 1);
-		rot = glm::quat(0, 0, 0, 0);
+		rot = glm::quat(0, 0, 0, 1);
 		UpdateMatrix();
 	}
 
 	Transform::Transform(glm::vec3 pos, glm::vec3 size) :position(pos), scale(size)
 	{
-		rot = glm::quat(0, 0, 0, 0);
+		rot = glm::quat(0, 0, 0, 1);
 
 		UpdateMatrix();
 	}
@@ -37,10 +37,12 @@ namespace ShadowEngine::ShadowEntity {
 
 	void Transform::UpdateMatrix()
 	{
-		//this->mat = glm::translate(glm::mat4(1), position)) * 
-		//	glm::rotate(glm::mat4(1.0f), glm::radians(0), glm::vec3(0, 0, 1));
+		this->mat = 
+			glm::translate(glm::mat4(1), position) * 
+			glm::toMat4(rot)*
+			glm::scale(glm::mat4(1),scale);
 
-		this->mat = glm::translate(glm::mat4(1.0f), position);
+		//this->mat = glm::translate(glm::mat4(1.0f), position);
 
 	}
 

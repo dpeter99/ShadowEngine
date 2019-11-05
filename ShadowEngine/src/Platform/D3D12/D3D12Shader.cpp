@@ -33,7 +33,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 		std::ifstream file{ VSfilePath, std::ios::binary | std::ios::ate };
 
-		ASSERT(file.is_open(), "Failed to open blob file: %s", filePath.c_str());
+		ASSERT(file.is_open(), "Failed to open blob file: %s", VSfilePath.c_str());
 
 		std::streamsize size = file.tellg();
 

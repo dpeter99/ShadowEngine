@@ -34,10 +34,6 @@ group "Dependencies"
 	include "ShadowEngine/dependencies/imgui"
 	
 	include "ShadowEngineBuild/dependencies/TiledSharp"
-	
-	externalproject "assimp"
-		location "ShadowEngine/dependencies/assimp/code"
-		kind "SharedLib"
 
 group ""
 
@@ -94,7 +90,6 @@ project "ShadowEngine"
 		"SDL2test",
 		"Glad",
 		"ImGui",
-		"assimp",
 		
 		"ShadowEngineBuild",
 		
@@ -102,6 +97,11 @@ project "ShadowEngine"
 		"D3D12.lib",
 		"DXGI.lib",
 		"D3DCompiler.lib"
+	}
+	
+	nuget { 
+		"Assimp:3.0.0",
+		"Assimp.redist:3.0.0"
 	}
 
 	local shader_dir = "../bin/" .. outputdir .. "/%{prj.name}/Shaders/"

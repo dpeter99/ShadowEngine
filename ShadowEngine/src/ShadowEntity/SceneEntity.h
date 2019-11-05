@@ -17,7 +17,8 @@ namespace ShadowEngine::ShadowEntity {
 		SHObject_Base(SceneEntity);
 
 		Entity_Base_NoCtor(SceneEntity, Entity);
-
+		
+	protected:
 		void virtual TransformChanged() {};
 
 

@@ -26,8 +26,8 @@ namespace ShadowEngine::Rendering::D3D12
 	template<typename T>
 	using com_ptr = Microsoft::WRL::ComPtr<T>;
 
-	//define ASSERT(trueMeansOk, msgOnFail) if(!trueMeansOk) { MessageBoxA(NULL, msgOnFail, "Assertion failed!", MB_ICONSTOP | MB_OK); exit(-1); }
-	#define ASSERT(trueMeansOk, msgOnFail) SH_ASSERT(trueMeansOk,msgOnFail)
+	//#define ASSERT(trueMeansOk, msgOnFail) if(!trueMeansOk) { MessageBoxA(NULL, msgOnFail, "Assertion failed!", MB_ICONSTOP | MB_OK); exit(-1); }
+	#define ASSERT(trueMeansOk, msgOnFail, ...) SH_ASSERT(trueMeansOk,msgOnFail,__VA_ARGS__)
 	
 	inline const char* BlobAsString(com_ptr<ID3DBlob> blob) {
 		return reinterpret_cast<const char*>(blob->GetBufferPointer());

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Log.h"
+#include "Core/Core.h"
 
 namespace ShadowEngine::Rendering {
 

@@ -30,20 +30,12 @@ void TestRenderer::Update() {
 	m_Material->SetProperty("tint", glm::vec4(t/1000.0f, 0, 0, 1));
 	m_Material->UpdateBufferIfDirty();
 
-	glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
-
 	// Triangle
 	if(!tri_one)
 		tri_one = ShadowEngine::Rendering::Renderer::AddRenderNode(m_mesh,m_Material);
-	
-	static bool second = false;
-	if (!second) {
-		ShadowEngine::Rendering::Renderer::AddRenderNode(m_mesh, m_Material);
-		second = true;
-	}
 
 	glm::mat4x4 mat(1.0f);
-	mat = glm::translate(glm::mat4(1.0f), glm::vec3(t/1000.0f,0,-10));
+	mat = glm::translate(glm::mat4(1.0f), glm::vec3(t/1000.0f,0,0));
 	//mat *= glm::eulerAngleYXZ(t / 20.0f, 0.0f, 0.0f);
 
 	tri_one->GetCB()->modelToWorld = mat;

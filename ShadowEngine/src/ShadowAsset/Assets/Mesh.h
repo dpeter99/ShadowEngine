@@ -20,5 +20,7 @@ namespace ShadowEngine::Assets {
 
 		Mesh(void* data, unsigned int sizeInBytes, unsigned int stride,
 			uint32_t* indexData, unsigned int indexDataSizeInBytes);
+
+		static Ref<Mesh> LoadModel_obj(const std::string& filePath);
 	};
 }

@@ -17,6 +17,7 @@ class TestRenderer
 {
 	
 	ShadowEngine::Ref<ShadowEngine::Assets::Mesh> m_mesh;
+	ShadowEngine::Ref<ShadowEngine::Assets::Mesh> m_model;
 
 	ShadowEngine::Ref<ShadowEngine::Rendering::Shader> m_Shader;
 
