@@ -77,7 +77,7 @@ public:
 
 
 
-void main()
+void main1()
 {
 	AssetManager a();
 	
