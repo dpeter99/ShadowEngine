@@ -21,7 +21,12 @@ namespace ShadowEngine::ShadowEntity {
 	protected:
 		void virtual TransformChanged() {};
 
+		/**
+		 * \brief the internal hierarchy of this Entity
+		*/
+		std::vector<Entity> internalHierarchy;
 
+		std::vector<Entity> hierarchy;
 	public:
 		Transform transform;
 

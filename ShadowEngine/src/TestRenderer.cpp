@@ -35,14 +35,9 @@ void TestRenderer::Update() {
 		tri_one = ShadowEngine::Rendering::Renderer::AddRenderNode(m_mesh,m_Material);
 
 	glm::mat4x4 mat(1.0f);
-	mat = glm::translate(glm::mat4(1.0f), glm::vec3(t/1000.0f,0,0));
+	mat = glm::translate(glm::mat4(1.0f), glm::vec3(0.5+(t/500.0f),0,0));
 	//mat *= glm::eulerAngleYXZ(t / 20.0f, 0.0f, 0.0f);
 
 	tri_one->GetCB()->modelToWorld = mat;
 	tri_one->GetCB().Upload();
-	
-	// Triangle
-
-	//ShadowEngine::Rendering::Renderer::Submit(m_mesh, m_Material,trans);
-
 }

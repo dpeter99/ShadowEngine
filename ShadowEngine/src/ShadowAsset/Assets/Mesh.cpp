@@ -17,6 +17,13 @@ namespace ShadowEngine::Assets {
 		vertex_buffer.reset(ShadowEngine::Rendering::VertexBuffer::Create(vertices, sizeInBytes));
 		index_buffer.reset(ShadowEngine::Rendering::IndexBuffer::Create(indexData, indexDataSizeInBytes));
 	}
+
+	Mesh::Mesh(void* vertices, unsigned vert_count,
+		uint32_t* indexData, unsigned index_count)
+	{
+		vertex_buffer.reset(ShadowEngine::Rendering::VertexBuffer::Create(vertices, vert_count* sizeof(Rendering::Vertex)));
+		index_buffer.reset(ShadowEngine::Rendering::IndexBuffer::Create(indexData, index_count*sizeof(uint32_t)));
+	}
 	
 	Ref<Mesh> Mesh::LoadModel_obj(const std::string& filePath) {
 		std::string path = "./Resources/Model/" + filePath;
@@ -54,6 +61,17 @@ namespace ShadowEngine::Assets {
 			v.uv.x = mesh->mTextureCoords[0][i].x;
 			v.uv.y = mesh->mTextureCoords[0][i].y;
 
+			if (mesh->HasVertexColors(0)) {
+				v.color.r = mesh->mColors[0][i].r;
+				v.color.g = mesh->mColors[0][i].g;
+				v.color.b = mesh->mColors[0][i].b;
+			}
+			else
+			{
+				v.color.r = 1;
+				v.color.g = 0;
+				v.color.b = 0;
+			}
 			vertices.emplace_back(v);
 		}
 
@@ -72,7 +90,7 @@ namespace ShadowEngine::Assets {
 			&(indices.at(0)), (unsigned int)(indices.size() * 4), DXGI_FORMAT_R32_UINT);
 		*/
 
-		Ref<Mesh> m = std::make_shared<Mesh>(vertices.data(), vertices.size(), sizeof(Rendering::Vertex),
+		Ref<Mesh> m = std::make_shared<Mesh>(vertices.data(), vertices.size(),
 			indices.data(), indices.size());
 		
 		return m;

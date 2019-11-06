@@ -31,8 +31,7 @@ namespace ShadowEngine::ShadowEntity
 	public:
 
 		Scene::ShadowScene* scene;
-
-
+		
 	public:
 		/// <summary>
 		/// Empty default constructor

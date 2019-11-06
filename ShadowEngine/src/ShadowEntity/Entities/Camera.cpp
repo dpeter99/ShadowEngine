@@ -52,25 +52,31 @@ void Camera::ortho_Setup()
 	ortho_RecalculateViewMatrix();
 }
 
+void Camera::ortho_RecalculateViewMatrix()
+{
+	m_ViewMatrix = glm::inverse(transform.GetTransformMatrix());
+	m_ViewProjectionMatrix = m_ProjectionMatrix * m_ViewMatrix;
+}
+
+
+
+
+void Camera::persp_Setup()
+{
+	float height = ShadowEngine::ShadowApplication::Get().GetWindow().Height;
+	float width = ShadowEngine::ShadowApplication::Get().GetWindow().Width;
+
+	m_ProjectionMatrix = glm::perspectiveFov(glm::radians(25.0f), width, height, 0.01f, 100.0f);
+}
+
 void Camera::persp_RecalculateViewMatrix()
 {
 	m_ViewMatrix = glm::inverse(transform.GetTransformMatrix());
 	m_ViewProjectionMatrix = m_ProjectionMatrix * m_ViewMatrix;
 }
 
-void Camera::persp_Setup()
-{
-	float height = ShadowEngine::ShadowApplication::Get().GetWindow().Height;
-	float width = ShadowEngine::ShadowApplication::Get().GetWindow().Width;
-	
-	m_ProjectionMatrix = glm::perspectiveFov(glm::radians(25.0f), width, height, 0.01f, 10.0f);
-}
 
-void Camera::ortho_RecalculateViewMatrix()
-{
-	m_ViewMatrix = glm::inverse(transform.GetTransformMatrix());
-	m_ViewProjectionMatrix = m_ProjectionMatrix * m_ViewMatrix;
-}
+
 
 void Camera::Init()
 {
