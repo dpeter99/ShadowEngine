@@ -129,7 +129,7 @@ public:
 	}
 };
 
-void main1()
+void main5()
 {
 	ShaderPropertySheet sheet;
 	
