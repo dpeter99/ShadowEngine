@@ -93,6 +93,8 @@ public:
 	{
 		
 	}
+
+	virtual void Update() = 0;
 };
 
 class Player: public Entity
@@ -101,6 +103,10 @@ class Player: public Entity
 	
 public:
 	Player(std::string name) {  }
+
+	virtual void Update() {
+		std::cout << "Player";
+	}
 };
 
 class Enemy : public Entity
@@ -110,7 +116,7 @@ class Enemy : public Entity
 		int m_hp;
 public:
 	Enemy(int hp): m_hp(hp) {  }
-	void Foo() { std::cout << "Foo"; }
+	virtual void Update() { std::cout << "HP:"<<m_hp; }
 };
 
 class Light : public Entity
@@ -120,16 +126,32 @@ public:
 	Light(float intensity) {  }
 };
 
+template<class Base>
 class IEntityContainer {
 public:
-		virtual void UpdateEntities() = 0;
+	
+	class iterator {
+	public:
+		virtual inline iterator& operator++()= 0;
+
+		virtual inline Base& operator*() const = 0;
+		virtual inline Base* operator->() const = 0;
+
+		virtual inline bool operator==(iterator& other) = 0;
+		virtual inline bool operator!=(iterator& other) = 0;
+	};
+
+	virtual iterator& begin() = 0;
+	virtual iterator& end() = 0;
 };
 
-template<class T>
-class EntityContainer: public IEntityContainer {
+template<class T,class Base>
+class EntityContainer: public IEntityContainer<Base> {
 
 	static const size_t MAX_OBJECTS_IN_CHUNK = 4;
 	static const size_t ALLOC_SIZE = (sizeof(T) + alignof(T)) * MAX_OBJECTS_IN_CHUNK;
+
+public:
 
 	union Element
 	{
@@ -147,6 +169,7 @@ class EntityContainer: public IEntityContainer {
 		Element* chunkEnd;
 
 		int count;
+		bool metadata[MAX_OBJECTS_IN_CHUNK];
 
 		//Points to the next free element in the pool
 		Element* nextFree;
@@ -183,38 +206,73 @@ class EntityContainer: public IEntityContainer {
 		}
 	};
 
+protected:
+
 	using MemoryChunks = std::list<MemoryChunk*>;
 	MemoryChunks m_Chunks;
 	
-	class iterator
+public:
+
+	class iterator : std::iterator<std::forward_iterator_tag,T>, public IEntityContainer::iterator
 	{
-		MemoryChunks::iterator m_CurrentChunk;
-		MemoryChunks::iterator m_EndChunk;
+		typename std::list<MemoryChunk*>::iterator m_CurrentChunk;
+		typename std::list<MemoryChunk*>::iterator m_EndChunk;
 
 		Element* m_CurrentElement;
+		int index;
 
 	public:
+
+		iterator(typename MemoryChunks::iterator begin, typename MemoryChunks::iterator end) :
+			m_CurrentChunk(begin),
+			m_EndChunk(end)
+		{
+			if (begin != end)
+			{
+				assert((*m_CurrentChunk) != nullptr);
+				m_CurrentElement = (*m_CurrentChunk)->chunkStart;
+			}
+			else
+			{
+				m_CurrentElement = (*std::prev(m_EndChunk))->chunkEnd;
+			}
+		}
 
 		inline iterator& operator++()
 		{
 			// move to next object in current chunk
-			m_CurrentObject++;
+			while (!(*m_CurrentChunk)->metadata[++index]||index!=MAX_OBJECTS_IN_CHUNK) {
+				m_CurrentElement++;
+			}
+			
 
 			// if we reached end of list, move to next chunk
-			if (m_CurrentObject == (*m_CurrentChunk)->objects.end())
+			if (m_CurrentElement == (*m_CurrentChunk)->chunkEnd)
 			{
 				m_CurrentChunk++;
 
-				if (m_CurrentChunk != m_End)
+				if (m_CurrentChunk != m_EndChunk)
 				{
 					// set object iterator to begin of next chunk list
 					assert((*m_CurrentChunk) != nullptr);
-					m_CurrentObject = (*m_CurrentChunk)->objects.begin();
+					m_CurrentElement = (*m_CurrentChunk)->chunkStart;
 				}
 			}
 
 			return *this;
 		}
+
+		virtual inline Base& operator*() const  override { return (m_CurrentElement->element); }
+		virtual inline Base* operator->() const override { return &(m_CurrentElement->element); }
+
+		inline bool operator==(iterator& other) {
+			return ((this->m_CurrentChunk == other.m_CurrentChunk) && (this->m_CurrentElement == other.m_CurrentElement));
+		}
+		inline bool operator!=(iterator& other)
+		{
+			return ((this->m_CurrentChunk != other.m_CurrentChunk) && (this->m_CurrentElement != other.m_CurrentElement));
+		}
+
 	};
 	
 	
@@ -277,6 +335,9 @@ public:
 		assert(false && "Failed to delete object. Memory corruption?!");
 	}
 
+	inline iterator begin() { return iterator(this->m_Chunks.begin(), this->m_Chunks.end()); }
+	inline iterator end() { return iterator(this->m_Chunks.end(), this->m_Chunks.end()); }
+
 };
 
 /**
@@ -284,8 +345,9 @@ public:
  */
 class EntityManager {
 
+private:
 	//Map the runtime index of the entity to the container
-	using EntityContainerRegistry = std::unordered_map<int, IEntityContainer*>;
+	using EntityContainerRegistry = std::unordered_map<int, IEntityContainer<Entity>*>;
 
 	/**
 	 * \brief Container for the Entity Containers mapped to the entity type ID
@@ -312,7 +374,7 @@ class EntityManager {
 	 * \return The entity container accosted with this type
 	 */
 	template<class T>
-	inline EntityContainer<T>* GetComponentContainer()
+	inline EntityContainer<T,Entity>* GetComponentContainer()
 	{
 		int CID = T::TypeId();
 
@@ -445,7 +507,10 @@ public:
 		for each (auto var in m_EntityContainerRegistry)
 		{
 			auto cont = var.second;
-			cont->UpdateEntities();
+			for each (auto& ent in *cont)
+			{
+				ent.Update();
+			}
 		}
 	}
 };
@@ -474,7 +539,7 @@ void main() {
 
 	if (e1)
 	{
-		e1->Foo();
+		e1->Update();
 	}
 
 
@@ -484,5 +549,7 @@ void main() {
 	entity_manager.AddEntity<Enemy>(27);
 
 	
+	entity_manager.UpdateEntities();
+
 	std::cout << "asd";
 }
