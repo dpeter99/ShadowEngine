@@ -74,6 +74,7 @@ public:
 	inline operator bool() const { return m_ptr->m_runtimeUID == m_uid; }
 };
 
+class EntityManager;
 
 class Entity : public ShadowEngine::SHObject {
 	SHObject_Base(Entity)
@@ -94,7 +95,13 @@ public:
 		
 	}
 
-	virtual void Update() = 0;
+	virtual void Update() {};
+
+	template<class T>
+	static void UpdateEntities(EntityManager mgr)
+	{
+		
+	}
 };
 
 class Player: public Entity
@@ -126,30 +133,16 @@ public:
 	Light(float intensity) {  }
 };
 
-template<class Base>
+
 class IEntityContainer {
-public:
-	
-	class iterator {
-	public:
-		virtual inline iterator& operator++()= 0;
 
-		virtual inline Base& operator*() const = 0;
-		virtual inline Base* operator->() const = 0;
-
-		virtual inline bool operator==(iterator& other) = 0;
-		virtual inline bool operator!=(iterator& other) = 0;
-	};
-
-	virtual iterator& begin() = 0;
-	virtual iterator& end() = 0;
 };
 
-template<class T,class Base>
-class EntityContainer: public IEntityContainer<Base> {
+template<class Type>
+class EntityContainer: public IEntityContainer {
 
 	static const size_t MAX_OBJECTS_IN_CHUNK = 4;
-	static const size_t ALLOC_SIZE = (sizeof(T) + alignof(T)) * MAX_OBJECTS_IN_CHUNK;
+	static const size_t ALLOC_SIZE = (sizeof(Type) + alignof(Type)) * MAX_OBJECTS_IN_CHUNK;
 
 public:
 
@@ -157,7 +150,7 @@ public:
 	{
 	public:
 		Element* next;
-		T element;
+		Type element;
 	};
 	
 	class MemoryChunk
@@ -187,14 +180,14 @@ public:
 			nextFree = chunkStart;
 		}
 
-		T* allocate()
+		Type* allocate()
 		{
 			if (nextFree == nullptr)
 				return nullptr;
 			count++;
 			auto res = nextFree;
 			nextFree = nextFree->next;
-			return (T*)res;
+			return (Type*)res;
 		}
 
 		void free(void* ptr)
@@ -213,7 +206,7 @@ protected:
 	
 public:
 
-	class iterator : std::iterator<std::forward_iterator_tag,T>, public IEntityContainer::iterator
+	class iterator
 	{
 		typename std::list<MemoryChunk*>::iterator m_CurrentChunk;
 		typename std::list<MemoryChunk*>::iterator m_EndChunk;
@@ -265,14 +258,17 @@ public:
 		virtual inline Base& operator*() const  override { return (m_CurrentElement->element); }
 		virtual inline Base* operator->() const override { return &(m_CurrentElement->element); }
 
-		inline bool operator==(iterator& other) {
-			return ((this->m_CurrentChunk == other.m_CurrentChunk) && (this->m_CurrentElement == other.m_CurrentElement));
-		}
-		inline bool operator!=(iterator& other)
+		inline bool operator==(typename IEntityContainer<Base>::iterator& other) override
 		{
-			return ((this->m_CurrentChunk != other.m_CurrentChunk) && (this->m_CurrentElement != other.m_CurrentElement));
+			auto o = dynamic_cast<iterator&>(other);
+			return ((this->m_CurrentChunk == o.m_CurrentChunk) && (this->m_CurrentElement == o.m_CurrentElement));
 		}
-
+		
+		inline bool operator!=(typename IEntityContainer<Base>::iterator& other) override
+		{
+			auto o = dynamic_cast<iterator&>(other);
+			return ((this->m_CurrentChunk != o.m_CurrentChunk) && (this->m_CurrentElement != o.m_CurrentElement));
+		}
 	};
 	
 	
@@ -335,8 +331,9 @@ public:
 		assert(false && "Failed to delete object. Memory corruption?!");
 	}
 
-	inline iterator begin() { return iterator(this->m_Chunks.begin(), this->m_Chunks.end()); }
-	inline iterator end() { return iterator(this->m_Chunks.end(), this->m_Chunks.end()); }
+	
+	inline typename IEntityContainer<Base>::iterator& begin() override { return iterator(this->m_Chunks.begin(), this->m_Chunks.end()); }
+	inline typename IEntityContainer<Base>::iterator& end() override { return iterator(this->m_Chunks.end(), this->m_Chunks.end()); }
 
 };
 
@@ -379,17 +376,17 @@ private:
 		int CID = T::TypeId();
 
 		auto it = this->m_EntityContainerRegistry.find(CID);
-		EntityContainer<T>* cc = nullptr;
+		EntityContainer<T,Entity>* cc = nullptr;
 
 		if (it == this->m_EntityContainerRegistry.end())
 		{
-			cc = new EntityContainer<T>();
+			cc = new EntityContainer<T,Entity>();
 			this->m_EntityContainerRegistry[CID] = cc;
 		}
 		else
-			cc = static_cast<EntityContainer<T>*>(it->second);
+			cc = static_cast<EntityContainer<T,Entity>*>(it->second);
 
-		assert(cc != nullptr && "Failed to create ComponentContainer<T>!");
+		assert(cc != nullptr && "Failed to create ComponentContainer<Type>!");
 		return cc;
 	}
 
@@ -442,7 +439,7 @@ public:
 		//The type ID of the Entity we are trying to add
 		const int CTID = T::TypeId();
 
-		// acquire memory for new entity object of type T
+		// acquire memory for new entity object of type Type
 		void* pObjectMemory = GetComponentContainer<T>()->CreateObject();
 
 		//Assign the index and the UID to the object
@@ -506,8 +503,8 @@ public:
 	{
 		for each (auto var in m_EntityContainerRegistry)
 		{
-			auto cont = var.second;
-			for each (auto& ent in *cont)
+			auto& cont = *var.second;
+			for each (auto& ent in var.second)
 			{
 				ent.Update();
 			}
