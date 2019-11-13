@@ -2,6 +2,7 @@
 #include <typeinfo>
 #include <cassert>
 #include <iostream>
+#include <functional>
 
 namespace ShadowEngine {
 
@@ -98,10 +99,26 @@ public:
 	virtual void Update() {};
 
 	template<class T>
-	static void UpdateEntities(EntityManager mgr)
+	static void UpdateEntities(EntityManager* mgr)
 	{
-		
+		auto container = mgr->GetContainerByType<T>();
+
+		auto current = container->begin();
+		auto end = container->end();
+
+		while (current != end)
+		{
+			current->Update();
+			current.operator++();
+		}
 	}
+
+	template<class T>
+	static void RegisterDefaultUpdate(EntityManager& mgr) {
+		mgr.AddSystem(UpdateEntities<T>);
+	}
+
+	//virtual void RegisterUpdate_Impl() = 0;
 };
 
 class Player: public Entity
@@ -141,17 +158,20 @@ class IEntityContainer {
 template<class Type>
 class EntityContainer: public IEntityContainer {
 
-	static const size_t MAX_OBJECTS_IN_CHUNK = 4;
-	static const size_t ALLOC_SIZE = (sizeof(Type) + alignof(Type)) * MAX_OBJECTS_IN_CHUNK;
-
-public:
-
 	union Element
 	{
 	public:
 		Element* next;
 		Type element;
 	};
+
+	static const size_t MAX_OBJECTS_IN_CHUNK = 4;
+	static const size_t ELEMENT_SIZE = (sizeof(Element) + alignof(Element));
+	static const size_t ALLOC_SIZE = ELEMENT_SIZE * MAX_OBJECTS_IN_CHUNK;
+
+public:
+
+	
 	
 	class MemoryChunk
 	{
@@ -162,6 +182,7 @@ public:
 		Element* chunkEnd;
 
 		int count;
+		static const bool FreeFlag = true;
 		bool metadata[MAX_OBJECTS_IN_CHUNK];
 
 		//Points to the next free element in the pool
@@ -170,11 +191,12 @@ public:
 		MemoryChunk() :count(0)
 		{
 			chunkStart = (Element*)malloc(ALLOC_SIZE);
-			memset(chunkStart, 0, ALLOC_SIZE);
+			memset(chunkStart, -1, ALLOC_SIZE);
 			chunkEnd = chunkStart + ALLOC_SIZE;
 
 			for (size_t i = 1; i < MAX_OBJECTS_IN_CHUNK; i++) {
 				chunkStart[i - 1].next= &chunkStart[i];
+				metadata[i] = FreeFlag;
 			}
 			chunkStart[MAX_OBJECTS_IN_CHUNK - 1].next = nullptr;
 			nextFree = chunkStart;
@@ -187,6 +209,10 @@ public:
 			count++;
 			auto res = nextFree;
 			nextFree = nextFree->next;
+
+			int i = ((Element*)res - (Element*)chunkStart);
+			metadata[i] = !FreeFlag;
+
 			return (Type*)res;
 		}
 
@@ -196,6 +222,9 @@ public:
 			auto element = ((Element*)ptr);
 			element->next = nextFree;
 			nextFree = element;
+
+			int i = ((Element*)ptr - (Element*)chunkStart);
+			metadata[i] = FreeFlag;
 		}
 	};
 
@@ -218,7 +247,8 @@ public:
 
 		iterator(typename MemoryChunks::iterator begin, typename MemoryChunks::iterator end) :
 			m_CurrentChunk(begin),
-			m_EndChunk(end)
+			m_EndChunk(end),
+			index(0)
 		{
 			if (begin != end)
 			{
@@ -229,12 +259,13 @@ public:
 			{
 				m_CurrentElement = (*std::prev(m_EndChunk))->chunkEnd;
 			}
+
 		}
 
 		inline iterator& operator++()
 		{
 			// move to next object in current chunk
-			while (!(*m_CurrentChunk)->metadata[++index]||index!=MAX_OBJECTS_IN_CHUNK) {
+			while ((*m_CurrentChunk)->metadata[++index] == MemoryChunk::FreeFlag && index!=MAX_OBJECTS_IN_CHUNK) {
 				m_CurrentElement++;
 			}
 			
@@ -243,7 +274,7 @@ public:
 			if (m_CurrentElement == (*m_CurrentChunk)->chunkEnd)
 			{
 				m_CurrentChunk++;
-
+				index = 0;
 				if (m_CurrentChunk != m_EndChunk)
 				{
 					// set object iterator to begin of next chunk list
@@ -255,16 +286,16 @@ public:
 			return *this;
 		}
 
-		virtual inline Base& operator*() const  override { return (m_CurrentElement->element); }
-		virtual inline Base* operator->() const override { return &(m_CurrentElement->element); }
+		virtual inline Type& operator*() const  { return (m_CurrentElement->element); }
+		virtual inline Type* operator->() const { return &(m_CurrentElement->element); }
 
-		inline bool operator==(typename IEntityContainer<Base>::iterator& other) override
+		inline bool operator==(typename iterator& other)
 		{
 			auto o = dynamic_cast<iterator&>(other);
 			return ((this->m_CurrentChunk == o.m_CurrentChunk) && (this->m_CurrentElement == o.m_CurrentElement));
 		}
 		
-		inline bool operator!=(typename IEntityContainer<Base>::iterator& other) override
+		inline bool operator!=(typename iterator& other)
 		{
 			auto o = dynamic_cast<iterator&>(other);
 			return ((this->m_CurrentChunk != o.m_CurrentChunk) && (this->m_CurrentElement != o.m_CurrentElement));
@@ -332,8 +363,12 @@ public:
 	}
 
 	
-	inline typename IEntityContainer<Base>::iterator& begin() override { return iterator(this->m_Chunks.begin(), this->m_Chunks.end()); }
-	inline typename IEntityContainer<Base>::iterator& end() override { return iterator(this->m_Chunks.end(), this->m_Chunks.end()); }
+	inline iterator begin() { 
+		auto end = this->m_Chunks.end();
+		return iterator(this->m_Chunks.begin(), end ); 
+	}
+
+	inline iterator end() { return iterator(this->m_Chunks.end(), this->m_Chunks.end()); }
 
 };
 
@@ -344,7 +379,7 @@ class EntityManager {
 
 private:
 	//Map the runtime index of the entity to the container
-	using EntityContainerRegistry = std::unordered_map<int, IEntityContainer<Entity>*>;
+	using EntityContainerRegistry = std::unordered_map<int, IEntityContainer*>;
 
 	/**
 	 * \brief Container for the Entity Containers mapped to the entity type ID
@@ -359,6 +394,9 @@ private:
 	EntityLookupTable	m_EntityLUT;
 	const int ENTITY_LUT_GROW = 5;
 
+	using SystemUpdate = std::function<void(EntityManager*)>;
+	std::vector<SystemUpdate> systems;
+
 	/**
 	 * \brief The next assignable Unique ID
 	 */
@@ -371,20 +409,22 @@ private:
 	 * \return The entity container accosted with this type
 	 */
 	template<class T>
-	inline EntityContainer<T,Entity>* GetComponentContainer()
+	inline EntityContainer<T>* GetComponentContainer()
 	{
 		int CID = T::TypeId();
 
 		auto it = this->m_EntityContainerRegistry.find(CID);
-		EntityContainer<T,Entity>* cc = nullptr;
+		EntityContainer<T>* cc = nullptr;
 
 		if (it == this->m_EntityContainerRegistry.end())
 		{
-			cc = new EntityContainer<T,Entity>();
+			cc = new EntityContainer<T>();
 			this->m_EntityContainerRegistry[CID] = cc;
+
+			T::RegisterDefaultUpdate<T>(*this);
 		}
 		else
-			cc = static_cast<EntityContainer<T,Entity>*>(it->second);
+			cc = static_cast<EntityContainer<T>*>(it->second);
 
 		assert(cc != nullptr && "Failed to create ComponentContainer<Type>!");
 		return cc;
@@ -499,15 +539,24 @@ public:
 		return this->m_EntityLUT[index];
 	}
 
+	template<class T>
+	inline EntityContainer<T>* GetContainerByType() {
+		int CID = T::TypeId();
+
+		auto it = this->m_EntityContainerRegistry.find(CID);
+
+		return static_cast<EntityContainer<T>*>(it->second);
+	}
+
+	void AddSystem(SystemUpdate fn) {
+		systems.push_back(fn);
+	}
+
 	void UpdateEntities()
 	{
-		for each (auto var in m_EntityContainerRegistry)
+		for each (auto& var in systems)
 		{
-			auto& cont = *var.second;
-			for each (auto& ent in var.second)
-			{
-				ent.Update();
-			}
+			var(this);
 		}
 	}
 };
