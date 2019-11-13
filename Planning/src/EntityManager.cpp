@@ -4,6 +4,8 @@
 #include <iostream>
 #include <functional>
 
+// ReSharper disable once CppCStyleCast
+
 namespace ShadowEngine {
 
 	/**
@@ -101,15 +103,18 @@ public:
 	template<class T>
 	static void UpdateEntities(EntityManager* mgr)
 	{
-		auto container = mgr->GetContainerByType<T>();
+		std::cout << std::endl;
+		
+		auto& container = *mgr->GetContainerByType<T>();
 
-		auto current = container->begin();
-		auto end = container->end();
-
-		while (current != end)
+		int c = 0;
+		
+		for each (auto current in container)
 		{
-			current->Update();
-			current.operator++();
+			std::cout << c << typeid(T).name() << ": \t";
+			current.Update();
+			std::cout << std::endl;
+			c++;
 		}
 	}
 
@@ -140,7 +145,7 @@ class Enemy : public Entity
 		int m_hp;
 public:
 	Enemy(int hp): m_hp(hp) {  }
-	virtual void Update() { std::cout << "HP:"<<m_hp; }
+	virtual void Update() { std::cout << "HP:"<<m_hp;  }
 };
 
 class Light : public Entity
@@ -166,17 +171,13 @@ class EntityContainer: public IEntityContainer {
 	};
 
 	static const size_t MAX_OBJECTS_IN_CHUNK = 4;
-	static const size_t ELEMENT_SIZE = (sizeof(Element) + alignof(Element));
+	static const size_t ELEMENT_SIZE = (sizeof(Element));
 	static const size_t ALLOC_SIZE = ELEMENT_SIZE * MAX_OBJECTS_IN_CHUNK;
 
 public:
-
-	
 	
 	class MemoryChunk
 	{
-		
-		
 	public:
 		Element* chunkStart;
 		Element* chunkEnd;
@@ -191,8 +192,10 @@ public:
 		MemoryChunk() :count(0)
 		{
 			chunkStart = (Element*)malloc(ALLOC_SIZE);
+			
 			memset(chunkStart, -1, ALLOC_SIZE);
-			chunkEnd = chunkStart + ALLOC_SIZE;
+			
+			chunkEnd = &chunkStart[MAX_OBJECTS_IN_CHUNK];
 
 			for (size_t i = 1; i < MAX_OBJECTS_IN_CHUNK; i++) {
 				chunkStart[i - 1].next= &chunkStart[i];
@@ -231,7 +234,7 @@ public:
 protected:
 
 	using MemoryChunks = std::list<MemoryChunk*>;
-	MemoryChunks m_Chunks;
+	
 	
 public:
 
@@ -265,8 +268,13 @@ public:
 		inline iterator& operator++()
 		{
 			// move to next object in current chunk
-			while ((*m_CurrentChunk)->metadata[++index] == MemoryChunk::FreeFlag && index!=MAX_OBJECTS_IN_CHUNK) {
-				m_CurrentElement++;
+			m_CurrentElement = &m_CurrentElement[1];
+			index++;
+			
+			while (((*m_CurrentChunk)->metadata[index] == MemoryChunk::FreeFlag) && index<MAX_OBJECTS_IN_CHUNK) {
+				
+				m_CurrentElement = &m_CurrentElement[1];
+				index++;
 			}
 			
 
@@ -286,8 +294,8 @@ public:
 			return *this;
 		}
 
-		virtual inline Type& operator*() const  { return (m_CurrentElement->element); }
-		virtual inline Type* operator->() const { return &(m_CurrentElement->element); }
+		inline Type& operator*() const  { return (m_CurrentElement->element); }
+		inline Type* operator->() const { return &(m_CurrentElement->element); }
 
 		inline bool operator==(typename iterator& other)
 		{
@@ -301,10 +309,15 @@ public:
 			return ((this->m_CurrentChunk != o.m_CurrentChunk) && (this->m_CurrentElement != o.m_CurrentElement));
 		}
 	};
-	
-	
 
+	MemoryChunks m_Chunks;
+	
 public:
+
+	EntityContainer()
+	{
+		m_Chunks.clear();
+	}
 
 	void* CreateObject()
 	{
