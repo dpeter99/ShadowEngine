@@ -3,26 +3,27 @@
 
 namespace ShadowEngine::EntitySystem {
 
-	SceneManager::SceneManager() : activeScene(std::make_unique<Scene>())
+	EntitySystem::EntitySystem() : activeScene(std::make_unique<Scene>())
+	{
+		entityMgr = new EntityManager();
+	}
+
+	void EntitySystem::Init()
 	{
 
 	}
 
-	void SceneManager::Init()
+	void EntitySystem::Update()
 	{
-
+		entityMgr->UpdateEntities();
 	}
 
-	void SceneManager::Update()
-	{
-	}
-
-	ShadowEngine::Scope<Scene>& EntitySystem::SceneManager::GetActiveScene()
+	ShadowEngine::Scope<Scene>& EntitySystem::EntitySystem::GetActiveScene()
 	{
 		return activeScene;
 	}
 
-	void EntitySystem::SceneManager::LoadEmptyScene()
+	void EntitySystem::EntitySystem::LoadEmptyScene()
 	{
 		if (activeScene != NULL)
 		{
@@ -32,7 +33,7 @@ namespace ShadowEngine::EntitySystem {
 		//activeScene = std::make_unique<ShadowScene>();
 	}
 
-	void SceneManager::LoadScene(Scene* scene)
+	void EntitySystem::LoadScene(Scene* scene)
 	{
 		if (activeScene != NULL)
 		{

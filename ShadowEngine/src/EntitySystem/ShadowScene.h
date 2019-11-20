@@ -44,6 +44,7 @@ namespace ShadowEngine::EntitySystem {
 		template<class T, class ...ARGS>
 		rtm_ptr<T> AddEntity(ARGS&&... args) {
 			rtm_ptr<T> ptr = EntityManager::Instance->AddEntity<T>(std::forward<ARGS>(args)...);
+			ptr->scene = this;
 			m_entities.push_back(ptr);
 
 			return ptr;

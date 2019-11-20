@@ -49,7 +49,7 @@ namespace ShadowEngine::EntitySystem {
 		EntityLookupTable	m_EntityLUT;
 		//Extra number of spaces to allocate in the LUT
 		const int ENTITY_LUT_GROW = 2048;
-		int LUTNextFree;
+		int LUTNextFree = 0;
 		bool LUTFragm = false;
 		std::vector<int> LUTFragmFree;
 

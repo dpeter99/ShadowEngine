@@ -4,14 +4,15 @@
 cbuffer MaterialData : register(b2)
 {
 	float4 tint;
+    float4 o_color;
 }
 
 [RootSignature(RootSig0)]
 float4 main(VSOutput input) :SV_Target
 {
-    float4 color = input.color;
+    float4 color = float4(1,1, 1, 1);
 
-	color = color * tint;
+	color *= tint;
 
-	return color;
+	return tint;
 }

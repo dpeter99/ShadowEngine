@@ -5,7 +5,7 @@
 
 void TestScene::Init()
 {
-	Camera* c = AddNewInstance<Camera>();
+	auto c = AddEntity<Camera>();
 	c->SetCameraType(CameraType::Perspective);
 	c->transform.SetPosition({ 0,0.0f,-10.0f });
 
@@ -14,8 +14,12 @@ void TestScene::Init()
 	auto m_Shader = ShadowEngine::Ref<ShadowEngine::Rendering::Shader>(ShadowEngine::Rendering::Shader::CreateFromCompiled("Shaders/Default-VS.cso", "Shaders/Default-FS.cso"));
 
 	auto m_Material = std::make_shared<ShadowEngine::Assets::Material>(m_Shader);
+
+	m_Material->SetProperty("tint", glm::vec4(1, 0, 0, 1));
+	m_Material->UpdateBufferIfDirty();
+	//m_Material->SetProperty("o_color", glm::vec4(1,1, 1, 1));
 	
-	MeshRenderer* r = AddNewInstance<MeshRenderer>();
+	auto r = AddEntity<MeshRenderer>();
 	r->transform.SetPosition(glm::vec3(0, 0, 0));
 	r->transform.SetScale({ 1.0f,1.0f,1.0f });
 	

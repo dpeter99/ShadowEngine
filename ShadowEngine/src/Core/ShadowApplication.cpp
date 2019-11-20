@@ -43,7 +43,7 @@ namespace ShadowEngine {
 		//moduleManager.PushModule(new DebugGui::ImGuiModule());
 		moduleManager.PushModule(new InputSystem::ShadowActionSystem());
 		//moduleManager.PushModule(new Debug::DebugModule());
-		moduleManager.PushModule(new EntitySystem::SceneManager());
+		moduleManager.PushModule(new EntitySystem::EntitySystem());
 
 		moduleManager.Init();
 
@@ -60,7 +60,7 @@ namespace ShadowEngine {
 
 		auto renderer = moduleManager.GetModuleByType<ShadowEngine::Rendering::Renderer>();
 
-		auto scenemg = moduleManager.GetModuleByType<EntitySystem::SceneManager>();
+		auto scenemg = moduleManager.GetModuleByType<EntitySystem::EntitySystem>();
 		scenemg->LoadScene(new TestScene());
 
 		TestRenderer test;

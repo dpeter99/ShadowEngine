@@ -66,7 +66,9 @@ void Camera::persp_Setup()
 	float height = ShadowEngine::ShadowApplication::Get().GetWindow().Height;
 	float width = ShadowEngine::ShadowApplication::Get().GetWindow().Width;
 
-	m_ProjectionMatrix = glm::perspectiveFov(glm::radians(25.0f), width, height, 0.01f, 100.0f);
+	m_ProjectionMatrix = glm::perspectiveFov(glm::radians(89.0f), width, height, 0.01f, 100.0f);
+
+	persp_RecalculateViewMatrix();
 }
 
 void Camera::persp_RecalculateViewMatrix()

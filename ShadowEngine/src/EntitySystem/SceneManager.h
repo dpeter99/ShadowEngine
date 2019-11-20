@@ -7,17 +7,28 @@
 
 namespace ShadowEngine::EntitySystem {
 
-	class SceneManager : public ShadowEngine::ShadowModule
+	/// <summary>
+	/// The module that manages all the Entities and Scenes
+	/// </summary>
+	class EntitySystem : public ShadowModule
 	{
-		SHObject_Base(SceneManager)
+		SHObject_Base(EntitySystem)
+	private:
+		/// <summary>
+		/// The main reference to the EntityManager
+		/// </summary>
+		EntityManager* entityMgr;
 
-			ShadowEngine::Scope<Scene> activeScene;
+		/// <summary>
+		/// Reference to the active scene
+		/// </summary>
+		Scope<Scene> activeScene;
 
 
 	public:
-		SceneManager();
+		EntitySystem();
 
-		std::string GetName() override { return "SceneManager"; };
+		std::string GetName() override { return "EntitySystem"; };
 
 		void Init() override;
 		void Update() override;
