@@ -3,7 +3,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include "Core/ShadowApplication.h"
-#include "ShadowScene/ShadowScene.h"
+#include "EntitySystem/ShadowScene.h"
 
 void Camera::TransformChanged()
 {

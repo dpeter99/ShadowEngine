@@ -1,6 +1,6 @@
 #pragma once
-#include "ShadowEntity/SceneEntity.h"
 #include "glm/glm.hpp"
+#include "EntitySystem/SceneEntity.h"
 
 
 enum class CameraType {
@@ -9,11 +9,11 @@ enum class CameraType {
 };
 
 class Camera :
-	public ShadowEngine::ShadowEntity::SceneEntity
+	public ShadowEngine::EntitySystem::SceneEntity
 {
 	
 	SHObject_Base(Camera)
-	Entity_Base(Camera, ShadowEngine::ShadowEntity::SceneEntity);
+	Entity_Base(Camera, ShadowEngine::EntitySystem::SceneEntity);
 
 private:
 	void TransformChanged() override;

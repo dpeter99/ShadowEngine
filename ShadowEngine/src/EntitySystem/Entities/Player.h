@@ -1,10 +1,10 @@
 #pragma once
 
 #include "../EntityRegistry.h"
-#include "ShadowEntity/SceneEntity.h"
+#include "EntitySystem/SceneEntity.h"
 
 
-class Player : public ShadowEngine::ShadowEntity::SceneEntity
+class Player : public ShadowEngine::EntitySystem::SceneEntity
 {
 	SHObject_Base(Player)
 		Entity_Base(Player, SceneEntity)
@@ -22,5 +22,5 @@ public:
 	virtual void Update() override;
 	virtual void LateUpdate() override;
 	virtual void LateRender() override;
-	virtual ShadowEngine::ShadowEntity::EntityFlags GetFlags() override;
+	virtual ShadowEngine::EntitySystem::EntityFlags GetFlags() override;
 };

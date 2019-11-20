@@ -5,6 +5,8 @@
 
 namespace ShadowEngine::EntitySystem {
 
+	class EntityManager;
+	
 	struct SystemCallbacks {
 		typedef void (*Callback)(EntityManager* mgr);
 
@@ -278,7 +280,5 @@ namespace ShadowEngine::EntitySystem {
 			}
 		}
 	};
-
-	EntityManager* EntityManager::Instance = nullptr;
 
 }

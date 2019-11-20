@@ -7,7 +7,7 @@
 #include "glm/glm.hpp"
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include "ShadowEntity/Entities/Camera.h"
+#include "EntitySystem/Entities/Camera.h"
 #include <ShadowRenderer\Shader.h>
 #include "ShadowAsset/Assets/Mesh.h"
 #include "ShadowAsset/Assets/Material.h"

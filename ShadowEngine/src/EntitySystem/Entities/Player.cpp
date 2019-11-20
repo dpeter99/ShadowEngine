@@ -38,9 +38,9 @@ void Player::LateRender()
 {
 }
 
-ShadowEngine::ShadowEntity::EntityFlags Player::GetFlags()
+ShadowEngine::EntitySystem::EntityFlags Player::GetFlags()
 {
-	return ShadowEngine::ShadowEntity::EntityFlags::HAS_TICK;
+	return ShadowEngine::EntitySystem::EntityFlags::HAS_TICK;
 }
 
 

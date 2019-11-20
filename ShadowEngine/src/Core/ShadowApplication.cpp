@@ -16,8 +16,9 @@
 #include "ShadowRenderer/Renderer.h"
 
 #include "../TestRenderer.h"
-#include "ShadowScene/SceneManager.h"
+
 #include "ShadowScene/TestScene.h"
+#include "EntitySystem/SceneManager.h"
 
 namespace ShadowEngine {
 
@@ -42,7 +43,7 @@ namespace ShadowEngine {
 		//moduleManager.PushModule(new DebugGui::ImGuiModule());
 		moduleManager.PushModule(new InputSystem::ShadowActionSystem());
 		//moduleManager.PushModule(new Debug::DebugModule());
-		moduleManager.PushModule(new Scene::SceneManager());
+		moduleManager.PushModule(new EntitySystem::SceneManager());
 
 		moduleManager.Init();
 
@@ -59,7 +60,7 @@ namespace ShadowEngine {
 
 		auto renderer = moduleManager.GetModuleByType<ShadowEngine::Rendering::Renderer>();
 
-		auto scenemg = moduleManager.GetModuleByType<Scene::SceneManager>();
+		auto scenemg = moduleManager.GetModuleByType<EntitySystem::SceneManager>();
 		scenemg->LoadScene(new TestScene());
 
 		TestRenderer test;

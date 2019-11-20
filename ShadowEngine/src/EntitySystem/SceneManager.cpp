@@ -1,9 +1,9 @@
 #include "shpch.h"
 #include "SceneManager.h"
 
-namespace ShadowEngine::Scene {
+namespace ShadowEngine::EntitySystem {
 
-	SceneManager::SceneManager() : activeScene(std::make_unique<ShadowScene>())
+	SceneManager::SceneManager() : activeScene(std::make_unique<Scene>())
 	{
 
 	}
@@ -17,12 +17,12 @@ namespace ShadowEngine::Scene {
 	{
 	}
 
-	ShadowEngine::Scope<ShadowScene>& SceneManager::GetActiveScene()
+	ShadowEngine::Scope<Scene>& EntitySystem::SceneManager::GetActiveScene()
 	{
 		return activeScene;
 	}
 
-	void SceneManager::LoadEmptyScene()
+	void EntitySystem::SceneManager::LoadEmptyScene()
 	{
 		if (activeScene != NULL)
 		{
@@ -32,7 +32,7 @@ namespace ShadowEngine::Scene {
 		//activeScene = std::make_unique<ShadowScene>();
 	}
 
-	void SceneManager::LoadScene(ShadowScene* scene)
+	void SceneManager::LoadScene(Scene* scene)
 	{
 		if (activeScene != NULL)
 		{

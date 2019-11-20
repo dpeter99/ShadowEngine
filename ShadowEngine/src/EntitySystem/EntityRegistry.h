@@ -1,10 +1,4 @@
-//
-// Created by dpete on 2/15/2019.
-//
-
-#ifndef SHADOWENGINE_ENTITYMANAGER_H
-#define SHADOWENGINE_ENTITYMANAGER_H
-
+#pragma once
 
 #include <list>
 #include <map>
@@ -15,7 +9,7 @@
 //#include "Entities/Player.h"
 
 
-namespace ShadowEngine::ShadowEntity
+namespace ShadowEngine::EntitySystem
 {
 	class EntityRegistry
 	{
@@ -47,4 +41,3 @@ namespace ShadowEngine::ShadowEntity
 	};
 }
 
-#endif //SHADOWENGINE_ENTITYMANAGER_H

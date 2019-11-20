@@ -1,14 +1,14 @@
 #pragma once
-#include "ShadowEntity/SceneEntity.h"
+#include "EntitySystem/SceneEntity.h"
 #include "ShadowAsset/Assets/Mesh.h"
 #include "ShadowAsset/Assets/Material.h"
 #include "ShadowRenderer/RenderScene.h"
 
 class MeshRenderer:
-	public ShadowEngine::ShadowEntity::SceneEntity
+	public ShadowEngine::EntitySystem::SceneEntity
 {
 	SHObject_Base(MeshRenderer)
-	Entity_Base(MeshRenderer, ShadowEngine::ShadowEntity::SceneEntity)
+	Entity_Base(MeshRenderer, ShadowEngine::EntitySystem::SceneEntity)
 
 private:
 	ShadowEngine::Ref<ShadowEngine::Assets::Mesh> mesh;
@@ -18,7 +18,7 @@ private:
 	
 public:
 	void Init() override;
-	ShadowEngine::ShadowEntity::EntityFlags GetFlags() override { return ShadowEngine::ShadowEntity::EntityFlags::NONE; };
+	ShadowEngine::EntitySystem::EntityFlags GetFlags() override { return ShadowEngine::EntitySystem::EntityFlags::NONE; };
 
 	void SetMesh(ShadowEngine::Ref<ShadowEngine::Assets::Mesh> m) { mesh = m; };
 	ShadowEngine::Ref<ShadowEngine::Assets::Mesh> GetMesh() { return  mesh; };

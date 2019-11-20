@@ -1,16 +1,17 @@
 #pragma once
 
 #include "ShadowModules/ShadowModule.h"
-#include "ShadowScene/ShadowScene.h"
+#include "ShadowScene.h"
+
 //Holds the reference to the active scene
 
-namespace ShadowEngine::Scene {
+namespace ShadowEngine::EntitySystem {
 
 	class SceneManager : public ShadowEngine::ShadowModule
 	{
 		SHObject_Base(SceneManager)
 
-			ShadowEngine::Scope<ShadowScene> activeScene;
+			ShadowEngine::Scope<Scene> activeScene;
 
 
 	public:
@@ -25,9 +26,9 @@ namespace ShadowEngine::Scene {
 		void LateRender() override {};
 
 		void LoadEmptyScene();
-		void LoadScene(ShadowScene* scene);
+		void LoadScene(Scene* scene);
 
-		ShadowEngine::Scope<ShadowScene>& GetActiveScene();
+		ShadowEngine::Scope<Scene>& GetActiveScene();
 	};
 
 }

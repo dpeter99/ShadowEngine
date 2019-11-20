@@ -1,18 +1,20 @@
 #pragma once
 
-#include "ShadowEntity/Entity.h"
-#include "ShadowEntity/Transform.h"
+
 #include <glm/glm.hpp>
+#include "Entity.h"
+#include "ShadowMath/Transform.h"
+#include <EntitySystem\EntityBase.h>
 
 #define BIND_EVENT_FN(x, ...) std::bind(&x, this, __VA_ARGS__)
 
-namespace ShadowEngine::ShadowEntity {
+namespace ShadowEngine::EntitySystem {
 
 	/// <summary>
 	/// Entitys that have a world positon
 	/// </summary>
 	class SceneEntity :
-		public Entity
+		public EntitySystem::Entity
 	{
 		SHObject_Base(SceneEntity);
 
@@ -28,11 +30,11 @@ namespace ShadowEngine::ShadowEntity {
 
 		std::vector<Entity> hierarchy;
 	public:
-		Transform transform;
+		ShadowEntity::Transform transform;
 
 		SceneEntity():Entity(){}
 
-		SceneEntity(Scene::ShadowScene* scene) : Entity(scene)
+		SceneEntity(EntitySystem::Scene* scene) : Entity(scene)
 		{
 			transform.transformChanged += std::bind(&SceneEntity::TransformChanged, this);
 		};

@@ -7,13 +7,17 @@
 
 #include "EntityBase.h"
 
-namespace ShadowEngine::Scene
+namespace ShadowEngine::EntitySystem
 {
-	class ShadowScene;
+	class Scene;
+
+	class EntityManager;
 }
 
 namespace ShadowEngine::EntitySystem
 {
+
+	
 	template<class Type>
 	class rtm_ptr
 	{
@@ -27,7 +31,7 @@ namespace ShadowEngine::EntitySystem
 		inline Type* operator->()
 		{
 			if (m_ptr->m_runtimeUID != m_uid) {
-				assert(m_ptr->m_runtimeUID == m_uid, "Wrong Object at index");
+				assert(m_ptr->m_runtimeUID == m_uid);
 				return nullptr;
 			}
 			return m_ptr;
@@ -78,10 +82,11 @@ namespace ShadowEngine::EntitySystem
 		/// To use this Entity for lookup use the LUT in the EntityManager
 		int m_runtimeIndex;
 
+		
 		/// <summary>
 		/// The scene this Enity is assigned to
 		/// </summary>
-		Scene::ShadowScene* scene;
+		Scene* scene;
 		
 	public:
 		/// <summary>
@@ -93,7 +98,7 @@ namespace ShadowEngine::EntitySystem
 		/// Constructor defining the scene it is located in
 		/// </summary>
 		/// <param name="scene">The scene that this entity is in</param>
-		Entity(Scene::ShadowScene* scene);
+		Entity(Scene* scene);
 
 		virtual ~Entity() {}
 
@@ -102,7 +107,7 @@ namespace ShadowEngine::EntitySystem
 		/// </summary>
 		/// <param name="scene">The scene that this entity is in</param>
 		/// <returns>Pointer to the Entity created</returns>
-		virtual Entity* Create(Scene::ShadowScene* scene);
+		virtual Entity* Create(Scene* scene);
 
 		/// Called when the Entity needs to be initialised. Should be used as a constructor
 		/// <summary>
@@ -136,7 +141,7 @@ namespace ShadowEngine::EntitySystem
 		/// Sets the scene this Entity is in
 		/// </summary>
 		/// <param name="se">The scene this entity belongs to</param>
-		void SetScene(Scene::ShadowScene* se);
+		void SetScene(Scene* se);
 
 		friend std::ostream& operator<<(std::ostream& os, const Entity& dt);
 

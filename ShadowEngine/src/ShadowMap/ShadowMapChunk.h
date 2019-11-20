@@ -4,9 +4,10 @@
 #include <string>
 #include <vector>
 #include "ShadowMath/Vector2int.h"
-#include "ShadowEntity/Entity.h"
+
 #include "ShadowMath/Vector2int.h"
 #include "ShadowAsset/ShadowAsset.h"
+#include "EntitySystem/Entity.h"
 
 namespace ShadowEngine::World {
 
@@ -53,7 +54,7 @@ namespace ShadowEngine::World {
 
 		std::vector<ShadowMapLayer*> layers;
 
-		std::vector<ShadowEntity::Entity*> entities;
+		std::vector<EntitySystem::Entity*> entities;
 
 		ShadowMapLayer& GetLayer(int id);
 	};

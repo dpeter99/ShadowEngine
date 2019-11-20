@@ -1,7 +1,7 @@
 #include "shpch.h"
 #include "TestScene.h"
-#include <ShadowEntity\Entities\Camera.h>
-#include "ShadowEntity/Entities/MeshRenderer.h"
+#include <EntitySystem\Entities\Camera.h>
+#include "EntitySystem/Entities/MeshRenderer.h"
 
 void TestScene::Init()
 {
@@ -22,5 +22,5 @@ void TestScene::Init()
 	r->SetMesh(m_model);
 	r->SetMaterial(m_Material);
 	
-	ShadowScene::Init();
+	Scene::Init();
 }

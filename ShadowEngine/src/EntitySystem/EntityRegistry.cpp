@@ -7,11 +7,11 @@
 #include <iostream>
 #include "EntityRegistry.h"
 
-namespace ShadowEngine::ShadowEntity
+namespace ShadowEngine::EntitySystem
 {
 	//PreRegistry
 
-	bool EntityRegistry::RegisterEntity(std::string id, Entity* entityTemplate)
+	bool EntityRegistry::RegisterEntity(std::string id, EntitySystem::Entity* entityTemplate)
 	{
 		EntityRegistryMap[id] = entityTemplate;
 		return true;
