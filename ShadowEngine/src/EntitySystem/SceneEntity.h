@@ -14,31 +14,31 @@ namespace ShadowEngine::EntitySystem {
 	/// Entitys that have a world positon
 	/// </summary>
 	class SceneEntity :
-		public EntitySystem::Entity
+		public Entity
 	{
 		SHObject_Base(SceneEntity);
 
 		Entity_Base_NoCtor(SceneEntity, Entity);
 		
-	protected:
-		void virtual TransformChanged() {};
+	public:
 
-		/**
-		 * \brief the internal hierarchy of this Entity
-		*/
-		std::vector<Entity> internalHierarchy;
-
-		std::vector<Entity> hierarchy;
 	public:
 		ShadowEntity::Transform transform;
 
-		SceneEntity():Entity(){}
+		SceneEntity() :Entity() { transform.AssignEntity(this); }
 
 		SceneEntity(EntitySystem::Scene* scene) : Entity(scene)
 		{
-			transform.transformChanged += std::bind(&SceneEntity::TransformChanged, this);
+			transform.transformChanged += std::bind(&SceneEntity::TransformChanged, this, true);
+			transform.AssignEntity(this);
 		};
 
+		virtual void TransformChanged(bool self) override;
+
+		virtual ShadowEntity::Transform* GetTransform();
+		
+		void SetParent(rtm_ptr<Entity> e) override;
+		
 		
 	};
 

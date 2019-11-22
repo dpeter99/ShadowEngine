@@ -2,13 +2,21 @@
 #include "TestScene.h"
 #include <EntitySystem\Entities\Camera.h>
 #include "EntitySystem/Entities/MeshRenderer.h"
+#include "EntitySystem/Entities/FirstPersonCamera.h"
 
 void TestScene::Init()
 {
-	auto c = AddEntity<Camera>();
-	c->SetCameraType(CameraType::Perspective);
-	c->transform.SetPosition({ 0,0.0f,-10.0f });
+	//auto c = AddEntity<Camera>();
+	//c->SetCameraType(CameraType::Perspective);
+	//c->transform.SetPosition({ 0,0.0f,-10.0f });
 
+
+
+	auto fps = AddEntity< FirstPersonCamera>();
+	
+	
+
+	
 	auto m_model = ShadowEngine::Assets::Mesh::LoadModel_obj("giraffe.obj");
 
 	auto m_Shader = ShadowEngine::Ref<ShadowEngine::Rendering::Shader>(ShadowEngine::Rendering::Shader::CreateFromCompiled("Shaders/Default-VS.cso", "Shaders/Default-FS.cso"));

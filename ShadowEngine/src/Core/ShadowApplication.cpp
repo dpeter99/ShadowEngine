@@ -18,7 +18,7 @@
 #include "../TestRenderer.h"
 
 #include "ShadowScene/TestScene.h"
-#include "EntitySystem/SceneManager.h"
+#include "EntitySystem/EntitySystem.h"
 
 namespace ShadowEngine {
 

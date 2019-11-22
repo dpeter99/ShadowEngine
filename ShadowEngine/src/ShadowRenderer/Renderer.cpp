@@ -38,6 +38,8 @@ namespace ShadowEngine::Rendering {
 	
 	void Renderer::BeginScene(Camera* camera)
 	{
+		assert(camera != nullptr);
+		
 		auto cb = scene->GetWorldData().get();
 		(*cb)->viewProjection = camera->GetViewProjectionMatrix();
 		cb->Upload();

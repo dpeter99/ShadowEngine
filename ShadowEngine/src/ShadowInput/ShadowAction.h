@@ -59,7 +59,7 @@ namespace ShadowEngine::InputSystem
 
 			data = T();
 
-			ShadowInput::ShadowActionSystem::_instance->AddEvent(this);
+			InputSystem::ShadowActionSystem::_instance->AddEvent(this);
 		};
 
 		~ShadowAction()

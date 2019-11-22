@@ -22,9 +22,9 @@ namespace ShadowEngine::Rendering {
 		SHObject_Base(Renderer)
 		
 	private:
-		RendererAPI* s_RendererAPI;
+		RendererAPI* s_RendererAPI = nullptr;
 
-		RenderScene* scene;
+		RenderScene* scene = nullptr;
 		
 	public:
 		Renderer();

@@ -9,13 +9,16 @@ namespace ShadowEngine::EventSystem::Events {
 		SHObject_Base(MouseMovedEvent)
 
 	public:
-		MouseMovedEvent(float x, float y, SDL_Event* ev)
+		MouseMovedEvent(float x, float y, float x_delta, float y_delta, SDL_Event* ev)
 			: m_MouseX(x), m_MouseY(y), ShadowEvent(ev)
 		{
 		}
 
 		float GetX() const { return m_MouseX; }
 		float GetY() const { return m_MouseY; }
+
+		float GetXDelta() const { return m_MouseXDelta; }
+		float GetYDelta() const { return m_MouseYDelta; }
 
 		std::string ToString() const override
 		{
@@ -25,6 +28,7 @@ namespace ShadowEngine::EventSystem::Events {
 		}
 	private:
 		float m_MouseX, m_MouseY;
+		float m_MouseXDelta, m_MouseYDelta;
 	};
 
 	class MouseScrolledEvent : public ShadowEvent

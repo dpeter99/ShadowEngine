@@ -130,7 +130,7 @@ public:
 			// if we reached end of list, move to next chunk
 			if (m_CurrentElement == (*m_CurrentChunk)->chunkEnd)
 			{
-				m_CurrentChunk++;
+				++m_CurrentChunk;
 				index = 0;
 				if (m_CurrentChunk != m_EndChunk)
 				{

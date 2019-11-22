@@ -1,5 +1,5 @@
 #include "shpch.h"
-#include "SceneManager.h"
+#include "EntitySystem.h"
 
 namespace ShadowEngine::EntitySystem {
 
@@ -10,7 +10,7 @@ namespace ShadowEngine::EntitySystem {
 
 	void EntitySystem::Init()
 	{
-
+		
 	}
 
 	void EntitySystem::Update()

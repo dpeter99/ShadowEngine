@@ -3,12 +3,15 @@
 #include <string>
 #include <iostream>
 
-//#include "ShadowScene/ShadowScene.h"
-
 #include "EntityBase.h"
+
+namespace ShadowEngine::ShadowEntity {
+	class Transform;
+}
 
 namespace ShadowEngine::EntitySystem
 {
+	struct SystemCallbacks;
 	class Scene;
 
 	class EntityManager;
@@ -16,7 +19,7 @@ namespace ShadowEngine::EntitySystem
 
 namespace ShadowEngine::EntitySystem
 {
-
+	class Entity;
 	
 	template<class Type>
 	class rtm_ptr
@@ -28,6 +31,8 @@ namespace ShadowEngine::EntitySystem
 	public:
 		rtm_ptr(Type* ptr) : m_ptr(ptr), m_uid(ptr->m_runtimeUID) {}
 
+		rtm_ptr() :  m_ptr(nullptr){}
+		
 		inline Type* operator->()
 		{
 			if (m_ptr->m_runtimeUID != m_uid) {
@@ -37,12 +42,14 @@ namespace ShadowEngine::EntitySystem
 			return m_ptr;
 		}
 
-		inline operator bool() const { return m_ptr->m_runtimeUID == m_uid; }
+		inline operator bool() const { return m_ptr != nullptr && m_ptr->m_runtimeUID == m_uid; }
 
 		template<class T>
 		inline operator rtm_ptr<T>() const {
 			return rtm_ptr<T>(m_ptr);
 		}
+
+		
 	};
 
 	enum class EntityFlags {
@@ -87,6 +94,15 @@ namespace ShadowEngine::EntitySystem
 		/// The scene this Enity is assigned to
 		/// </summary>
 		Scene* scene;
+
+		/**
+		 * \brief the internal hierarchy of this Entity
+		*/
+		std::vector<rtm_ptr<Entity>> internalHierarchy;
+
+		std::vector<Entity> hierarchy;
+
+		rtm_ptr<Entity> parent;
 		
 	public:
 		/// <summary>
@@ -136,6 +152,10 @@ namespace ShadowEngine::EntitySystem
 
 		virtual EntityFlags GetFlags();
 
+		virtual void TransformChanged(bool self);
+
+		virtual ShadowEntity::Transform* GetTransform();
+		
 	public:
 		/// <summary>
 		/// Sets the scene this Entity is in
@@ -143,24 +163,34 @@ namespace ShadowEngine::EntitySystem
 		/// <param name="se">The scene this entity belongs to</param>
 		void SetScene(Scene* se);
 
+		virtual void SetParent(rtm_ptr<Entity> e);
+		
 		friend std::ostream& operator<<(std::ostream& os, const Entity& dt);
 
 	public:
 		template<class T>
 		static void UpdateEntities(EntityManager* mgr)
 		{
-			//std::cout << std::endl;
+			EntityContainer<T>& container = *mgr->GetContainerByType<T>();
 
+			int c = 0;
+
+			for each (auto& current in container)
+			{
+				current.Update();
+			}
+		}
+
+		template<class T>
+		static void InitEntities(EntityManager* mgr)
+		{
 			auto& container = *mgr->GetContainerByType<T>();
 
 			int c = 0;
 
 			for each (auto current in container)
 			{
-				//std::cout << c << typeid(T).name() << ": \t";
-				current.Update();
-				//std::cout << std::endl;
-				c++;
+				current.Init();
 			}
 		}
 
@@ -168,6 +198,7 @@ namespace ShadowEngine::EntitySystem
 		static void RegisterDefaultUpdate(EntityManager& mgr) {
 			SystemCallbacks s;
 			s.update = &UpdateEntities<T>;
+			s.init = &InitEntities<T>;
 
 			mgr.AddSystem(s);
 		}

@@ -11,6 +11,7 @@ namespace ShadowEngine::EntitySystem {
 		typedef void (*Callback)(EntityManager* mgr);
 
 		Callback update;
+		Callback init;
 	};
 
 
@@ -277,6 +278,14 @@ namespace ShadowEngine::EntitySystem {
 			for each (auto & var in systems)
 			{
 				var.update(this);
+			}
+		}
+
+		void InitEntities()
+		{
+			for each (auto & var in systems)
+			{
+				var.init(this);
 			}
 		}
 	};

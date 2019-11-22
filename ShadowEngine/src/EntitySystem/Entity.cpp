@@ -35,9 +35,27 @@ namespace ShadowEngine::EntitySystem
 		return EntityFlags::NONE;
 	}
 
+	void Entity::TransformChanged(bool self)
+	{
+		for each (auto e in internalHierarchy)
+		{
+			e->TransformChanged(false);
+		}
+	}
+
+	ShadowEntity::Transform* Entity::GetTransform()
+	{
+		return parent->GetTransform();
+	}
+
 	void Entity::SetScene(Scene* se)
 	{
 		this->scene = se;
+	}
+
+	void Entity::SetParent(rtm_ptr<Entity> e)
+	{
+		this->parent = e;
 	}
 
 	Entity::Entity()
