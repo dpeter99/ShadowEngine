@@ -1,6 +1,6 @@
 #include "shpch.h"
 #include "D3D12Context.h"
-#include <SDL2/SDL_syswm.h>
+#include <SDL_syswm.h>
 
 #include "ShadowWindow.h"
 

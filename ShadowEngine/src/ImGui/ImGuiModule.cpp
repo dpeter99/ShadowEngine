@@ -14,7 +14,7 @@
 #include "examples/imgui_impl_opengl3.h"
 
 #include "ImGuiModule.h"
-#include "SDL2/SDL.h"
+#include <SDL.h>
 #include "Platform/SDL/SDLModule.h"
 
 namespace ShadowEngine::DebugGui {

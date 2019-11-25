@@ -1,7 +1,7 @@
 #pragma once
 #include  "shpch.h"
 #include "ShadowEvents/ShadowEvent.h"
-#include <SDL2/SDL.h>
+#include <SDL.h>
 
 namespace ShadowEngine::EventSystem::Events {
 

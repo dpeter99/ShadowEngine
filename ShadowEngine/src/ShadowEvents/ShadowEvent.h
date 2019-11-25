@@ -2,7 +2,7 @@
 #include  "shpch.h"
 #include "Core/Core.h"
 #include "Core/SHObject.h"
-#include <SDL2/SDL.h>
+#include <SDL.h>
 
 namespace ShadowEngine::EventSystem {
 

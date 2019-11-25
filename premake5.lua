@@ -18,7 +18,6 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
-IncludeDir["SDL2"] = "ShadowEngine/dependencies/SDL2/include"
 IncludeDir["Glad"] = "ShadowEngine/dependencies/Glad/include"
 IncludeDir["ImGui"] = "ShadowEngine/dependencies/imgui"
 IncludeDir["glm"] = "ShadowEngine/dependencies/glm"
@@ -74,7 +73,6 @@ project "ShadowEngine"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{IncludeDir.SDL2}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
@@ -85,9 +83,6 @@ project "ShadowEngine"
 
 	links 
 	{ 
-		"SDL2",
-		"SDL2main",
-		"SDL2test",
 		"Glad",
 		"ImGui",
 		
@@ -101,7 +96,11 @@ project "ShadowEngine"
 	
 	nuget { 
 		"Assimp:3.0.0",
-		"Assimp.redist:3.0.0"
+		"Assimp.redist:3.0.0",
+		"sdl2.nuget:2.0.9",
+		"sdl2.nuget.redist:2.0.9",
+		"sdl2_image.nuget:2.0.5",
+		"sdl2_image.nuget.redist:2.0.5"
 	}
 
 	local shader_dir = "../bin/" .. outputdir .. "/%{prj.name}/Shaders/"
@@ -112,7 +111,6 @@ project "ShadowEngine"
 	filter "files:**.hlsl"
 		flags "ExcludeFromBuild"
 		shaderobjectfileoutput (shader_dir .. "%{file.basename}.cso")
-		shaderheaderfileoutput ("src/Shaders/%{file.basename}.h")
 		
 	filter "files:**-FS.hlsl"
 		removeflags "ExcludeFromBuild"

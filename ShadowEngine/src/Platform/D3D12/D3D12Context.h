@@ -2,7 +2,7 @@
 #include "ShadowRenderer/GraphicsContext.h"
 
 #include "Common.h"
-#include "SDL2/SDL.h"
+#include <SDL.h>
 #include "ShadowWindow.h"
 
 namespace ShadowEngine::Rendering::D3D12 {

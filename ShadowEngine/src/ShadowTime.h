@@ -1,6 +1,6 @@
 #pragma once
-#include <SDL2/SDL_hints.h>
-#include <SDL2/SDL.h>
+#include <SDL_hints.h>
+#include <SDL.h>
 
 
 class Time

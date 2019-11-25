@@ -21,7 +21,7 @@ TestRenderer::TestRenderer() {
 	m_Material.reset(new ShadowEngine::Assets::Material(m_Shader));
 
 	m_Material->SetProperty("tint", glm::vec4(1, 0, 0, 1));
-	m_Material->UpdateBufferIfDirty();
+	m_Material->UpdateBufferIfDirty(); 
 }
 
 void TestRenderer::Update() {
