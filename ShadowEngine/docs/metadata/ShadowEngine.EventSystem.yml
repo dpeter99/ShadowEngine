@@ -1,0 +1,121 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.EventSystem
+  id: ShadowEngine.EventSystem
+  children:
+  - ShadowEngine.EventSystem.IShadowEventListener
+  - ShadowEngine.EventSystem.IShadowEventSource
+  - ShadowEngine.EventSystem.ShadowEvent
+  - ShadowEngine.EventSystem.ShadowEventManager
+  - ShadowEngine.EventSystem.operator<<(std::ostream &,const class ShadowEvent &)
+  href: ShadowEngine.EventSystem.yml
+  langs:
+  - cplusplus
+  name: ShadowEngine::EventSystem
+  nameWithType: ShadowEngine::EventSystem
+  fullName: ShadowEngine::EventSystem
+  type: Namespace
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowEvents/Events/ApplicationEvent.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowEvents/Events/ApplicationEvent.h
+    startLine: 5
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/Events/ApplicationEvent.h
+    startLine: 5
+  syntax:
+    content: namespace ShadowEngine::EventSystem
+- uid: ShadowEngine.EventSystem.operator<<(std::ostream &,const class ShadowEvent &)
+  id: ostream &,const class ShadowEvent &)
+  parent: ShadowEngine.EventSystem
+  href: ShadowEngine.EventSystem.yml
+  langs:
+  - cplusplus
+  name: operator<<(std::ostream &os, const class ShadowEvent &e)
+  nameWithType: ShadowEngine::EventSystem::operator<<(std::ostream &os, const class ShadowEvent &e)
+  fullName: std::ostream& ShadowEngine::EventSystem::operator<<(std::ostream &os, const class ShadowEvent &e)
+  overload: ShadowEngine.EventSystem.operator<<*
+  type: Method
+  source:
+    remote: &o1
+      path: ShadowEngine/src/ShadowEvents/ShadowEvent.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowEvents/ShadowEvent.h
+    startLine: 30
+  header:
+    remote: *o1
+    path: ShadowEngine/src/ShadowEvents/ShadowEvent.h
+    startLine: 30
+  syntax:
+    content: 'public: std::ostream & operator<<(std::ostream &os, const class ShadowEvent &e)'
+    parameters:
+    - id: os
+      type: 49c1ef81
+    - id: e
+      type: c2343a3bShadowEngine.EventSystem.ShadowEvent76390d34
+    return:
+      type: 49c1ef81
+references:
+- uid: 49c1ef81
+  spec.cplusplus:
+  - name: std::ostream &
+    fullName: std::ostream &
+- uid: c2343a3bShadowEngine.EventSystem.ShadowEvent76390d34
+  spec.cplusplus:
+  - name: 'const class '
+    fullName: 'const class '
+  - uid: ShadowEngine.EventSystem.ShadowEvent
+  - name: " &"
+    fullName: " &"
+- uid: ShadowEngine.EventSystem.operator<<*
+  name: operator<<
+  nameWithType: ShadowEngine::EventSystem::operator<<
+  fullName: std::ostream& ShadowEngine::EventSystem::operator<<
+- uid: ShadowEngine.EventSystem.Events
+  href: ShadowEngine.EventSystem.Events.yml
+  name: ShadowEngine::EventSystem::Events
+  nameWithType: ShadowEngine::EventSystem::Events
+  fullName: ShadowEngine::EventSystem::Events
+  type: Namespace
+  syntax:
+    content: namespace ShadowEngine::EventSystem::Events
+- uid: ShadowEngine.EventSystem.ShadowEvent
+  parent: ShadowEngine.EventSystem
+  href: ShadowEngine.EventSystem.ShadowEvent.yml
+  name: ShadowEvent
+  nameWithType: ShadowEvent
+  fullName: ShadowEngine::EventSystem::ShadowEvent
+  type: Class
+  syntax:
+    content: 'public: class ShadowEvent : public HObject'
+- uid: ShadowEngine.EventSystem.IShadowEventListener
+  parent: ShadowEngine.EventSystem
+  href: ShadowEngine.EventSystem.IShadowEventListener.yml
+  name: IShadowEventListener
+  nameWithType: IShadowEventListener
+  fullName: ShadowEngine::EventSystem::IShadowEventListener
+  type: Class
+  syntax:
+    content: 'public: class IShadowEventListener'
+- uid: ShadowEngine.EventSystem.IShadowEventSource
+  parent: ShadowEngine.EventSystem
+  href: ShadowEngine.EventSystem.IShadowEventSource.yml
+  name: IShadowEventSource
+  nameWithType: IShadowEventSource
+  fullName: ShadowEngine::EventSystem::IShadowEventSource
+  type: Class
+  syntax:
+    content: 'public: class IShadowEventSource'
+- uid: ShadowEngine.EventSystem.ShadowEventManager
+  parent: ShadowEngine.EventSystem
+  href: ShadowEngine.EventSystem.ShadowEventManager.yml
+  name: ShadowEventManager
+  nameWithType: ShadowEventManager
+  fullName: ShadowEngine::EventSystem::ShadowEventManager
+  type: Class
+  syntax:
+    content: 'public: class ShadowEventManager : public hadowModule'

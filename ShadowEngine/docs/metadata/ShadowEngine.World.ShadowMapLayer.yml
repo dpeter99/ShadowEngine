@@ -1,0 +1,271 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.World.ShadowMapLayer
+  id: ShadowEngine.World.ShadowMapLayer
+  parent: ShadowEngine.World
+  children:
+  - ShadowEngine.World.ShadowMapLayer.data
+  - ShadowEngine.World.ShadowMapLayer.GetTile(ShadowMath::Vector2int)
+  - ShadowEngine.World.ShadowMapLayer.map
+  - ShadowEngine.World.ShadowMapLayer.name
+  - ShadowEngine.World.ShadowMapLayer.SetTile(ShadowMath::Vector2int,int)
+  - ShadowEngine.World.ShadowMapLayer.ShadowMapLayer(MapChunk &,bool,int *)
+  - ShadowEngine.World.ShadowMapLayer.visible
+  href: ShadowEngine.World.ShadowMapLayer.yml
+  langs:
+  - cplusplus
+  name: ShadowMapLayer
+  nameWithType: ShadowMapLayer
+  fullName: ShadowEngine::World::ShadowMapLayer
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowMap/ShadowMapChunk.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowMap/ShadowMapChunk.h
+    startLine: 15
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMap/ShadowMapChunk.h
+    startLine: 16
+  namespace: ShadowEngine.World
+  syntax:
+    content: 'public: class ShadowMapLayer'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.World.ShadowMapLayer.data
+  id: ShadowEngine.World.ShadowMapLayer.data
+  parent: ShadowEngine.World.ShadowMapLayer
+  href: ShadowEngine.World.ShadowMapLayer.yml
+  langs:
+  - cplusplus
+  name: data
+  nameWithType: ShadowMapLayer::data
+  fullName: int* ShadowEngine::World::ShadowMapLayer::data
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMap/ShadowMapChunk.h
+    startLine: 18
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMap/ShadowMapChunk.h
+    startLine: 18
+  namespace: ShadowEngine.World
+  syntax:
+    content: 'public: int * data'
+    return:
+      type: c13b98cb
+- uid: ShadowEngine.World.ShadowMapLayer.GetTile(ShadowMath::Vector2int)
+  id: Vector2int)
+  parent: ShadowEngine.World.ShadowMapLayer
+  href: ShadowEngine.World.ShadowMapLayer.yml
+  langs:
+  - cplusplus
+  name: GetTile(ShadowMath::Vector2int pos)
+  nameWithType: ShadowMapLayer::GetTile(ShadowMath::Vector2int pos)
+  fullName: int ShadowEngine::World::ShadowMapLayer::GetTile(ShadowMath::Vector2int pos)
+  overload: ShadowEngine.World.ShadowMapLayer.GetTile*
+  type: Method
+  source:
+    remote: &o1
+      path: ShadowEngine/src/ShadowMap/ShadowMapChunk.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowMap/ShadowMapChunk.cpp
+    startLine: 15
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMap/ShadowMapChunk.h
+    startLine: 36
+  namespace: ShadowEngine.World
+  syntax:
+    content: 'public: int GetTile(ShadowMath::Vector2int pos)'
+    parameters:
+    - id: pos
+      type: ShadowMath.Vector2int
+    return:
+      type: f75371fa
+- uid: ShadowEngine.World.ShadowMapLayer.map
+  id: ShadowEngine.World.ShadowMapLayer.map
+  parent: ShadowEngine.World.ShadowMapLayer
+  href: ShadowEngine.World.ShadowMapLayer.yml
+  langs:
+  - cplusplus
+  name: map
+  nameWithType: ShadowMapLayer::map
+  fullName: MapChunk* ShadowEngine::World::ShadowMapLayer::map
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMap/ShadowMapChunk.h
+    startLine: 24
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMap/ShadowMapChunk.h
+    startLine: 24
+  namespace: ShadowEngine.World
+  syntax:
+    content: 'public: MapChunk * map'
+    return:
+      type: ShadowEngine.World.MapChunk68bc11b4
+- uid: ShadowEngine.World.ShadowMapLayer.name
+  id: ShadowEngine.World.ShadowMapLayer.name
+  parent: ShadowEngine.World.ShadowMapLayer
+  href: ShadowEngine.World.ShadowMapLayer.yml
+  langs:
+  - cplusplus
+  name: name
+  nameWithType: ShadowMapLayer::name
+  fullName: std::string ShadowEngine::World::ShadowMapLayer::name
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMap/ShadowMapChunk.h
+    startLine: 20
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMap/ShadowMapChunk.h
+    startLine: 20
+  namespace: ShadowEngine.World
+  syntax:
+    content: 'public: std::string name'
+    return:
+      type: 9626e5dd
+- uid: ShadowEngine.World.ShadowMapLayer.SetTile(ShadowMath::Vector2int,int)
+  id: Vector2int,int)
+  parent: ShadowEngine.World.ShadowMapLayer
+  href: ShadowEngine.World.ShadowMapLayer.yml
+  langs:
+  - cplusplus
+  name: SetTile(ShadowMath::Vector2int pos, int tileID)
+  nameWithType: ShadowMapLayer::SetTile(ShadowMath::Vector2int pos, int tileID)
+  fullName: void ShadowEngine::World::ShadowMapLayer::SetTile(ShadowMath::Vector2int pos, int tileID)
+  overload: ShadowEngine.World.ShadowMapLayer.SetTile*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMap/ShadowMapChunk.cpp
+    startLine: 10
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMap/ShadowMapChunk.h
+    startLine: 34
+  namespace: ShadowEngine.World
+  syntax:
+    content: 'public: void SetTile(ShadowMath::Vector2int pos, int tileID)'
+    parameters:
+    - id: pos
+      type: ShadowMath.Vector2int
+    - id: tileID
+      type: f75371fa
+- uid: ShadowEngine.World.ShadowMapLayer.ShadowMapLayer(MapChunk &,bool,int *)
+  id: ShadowEngine.World.ShadowMapLayer.ShadowMapLayer(MapChunk &,bool,int *)
+  parent: ShadowEngine.World.ShadowMapLayer
+  href: ShadowEngine.World.ShadowMapLayer.yml
+  langs:
+  - cplusplus
+  name: ShadowMapLayer(MapChunk &m, bool visible, int *data)
+  nameWithType: ShadowMapLayer::ShadowMapLayer(MapChunk &m, bool visible, int *data)
+  fullName: ShadowEngine::World::ShadowMapLayer::ShadowMapLayer(MapChunk &m, bool visible, int *data)
+  overload: ShadowEngine.World.ShadowMapLayer.ShadowMapLayer*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMap/ShadowMapChunk.h
+    startLine: 26
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMap/ShadowMapChunk.h
+    startLine: 26
+  namespace: ShadowEngine.World
+  syntax:
+    content: 'public: ShadowMapLayer(MapChunk &m, bool visible, int *data)'
+    parameters:
+    - id: m
+      type: ShadowEngine.World.MapChunk76390d34
+    - id: visible
+      type: 13ff06c5
+    - id: data
+      type: c13b98cb
+- uid: ShadowEngine.World.ShadowMapLayer.visible
+  id: ShadowEngine.World.ShadowMapLayer.visible
+  parent: ShadowEngine.World.ShadowMapLayer
+  href: ShadowEngine.World.ShadowMapLayer.yml
+  langs:
+  - cplusplus
+  name: visible
+  nameWithType: ShadowMapLayer::visible
+  fullName: bool ShadowEngine::World::ShadowMapLayer::visible
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMap/ShadowMapChunk.h
+    startLine: 22
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMap/ShadowMapChunk.h
+    startLine: 22
+  namespace: ShadowEngine.World
+  syntax:
+    content: 'public: bool visible'
+    return:
+      type: 13ff06c5
+references:
+- uid: c13b98cb
+  spec.cplusplus:
+  - name: int *
+    fullName: int *
+- uid: 9626e5dd
+  spec.cplusplus:
+  - name: std::string
+    fullName: std::string
+- uid: 13ff06c5
+  spec.cplusplus:
+  - name: bool
+    fullName: bool
+- uid: ShadowEngine.World.MapChunk68bc11b4
+  spec.cplusplus:
+  - uid: ShadowEngine.World.MapChunk
+  - name: " *"
+    fullName: " *"
+- uid: ShadowEngine.World.MapChunk76390d34
+  spec.cplusplus:
+  - uid: ShadowEngine.World.MapChunk
+  - name: " &"
+    fullName: " &"
+- uid: ShadowEngine.World.ShadowMapLayer.ShadowMapLayer*
+  name: ShadowMapLayer
+  nameWithType: ShadowMapLayer::ShadowMapLayer
+  fullName: ShadowEngine::World::ShadowMapLayer::ShadowMapLayer
+- uid: f75371fa
+  spec.cplusplus:
+  - name: int
+    fullName: int
+- uid: ShadowEngine.World.ShadowMapLayer.SetTile*
+  name: SetTile
+  nameWithType: ShadowMapLayer::SetTile
+  fullName: void ShadowEngine::World::ShadowMapLayer::SetTile
+- uid: ShadowEngine.World.ShadowMapLayer.GetTile*
+  name: GetTile
+  nameWithType: ShadowMapLayer::GetTile
+  fullName: int ShadowEngine::World::ShadowMapLayer::GetTile
+- uid: ShadowEngine.World.MapChunk
+  parent: ShadowEngine.World
+  href: ShadowEngine.World.MapChunk.yml
+  name: MapChunk
+  nameWithType: MapChunk
+  fullName: ShadowEngine::World::MapChunk
+  type: Class
+  syntax:
+    content: 'public: class MapChunk : public adowAsset'
+- uid: ShadowMath.Vector2int
+  parent: ShadowMath
+  href: ShadowMath.Vector2int.yml
+  name: Vector2int
+  nameWithType: Vector2int
+  fullName: ShadowMath::Vector2int
+  type: Struct
+  syntax:
+    content: 'public: struct Vector2int'

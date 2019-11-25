@@ -1,0 +1,256 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.SHObject
+  id: ShadowEngine.SHObject
+  parent: ShadowEngine
+  children:
+  - ShadowEngine.SHObject.~SHObject()
+  - ShadowEngine.SHObject.GenerateId()
+  - ShadowEngine.SHObject.GetType()
+  - ShadowEngine.SHObject.GetTypeId()
+  href: ShadowEngine.SHObject.yml
+  langs:
+  - cplusplus
+  name: SHObject
+  nameWithType: SHObject
+  fullName: ShadowEngine::SHObject
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/Core/SHObject.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Core/SHObject.h
+    startLine: 8
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Core/SHObject.h
+    startLine: 9
+  namespace: ShadowEngine
+  summary: "<p>This is the base class for every class in the Engine that uses runtime reflection. </p>"
+  syntax:
+    content: 'public: class SHObject'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.SHObject.~SHObject()
+  id: ShadowEngine.SHObject.~SHObject()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  langs:
+  - cplusplus
+  name: ~SHObject()
+  nameWithType: SHObject::~SHObject()
+  fullName: virtual ShadowEngine::SHObject::~SHObject()
+  overload: ShadowEngine.SHObject.~SHObject*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Core/SHObject.h
+    startLine: 33
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Core/SHObject.h
+    startLine: 33
+  namespace: ShadowEngine
+  syntax:
+    content: 'public: virtual ~SHObject()=default'
+- uid: ShadowEngine.SHObject.GenerateId()
+  id: ShadowEngine.SHObject.GenerateId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  langs:
+  - cplusplus
+  name: GenerateId()
+  nameWithType: SHObject::GenerateId()
+  fullName: static uint64_t ShadowEngine::SHObject::GenerateId()
+  overload: ShadowEngine.SHObject.GenerateId*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Core/SHObject.h
+    startLine: 15
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Core/SHObject.h
+    startLine: 15
+  namespace: ShadowEngine
+  summary: "<p>Generates a new UID for each call. </p>"
+  syntax:
+    content: 'protected: static uint64_t GenerateId() noexcept'
+    return:
+      type: 6d8267d6
+      description: <p>Unique ID </p>
+- uid: ShadowEngine.SHObject.GetType()
+  id: ShadowEngine.SHObject.GetType()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  langs:
+  - cplusplus
+  name: GetType()
+  nameWithType: SHObject::GetType()
+  fullName: virtual const std::string& ShadowEngine::SHObject::GetType()
+  overload: ShadowEngine.SHObject.GetType*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Core/SHObject.h
+    startLine: 26
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Core/SHObject.h
+    startLine: 26
+  namespace: ShadowEngine
+  summary: "<p>Returns the top level class type name of the object. </p>"
+  syntax:
+    content: 'public: virtual const std::string & GetType() const =0'
+    return:
+      type: 360fc41e
+      description: <p>Class name string </p>
+- uid: ShadowEngine.SHObject.GetTypeId()
+  id: ShadowEngine.SHObject.GetTypeId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  langs:
+  - cplusplus
+  name: GetTypeId()
+  nameWithType: SHObject::GetTypeId()
+  fullName: virtual const uint64_t ShadowEngine::SHObject::GetTypeId()
+  overload: ShadowEngine.SHObject.GetTypeId*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Core/SHObject.h
+    startLine: 31
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Core/SHObject.h
+    startLine: 31
+  namespace: ShadowEngine
+  summary: "<p>Gets the top level type ID. </p>"
+  syntax:
+    content: 'public: virtual const uint64_t GetTypeId() const =0'
+    return:
+      type: 29dc5929
+      description: <p>UID of the class </p>
+references:
+- uid: 6d8267d6
+  spec.cplusplus:
+  - name: uint64_t
+    fullName: uint64_t
+- uid: ShadowEngine.SHObject.GenerateId*
+  name: GenerateId
+  nameWithType: SHObject::GenerateId
+  fullName: static uint64_t ShadowEngine::SHObject::GenerateId
+- uid: 360fc41e
+  spec.cplusplus:
+  - name: const std::string &
+    fullName: const std::string &
+- uid: ShadowEngine.SHObject.GetType*
+  name: GetType
+  nameWithType: SHObject::GetType
+  fullName: virtual const std::string& ShadowEngine::SHObject::GetType
+- uid: 29dc5929
+  spec.cplusplus:
+  - name: const uint64_t
+    fullName: const uint64_t
+- uid: ShadowEngine.SHObject.GetTypeId*
+  name: GetTypeId
+  nameWithType: SHObject::GetTypeId
+  fullName: virtual const uint64_t ShadowEngine::SHObject::GetTypeId
+- uid: ShadowEngine.SHObject.~SHObject*
+  name: ~SHObject
+  nameWithType: SHObject::~SHObject
+  fullName: virtual ShadowEngine::SHObject::~SHObject
+- uid: ShadowEngine.Assets.ShadowAsset
+  parent: ShadowEngine.Assets
+  href: ShadowEngine.Assets.ShadowAsset.yml
+  name: ShadowAsset
+  nameWithType: ShadowAsset
+  fullName: ShadowEngine::Assets::ShadowAsset
+  type: Class
+  syntax:
+    content: 'public: class ShadowAsset : public HObject'
+- uid: ShadowEngine.Debug.Inspector
+  parent: ShadowEngine.Debug
+  href: ShadowEngine.Debug.Inspector.yml
+  name: Inspector
+  nameWithType: Inspector
+  fullName: ShadowEngine::Debug::Inspector
+  type: Class
+  syntax:
+    content: 'public: class Inspector : public HObject'
+- uid: ShadowEngine.EntitySystem.Scene
+  parent: ShadowEngine.EntitySystem
+  href: ShadowEngine.EntitySystem.Scene.yml
+  name: Scene
+  nameWithType: Scene
+  fullName: ShadowEngine::EntitySystem::Scene
+  type: Class
+  syntax:
+    content: 'public: class Scene : public HObject'
+- uid: ShadowEngine.EventSystem.ShadowEvent
+  parent: ShadowEngine.EventSystem
+  href: ShadowEngine.EventSystem.ShadowEvent.yml
+  name: ShadowEvent
+  nameWithType: ShadowEvent
+  fullName: ShadowEngine::EventSystem::ShadowEvent
+  type: Class
+  syntax:
+    content: 'public: class ShadowEvent : public HObject'
+- uid: ShadowEngine.InputSystem.IInputBinding
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.IInputBinding.yml
+  name: IInputBinding
+  nameWithType: IInputBinding
+  fullName: ShadowEngine::InputSystem::IInputBinding
+  type: Class
+  summary: "<p>Interface for the Bindings. </p>"
+  syntax:
+    content: 'public: class IInputBinding : public HObject'
+- uid: ShadowEngine.InputSystem.InputModifier
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.InputModifier.yml
+  name: InputModifier
+  nameWithType: InputModifier
+  fullName: ShadowEngine::InputSystem::InputModifier
+  type: Class
+  syntax:
+    content: 'public: class InputModifier : public HObject'
+- uid: ShadowEngine.InputSystem.IShadowAction
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.IShadowAction.yml
+  name: IShadowAction
+  nameWithType: IShadowAction
+  fullName: ShadowEngine::InputSystem::IShadowAction
+  type: Class
+  syntax:
+    content: 'public: class IShadowAction : public HObject'
+- uid: ShadowEngine.Rendering.IShaderProperty
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.IShaderProperty.yml
+  name: IShaderProperty
+  nameWithType: IShaderProperty
+  fullName: ShadowEngine::Rendering::IShaderProperty
+  type: Class
+  syntax:
+    content: 'public: class IShaderProperty : public HObject'
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  name: Entity
+  nameWithType: Entity
+  fullName: ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::Entity
+  type: Class
+  summary: "<p>Base Entity in the scene </p><p>This is the base entity used in the game world. This should never be instanciated only the derived classes </p>"
+  syntax:
+    content: 'public: class Entity : public HObject'
+- uid: ShadowEngine.ShadowModule
+  parent: ShadowEngine
+  href: ShadowEngine.ShadowModule.yml
+  name: ShadowModule
+  nameWithType: ShadowModule
+  fullName: ShadowEngine::ShadowModule
+  type: Class
+  syntax:
+    content: 'public: class ShadowModule : public HObject'
+- uid: _s_h_object_8h

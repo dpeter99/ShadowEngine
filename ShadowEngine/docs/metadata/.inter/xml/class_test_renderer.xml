@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_test_renderer" kind="class" language="C++" prot="public">
+    <compoundname>TestRenderer</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_test_renderer_1a51733f33d717752864666bc9e95fe5f3" prot="private" static="no" mutable="no">
+        <type>ShadowEngine::Ref&lt;<ref refid="class_shadow_engine_1_1_assets_1_1_mesh" kindref="compound">ShadowEngine::Assets::Mesh</ref>&gt;</type>
+        <definition>ShadowEngine::Ref&lt;ShadowEngine::Assets::Mesh&gt; TestRenderer::m_mesh</definition>
+        <argsstring></argsstring>
+        <name>m_mesh</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/TestRenderer.h" line="19" column="1" bodyfile="ShadowEngine/src/TestRenderer.h" bodystart="19" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_test_renderer_1af2b71fa9e4f13f29f34da9045332c9e4" prot="private" static="no" mutable="no">
+        <type>ShadowEngine::Ref&lt;<ref refid="class_shadow_engine_1_1_assets_1_1_mesh" kindref="compound">ShadowEngine::Assets::Mesh</ref>&gt;</type>
+        <definition>ShadowEngine::Ref&lt;ShadowEngine::Assets::Mesh&gt; TestRenderer::m_model</definition>
+        <argsstring></argsstring>
+        <name>m_model</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/TestRenderer.h" line="20" column="1" bodyfile="ShadowEngine/src/TestRenderer.h" bodystart="20" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_test_renderer_1abaf8fd0e8537a74eefda78953f029fd8" prot="private" static="no" mutable="no">
+        <type>ShadowEngine::Ref&lt;<ref refid="class_shadow_engine_1_1_rendering_1_1_shader" kindref="compound">ShadowEngine::Rendering::Shader</ref>&gt;</type>
+        <definition>ShadowEngine::Ref&lt;ShadowEngine::Rendering::Shader&gt; TestRenderer::m_Shader</definition>
+        <argsstring></argsstring>
+        <name>m_Shader</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/TestRenderer.h" line="22" column="1" bodyfile="ShadowEngine/src/TestRenderer.h" bodystart="22" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_test_renderer_1a8e37e1a07424b2de7acc3c96129f78ff" prot="private" static="no" mutable="no">
+        <type>ShadowEngine::Ref&lt;ShadowEngine::Assets::Material&gt;</type>
+        <definition>ShadowEngine::Ref&lt;ShadowEngine::Assets::Material&gt; TestRenderer::m_Material</definition>
+        <argsstring></argsstring>
+        <name>m_Material</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/TestRenderer.h" line="24" column="1" bodyfile="ShadowEngine/src/TestRenderer.h" bodystart="24" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_test_renderer_1ad0752cdae56905a89012fe73d3822c6d" prot="private" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 TestRenderer::m_SquareColor</definition>
+        <argsstring></argsstring>
+        <name>m_SquareColor</name>
+        <initializer>= { 0.2f, 0.3f, 0.8f }</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/TestRenderer.h" line="26" column="1" bodyfile="ShadowEngine/src/TestRenderer.h" bodystart="26" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_test_renderer_1a3dd0d87cbdba2c31e1eb7a6826040cbd" prot="private" static="no" mutable="no">
+        <type>ShadowEngine::Ref&lt;<ref refid="class_shadow_engine_1_1_rendering_1_1_render_node" kindref="compound">ShadowEngine::Rendering::RenderNode</ref>&gt;</type>
+        <definition>ShadowEngine::Ref&lt;ShadowEngine::Rendering::RenderNode&gt; TestRenderer::tri_one</definition>
+        <argsstring></argsstring>
+        <name>tri_one</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/TestRenderer.h" line="28" column="1" bodyfile="ShadowEngine/src/TestRenderer.h" bodystart="28" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_test_renderer_1a6dfb0e91e32807588cee2fdcf8169c37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TestRenderer::TestRenderer</definition>
+        <argsstring>()</argsstring>
+        <name>TestRenderer</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/TestRenderer.h" line="31" column="1" bodyfile="ShadowEngine/src/TestRenderer.cpp" bodystart="8" bodyend="25" />
+      </memberdef>
+      <memberdef kind="function" id="class_test_renderer_1ad253c584aea33984f3f0169e0a316e6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRenderer::Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/TestRenderer.h" line="32" column="1" bodyfile="ShadowEngine/src/TestRenderer.cpp" bodystart="27" bodyend="43" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/TestRenderer.h" line="17" column="1" bodyfile="ShadowEngine/src/TestRenderer.h" bodystart="16" bodyend="33" />
+    <listofallmembers>
+      <member refid="class_test_renderer_1a8e37e1a07424b2de7acc3c96129f78ff" prot="private" virt="non-virtual">
+        <scope>TestRenderer</scope>
+        <name>m_Material</name>
+      </member>
+      <member refid="class_test_renderer_1a51733f33d717752864666bc9e95fe5f3" prot="private" virt="non-virtual">
+        <scope>TestRenderer</scope>
+        <name>m_mesh</name>
+      </member>
+      <member refid="class_test_renderer_1af2b71fa9e4f13f29f34da9045332c9e4" prot="private" virt="non-virtual">
+        <scope>TestRenderer</scope>
+        <name>m_model</name>
+      </member>
+      <member refid="class_test_renderer_1abaf8fd0e8537a74eefda78953f029fd8" prot="private" virt="non-virtual">
+        <scope>TestRenderer</scope>
+        <name>m_Shader</name>
+      </member>
+      <member refid="class_test_renderer_1ad0752cdae56905a89012fe73d3822c6d" prot="private" virt="non-virtual">
+        <scope>TestRenderer</scope>
+        <name>m_SquareColor</name>
+      </member>
+      <member refid="class_test_renderer_1a6dfb0e91e32807588cee2fdcf8169c37" prot="public" virt="non-virtual">
+        <scope>TestRenderer</scope>
+        <name>TestRenderer</name>
+      </member>
+      <member refid="class_test_renderer_1a3dd0d87cbdba2c31e1eb7a6826040cbd" prot="private" virt="non-virtual">
+        <scope>TestRenderer</scope>
+        <name>tri_one</name>
+      </member>
+      <member refid="class_test_renderer_1ad253c584aea33984f3f0169e0a316e6b" prot="public" virt="non-virtual">
+        <scope>TestRenderer</scope>
+        <name>Update</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

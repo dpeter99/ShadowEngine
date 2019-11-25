@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.EntitySystem.EntitySystem" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::EntitySystem::EntitySystem</compoundname>
+    <basecompoundref refid="ShadowEngine.ShadowModule" prot="public" virt="non-virtual">ShadowEngine::ShadowModule</basecompoundref>
+    <includes refid="_entity_system_8h" local="no">EntitySystem.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="ShadowEngine.EntitySystem.EntitySystem.activeScene" prot="private" static="no" mutable="no">
+        <type>SHObject_Base(<ref refid="ShadowEngine.EntitySystem.EntitySystem" kindref="compound">EntitySystem</ref>) private Scope&lt;<ref refid="ShadowEngine.EntitySystem.Scene" kindref="compound">Scene</ref>&gt;</type>
+        <definition>SHObject_Base (EntitySystem) private Scope&lt;Scene&gt; ShadowEngine::EntitySystem::EntitySystem::activeScene</definition>
+        <argsstring></argsstring>
+        <name>activeScene</name>
+        <briefdescription>
+          <para>The main reference to the EntityManager </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>Reference to the active scene </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="25" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.h" bodystart="15" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntitySystem.EntitySystem()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EntitySystem::EntitySystem::EntitySystem</definition>
+        <argsstring>()</argsstring>
+        <name>EntitySystem</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="29" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.cpp" bodystart="6" bodyend="9" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntitySystem.GetName()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string ShadowEngine::EntitySystem::EntitySystem::GetName</definition>
+        <argsstring>() override</argsstring>
+        <name>GetName</name>
+        <reimplements refid="ShadowEngine.ShadowModule.GetName()">GetName</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="31" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.h" bodystart="31" bodyend="31" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntitySystem.Init()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntitySystem::Init</definition>
+        <argsstring>() override</argsstring>
+        <name>Init</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="33" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.cpp" bodystart="11" bodyend="14" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntitySystem.Update()" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntitySystem::Update</definition>
+        <argsstring>() override</argsstring>
+        <name>Update</name>
+        <reimplements refid="ShadowEngine.ShadowModule.Update()">Update</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="34" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.cpp" bodystart="16" bodyend="19" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntitySystem.Render()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntitySystem::Render</definition>
+        <argsstring>() override</argsstring>
+        <name>Render</name>
+        <reimplements refid="ShadowEngine.ShadowModule.Render()">Render</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="36" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.h" bodystart="36" bodyend="36" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntitySystem.LateRender()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntitySystem::LateRender</definition>
+        <argsstring>() override</argsstring>
+        <name>LateRender</name>
+        <reimplements refid="ShadowEngine.ShadowModule.LateRender()">LateRender</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="37" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.h" bodystart="37" bodyend="37" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntitySystem.LoadEmptyScene()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntitySystem::LoadEmptyScene</definition>
+        <argsstring>()</argsstring>
+        <name>LoadEmptyScene</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="39" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.cpp" bodystart="26" bodyend="34" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntitySystem.LoadScene(Scene *)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntitySystem::LoadScene</definition>
+        <argsstring>(Scene *scene)</argsstring>
+        <name>LoadScene</name>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.EntitySystem.Scene" kindref="compound">Scene</ref> *</type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="40" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.cpp" bodystart="36" bodyend="48" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntitySystem.GetActiveScene()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ShadowEngine::Scope&lt;<ref refid="ShadowEngine.EntitySystem.Scene" kindref="compound">Scene</ref>&gt; &amp;</type>
+        <definition>ShadowEngine::Scope&lt;Scene&gt; &amp; ShadowEngine::EntitySystem::EntitySystem::GetActiveScene</definition>
+        <argsstring>()</argsstring>
+        <name>GetActiveScene</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="42" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.cpp" bodystart="21" bodyend="24" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+      <para>The module that manages all the Entities and Scenes </para>
+    </briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="168">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="166">
+        <label>ShadowEngine::EntitySystem::EntitySystem</label>
+        <link refid="ShadowEngine.EntitySystem.EntitySystem" />
+        <childnode refid="167" relation="public-inheritance"></childnode>
+      </node>
+      <node id="167">
+        <label>ShadowEngine::ShadowModule</label>
+        <link refid="ShadowEngine.ShadowModule" />
+        <childnode refid="168" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="171">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="169">
+        <label>ShadowEngine::EntitySystem::EntitySystem</label>
+        <link refid="ShadowEngine.EntitySystem.EntitySystem" />
+        <childnode refid="170" relation="public-inheritance"></childnode>
+      </node>
+      <node id="170">
+        <label>ShadowEngine::ShadowModule</label>
+        <link refid="ShadowEngine.ShadowModule" />
+        <childnode refid="171" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="14" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.h" bodystart="13" bodyend="43" />
+    <listofallmembers>
+      <member refid="ShadowEngine.EntitySystem.EntitySystem.activeScene" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>activeScene</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntitySystem.EntitySystem()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>EntitySystem</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntitySystem.GetActiveScene()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>GetActiveScene</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntitySystem.GetName()" prot="public" virt="virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>GetName</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntitySystem.Init()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>Init</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntitySystem.LateRender()" prot="public" virt="virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>LateRender</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntitySystem.LoadEmptyScene()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>LoadEmptyScene</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntitySystem.LoadScene(Scene *)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>LoadScene</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntitySystem.Render()" prot="public" virt="virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>Render</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntitySystem.Update()" prot="public" virt="virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>Update</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

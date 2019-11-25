@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::Rendering::D3D12::D3D12Shader</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_rendering_1_1_shader" prot="public" virt="non-virtual">ShadowEngine::Rendering::Shader</basecompoundref>
+    <includes refid="_d3_d12_shader_8h" local="no">D3D12Shader.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1ae85482d82ef14d4fb321f0f3516d2d4f" prot="private" static="no" mutable="no">
+        <type>com_ptr&lt;ID3DBlob&gt;</type>
+        <definition>com_ptr&lt;ID3DBlob&gt; ShadowEngine::Rendering::D3D12::D3D12Shader::VertexShaderByteCode</definition>
+        <argsstring></argsstring>
+        <name>VertexShaderByteCode</name>
+        <initializer>{ nullptr }</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="28" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" bodystart="28" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1ae11c1860d1d6da15c009bfcf873250db" prot="private" static="no" mutable="no">
+        <type>com_ptr&lt;ID3DBlob&gt;</type>
+        <definition>com_ptr&lt;ID3DBlob&gt; ShadowEngine::Rendering::D3D12::D3D12Shader::FragmentShaderByteCode</definition>
+        <argsstring></argsstring>
+        <name>FragmentShaderByteCode</name>
+        <initializer>{ nullptr }</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="29" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" bodystart="29" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a327c05f67dbc2ef7c878bcf31d55fff1" prot="private" static="no" mutable="no">
+        <type>com_ptr&lt;ID3D12RootSignature&gt;</type>
+        <definition>com_ptr&lt;ID3D12RootSignature&gt; ShadowEngine::Rendering::D3D12::D3D12Shader::rootSig</definition>
+        <argsstring></argsstring>
+        <name>rootSig</name>
+        <initializer>{ nullptr }</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="31" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" bodystart="31" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1ae9259b5e01e140e6b3ecca58dfb1bf1e" prot="private" static="no" mutable="no">
+        <type>D3D12_BLEND_DESC</type>
+        <definition>D3D12_BLEND_DESC ShadowEngine::Rendering::D3D12::D3D12Shader::blendState</definition>
+        <argsstring></argsstring>
+        <name>blendState</name>
+        <initializer>{}</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="33" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" bodystart="33" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1ab468af7eadb1eae5b68ad4a5a0dc43a2" prot="private" static="no" mutable="no">
+        <type>D3D12_RASTERIZER_DESC</type>
+        <definition>D3D12_RASTERIZER_DESC ShadowEngine::Rendering::D3D12::D3D12Shader::rasterizerState</definition>
+        <argsstring></argsstring>
+        <name>rasterizerState</name>
+        <initializer>{}</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="34" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" bodystart="34" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a1cb79361990973732f8c5f22daff0c56" prot="private" static="no" mutable="no">
+        <type>D3D12_DEPTH_STENCIL_DESC</type>
+        <definition>D3D12_DEPTH_STENCIL_DESC ShadowEngine::Rendering::D3D12::D3D12Shader::depthStencilState</definition>
+        <argsstring></argsstring>
+        <name>depthStencilState</name>
+        <initializer>{}</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="35" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" bodystart="35" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a5eb91b29122f04bf578c8d63ceb029bb" prot="private" static="no" mutable="no">
+        <type>DXGI_FORMAT</type>
+        <definition>DXGI_FORMAT ShadowEngine::Rendering::D3D12::D3D12Shader::dsvFormat</definition>
+        <argsstring></argsstring>
+        <name>dsvFormat</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="36" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" bodystart="36" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1acd1fad2a5e1cd1d51f39ff13d3b877ec" prot="private" static="no" mutable="no">
+        <type>com_ptr&lt;ID3D12PipelineState&gt;</type>
+        <definition>com_ptr&lt;ID3D12PipelineState&gt; ShadowEngine::Rendering::D3D12::D3D12Shader::pipelineState</definition>
+        <argsstring></argsstring>
+        <name>pipelineState</name>
+        <initializer>{ nullptr }</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="38" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" bodystart="38" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1aba1fd7ee3c96450ed3e8b78b36d85164" prot="private" static="no" mutable="no">
+        <type>D3D12_GRAPHICS_PIPELINE_STATE_DESC</type>
+        <definition>D3D12_GRAPHICS_PIPELINE_STATE_DESC ShadowEngine::Rendering::D3D12::D3D12Shader::gpsoDesc</definition>
+        <argsstring></argsstring>
+        <name>gpsoDesc</name>
+        <initializer>{}</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="39" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" bodystart="39" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a0ac81e1053171e4cb2552439b409194a" prot="private" static="no" mutable="no">
+        <type>com_ptr&lt;ID3D12ShaderReflection&gt;</type>
+        <definition>com_ptr&lt;ID3D12ShaderReflection&gt; ShadowEngine::Rendering::D3D12::D3D12Shader::vsReflection</definition>
+        <argsstring></argsstring>
+        <name>vsReflection</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="41" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" bodystart="41" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1ae6cc9f0ddc55d55d26bc54f9c8caa828" prot="private" static="no" mutable="no">
+        <type>com_ptr&lt;ID3D12ShaderReflection&gt;</type>
+        <definition>com_ptr&lt;ID3D12ShaderReflection&gt; ShadowEngine::Rendering::D3D12::D3D12Shader::gsReflection</definition>
+        <argsstring></argsstring>
+        <name>gsReflection</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="42" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" bodystart="42" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a0a385d310e4d24dd94fd69fbb0609713" prot="private" static="no" mutable="no">
+        <type>com_ptr&lt;ID3D12ShaderReflection&gt;</type>
+        <definition>com_ptr&lt;ID3D12ShaderReflection&gt; ShadowEngine::Rendering::D3D12::D3D12Shader::psReflection</definition>
+        <argsstring></argsstring>
+        <name>psReflection</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="43" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" bodystart="43" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1af8acfe3256c6dad2f17c6fab59a9c956" prot="private" static="no" mutable="no">
+        <type>com_ptr&lt;ID3D12RootSignatureDeserializer&gt;</type>
+        <definition>com_ptr&lt;ID3D12RootSignatureDeserializer&gt; ShadowEngine::Rendering::D3D12::D3D12Shader::rsDeserializer</definition>
+        <argsstring></argsstring>
+        <name>rsDeserializer</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="44" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" bodystart="44" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1aad5523ec5da526c1c60921f10f9e54b5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShadowEngine::Rendering::D3D12::D3D12Shader::materialDataIndex</definition>
+        <argsstring></argsstring>
+        <name>materialDataIndex</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="46" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" bodystart="46" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1ac54113eeb2a10c57253ec4ac8eaf263b" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>com_ptr&lt;ID3DBlob&gt;</type>
+        <definition>static com_ptr&lt;ID3DBlob&gt; ShadowEngine::Rendering::D3D12::D3D12Shader::D3D12Shader::LoadCso</definition>
+        <argsstring>(const std::string &amp;VSfilePath)</argsstring>
+        <name>D3D12Shader::LoadCso</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>VSfilePath</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="49" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1ab544854d61a3777a9d662cce8b7abdfe" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>D3D12_INPUT_LAYOUT_DESC</type>
+        <definition>D3D12_INPUT_LAYOUT_DESC ShadowEngine::Rendering::D3D12::D3D12Shader::CreateInputDescriptor</definition>
+        <argsstring>(BufferLayout &amp;layout)</argsstring>
+        <name>CreateInputDescriptor</name>
+        <param>
+          <type>
+            <ref refid="class_shadow_engine_1_1_rendering_1_1_buffer_layout" kindref="compound">BufferLayout</ref> &amp;</type>
+          <declname>layout</declname>
+        </param>
+        <briefdescription>
+          <para>Creates a Input Layout descriptor form BufferLayout. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>layout</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The buffer layout to be converted </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+            <simplesect kind="return">
+              <para>The Input Layout </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="51" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp" bodystart="88" bodyend="111" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1acba1febc24ead2817821389fe88f52f0" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12Shader::CreatePipelineDescriptor</definition>
+        <argsstring>(D3D12_GRAPHICS_PIPELINE_STATE_DESC &amp;psoDesc) const</argsstring>
+        <name>CreatePipelineDescriptor</name>
+        <param>
+          <type>D3D12_GRAPHICS_PIPELINE_STATE_DESC &amp;</type>
+          <declname>psoDesc</declname>
+        </param>
+        <briefdescription>
+          <para>Populates a Pipeline state Descriptor for this shader. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>psoDesc</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The Pipeline State Descriptor to populate </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="50" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp" bodystart="59" bodyend="81" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a081447fda7b3f053c2c7e4da225e9e6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::D3D12::D3D12Shader::D3D12Shader</definition>
+        <argsstring>(const std::string &amp;VSfilePath, const std::string &amp;PSfilePath)</argsstring>
+        <name>D3D12Shader</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>VSfilePath</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>PSfilePath</declname>
+        </param>
+        <briefdescription>
+          <para>Constructor for D3D12 Shaders. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>VSfilePath</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>File path to the Compiled HLSL Vertex shader </para>
+                </parameterdescription>
+              </parameteritem>
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>PSfilePath</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>File path to the Compiled HLSL Fragment shader </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="55" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp" bodystart="118" bodyend="216" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a36bdab78d4fdb435b30d0dcc3bcd6701" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::D3D12::D3D12Shader::~D3D12Shader</definition>
+        <argsstring>()</argsstring>
+        <name>~D3D12Shader</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="56" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp" bodystart="218" bodyend="221" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1af9fc8639fede16fc8db6e04ec13d52dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>com_ptr&lt;ID3D12PipelineState&gt;</type>
+        <definition>com_ptr&lt;ID3D12PipelineState&gt; ShadowEngine::Rendering::D3D12::D3D12Shader::GetPipelineState</definition>
+        <argsstring>()</argsstring>
+        <name>GetPipelineState</name>
+        <briefdescription>
+          <para>Returns the pipeline state. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>Used to get the pipe line state object for the represented shader code. Returns the default Dx12 ID3D12PipelineState object</para>
+          <para>
+            <simplesect kind="return">
+              <para>The com pointer of the root signature </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="65" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp" bodystart="223" bodyend="226" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1aa87df2e491aeb0b8d88d8f44762c048f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>com_ptr&lt;ID3D12RootSignature&gt;</type>
+        <definition>com_ptr&lt;ID3D12RootSignature&gt; ShadowEngine::Rendering::D3D12::D3D12Shader::GetRootSignature</definition>
+        <argsstring>()</argsstring>
+        <name>GetRootSignature</name>
+        <briefdescription>
+          <para>Returns the Root signature. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>Used to get the root signature of the represented shader code. Returns the default Dx12 ID3D12RootSignature object</para>
+          <para>
+            <simplesect kind="return">
+              <para>The com pointer of the root signature </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="74" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp" bodystart="228" bodyend="231" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a79036738e6d3f94d203399532f89e4ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ShadowEngine::Rendering::D3D12::D3D12Shader::GetMaterialSlotIndex</definition>
+        <argsstring>()</argsstring>
+        <name>GetMaterialSlotIndex</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="76" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp" bodystart="233" bodyend="236" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a6ddf408e699a63c57834db95a39fe741" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12Shader::Bind</definition>
+        <argsstring>() const</argsstring>
+        <name>Bind</name>
+        <reimplements refid="class_shadow_engine_1_1_rendering_1_1_shader_1afc05fb8a1a6e995068fe23ff252e908e">Bind</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="78" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp" bodystart="238" bodyend="241" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a2c3962cffc7d480cdecd2b144a9adf4f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12Shader::Unbind</definition>
+        <argsstring>() const</argsstring>
+        <name>Unbind</name>
+        <reimplements refid="class_shadow_engine_1_1_rendering_1_1_shader_1a55ed945a5763d0f55fb906dd0f4ce2fe">Unbind</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="79" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp" bodystart="243" bodyend="246" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+      <para>Represents the shader byte code that can be used to draw. </para>
+    </briefdescription>
+    <detaileddescription>
+      <para>D3D12Shader is the type ShadowEngine uses to represent byte code that has been compiled form HLSL to be used in the Dx12 renderer. Users should not handle D3D12Shader's by itself, but the ShadowEngine::Rendering::Shader class and it's Create function to make sure the shader class is made for the right render API. Sample Usage:</para>
+      <para>var shader = ShadowEngine::Rendering::Shader::CreateFromCompiled("Shaders/Default-VS.cso", "Shaders/Default-FS.cso"); </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="128">
+        <label>ShadowEngine::Rendering::D3D12::D3D12Shader</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader" />
+        <childnode refid="129" relation="public-inheritance"></childnode>
+      </node>
+      <node id="129">
+        <label>ShadowEngine::Rendering::Shader</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_shader" />
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="130">
+        <label>ShadowEngine::Rendering::D3D12::D3D12Shader</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader" />
+        <childnode refid="131" relation="public-inheritance"></childnode>
+      </node>
+      <node id="132">
+        <label>ShadowEngine::Rendering::ShaderPropertySheet</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet" />
+      </node>
+      <node id="131">
+        <label>ShadowEngine::Rendering::Shader</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_shader" />
+        <childnode refid="132" relation="usage">
+          <edgelabel>properties</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" line="27" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.h" bodystart="25" bodyend="81" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a6ddf408e699a63c57834db95a39fe741" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>Bind</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1ae9259b5e01e140e6b3ecca58dfb1bf1e" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>blendState</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_1a7477061178ab257b6759a6ff298dd298" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>Create</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_1aae3d65f64cced607235c648a6ce9e4c9" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>CreateFromCompiled</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1ab544854d61a3777a9d662cce8b7abdfe" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>CreateInputDescriptor</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1acba1febc24ead2817821389fe88f52f0" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>CreatePipelineDescriptor</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a081447fda7b3f053c2c7e4da225e9e6e" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>D3D12Shader</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1ac54113eeb2a10c57253ec4ac8eaf263b" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>D3D12Shader::LoadCso</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a1cb79361990973732f8c5f22daff0c56" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>depthStencilState</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a5eb91b29122f04bf578c8d63ceb029bb" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>dsvFormat</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1ae11c1860d1d6da15c009bfcf873250db" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>FragmentShaderByteCode</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a79036738e6d3f94d203399532f89e4ad" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>GetMaterialSlotIndex</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1af9fc8639fede16fc8db6e04ec13d52dc" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>GetPipelineState</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_1a7d655e5a14f329e121c3d407ddab2643" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>GetPropertiesCopy</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1aa87df2e491aeb0b8d88d8f44762c048f" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>GetRootSignature</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1aba1fd7ee3c96450ed3e8b78b36d85164" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>gpsoDesc</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1ae6cc9f0ddc55d55d26bc54f9c8caa828" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>gsReflection</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1aad5523ec5da526c1c60921f10f9e54b5" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>materialDataIndex</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1acd1fad2a5e1cd1d51f39ff13d3b877ec" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>pipelineState</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_1a53d65d688776b788912489f46a4d5b79" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>properties</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a0a385d310e4d24dd94fd69fbb0609713" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>psReflection</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1ab468af7eadb1eae5b68ad4a5a0dc43a2" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>rasterizerState</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a327c05f67dbc2ef7c878bcf31d55fff1" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>rootSig</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1af8acfe3256c6dad2f17c6fab59a9c956" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>rsDeserializer</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a2c3962cffc7d480cdecd2b144a9adf4f" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>Unbind</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1ae85482d82ef14d4fb321f0f3516d2d4f" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>VertexShaderByteCode</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a0ac81e1053171e4cb2552439b409194a" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>vsReflection</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a36bdab78d4fdb435b30d0dcc3bcd6701" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>~D3D12Shader</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_1ab0d77a3a1c647ec7c1afb4db0d319b7b" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Shader</scope>
+        <name>~Shader</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

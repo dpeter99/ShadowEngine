@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="namespace_shadow_engine_1_1_entity_system" kind="namespace" language="C++">
+    <compoundname>ShadowEngine::EntitySystem</compoundname>
+    <innerclass refid="class_shadow_engine_1_1_entity_system_1_1_entity_manager" prot="public">ShadowEngine::EntitySystem::EntityManager</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_entity_system_1_1_entity_registry" prot="public">ShadowEngine::EntitySystem::EntityRegistry</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_entity_system_1_1_entity_system" prot="public">ShadowEngine::EntitySystem::EntitySystem</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_entity_system_1_1_scene" prot="public">ShadowEngine::EntitySystem::Scene</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" prot="public">ShadowEngine::EntitySystem::SceneEntity</innerclass>
+    <innerclass refid="struct_shadow_engine_1_1_entity_system_1_1_system_callbacks" prot="public">ShadowEngine::EntitySystem::SystemCallbacks</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_entity_8cpp_1abc1e327f56281b4dc22fa48669c60c96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; ShadowEngine::EntitySystem::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const Entity &amp;dt)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const Entity &amp;</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entity.cpp" line="80" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entity.cpp" bodystart="80" bodyend="84" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/EntitySystem/DefaultEntities.cpp" line="14" column="1" />
+  </compounddef>
+</doxygen>

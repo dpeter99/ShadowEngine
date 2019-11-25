@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_descriptor_heap" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::Rendering::D3D12::D3D12DescriptorHeap</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_descriptor_heap_1ab1318f5825d8c9243fe53653c00414f3" prot="private" static="no" mutable="no">
+        <type>com_ptr&lt;ID3D12DescriptorHeap&gt;</type>
+        <definition>com_ptr&lt;ID3D12DescriptorHeap&gt; ShadowEngine::Rendering::D3D12::D3D12DescriptorHeap::_descriptorHeap</definition>
+        <argsstring></argsstring>
+        <name>_descriptorHeap</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12DescriptorHeap.h" line="8" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12DescriptorHeap.h" bodystart="8" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_descriptor_heap_1a2a2f04f53689ea7717d34d4e755cb26d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::D3D12::D3D12DescriptorHeap::D3D12DescriptorHeap</definition>
+        <argsstring>(D3D12_DESCRIPTOR_HEAP_FLAGS flags, D3D12_DESCRIPTOR_HEAP_TYPE type, UINT count)</argsstring>
+        <name>D3D12DescriptorHeap</name>
+        <param>
+          <type>D3D12_DESCRIPTOR_HEAP_FLAGS</type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>D3D12_DESCRIPTOR_HEAP_TYPE</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12DescriptorHeap.h" line="10" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12DescriptorHeap.cpp" bodystart="7" bodyend="17" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_descriptor_heap_1a775f0c0fe2607781697a8c04efdf10a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::D3D12::D3D12DescriptorHeap::~D3D12DescriptorHeap</definition>
+        <argsstring>()</argsstring>
+        <name>~D3D12DescriptorHeap</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12DescriptorHeap.h" line="11" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12DescriptorHeap.cpp" bodystart="19" bodyend="22" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_descriptor_heap_1a291dfcec0ad7f76b8140a712f4993738" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>D3D12_CPU_DESCRIPTOR_HANDLE</type>
+        <definition>D3D12_CPU_DESCRIPTOR_HANDLE ShadowEngine::Rendering::D3D12::D3D12DescriptorHeap::GetCPUDescriptorHandleForHeapStart</definition>
+        <argsstring>()</argsstring>
+        <name>GetCPUDescriptorHandleForHeapStart</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12DescriptorHeap.h" line="13" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12DescriptorHeap.cpp" bodystart="24" bodyend="27" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_descriptor_heap_1a55b82f34c4a2e08c097777a144bae8d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12DescriptorHeap::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12DescriptorHeap.h" line="15" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12DescriptorHeap.cpp" bodystart="29" bodyend="32" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/Platform/D3D12/D3D12DescriptorHeap.h" line="7" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12DescriptorHeap.h" bodystart="6" bodyend="16" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_descriptor_heap_1ab1318f5825d8c9243fe53653c00414f3" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12DescriptorHeap</scope>
+        <name>_descriptorHeap</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_descriptor_heap_1a2a2f04f53689ea7717d34d4e755cb26d" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12DescriptorHeap</scope>
+        <name>D3D12DescriptorHeap</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_descriptor_heap_1a291dfcec0ad7f76b8140a712f4993738" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12DescriptorHeap</scope>
+        <name>GetCPUDescriptorHandleForHeapStart</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_descriptor_heap_1a55b82f34c4a2e08c097777a144bae8d5" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12DescriptorHeap</scope>
+        <name>Reset</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_descriptor_heap_1a775f0c0fe2607781697a8c04efdf10a8" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12DescriptorHeap</scope>
+        <name>~D3D12DescriptorHeap</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

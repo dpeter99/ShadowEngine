@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.ShadowEngine.ShadowEntity.Transform" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::ShadowEngine::ShadowEntity::Transform</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.transformChanged" prot="public" static="no" mutable="no">
+        <type>
+          <ref refid="Callback" kindref="compound">Callback</ref>
+        </type>
+        <definition>Callback ShadowEngine::ShadowEngine::ShadowEntity::Transform::transformChanged</definition>
+        <argsstring></argsstring>
+        <name>transformChanged</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="38" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="38" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.entity" prot="public" static="no" mutable="no">
+        <type>EntitySystem::rtm_ptr&lt;EntitySystem::Entity&gt;</type>
+        <definition>EntitySystem::rtm_ptr&lt;EntitySystem::Entity&gt; ShadowEngine::ShadowEngine::ShadowEntity::Transform::entity</definition>
+        <argsstring></argsstring>
+        <name>entity</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="40" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="40" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.position" prot="private" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 ShadowEngine::ShadowEngine::ShadowEntity::Transform::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="50" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="50" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.scale" prot="private" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 ShadowEngine::ShadowEngine::ShadowEntity::Transform::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="51" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="51" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.rot" prot="private" static="no" mutable="no">
+        <type>glm::quat</type>
+        <definition>glm::quat ShadowEngine::ShadowEngine::ShadowEntity::Transform::rot</definition>
+        <argsstring></argsstring>
+        <name>rot</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="52" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="52" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.w_position" prot="private" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 ShadowEngine::ShadowEngine::ShadowEntity::Transform::w_position</definition>
+        <argsstring></argsstring>
+        <name>w_position</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="54" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="54" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.w_scale" prot="private" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 ShadowEngine::ShadowEngine::ShadowEntity::Transform::w_scale</definition>
+        <argsstring></argsstring>
+        <name>w_scale</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="55" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="55" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.w_rot" prot="private" static="no" mutable="no">
+        <type>glm::quat</type>
+        <definition>glm::quat ShadowEngine::ShadowEngine::ShadowEntity::Transform::w_rot</definition>
+        <argsstring></argsstring>
+        <name>w_rot</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="56" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="56" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.mat" prot="private" static="no" mutable="no">
+        <type>glm::mat4</type>
+        <definition>glm::mat4 ShadowEngine::ShadowEngine::ShadowEntity::Transform::mat</definition>
+        <argsstring></argsstring>
+        <name>mat</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="58" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="58" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.w_mat" prot="private" static="no" mutable="no">
+        <type>glm::mat4</type>
+        <definition>glm::mat4 ShadowEngine::ShadowEngine::ShadowEntity::Transform::w_mat</definition>
+        <argsstring></argsstring>
+        <name>w_mat</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="60" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="60" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::ShadowEntity::Transform::Transform</definition>
+        <argsstring>()</argsstring>
+        <name>Transform</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="19" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.cpp" bodystart="12" bodyend="19" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform(glm::vec3)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::ShadowEntity::Transform::Transform</definition>
+        <argsstring>(glm::vec3 pos)</argsstring>
+        <name>Transform</name>
+        <param>
+          <type>glm::vec3</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="20" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.cpp" bodystart="21" bodyend="26" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform(glm::vec3,glm::vec3)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::ShadowEntity::Transform::Transform</definition>
+        <argsstring>(glm::vec3 pos, glm::vec3 size)</argsstring>
+        <name>Transform</name>
+        <param>
+          <type>glm::vec3</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>glm::vec3</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="21" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.cpp" bodystart="28" bodyend="33" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform(glm::vec3,glm::vec3,glm::quat)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::ShadowEntity::Transform::Transform</definition>
+        <argsstring>(glm::vec3 pos, glm::vec3 size, glm::quat rotation)</argsstring>
+        <name>Transform</name>
+        <param>
+          <type>glm::vec3</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>glm::vec3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>glm::quat</type>
+          <declname>rotation</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="22" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.cpp" bodystart="35" bodyend="39" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetPosition()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetPosition</definition>
+        <argsstring>()</argsstring>
+        <name>GetPosition</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="24" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="24" bodyend="24" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetPosition(glm::vec3)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowEntity::Transform::SetPosition</definition>
+        <argsstring>(glm::vec3 val)</argsstring>
+        <name>SetPosition</name>
+        <param>
+          <type>glm::vec3</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="25" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.cpp" bodystart="41" bodyend="54" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetScale()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetScale</definition>
+        <argsstring>()</argsstring>
+        <name>GetScale</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="27" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="27" bodyend="27" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetScale(glm::vec3)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowEngine::ShadowEntity::Transform::SetScale</definition>
+        <argsstring>(glm::vec3 val)</argsstring>
+        <name>SetScale</name>
+        <param>
+          <type>glm::vec3</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="28" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="28" bodyend="28" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetRotation()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>glm::quat</type>
+        <definition>glm::quat ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetRotation</definition>
+        <argsstring>()</argsstring>
+        <name>GetRotation</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="30" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="30" bodyend="30" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetRotation(glm::quat)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowEngine::ShadowEntity::Transform::SetRotation</definition>
+        <argsstring>(glm::quat val)</argsstring>
+        <name>SetRotation</name>
+        <param>
+          <type>glm::quat</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="31" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="31" bodyend="31" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetTransformMatrix()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>glm::mat4</type>
+        <definition>glm::mat4 ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetTransformMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>GetTransformMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="33" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="33" bodyend="33" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetWorldTransformMatrix()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>glm::mat4</type>
+        <definition>glm::mat4 ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetWorldTransformMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>GetWorldTransformMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="34" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="34" bodyend="34" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.AssignEntity(EntitySystem::Entity *)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowEngine::ShadowEntity::Transform::AssignEntity</definition>
+        <argsstring>(EntitySystem::Entity *e)</argsstring>
+        <name>AssignEntity</name>
+        <param>
+          <type>EntitySystem::Entity *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="36" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="36" bodyend="36" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateMatrix()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowEntity::Transform::UpdateMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="44" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.cpp" bodystart="56" bodyend="60" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateLocalMatrix()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowEntity::Transform::UpdateLocalMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateLocalMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="45" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.cpp" bodystart="62" bodyend="71" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateWorldMatrix()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowEntity::Transform::UpdateWorldMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateWorldMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="46" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.cpp" bodystart="73" bodyend="81" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <collaborationgraph>
+      <node id="665">
+        <label>Callback</label>
+        <link refid="Callback" />
+      </node>
+      <node id="664">
+        <label>ShadowEngine::ShadowEngine::ShadowEntity::Transform</label>
+        <link refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform" />
+        <childnode refid="665" relation="usage">
+          <edgelabel>transformChanged</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowMath/Transform.h" line="17" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="16" bodyend="61" />
+    <listofallmembers>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.AssignEntity(EntitySystem::Entity *)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>AssignEntity</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.entity" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>entity</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetPosition()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>GetPosition</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetRotation()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>GetRotation</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetScale()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>GetScale</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetTransformMatrix()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>GetTransformMatrix</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetWorldTransformMatrix()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>GetWorldTransformMatrix</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.mat" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>mat</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.position" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>position</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.rot" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>rot</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.scale" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>scale</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetPosition(glm::vec3)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>SetPosition</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetRotation(glm::quat)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>SetRotation</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetScale(glm::vec3)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>SetScale</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>Transform</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform(glm::vec3)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>Transform</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform(glm::vec3,glm::vec3)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>Transform</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform(glm::vec3,glm::vec3,glm::quat)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>Transform</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.transformChanged" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>transformChanged</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateLocalMatrix()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>UpdateLocalMatrix</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateMatrix()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>UpdateMatrix</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateWorldMatrix()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>UpdateWorldMatrix</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.w_mat" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>w_mat</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.w_position" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>w_position</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.w_rot" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>w_rot</name>
+      </member>
+      <member refid="ShadowEngine.ShadowEngine.ShadowEntity.Transform.w_scale" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>w_scale</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.EventSystem.Events" kind="namespace" language="C++">
+    <compoundname>ShadowEngine::EventSystem::Events</compoundname>
+    <innerclass refid="ShadowEngine.EventSystem.Events.KeyEvent" prot="public">ShadowEngine::EventSystem::Events::KeyEvent</innerclass>
+    <innerclass refid="ShadowEngine.EventSystem.Events.KeyPressedEvent" prot="public">ShadowEngine::EventSystem::Events::KeyPressedEvent</innerclass>
+    <innerclass refid="ShadowEngine.EventSystem.Events.KeyReleasedEvent" prot="public">ShadowEngine::EventSystem::Events::KeyReleasedEvent</innerclass>
+    <innerclass refid="ShadowEngine.EventSystem.Events.KeyTypedEvent" prot="public">ShadowEngine::EventSystem::Events::KeyTypedEvent</innerclass>
+    <innerclass refid="ShadowEngine.EventSystem.Events.MouseButtonEvent" prot="public">ShadowEngine::EventSystem::Events::MouseButtonEvent</innerclass>
+    <innerclass refid="ShadowEngine.EventSystem.Events.MouseButtonPressedEvent" prot="public">ShadowEngine::EventSystem::Events::MouseButtonPressedEvent</innerclass>
+    <innerclass refid="ShadowEngine.EventSystem.Events.MouseButtonReleasedEvent" prot="public">ShadowEngine::EventSystem::Events::MouseButtonReleasedEvent</innerclass>
+    <innerclass refid="ShadowEngine.EventSystem.Events.MouseMovedEvent" prot="public">ShadowEngine::EventSystem::Events::MouseMovedEvent</innerclass>
+    <innerclass refid="ShadowEngine.EventSystem.Events.MouseScrolledEvent" prot="public">ShadowEngine::EventSystem::Events::MouseScrolledEvent</innerclass>
+    <innerclass refid="ShadowEngine.EventSystem.Events.WindowCloseEvent" prot="public">ShadowEngine::EventSystem::Events::WindowCloseEvent</innerclass>
+    <innerclass refid="ShadowEngine.EventSystem.Events.WindowResizeEvent" prot="public">ShadowEngine::EventSystem::Events::WindowResizeEvent</innerclass>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/ShadowEvents/Events/ApplicationEvent.h" line="6" column="1" />
+  </compounddef>
+</doxygen>

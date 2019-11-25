@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="Camera" kind="class" language="C++" prot="public">
+    <compoundname>Camera</compoundname>
+    <basecompoundref refid="ShadowEngine.EntitySystem.SceneEntity" prot="public" virt="non-virtual">ShadowEngine::EntitySystem::SceneEntity</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="Camera.m_ProjectionMatrix" prot="private" static="no" mutable="no">
+        <type>glm::mat4</type>
+        <definition>glm::mat4 Camera::m_ProjectionMatrix</definition>
+        <argsstring></argsstring>
+        <name>m_ProjectionMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Camera.h" line="27" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Camera.h" bodystart="27" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="Camera.m_ViewMatrix" prot="private" static="no" mutable="no">
+        <type>glm::mat4</type>
+        <definition>glm::mat4 Camera::m_ViewMatrix</definition>
+        <argsstring></argsstring>
+        <name>m_ViewMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Camera.h" line="28" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Camera.h" bodystart="28" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="Camera.m_ViewProjectionMatrix" prot="private" static="no" mutable="no">
+        <type>glm::mat4</type>
+        <definition>glm::mat4 Camera::m_ViewProjectionMatrix</definition>
+        <argsstring></argsstring>
+        <name>m_ViewProjectionMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Camera.h" line="29" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Camera.h" bodystart="29" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="Camera.type" prot="private" static="no" mutable="no">
+        <type>CameraType</type>
+        <definition>CameraType Camera::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Camera.h" line="31" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Camera.h" bodystart="31" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="Camera.ortho_height" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Camera::ortho_height</definition>
+        <argsstring></argsstring>
+        <name>ortho_height</name>
+        <initializer>= 2</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Camera.h" line="34" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Camera.h" bodystart="34" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="Camera.SHObject_Base(Camera)" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Camera::SHObject_Base</definition>
+        <argsstring>(Camera) Entity_Base(Camera</argsstring>
+        <name>SHObject_Base</name>
+        <param>
+          <type>
+            <ref refid="Camera" kindref="compound">Camera</ref>
+          </type>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Camera.h" line="15" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="Camera.TransformChanged(bool)" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Camera::TransformChanged</definition>
+        <argsstring>(bool self) override</argsstring>
+        <name>TransformChanged</name>
+        <reimplements refid="ShadowEngine.EntitySystem.SceneEntity.TransformChanged(bool)">TransformChanged</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Camera.h" line="19" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Camera.cpp" bodystart="8" bodyend="22" />
+      </memberdef>
+      <memberdef kind="function" id="Camera.ortho_RecalculateViewMatrix()" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Camera::ortho_RecalculateViewMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>ortho_RecalculateViewMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Camera.h" line="21" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Camera.cpp" bodystart="57" bodyend="61" />
+      </memberdef>
+      <memberdef kind="function" id="Camera.ortho_Setup()" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Camera::ortho_Setup</definition>
+        <argsstring>()</argsstring>
+        <name>ortho_Setup</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Camera.h" line="22" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Camera.cpp" bodystart="41" bodyend="55" />
+      </memberdef>
+      <memberdef kind="function" id="Camera.persp_RecalculateViewMatrix()" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Camera::persp_RecalculateViewMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>persp_RecalculateViewMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Camera.h" line="24" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Camera.cpp" bodystart="76" bodyend="80" />
+      </memberdef>
+      <memberdef kind="function" id="Camera.persp_Setup()" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Camera::persp_Setup</definition>
+        <argsstring>()</argsstring>
+        <name>persp_Setup</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Camera.h" line="25" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Camera.cpp" bodystart="66" bodyend="74" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="Camera.GetProjectionMatrix()" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const glm::mat4 &amp;</type>
+        <definition>const glm::mat4&amp; Camera::GetProjectionMatrix</definition>
+        <argsstring>() const</argsstring>
+        <name>GetProjectionMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Camera.h" line="37" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Camera.h" bodystart="37" bodyend="37" />
+      </memberdef>
+      <memberdef kind="function" id="Camera.GetViewMatrix()" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const glm::mat4 &amp;</type>
+        <definition>const glm::mat4&amp; Camera::GetViewMatrix</definition>
+        <argsstring>() const</argsstring>
+        <name>GetViewMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Camera.h" line="38" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Camera.h" bodystart="38" bodyend="38" />
+      </memberdef>
+      <memberdef kind="function" id="Camera.GetViewProjectionMatrix()" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const glm::mat4 &amp;</type>
+        <definition>const glm::mat4&amp; Camera::GetViewProjectionMatrix</definition>
+        <argsstring>() const</argsstring>
+        <name>GetViewProjectionMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Camera.h" line="39" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Camera.h" bodystart="39" bodyend="39" />
+      </memberdef>
+      <memberdef kind="function" id="Camera.SetCameraType(CameraType)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Camera::SetCameraType</definition>
+        <argsstring>(CameraType t)</argsstring>
+        <name>SetCameraType</name>
+        <param>
+          <type>CameraType</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Camera.h" line="41" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Camera.cpp" bodystart="24" bodyend="39" />
+      </memberdef>
+      <memberdef kind="function" id="Camera.Init()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Camera::Init</definition>
+        <argsstring>() override</argsstring>
+        <name>Init</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Camera.h" line="52" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Camera.cpp" bodystart="85" bodyend="90" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="76">
+        <label>ShadowEngine::EntitySystem::SceneEntity</label>
+        <link refid="ShadowEngine.EntitySystem.SceneEntity" />
+        <childnode refid="77" relation="public-inheritance"></childnode>
+      </node>
+      <node id="75">
+        <label>Camera</label>
+        <link refid="Camera" />
+        <childnode refid="76" relation="public-inheritance"></childnode>
+      </node>
+      <node id="77">
+        <label>Entity</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="79">
+        <label>ShadowEngine::EntitySystem::SceneEntity</label>
+        <link refid="ShadowEngine.EntitySystem.SceneEntity" />
+        <childnode refid="80" relation="public-inheritance"></childnode>
+      </node>
+      <node id="78">
+        <label>Camera</label>
+        <link refid="Camera" />
+        <childnode refid="79" relation="public-inheritance"></childnode>
+      </node>
+      <node id="80">
+        <label>Entity</label>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/EntitySystem/Entities/Camera.h" line="13" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Camera.h" bodystart="11" bodyend="55" />
+    <listofallmembers>
+      <member refid="Camera.GetProjectionMatrix()" prot="public" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>GetProjectionMatrix</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.SceneEntity.GetTransform()" prot="public" virt="virtual">
+        <scope>Camera</scope>
+        <name>GetTransform</name>
+      </member>
+      <member refid="Camera.GetViewMatrix()" prot="public" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>GetViewMatrix</name>
+      </member>
+      <member refid="Camera.GetViewProjectionMatrix()" prot="public" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>GetViewProjectionMatrix</name>
+      </member>
+      <member refid="Camera.Init()" prot="public" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>Init</name>
+      </member>
+      <member refid="Camera.m_ProjectionMatrix" prot="private" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>m_ProjectionMatrix</name>
+      </member>
+      <member refid="Camera.m_ViewMatrix" prot="private" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>m_ViewMatrix</name>
+      </member>
+      <member refid="Camera.m_ViewProjectionMatrix" prot="private" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>m_ViewProjectionMatrix</name>
+      </member>
+      <member refid="Camera.ortho_height" prot="private" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>ortho_height</name>
+      </member>
+      <member refid="Camera.ortho_RecalculateViewMatrix()" prot="private" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>ortho_RecalculateViewMatrix</name>
+      </member>
+      <member refid="Camera.ortho_Setup()" prot="private" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>ortho_Setup</name>
+      </member>
+      <member refid="Camera.persp_RecalculateViewMatrix()" prot="private" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>persp_RecalculateViewMatrix</name>
+      </member>
+      <member refid="Camera.persp_Setup()" prot="private" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>persp_Setup</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.SceneEntity.SceneEntity()" prot="public" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>SceneEntity</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.SceneEntity.SceneEntity(EntitySystem::Scene *)" prot="public" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>SceneEntity</name>
+      </member>
+      <member refid="Camera.SetCameraType(CameraType)" prot="public" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>SetCameraType</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.SceneEntity.SetParent(rtm_ptr&lt;Entity&gt;)" prot="public" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>SetParent</name>
+      </member>
+      <member refid="Camera.SHObject_Base(Camera)" prot="private" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>SHObject_Base</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.SceneEntity.transform" prot="public" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>transform</name>
+      </member>
+      <member refid="Camera.TransformChanged(bool)" prot="private" virt="virtual">
+        <scope>Camera</scope>
+        <name>TransformChanged</name>
+      </member>
+      <member refid="Camera.type" prot="private" virt="non-virtual">
+        <scope>Camera</scope>
+        <name>type</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

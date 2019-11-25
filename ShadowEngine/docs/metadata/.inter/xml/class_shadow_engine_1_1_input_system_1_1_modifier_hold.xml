@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_input_system_1_1_modifier_hold" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::InputSystem::ModifierHold</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_input_system_1_1_input_modifier" prot="public" virt="non-virtual">ShadowEngine::InputSystem::InputModifier</basecompoundref>
+    <includes refid="_modifier_hold_8h" local="no">ModifierHold.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_input_system_1_1_modifier_hold_1a1af758903836cd132ef899908fdbf759" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ShadowEngine::InputSystem::ModifierHold::deltaTime</definition>
+        <argsstring></argsstring>
+        <name>deltaTime</name>
+        <briefdescription>
+          <para>The time spent active. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h" line="22" column="1" bodyfile="ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h" bodystart="22" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_input_system_1_1_modifier_hold_1a13e6e589f9dfaaa59d2fc5f80c4697da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::ModifierHold::SHObject_Base</definition>
+        <argsstring>(ModifierHold) double wait_</argsstring>
+        <name>SHObject_Base</name>
+        <param>
+          <type>
+            <ref refid="class_shadow_engine_1_1_input_system_1_1_modifier_hold" kindref="compound">ModifierHold</ref>
+          </type>
+        </param>
+        <briefdescription>
+          <para>The time it waits. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h" line="12" column="1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_input_system_1_1_modifier_hold_1a088371aecc73b6fdc8f675fe77c4b1a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double ShadowEngine::InputSystem::ModifierHold::GetWaitTime</definition>
+        <argsstring>()</argsstring>
+        <name>GetWaitTime</name>
+        <briefdescription>
+          <para>Gets the time this will wait for. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <simplesect kind="return">
+              <para></para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h" line="30" column="1" bodyfile="ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.cpp" bodystart="8" bodyend="11" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_input_system_1_1_modifier_hold_1a0a2eecc2db80e891aeb39bca24215928" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double ShadowEngine::InputSystem::ModifierHold::GetDeltaTime</definition>
+        <argsstring>()</argsstring>
+        <name>GetDeltaTime</name>
+        <briefdescription>
+          <para>Gets the current delta time. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <simplesect kind="return">
+              <para></para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h" line="36" column="1" bodyfile="ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.cpp" bodystart="13" bodyend="16" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_input_system_1_1_modifier_hold_1aa3133d26e5e698cb527e8f3d39e45b38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ModifierHold::ProcessInput</definition>
+        <argsstring>(ModifierContext &amp;ctx) override</argsstring>
+        <name>ProcessInput</name>
+        <param>
+          <type>
+            <ref refid="class_shadow_engine_1_1_input_system_1_1_modifier_context" kindref="compound">ModifierContext</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h" line="38" column="1" bodyfile="ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.cpp" bodystart="18" bodyend="38" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_input_system_1_1_modifier_hold_1abd983d014ddd326bd6e87cbb6bb9faca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::ModifierHold::ModifierHold</definition>
+        <argsstring>(const double time)</argsstring>
+        <name>ModifierHold</name>
+        <param>
+          <type>const double</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+          <para>Constructor, gets the time it should wait. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>time</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>Wait time </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h" line="44" column="1" bodyfile="ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h" bodystart="44" bodyend="47" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_input_system_1_1_modifier_hold_1a1fb1935fe106ae8fab1106f5e6465445" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::ModifierHold::~ModifierHold</definition>
+        <argsstring>()</argsstring>
+        <name>~ModifierHold</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h" line="49" column="1" bodyfile="ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h" bodystart="49" bodyend="52" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_input_system_1_1_modifier_hold_1a8260997bad2dfaf4f25739c5695ce0a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ShadowEngine::InputSystem::ModifierHold::RequiresContinuous</definition>
+        <argsstring>() override</argsstring>
+        <name>RequiresContinuous</name>
+        <reimplements refid="class_shadow_engine_1_1_input_system_1_1_input_modifier_1a352b39cf3aed4e7a4a3c82948626d93b">RequiresContinuous</reimplements>
+        <briefdescription>
+          <para>Processes a event. Called after the binding processed it. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>ctx</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>Modifier context that provides data about the event Weather this modifier needs the binding to act continuous </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+            <simplesect kind="return">
+              <para>true if it needs continuous binding </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h" line="54" column="1" bodyfile="ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.cpp" bodystart="40" bodyend="43" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+      <para>Hold modifier. Only activates when the binding has been active for the specified time. </para>
+    </briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="377">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="375">
+        <label>ShadowEngine::InputSystem::ModifierHold</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_modifier_hold" />
+        <childnode refid="376" relation="public-inheritance"></childnode>
+      </node>
+      <node id="376">
+        <label>ShadowEngine::InputSystem::InputModifier</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_input_modifier" />
+        <childnode refid="377" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="380">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="378">
+        <label>ShadowEngine::InputSystem::ModifierHold</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_modifier_hold" />
+        <childnode refid="379" relation="public-inheritance"></childnode>
+      </node>
+      <node id="379">
+        <label>ShadowEngine::InputSystem::InputModifier</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_input_modifier" />
+        <childnode refid="380" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h" line="11" column="1" bodyfile="ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h" bodystart="9" bodyend="55" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_input_system_1_1_modifier_hold_1a1af758903836cd132ef899908fdbf759" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ModifierHold</scope>
+        <name>deltaTime</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a35bf9fdc604caa67e1a2f1b0a9c574f2" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ModifierHold</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_input_system_1_1_modifier_hold_1a0a2eecc2db80e891aeb39bca24215928" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ModifierHold</scope>
+        <name>GetDeltaTime</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a230ca5dec944e67f8d57dfc743da7d94" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::ModifierHold</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::ModifierHold</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_input_system_1_1_modifier_hold_1a088371aecc73b6fdc8f675fe77c4b1a2" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ModifierHold</scope>
+        <name>GetWaitTime</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_input_system_1_1_modifier_hold_1abd983d014ddd326bd6e87cbb6bb9faca" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ModifierHold</scope>
+        <name>ModifierHold</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_input_system_1_1_modifier_hold_1aa3133d26e5e698cb527e8f3d39e45b38" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ModifierHold</scope>
+        <name>ProcessInput</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_input_system_1_1_modifier_hold_1a8260997bad2dfaf4f25739c5695ce0a5" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ModifierHold</scope>
+        <name>RequiresContinuous</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_input_system_1_1_modifier_hold_1a13e6e589f9dfaaa59d2fc5f80c4697da" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ModifierHold</scope>
+        <name>SHObject_Base</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_input_system_1_1_modifier_hold_1a1fb1935fe106ae8fab1106f5e6465445" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ModifierHold</scope>
+        <name>~ModifierHold</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ModifierHold</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

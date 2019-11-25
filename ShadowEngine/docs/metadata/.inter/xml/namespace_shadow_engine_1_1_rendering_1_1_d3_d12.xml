@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="namespace_shadow_engine_1_1_rendering_1_1_d3_d12" kind="namespace" language="C++">
+    <compoundname>ShadowEngine::Rendering::D3D12</compoundname>
+    <innerclass refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list" prot="public">ShadowEngine::Rendering::D3D12::D3D12CommandList</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_queue" prot="public">ShadowEngine::Rendering::D3D12::D3D12CommandQueue</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer" prot="public">ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_context" prot="public">ShadowEngine::Rendering::D3D12::D3D12Context</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_depth_buffer" prot="public">ShadowEngine::Rendering::D3D12::D3D12DepthBuffer</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_descriptor_heap" prot="public">ShadowEngine::Rendering::D3D12::D3D12DescriptorHeap</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_fence" prot="public">ShadowEngine::Rendering::D3D12::D3D12Fence</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_index_buffer" prot="public">ShadowEngine::Rendering::D3D12::D3D12IndexBuffer</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_renderer_a_p_i" prot="public">ShadowEngine::Rendering::D3D12::D3D12RendererAPI</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader" prot="public">ShadowEngine::Rendering::D3D12::D3D12Shader</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_swap_chain" prot="public">ShadowEngine::Rendering::D3D12::D3D12SwapChain</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer" prot="public">ShadowEngine::Rendering::D3D12::D3D12VertexBuffer</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_h_result_tester" prot="public">ShadowEngine::Rendering::D3D12::HResultTester</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_common_8h_1aff33f05885a8a048c86d73b54b5badbe" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>Microsoft::WRL::ComPtr&lt;T&gt;</type>
+        <definition>using ShadowEngine::Rendering::D3D12::com_ptr = typedef Microsoft::WRL::ComPtr&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>com_ptr</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/Common.h" line="27" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/Common.h" bodystart="27" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_common_8h_1adee8202d7af220a55d2ea9d7010338a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* ShadowEngine::Rendering::D3D12::BlobAsString</definition>
+        <argsstring>(com_ptr&lt;ID3DBlob&gt; blob)</argsstring>
+        <name>BlobAsString</name>
+        <param>
+          <type>com_ptr&lt;ID3DBlob&gt;</type>
+          <declname>blob</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/Common.h" line="32" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/Common.h" bodystart="32" bodyend="34" />
+      </memberdef>
+      <memberdef kind="function" id="_common_8h_1a4aeb6393b3ebec161460906668573d4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::wstring</type>
+        <definition>std::wstring ShadowEngine::Rendering::D3D12::WFormat</definition>
+        <argsstring>(const wchar_t *format,...)</argsstring>
+        <name>WFormat</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/Common.h" line="59" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/Common.h" bodystart="59" bodyend="68" />
+      </memberdef>
+      <memberdef kind="function" id="_d3_d12_renderer_a_p_i_8cpp_1a70d1d9042fe8322c6c76a60a0524f3b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::GetAdapters</definition>
+        <argsstring>(IDXGIFactory6 *dxgiFactory, std::vector&lt;com_ptr&lt;IDXGIAdapter1&gt;&gt; &amp;adapters)</argsstring>
+        <name>GetAdapters</name>
+        <param>
+          <type>IDXGIFactory6 *</type>
+          <declname>dxgiFactory</declname>
+        </param>
+        <param>
+          <type>std::vector&lt;com_ptr&lt;IDXGIAdapter1&gt;&gt; &amp;</type>
+          <declname>adapters</declname>
+        </param>
+        <briefdescription>
+          <para>Loads the GPU adapters. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>dxgiFactory</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>DXGI factory instance </para>
+                </parameterdescription>
+              </parameteritem>
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>adapters</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>Returns the Vector of adapters </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12RendererAPI.cpp" line="23" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12RendererAPI.cpp" bodystart="23" bodyend="48" />
+      </memberdef>
+      <memberdef kind="function" id="_d3_d12_shader_8cpp_1af271c3d21922350cdc61da352560e637" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DXGI_FORMAT</type>
+        <definition>static DXGI_FORMAT ShadowEngine::Rendering::D3D12::ShaderDataTypeToD3D12BaseType</definition>
+        <argsstring>(ShaderDataType type)</argsstring>
+        <name>ShaderDataTypeToD3D12BaseType</name>
+        <param>
+          <type>ShaderDataType</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp" line="9" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp" bodystart="9" bodyend="25" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/Platform/D3D12/Common.h" line="25" column="1" />
+  </compounddef>
+</doxygen>

@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.Vertex
+  id: ShadowEngine.Rendering.Vertex
+  parent: ShadowEngine.Rendering
+  children:
+  - ShadowEngine.Rendering.Vertex.color
+  - ShadowEngine.Rendering.Vertex.input_layout
+  - ShadowEngine.Rendering.Vertex.normal
+  - ShadowEngine.Rendering.Vertex.pos
+  - ShadowEngine.Rendering.Vertex.uv
+  href: ShadowEngine.Rendering.Vertex.yml
+  langs:
+  - cplusplus
+  name: Vertex
+  nameWithType: Vertex
+  fullName: ShadowEngine::Rendering::Vertex
+  type: Struct
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 7
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 8
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: struct Vertex'
+- uid: ShadowEngine.Rendering.Vertex.color
+  id: ShadowEngine.Rendering.Vertex.color
+  parent: ShadowEngine.Rendering.Vertex
+  href: ShadowEngine.Rendering.Vertex.yml
+  langs:
+  - cplusplus
+  name: color
+  nameWithType: Vertex::color
+  fullName: glm::vec4 ShadowEngine::Rendering::Vertex::color
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 13
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 13
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: glm::vec4 color'
+    return:
+      type: 01c2af4d
+- uid: ShadowEngine.Rendering.Vertex.input_layout
+  id: ShadowEngine.Rendering.Vertex.input_layout
+  parent: ShadowEngine.Rendering.Vertex
+  href: ShadowEngine.Rendering.Vertex.yml
+  langs:
+  - cplusplus
+  name: input_layout
+  nameWithType: Vertex::input_layout
+  fullName: BufferLayout ShadowEngine::Rendering::Vertex::input_layout
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 18
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 18
+  namespace: ShadowEngine.Rendering
+  summary: "<p>The default layout of the meshes being used. </p>"
+  syntax:
+    content: >-
+      public: static BufferLayout input_layout=	{
+      		{ ShadowEngine::Rendering::ShaderDataType::Float3, "POSITION" },
+      		{ ShadowEngine::Rendering::ShaderDataType::Float3, "NORMAL" },
+      		{ ShadowEngine::Rendering::ShaderDataType::Float2, "TEXCOORD" },
+      		{ ShadowEngine::Rendering::ShaderDataType::Float4, "COLOR" },
+      	}
+    return:
+      type: ShadowEngine.Rendering.BufferLayout
+- uid: ShadowEngine.Rendering.Vertex.normal
+  id: ShadowEngine.Rendering.Vertex.normal
+  parent: ShadowEngine.Rendering.Vertex
+  href: ShadowEngine.Rendering.Vertex.yml
+  langs:
+  - cplusplus
+  name: normal
+  nameWithType: Vertex::normal
+  fullName: glm::vec3 ShadowEngine::Rendering::Vertex::normal
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 10
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 10
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: glm::vec3 normal'
+    return:
+      type: 369f4715
+- uid: ShadowEngine.Rendering.Vertex.pos
+  id: ShadowEngine.Rendering.Vertex.pos
+  parent: ShadowEngine.Rendering.Vertex
+  href: ShadowEngine.Rendering.Vertex.yml
+  langs:
+  - cplusplus
+  name: pos
+  nameWithType: Vertex::pos
+  fullName: glm::vec3 ShadowEngine::Rendering::Vertex::pos
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 9
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 9
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: glm::vec3 pos'
+    return:
+      type: 369f4715
+- uid: ShadowEngine.Rendering.Vertex.uv
+  id: ShadowEngine.Rendering.Vertex.uv
+  parent: ShadowEngine.Rendering.Vertex
+  href: ShadowEngine.Rendering.Vertex.yml
+  langs:
+  - cplusplus
+  name: uv
+  nameWithType: Vertex::uv
+  fullName: glm::vec2 ShadowEngine::Rendering::Vertex::uv
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 11
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 11
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: glm::vec2 uv'
+    return:
+      type: 74cd7bbc
+references:
+- uid: 369f4715
+  spec.cplusplus:
+  - name: glm::vec3
+    fullName: glm::vec3
+- uid: 74cd7bbc
+  spec.cplusplus:
+  - name: glm::vec2
+    fullName: glm::vec2
+- uid: 01c2af4d
+  spec.cplusplus:
+  - name: glm::vec4
+    fullName: glm::vec4
+- uid: ShadowEngine.Rendering.BufferLayout
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.BufferLayout.yml
+  name: BufferLayout
+  nameWithType: BufferLayout
+  fullName: ShadowEngine::Rendering::BufferLayout
+  type: Class
+  syntax:
+    content: 'public: class BufferLayout'

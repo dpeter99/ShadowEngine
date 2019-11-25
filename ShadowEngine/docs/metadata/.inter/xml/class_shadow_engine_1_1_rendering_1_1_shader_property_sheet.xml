@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::Rendering::ShaderPropertySheet</compoundname>
+    <includes refid="_shader_property_sheet_8h" local="no">ShaderPropertySheet.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1a5fde78dd64467e2d728fc221b566cf9e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt;std::unique_ptr&lt;<ref refid="class_shadow_engine_1_1_rendering_1_1_i_shader_property" kindref="compound">IShaderProperty</ref>&gt;&gt;</type>
+        <definition>std::vector&lt;std::unique_ptr&lt;IShaderProperty&gt;&gt; ShadowEngine::Rendering::ShaderPropertySheet::shaderProperties</definition>
+        <argsstring></argsstring>
+        <name>shaderProperties</name>
+        <briefdescription>
+          <para>The shader properties. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>The shader properties stored in std::unique_ptr -s as this object is the owner. </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="80" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="80" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1ac6f94f47cb64f1a6ecbcf6c78f6db764" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ShadowEngine::Rendering::ShaderPropertySheet::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <initializer>= 0</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="82" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="82" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1a19db1a78ed92e47b0b1f0955acbec9c7" prot="private" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* ShadowEngine::Rendering::ShaderPropertySheet::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="83" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="83" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1ae5d5f47e783a8903d6afb6bd25d25108" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::ShaderPropertySheet::ShaderPropertySheet</definition>
+        <argsstring>(const ShaderPropertySheet &amp;a)</argsstring>
+        <name>ShaderPropertySheet</name>
+        <param>
+          <type>const <ref refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet" kindref="compound">ShaderPropertySheet</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+          <para>Copy constructor, makes sure the properties are copied , new ones are created. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>a</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The Copy-from parameter </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="90" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="90" bodyend="98" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1ae500e75087379a9b3844f89f96a173bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::ShaderPropertySheet::ShaderPropertySheet</definition>
+        <argsstring>()=default</argsstring>
+        <name>ShaderPropertySheet</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="100" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1a5b92b1ed97692067cd9b44050623cb53" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t ShadowEngine::Rendering::ShaderPropertySheet::GetPropertyCount</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPropertyCount</name>
+        <briefdescription>
+          <para>Returns the number of properties. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <simplesect kind="return">
+              <para>Num of properties </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="106" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="106" bodyend="106" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1a6d4371388287aa5590df99de0a4d38d8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t ShadowEngine::Rendering::ShaderPropertySheet::GetSize</definition>
+        <argsstring>() const</argsstring>
+        <name>GetSize</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="108" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="108" bodyend="108" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1a7e617d93093138e4edb6cda0f6b51722" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Scope&lt;<ref refid="class_shadow_engine_1_1_rendering_1_1_i_shader_property" kindref="compound">IShaderProperty</ref>&gt; &amp;</type>
+        <definition>Scope&lt;IShaderProperty&gt;&amp; ShadowEngine::Rendering::ShaderPropertySheet::GetProperty</definition>
+        <argsstring>(size_t i)</argsstring>
+        <name>GetProperty</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+          <para>Gets a property by index. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>i</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The index of the needed property </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+            <simplesect kind="return">
+              <para>The IShaderProperty that was requested </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="115" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="115" bodyend="118" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1ab9cf519984e6ee31e65ccb12bffb8b15" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Scope&lt;<ref refid="class_shadow_engine_1_1_rendering_1_1_i_shader_property" kindref="compound">IShaderProperty</ref>&gt; &amp;</type>
+        <definition>const Scope&lt;IShaderProperty&gt;&amp; ShadowEngine::Rendering::ShaderPropertySheet::GetProperty</definition>
+        <argsstring>(size_t i) const</argsstring>
+        <name>GetProperty</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+          <para>Gets a property by index on const ShaderPropertySheet. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>i</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The index of the needed property </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+            <simplesect kind="return">
+              <para>The IShaderProperty that was requested as const </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="125" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="125" bodyend="128" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1a0d6e15cb832663198f552a5ef466c17c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>
+          <ref refid="class_shadow_engine_1_1_rendering_1_1_shader_property" kindref="compound">ShaderProperty</ref>&lt;T&gt; *</type>
+        <definition>ShaderProperty&lt;T&gt;* ShadowEngine::Rendering::ShaderPropertySheet::GetProperty</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>GetProperty</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+          <para>Returns a Property by name and type. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="templateparam">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>T</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The type of the value stored in the property being requested </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>name</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The name of the property being requested </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+            <simplesect kind="return">
+              <para>Pointer to the ShaderProperty&lt;T&gt; that was requested </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="137" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="137" bodyend="149" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1a71ddccb01da9bd9e799a2449cebb6403" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>
+          <ref refid="class_shadow_engine_1_1_rendering_1_1_shader_property" kindref="compound">ShaderProperty</ref>&lt;T&gt; const  *</type>
+        <definition>ShaderProperty&lt;T&gt; const* ShadowEngine::Rendering::ShaderPropertySheet::GetProperty</definition>
+        <argsstring>(std::string name) const</argsstring>
+        <name>GetProperty</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+          <para>Returns a Property by name and type on a const ShaderPropertySheet. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="templateparam">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>T</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The type of the value stored in the property being requested </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>name</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The name of the property being requested </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+            <simplesect kind="return">
+              <para>Pointer to the ShaderProperty&lt;T&gt; that was requested as const </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="158" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="158" bodyend="168" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1ae970f4b21ba0c857023b6e29caa06c8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::ShaderPropertySheet::AddProperty</definition>
+        <argsstring>(IShaderProperty *p)</argsstring>
+        <name>AddProperty</name>
+        <param>
+          <type>
+            <ref refid="class_shadow_engine_1_1_rendering_1_1_i_shader_property" kindref="compound">IShaderProperty</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="170" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="170" bodyend="174" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1aec49dee834036436a6aa5056adaa37c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* ShadowEngine::Rendering::ShaderPropertySheet::Finalize</definition>
+        <argsstring>()</argsstring>
+        <name>Finalize</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="176" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="176" bodyend="189" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1a4f5996091815f77722c9fac7cf9b0486" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* ShadowEngine::Rendering::ShaderPropertySheet::UpdataStruct</definition>
+        <argsstring>()</argsstring>
+        <name>UpdataStruct</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="191" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="191" bodyend="204" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1ad68aa82ed3242f2eab174e9d6de0aad9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* ShadowEngine::Rendering::ShaderPropertySheet::GetDataStruct</definition>
+        <argsstring>()</argsstring>
+        <name>GetDataStruct</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="206" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="206" bodyend="209" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+      <para>Variables in a shader. </para>
+    </briefdescription>
+    <detaileddescription>
+      <para>ShaderPropertySheet Contains the variables defined by a shader. </para>
+    </detaileddescription>
+    <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="74" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="73" bodyend="212" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1ae970f4b21ba0c857023b6e29caa06c8a" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderPropertySheet</scope>
+        <name>AddProperty</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1a19db1a78ed92e47b0b1f0955acbec9c7" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderPropertySheet</scope>
+        <name>data</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1aec49dee834036436a6aa5056adaa37c2" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderPropertySheet</scope>
+        <name>Finalize</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1ad68aa82ed3242f2eab174e9d6de0aad9" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderPropertySheet</scope>
+        <name>GetDataStruct</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1a7e617d93093138e4edb6cda0f6b51722" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderPropertySheet</scope>
+        <name>GetProperty</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1ab9cf519984e6ee31e65ccb12bffb8b15" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderPropertySheet</scope>
+        <name>GetProperty</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1a0d6e15cb832663198f552a5ef466c17c" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderPropertySheet</scope>
+        <name>GetProperty</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1a71ddccb01da9bd9e799a2449cebb6403" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderPropertySheet</scope>
+        <name>GetProperty</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1a5b92b1ed97692067cd9b44050623cb53" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderPropertySheet</scope>
+        <name>GetPropertyCount</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1a6d4371388287aa5590df99de0a4d38d8" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderPropertySheet</scope>
+        <name>GetSize</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1a5fde78dd64467e2d728fc221b566cf9e" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderPropertySheet</scope>
+        <name>shaderProperties</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1ae5d5f47e783a8903d6afb6bd25d25108" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderPropertySheet</scope>
+        <name>ShaderPropertySheet</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1ae500e75087379a9b3844f89f96a173bd" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderPropertySheet</scope>
+        <name>ShaderPropertySheet</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1ac6f94f47cb64f1a6ecbcf6c78f6db764" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderPropertySheet</scope>
+        <name>size</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet_1a4f5996091815f77722c9fac7cf9b0486" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderPropertySheet</scope>
+        <name>UpdataStruct</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

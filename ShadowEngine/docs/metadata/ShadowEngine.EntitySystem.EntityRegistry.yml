@@ -1,0 +1,258 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.EntitySystem.EntityRegistry
+  id: ShadowEngine.EntitySystem.EntityRegistry
+  parent: ShadowEngine.EntitySystem
+  children:
+  - ShadowEngine.EntitySystem.EntityRegistry._registry
+  - ShadowEngine.EntitySystem.EntityRegistry.EntityRegistry()
+  - ShadowEngine.EntitySystem.EntityRegistry.EntityRegistryMap
+  - ShadowEngine.EntitySystem.EntityRegistry.InstaciateEntity(std::string)
+  - ShadowEngine.EntitySystem.EntityRegistry.ListPreRegisteredEntitys()
+  - ShadowEngine.EntitySystem.EntityRegistry.PreRegisterDefaults()
+  - ShadowEngine.EntitySystem.EntityRegistry.RegisterEntity(std::string,Entity *)
+  href: ShadowEngine.EntitySystem.EntityRegistry.yml
+  langs:
+  - cplusplus
+  name: EntityRegistry
+  nameWithType: EntityRegistry
+  fullName: ShadowEngine::EntitySystem::EntityRegistry
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/EntitySystem/EntityRegistry.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/EntitySystem/EntityRegistry.h
+    startLine: 13
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityRegistry.h
+    startLine: 14
+  namespace: ShadowEngine.EntitySystem
+  syntax: &o2
+    content: 'public: class EntityRegistry'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.EntitySystem.EntityRegistry._registry
+  id: ShadowEngine.EntitySystem.EntityRegistry._registry
+  parent: ShadowEngine.EntitySystem.EntityRegistry
+  href: ShadowEngine.EntitySystem.EntityRegistry.yml
+  langs:
+  - cplusplus
+  name: _registry
+  nameWithType: EntityRegistry::_registry
+  fullName: EntityRegistry * ShadowEngine::EntitySystem::EntityRegistry::_registry
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityRegistry.h
+    startLine: 19
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityRegistry.h
+    startLine: 19
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: static EntityRegistry * _registry= nullptr'
+    return:
+      type: ShadowEngine.EntitySystem.EntityRegistry68bc11b4
+- uid: ShadowEngine.EntitySystem.EntityRegistry.EntityRegistry()
+  id: ShadowEngine.EntitySystem.EntityRegistry.EntityRegistry()
+  parent: ShadowEngine.EntitySystem.EntityRegistry
+  href: ShadowEngine.EntitySystem.EntityRegistry.yml
+  langs:
+  - cplusplus
+  name: EntityRegistry()
+  nameWithType: EntityRegistry::EntityRegistry()
+  fullName: ShadowEngine::EntitySystem::EntityRegistry::EntityRegistry()
+  overload: ShadowEngine.EntitySystem.EntityRegistry.EntityRegistry*
+  type: Constructor
+  source:
+    remote: &o1
+      path: ShadowEngine/src/EntitySystem/EntityRegistry.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/EntitySystem/EntityRegistry.cpp
+    startLine: 28
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityRegistry.h
+    startLine: 21
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: EntityRegistry()'
+- uid: ShadowEngine.EntitySystem.EntityRegistry.EntityRegistryMap
+  id: ShadowEngine.EntitySystem.EntityRegistry.EntityRegistryMap
+  parent: ShadowEngine.EntitySystem.EntityRegistry
+  href: ShadowEngine.EntitySystem.EntityRegistry.yml
+  langs:
+  - cplusplus
+  name: EntityRegistryMap
+  nameWithType: EntityRegistry::EntityRegistryMap
+  fullName: std::map<std::string, Entity*> ShadowEngine::EntitySystem::EntityRegistry::EntityRegistryMap
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityRegistry.h
+    startLine: 25
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityRegistry.h
+    startLine: 25
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: std::map<std::string, Entity *> EntityRegistryMap'
+    return:
+      type: b3718fcd
+- uid: ShadowEngine.EntitySystem.EntityRegistry.InstaciateEntity(std::string)
+  id: string)
+  parent: ShadowEngine.EntitySystem.EntityRegistry
+  href: ShadowEngine.EntitySystem.EntityRegistry.yml
+  langs:
+  - cplusplus
+  name: InstaciateEntity(std::string)
+  nameWithType: EntityRegistry::InstaciateEntity(std::string)
+  fullName: Entity * ShadowEngine::EntitySystem::EntityRegistry::InstaciateEntity(std::string)
+  overload: ShadowEngine.EntitySystem.EntityRegistry.InstaciateEntity*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/EntityRegistry.cpp
+    startLine: 41
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityRegistry.h
+    startLine: 34
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: Entity * InstaciateEntity(std::string)'
+    parameters:
+    - type: 9626e5dd
+    return:
+      type: 0cd3982e
+- uid: ShadowEngine.EntitySystem.EntityRegistry.ListPreRegisteredEntitys()
+  id: ShadowEngine.EntitySystem.EntityRegistry.ListPreRegisteredEntitys()
+  parent: ShadowEngine.EntitySystem.EntityRegistry
+  href: ShadowEngine.EntitySystem.EntityRegistry.yml
+  langs:
+  - cplusplus
+  name: ListPreRegisteredEntitys()
+  nameWithType: EntityRegistry::ListPreRegisteredEntitys()
+  fullName: void ShadowEngine::EntitySystem::EntityRegistry::ListPreRegisteredEntitys()
+  overload: ShadowEngine.EntitySystem.EntityRegistry.ListPreRegisteredEntitys*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/EntityRegistry.cpp
+    startLine: 19
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityRegistry.h
+    startLine: 30
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: void ListPreRegisteredEntitys()'
+- uid: ShadowEngine.EntitySystem.EntityRegistry.PreRegisterDefaults()
+  id: ShadowEngine.EntitySystem.EntityRegistry.PreRegisterDefaults()
+  parent: ShadowEngine.EntitySystem.EntityRegistry
+  href: ShadowEngine.EntitySystem.EntityRegistry.yml
+  langs:
+  - cplusplus
+  name: PreRegisterDefaults()
+  nameWithType: EntityRegistry::PreRegisterDefaults()
+  fullName: void ShadowEngine::EntitySystem::EntityRegistry::PreRegisterDefaults()
+  overload: ShadowEngine.EntitySystem.EntityRegistry.PreRegisterDefaults*
+  type: Method
+  source:
+    remote:
+      path: ShadowEngine/src/EntitySystem/DefaultEntities.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/EntitySystem/DefaultEntities.cpp
+    startLine: 14
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityRegistry.h
+    startLine: 39
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: void PreRegisterDefaults()'
+- uid: ShadowEngine.EntitySystem.EntityRegistry.RegisterEntity(std::string,Entity *)
+  id: string,Entity *)
+  parent: ShadowEngine.EntitySystem.EntityRegistry
+  href: ShadowEngine.EntitySystem.EntityRegistry.yml
+  langs:
+  - cplusplus
+  name: RegisterEntity(std::string, Entity *entityTemplate)
+  nameWithType: EntityRegistry::RegisterEntity(std::string, Entity *entityTemplate)
+  fullName: bool ShadowEngine::EntitySystem::EntityRegistry::RegisterEntity(std::string, Entity *entityTemplate)
+  overload: ShadowEngine.EntitySystem.EntityRegistry.RegisterEntity*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/EntityRegistry.cpp
+    startLine: 13
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityRegistry.h
+    startLine: 28
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: bool RegisterEntity(std::string, Entity *entityTemplate)'
+    parameters:
+    - type: 9626e5dd
+    - id: entityTemplate
+      type: 0cd3982e
+    return:
+      type: 13ff06c5
+references:
+- uid: ShadowEngine.EntitySystem.EntityRegistry68bc11b4
+  spec.cplusplus:
+  - uid: ShadowEngine.EntitySystem.EntityRegistry
+  - name: " *"
+    fullName: " *"
+- uid: b3718fcd
+  spec.cplusplus:
+  - name: std::map<std::string, Entity *>
+    fullName: std::map<std::string, Entity *>
+- uid: ShadowEngine.EntitySystem.EntityRegistry.EntityRegistry*
+  name: EntityRegistry
+  nameWithType: EntityRegistry::EntityRegistry
+  fullName: ShadowEngine::EntitySystem::EntityRegistry::EntityRegistry
+- uid: 9626e5dd
+  spec.cplusplus:
+  - name: std::string
+    fullName: std::string
+- uid: 0cd3982e
+  spec.cplusplus:
+  - name: Entity *
+    fullName: Entity *
+- uid: 13ff06c5
+  spec.cplusplus:
+  - name: bool
+    fullName: bool
+- uid: ShadowEngine.EntitySystem.EntityRegistry.RegisterEntity*
+  name: RegisterEntity
+  nameWithType: EntityRegistry::RegisterEntity
+  fullName: bool ShadowEngine::EntitySystem::EntityRegistry::RegisterEntity
+- uid: ShadowEngine.EntitySystem.EntityRegistry.ListPreRegisteredEntitys*
+  name: ListPreRegisteredEntitys
+  nameWithType: EntityRegistry::ListPreRegisteredEntitys
+  fullName: void ShadowEngine::EntitySystem::EntityRegistry::ListPreRegisteredEntitys
+- uid: ShadowEngine.EntitySystem.EntityRegistry.InstaciateEntity*
+  name: InstaciateEntity
+  nameWithType: EntityRegistry::InstaciateEntity
+  fullName: Entity * ShadowEngine::EntitySystem::EntityRegistry::InstaciateEntity
+- uid: ShadowEngine.EntitySystem.EntityRegistry.PreRegisterDefaults*
+  name: PreRegisterDefaults
+  nameWithType: EntityRegistry::PreRegisterDefaults
+  fullName: void ShadowEngine::EntitySystem::EntityRegistry::PreRegisterDefaults
+- uid: ShadowEngine.EntitySystem.EntityRegistry
+  parent: ShadowEngine.EntitySystem
+  href: ShadowEngine.EntitySystem.EntityRegistry.yml
+  name: EntityRegistry
+  nameWithType: EntityRegistry
+  fullName: ShadowEngine::EntitySystem::EntityRegistry
+  type: Class
+  syntax: *o2

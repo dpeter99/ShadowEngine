@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.InputSystem.KeyboardBindingInspector" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::InputSystem::KeyboardBindingInspector</compoundname>
+    <basecompoundref refid="ShadowEngine.Debug.Inspector" prot="public" virt="non-virtual">ShadowEngine::Debug::Inspector</basecompoundref>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="ShadowEngine.InputSystem.KeyboardBindingInspector.SHObject_Base(KeyboardBindingInspector)" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::KeyboardBindingInspector::SHObject_Base</definition>
+        <argsstring>(KeyboardBindingInspector) public</argsstring>
+        <name>SHObject_Base</name>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.InputSystem.KeyboardBindingInspector" kindref="compound">KeyboardBindingInspector</ref>
+          </type>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Inspectors/KeyboardBindingInspector.h" line="16" column="1" bodyfile="ShadowEngine/src/ShadowInput/Inspectors/KeyboardBindingInspector.h" bodystart="16" bodyend="30" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="289">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="287">
+        <label>ShadowEngine::InputSystem::KeyboardBindingInspector</label>
+        <link refid="ShadowEngine.InputSystem.KeyboardBindingInspector" />
+        <childnode refid="288" relation="public-inheritance"></childnode>
+      </node>
+      <node id="288">
+        <label>ShadowEngine::Debug::Inspector</label>
+        <link refid="ShadowEngine.Debug.Inspector" />
+        <childnode refid="289" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="292">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="290">
+        <label>ShadowEngine::InputSystem::KeyboardBindingInspector</label>
+        <link refid="ShadowEngine.InputSystem.KeyboardBindingInspector" />
+        <childnode refid="291" relation="public-inheritance"></childnode>
+      </node>
+      <node id="291">
+        <label>ShadowEngine::Debug::Inspector</label>
+        <link refid="ShadowEngine.Debug.Inspector" />
+        <childnode refid="292" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowInput/Inspectors/KeyboardBindingInspector.h" line="15" column="1" bodyfile="ShadowEngine/src/ShadowInput/Inspectors/KeyboardBindingInspector.h" bodystart="12" bodyend="31" />
+    <listofallmembers>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBindingInspector</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBindingInspector</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBindingInspector</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.KeyboardBindingInspector.SHObject_Base(KeyboardBindingInspector)" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBindingInspector</scope>
+        <name>SHObject_Base</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBindingInspector</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.InputSystem.ShadowActionSystem" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::InputSystem::ShadowActionSystem</compoundname>
+    <basecompoundref refid="ShadowEngine.ShadowModule" prot="public" virt="non-virtual">ShadowEngine::ShadowModule</basecompoundref>
+    <basecompoundref refid="ShadowEngine.EventSystem.IShadowEventListener" prot="public" virt="non-virtual">ShadowEngine::EventSystem::IShadowEventListener</basecompoundref>
+    <includes refid="_shadow_action_system_8h" local="no">ShadowActionSystem.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.ShadowActionSystem._instance" prot="public" static="yes" mutable="no">
+        <type>
+          <ref refid="ShadowEngine.InputSystem.ShadowActionSystem" kindref="compound">ShadowActionSystem</ref> *</type>
+        <definition>ShadowActionSystem * ShadowEngine::InputSystem::ShadowActionSystem::_instance</definition>
+        <argsstring></argsstring>
+        <name>_instance</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" line="20" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" bodystart="20" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.ShadowActionSystem.actions" prot="public" static="no" mutable="no">
+        <type>std::list&lt;<ref refid="ShadowEngine.InputSystem.IShadowAction" kindref="compound">IShadowAction</ref> *&gt;</type>
+        <definition>std::list&lt;IShadowAction*&gt; ShadowEngine::InputSystem::ShadowActionSystem::actions</definition>
+        <argsstring></argsstring>
+        <name>actions</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" line="22" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" bodystart="22" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowActionSystem.ShadowActionSystem()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::ShadowActionSystem::ShadowActionSystem</definition>
+        <argsstring>()</argsstring>
+        <name>ShadowActionSystem</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" line="24" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowActionSystem.cpp" bodystart="38" bodyend="41" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowActionSystem.~ShadowActionSystem()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::ShadowActionSystem::~ShadowActionSystem</definition>
+        <argsstring>()</argsstring>
+        <name>~ShadowActionSystem</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" line="25" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowActionSystem.cpp" bodystart="44" bodyend="50" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowActionSystem.AddEvent(IShadowAction *)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowActionSystem::AddEvent</definition>
+        <argsstring>(IShadowAction *a)</argsstring>
+        <name>AddEvent</name>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.InputSystem.IShadowAction" kindref="compound">IShadowAction</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" line="27" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowActionSystem.cpp" bodystart="18" bodyend="21" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowActionSystem.GetAction(std::string)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="ShadowEngine.InputSystem.IShadowAction" kindref="compound">IShadowAction</ref> *</type>
+        <definition>IShadowAction* ShadowEngine::InputSystem::ShadowActionSystem::GetAction</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>GetAction</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" line="29" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowActionSystem.OnEvent(EventSystem::ShadowEvent &amp;)" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowActionSystem::OnEvent</definition>
+        <argsstring>(EventSystem::ShadowEvent &amp;e) override</argsstring>
+        <name>OnEvent</name>
+        <reimplements refid="ShadowEngine.EventSystem.IShadowEventListener.OnEvent(ShadowEvent &amp;)">OnEvent</reimplements>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.EventSystem.ShadowEvent" kindref="compound">EventSystem::ShadowEvent</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" line="33" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowActionSystem.cpp" bodystart="10" bodyend="16" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowActionSystem.Init()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowActionSystem::Init</definition>
+        <argsstring>() override</argsstring>
+        <name>Init</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" line="35" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowActionSystem.cpp" bodystart="23" bodyend="28" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowActionSystem.Update()" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowActionSystem::Update</definition>
+        <argsstring>() override</argsstring>
+        <name>Update</name>
+        <reimplements refid="ShadowEngine.ShadowModule.Update()">Update</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" line="36" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowActionSystem.cpp" bodystart="30" bodyend="36" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowActionSystem.Render()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowActionSystem::Render</definition>
+        <argsstring>() override</argsstring>
+        <name>Render</name>
+        <reimplements refid="ShadowEngine.ShadowModule.Render()">Render</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" line="37" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" bodystart="37" bodyend="37" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowActionSystem.LateRender()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowActionSystem::LateRender</definition>
+        <argsstring>() override</argsstring>
+        <name>LateRender</name>
+        <reimplements refid="ShadowEngine.ShadowModule.LateRender()">LateRender</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" line="38" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" bodystart="38" bodyend="38" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowActionSystem.GetName()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string ShadowEngine::InputSystem::ShadowActionSystem::GetName</definition>
+        <argsstring>() override</argsstring>
+        <name>GetName</name>
+        <reimplements refid="ShadowEngine.ShadowModule.GetName()">GetName</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" line="40" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" bodystart="40" bodyend="40" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowActionSystem.RegisterInspectors()" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowActionSystem::RegisterInspectors</definition>
+        <argsstring>()</argsstring>
+        <name>RegisterInspectors</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" line="43" column="1" bodyfile="ShadowEngine/src/ShadowInput/Inspectors/ShadowInputInspectors.cpp" bodystart="21" bodyend="40" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+      <para>The Action system. </para>
+    </briefdescription>
+    <detaileddescription>
+      <para>This stores and processes the events </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="499">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="500">
+        <label>ShadowEngine::EventSystem::IShadowEventListener</label>
+        <link refid="ShadowEngine.EventSystem.IShadowEventListener" />
+      </node>
+      <node id="498">
+        <label>ShadowEngine::ShadowModule</label>
+        <link refid="ShadowEngine.ShadowModule" />
+        <childnode refid="499" relation="public-inheritance"></childnode>
+      </node>
+      <node id="497">
+        <label>ShadowEngine::InputSystem::ShadowActionSystem</label>
+        <link refid="ShadowEngine.InputSystem.ShadowActionSystem" />
+        <childnode refid="498" relation="public-inheritance"></childnode>
+        <childnode refid="500" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="503">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="504">
+        <label>ShadowEngine::EventSystem::IShadowEventListener</label>
+        <link refid="ShadowEngine.EventSystem.IShadowEventListener" />
+      </node>
+      <node id="502">
+        <label>ShadowEngine::ShadowModule</label>
+        <link refid="ShadowEngine.ShadowModule" />
+        <childnode refid="503" relation="public-inheritance"></childnode>
+      </node>
+      <node id="501">
+        <label>ShadowEngine::InputSystem::ShadowActionSystem</label>
+        <link refid="ShadowEngine.InputSystem.ShadowActionSystem" />
+        <childnode refid="502" relation="public-inheritance"></childnode>
+        <childnode refid="504" relation="public-inheritance"></childnode>
+        <childnode refid="501" relation="usage">
+          <edgelabel>_instance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" line="16" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowActionSystem.h" bodystart="13" bodyend="45" />
+    <listofallmembers>
+      <member refid="ShadowEngine.InputSystem.ShadowActionSystem._instance" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>_instance</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowActionSystem.actions" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>actions</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowActionSystem.AddEvent(IShadowAction *)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>AddEvent</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowActionSystem.GetAction(std::string)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>GetAction</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowActionSystem.GetName()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>GetName</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowActionSystem.Init()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>Init</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.IShadowEventListener.IShadowEventListener()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>IShadowEventListener</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowActionSystem.LateRender()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>LateRender</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowActionSystem.OnEvent(EventSystem::ShadowEvent &amp;)" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>OnEvent</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowActionSystem.RegisterInspectors()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>RegisterInspectors</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowActionSystem.Render()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>Render</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowActionSystem.ShadowActionSystem()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>ShadowActionSystem</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowActionSystem.Update()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>Update</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.IShadowEventListener.~IShadowEventListener()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>~IShadowEventListener</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowActionSystem.~ShadowActionSystem()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>~ShadowActionSystem</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowActionSystem</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

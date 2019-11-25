@@ -1,0 +1,415 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.ShaderPropertySheet
+  id: ShadowEngine.Rendering.ShaderPropertySheet
+  parent: ShadowEngine.Rendering
+  children:
+  - ShadowEngine.Rendering.ShaderPropertySheet.AddProperty(IShaderProperty *)
+  - ShadowEngine.Rendering.ShaderPropertySheet.Finalize()
+  - ShadowEngine.Rendering.ShaderPropertySheet.GetDataStruct()
+  - ShadowEngine.Rendering.ShaderPropertySheet.GetProperty(size_t)
+  - ShadowEngine.Rendering.ShaderPropertySheet.GetProperty(std::string)
+  - ShadowEngine.Rendering.ShaderPropertySheet.GetPropertyCount()
+  - ShadowEngine.Rendering.ShaderPropertySheet.GetSize()
+  - ShadowEngine.Rendering.ShaderPropertySheet.ShaderPropertySheet()
+  - ShadowEngine.Rendering.ShaderPropertySheet.ShaderPropertySheet(const ShaderPropertySheet &)
+  - ShadowEngine.Rendering.ShaderPropertySheet.UpdataStruct()
+  href: ShadowEngine.Rendering.ShaderPropertySheet.yml
+  langs:
+  - cplusplus
+  name: ShaderPropertySheet
+  nameWithType: ShaderPropertySheet
+  fullName: ShadowEngine::Rendering::ShaderPropertySheet
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 72
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 73
+  namespace: ShadowEngine.Rendering
+  summary: "<p>Variables in a shader. </p><p>ShaderPropertySheet Contains the variables defined by a shader. </p>"
+  syntax: &o1
+    content: 'public: class ShaderPropertySheet'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.AddProperty(IShaderProperty *)
+  id: ShadowEngine.Rendering.ShaderPropertySheet.AddProperty(IShaderProperty *)
+  parent: ShadowEngine.Rendering.ShaderPropertySheet
+  href: ShadowEngine.Rendering.ShaderPropertySheet.yml
+  langs:
+  - cplusplus
+  name: AddProperty(IShaderProperty *p)
+  nameWithType: ShaderPropertySheet::AddProperty(IShaderProperty *p)
+  fullName: void ShadowEngine::Rendering::ShaderPropertySheet::AddProperty(IShaderProperty *p)
+  overload: ShadowEngine.Rendering.ShaderPropertySheet.AddProperty*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 169
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 169
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: void AddProperty(IShaderProperty *p)'
+    parameters:
+    - id: p
+      type: ShadowEngine.Rendering.IShaderProperty68bc11b4
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.Finalize()
+  id: ShadowEngine.Rendering.ShaderPropertySheet.Finalize()
+  parent: ShadowEngine.Rendering.ShaderPropertySheet
+  href: ShadowEngine.Rendering.ShaderPropertySheet.yml
+  langs:
+  - cplusplus
+  name: Finalize()
+  nameWithType: ShaderPropertySheet::Finalize()
+  fullName: void* ShadowEngine::Rendering::ShaderPropertySheet::Finalize()
+  overload: ShadowEngine.Rendering.ShaderPropertySheet.Finalize*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 175
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 175
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: void * Finalize()'
+    return:
+      type: 7ca192cd
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.GetDataStruct()
+  id: ShadowEngine.Rendering.ShaderPropertySheet.GetDataStruct()
+  parent: ShadowEngine.Rendering.ShaderPropertySheet
+  href: ShadowEngine.Rendering.ShaderPropertySheet.yml
+  langs:
+  - cplusplus
+  name: GetDataStruct()
+  nameWithType: ShaderPropertySheet::GetDataStruct()
+  fullName: void* ShadowEngine::Rendering::ShaderPropertySheet::GetDataStruct()
+  overload: ShadowEngine.Rendering.ShaderPropertySheet.GetDataStruct*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 205
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 205
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: void * GetDataStruct()'
+    return:
+      type: 7ca192cd
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.GetProperty(size_t)
+  id: ShadowEngine.Rendering.ShaderPropertySheet.GetProperty(size_t)
+  parent: ShadowEngine.Rendering.ShaderPropertySheet
+  href: ShadowEngine.Rendering.ShaderPropertySheet.yml
+  langs:
+  - cplusplus
+  name: GetProperty(size_t i)
+  nameWithType: ShaderPropertySheet::GetProperty(size_t i)
+  fullName: Scope<IShaderProperty>& ShadowEngine::Rendering::ShaderPropertySheet::GetProperty(size_t i)
+  overload: ShadowEngine.Rendering.ShaderPropertySheet.GetProperty*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 114
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 114
+  namespace: ShadowEngine.Rendering
+  summary: "<p>Gets a property by index. </p>"
+  syntax:
+    content: 'public: Scope<IShaderProperty> & GetProperty(size_t i)'
+    parameters:
+    - id: i
+      type: 9563f24b
+      description: <p>The index of the needed property </p>
+    return:
+      type: c9ee9af5ShadowEngine.Rendering.IShaderProperty1a4c7661
+      description: <p>The IShaderProperty that was requested </p>
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.GetProperty(std::string)
+  id: string)
+  parent: ShadowEngine.Rendering.ShaderPropertySheet
+  href: ShadowEngine.Rendering.ShaderPropertySheet.yml
+  langs:
+  - cplusplus
+  name: GetProperty(std::string name)
+  nameWithType: ShaderPropertySheet::GetProperty(std::string name)
+  fullName: ShaderProperty<T>* ShadowEngine::Rendering::ShaderPropertySheet::GetProperty(std::string name)
+  overload: ShadowEngine.Rendering.ShaderPropertySheet.GetProperty*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 136
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 136
+  namespace: ShadowEngine.Rendering
+  summary: "<p>Returns a Property by name and type. </p>"
+  syntax:
+    content: 'public: ShaderProperty<T> * GetProperty(std::string name)'
+    parameters:
+    - id: name
+      type: 9626e5dd
+      description: <p>The name of the property being requested </p>
+    typeParameters:
+    - id: class T
+      type: 07c9e456
+    return:
+      type: ShadowEngine.Rendering.ShaderProperty9b043d9a
+      description: <p>Pointer to the ShaderProperty&lt;T&gt; that was requested </p>
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.GetPropertyCount()
+  id: ShadowEngine.Rendering.ShaderPropertySheet.GetPropertyCount()
+  parent: ShadowEngine.Rendering.ShaderPropertySheet
+  href: ShadowEngine.Rendering.ShaderPropertySheet.yml
+  langs:
+  - cplusplus
+  name: GetPropertyCount()
+  nameWithType: ShaderPropertySheet::GetPropertyCount()
+  fullName: size_t ShadowEngine::Rendering::ShaderPropertySheet::GetPropertyCount()
+  overload: ShadowEngine.Rendering.ShaderPropertySheet.GetPropertyCount*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 105
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 105
+  namespace: ShadowEngine.Rendering
+  summary: "<p>Returns the number of properties. </p>"
+  syntax:
+    content: 'public: size_t GetPropertyCount() const'
+    return:
+      type: 9563f24b
+      description: <p>Num of properties </p>
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.GetSize()
+  id: ShadowEngine.Rendering.ShaderPropertySheet.GetSize()
+  parent: ShadowEngine.Rendering.ShaderPropertySheet
+  href: ShadowEngine.Rendering.ShaderPropertySheet.yml
+  langs:
+  - cplusplus
+  name: GetSize()
+  nameWithType: ShaderPropertySheet::GetSize()
+  fullName: size_t ShadowEngine::Rendering::ShaderPropertySheet::GetSize()
+  overload: ShadowEngine.Rendering.ShaderPropertySheet.GetSize*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 107
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 107
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: size_t GetSize() const'
+    return:
+      type: 9563f24b
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.ShaderPropertySheet()
+  id: ShadowEngine.Rendering.ShaderPropertySheet.ShaderPropertySheet()
+  parent: ShadowEngine.Rendering.ShaderPropertySheet
+  href: ShadowEngine.Rendering.ShaderPropertySheet.yml
+  langs:
+  - cplusplus
+  name: ShaderPropertySheet()
+  nameWithType: ShaderPropertySheet::ShaderPropertySheet()
+  fullName: ShadowEngine::Rendering::ShaderPropertySheet::ShaderPropertySheet()
+  overload: ShadowEngine.Rendering.ShaderPropertySheet.ShaderPropertySheet*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 99
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 99
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: ShaderPropertySheet()=default'
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.ShaderPropertySheet(const ShaderPropertySheet &)
+  id: ShadowEngine.Rendering.ShaderPropertySheet.ShaderPropertySheet(const ShaderPropertySheet &)
+  parent: ShadowEngine.Rendering.ShaderPropertySheet
+  href: ShadowEngine.Rendering.ShaderPropertySheet.yml
+  langs:
+  - cplusplus
+  name: ShaderPropertySheet(const ShaderPropertySheet &a)
+  nameWithType: ShaderPropertySheet::ShaderPropertySheet(const ShaderPropertySheet &a)
+  fullName: ShadowEngine::Rendering::ShaderPropertySheet::ShaderPropertySheet(const ShaderPropertySheet &a)
+  overload: ShadowEngine.Rendering.ShaderPropertySheet.ShaderPropertySheet*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 89
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 89
+  namespace: ShadowEngine.Rendering
+  summary: "<p>Copy constructor, makes sure the properties are copied , new ones are created. </p>"
+  syntax:
+    content: 'public: ShaderPropertySheet(const ShaderPropertySheet &a)'
+    parameters:
+    - id: a
+      type: 1413e510ShadowEngine.Rendering.ShaderPropertySheet76390d34
+      description: <p>The Copy-from parameter </p>
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.UpdataStruct()
+  id: ShadowEngine.Rendering.ShaderPropertySheet.UpdataStruct()
+  parent: ShadowEngine.Rendering.ShaderPropertySheet
+  href: ShadowEngine.Rendering.ShaderPropertySheet.yml
+  langs:
+  - cplusplus
+  name: UpdataStruct()
+  nameWithType: ShaderPropertySheet::UpdataStruct()
+  fullName: void* ShadowEngine::Rendering::ShaderPropertySheet::UpdataStruct()
+  overload: ShadowEngine.Rendering.ShaderPropertySheet.UpdataStruct*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 190
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 190
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: void * UpdataStruct()'
+    return:
+      type: 7ca192cd
+references:
+- uid: 1413e510ShadowEngine.Rendering.ShaderPropertySheet76390d34
+  spec.cplusplus:
+  - name: 'const '
+    fullName: 'const '
+  - uid: ShadowEngine.Rendering.ShaderPropertySheet
+  - name: " &"
+    fullName: " &"
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.ShaderPropertySheet*
+  name: ShaderPropertySheet
+  nameWithType: ShaderPropertySheet::ShaderPropertySheet
+  fullName: ShadowEngine::Rendering::ShaderPropertySheet::ShaderPropertySheet
+- uid: 9563f24b
+  spec.cplusplus:
+  - name: size_t
+    fullName: size_t
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.GetPropertyCount*
+  name: GetPropertyCount
+  nameWithType: ShaderPropertySheet::GetPropertyCount
+  fullName: size_t ShadowEngine::Rendering::ShaderPropertySheet::GetPropertyCount
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.GetSize*
+  name: GetSize
+  nameWithType: ShaderPropertySheet::GetSize
+  fullName: size_t ShadowEngine::Rendering::ShaderPropertySheet::GetSize
+- uid: c9ee9af5ShadowEngine.Rendering.IShaderProperty1a4c7661
+  spec.cplusplus:
+  - name: Scope<
+    fullName: Scope<
+  - uid: ShadowEngine.Rendering.IShaderProperty
+  - name: '> &'
+    fullName: '> &'
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.GetProperty*
+  name: GetProperty
+  nameWithType: ShaderPropertySheet::GetProperty
+  fullName: Scope<IShaderProperty>& ShadowEngine::Rendering::ShaderPropertySheet::GetProperty
+- uid: 95180e74ShadowEngine.Rendering.IShaderProperty1a4c7661
+  spec.cplusplus:
+  - name: const Scope<
+    fullName: const Scope<
+  - uid: ShadowEngine.Rendering.IShaderProperty
+  - name: '> &'
+    fullName: '> &'
+- uid: 07c9e456
+  spec.cplusplus:
+  - name: class T
+    fullName: class T
+- uid: 9626e5dd
+  spec.cplusplus:
+  - name: std::string
+    fullName: std::string
+- uid: ShadowEngine.Rendering.ShaderProperty9b043d9a
+  spec.cplusplus:
+  - uid: ShadowEngine.Rendering.ShaderProperty
+  - name: <T> *
+    fullName: <T> *
+- uid: ShadowEngine.Rendering.ShaderProperty051fb21a
+  spec.cplusplus:
+  - uid: ShadowEngine.Rendering.ShaderProperty
+  - name: <T> const  *
+    fullName: <T> const  *
+- uid: ShadowEngine.Rendering.IShaderProperty68bc11b4
+  spec.cplusplus:
+  - uid: ShadowEngine.Rendering.IShaderProperty
+  - name: " *"
+    fullName: " *"
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.AddProperty*
+  name: AddProperty
+  nameWithType: ShaderPropertySheet::AddProperty
+  fullName: void ShadowEngine::Rendering::ShaderPropertySheet::AddProperty
+- uid: 7ca192cd
+  spec.cplusplus:
+  - name: void *
+    fullName: void *
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.Finalize*
+  name: Finalize
+  nameWithType: ShaderPropertySheet::Finalize
+  fullName: void* ShadowEngine::Rendering::ShaderPropertySheet::Finalize
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.UpdataStruct*
+  name: UpdataStruct
+  nameWithType: ShaderPropertySheet::UpdataStruct
+  fullName: void* ShadowEngine::Rendering::ShaderPropertySheet::UpdataStruct
+- uid: ShadowEngine.Rendering.ShaderPropertySheet.GetDataStruct*
+  name: GetDataStruct
+  nameWithType: ShaderPropertySheet::GetDataStruct
+  fullName: void* ShadowEngine::Rendering::ShaderPropertySheet::GetDataStruct
+- uid: _shader_property_sheet_8h
+- uid: ShadowEngine.Rendering.IShaderProperty
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.IShaderProperty.yml
+  name: IShaderProperty
+  nameWithType: IShaderProperty
+  fullName: ShadowEngine::Rendering::IShaderProperty
+  type: Class
+  syntax:
+    content: 'public: class IShaderProperty : public HObject'
+- uid: ShadowEngine.Rendering.ShaderPropertySheet
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ShaderPropertySheet.yml
+  name: ShaderPropertySheet
+  nameWithType: ShaderPropertySheet
+  fullName: ShadowEngine::Rendering::ShaderPropertySheet
+  type: Class
+  summary: "<p>Variables in a shader. </p><p>ShaderPropertySheet Contains the variables defined by a shader. </p>"
+  syntax: *o1
+- uid: ShadowEngine.Rendering.ShaderProperty
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ShaderProperty.yml
+  name: ShaderProperty
+  nameWithType: ShaderProperty
+  fullName: ShadowEngine::Rendering::ShaderProperty
+  type: Class
+  syntax:
+    content: 'public: class ShaderProperty : public haderProperty'
+    typeParameters:
+    - id: class T
+      type: 07c9e456

@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.InputSystem.KeyboardBinding" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::InputSystem::KeyboardBinding</compoundname>
+    <basecompoundref refid="ShadowEngine.InputSystem.InputBinding" prot="public" virt="non-virtual">ShadowEngine::InputSystem::InputBinding&lt;bool&gt;</basecompoundref>
+    <includes refid="_keyboard_binding_8h" local="no">KeyboardBinding.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.KeyboardBinding.SDLKey" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShadowEngine::InputSystem::KeyboardBinding::SDLKey</definition>
+        <argsstring></argsstring>
+        <name>SDLKey</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/KeyboardBinding.h" line="18" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/KeyboardBinding.h" bodystart="18" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.InputSystem.KeyboardBinding.GetKeycode()" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ShadowEngine::InputSystem::KeyboardBinding::GetKeycode</definition>
+        <argsstring>() const</argsstring>
+        <name>GetKeycode</name>
+        <briefdescription>
+          <para>Gets the keycode of this binding. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <simplesect kind="return">
+              <para>Key code </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/KeyboardBinding.h" line="26" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/KeyboardBinding.h" bodystart="26" bodyend="29" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.KeyboardBinding.ProcessEvent(BindingContext&lt;bool&gt; &amp;)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::KeyboardBinding::ProcessEvent</definition>
+        <argsstring>(BindingContext&lt;bool&gt; &amp;event_)</argsstring>
+        <name>ProcessEvent</name>
+        <reimplements refid="ShadowEngine.InputSystem.InputBinding.ProcessEvent(BindingContext&lt;T&gt; &amp;)">ProcessEvent</reimplements>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.InputSystem.BindingContext" kindref="compound">BindingContext</ref>&lt;bool&gt; &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+          <para>Processes a event. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>event</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>Event to process </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/KeyboardBinding.h" line="31" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/KeyboardBinding.h" bodystart="31" bodyend="69" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.KeyboardBinding.DefaultBehaviour(ModifierContext &amp;)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::KeyboardBinding::DefaultBehaviour</definition>
+        <argsstring>(ModifierContext &amp;ctx) override</argsstring>
+        <name>DefaultBehaviour</name>
+        <reimplements refid="ShadowEngine.InputSystem.InputBinding.DefaultBehaviour(ModifierContext &amp;)">DefaultBehaviour</reimplements>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.InputSystem.ModifierContext" kindref="compound">ModifierContext</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+          <para>The default behaviour of this binding without modifiers. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>ctx</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The Input Context that this will use </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/KeyboardBinding.h" line="71" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/KeyboardBinding.h" bodystart="71" bodyend="92" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.KeyboardBinding.KeyboardBinding(const int)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::KeyboardBinding::KeyboardBinding</definition>
+        <argsstring>(const int sdl)</argsstring>
+        <name>KeyboardBinding</name>
+        <param>
+          <type>const int</type>
+          <declname>sdl</declname>
+        </param>
+        <briefdescription>
+          <para>Constructor, using a SDL scancode for the key. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>sdl</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>SDL scancode </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/KeyboardBinding.h" line="98" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/KeyboardBinding.h" bodystart="98" bodyend="101" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.KeyboardBinding.~KeyboardBinding()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::KeyboardBinding::~KeyboardBinding</definition>
+        <argsstring>() override</argsstring>
+        <name>~KeyboardBinding</name>
+        <briefdescription>
+          <para>This should only be called by the Input system. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/KeyboardBinding.h" line="106" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/KeyboardBinding.h" bodystart="106" bodyend="109" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+      <para>Binding to a keyboard key press. </para>
+    </briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="282">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="279">
+        <label>ShadowEngine::InputSystem::KeyboardBinding</label>
+        <link refid="ShadowEngine.InputSystem.KeyboardBinding" />
+        <childnode refid="280" relation="public-inheritance"></childnode>
+      </node>
+      <node id="280">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;bool&gt;</label>
+        <link refid="ShadowEngine.InputSystem.InputBinding" />
+        <childnode refid="281" relation="public-inheritance"></childnode>
+      </node>
+      <node id="281">
+        <label>ShadowEngine::InputSystem::IInputBinding</label>
+        <link refid="ShadowEngine.InputSystem.IInputBinding" />
+        <childnode refid="282" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="286">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="283">
+        <label>ShadowEngine::InputSystem::KeyboardBinding</label>
+        <link refid="ShadowEngine.InputSystem.KeyboardBinding" />
+        <childnode refid="284" relation="public-inheritance"></childnode>
+      </node>
+      <node id="284">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;bool&gt;</label>
+        <link refid="ShadowEngine.InputSystem.InputBinding" />
+        <childnode refid="285" relation="public-inheritance"></childnode>
+      </node>
+      <node id="285">
+        <label>ShadowEngine::InputSystem::IInputBinding</label>
+        <link refid="ShadowEngine.InputSystem.IInputBinding" />
+        <childnode refid="286" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowInput/Bindings/KeyboardBinding.h" line="16" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/KeyboardBinding.h" bodystart="14" bodyend="112" />
+    <listofallmembers>
+      <member refid="ShadowEngine.InputSystem.InputBinding.AddModifier(InputModifier *)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBinding</scope>
+        <name>AddModifier</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.KeyboardBinding.DefaultBehaviour(ModifierContext &amp;)" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBinding</scope>
+        <name>DefaultBehaviour</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBinding</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.GetData()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBinding</scope>
+        <name>GetData</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.KeyboardBinding.GetKeycode()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBinding</scope>
+        <name>GetKeycode</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.GetModifier(int)" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBinding</scope>
+        <name>GetModifier</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBinding</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBinding</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.InputBinding()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBinding</scope>
+        <name>InputBinding</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.KeyboardBinding.KeyboardBinding(const int)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBinding</scope>
+        <name>KeyboardBinding</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.ModifierCount()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBinding</scope>
+        <name>ModifierCount</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.ProcessContext(BindingContext&lt;T&gt; &amp;,ModifierContext &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBinding</scope>
+        <name>ProcessContext</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.KeyboardBinding.ProcessEvent(BindingContext&lt;bool&gt; &amp;)" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBinding</scope>
+        <name>ProcessEvent</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.KeyboardBinding.SDLKey" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBinding</scope>
+        <name>SDLKey</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.~InputBinding()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBinding</scope>
+        <name>~InputBinding</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.KeyboardBinding.~KeyboardBinding()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBinding</scope>
+        <name>~KeyboardBinding</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::KeyboardBinding</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

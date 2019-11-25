@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.World.MapChunk" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::World::MapChunk</compoundname>
+    <basecompoundref refid="ShadowEngine.Assets.ShadowAsset" prot="public" virt="non-virtual">ShadowEngine::Assets::ShadowAsset</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="ShadowEngine.World.MapChunk.pos" prot="private" static="no" mutable="no">
+        <type>SHObject_Base(<ref refid="ShadowEngine.World.MapChunk" kindref="compound">MapChunk</ref>) public <ref refid="ShadowMath.Vector2int" kindref="compound">ShadowMath::Vector2int</ref></type>
+        <definition>SHObject_Base (MapChunk) public ShadowMath::Vector2int ShadowEngine::World::MapChunk::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMap/ShadowMapChunk.h" line="47" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowMapChunk.h" bodystart="42" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.World.MapChunk.height" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShadowEngine::World::MapChunk::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMap/ShadowMapChunk.h" line="49" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowMapChunk.h" bodystart="49" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.World.MapChunk.width" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShadowEngine::World::MapChunk::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMap/ShadowMapChunk.h" line="50" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowMapChunk.h" bodystart="50" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.World.MapChunk.tileHeight" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShadowEngine::World::MapChunk::tileHeight</definition>
+        <argsstring></argsstring>
+        <name>tileHeight</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMap/ShadowMapChunk.h" line="52" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowMapChunk.h" bodystart="52" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.World.MapChunk.tileWidth" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShadowEngine::World::MapChunk::tileWidth</definition>
+        <argsstring></argsstring>
+        <name>tileWidth</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMap/ShadowMapChunk.h" line="53" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowMapChunk.h" bodystart="53" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.World.MapChunk.layers" prot="private" static="no" mutable="no">
+        <type>std::vector&lt;<ref refid="ShadowEngine.World.ShadowMapLayer" kindref="compound">ShadowMapLayer</ref> *&gt;</type>
+        <definition>std::vector&lt;ShadowMapLayer*&gt; ShadowEngine::World::MapChunk::layers</definition>
+        <argsstring></argsstring>
+        <name>layers</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMap/ShadowMapChunk.h" line="55" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowMapChunk.h" bodystart="55" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.World.MapChunk.entities" prot="private" static="no" mutable="no">
+        <type>std::vector&lt;EntitySystem::Entity *&gt;</type>
+        <definition>std::vector&lt;EntitySystem::Entity*&gt; ShadowEngine::World::MapChunk::entities</definition>
+        <argsstring></argsstring>
+        <name>entities</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMap/ShadowMapChunk.h" line="57" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowMapChunk.h" bodystart="57" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="ShadowEngine.World.MapChunk.GetLayer(int)" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="ShadowEngine.World.ShadowMapLayer" kindref="compound">ShadowMapLayer</ref> &amp;</type>
+        <definition>ShadowMapLayer &amp; ShadowEngine::World::MapChunk::GetLayer</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetLayer</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMap/ShadowMapChunk.h" line="59" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowMapChunk.cpp" bodystart="21" bodyend="24" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="345">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="343">
+        <label>ShadowEngine::World::MapChunk</label>
+        <link refid="ShadowEngine.World.MapChunk" />
+        <childnode refid="344" relation="public-inheritance"></childnode>
+      </node>
+      <node id="344">
+        <label>ShadowEngine::Assets::ShadowAsset</label>
+        <link refid="ShadowEngine.Assets.ShadowAsset" />
+        <childnode refid="345" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="348">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="346">
+        <label>ShadowEngine::World::MapChunk</label>
+        <link refid="ShadowEngine.World.MapChunk" />
+        <childnode refid="347" relation="public-inheritance"></childnode>
+      </node>
+      <node id="347">
+        <label>ShadowEngine::Assets::ShadowAsset</label>
+        <link refid="ShadowEngine.Assets.ShadowAsset" />
+        <childnode refid="348" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowMap/ShadowMapChunk.h" line="41" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowMapChunk.h" bodystart="40" bodyend="60" />
+    <listofallmembers>
+      <member refid="ShadowEngine.World.MapChunk.entities" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::World::MapChunk</scope>
+        <name>entities</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::World::MapChunk</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.World.MapChunk.GetLayer(int)" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::World::MapChunk</scope>
+        <name>GetLayer</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::World::MapChunk</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::World::MapChunk</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.World.MapChunk.height" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::World::MapChunk</scope>
+        <name>height</name>
+      </member>
+      <member refid="ShadowEngine.World.MapChunk.layers" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::World::MapChunk</scope>
+        <name>layers</name>
+      </member>
+      <member refid="ShadowEngine.World.MapChunk.pos" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::World::MapChunk</scope>
+        <name>pos</name>
+      </member>
+      <member refid="ShadowEngine.World.MapChunk.tileHeight" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::World::MapChunk</scope>
+        <name>tileHeight</name>
+      </member>
+      <member refid="ShadowEngine.World.MapChunk.tileWidth" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::World::MapChunk</scope>
+        <name>tileWidth</name>
+      </member>
+      <member refid="ShadowEngine.World.MapChunk.width" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::World::MapChunk</scope>
+        <name>width</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::World::MapChunk</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

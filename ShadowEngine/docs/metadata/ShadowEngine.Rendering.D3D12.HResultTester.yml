@@ -1,0 +1,182 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.D3D12.HResultTester
+  id: ShadowEngine.Rendering.D3D12.HResultTester
+  parent: ShadowEngine.Rendering.D3D12
+  children:
+  - ShadowEngine.Rendering.D3D12.HResultTester.File
+  - ShadowEngine.Rendering.D3D12.HResultTester.HResultTester(const char *,const char *,int)
+  - ShadowEngine.Rendering.D3D12.HResultTester.Line
+  - ShadowEngine.Rendering.D3D12.HResultTester.Message
+  - ShadowEngine.Rendering.D3D12.HResultTester.operator<<(HRESULT)
+  href: ShadowEngine.Rendering.D3D12.HResultTester.yml
+  langs:
+  - cplusplus
+  name: HResultTester
+  nameWithType: HResultTester
+  fullName: ShadowEngine::Rendering::D3D12::HResultTester
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/Platform/D3D12/Common.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 35
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 35
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: class HResultTester'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.Rendering.D3D12.HResultTester.File
+  id: ShadowEngine.Rendering.D3D12.HResultTester.File
+  parent: ShadowEngine.Rendering.D3D12.HResultTester
+  href: ShadowEngine.Rendering.D3D12.HResultTester.yml
+  langs:
+  - cplusplus
+  name: File
+  nameWithType: HResultTester::File
+  fullName: const char* ShadowEngine::Rendering::D3D12::HResultTester::File
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 38
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 38
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: const char * File'
+    return:
+      type: ea854c6e
+- uid: ShadowEngine.Rendering.D3D12.HResultTester.HResultTester(const char *,const char *,int)
+  id: ShadowEngine.Rendering.D3D12.HResultTester.HResultTester(const char *,const char *,int)
+  parent: ShadowEngine.Rendering.D3D12.HResultTester
+  href: ShadowEngine.Rendering.D3D12.HResultTester.yml
+  langs:
+  - cplusplus
+  name: HResultTester(const char *msg, const char *file, int line)
+  nameWithType: HResultTester::HResultTester(const char *msg, const char *file, int line)
+  fullName: ShadowEngine::Rendering::D3D12::HResultTester::HResultTester(const char *msg, const char *file, int line)
+  overload: ShadowEngine.Rendering.D3D12.HResultTester.HResultTester*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 41
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 41
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: HResultTester(const char *msg, const char *file, int line)'
+    parameters:
+    - id: msg
+      type: ea854c6e
+    - id: file
+      type: ea854c6e
+    - id: line
+      type: f75371fa
+- uid: ShadowEngine.Rendering.D3D12.HResultTester.Line
+  id: ShadowEngine.Rendering.D3D12.HResultTester.Line
+  parent: ShadowEngine.Rendering.D3D12.HResultTester
+  href: ShadowEngine.Rendering.D3D12.HResultTester.yml
+  langs:
+  - cplusplus
+  name: Line
+  nameWithType: HResultTester::Line
+  fullName: const int ShadowEngine::Rendering::D3D12::HResultTester::Line
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 39
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 39
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: const int Line'
+    return:
+      type: a38d1352
+- uid: ShadowEngine.Rendering.D3D12.HResultTester.Message
+  id: ShadowEngine.Rendering.D3D12.HResultTester.Message
+  parent: ShadowEngine.Rendering.D3D12.HResultTester
+  href: ShadowEngine.Rendering.D3D12.HResultTester.yml
+  langs:
+  - cplusplus
+  name: Message
+  nameWithType: HResultTester::Message
+  fullName: const char* ShadowEngine::Rendering::D3D12::HResultTester::Message
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 37
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 37
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: const char * Message'
+    return:
+      type: ea854c6e
+- uid: ShadowEngine.Rendering.D3D12.HResultTester.operator<<(HRESULT)
+  id: ShadowEngine.Rendering.D3D12.HResultTester.operator<<(HRESULT)
+  parent: ShadowEngine.Rendering.D3D12.HResultTester
+  href: ShadowEngine.Rendering.D3D12.HResultTester.yml
+  langs:
+  - cplusplus
+  name: operator<<(HRESULT hr)
+  nameWithType: HResultTester::operator<<(HRESULT hr)
+  fullName: void ShadowEngine::Rendering::D3D12::HResultTester::operator<<(HRESULT hr)
+  overload: ShadowEngine.Rendering.D3D12.HResultTester.operator<<*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 43
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 43
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: void operator<<(HRESULT hr)'
+    parameters:
+    - id: hr
+      type: 539553fc
+references:
+- uid: ea854c6e
+  spec.cplusplus:
+  - name: const char *
+    fullName: const char *
+- uid: a38d1352
+  spec.cplusplus:
+  - name: const int
+    fullName: const int
+- uid: f75371fa
+  spec.cplusplus:
+  - name: int
+    fullName: int
+- uid: ShadowEngine.Rendering.D3D12.HResultTester.HResultTester*
+  name: HResultTester
+  nameWithType: HResultTester::HResultTester
+  fullName: ShadowEngine::Rendering::D3D12::HResultTester::HResultTester
+- uid: 539553fc
+  spec.cplusplus:
+  - name: HRESULT
+    fullName: HRESULT
+- uid: ShadowEngine.Rendering.D3D12.HResultTester.operator<<*
+  name: operator<<
+  nameWithType: HResultTester::operator<<
+  fullName: void ShadowEngine::Rendering::D3D12::HResultTester::operator<<

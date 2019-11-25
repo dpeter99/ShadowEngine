@@ -1,0 +1,438 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain
+  id: ShadowEngine.Rendering.D3D12.D3D12SwapChain
+  parent: ShadowEngine.Rendering.D3D12
+  children:
+  - ShadowEngine.Rendering.D3D12.D3D12SwapChain.~D3D12SwapChain()
+  - ShadowEngine.Rendering.D3D12.D3D12SwapChain.CreateSwapchain(Ref<D3D12CommandQueue>)
+  - ShadowEngine.Rendering.D3D12.D3D12SwapChain.CreateSwapchainResources()
+  - ShadowEngine.Rendering.D3D12.D3D12SwapChain.D3D12SwapChain(Ref<D3D12CommandQueue>,int,int)
+  - ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetCurrentBackBufferIndex()
+  - ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetCurrentRenderTarget()
+  - ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetCurrentRenderTargetDescriptor()
+  - ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetRenderTarget(int)
+  - ShadowEngine.Rendering.D3D12.D3D12SwapChain.Present(UINT,UINT)
+  - ShadowEngine.Rendering.D3D12.D3D12SwapChain.ReleaseSwapChainResources()
+  - ShadowEngine.Rendering.D3D12.D3D12SwapChain.Resize(int,int)
+  - ShadowEngine.Rendering.D3D12.D3D12SwapChain.UpdateCurrentBackBufferIndex()
+  href: ShadowEngine.Rendering.D3D12.D3D12SwapChain.yml
+  langs:
+  - cplusplus
+  name: D3D12SwapChain
+  nameWithType: D3D12SwapChain
+  fullName: ShadowEngine::Rendering::D3D12::D3D12SwapChain
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+    startLine: 11
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+    startLine: 12
+  namespace: ShadowEngine.Rendering.D3D12
+  summary: "<p>Dx12 Swap Chain Used for swapping the render and present render targets. </p>"
+  syntax:
+    content: 'public: class D3D12SwapChain'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.~D3D12SwapChain()
+  id: ShadowEngine.Rendering.D3D12.D3D12SwapChain.~D3D12SwapChain()
+  parent: ShadowEngine.Rendering.D3D12.D3D12SwapChain
+  href: ShadowEngine.Rendering.D3D12.D3D12SwapChain.yml
+  langs:
+  - cplusplus
+  name: ~D3D12SwapChain()
+  nameWithType: D3D12SwapChain::~D3D12SwapChain()
+  fullName: ShadowEngine::Rendering::D3D12::D3D12SwapChain::~D3D12SwapChain()
+  overload: ShadowEngine.Rendering.D3D12.D3D12SwapChain.~D3D12SwapChain*
+  type: Constructor
+  source:
+    remote: &o1
+      path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.cpp
+    startLine: 49
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+    startLine: 52
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: ~D3D12SwapChain()'
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.CreateSwapchain(Ref<D3D12CommandQueue>)
+  id: ShadowEngine.Rendering.D3D12.D3D12SwapChain.CreateSwapchain(Ref<D3D12CommandQueue>)
+  parent: ShadowEngine.Rendering.D3D12.D3D12SwapChain
+  href: ShadowEngine.Rendering.D3D12.D3D12SwapChain.yml
+  langs:
+  - cplusplus
+  name: CreateSwapchain(Ref<D3D12CommandQueue> commandQueue)
+  nameWithType: D3D12SwapChain::CreateSwapchain(Ref<D3D12CommandQueue> commandQueue)
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12SwapChain::CreateSwapchain(Ref<D3D12CommandQueue> commandQueue)
+  overload: ShadowEngine.Rendering.D3D12.D3D12SwapChain.CreateSwapchain*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+    startLine: 59
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+    startLine: 59
+  namespace: ShadowEngine.Rendering.D3D12
+  summary: "<p>Creates the base swap chain. </p>"
+  syntax:
+    content: 'public: void CreateSwapchain(Ref<D3D12CommandQueue> commandQueue)'
+    parameters:
+    - id: commandQueue
+      type: 2e1cc081ShadowEngine.Rendering.D3D12.D3D12CommandQueuea08ddfce
+      description: <p>the command queue to use </p>
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.CreateSwapchainResources()
+  id: ShadowEngine.Rendering.D3D12.D3D12SwapChain.CreateSwapchainResources()
+  parent: ShadowEngine.Rendering.D3D12.D3D12SwapChain
+  href: ShadowEngine.Rendering.D3D12.D3D12SwapChain.yml
+  langs:
+  - cplusplus
+  name: CreateSwapchainResources()
+  nameWithType: D3D12SwapChain::CreateSwapchainResources()
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12SwapChain::CreateSwapchainResources()
+  overload: ShadowEngine.Rendering.D3D12.D3D12SwapChain.CreateSwapchainResources*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.cpp
+    startLine: 53
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+    startLine: 60
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: void CreateSwapchainResources()'
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.D3D12SwapChain(Ref<D3D12CommandQueue>,int,int)
+  id: ShadowEngine.Rendering.D3D12.D3D12SwapChain.D3D12SwapChain(Ref<D3D12CommandQueue>,int,int)
+  parent: ShadowEngine.Rendering.D3D12.D3D12SwapChain
+  href: ShadowEngine.Rendering.D3D12.D3D12SwapChain.yml
+  langs:
+  - cplusplus
+  name: D3D12SwapChain(Ref<D3D12CommandQueue> commandQueue, int width, int height)
+  nameWithType: D3D12SwapChain::D3D12SwapChain(Ref<D3D12CommandQueue> commandQueue, int width, int height)
+  fullName: ShadowEngine::Rendering::D3D12::D3D12SwapChain::D3D12SwapChain(Ref<D3D12CommandQueue> commandQueue, int width, int height)
+  overload: ShadowEngine.Rendering.D3D12.D3D12SwapChain.D3D12SwapChain*
+  type: Constructor
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.cpp
+    startLine: 7
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+    startLine: 51
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: D3D12SwapChain(Ref<D3D12CommandQueue> commandQueue, int width, int height)'
+    parameters:
+    - id: commandQueue
+      type: 2e1cc081ShadowEngine.Rendering.D3D12.D3D12CommandQueuea08ddfce
+    - id: width
+      type: f75371fa
+    - id: height
+      type: f75371fa
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetCurrentBackBufferIndex()
+  id: ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetCurrentBackBufferIndex()
+  parent: ShadowEngine.Rendering.D3D12.D3D12SwapChain
+  href: ShadowEngine.Rendering.D3D12.D3D12SwapChain.yml
+  langs:
+  - cplusplus
+  name: GetCurrentBackBufferIndex()
+  nameWithType: D3D12SwapChain::GetCurrentBackBufferIndex()
+  fullName: int ShadowEngine::Rendering::D3D12::D3D12SwapChain::GetCurrentBackBufferIndex()
+  overload: ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetCurrentBackBufferIndex*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.cpp
+    startLine: 116
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+    startLine: 88
+  namespace: ShadowEngine.Rendering.D3D12
+  summary: "<p>Returns the active Render Target index. </p>"
+  syntax:
+    content: 'public: int GetCurrentBackBufferIndex()'
+    return:
+      type: f75371fa
+      description: <p>The index of the current render target </p>
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetCurrentRenderTarget()
+  id: ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetCurrentRenderTarget()
+  parent: ShadowEngine.Rendering.D3D12.D3D12SwapChain
+  href: ShadowEngine.Rendering.D3D12.D3D12SwapChain.yml
+  langs:
+  - cplusplus
+  name: GetCurrentRenderTarget()
+  nameWithType: D3D12SwapChain::GetCurrentRenderTarget()
+  fullName: com_ptr<ID3D12Resource> ShadowEngine::Rendering::D3D12::D3D12SwapChain::GetCurrentRenderTarget()
+  overload: ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetCurrentRenderTarget*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+    startLine: 67
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+    startLine: 67
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: com_ptr<ID3D12Resource> GetCurrentRenderTarget()'
+    return:
+      type: 5d01195a
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetCurrentRenderTargetDescriptor()
+  id: ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetCurrentRenderTargetDescriptor()
+  parent: ShadowEngine.Rendering.D3D12.D3D12SwapChain
+  href: ShadowEngine.Rendering.D3D12.D3D12SwapChain.yml
+  langs:
+  - cplusplus
+  name: GetCurrentRenderTargetDescriptor()
+  nameWithType: D3D12SwapChain::GetCurrentRenderTargetDescriptor()
+  fullName: CD3DX12_CPU_DESCRIPTOR_HANDLE ShadowEngine::Rendering::D3D12::D3D12SwapChain::GetCurrentRenderTargetDescriptor()
+  overload: ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetCurrentRenderTargetDescriptor*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.cpp
+    startLine: 86
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+    startLine: 76
+  namespace: ShadowEngine.Rendering.D3D12
+  summary: "<p>Returns a new Descriptor handle to the active render target. </p>"
+  syntax:
+    content: 'public: CD3DX12_CPU_DESCRIPTOR_HANDLE GetCurrentRenderTargetDescriptor() const'
+    return:
+      type: 9eb51783
+      description: <p>The Descriptor handle </p>
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetRenderTarget(int)
+  id: ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetRenderTarget(int)
+  parent: ShadowEngine.Rendering.D3D12.D3D12SwapChain
+  href: ShadowEngine.Rendering.D3D12.D3D12SwapChain.yml
+  langs:
+  - cplusplus
+  name: GetRenderTarget(int i)
+  nameWithType: D3D12SwapChain::GetRenderTarget(int i)
+  fullName: com_ptr<ID3D12Resource> ShadowEngine::Rendering::D3D12::D3D12SwapChain::GetRenderTarget(int i)
+  overload: ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetRenderTarget*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+    startLine: 62
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+    startLine: 62
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: com_ptr<ID3D12Resource> GetRenderTarget(int i)'
+    parameters:
+    - id: i
+      type: f75371fa
+    return:
+      type: 5d01195a
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.Present(UINT,UINT)
+  id: ShadowEngine.Rendering.D3D12.D3D12SwapChain.Present(UINT,UINT)
+  parent: ShadowEngine.Rendering.D3D12.D3D12SwapChain
+  href: ShadowEngine.Rendering.D3D12.D3D12SwapChain.yml
+  langs:
+  - cplusplus
+  name: Present(UINT SyncInterval, UINT Flags)
+  nameWithType: D3D12SwapChain::Present(UINT SyncInterval, UINT Flags)
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12SwapChain::Present(UINT SyncInterval, UINT Flags)
+  overload: ShadowEngine.Rendering.D3D12.D3D12SwapChain.Present*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.cpp
+    startLine: 111
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+    startLine: 82
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: void Present(UINT SyncInterval, UINT Flags)'
+    parameters:
+    - id: SyncInterval
+      type: "40505133"
+    - id: Flags
+      type: "40505133"
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.ReleaseSwapChainResources()
+  id: ShadowEngine.Rendering.D3D12.D3D12SwapChain.ReleaseSwapChainResources()
+  parent: ShadowEngine.Rendering.D3D12.D3D12SwapChain
+  href: ShadowEngine.Rendering.D3D12.D3D12SwapChain.yml
+  langs:
+  - cplusplus
+  name: ReleaseSwapChainResources()
+  nameWithType: D3D12SwapChain::ReleaseSwapChainResources()
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12SwapChain::ReleaseSwapChainResources()
+  overload: ShadowEngine.Rendering.D3D12.D3D12SwapChain.ReleaseSwapChainResources*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.cpp
+    startLine: 93
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+    startLine: 78
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: void ReleaseSwapChainResources()'
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.Resize(int,int)
+  id: ShadowEngine.Rendering.D3D12.D3D12SwapChain.Resize(int,int)
+  parent: ShadowEngine.Rendering.D3D12.D3D12SwapChain
+  href: ShadowEngine.Rendering.D3D12.D3D12SwapChain.yml
+  langs:
+  - cplusplus
+  name: Resize(int width, int height)
+  nameWithType: D3D12SwapChain::Resize(int width, int height)
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12SwapChain::Resize(int width, int height)
+  overload: ShadowEngine.Rendering.D3D12.D3D12SwapChain.Resize*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.cpp
+    startLine: 103
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+    startLine: 80
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: void Resize(int width, int height)'
+    parameters:
+    - id: width
+      type: f75371fa
+    - id: height
+      type: f75371fa
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.UpdateCurrentBackBufferIndex()
+  id: ShadowEngine.Rendering.D3D12.D3D12SwapChain.UpdateCurrentBackBufferIndex()
+  parent: ShadowEngine.Rendering.D3D12.D3D12SwapChain
+  href: ShadowEngine.Rendering.D3D12.D3D12SwapChain.yml
+  langs:
+  - cplusplus
+  name: UpdateCurrentBackBufferIndex()
+  nameWithType: D3D12SwapChain::UpdateCurrentBackBufferIndex()
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12SwapChain::UpdateCurrentBackBufferIndex()
+  overload: ShadowEngine.Rendering.D3D12.D3D12SwapChain.UpdateCurrentBackBufferIndex*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.cpp
+    startLine: 121
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12SwapChain.h
+    startLine: 94
+  namespace: ShadowEngine.Rendering.D3D12
+  summary: "<p>Updates the Current render target index Call this after you changed the active render target. </p>"
+  syntax:
+    content: 'public: void UpdateCurrentBackBufferIndex()'
+references:
+- uid: 2e1cc081ShadowEngine.Rendering.D3D12.D3D12CommandQueuea08ddfce
+  spec.cplusplus:
+  - name: Ref<
+    fullName: Ref<
+  - uid: ShadowEngine.Rendering.D3D12.D3D12CommandQueue
+  - name: '>'
+    fullName: '>'
+- uid: f75371fa
+  spec.cplusplus:
+  - name: int
+    fullName: int
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.D3D12SwapChain*
+  name: D3D12SwapChain
+  nameWithType: D3D12SwapChain::D3D12SwapChain
+  fullName: ShadowEngine::Rendering::D3D12::D3D12SwapChain::D3D12SwapChain
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.~D3D12SwapChain*
+  name: ~D3D12SwapChain
+  nameWithType: D3D12SwapChain::~D3D12SwapChain
+  fullName: ShadowEngine::Rendering::D3D12::D3D12SwapChain::~D3D12SwapChain
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.CreateSwapchain*
+  name: CreateSwapchain
+  nameWithType: D3D12SwapChain::CreateSwapchain
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12SwapChain::CreateSwapchain
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.CreateSwapchainResources*
+  name: CreateSwapchainResources
+  nameWithType: D3D12SwapChain::CreateSwapchainResources
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12SwapChain::CreateSwapchainResources
+- uid: 5d01195a
+  spec.cplusplus:
+  - name: com_ptr<ID3D12Resource>
+    fullName: com_ptr<ID3D12Resource>
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetRenderTarget*
+  name: GetRenderTarget
+  nameWithType: D3D12SwapChain::GetRenderTarget
+  fullName: com_ptr<ID3D12Resource> ShadowEngine::Rendering::D3D12::D3D12SwapChain::GetRenderTarget
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetCurrentRenderTarget*
+  name: GetCurrentRenderTarget
+  nameWithType: D3D12SwapChain::GetCurrentRenderTarget
+  fullName: com_ptr<ID3D12Resource> ShadowEngine::Rendering::D3D12::D3D12SwapChain::GetCurrentRenderTarget
+- uid: 9eb51783
+  spec.cplusplus:
+  - name: CD3DX12_CPU_DESCRIPTOR_HANDLE
+    fullName: CD3DX12_CPU_DESCRIPTOR_HANDLE
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetCurrentRenderTargetDescriptor*
+  name: GetCurrentRenderTargetDescriptor
+  nameWithType: D3D12SwapChain::GetCurrentRenderTargetDescriptor
+  fullName: CD3DX12_CPU_DESCRIPTOR_HANDLE ShadowEngine::Rendering::D3D12::D3D12SwapChain::GetCurrentRenderTargetDescriptor
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.ReleaseSwapChainResources*
+  name: ReleaseSwapChainResources
+  nameWithType: D3D12SwapChain::ReleaseSwapChainResources
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12SwapChain::ReleaseSwapChainResources
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.Resize*
+  name: Resize
+  nameWithType: D3D12SwapChain::Resize
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12SwapChain::Resize
+- uid: "40505133"
+  spec.cplusplus:
+  - name: UINT
+    fullName: UINT
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.Present*
+  name: Present
+  nameWithType: D3D12SwapChain::Present
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12SwapChain::Present
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.GetCurrentBackBufferIndex*
+  name: GetCurrentBackBufferIndex
+  nameWithType: D3D12SwapChain::GetCurrentBackBufferIndex
+  fullName: int ShadowEngine::Rendering::D3D12::D3D12SwapChain::GetCurrentBackBufferIndex
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain.UpdateCurrentBackBufferIndex*
+  name: UpdateCurrentBackBufferIndex
+  nameWithType: D3D12SwapChain::UpdateCurrentBackBufferIndex
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12SwapChain::UpdateCurrentBackBufferIndex
+- uid: _d3_d12_swap_chain_8h
+- uid: ShadowEngine.Rendering.D3D12.D3D12DescriptorHeap
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12DescriptorHeap.yml
+  name: D3D12DescriptorHeap
+  nameWithType: D3D12DescriptorHeap
+  fullName: ShadowEngine::Rendering::D3D12::D3D12DescriptorHeap
+  type: Class
+  syntax:
+    content: 'public: class D3D12DescriptorHeap'
+- uid: ShadowEngine.Rendering.D3D12.D3D12CommandQueue
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.yml
+  name: D3D12CommandQueue
+  nameWithType: D3D12CommandQueue
+  fullName: ShadowEngine::Rendering::D3D12::D3D12CommandQueue
+  type: Class
+  syntax:
+    content: 'public: class D3D12CommandQueue'

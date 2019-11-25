@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.InputSystem.BindingAND" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::InputSystem::BindingAND</compoundname>
+    <basecompoundref refid="ShadowEngine.InputSystem.InputBinding" prot="public" virt="non-virtual">ShadowEngine::InputSystem::InputBinding&lt;I&gt;</basecompoundref>
+    <includes refid="_binding_a_n_d_8h" local="no">BindingAND.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class I</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.BindingAND.bBinding" prot="private" static="no" mutable="no">
+        <type>
+          <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;I&gt; *</type>
+        <definition>InputBinding&lt;I&gt;* ShadowEngine::InputSystem::BindingAND&lt;I&gt;::bBinding</definition>
+        <argsstring></argsstring>
+        <name>bBinding</name>
+        <briefdescription>
+          <para>The B side of the AND. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" line="24" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" bodystart="24" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.BindingAND.aState" prot="private" static="no" mutable="no">
+        <type>ActionState</type>
+        <definition>ActionState ShadowEngine::InputSystem::BindingAND&lt;I&gt;::aState</definition>
+        <argsstring></argsstring>
+        <name>aState</name>
+        <initializer>= ActionState::UnInit</initializer>
+        <briefdescription>
+          <para>The last state of A. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" line="29" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" bodystart="29" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.BindingAND.bState" prot="private" static="no" mutable="no">
+        <type>ActionState</type>
+        <definition>ActionState ShadowEngine::InputSystem::BindingAND&lt;I&gt;::bState</definition>
+        <argsstring></argsstring>
+        <name>bState</name>
+        <initializer>= ActionState::UnInit</initializer>
+        <briefdescription>
+          <para>The last state of B. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" line="34" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" bodystart="34" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="ShadowEngine.InputSystem.BindingAND.BindingANDInspector" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class BindingANDInspector</definition>
+        <argsstring></argsstring>
+        <name>BindingANDInspector</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" line="177" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" bodystart="177" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="ShadowEngine.InputSystem.BindingAND.SHObject_Base(BindingAND&lt;I&gt;)" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::BindingAND&lt;I&gt;::SHObject_Base</definition>
+        <argsstring>(BindingAND&lt;I&gt;) InputBinding&lt;I&gt; *aBinding</argsstring>
+        <name>SHObject_Base</name>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.InputSystem.BindingAND" kindref="compound">BindingAND</ref>&lt;I&gt;</type>
+        </param>
+        <briefdescription>
+          <para>The A side of the AND. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" line="15" column="1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.InputSystem.BindingAND.BindingAND(InputBinding&lt;I&gt; *,InputBinding&lt;I&gt; *)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::BindingAND&lt;I&gt;::BindingAND</definition>
+        <argsstring>(InputBinding&lt;I&gt; *_a, InputBinding&lt;I&gt; *_b)</argsstring>
+        <name>BindingAND</name>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;I&gt; *</type>
+          <declname>_a</declname>
+        </param>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;I&gt; *</type>
+          <declname>_b</declname>
+        </param>
+        <briefdescription>
+          <para>Constructor for the BindingAND. The pointers will be freed up by the binding. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>_a</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>A side binding </para>
+                </parameterdescription>
+              </parameteritem>
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>_b</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>B side binding </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" line="34" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" bodystart="43" bodyend="46" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.BindingAND.~BindingAND()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::BindingAND&lt;I&gt;::~BindingAND</definition>
+        <argsstring>()</argsstring>
+        <name>~BindingAND</name>
+        <briefdescription>
+          <para>This should only be called by the Input system. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" line="51" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" bodystart="51" bodyend="55" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.BindingAND.ProcessEvent(BindingContext&lt;I&gt; &amp;)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::BindingAND&lt;I&gt;::ProcessEvent</definition>
+        <argsstring>(BindingContext&lt;I&gt; &amp;event) override</argsstring>
+        <name>ProcessEvent</name>
+        <reimplements refid="ShadowEngine.InputSystem.InputBinding.ProcessEvent(BindingContext&lt;T&gt; &amp;)">ProcessEvent</reimplements>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.InputSystem.BindingContext" kindref="compound">BindingContext</ref>&lt;I&gt; &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+          <para>Processes a event. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>event</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>Event to process </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" line="57" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" bodystart="57" bodyend="151" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.BindingAND.DefaultBehaviour(ModifierContext &amp;)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::BindingAND&lt;I&gt;::DefaultBehaviour</definition>
+        <argsstring>(ModifierContext &amp;ctx) override</argsstring>
+        <name>DefaultBehaviour</name>
+        <reimplements refid="ShadowEngine.InputSystem.InputBinding.DefaultBehaviour(ModifierContext &amp;)">DefaultBehaviour</reimplements>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.InputSystem.ModifierContext" kindref="compound">ModifierContext</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+          <para>The default behaviour of this binding without modifiers. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>ctx</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The Input Context that this will use </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" line="153" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" bodystart="153" bodyend="156" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.BindingAND.GetABinding()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>
+          <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;I&gt; &amp;</type>
+        <definition>InputBinding&lt;I&gt;&amp; ShadowEngine::InputSystem::BindingAND&lt;I&gt;::GetABinding</definition>
+        <argsstring>()</argsstring>
+        <name>GetABinding</name>
+        <briefdescription>
+          <para>Gets the A binding. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <simplesect kind="return">
+              <para>Reference of the binding </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" line="162" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" bodystart="162" bodyend="165" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.BindingAND.GetBBinding()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>
+          <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;I&gt; &amp;</type>
+        <definition>InputBinding&lt;I&gt;&amp; ShadowEngine::InputSystem::BindingAND&lt;I&gt;::GetBBinding</definition>
+        <argsstring>()</argsstring>
+        <name>GetBBinding</name>
+        <briefdescription>
+          <para>Gets the B binding. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <simplesect kind="return">
+              <para>Reference of the binding </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" line="171" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" bodystart="171" bodyend="174" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+      <para>This Binding only actives when both of it's inputs are active. </para>
+    </briefdescription>
+    <detaileddescription>
+      <para>
+        <parameterlist kind="templateparam">
+          <parameteritem>
+            <parameternamelist>
+              <parametername>I</parametername>
+            </parameternamelist>
+            <parameterdescription>
+              <para>The type of the sub bindings </para>
+            </parameterdescription>
+          </parameteritem>
+        </parameterlist>
+      </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="39">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="36">
+        <label>ShadowEngine::InputSystem::BindingAND&lt;I&gt;</label>
+        <link refid="ShadowEngine.InputSystem.BindingAND" />
+        <childnode refid="37" relation="public-inheritance"></childnode>
+      </node>
+      <node id="37">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;I&gt;</label>
+        <link refid="ShadowEngine.InputSystem.InputBinding" />
+        <childnode refid="38" relation="public-inheritance"></childnode>
+      </node>
+      <node id="38">
+        <label>ShadowEngine::InputSystem::IInputBinding</label>
+        <link refid="ShadowEngine.InputSystem.IInputBinding" />
+        <childnode refid="39" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="43">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="40">
+        <label>ShadowEngine::InputSystem::BindingAND&lt;I&gt;</label>
+        <link refid="ShadowEngine.InputSystem.BindingAND" />
+        <childnode refid="41" relation="public-inheritance"></childnode>
+      </node>
+      <node id="41">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;I&gt;</label>
+        <link refid="ShadowEngine.InputSystem.InputBinding" />
+        <childnode refid="42" relation="public-inheritance"></childnode>
+      </node>
+      <node id="42">
+        <label>ShadowEngine::InputSystem::IInputBinding</label>
+        <link refid="ShadowEngine.InputSystem.IInputBinding" />
+        <childnode refid="43" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" line="14" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/BindingAND.h" bodystart="12" bodyend="178" />
+    <listofallmembers>
+      <member refid="ShadowEngine.InputSystem.InputBinding.AddModifier(InputModifier *)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>AddModifier</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingAND.aState" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>aState</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingAND.bBinding" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>bBinding</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingAND.BindingAND(InputBinding&lt;I&gt; *,InputBinding&lt;I&gt; *)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>BindingAND</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingAND.BindingANDInspector" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>BindingANDInspector</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingAND.bState" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>bState</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingAND.DefaultBehaviour(ModifierContext &amp;)" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>DefaultBehaviour</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingAND.GetABinding()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>GetABinding</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingAND.GetBBinding()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>GetBBinding</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.GetData()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>GetData</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.GetModifier(int)" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>GetModifier</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.InputBinding()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>InputBinding</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.ModifierCount()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>ModifierCount</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.ProcessContext(BindingContext&lt;T&gt; &amp;,ModifierContext &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>ProcessContext</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingAND.ProcessEvent(BindingContext&lt;I&gt; &amp;)" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>ProcessEvent</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingAND.SHObject_Base(BindingAND&lt;I&gt;)" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>SHObject_Base</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingAND.~BindingAND()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>~BindingAND</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.~InputBinding()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>~InputBinding</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::BindingAND</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.InputSystem.ModifierHoldInspector" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::InputSystem::ModifierHoldInspector</compoundname>
+    <basecompoundref refid="ShadowEngine.Debug.Inspector" prot="public" virt="non-virtual">ShadowEngine::Debug::Inspector</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ModifierHoldInspector.Draw(SHObject &amp;)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ModifierHoldInspector::Draw</definition>
+        <argsstring>(SHObject &amp;obj) override</argsstring>
+        <name>Draw</name>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.SHObject" kindref="compound">SHObject</ref> &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Inspectors/ModifierHoldInspector.h" line="12" column="1" bodyfile="ShadowEngine/src/ShadowInput/Inspectors/ModifierHoldInspector.h" bodystart="12" bodyend="19" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="383">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="381">
+        <label>ShadowEngine::InputSystem::ModifierHoldInspector</label>
+        <link refid="ShadowEngine.InputSystem.ModifierHoldInspector" />
+        <childnode refid="382" relation="public-inheritance"></childnode>
+      </node>
+      <node id="382">
+        <label>ShadowEngine::Debug::Inspector</label>
+        <link refid="ShadowEngine.Debug.Inspector" />
+        <childnode refid="383" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="386">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="384">
+        <label>ShadowEngine::InputSystem::ModifierHoldInspector</label>
+        <link refid="ShadowEngine.InputSystem.ModifierHoldInspector" />
+        <childnode refid="385" relation="public-inheritance"></childnode>
+      </node>
+      <node id="385">
+        <label>ShadowEngine::Debug::Inspector</label>
+        <link refid="ShadowEngine.Debug.Inspector" />
+        <childnode refid="386" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowInput/Inspectors/ModifierHoldInspector.h" line="10" column="1" bodyfile="ShadowEngine/src/ShadowInput/Inspectors/ModifierHoldInspector.h" bodystart="9" bodyend="20" />
+    <listofallmembers>
+      <member refid="ShadowEngine.InputSystem.ModifierHoldInspector.Draw(SHObject &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ModifierHoldInspector</scope>
+        <name>Draw</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ModifierHoldInspector</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::ModifierHoldInspector</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::ModifierHoldInspector</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ModifierHoldInspector</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

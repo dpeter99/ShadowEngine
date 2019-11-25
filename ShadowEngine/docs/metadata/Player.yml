@@ -1,0 +1,339 @@
+### YamlMime:ManagedReference
+items:
+- uid: Player
+  id: Player
+  children:
+  - Player.GetFlags()
+  - Player.id
+  - Player.Init()
+  - Player.LateRender()
+  - Player.LateUpdate()
+  - Player.Render()
+  - Player.Start()
+  - Player.Update()
+  href: Player.yml
+  langs:
+  - cplusplus
+  name: Player
+  nameWithType: Player
+  fullName: Player
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/EntitySystem/Entities/Player.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/EntitySystem/Entities/Player.h
+    startLine: 6
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entities/Player.h
+    startLine: 7
+  syntax: &o2
+    content: 'public: class Player : public eneEntity'
+  inheritance:
+  - System::Object
+  - Entity
+  - ShadowEngine.EntitySystem.SceneEntity
+  inheritedMembers:
+  - ShadowEngine.EntitySystem.SceneEntity.GetTransform()
+  - ShadowEngine.EntitySystem.SceneEntity.SceneEntity()
+  - ShadowEngine.EntitySystem.SceneEntity.SceneEntity(EntitySystem::Scene *)
+  - ShadowEngine.EntitySystem.SceneEntity.SetParent(rtm_ptr<Entity>)
+  - ShadowEngine.EntitySystem.SceneEntity.transform
+  - ShadowEngine.EntitySystem.SceneEntity.TransformChanged(bool)
+- uid: Player.GetFlags()
+  id: Player.GetFlags()
+  parent: Player
+  href: Player.yml
+  langs:
+  - cplusplus
+  name: GetFlags()
+  nameWithType: Player::GetFlags()
+  fullName: ShadowEngine::EntitySystem::EntityFlags Player::GetFlags()
+  overload: Player.GetFlags*
+  type: Method
+  source:
+    remote: &o1
+      path: ShadowEngine/src/EntitySystem/Entities/Player.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/EntitySystem/Entities/Player.cpp
+    startLine: 40
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entities/Player.h
+    startLine: 24
+  syntax:
+    content: 'public: virtual ShadowEngine::EntitySystem::EntityFlags GetFlags() override'
+    return:
+      type: f00269a6
+- uid: Player.id
+  id: Player.id
+  parent: Player
+  href: Player.yml
+  langs:
+  - cplusplus
+  name: id
+  nameWithType: Player::id
+  fullName: std::string Player::id
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entities/Player.h
+    startLine: 12
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entities/Player.h
+    startLine: 12
+  syntax:
+    content: 'public: static std::string id'
+    return:
+      type: 9626e5dd
+- uid: Player.Init()
+  id: Player.Init()
+  parent: Player
+  href: Player.yml
+  langs:
+  - cplusplus
+  name: Init()
+  nameWithType: Player::Init()
+  fullName: void Player::Init()
+  overload: Player.Init*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entities/Player.cpp
+    startLine: 20
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entities/Player.h
+    startLine: 19
+  syntax:
+    content: 'public: virtual void Init() override'
+- uid: Player.LateRender()
+  id: Player.LateRender()
+  parent: Player
+  href: Player.yml
+  langs:
+  - cplusplus
+  name: LateRender()
+  nameWithType: Player::LateRender()
+  fullName: void Player::LateRender()
+  overload: Player.LateRender*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entities/Player.cpp
+    startLine: 36
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entities/Player.h
+    startLine: 23
+  syntax:
+    content: 'public: virtual void LateRender() override'
+- uid: Player.LateUpdate()
+  id: Player.LateUpdate()
+  parent: Player
+  href: Player.yml
+  langs:
+  - cplusplus
+  name: LateUpdate()
+  nameWithType: Player::LateUpdate()
+  fullName: void Player::LateUpdate()
+  overload: Player.LateUpdate*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entities/Player.cpp
+    startLine: 32
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entities/Player.h
+    startLine: 22
+  syntax:
+    content: 'public: virtual void LateUpdate() override'
+- uid: Player.Render()
+  id: Player.Render()
+  parent: Player
+  href: Player.yml
+  langs:
+  - cplusplus
+  name: Render()
+  nameWithType: Player::Render()
+  fullName: void Player::Render()
+  overload: Player.Render*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entities/Player.cpp
+    startLine: 15
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entities/Player.h
+    startLine: 16
+  syntax:
+    content: 'public: void Render() override'
+- uid: Player.Start()
+  id: Player.Start()
+  parent: Player
+  href: Player.yml
+  langs:
+  - cplusplus
+  name: Start()
+  nameWithType: Player::Start()
+  fullName: void Player::Start()
+  overload: Player.Start*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entities/Player.cpp
+    startLine: 24
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entities/Player.h
+    startLine: 20
+  syntax:
+    content: 'public: virtual void Start() override'
+- uid: Player.Update()
+  id: Player.Update()
+  parent: Player
+  href: Player.yml
+  langs:
+  - cplusplus
+  name: Update()
+  nameWithType: Player::Update()
+  fullName: void Player::Update()
+  overload: Player.Update*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entities/Player.cpp
+    startLine: 28
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entities/Player.h
+    startLine: 21
+  syntax:
+    content: 'public: virtual void Update() override'
+references:
+- uid: 9626e5dd
+  spec.cplusplus:
+  - name: std::string
+    fullName: std::string
+- uid: Player.Render*
+  name: Render
+  nameWithType: Player::Render
+  fullName: void Player::Render
+- uid: Player.Init*
+  name: Init
+  nameWithType: Player::Init
+  fullName: void Player::Init
+- uid: Player.Start*
+  name: Start
+  nameWithType: Player::Start
+  fullName: void Player::Start
+- uid: Player.Update*
+  name: Update
+  nameWithType: Player::Update
+  fullName: void Player::Update
+- uid: Player.LateUpdate*
+  name: LateUpdate
+  nameWithType: Player::LateUpdate
+  fullName: void Player::LateUpdate
+- uid: Player.LateRender*
+  name: LateRender
+  nameWithType: Player::LateRender
+  fullName: void Player::LateRender
+- uid: f00269a6
+  spec.cplusplus:
+  - name: ShadowEngine::EntitySystem::EntityFlags
+    fullName: ShadowEngine::EntitySystem::EntityFlags
+- uid: Player.GetFlags*
+  name: GetFlags
+  nameWithType: Player::GetFlags
+  fullName: ShadowEngine::EntitySystem::EntityFlags Player::GetFlags
+- uid: ShadowEngine.EntitySystem.SceneEntity.GetTransform()
+  parent: ShadowEngine.EntitySystem.SceneEntity
+  href: ShadowEngine.EntitySystem.SceneEntity.yml
+  name: GetTransform()
+  nameWithType: SceneEntity::GetTransform()
+  fullName: ShadowEntity::Transform * ShadowEngine::EntitySystem::SceneEntity::GetTransform()
+  type: Method
+  syntax:
+    content: 'public: virtual ShadowEntity::Transform * GetTransform()'
+    return:
+      type: 1b41cd80
+- uid: ShadowEngine.EntitySystem.SceneEntity.SceneEntity()
+  parent: ShadowEngine.EntitySystem.SceneEntity
+  href: ShadowEngine.EntitySystem.SceneEntity.yml
+  name: SceneEntity()
+  nameWithType: SceneEntity::SceneEntity()
+  fullName: ShadowEngine::EntitySystem::SceneEntity::SceneEntity()
+  type: Constructor
+  syntax:
+    content: 'public: SceneEntity()'
+- uid: ShadowEngine.EntitySystem.SceneEntity.SceneEntity(EntitySystem::Scene *)
+  parent: ShadowEngine.EntitySystem.SceneEntity
+  href: ShadowEngine.EntitySystem.SceneEntity.yml
+  name: SceneEntity(EntitySystem::Scene *scene)
+  nameWithType: SceneEntity::SceneEntity(EntitySystem::Scene *scene)
+  fullName: ShadowEngine::EntitySystem::SceneEntity::SceneEntity(EntitySystem::Scene *scene)
+  type: Constructor
+  syntax:
+    content: 'public: SceneEntity(EntitySystem::Scene *scene)'
+    parameters:
+    - id: scene
+      type: ShadowEngine.EntitySystem.Scene68bc11b4
+- uid: ShadowEngine.EntitySystem.SceneEntity.SetParent(rtm_ptr<Entity>)
+  parent: ShadowEngine.EntitySystem.SceneEntity
+  href: ShadowEngine.EntitySystem.SceneEntity.yml
+  name: SetParent(rtm_ptr<Entity> e)
+  nameWithType: SceneEntity::SetParent(rtm_ptr<Entity> e)
+  fullName: void ShadowEngine::EntitySystem::SceneEntity::SetParent(rtm_ptr<Entity> e)
+  type: Method
+  syntax:
+    content: 'public: void SetParent(rtm_ptr<Entity> e) override'
+    parameters:
+    - id: e
+      type: 7ab5790a
+- uid: ShadowEngine.EntitySystem.SceneEntity.transform
+  parent: ShadowEngine.EntitySystem.SceneEntity
+  href: ShadowEngine.EntitySystem.SceneEntity.yml
+  name: transform
+  nameWithType: SceneEntity::transform
+  fullName: ShadowEntity::Transform ShadowEngine::EntitySystem::SceneEntity::transform
+  type: Field
+  syntax:
+    content: 'public: ShadowEntity::Transform transform'
+    return:
+      type: ccf1867e
+- uid: ShadowEngine.EntitySystem.SceneEntity.TransformChanged(bool)
+  parent: ShadowEngine.EntitySystem.SceneEntity
+  href: ShadowEngine.EntitySystem.SceneEntity.yml
+  name: TransformChanged(bool self)
+  nameWithType: SceneEntity::TransformChanged(bool self)
+  fullName: void ShadowEngine::EntitySystem::SceneEntity::TransformChanged(bool self)
+  type: Method
+  syntax:
+    content: 'public: virtual void TransformChanged(bool self) override'
+    parameters:
+    - id: self
+      type: 13ff06c5
+- uid: ShadowEngine.EntitySystem.SceneEntity
+  parent: ShadowEngine.EntitySystem
+  href: ShadowEngine.EntitySystem.SceneEntity.yml
+  name: SceneEntity
+  nameWithType: SceneEntity
+  fullName: ShadowEngine::EntitySystem::SceneEntity
+  type: Class
+  summary: "<p>Entitys that have a world positon </p>"
+  syntax:
+    content: 'public: class SceneEntity'
+- uid: Player
+  href: Player.yml
+  name: Player
+  nameWithType: Player
+  fullName: Player
+  type: Class
+  syntax: *o2

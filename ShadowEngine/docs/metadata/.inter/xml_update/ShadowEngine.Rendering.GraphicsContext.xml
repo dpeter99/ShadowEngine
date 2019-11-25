@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.Rendering.GraphicsContext" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ShadowEngine::Rendering::GraphicsContext</compoundname>
+    <derivedcompoundref refid="ShadowEngine.Rendering.D3D12.D3D12Context" prot="public" virt="non-virtual">ShadowEngine::Rendering::D3D12::D3D12Context</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.Rendering.GraphicsContext.Init()" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::Rendering::GraphicsContext::Init</definition>
+        <argsstring>()=0</argsstring>
+        <name>Init</name>
+        <reimplementedby refid="ShadowEngine.Rendering.D3D12.D3D12Context.Init()">Init</reimplementedby>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/GraphicsContext.h" line="11" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.Rendering.GraphicsContext.SwapBuffers()" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::Rendering::GraphicsContext::SwapBuffers</definition>
+        <argsstring>()=0</argsstring>
+        <name>SwapBuffers</name>
+        <reimplementedby refid="ShadowEngine.Rendering.D3D12.D3D12Context.SwapBuffers()">SwapBuffers</reimplementedby>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/GraphicsContext.h" line="12" column="1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="ShadowEngine.Rendering.GraphicsContext.Create(ShadowWindow *)" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt;<ref refid="ShadowEngine.Rendering.GraphicsContext" kindref="compound">GraphicsContext</ref>&gt;</type>
+        <definition>Ref&lt;GraphicsContext&gt; ShadowEngine::Rendering::GraphicsContext::Create</definition>
+        <argsstring>(ShadowWindow *window)</argsstring>
+        <name>Create</name>
+        <param>
+          <type>
+            <ref refid="ShadowWindow" kindref="compound">ShadowWindow</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/GraphicsContext.h" line="14" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/GraphicsContext.cpp" bodystart="12" bodyend="23" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="180">
+        <label>ShadowEngine::Rendering::GraphicsContext</label>
+        <link refid="ShadowEngine.Rendering.GraphicsContext" />
+      </node>
+      <node id="181">
+        <label>ShadowEngine::Rendering::D3D12::D3D12Context</label>
+        <link refid="ShadowEngine.Rendering.D3D12.D3D12Context" />
+        <childnode refid="180" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <location file="ShadowEngine/src/ShadowRenderer/GraphicsContext.h" line="9" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/GraphicsContext.h" bodystart="8" bodyend="15" />
+    <listofallmembers>
+      <member refid="ShadowEngine.Rendering.GraphicsContext.Create(ShadowWindow *)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::GraphicsContext</scope>
+        <name>Create</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.GraphicsContext.Init()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::GraphicsContext</scope>
+        <name>Init</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.GraphicsContext.SwapBuffers()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::GraphicsContext</scope>
+        <name>SwapBuffers</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,178 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Assets.AssetLoader
+  id: ShadowEngine.Assets.AssetLoader
+  parent: ShadowEngine.Assets
+  children:
+  - ShadowEngine.Assets.AssetLoader.LoadAsset(std::string)
+  - ShadowEngine.Assets.AssetLoader.LoadMap(std::string)
+  - ShadowEngine.Assets.AssetLoader.LoadWorld(std::string)
+  href: ShadowEngine.Assets.AssetLoader.yml
+  langs:
+  - cplusplus
+  name: AssetLoader
+  nameWithType: AssetLoader
+  fullName: ShadowEngine::Assets::AssetLoader
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowAsset/AssetLoader.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowAsset/AssetLoader.h
+    startLine: 29
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowAsset/AssetLoader.h
+    startLine: 30
+  namespace: ShadowEngine.Assets
+  syntax:
+    content: 'public: class AssetLoader'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.Assets.AssetLoader.LoadAsset(std::string)
+  id: string)
+  parent: ShadowEngine.Assets.AssetLoader
+  href: ShadowEngine.Assets.AssetLoader.yml
+  langs:
+  - cplusplus
+  name: LoadAsset(std::string name)
+  nameWithType: AssetLoader::LoadAsset(std::string name)
+  fullName: static T* ShadowEngine::Assets::AssetLoader::LoadAsset(std::string name)
+  overload: ShadowEngine.Assets.AssetLoader.LoadAsset*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowAsset/AssetLoader.h
+    startLine: 39
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowAsset/AssetLoader.h
+    startLine: 39
+  namespace: ShadowEngine.Assets
+  syntax:
+    content: 'public: static T * LoadAsset(std::string name)'
+    parameters:
+    - id: name
+      type: 9626e5dd
+    typeParameters:
+    - id: class T
+      type: 07c9e456
+    return:
+      type: af4b7b18
+- uid: ShadowEngine.Assets.AssetLoader.LoadMap(std::string)
+  id: string)
+  parent: ShadowEngine.Assets.AssetLoader
+  href: ShadowEngine.Assets.AssetLoader.yml
+  langs:
+  - cplusplus
+  name: LoadMap(std::string name)
+  nameWithType: AssetLoader::LoadMap(std::string name)
+  fullName: static World::MapChunk* ShadowEngine::Assets::AssetLoader::LoadMap(std::string name)
+  overload: ShadowEngine.Assets.AssetLoader.LoadMap*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowAsset/AssetLoader.h
+    startLine: 34
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowAsset/AssetLoader.h
+    startLine: 34
+  namespace: ShadowEngine.Assets
+  syntax:
+    content: 'public: static World::MapChunk * LoadMap(std::string name)'
+    parameters:
+    - id: name
+      type: 9626e5dd
+    return:
+      type: ShadowEngine.World.MapChunk68bc11b4
+- uid: ShadowEngine.Assets.AssetLoader.LoadWorld(std::string)
+  id: string)
+  parent: ShadowEngine.Assets.AssetLoader
+  href: ShadowEngine.Assets.AssetLoader.yml
+  langs:
+  - cplusplus
+  name: LoadWorld(std::string name)
+  nameWithType: AssetLoader::LoadWorld(std::string name)
+  fullName: static World::ShadowWorld* ShadowEngine::Assets::AssetLoader::LoadWorld(std::string name)
+  overload: ShadowEngine.Assets.AssetLoader.LoadWorld*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowAsset/AssetLoader.h
+    startLine: 36
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowAsset/AssetLoader.h
+    startLine: 36
+  namespace: ShadowEngine.Assets
+  syntax:
+    content: 'public: static World::ShadowWorld * LoadWorld(std::string name)'
+    parameters:
+    - id: name
+      type: 9626e5dd
+    return:
+      type: ShadowEngine.World.ShadowWorld68bc11b4
+references:
+- uid: 9626e5dd
+  spec.cplusplus:
+  - name: std::string
+    fullName: std::string
+- uid: ShadowEngine.World.MapChunk68bc11b4
+  spec.cplusplus:
+  - uid: ShadowEngine.World.MapChunk
+  - name: " *"
+    fullName: " *"
+- uid: ShadowEngine.Assets.AssetLoader.LoadMap*
+  name: LoadMap
+  nameWithType: AssetLoader::LoadMap
+  fullName: static World::MapChunk* ShadowEngine::Assets::AssetLoader::LoadMap
+- uid: ShadowEngine.World.ShadowWorld68bc11b4
+  spec.cplusplus:
+  - uid: ShadowEngine.World.ShadowWorld
+  - name: " *"
+    fullName: " *"
+- uid: ShadowEngine.Assets.AssetLoader.LoadWorld*
+  name: LoadWorld
+  nameWithType: AssetLoader::LoadWorld
+  fullName: static World::ShadowWorld* ShadowEngine::Assets::AssetLoader::LoadWorld
+- uid: 07c9e456
+  spec.cplusplus:
+  - name: class T
+    fullName: class T
+- uid: af4b7b18
+  spec.cplusplus:
+  - name: T *
+    fullName: T *
+- uid: ShadowEngine.Assets.AssetLoader.LoadAsset*
+  name: LoadAsset
+  nameWithType: AssetLoader::LoadAsset
+  fullName: static T* ShadowEngine::Assets::AssetLoader::LoadAsset
+- uid: ShadowEngine.Assets.Element
+  parent: ShadowEngine.Assets
+  href: ShadowEngine.Assets.Element.yml
+  name: Element
+  nameWithType: Element
+  fullName: ShadowEngine::Assets::Element
+  type: Class
+  syntax:
+    content: 'public: class Element'
+- uid: ShadowEngine.World.MapChunk
+  parent: ShadowEngine.World
+  href: ShadowEngine.World.MapChunk.yml
+  name: MapChunk
+  nameWithType: MapChunk
+  fullName: ShadowEngine::World::MapChunk
+  type: Class
+  syntax:
+    content: 'public: class MapChunk'
+- uid: ShadowEngine.World.ShadowWorld
+  parent: ShadowEngine.World
+  href: ShadowEngine.World.ShadowWorld.yml
+  name: ShadowWorld
+  nameWithType: ShadowWorld
+  fullName: ShadowEngine::World::ShadowWorld
+  type: Class
+  syntax:
+    content: 'public: class ShadowWorld'

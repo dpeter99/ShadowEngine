@@ -1,0 +1,331 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.D3D12
+  id: ShadowEngine.Rendering.D3D12
+  children:
+  - ShadowEngine.Rendering.D3D12.D3D12CommandList
+  - ShadowEngine.Rendering.D3D12.D3D12CommandQueue
+  - ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer
+  - ShadowEngine.Rendering.D3D12.D3D12Context
+  - ShadowEngine.Rendering.D3D12.D3D12DepthBuffer
+  - ShadowEngine.Rendering.D3D12.D3D12DescriptorHeap
+  - ShadowEngine.Rendering.D3D12.D3D12Fence
+  - ShadowEngine.Rendering.D3D12.D3D12IndexBuffer
+  - ShadowEngine.Rendering.D3D12.D3D12RendererAPI
+  - ShadowEngine.Rendering.D3D12.D3D12Shader
+  - ShadowEngine.Rendering.D3D12.D3D12SwapChain
+  - ShadowEngine.Rendering.D3D12.D3D12VertexBuffer
+  - ShadowEngine.Rendering.D3D12.HResultTester
+  - ShadowEngine.Rendering.D3D12.BlobAsString(com_ptr<ID3DBlob>)
+  - ShadowEngine.Rendering.D3D12.GetAdapters(IDXGIFactory6 *,std::vector<com_ptr<IDXGIAdapter1>> &)
+  - ShadowEngine.Rendering.D3D12.ShaderDataTypeToD3D12BaseType(ShaderDataType)
+  - ShadowEngine.Rendering.D3D12.WFormat(const wchar_t *,...)
+  href: ShadowEngine.Rendering.D3D12.yml
+  langs:
+  - cplusplus
+  name: ShadowEngine::Rendering::D3D12
+  nameWithType: ShadowEngine::Rendering::D3D12
+  fullName: ShadowEngine::Rendering::D3D12
+  type: Namespace
+  source:
+    remote: &o0
+      path: ShadowEngine/src/Platform/D3D12/Common.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 24
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 24
+  syntax:
+    content: namespace ShadowEngine::Rendering::D3D12
+- uid: ShadowEngine.Rendering.D3D12.BlobAsString(com_ptr<ID3DBlob>)
+  id: ShadowEngine.Rendering.D3D12.BlobAsString(com_ptr<ID3DBlob>)
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.yml
+  langs:
+  - cplusplus
+  name: BlobAsString(com_ptr<ID3DBlob> blob)
+  nameWithType: ShadowEngine::Rendering::D3D12::BlobAsString(com_ptr<ID3DBlob> blob)
+  fullName: const char* ShadowEngine::Rendering::D3D12::BlobAsString(com_ptr<ID3DBlob> blob)
+  overload: ShadowEngine.Rendering.D3D12.BlobAsString*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 31
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 31
+  syntax:
+    content: 'public: const char * BlobAsString(com_ptr<ID3DBlob> blob)'
+    parameters:
+    - id: blob
+      type: 827bb091
+    return:
+      type: ea854c6e
+- uid: ShadowEngine.Rendering.D3D12.GetAdapters(IDXGIFactory6 *,std::vector<com_ptr<IDXGIAdapter1>> &)
+  id: vector<com_ptr<IDXGIAdapter1>> &)
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.yml
+  langs:
+  - cplusplus
+  name: GetAdapters(IDXGIFactory6 *dxgiFactory, std::vector<com_ptr<IDXGIAdapter1>> &adapters)
+  nameWithType: ShadowEngine::Rendering::D3D12::GetAdapters(IDXGIFactory6 *dxgiFactory, std::vector<com_ptr<IDXGIAdapter1>> &adapters)
+  fullName: void ShadowEngine::Rendering::D3D12::GetAdapters(IDXGIFactory6 *dxgiFactory, std::vector<com_ptr<IDXGIAdapter1>> &adapters)
+  overload: ShadowEngine.Rendering.D3D12.GetAdapters*
+  type: Method
+  source:
+    remote: &o1
+      path: ShadowEngine/src/Platform/D3D12/D3D12RendererAPI.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/D3D12/D3D12RendererAPI.cpp
+    startLine: 22
+  header:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12RendererAPI.cpp
+    startLine: 22
+  summary: "<p>Loads the GPU adapters. </p>"
+  syntax:
+    content: 'public: void GetAdapters(IDXGIFactory6 *dxgiFactory, std::vector<com_ptr<IDXGIAdapter1>> &adapters)'
+    parameters:
+    - id: dxgiFactory
+      type: 139f7cd9
+      description: <p>DXGI factory instance </p>
+    - id: adapters
+      type: dbcd2dfa
+      description: <p>Returns the Vector of adapters </p>
+- uid: ShadowEngine.Rendering.D3D12.ShaderDataTypeToD3D12BaseType(ShaderDataType)
+  id: ShadowEngine.Rendering.D3D12.ShaderDataTypeToD3D12BaseType(ShaderDataType)
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.yml
+  langs:
+  - cplusplus
+  name: ShaderDataTypeToD3D12BaseType(ShaderDataType type)
+  nameWithType: ShadowEngine::Rendering::D3D12::ShaderDataTypeToD3D12BaseType(ShaderDataType type)
+  fullName: static DXGI_FORMAT ShadowEngine::Rendering::D3D12::ShaderDataTypeToD3D12BaseType(ShaderDataType type)
+  overload: ShadowEngine.Rendering.D3D12.ShaderDataTypeToD3D12BaseType*
+  type: Method
+  source:
+    remote: &o2
+      path: ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp
+    startLine: 8
+  header:
+    remote: *o2
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp
+    startLine: 8
+  syntax:
+    content: 'public: static DXGI_FORMAT ShaderDataTypeToD3D12BaseType(ShaderDataType type)'
+    parameters:
+    - id: type
+      type: a0af3baf
+    return:
+      type: cfcd952b
+- uid: ShadowEngine.Rendering.D3D12.WFormat(const wchar_t *,...)
+  id: ShadowEngine.Rendering.D3D12.WFormat(const wchar_t *,...)
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.yml
+  langs:
+  - cplusplus
+  name: WFormat(const wchar_t *format,...)
+  nameWithType: ShadowEngine::Rendering::D3D12::WFormat(const wchar_t *format,...)
+  fullName: std::wstring ShadowEngine::Rendering::D3D12::WFormat(const wchar_t *format,...)
+  overload: ShadowEngine.Rendering.D3D12.WFormat*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 58
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 58
+  syntax:
+    content: 'public: std::wstring WFormat(const wchar_t *format,...)'
+    parameters:
+    - id: format
+      type: 74b15cf0
+    - type: 2fb4432f
+    return:
+      type: "39475e69"
+references:
+- uid: 827bb091
+  spec.cplusplus:
+  - name: com_ptr<ID3DBlob>
+    fullName: com_ptr<ID3DBlob>
+- uid: ea854c6e
+  spec.cplusplus:
+  - name: const char *
+    fullName: const char *
+- uid: ShadowEngine.Rendering.D3D12.BlobAsString*
+  name: BlobAsString
+  nameWithType: ShadowEngine::Rendering::D3D12::BlobAsString
+  fullName: const char* ShadowEngine::Rendering::D3D12::BlobAsString
+- uid: 74b15cf0
+  spec.cplusplus:
+  - name: const wchar_t *
+    fullName: const wchar_t *
+- uid: 2fb4432f
+  spec.cplusplus:
+  - name: '...'
+    fullName: '...'
+- uid: "39475e69"
+  spec.cplusplus:
+  - name: std::wstring
+    fullName: std::wstring
+- uid: ShadowEngine.Rendering.D3D12.WFormat*
+  name: WFormat
+  nameWithType: ShadowEngine::Rendering::D3D12::WFormat
+  fullName: std::wstring ShadowEngine::Rendering::D3D12::WFormat
+- uid: 139f7cd9
+  spec.cplusplus:
+  - name: IDXGIFactory6 *
+    fullName: IDXGIFactory6 *
+- uid: dbcd2dfa
+  spec.cplusplus:
+  - name: std::vector<com_ptr<IDXGIAdapter1>> &
+    fullName: std::vector<com_ptr<IDXGIAdapter1>> &
+- uid: ShadowEngine.Rendering.D3D12.GetAdapters*
+  name: GetAdapters
+  nameWithType: ShadowEngine::Rendering::D3D12::GetAdapters
+  fullName: void ShadowEngine::Rendering::D3D12::GetAdapters
+- uid: a0af3baf
+  spec.cplusplus:
+  - name: ShaderDataType
+    fullName: ShaderDataType
+- uid: cfcd952b
+  spec.cplusplus:
+  - name: DXGI_FORMAT
+    fullName: DXGI_FORMAT
+- uid: ShadowEngine.Rendering.D3D12.ShaderDataTypeToD3D12BaseType*
+  name: ShaderDataTypeToD3D12BaseType
+  nameWithType: ShadowEngine::Rendering::D3D12::ShaderDataTypeToD3D12BaseType
+  fullName: static DXGI_FORMAT ShadowEngine::Rendering::D3D12::ShaderDataTypeToD3D12BaseType
+- uid: ShadowEngine.Rendering.D3D12.D3D12CommandList
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12CommandList.yml
+  name: D3D12CommandList
+  nameWithType: D3D12CommandList
+  fullName: ShadowEngine::Rendering::D3D12::D3D12CommandList
+  type: Class
+  summary: "<p>A list of commands Used to record graphics/compute commands and than submit them at once. </p>"
+  syntax:
+    content: 'public: class D3D12CommandList'
+- uid: ShadowEngine.Rendering.D3D12.D3D12CommandQueue
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.yml
+  name: D3D12CommandQueue
+  nameWithType: D3D12CommandQueue
+  fullName: ShadowEngine::Rendering::D3D12::D3D12CommandQueue
+  type: Class
+  syntax:
+    content: 'public: class D3D12CommandQueue'
+- uid: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.yml
+  name: D3D12ConstantBuffer
+  nameWithType: D3D12ConstantBuffer
+  fullName: ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer
+  type: Class
+  syntax:
+    content: 'public: class D3D12ConstantBuffer : public nstantBufferImpl'
+- uid: ShadowEngine.Rendering.D3D12.D3D12Context
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12Context.yml
+  name: D3D12Context
+  nameWithType: D3D12Context
+  fullName: ShadowEngine::Rendering::D3D12::D3D12Context
+  type: Class
+  syntax:
+    content: 'public: class D3D12Context : public aphicsContext'
+- uid: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.yml
+  name: D3D12DepthBuffer
+  nameWithType: D3D12DepthBuffer
+  fullName: ShadowEngine::Rendering::D3D12::D3D12DepthBuffer
+  type: Class
+  syntax:
+    content: 'public: class D3D12DepthBuffer'
+- uid: ShadowEngine.Rendering.D3D12.D3D12DescriptorHeap
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12DescriptorHeap.yml
+  name: D3D12DescriptorHeap
+  nameWithType: D3D12DescriptorHeap
+  fullName: ShadowEngine::Rendering::D3D12::D3D12DescriptorHeap
+  type: Class
+  syntax:
+    content: 'public: class D3D12DescriptorHeap'
+- uid: ShadowEngine.Rendering.D3D12.D3D12Fence
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12Fence.yml
+  name: D3D12Fence
+  nameWithType: D3D12Fence
+  fullName: ShadowEngine::Rendering::D3D12::D3D12Fence
+  type: Class
+  syntax:
+    content: 'public: class D3D12Fence'
+- uid: ShadowEngine.Rendering.D3D12.D3D12IndexBuffer
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12IndexBuffer.yml
+  name: D3D12IndexBuffer
+  nameWithType: D3D12IndexBuffer
+  fullName: ShadowEngine::Rendering::D3D12::D3D12IndexBuffer
+  type: Class
+  summary: "<p>Index Buffer holding an index array in a Dx12 way This hold the index buffer and the buffer view for it as well. </p>"
+  syntax:
+    content: 'public: class D3D12IndexBuffer : public dexBuffer'
+- uid: ShadowEngine.Rendering.D3D12.D3D12RendererAPI
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12RendererAPI.yml
+  name: D3D12RendererAPI
+  nameWithType: D3D12RendererAPI
+  fullName: ShadowEngine::Rendering::D3D12::D3D12RendererAPI
+  type: Class
+  syntax:
+    content: 'public: class D3D12RendererAPI : public ndererAPI'
+- uid: ShadowEngine.Rendering.D3D12.D3D12Shader
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12Shader.yml
+  name: D3D12Shader
+  nameWithType: D3D12Shader
+  fullName: ShadowEngine::Rendering::D3D12::D3D12Shader
+  type: Class
+  summary: "<p>Represents the shader byte code that can be used to draw. </p><p>D3D12Shader is the type ShadowEngine uses to represent byte code that has been compiled form HLSL to be used in the Dx12 renderer. Users should not handle D3D12Shader's by itself, but the ShadowEngine::Rendering::Shader class and it's Create function to make sure the shader class is made for the right render API. Sample Usage:</p>\r\n<p>var shader = ShadowEngine::Rendering::Shader::CreateFromCompiled(\"Shaders/Default-VS.cso\", \"Shaders/Default-FS.cso\"); </p>"
+  syntax:
+    content: 'public: class D3D12Shader : public ader'
+- uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12SwapChain.yml
+  name: D3D12SwapChain
+  nameWithType: D3D12SwapChain
+  fullName: ShadowEngine::Rendering::D3D12::D3D12SwapChain
+  type: Class
+  summary: "<p>Dx12 Swap Chain Used for swapping the render and present render targets. </p>"
+  syntax:
+    content: 'public: class D3D12SwapChain'
+- uid: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.yml
+  name: D3D12VertexBuffer
+  nameWithType: D3D12VertexBuffer
+  fullName: ShadowEngine::Rendering::D3D12::D3D12VertexBuffer
+  type: Class
+  summary: "<p>Vertex Buffer holding vertices in a Dx12 way This hold the vertex buffer and the buffer view for it as well. </p>"
+  syntax:
+    content: 'public: class D3D12VertexBuffer : public rtexBuffer'
+- uid: ShadowEngine.Rendering.D3D12.HResultTester
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.HResultTester.yml
+  name: HResultTester
+  nameWithType: HResultTester
+  fullName: ShadowEngine::Rendering::D3D12::HResultTester
+  type: Class
+  syntax:
+    content: 'public: class HResultTester'

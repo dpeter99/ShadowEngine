@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.SDLPlatform
+  id: ShadowEngine.SDLPlatform
+  children:
+  - ShadowEngine.SDLPlatform.SDLEventSource
+  - ShadowEngine.SDLPlatform.SDLModule
+  href: ShadowEngine.SDLPlatform.yml
+  langs:
+  - cplusplus
+  name: ShadowEngine::SDLPlatform
+  nameWithType: ShadowEngine::SDLPlatform
+  fullName: ShadowEngine::SDLPlatform
+  type: Namespace
+  source:
+    remote: &o0
+      path: ShadowEngine/src/Platform/SDL/SDLEventSource.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/SDL/SDLEventSource.cpp
+    startLine: 9
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/SDL/SDLEventSource.cpp
+    startLine: 9
+  syntax:
+    content: namespace ShadowEngine::SDLPlatform
+references:
+- uid: ShadowEngine.SDLPlatform.SDLEventSource
+  parent: ShadowEngine.SDLPlatform
+  href: ShadowEngine.SDLPlatform.SDLEventSource.yml
+  name: SDLEventSource
+  nameWithType: SDLEventSource
+  fullName: ShadowEngine::SDLPlatform::SDLEventSource
+  type: Class
+  syntax:
+    content: 'public: class SDLEventSource : public hadowEventSource'
+- uid: ShadowEngine.SDLPlatform.SDLModule
+  parent: ShadowEngine.SDLPlatform
+  href: ShadowEngine.SDLPlatform.SDLModule.yml
+  name: SDLModule
+  nameWithType: SDLModule
+  fullName: ShadowEngine::SDLPlatform::SDLModule
+  type: Class
+  syntax:
+    content: 'public: class SDLModule : public hadowModule'

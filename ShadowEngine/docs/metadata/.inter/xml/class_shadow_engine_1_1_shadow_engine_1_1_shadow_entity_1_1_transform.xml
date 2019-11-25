@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::ShadowEngine::ShadowEntity::Transform</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a31defd0fcda08f970b8a1cdc2b9c6c29" prot="public" static="no" mutable="no">
+        <type>
+          <ref refid="class_callback" kindref="compound">Callback</ref>
+        </type>
+        <definition>Callback ShadowEngine::ShadowEngine::ShadowEntity::Transform::transformChanged</definition>
+        <argsstring></argsstring>
+        <name>transformChanged</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="38" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="38" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1ac91eeac98b1896b5b24d6ab5331e126c" prot="public" static="no" mutable="no">
+        <type>EntitySystem::rtm_ptr&lt;EntitySystem::Entity&gt;</type>
+        <definition>EntitySystem::rtm_ptr&lt;EntitySystem::Entity&gt; ShadowEngine::ShadowEngine::ShadowEntity::Transform::entity</definition>
+        <argsstring></argsstring>
+        <name>entity</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="40" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="40" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a4bf098eb4bcdfec81af4d4d9050590e4" prot="private" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 ShadowEngine::ShadowEngine::ShadowEntity::Transform::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="50" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="50" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a9ddc8909742b1e142a5f98fff364114d" prot="private" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 ShadowEngine::ShadowEngine::ShadowEntity::Transform::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="51" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="51" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a4f7efbaae6bda817d27f622a6bca6f12" prot="private" static="no" mutable="no">
+        <type>glm::quat</type>
+        <definition>glm::quat ShadowEngine::ShadowEngine::ShadowEntity::Transform::rot</definition>
+        <argsstring></argsstring>
+        <name>rot</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="52" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="52" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a97fccbfb8b6701b4920e0e1f59485fc1" prot="private" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 ShadowEngine::ShadowEngine::ShadowEntity::Transform::w_position</definition>
+        <argsstring></argsstring>
+        <name>w_position</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="54" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="54" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1afbbc735a68493844e2f70a889aa57235" prot="private" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 ShadowEngine::ShadowEngine::ShadowEntity::Transform::w_scale</definition>
+        <argsstring></argsstring>
+        <name>w_scale</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="55" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="55" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a71dda6578f1c63424fc22d4f760da791" prot="private" static="no" mutable="no">
+        <type>glm::quat</type>
+        <definition>glm::quat ShadowEngine::ShadowEngine::ShadowEntity::Transform::w_rot</definition>
+        <argsstring></argsstring>
+        <name>w_rot</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="56" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="56" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1afdce60a806aa98cdae5f4b9effc976c4" prot="private" static="no" mutable="no">
+        <type>glm::mat4</type>
+        <definition>glm::mat4 ShadowEngine::ShadowEngine::ShadowEntity::Transform::mat</definition>
+        <argsstring></argsstring>
+        <name>mat</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="58" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="58" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a8dc642a27662e05aa9618ab529dbebb0" prot="private" static="no" mutable="no">
+        <type>glm::mat4</type>
+        <definition>glm::mat4 ShadowEngine::ShadowEngine::ShadowEntity::Transform::w_mat</definition>
+        <argsstring></argsstring>
+        <name>w_mat</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="60" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="60" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a5b05d9e0616feb6306c0aec43404310b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::ShadowEntity::Transform::Transform</definition>
+        <argsstring>()</argsstring>
+        <name>Transform</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="19" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.cpp" bodystart="12" bodyend="19" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a617e3295679d02c08cd906ceb1983eac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::ShadowEntity::Transform::Transform</definition>
+        <argsstring>(glm::vec3 pos)</argsstring>
+        <name>Transform</name>
+        <param>
+          <type>glm::vec3</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="20" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.cpp" bodystart="21" bodyend="26" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a2e48402ae3a095ee24427be500a9f7f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::ShadowEntity::Transform::Transform</definition>
+        <argsstring>(glm::vec3 pos, glm::vec3 size)</argsstring>
+        <name>Transform</name>
+        <param>
+          <type>glm::vec3</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>glm::vec3</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="21" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.cpp" bodystart="28" bodyend="33" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1ade1bb49c6e71d9eb434cfb23892cf8d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::ShadowEntity::Transform::Transform</definition>
+        <argsstring>(glm::vec3 pos, glm::vec3 size, glm::quat rotation)</argsstring>
+        <name>Transform</name>
+        <param>
+          <type>glm::vec3</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>glm::vec3</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>glm::quat</type>
+          <declname>rotation</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="22" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.cpp" bodystart="35" bodyend="39" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1af70e18a43fe010fc5c98c1cfedc94fb3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetPosition</definition>
+        <argsstring>()</argsstring>
+        <name>GetPosition</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="24" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="24" bodyend="24" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a4a544dc364ab4967dce79c3272058a30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowEntity::Transform::SetPosition</definition>
+        <argsstring>(glm::vec3 val)</argsstring>
+        <name>SetPosition</name>
+        <param>
+          <type>glm::vec3</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="25" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.cpp" bodystart="41" bodyend="54" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1ac8241a4065f155a1f85755028f582cf0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetScale</definition>
+        <argsstring>()</argsstring>
+        <name>GetScale</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="27" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="27" bodyend="27" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a8ba38a912dd5c9f227af841143fadc7a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowEngine::ShadowEntity::Transform::SetScale</definition>
+        <argsstring>(glm::vec3 val)</argsstring>
+        <name>SetScale</name>
+        <param>
+          <type>glm::vec3</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="28" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="28" bodyend="28" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a9a056471cfd997fdef3ff708bb87e752" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>glm::quat</type>
+        <definition>glm::quat ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetRotation</definition>
+        <argsstring>()</argsstring>
+        <name>GetRotation</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="30" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="30" bodyend="30" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a7211671178f2d7efd8da555961aae850" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowEngine::ShadowEntity::Transform::SetRotation</definition>
+        <argsstring>(glm::quat val)</argsstring>
+        <name>SetRotation</name>
+        <param>
+          <type>glm::quat</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="31" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="31" bodyend="31" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a5bd453724715ccb81a37d642300f480d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>glm::mat4</type>
+        <definition>glm::mat4 ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetTransformMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>GetTransformMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="33" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="33" bodyend="33" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a3367d7236163b35312a31aeb1c98b107" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>glm::mat4</type>
+        <definition>glm::mat4 ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetWorldTransformMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>GetWorldTransformMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="34" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="34" bodyend="34" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a48f17198aa5b7d9ff69446c18adeb0d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowEngine::ShadowEntity::Transform::AssignEntity</definition>
+        <argsstring>(EntitySystem::Entity *e)</argsstring>
+        <name>AssignEntity</name>
+        <param>
+          <type>EntitySystem::Entity *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="36" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="36" bodyend="36" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a3c591aaf8b8dfed3a6ca70c222713062" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowEntity::Transform::UpdateMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="44" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.cpp" bodystart="56" bodyend="60" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1addf0326e21792760db1c3b51962e61a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowEntity::Transform::UpdateLocalMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateLocalMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="45" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.cpp" bodystart="62" bodyend="71" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a2977ea13eb6b1a9ca4268ec8fff9ea44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowEntity::Transform::UpdateWorldMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateWorldMatrix</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Transform.h" line="46" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.cpp" bodystart="73" bodyend="81" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <collaborationgraph>
+      <node id="665">
+        <label>Callback</label>
+        <link refid="class_callback" />
+      </node>
+      <node id="664">
+        <label>ShadowEngine::ShadowEngine::ShadowEntity::Transform</label>
+        <link refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform" />
+        <childnode refid="665" relation="usage">
+          <edgelabel>transformChanged</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowMath/Transform.h" line="17" column="1" bodyfile="ShadowEngine/src/ShadowMath/Transform.h" bodystart="16" bodyend="61" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a48f17198aa5b7d9ff69446c18adeb0d5" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>AssignEntity</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1ac91eeac98b1896b5b24d6ab5331e126c" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>entity</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1af70e18a43fe010fc5c98c1cfedc94fb3" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>GetPosition</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a9a056471cfd997fdef3ff708bb87e752" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>GetRotation</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1ac8241a4065f155a1f85755028f582cf0" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>GetScale</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a5bd453724715ccb81a37d642300f480d" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>GetTransformMatrix</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a3367d7236163b35312a31aeb1c98b107" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>GetWorldTransformMatrix</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1afdce60a806aa98cdae5f4b9effc976c4" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>mat</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a4bf098eb4bcdfec81af4d4d9050590e4" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>position</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a4f7efbaae6bda817d27f622a6bca6f12" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>rot</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a9ddc8909742b1e142a5f98fff364114d" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>scale</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a4a544dc364ab4967dce79c3272058a30" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>SetPosition</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a7211671178f2d7efd8da555961aae850" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>SetRotation</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a8ba38a912dd5c9f227af841143fadc7a" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>SetScale</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a5b05d9e0616feb6306c0aec43404310b" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>Transform</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a617e3295679d02c08cd906ceb1983eac" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>Transform</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a2e48402ae3a095ee24427be500a9f7f0" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>Transform</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1ade1bb49c6e71d9eb434cfb23892cf8d0" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>Transform</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a31defd0fcda08f970b8a1cdc2b9c6c29" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>transformChanged</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1addf0326e21792760db1c3b51962e61a7" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>UpdateLocalMatrix</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a3c591aaf8b8dfed3a6ca70c222713062" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>UpdateMatrix</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a2977ea13eb6b1a9ca4268ec8fff9ea44" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>UpdateWorldMatrix</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a8dc642a27662e05aa9618ab529dbebb0" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>w_mat</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a97fccbfb8b6701b4920e0e1f59485fc1" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>w_position</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1a71dda6578f1c63424fc22d4f760da791" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>w_rot</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_entity_1_1_transform_1afbbc735a68493844e2f70a889aa57235" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::ShadowEngine::ShadowEntity::Transform</scope>
+        <name>w_scale</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

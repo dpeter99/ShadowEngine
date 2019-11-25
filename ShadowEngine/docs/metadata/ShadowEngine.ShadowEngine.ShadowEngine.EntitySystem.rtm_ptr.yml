@@ -1,0 +1,184 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  children:
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.operator bool()
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.operator rtm_ptr<T>()
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.operator->()
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.rtm_ptr()
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.rtm_ptr(Type *)
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.yml
+  langs:
+  - cplusplus
+  name: rtm_ptr
+  nameWithType: rtm_ptr
+  fullName: ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::rtm_ptr
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/EntitySystem/Entity.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 24
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 25
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: class rtm_ptr'
+    typeParameters:
+    - id: class
+      type: 4fedf2a2
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.operator bool()
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.operator bool()
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.yml
+  langs:
+  - cplusplus
+  name: operator bool()
+  nameWithType: rtm_ptr::operator bool()
+  fullName: ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::rtm_ptr<Type>::operator bool()
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.operator bool*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 44
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 44
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: operator bool() const'
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.operator rtm_ptr<T>()
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.operator rtm_ptr<T>()
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.yml
+  langs:
+  - cplusplus
+  name: operator rtm_ptr<T>()
+  nameWithType: rtm_ptr::operator rtm_ptr<T>()
+  fullName: ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::rtm_ptr<Type>::operator rtm_ptr<T>()
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.operator rtm_ptr<T>*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 47
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 47
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: operator rtm_ptr<T>() const'
+    typeParameters:
+    - id: class T
+      type: 07c9e456
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.operator->()
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.operator->()
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.yml
+  langs:
+  - cplusplus
+  name: operator->()
+  nameWithType: rtm_ptr::operator->()
+  fullName: Type* ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::rtm_ptr<Type>::operator->()
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.operator->*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 35
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 35
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: Type * operator->()'
+    return:
+      type: e74c40fa
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.rtm_ptr()
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.rtm_ptr()
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.yml
+  langs:
+  - cplusplus
+  name: rtm_ptr()
+  nameWithType: rtm_ptr::rtm_ptr()
+  fullName: ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::rtm_ptr<Type>::rtm_ptr()
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.rtm_ptr*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 33
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 33
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: rtm_ptr()'
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.rtm_ptr(Type *)
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.rtm_ptr(Type *)
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.yml
+  langs:
+  - cplusplus
+  name: rtm_ptr(Type *ptr)
+  nameWithType: rtm_ptr::rtm_ptr(Type *ptr)
+  fullName: ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::rtm_ptr<Type>::rtm_ptr(Type *ptr)
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.rtm_ptr*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 31
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 31
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: rtm_ptr(Type *ptr)'
+    parameters:
+    - id: ptr
+      type: e74c40fa
+references:
+- uid: 4fedf2a2
+  spec.cplusplus:
+  - name: class
+    fullName: class
+- uid: e74c40fa
+  spec.cplusplus:
+  - name: Type *
+    fullName: Type *
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.rtm_ptr*
+  name: rtm_ptr
+  nameWithType: rtm_ptr::rtm_ptr
+  fullName: ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::rtm_ptr<Type>::rtm_ptr
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.operator->*
+  name: operator->
+  nameWithType: rtm_ptr::operator->
+  fullName: Type* ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::rtm_ptr<Type>::operator->
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.operator bool*
+  name: operator bool
+  nameWithType: rtm_ptr::operator bool
+  fullName: ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::rtm_ptr<Type>::operator bool
+- uid: 07c9e456
+  spec.cplusplus:
+  - name: class T
+    fullName: class T
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.operator rtm_ptr<T>*
+  name: operator rtm_ptr<T>
+  nameWithType: rtm_ptr::operator rtm_ptr<T>
+  fullName: ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::rtm_ptr<Type>::operator rtm_ptr<T>

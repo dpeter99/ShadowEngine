@@ -1,0 +1,494 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.EventSystem.ShadowEventManager
+  id: ShadowEngine.EventSystem.ShadowEventManager
+  parent: ShadowEngine.EventSystem
+  children:
+  - ShadowEngine.EventSystem.ShadowEventManager.~ShadowEventManager()
+  - ShadowEngine.EventSystem.ShadowEventManager.AddNewEventListener(IShadowEventListener *)
+  - ShadowEngine.EventSystem.ShadowEventManager.AddNewEventSource(IShadowEventSource *)
+  - ShadowEngine.EventSystem.ShadowEventManager.GetName()
+  - ShadowEngine.EventSystem.ShadowEventManager.Init()
+  - ShadowEngine.EventSystem.ShadowEventManager.LateRender()
+  - ShadowEngine.EventSystem.ShadowEventManager.PollEvents()
+  - ShadowEngine.EventSystem.ShadowEventManager.ProcessEvents()
+  - ShadowEngine.EventSystem.ShadowEventManager.PushNewEvent(ShadowEvent *)
+  - ShadowEngine.EventSystem.ShadowEventManager.Render()
+  - ShadowEngine.EventSystem.ShadowEventManager.ShadowEventManager()
+  - ShadowEngine.EventSystem.ShadowEventManager.Update()
+  href: ShadowEngine.EventSystem.ShadowEventManager.yml
+  langs:
+  - cplusplus
+  name: ShadowEventManager
+  nameWithType: ShadowEventManager
+  fullName: ShadowEngine::EventSystem::ShadowEventManager
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 10
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 11
+  namespace: ShadowEngine.EventSystem
+  syntax: &o2
+    content: 'public: class ShadowEventManager : public hadowModule'
+  inheritance:
+  - System::Object
+  - ShadowEngine.SHObject
+  - ShadowEngine.ShadowModule
+  inheritedMembers:
+  - ShadowEngine.SHObject.GenerateId()
+  - ShadowEngine.SHObject.GetType()
+  - ShadowEngine.SHObject.GetTypeId()
+  - ShadowEngine.SHObject.~SHObject()
+- uid: ShadowEngine.EventSystem.ShadowEventManager.~ShadowEventManager()
+  id: ShadowEngine.EventSystem.ShadowEventManager.~ShadowEventManager()
+  parent: ShadowEngine.EventSystem.ShadowEventManager
+  href: ShadowEngine.EventSystem.ShadowEventManager.yml
+  langs:
+  - cplusplus
+  name: ~ShadowEventManager()
+  nameWithType: ShadowEventManager::~ShadowEventManager()
+  fullName: ShadowEngine::EventSystem::ShadowEventManager::~ShadowEventManager()
+  overload: ShadowEngine.EventSystem.ShadowEventManager.~ShadowEventManager*
+  type: Constructor
+  source:
+    remote: &o1
+      path: ShadowEngine/src/ShadowEvents/ShadowEventManager.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.cpp
+    startLine: 19
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 31
+  namespace: ShadowEngine.EventSystem
+  syntax:
+    content: 'public: ~ShadowEventManager()'
+- uid: ShadowEngine.EventSystem.ShadowEventManager.AddNewEventListener(IShadowEventListener *)
+  id: ShadowEngine.EventSystem.ShadowEventManager.AddNewEventListener(IShadowEventListener *)
+  parent: ShadowEngine.EventSystem.ShadowEventManager
+  href: ShadowEngine.EventSystem.ShadowEventManager.yml
+  langs:
+  - cplusplus
+  name: AddNewEventListener(IShadowEventListener *shadowEventListener)
+  nameWithType: ShadowEventManager::AddNewEventListener(IShadowEventListener *shadowEventListener)
+  fullName: static void ShadowEngine::EventSystem::ShadowEventManager::AddNewEventListener(IShadowEventListener *shadowEventListener)
+  overload: ShadowEngine.EventSystem.ShadowEventManager.AddNewEventListener*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 52
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 52
+  namespace: ShadowEngine.EventSystem
+  syntax:
+    content: 'public: static void AddNewEventListener(IShadowEventListener *shadowEventListener)'
+    parameters:
+    - id: shadowEventListener
+      type: ShadowEngine.EventSystem.IShadowEventListener68bc11b4
+- uid: ShadowEngine.EventSystem.ShadowEventManager.AddNewEventSource(IShadowEventSource *)
+  id: ShadowEngine.EventSystem.ShadowEventManager.AddNewEventSource(IShadowEventSource *)
+  parent: ShadowEngine.EventSystem.ShadowEventManager
+  href: ShadowEngine.EventSystem.ShadowEventManager.yml
+  langs:
+  - cplusplus
+  name: AddNewEventSource(IShadowEventSource *shadowEventSource)
+  nameWithType: ShadowEventManager::AddNewEventSource(IShadowEventSource *shadowEventSource)
+  fullName: static void ShadowEngine::EventSystem::ShadowEventManager::AddNewEventSource(IShadowEventSource *shadowEventSource)
+  overload: ShadowEngine.EventSystem.ShadowEventManager.AddNewEventSource*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 47
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 47
+  namespace: ShadowEngine.EventSystem
+  syntax:
+    content: 'public: static void AddNewEventSource(IShadowEventSource *shadowEventSource)'
+    parameters:
+    - id: shadowEventSource
+      type: ShadowEngine.EventSystem.IShadowEventSource68bc11b4
+- uid: ShadowEngine.EventSystem.ShadowEventManager.GetName()
+  id: ShadowEngine.EventSystem.ShadowEventManager.GetName()
+  parent: ShadowEngine.EventSystem.ShadowEventManager
+  href: ShadowEngine.EventSystem.ShadowEventManager.yml
+  langs:
+  - cplusplus
+  name: GetName()
+  nameWithType: ShadowEventManager::GetName()
+  fullName: std::string ShadowEngine::EventSystem::ShadowEventManager::GetName()
+  overload: ShadowEngine.EventSystem.ShadowEventManager.GetName*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 39
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 39
+  namespace: ShadowEngine.EventSystem
+  syntax:
+    content: 'public: virtual std::string GetName() override'
+    return:
+      type: 9626e5dd
+  overridden: ShadowEngine.ShadowModule.GetName()
+- uid: ShadowEngine.EventSystem.ShadowEventManager.Init()
+  id: ShadowEngine.EventSystem.ShadowEventManager.Init()
+  parent: ShadowEngine.EventSystem.ShadowEventManager
+  href: ShadowEngine.EventSystem.ShadowEventManager.yml
+  langs:
+  - cplusplus
+  name: Init()
+  nameWithType: ShadowEventManager::Init()
+  fullName: void ShadowEngine::EventSystem::ShadowEventManager::Init()
+  overload: ShadowEngine.EventSystem.ShadowEventManager.Init*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.cpp
+    startLine: 27
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 33
+  namespace: ShadowEngine.EventSystem
+  syntax:
+    content: 'public: void Init() override'
+- uid: ShadowEngine.EventSystem.ShadowEventManager.LateRender()
+  id: ShadowEngine.EventSystem.ShadowEventManager.LateRender()
+  parent: ShadowEngine.EventSystem.ShadowEventManager
+  href: ShadowEngine.EventSystem.ShadowEventManager.yml
+  langs:
+  - cplusplus
+  name: LateRender()
+  nameWithType: ShadowEventManager::LateRender()
+  fullName: void ShadowEngine::EventSystem::ShadowEventManager::LateRender()
+  overload: ShadowEngine.EventSystem.ShadowEventManager.LateRender*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 37
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 37
+  namespace: ShadowEngine.EventSystem
+  syntax:
+    content: 'public: virtual void LateRender() override'
+  overridden: ShadowEngine.ShadowModule.LateRender()
+- uid: ShadowEngine.EventSystem.ShadowEventManager.PollEvents()
+  id: ShadowEngine.EventSystem.ShadowEventManager.PollEvents()
+  parent: ShadowEngine.EventSystem.ShadowEventManager
+  href: ShadowEngine.EventSystem.ShadowEventManager.yml
+  langs:
+  - cplusplus
+  name: PollEvents()
+  nameWithType: ShadowEventManager::PollEvents()
+  fullName: static void ShadowEngine::EventSystem::ShadowEventManager::PollEvents()
+  overload: ShadowEngine.EventSystem.ShadowEventManager.PollEvents*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 41
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 41
+  namespace: ShadowEngine.EventSystem
+  syntax:
+    content: 'public: static void PollEvents()'
+- uid: ShadowEngine.EventSystem.ShadowEventManager.ProcessEvents()
+  id: ShadowEngine.EventSystem.ShadowEventManager.ProcessEvents()
+  parent: ShadowEngine.EventSystem.ShadowEventManager
+  href: ShadowEngine.EventSystem.ShadowEventManager.yml
+  langs:
+  - cplusplus
+  name: ProcessEvents()
+  nameWithType: ShadowEventManager::ProcessEvents()
+  fullName: static void ShadowEngine::EventSystem::ShadowEventManager::ProcessEvents()
+  overload: ShadowEngine.EventSystem.ShadowEventManager.ProcessEvents*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 45
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 45
+  namespace: ShadowEngine.EventSystem
+  syntax:
+    content: 'public: static void ProcessEvents()'
+- uid: ShadowEngine.EventSystem.ShadowEventManager.PushNewEvent(ShadowEvent *)
+  id: ShadowEngine.EventSystem.ShadowEventManager.PushNewEvent(ShadowEvent *)
+  parent: ShadowEngine.EventSystem.ShadowEventManager
+  href: ShadowEngine.EventSystem.ShadowEventManager.yml
+  langs:
+  - cplusplus
+  name: PushNewEvent(ShadowEvent *e)
+  nameWithType: ShadowEventManager::PushNewEvent(ShadowEvent *e)
+  fullName: static void ShadowEngine::EventSystem::ShadowEventManager::PushNewEvent(ShadowEvent *e)
+  overload: ShadowEngine.EventSystem.ShadowEventManager.PushNewEvent*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 43
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 43
+  namespace: ShadowEngine.EventSystem
+  syntax:
+    content: 'public: static void PushNewEvent(ShadowEvent *e)'
+    parameters:
+    - id: e
+      type: ShadowEngine.EventSystem.ShadowEvent68bc11b4
+- uid: ShadowEngine.EventSystem.ShadowEventManager.Render()
+  id: ShadowEngine.EventSystem.ShadowEventManager.Render()
+  parent: ShadowEngine.EventSystem.ShadowEventManager
+  href: ShadowEngine.EventSystem.ShadowEventManager.yml
+  langs:
+  - cplusplus
+  name: Render()
+  nameWithType: ShadowEventManager::Render()
+  fullName: void ShadowEngine::EventSystem::ShadowEventManager::Render()
+  overload: ShadowEngine.EventSystem.ShadowEventManager.Render*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 36
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 36
+  namespace: ShadowEngine.EventSystem
+  syntax:
+    content: 'public: virtual void Render() override'
+  overridden: ShadowEngine.ShadowModule.Render()
+- uid: ShadowEngine.EventSystem.ShadowEventManager.ShadowEventManager()
+  id: ShadowEngine.EventSystem.ShadowEventManager.ShadowEventManager()
+  parent: ShadowEngine.EventSystem.ShadowEventManager
+  href: ShadowEngine.EventSystem.ShadowEventManager.yml
+  langs:
+  - cplusplus
+  name: ShadowEventManager()
+  nameWithType: ShadowEventManager::ShadowEventManager()
+  fullName: ShadowEngine::EventSystem::ShadowEventManager::ShadowEventManager()
+  overload: ShadowEngine.EventSystem.ShadowEventManager.ShadowEventManager*
+  type: Constructor
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.cpp
+    startLine: 10
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 30
+  namespace: ShadowEngine.EventSystem
+  syntax:
+    content: 'public: ShadowEventManager()'
+- uid: ShadowEngine.EventSystem.ShadowEventManager.Update()
+  id: ShadowEngine.EventSystem.ShadowEventManager.Update()
+  parent: ShadowEngine.EventSystem.ShadowEventManager
+  href: ShadowEngine.EventSystem.ShadowEventManager.yml
+  langs:
+  - cplusplus
+  name: Update()
+  nameWithType: ShadowEventManager::Update()
+  fullName: void ShadowEngine::EventSystem::ShadowEventManager::Update()
+  overload: ShadowEngine.EventSystem.ShadowEventManager.Update*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 35
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/ShadowEventManager.h
+    startLine: 35
+  namespace: ShadowEngine.EventSystem
+  syntax:
+    content: 'public: virtual void Update() override'
+  overridden: ShadowEngine.ShadowModule.Update()
+references:
+- uid: ShadowEngine.EventSystem.ShadowEventManager.ShadowEventManager*
+  name: ShadowEventManager
+  nameWithType: ShadowEventManager::ShadowEventManager
+  fullName: ShadowEngine::EventSystem::ShadowEventManager::ShadowEventManager
+- uid: ShadowEngine.EventSystem.ShadowEventManager.~ShadowEventManager*
+  name: ~ShadowEventManager
+  nameWithType: ShadowEventManager::~ShadowEventManager
+  fullName: ShadowEngine::EventSystem::ShadowEventManager::~ShadowEventManager
+- uid: ShadowEngine.EventSystem.ShadowEventManager.Init*
+  name: Init
+  nameWithType: ShadowEventManager::Init
+  fullName: void ShadowEngine::EventSystem::ShadowEventManager::Init
+- uid: ShadowEngine.EventSystem.ShadowEventManager.Update*
+  name: Update
+  nameWithType: ShadowEventManager::Update
+  fullName: void ShadowEngine::EventSystem::ShadowEventManager::Update
+- uid: ShadowEngine.EventSystem.ShadowEventManager.Render*
+  name: Render
+  nameWithType: ShadowEventManager::Render
+  fullName: void ShadowEngine::EventSystem::ShadowEventManager::Render
+- uid: ShadowEngine.EventSystem.ShadowEventManager.LateRender*
+  name: LateRender
+  nameWithType: ShadowEventManager::LateRender
+  fullName: void ShadowEngine::EventSystem::ShadowEventManager::LateRender
+- uid: 9626e5dd
+  spec.cplusplus:
+  - name: std::string
+    fullName: std::string
+- uid: ShadowEngine.EventSystem.ShadowEventManager.GetName*
+  name: GetName
+  nameWithType: ShadowEventManager::GetName
+  fullName: std::string ShadowEngine::EventSystem::ShadowEventManager::GetName
+- uid: ShadowEngine.EventSystem.ShadowEventManager.PollEvents*
+  name: PollEvents
+  nameWithType: ShadowEventManager::PollEvents
+  fullName: static void ShadowEngine::EventSystem::ShadowEventManager::PollEvents
+- uid: ShadowEngine.EventSystem.ShadowEvent68bc11b4
+  spec.cplusplus:
+  - uid: ShadowEngine.EventSystem.ShadowEvent
+  - name: " *"
+    fullName: " *"
+- uid: ShadowEngine.EventSystem.ShadowEventManager.PushNewEvent*
+  name: PushNewEvent
+  nameWithType: ShadowEventManager::PushNewEvent
+  fullName: static void ShadowEngine::EventSystem::ShadowEventManager::PushNewEvent
+- uid: ShadowEngine.EventSystem.ShadowEventManager.ProcessEvents*
+  name: ProcessEvents
+  nameWithType: ShadowEventManager::ProcessEvents
+  fullName: static void ShadowEngine::EventSystem::ShadowEventManager::ProcessEvents
+- uid: ShadowEngine.EventSystem.IShadowEventSource68bc11b4
+  spec.cplusplus:
+  - uid: ShadowEngine.EventSystem.IShadowEventSource
+  - name: " *"
+    fullName: " *"
+- uid: ShadowEngine.EventSystem.ShadowEventManager.AddNewEventSource*
+  name: AddNewEventSource
+  nameWithType: ShadowEventManager::AddNewEventSource
+  fullName: static void ShadowEngine::EventSystem::ShadowEventManager::AddNewEventSource
+- uid: ShadowEngine.EventSystem.IShadowEventListener68bc11b4
+  spec.cplusplus:
+  - uid: ShadowEngine.EventSystem.IShadowEventListener
+  - name: " *"
+    fullName: " *"
+- uid: ShadowEngine.EventSystem.ShadowEventManager.AddNewEventListener*
+  name: AddNewEventListener
+  nameWithType: ShadowEventManager::AddNewEventListener
+  fullName: static void ShadowEngine::EventSystem::ShadowEventManager::AddNewEventListener
+- uid: ShadowEngine.SHObject.GenerateId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GenerateId()
+  nameWithType: SHObject::GenerateId()
+  fullName: static uint64_t ShadowEngine::SHObject::GenerateId()
+  type: Method
+  summary: "<p>Generates a new UID for each call. </p>"
+  syntax:
+    content: 'protected: static uint64_t GenerateId() noexcept'
+    return:
+      type: 6d8267d6
+      description: <p>Unique ID </p>
+- uid: ShadowEngine.SHObject.GetType()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetType()
+  nameWithType: SHObject::GetType()
+  fullName: virtual const std::string& ShadowEngine::SHObject::GetType()
+  type: Method
+  summary: "<p>Returns the top level class type name of the object. </p>"
+  syntax:
+    content: 'public: virtual const std::string & GetType() const =0'
+    return:
+      type: 360fc41e
+      description: <p>Class name string </p>
+- uid: ShadowEngine.SHObject.GetTypeId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetTypeId()
+  nameWithType: SHObject::GetTypeId()
+  fullName: virtual const uint64_t ShadowEngine::SHObject::GetTypeId()
+  type: Method
+  summary: "<p>Gets the top level type ID. </p>"
+  syntax:
+    content: 'public: virtual const uint64_t GetTypeId() const =0'
+    return:
+      type: 29dc5929
+      description: <p>UID of the class </p>
+- uid: ShadowEngine.SHObject.~SHObject()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: ~SHObject()
+  nameWithType: SHObject::~SHObject()
+  fullName: virtual ShadowEngine::SHObject::~SHObject()
+  type: Constructor
+  syntax:
+    content: 'public: virtual ~SHObject()=default'
+- uid: ShadowEngine.ShadowModule
+  parent: ShadowEngine
+  href: ShadowEngine.ShadowModule.yml
+  name: ShadowModule
+  nameWithType: ShadowModule
+  fullName: ShadowEngine::ShadowModule
+  type: Class
+  syntax:
+    content: 'public: class ShadowModule'
+- uid: ShadowEngine.EventSystem.ShadowEventManager
+  parent: ShadowEngine.EventSystem
+  href: ShadowEngine.EventSystem.ShadowEventManager.yml
+  name: ShadowEventManager
+  nameWithType: ShadowEventManager
+  fullName: ShadowEngine::EventSystem::ShadowEventManager
+  type: Class
+  syntax: *o2
+- uid: ShadowEngine.EventSystem.ShadowEvent
+  parent: ShadowEngine.EventSystem
+  href: ShadowEngine.EventSystem.ShadowEvent.yml
+  name: ShadowEvent
+  nameWithType: ShadowEvent
+  fullName: ShadowEngine::EventSystem::ShadowEvent
+  type: Class
+  syntax:
+    content: 'public: class ShadowEvent : public HObject'
+- uid: ShadowEngine.EventSystem.IShadowEventSource
+  parent: ShadowEngine.EventSystem
+  href: ShadowEngine.EventSystem.IShadowEventSource.yml
+  name: IShadowEventSource
+  nameWithType: IShadowEventSource
+  fullName: ShadowEngine::EventSystem::IShadowEventSource
+  type: Class
+  syntax:
+    content: 'public: class IShadowEventSource'
+- uid: ShadowEngine.EventSystem.IShadowEventListener
+  parent: ShadowEngine.EventSystem
+  href: ShadowEngine.EventSystem.IShadowEventListener.yml
+  name: IShadowEventListener
+  nameWithType: IShadowEventListener
+  fullName: ShadowEngine::EventSystem::IShadowEventListener
+  type: Class
+  syntax:
+    content: 'public: class IShadowEventListener'
+- uid: ShadowEngine.ShadowModule.Update()
+- uid: ShadowEngine.ShadowModule.Render()
+- uid: ShadowEngine.ShadowModule.LateRender()
+- uid: ShadowEngine.ShadowModule.GetName()

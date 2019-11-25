@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="namespace_shadow_engine_1_1_event_system_1_1_events" kind="namespace" language="C++">
+    <compoundname>ShadowEngine::EventSystem::Events</compoundname>
+    <innerclass refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_event" prot="public">ShadowEngine::EventSystem::Events::KeyEvent</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_pressed_event" prot="public">ShadowEngine::EventSystem::Events::KeyPressedEvent</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_released_event" prot="public">ShadowEngine::EventSystem::Events::KeyReleasedEvent</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_typed_event" prot="public">ShadowEngine::EventSystem::Events::KeyTypedEvent</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_mouse_button_event" prot="public">ShadowEngine::EventSystem::Events::MouseButtonEvent</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_mouse_button_pressed_event" prot="public">ShadowEngine::EventSystem::Events::MouseButtonPressedEvent</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_mouse_button_released_event" prot="public">ShadowEngine::EventSystem::Events::MouseButtonReleasedEvent</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_mouse_moved_event" prot="public">ShadowEngine::EventSystem::Events::MouseMovedEvent</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_mouse_scrolled_event" prot="public">ShadowEngine::EventSystem::Events::MouseScrolledEvent</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_window_close_event" prot="public">ShadowEngine::EventSystem::Events::WindowCloseEvent</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_window_resize_event" prot="public">ShadowEngine::EventSystem::Events::WindowResizeEvent</innerclass>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/ShadowEvents/Events/ApplicationEvent.h" line="6" column="1" />
+  </compounddef>
+</doxygen>

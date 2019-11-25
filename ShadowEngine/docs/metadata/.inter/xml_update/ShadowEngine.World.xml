@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.World" kind="namespace" language="C++">
+    <compoundname>ShadowEngine::World</compoundname>
+    <innerclass refid="ShadowEngine.World.LevelMap" prot="public">ShadowEngine::World::LevelMap</innerclass>
+    <innerclass refid="ShadowEngine.World.MapChunk" prot="public">ShadowEngine::World::MapChunk</innerclass>
+    <innerclass refid="ShadowEngine.World.ShadowMapLayer" prot="public">ShadowEngine::World::ShadowMapLayer</innerclass>
+    <innerclass refid="ShadowEngine.World.ShadowMapRenderer" prot="public">ShadowEngine::World::ShadowMapRenderer</innerclass>
+    <innerclass refid="ShadowEngine.World.ShadowWorld" prot="public">ShadowEngine::World::ShadowWorld</innerclass>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/ShadowMap/ShadowMapChunk.cpp" line="9" column="1" />
+  </compounddef>
+</doxygen>

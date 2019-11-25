@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.EntitySystem.EntityManager" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::EntitySystem::EntityManager</compoundname>
+    <includes refid="_entity_manager_8h" local="no">EntityManager.h</includes>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="ShadowEngine.EntitySystem.EntityManager.EntityContainerRegistry" prot="private" static="no">
+        <type>std::unordered_map&lt;int, <ref refid="IEntityContainer" kindref="compound">IEntityContainer</ref> *&gt;</type>
+        <definition>using ShadowEngine::EntitySystem::EntityManager::EntityContainerRegistry =  std::unordered_map&lt;int, IEntityContainer*&gt;</definition>
+        <argsstring></argsstring>
+        <name>EntityContainerRegistry</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="28" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="28" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="typedef" id="ShadowEngine.EntitySystem.EntityManager.EntityLookupTable" prot="private" static="no">
+        <type>std::vector&lt;Entity *&gt;</type>
+        <definition>using ShadowEngine::EntitySystem::EntityManager::EntityLookupTable =  std::vector&lt;Entity*&gt;</definition>
+        <argsstring></argsstring>
+        <name>EntityLookupTable</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="38" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="38" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="ShadowEngine.EntitySystem.EntityManager.Instance" prot="public" static="yes" mutable="no">
+        <type>
+          <ref refid="ShadowEngine.EntitySystem.EntityManager" kindref="compound">EntityManager</ref> *</type>
+        <definition>EntityManager * ShadowEngine::EntitySystem::EntityManager::Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="24" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="24" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="ShadowEngine.EntitySystem.EntityManager.m_EntityContainerRegistry" prot="private" static="no" mutable="no">
+        <type>EntityContainerRegistry</type>
+        <definition>EntityContainerRegistry ShadowEngine::EntitySystem::EntityManager::m_EntityContainerRegistry</definition>
+        <argsstring></argsstring>
+        <name>m_EntityContainerRegistry</name>
+        <briefdescription>
+          <para>Map of the Entity Containers mapped to the entity type ID. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="33" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="33" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.EntitySystem.EntityManager.m_EntityLUT" prot="private" static="no" mutable="no">
+        <type>EntityLookupTable</type>
+        <definition>EntityLookupTable ShadowEngine::EntitySystem::EntityManager::m_EntityLUT</definition>
+        <argsstring></argsstring>
+        <name>m_EntityLUT</name>
+        <briefdescription>
+          <para>Quick access Look Up Table of active Entities. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>This table is used to get a Entity by it's runtime Index. It is a fast lookup, but it is not unique. If a Entity is freed up it's index will be given out to another Entity of the same type</para>
+          <para>To use the table simply acces the element at the index of the Entity. </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="50" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="50" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.EntitySystem.EntityManager.ENTITY_LUT_GROW" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int ShadowEngine::EntitySystem::EntityManager::ENTITY_LUT_GROW</definition>
+        <argsstring></argsstring>
+        <name>ENTITY_LUT_GROW</name>
+        <initializer>= 2048</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="52" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="52" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.EntitySystem.EntityManager.LUTNextFree" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShadowEngine::EntitySystem::EntityManager::LUTNextFree</definition>
+        <argsstring></argsstring>
+        <name>LUTNextFree</name>
+        <initializer>= 0</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="53" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="53" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.EntitySystem.EntityManager.LUTFragm" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ShadowEngine::EntitySystem::EntityManager::LUTFragm</definition>
+        <argsstring></argsstring>
+        <name>LUTFragm</name>
+        <initializer>= false</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="54" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="54" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.EntitySystem.EntityManager.LUTFragmFree" prot="private" static="no" mutable="no">
+        <type>std::vector&lt;int&gt;</type>
+        <definition>std::vector&lt;int&gt; ShadowEngine::EntitySystem::EntityManager::LUTFragmFree</definition>
+        <argsstring></argsstring>
+        <name>LUTFragmFree</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="55" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="55" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.EntitySystem.EntityManager.systems" prot="private" static="no" mutable="no">
+        <type>std::vector&lt;<ref refid="ShadowEngine.EntitySystem.SystemCallbacks" kindref="compound">SystemCallbacks</ref>&gt;</type>
+        <definition>std::vector&lt;SystemCallbacks&gt; ShadowEngine::EntitySystem::EntityManager::systems</definition>
+        <argsstring></argsstring>
+        <name>systems</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="58" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="58" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.EntitySystem.EntityManager.nextUID" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShadowEngine::EntitySystem::EntityManager::nextUID</definition>
+        <argsstring></argsstring>
+        <name>nextUID</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+          <para>The next assignable Unique ID. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="63" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="63" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntityManager.GetComponentContainer()" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>
+          <ref refid="EntityContainer" kindref="compound">EntityContainer</ref>&lt;T&gt; *</type>
+        <definition>EntityContainer&lt;T&gt;* ShadowEngine::EntitySystem::EntityManager::GetComponentContainer</definition>
+        <argsstring>()</argsstring>
+        <name>GetComponentContainer</name>
+        <briefdescription>
+          <para>Returns the correct container for the entity type. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="templateparam">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>T</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The type of the entity </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+            <simplesect kind="return">
+              <para>The entity container accosted with this type </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="72" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="72" bodyend="91" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntityManager.GetComponentContainer(int)" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>
+          <ref refid="IEntityContainer" kindref="compound">IEntityContainer</ref> *</type>
+        <definition>IEntityContainer* ShadowEngine::EntitySystem::EntityManager::GetComponentContainer</definition>
+        <argsstring>(int typeID)</argsstring>
+        <name>GetComponentContainer</name>
+        <param>
+          <type>int</type>
+          <declname>typeID</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="93" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="93" bodyend="103" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntityManager.AssignIndexToEntity(Entity *)" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ShadowEngine::EntitySystem::EntityManager::AssignIndexToEntity</definition>
+        <argsstring>(Entity *component)</argsstring>
+        <name>AssignIndexToEntity</name>
+        <param>
+          <type>Entity *</type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+          <para>Assigns the next free LUT index to this entity. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>component</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para></para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+            <simplesect kind="return">
+              <para></para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="111" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="111" bodyend="145" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntityManager.ReleaseIndex(int)" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntityManager::ReleaseIndex</definition>
+        <argsstring>(int id)</argsstring>
+        <name>ReleaseIndex</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+          <para>Frees up the given index. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>id</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para></para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="151" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="151" bodyend="163" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntityManager.EntityManager()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EntitySystem::EntityManager::EntityManager</definition>
+        <argsstring>()</argsstring>
+        <name>EntityManager</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="166" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="166" bodyend="168" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntityManager.AddEntity(ARGS &amp;&amp;...)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>class ...</type>
+            <declname>ARGS</declname>
+            <defname>ARGS</defname>
+          </param>
+        </templateparamlist>
+        <type>rtm_ptr&lt;T&gt;</type>
+        <definition>rtm_ptr&lt;T&gt; ShadowEngine::EntitySystem::EntityManager::AddEntity</definition>
+        <argsstring>(ARGS &amp;&amp;... args)</argsstring>
+        <name>AddEntity</name>
+        <param>
+          <type>ARGS &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+          <para>Instantiates a new entity. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="templateparam">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>T</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>Type of the Entity </para>
+                </parameterdescription>
+              </parameteritem>
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>ARGS</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>Constructor parameters of the Entity </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>args</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>Constructor parameters of the Entity </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+            <simplesect kind="return">
+              <para></para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="179" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="179" bodyend="197" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntityManager.RemoveEntity(const int,const int)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntityManager::RemoveEntity</definition>
+        <argsstring>(const int entityIndex, const int typeID)</argsstring>
+        <name>RemoveEntity</name>
+        <param>
+          <type>const int</type>
+          <declname>entityIndex</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>typeID</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="199" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="199" bodyend="214" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntityManager.RemoveEntity(const int)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntityManager::RemoveEntity</definition>
+        <argsstring>(const int entityIndex)</argsstring>
+        <name>RemoveEntity</name>
+        <param>
+          <type>const int</type>
+          <declname>entityIndex</declname>
+        </param>
+        <briefdescription>
+          <para>Removes an entity. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="templateparam">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>T</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The type of the entity to remove </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>entityIndex</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The entity index to be removed </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="222" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="222" bodyend="237" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntityManager.RemoveEntity(T *)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntityManager::RemoveEntity</definition>
+        <argsstring>(T *entity)</argsstring>
+        <name>RemoveEntity</name>
+        <param>
+          <type>T *</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="240" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="240" bodyend="243" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntityManager.RemoveEntity(rtm_ptr&lt;T&gt;)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntityManager::RemoveEntity</definition>
+        <argsstring>(rtm_ptr&lt;T&gt; entity)</argsstring>
+        <name>RemoveEntity</name>
+        <param>
+          <type>rtm_ptr&lt;T&gt;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="246" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="246" bodyend="249" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntityManager.RemoveEntity(rtm_ptr&lt;Entity&gt;)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist></templateparamlist>
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntityManager::RemoveEntity</definition>
+        <argsstring>(rtm_ptr&lt;Entity&gt; entity)</argsstring>
+        <name>RemoveEntity</name>
+        <param>
+          <type>rtm_ptr&lt;Entity&gt;</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="252" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="252" bodyend="255" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntityManager.GetEntityByIndex(int)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T* ShadowEngine::EntitySystem::EntityManager::GetEntityByIndex</definition>
+        <argsstring>(int index)</argsstring>
+        <name>GetEntityByIndex</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="258" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="258" bodyend="261" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntityManager.GetContainerByType()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>
+          <ref refid="EntityContainer" kindref="compound">EntityContainer</ref>&lt;T&gt; *</type>
+        <definition>EntityContainer&lt;T&gt;* ShadowEngine::EntitySystem::EntityManager::GetContainerByType</definition>
+        <argsstring>()</argsstring>
+        <name>GetContainerByType</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="264" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="264" bodyend="270" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntityManager.AddSystem(SystemCallbacks)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntityManager::AddSystem</definition>
+        <argsstring>(SystemCallbacks fn)</argsstring>
+        <name>AddSystem</name>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.EntitySystem.SystemCallbacks" kindref="compound">SystemCallbacks</ref>
+          </type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="272" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="272" bodyend="274" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntityManager.UpdateEntities()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntityManager::UpdateEntities</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateEntities</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="276" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="276" bodyend="282" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EntitySystem.EntityManager.InitEntities()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntityManager::InitEntities</definition>
+        <argsstring>()</argsstring>
+        <name>InitEntities</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="284" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="284" bodyend="290" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+      <para>Manages the memory and IDs of Entities. </para>
+    </briefdescription>
+    <detaileddescription></detaileddescription>
+    <collaborationgraph>
+      <node id="163">
+        <label>ShadowEngine::EntitySystem::EntityManager</label>
+        <link refid="ShadowEngine.EntitySystem.EntityManager" />
+        <childnode refid="163" relation="usage">
+          <edgelabel>Instance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/EntitySystem/EntityManager.h" line="21" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityManager.h" bodystart="21" bodyend="291" />
+    <listofallmembers>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.AddEntity(ARGS &amp;&amp;...)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>AddEntity</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.AddSystem(SystemCallbacks)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>AddSystem</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.AssignIndexToEntity(Entity *)" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>AssignIndexToEntity</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.ENTITY_LUT_GROW" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>ENTITY_LUT_GROW</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.EntityContainerRegistry" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>EntityContainerRegistry</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.EntityLookupTable" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>EntityLookupTable</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.EntityManager()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>EntityManager</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.GetComponentContainer()" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>GetComponentContainer</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.GetComponentContainer(int)" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>GetComponentContainer</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.GetContainerByType()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>GetContainerByType</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.GetEntityByIndex(int)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>GetEntityByIndex</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.InitEntities()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>InitEntities</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.Instance" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>Instance</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.LUTFragm" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>LUTFragm</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.LUTFragmFree" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>LUTFragmFree</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.LUTNextFree" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>LUTNextFree</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.m_EntityContainerRegistry" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>m_EntityContainerRegistry</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.m_EntityLUT" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>m_EntityLUT</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.nextUID" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>nextUID</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.ReleaseIndex(int)" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>ReleaseIndex</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.RemoveEntity(const int,const int)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>RemoveEntity</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.RemoveEntity(const int)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>RemoveEntity</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.RemoveEntity(T *)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>RemoveEntity</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.RemoveEntity(rtm_ptr&lt;T&gt;)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>RemoveEntity</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.RemoveEntity(rtm_ptr&lt;Entity&gt;)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>RemoveEntity</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.systems" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>systems</name>
+      </member>
+      <member refid="ShadowEngine.EntitySystem.EntityManager.UpdateEntities()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityManager</scope>
+        <name>UpdateEntities</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

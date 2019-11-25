@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::Rendering::D3D12::D3D12CommandList</compoundname>
+    <includes refid="_d3_d12_command_list_8h" local="no">D3D12CommandList.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1ac9d5327fa3b52d99bcea362991b9a2de" prot="private" static="no" mutable="no">
+        <type>com_ptr&lt;ID3D12CommandAllocator&gt;</type>
+        <definition>com_ptr&lt;ID3D12CommandAllocator&gt; ShadowEngine::Rendering::D3D12::D3D12CommandList::commandAllocator</definition>
+        <argsstring></argsstring>
+        <name>commandAllocator</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="21" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" bodystart="21" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1ab379f8b132444cda5cf71b4530b7e97e" prot="private" static="no" mutable="no">
+        <type>com_ptr&lt;ID3D12GraphicsCommandList&gt;</type>
+        <definition>com_ptr&lt;ID3D12GraphicsCommandList&gt; ShadowEngine::Rendering::D3D12::D3D12CommandList::commandList</definition>
+        <argsstring></argsstring>
+        <name>commandList</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="22" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" bodystart="22" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a558fcb05b394b6b83ab170a859cdd8e5" prot="private" static="no" mutable="no">
+        <type>D3D12_CPU_DESCRIPTOR_HANDLE</type>
+        <definition>D3D12_CPU_DESCRIPTOR_HANDLE ShadowEngine::Rendering::D3D12::D3D12CommandList::renderTarget</definition>
+        <argsstring></argsstring>
+        <name>renderTarget</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="24" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" bodystart="24" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1af2fe8291acde22615626de860b6f4472" prot="private" static="no" mutable="no">
+        <type>D3D12_CPU_DESCRIPTOR_HANDLE</type>
+        <definition>D3D12_CPU_DESCRIPTOR_HANDLE ShadowEngine::Rendering::D3D12::D3D12CommandList::depthBuffer</definition>
+        <argsstring></argsstring>
+        <name>depthBuffer</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="25" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" bodystart="25" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a7d59b884a934b04ff4606e40acaf5f93" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ShadowEngine::Rendering::D3D12::D3D12CommandList::isBeingRecorded</definition>
+        <argsstring></argsstring>
+        <name>isBeingRecorded</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="27" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" bodystart="27" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a9db8a5a6fb3cfdbcf5a4af17234bdb0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::D3D12::D3D12CommandList::D3D12CommandList</definition>
+        <argsstring>()</argsstring>
+        <name>D3D12CommandList</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="29" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.cpp" bodystart="9" bodyend="20" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a080054baaf35025233153f67e6b2225e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>com_ptr&lt;ID3D12GraphicsCommandList&gt;</type>
+        <definition>com_ptr&lt;ID3D12GraphicsCommandList&gt; ShadowEngine::Rendering::D3D12::D3D12CommandList::GetCommandList</definition>
+        <argsstring>()</argsstring>
+        <name>GetCommandList</name>
+        <briefdescription></briefdescription>
+        <detaileddescription>
+          <para>
+            <simplesect kind="return">
+              <para>The dx12 command list </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="35" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" bodystart="35" bodyend="35" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a811e23048b9a962d0359ce37536afcd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12CommandList::UseShader</definition>
+        <argsstring>(const Ref&lt;D3D12Shader&gt; &amp;shader)</argsstring>
+        <name>UseShader</name>
+        <param>
+          <type>const Ref&lt;<ref refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader" kindref="compound">D3D12Shader</ref>&gt; &amp;</type>
+          <declname>shader</declname>
+        </param>
+        <briefdescription>
+          <para>Binds a new shader to the command list to use. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>shader</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The shader to be used </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="43" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.cpp" bodystart="22" bodyend="26" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1ad29f1d70d09b6d7f2f5ddea2286a26c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12CommandList::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+          <para>Resets the Command List Should only be used when we are sure it is not in use. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="49" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.cpp" bodystart="28" bodyend="35" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a618e09e08c7ac5cd5dce77a5636bbfeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12CommandList::StartRecording</definition>
+        <argsstring>()</argsstring>
+        <name>StartRecording</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="51" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.cpp" bodystart="37" bodyend="44" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1aff9c38a6e5467c5222091b4b4638ad95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12CommandList::SetViewports</definition>
+        <argsstring>(D3D12_VIEWPORT viewPort)</argsstring>
+        <name>SetViewports</name>
+        <param>
+          <type>D3D12_VIEWPORT</type>
+          <declname>viewPort</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="53" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.cpp" bodystart="46" bodyend="49" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1ace384f779d58c46ca9eac89d4420960d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12CommandList::SetScissorRects</definition>
+        <argsstring>(D3D12_RECT scissorRect)</argsstring>
+        <name>SetScissorRects</name>
+        <param>
+          <type>D3D12_RECT</type>
+          <declname>scissorRect</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="55" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.cpp" bodystart="51" bodyend="54" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a82835bdeaaf386ffd15b29d91182b4e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12CommandList::ResourceBarrier</definition>
+        <argsstring>(D3D12_RESOURCE_BARRIER *barrier)</argsstring>
+        <name>ResourceBarrier</name>
+        <param>
+          <type>D3D12_RESOURCE_BARRIER *</type>
+          <declname>barrier</declname>
+        </param>
+        <briefdescription>
+          <para>Adds a new resource barrier to the command list. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>barrier</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The barrier to use Used to wait for a resource transition to happen (eg. rendertarget is available) </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="62" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.cpp" bodystart="56" bodyend="59" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1af7f444053a84e3531c30b13fb9338ade" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12CommandList::SetRenderTargets</definition>
+        <argsstring>(Ref&lt;D3D12SwapChain&gt; swapchain, Ref&lt;D3D12DepthBuffer&gt; depthBuffer)</argsstring>
+        <name>SetRenderTargets</name>
+        <param>
+          <type>Ref&lt;<ref refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_swap_chain" kindref="compound">D3D12SwapChain</ref>&gt;</type>
+          <declname>swapchain</declname>
+        </param>
+        <param>
+          <type>Ref&lt;<ref refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_depth_buffer" kindref="compound">D3D12DepthBuffer</ref>&gt;</type>
+          <declname>depthBuffer</declname>
+        </param>
+        <briefdescription>
+          <para>Set the render targets used in this command list. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>swapchain</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The swap chain to get the render target form </para>
+                </parameterdescription>
+              </parameteritem>
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>depthBuffer</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The depth buffer to use </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="69" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.cpp" bodystart="61" bodyend="66" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a9ff6197add5dad34b503e5cbc7ac0e4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12CommandList::ClearRenderTargetView</definition>
+        <argsstring>(const float *color)</argsstring>
+        <name>ClearRenderTargetView</name>
+        <param>
+          <type>const float *</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="73" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.cpp" bodystart="68" bodyend="71" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a65eb9a1016d2662c387210fd25f01827" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12CommandList::ClearDepthStencilView</definition>
+        <argsstring>(float depth, uint8_t stencil)</argsstring>
+        <name>ClearDepthStencilView</name>
+        <param>
+          <type>float</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>stencil</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="75" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.cpp" bodystart="73" bodyend="76" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a3c08ca4f8328a40de2ba3560f31cc43e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12CommandList::Close</definition>
+        <argsstring>()</argsstring>
+        <name>Close</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="76" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.cpp" bodystart="78" bodyend="82" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a9ec0ae3286b8c23edf501d572b2bcbf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12CommandList::DrawMesh</definition>
+        <argsstring>(const std::shared_ptr&lt;Assets::Mesh&gt; &amp;mesh)</argsstring>
+        <name>DrawMesh</name>
+        <param>
+          <type>const std::shared_ptr&lt;<ref refid="class_shadow_engine_1_1_assets_1_1_mesh" kindref="compound">Assets::Mesh</ref>&gt; &amp;</type>
+          <declname>mesh</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="77" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.cpp" bodystart="84" bodyend="93" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1ac178c21a631acecba920e81938193e79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12CommandList::BindConstantBuffer</definition>
+        <argsstring>(const Ref&lt;ConstantBuffer&gt; &amp;buffer, int materialSlotIndex)</argsstring>
+        <name>BindConstantBuffer</name>
+        <param>
+          <type>const Ref&lt;<ref refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer" kindref="compound">ConstantBuffer</ref>&gt; &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>materialSlotIndex</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="79" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.cpp" bodystart="95" bodyend="99" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a7cfcc40250da88ab10c64b5616d91871" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12CommandList::BindConstantBuffer</definition>
+        <argsstring>(const ConstantBuffer &amp;buffer, int registerIndex)</argsstring>
+        <name>BindConstantBuffer</name>
+        <param>
+          <type>const <ref refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer" kindref="compound">ConstantBuffer</ref> &amp;</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>registerIndex</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="80" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.cpp" bodystart="101" bodyend="105" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+      <para>A list of commands Used to record graphics/compute commands and than submit them at once. </para>
+    </briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" line="20" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12CommandList.h" bodystart="19" bodyend="81" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1ac178c21a631acecba920e81938193e79" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>BindConstantBuffer</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a7cfcc40250da88ab10c64b5616d91871" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>BindConstantBuffer</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a65eb9a1016d2662c387210fd25f01827" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>ClearDepthStencilView</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a9ff6197add5dad34b503e5cbc7ac0e4b" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>ClearRenderTargetView</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a3c08ca4f8328a40de2ba3560f31cc43e" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>Close</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1ac9d5327fa3b52d99bcea362991b9a2de" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>commandAllocator</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1ab379f8b132444cda5cf71b4530b7e97e" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>commandList</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a9db8a5a6fb3cfdbcf5a4af17234bdb0c" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>D3D12CommandList</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1af2fe8291acde22615626de860b6f4472" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>depthBuffer</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a9ec0ae3286b8c23edf501d572b2bcbf0" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>DrawMesh</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a080054baaf35025233153f67e6b2225e" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>GetCommandList</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a7d59b884a934b04ff4606e40acaf5f93" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>isBeingRecorded</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a558fcb05b394b6b83ab170a859cdd8e5" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>renderTarget</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1ad29f1d70d09b6d7f2f5ddea2286a26c2" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>Reset</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a82835bdeaaf386ffd15b29d91182b4e4" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>ResourceBarrier</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1af7f444053a84e3531c30b13fb9338ade" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>SetRenderTargets</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1ace384f779d58c46ca9eac89d4420960d" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>SetScissorRects</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1aff9c38a6e5467c5222091b4b4638ad95" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>SetViewports</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a618e09e08c7ac5cd5dce77a5636bbfeb" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>StartRecording</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_command_list_1a811e23048b9a962d0359ce37536afcd9" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12CommandList</scope>
+        <name>UseShader</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

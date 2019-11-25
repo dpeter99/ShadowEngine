@@ -1,0 +1,503 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.EntitySystem.EntityManager
+  id: ShadowEngine.EntitySystem.EntityManager
+  parent: ShadowEngine.EntitySystem
+  children:
+  - ShadowEngine.EntitySystem.EntityManager.AddEntity(ARGS &&...)
+  - ShadowEngine.EntitySystem.EntityManager.AddSystem(SystemCallbacks)
+  - ShadowEngine.EntitySystem.EntityManager.EntityManager()
+  - ShadowEngine.EntitySystem.EntityManager.GetContainerByType()
+  - ShadowEngine.EntitySystem.EntityManager.GetEntityByIndex(int)
+  - ShadowEngine.EntitySystem.EntityManager.InitEntities()
+  - ShadowEngine.EntitySystem.EntityManager.Instance
+  - ShadowEngine.EntitySystem.EntityManager.RemoveEntity(const int)
+  - ShadowEngine.EntitySystem.EntityManager.RemoveEntity(const int,const int)
+  - ShadowEngine.EntitySystem.EntityManager.RemoveEntity(rtm_ptr<Entity>)
+  - ShadowEngine.EntitySystem.EntityManager.RemoveEntity(rtm_ptr<T>)
+  - ShadowEngine.EntitySystem.EntityManager.RemoveEntity(T *)
+  - ShadowEngine.EntitySystem.EntityManager.UpdateEntities()
+  href: ShadowEngine.EntitySystem.EntityManager.yml
+  langs:
+  - cplusplus
+  name: EntityManager
+  nameWithType: EntityManager
+  fullName: ShadowEngine::EntitySystem::EntityManager
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/EntitySystem/EntityManager.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 20
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 20
+  namespace: ShadowEngine.EntitySystem
+  summary: "<p>Manages the memory and IDs of Entities. </p>"
+  syntax: &o1
+    content: 'public: class EntityManager'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.EntitySystem.EntityManager.AddEntity(ARGS &&...)
+  id: ShadowEngine.EntitySystem.EntityManager.AddEntity(ARGS &&...)
+  parent: ShadowEngine.EntitySystem.EntityManager
+  href: ShadowEngine.EntitySystem.EntityManager.yml
+  langs:
+  - cplusplus
+  name: AddEntity(ARGS &&... args)
+  nameWithType: EntityManager::AddEntity(ARGS &&... args)
+  fullName: rtm_ptr<T> ShadowEngine::EntitySystem::EntityManager::AddEntity(ARGS &&... args)
+  overload: ShadowEngine.EntitySystem.EntityManager.AddEntity*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 178
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 178
+  namespace: ShadowEngine.EntitySystem
+  summary: "<p>Instantiates a new entity. </p>"
+  syntax:
+    content: 'public: rtm_ptr<T> AddEntity(ARGS &&... args)'
+    parameters:
+    - id: args
+      type: 55582f03
+      description: <p>Constructor parameters of the Entity </p>
+    typeParameters:
+    - id: typename T
+      type: 9f0c21a8
+    - id: class ...
+      type: 8a6deb91
+    return:
+      type: afddb083
+- uid: ShadowEngine.EntitySystem.EntityManager.AddSystem(SystemCallbacks)
+  id: ShadowEngine.EntitySystem.EntityManager.AddSystem(SystemCallbacks)
+  parent: ShadowEngine.EntitySystem.EntityManager
+  href: ShadowEngine.EntitySystem.EntityManager.yml
+  langs:
+  - cplusplus
+  name: AddSystem(SystemCallbacks fn)
+  nameWithType: EntityManager::AddSystem(SystemCallbacks fn)
+  fullName: void ShadowEngine::EntitySystem::EntityManager::AddSystem(SystemCallbacks fn)
+  overload: ShadowEngine.EntitySystem.EntityManager.AddSystem*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 271
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 271
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: void AddSystem(SystemCallbacks fn)'
+    parameters:
+    - id: fn
+      type: ShadowEngine.EntitySystem.SystemCallbacks
+- uid: ShadowEngine.EntitySystem.EntityManager.EntityManager()
+  id: ShadowEngine.EntitySystem.EntityManager.EntityManager()
+  parent: ShadowEngine.EntitySystem.EntityManager
+  href: ShadowEngine.EntitySystem.EntityManager.yml
+  langs:
+  - cplusplus
+  name: EntityManager()
+  nameWithType: EntityManager::EntityManager()
+  fullName: ShadowEngine::EntitySystem::EntityManager::EntityManager()
+  overload: ShadowEngine.EntitySystem.EntityManager.EntityManager*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 165
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 165
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: EntityManager()'
+- uid: ShadowEngine.EntitySystem.EntityManager.GetContainerByType()
+  id: ShadowEngine.EntitySystem.EntityManager.GetContainerByType()
+  parent: ShadowEngine.EntitySystem.EntityManager
+  href: ShadowEngine.EntitySystem.EntityManager.yml
+  langs:
+  - cplusplus
+  name: GetContainerByType()
+  nameWithType: EntityManager::GetContainerByType()
+  fullName: EntityContainer<T>* ShadowEngine::EntitySystem::EntityManager::GetContainerByType()
+  overload: ShadowEngine.EntitySystem.EntityManager.GetContainerByType*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 263
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 263
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: EntityContainer<T> * GetContainerByType()'
+    typeParameters:
+    - id: class T
+      type: 07c9e456
+    return:
+      type: EntityContainer9b043d9a
+- uid: ShadowEngine.EntitySystem.EntityManager.GetEntityByIndex(int)
+  id: ShadowEngine.EntitySystem.EntityManager.GetEntityByIndex(int)
+  parent: ShadowEngine.EntitySystem.EntityManager
+  href: ShadowEngine.EntitySystem.EntityManager.yml
+  langs:
+  - cplusplus
+  name: GetEntityByIndex(int index)
+  nameWithType: EntityManager::GetEntityByIndex(int index)
+  fullName: T* ShadowEngine::EntitySystem::EntityManager::GetEntityByIndex(int index)
+  overload: ShadowEngine.EntitySystem.EntityManager.GetEntityByIndex*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 257
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 257
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: T * GetEntityByIndex(int index)'
+    parameters:
+    - id: index
+      type: f75371fa
+    typeParameters:
+    - id: class T
+      type: 07c9e456
+    return:
+      type: af4b7b18
+- uid: ShadowEngine.EntitySystem.EntityManager.InitEntities()
+  id: ShadowEngine.EntitySystem.EntityManager.InitEntities()
+  parent: ShadowEngine.EntitySystem.EntityManager
+  href: ShadowEngine.EntitySystem.EntityManager.yml
+  langs:
+  - cplusplus
+  name: InitEntities()
+  nameWithType: EntityManager::InitEntities()
+  fullName: void ShadowEngine::EntitySystem::EntityManager::InitEntities()
+  overload: ShadowEngine.EntitySystem.EntityManager.InitEntities*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 283
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 283
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: void InitEntities()'
+- uid: ShadowEngine.EntitySystem.EntityManager.Instance
+  id: ShadowEngine.EntitySystem.EntityManager.Instance
+  parent: ShadowEngine.EntitySystem.EntityManager
+  href: ShadowEngine.EntitySystem.EntityManager.yml
+  langs:
+  - cplusplus
+  name: Instance
+  nameWithType: EntityManager::Instance
+  fullName: EntityManager * ShadowEngine::EntitySystem::EntityManager::Instance
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 23
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 23
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: static EntityManager * Instance= nullptr'
+    return:
+      type: ShadowEngine.EntitySystem.EntityManager68bc11b4
+- uid: ShadowEngine.EntitySystem.EntityManager.RemoveEntity(const int)
+  id: ShadowEngine.EntitySystem.EntityManager.RemoveEntity(const int)
+  parent: ShadowEngine.EntitySystem.EntityManager
+  href: ShadowEngine.EntitySystem.EntityManager.yml
+  langs:
+  - cplusplus
+  name: RemoveEntity(const int entityIndex)
+  nameWithType: EntityManager::RemoveEntity(const int entityIndex)
+  fullName: void ShadowEngine::EntitySystem::EntityManager::RemoveEntity(const int entityIndex)
+  overload: ShadowEngine.EntitySystem.EntityManager.RemoveEntity*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 221
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 221
+  namespace: ShadowEngine.EntitySystem
+  summary: "<p>Removes an entity. </p>"
+  syntax:
+    content: 'public: void RemoveEntity(const int entityIndex)'
+    parameters:
+    - id: entityIndex
+      type: a38d1352
+      description: <p>The entity index to be removed </p>
+    typeParameters:
+    - id: class T
+      type: 07c9e456
+- uid: ShadowEngine.EntitySystem.EntityManager.RemoveEntity(const int,const int)
+  id: ShadowEngine.EntitySystem.EntityManager.RemoveEntity(const int,const int)
+  parent: ShadowEngine.EntitySystem.EntityManager
+  href: ShadowEngine.EntitySystem.EntityManager.yml
+  langs:
+  - cplusplus
+  name: RemoveEntity(const int entityIndex, const int typeID)
+  nameWithType: EntityManager::RemoveEntity(const int entityIndex, const int typeID)
+  fullName: void ShadowEngine::EntitySystem::EntityManager::RemoveEntity(const int entityIndex, const int typeID)
+  overload: ShadowEngine.EntitySystem.EntityManager.RemoveEntity*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 198
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 198
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: void RemoveEntity(const int entityIndex, const int typeID)'
+    parameters:
+    - id: entityIndex
+      type: a38d1352
+    - id: typeID
+      type: a38d1352
+- uid: ShadowEngine.EntitySystem.EntityManager.RemoveEntity(rtm_ptr<Entity>)
+  id: ShadowEngine.EntitySystem.EntityManager.RemoveEntity(rtm_ptr<Entity>)
+  parent: ShadowEngine.EntitySystem.EntityManager
+  href: ShadowEngine.EntitySystem.EntityManager.yml
+  langs:
+  - cplusplus
+  name: RemoveEntity(rtm_ptr<Entity> entity)
+  nameWithType: EntityManager::RemoveEntity(rtm_ptr<Entity> entity)
+  fullName: void ShadowEngine::EntitySystem::EntityManager::RemoveEntity(rtm_ptr<Entity> entity)
+  overload: ShadowEngine.EntitySystem.EntityManager.RemoveEntity*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 251
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 251
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: void RemoveEntity(rtm_ptr<Entity> entity)'
+    parameters:
+    - id: entity
+      type: 7ab5790a
+- uid: ShadowEngine.EntitySystem.EntityManager.RemoveEntity(rtm_ptr<T>)
+  id: ShadowEngine.EntitySystem.EntityManager.RemoveEntity(rtm_ptr<T>)
+  parent: ShadowEngine.EntitySystem.EntityManager
+  href: ShadowEngine.EntitySystem.EntityManager.yml
+  langs:
+  - cplusplus
+  name: RemoveEntity(rtm_ptr<T> entity)
+  nameWithType: EntityManager::RemoveEntity(rtm_ptr<T> entity)
+  fullName: void ShadowEngine::EntitySystem::EntityManager::RemoveEntity(rtm_ptr<T> entity)
+  overload: ShadowEngine.EntitySystem.EntityManager.RemoveEntity*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 245
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 245
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: void RemoveEntity(rtm_ptr<T> entity)'
+    parameters:
+    - id: entity
+      type: afddb083
+    typeParameters:
+    - id: class T
+      type: 07c9e456
+- uid: ShadowEngine.EntitySystem.EntityManager.RemoveEntity(T *)
+  id: ShadowEngine.EntitySystem.EntityManager.RemoveEntity(T *)
+  parent: ShadowEngine.EntitySystem.EntityManager
+  href: ShadowEngine.EntitySystem.EntityManager.yml
+  langs:
+  - cplusplus
+  name: RemoveEntity(T *entity)
+  nameWithType: EntityManager::RemoveEntity(T *entity)
+  fullName: void ShadowEngine::EntitySystem::EntityManager::RemoveEntity(T *entity)
+  overload: ShadowEngine.EntitySystem.EntityManager.RemoveEntity*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 239
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 239
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: void RemoveEntity(T *entity)'
+    parameters:
+    - id: entity
+      type: af4b7b18
+    typeParameters:
+    - id: class T
+      type: 07c9e456
+- uid: ShadowEngine.EntitySystem.EntityManager.UpdateEntities()
+  id: ShadowEngine.EntitySystem.EntityManager.UpdateEntities()
+  parent: ShadowEngine.EntitySystem.EntityManager
+  href: ShadowEngine.EntitySystem.EntityManager.yml
+  langs:
+  - cplusplus
+  name: UpdateEntities()
+  nameWithType: EntityManager::UpdateEntities()
+  fullName: void ShadowEngine::EntitySystem::EntityManager::UpdateEntities()
+  overload: ShadowEngine.EntitySystem.EntityManager.UpdateEntities*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 275
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 275
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: void UpdateEntities()'
+references:
+- uid: ShadowEngine.EntitySystem.EntityManager68bc11b4
+  spec.cplusplus:
+  - uid: ShadowEngine.EntitySystem.EntityManager
+  - name: " *"
+    fullName: " *"
+- uid: ShadowEngine.EntitySystem.EntityManager.EntityManager*
+  name: EntityManager
+  nameWithType: EntityManager::EntityManager
+  fullName: ShadowEngine::EntitySystem::EntityManager::EntityManager
+- uid: 9f0c21a8
+  spec.cplusplus:
+  - name: typename T
+    fullName: typename T
+- uid: 8a6deb91
+  spec.cplusplus:
+  - name: class ...
+    fullName: class ...
+- uid: 55582f03
+  spec.cplusplus:
+  - name: ARGS &&...
+    fullName: ARGS &&...
+- uid: afddb083
+  spec.cplusplus:
+  - name: rtm_ptr<T>
+    fullName: rtm_ptr<T>
+- uid: ShadowEngine.EntitySystem.EntityManager.AddEntity*
+  name: AddEntity
+  nameWithType: EntityManager::AddEntity
+  fullName: rtm_ptr<T> ShadowEngine::EntitySystem::EntityManager::AddEntity
+- uid: a38d1352
+  spec.cplusplus:
+  - name: const int
+    fullName: const int
+- uid: ShadowEngine.EntitySystem.EntityManager.RemoveEntity*
+  name: RemoveEntity
+  nameWithType: EntityManager::RemoveEntity
+  fullName: void ShadowEngine::EntitySystem::EntityManager::RemoveEntity
+- uid: 07c9e456
+  spec.cplusplus:
+  - name: class T
+    fullName: class T
+- uid: af4b7b18
+  spec.cplusplus:
+  - name: T *
+    fullName: T *
+- uid: 7ab5790a
+  spec.cplusplus:
+  - name: rtm_ptr<Entity>
+    fullName: rtm_ptr<Entity>
+- uid: f75371fa
+  spec.cplusplus:
+  - name: int
+    fullName: int
+- uid: ShadowEngine.EntitySystem.EntityManager.GetEntityByIndex*
+  name: GetEntityByIndex
+  nameWithType: EntityManager::GetEntityByIndex
+  fullName: T* ShadowEngine::EntitySystem::EntityManager::GetEntityByIndex
+- uid: EntityContainer9b043d9a
+  spec.cplusplus:
+  - uid: EntityContainer
+  - name: <T> *
+    fullName: <T> *
+- uid: ShadowEngine.EntitySystem.EntityManager.GetContainerByType*
+  name: GetContainerByType
+  nameWithType: EntityManager::GetContainerByType
+  fullName: EntityContainer<T>* ShadowEngine::EntitySystem::EntityManager::GetContainerByType
+- uid: ShadowEngine.EntitySystem.EntityManager.AddSystem*
+  name: AddSystem
+  nameWithType: EntityManager::AddSystem
+  fullName: void ShadowEngine::EntitySystem::EntityManager::AddSystem
+- uid: ShadowEngine.EntitySystem.EntityManager.UpdateEntities*
+  name: UpdateEntities
+  nameWithType: EntityManager::UpdateEntities
+  fullName: void ShadowEngine::EntitySystem::EntityManager::UpdateEntities
+- uid: ShadowEngine.EntitySystem.EntityManager.InitEntities*
+  name: InitEntities
+  nameWithType: EntityManager::InitEntities
+  fullName: void ShadowEngine::EntitySystem::EntityManager::InitEntities
+- uid: _entity_manager_8h
+- uid: IEntityContainer
+  href: IEntityContainer.yml
+  name: IEntityContainer
+  nameWithType: IEntityContainer
+  fullName: IEntityContainer
+  type: Class
+  syntax:
+    content: 'public: class IEntityContainer'
+- uid: ShadowEngine.EntitySystem.EntityManager
+  parent: ShadowEngine.EntitySystem
+  href: ShadowEngine.EntitySystem.EntityManager.yml
+  name: EntityManager
+  nameWithType: EntityManager
+  fullName: ShadowEngine::EntitySystem::EntityManager
+  type: Class
+  summary: "<p>Manages the memory and IDs of Entities. </p>"
+  syntax: *o1
+- uid: ShadowEngine.EntitySystem.SystemCallbacks
+  parent: ShadowEngine.EntitySystem
+  href: ShadowEngine.EntitySystem.SystemCallbacks.yml
+  name: SystemCallbacks
+  nameWithType: SystemCallbacks
+  fullName: ShadowEngine::EntitySystem::SystemCallbacks
+  type: Struct
+  syntax:
+    content: 'public: struct SystemCallbacks'
+- uid: EntityContainer
+  href: EntityContainer.yml
+  name: EntityContainer
+  nameWithType: EntityContainer
+  fullName: EntityContainer
+  type: Class
+  syntax:
+    content: 'public: class EntityContainer : public ntityContainer'
+    typeParameters:
+    - id: class
+      type: 4fedf2a2

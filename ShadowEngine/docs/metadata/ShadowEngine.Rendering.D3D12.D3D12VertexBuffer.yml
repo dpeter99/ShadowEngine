@@ -1,0 +1,278 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer
+  id: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer
+  parent: ShadowEngine.Rendering.D3D12
+  children:
+  - ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.~D3D12VertexBuffer()
+  - ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.D3D12VertexBuffer(void *,uint32_t)
+  - ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.GetBufferView()
+  - ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.GetLayout()
+  - ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.SetLayout(const ShadowEngine::Rendering::BufferLayout &)
+  href: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.yml
+  langs:
+  - cplusplus
+  name: D3D12VertexBuffer
+  nameWithType: D3D12VertexBuffer
+  fullName: ShadowEngine::Rendering::D3D12::D3D12VertexBuffer
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/Platform/D3D12/D3D12Buffers.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/D3D12/D3D12Buffers.h
+    startLine: 10
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12Buffers.h
+    startLine: 11
+  namespace: ShadowEngine.Rendering.D3D12
+  summary: "<p>Vertex Buffer holding vertices in a Dx12 way This hold the vertex buffer and the buffer view for it as well. </p>"
+  syntax:
+    content: 'public: class D3D12VertexBuffer : public rtexBuffer'
+  inheritance:
+  - System::Object
+  - ShadowEngine.Rendering.VertexBuffer
+  inheritedMembers:
+  - ShadowEngine.Rendering.VertexBuffer.Create(void *,uint32_t)
+  - ShadowEngine.Rendering.VertexBuffer.~VertexBuffer()
+- uid: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.~D3D12VertexBuffer()
+  id: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.~D3D12VertexBuffer()
+  parent: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer
+  href: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.yml
+  langs:
+  - cplusplus
+  name: ~D3D12VertexBuffer()
+  nameWithType: D3D12VertexBuffer::~D3D12VertexBuffer()
+  fullName: ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::~D3D12VertexBuffer()
+  overload: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.~D3D12VertexBuffer*
+  type: Constructor
+  source:
+    remote: &o1
+      path: ShadowEngine/src/Platform/D3D12/D3D12Buffers.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/D3D12/D3D12Buffers.cpp
+    startLine: 49
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12Buffers.h
+    startLine: 14
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: virtual ~D3D12VertexBuffer()'
+- uid: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.D3D12VertexBuffer(void *,uint32_t)
+  id: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.D3D12VertexBuffer(void *,uint32_t)
+  parent: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer
+  href: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.yml
+  langs:
+  - cplusplus
+  name: D3D12VertexBuffer(void *vertices, uint32_t size)
+  nameWithType: D3D12VertexBuffer::D3D12VertexBuffer(void *vertices, uint32_t size)
+  fullName: ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::D3D12VertexBuffer(void *vertices, uint32_t size)
+  overload: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.D3D12VertexBuffer*
+  type: Constructor
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12Buffers.cpp
+    startLine: 13
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12Buffers.h
+    startLine: 13
+  namespace: ShadowEngine.Rendering.D3D12
+  summary: "<p>Constructor for Dx12 Vertex Buffer. </p>"
+  syntax:
+    content: 'public: D3D12VertexBuffer(void *vertices, uint32_t size)'
+    parameters:
+    - id: vertices
+      type: 7ca192cd
+      description: <p>The vertex data for this buffer to store </p>
+    - id: size
+      type: efd6fb5d
+      description: <p>the size of the data (total length in bites) </p>
+- uid: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.GetBufferView()
+  id: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.GetBufferView()
+  parent: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer
+  href: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.yml
+  langs:
+  - cplusplus
+  name: GetBufferView()
+  nameWithType: D3D12VertexBuffer::GetBufferView()
+  fullName: const D3D12_VERTEX_BUFFER_VIEW& ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::GetBufferView()
+  overload: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.GetBufferView*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12Buffers.h
+    startLine: 26
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12Buffers.h
+    startLine: 26
+  namespace: ShadowEngine.Rendering.D3D12
+  summary: "<p>Returns the Buffer View. </p><p>Returns the buffer view to this vertex buffer. It returns a D3D12_VERTEX_BUFFER_VIEW struct witch is the Dx12 type for Vertex buffer views</p>\r\n<p></p>"
+  syntax:
+    content: 'public: const D3D12_VERTEX_BUFFER_VIEW & GetBufferView() const'
+    return:
+      type: 33d15c36
+      description: <p>Buffer view returned </p>
+- uid: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.GetLayout()
+  id: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.GetLayout()
+  parent: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer
+  href: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.yml
+  langs:
+  - cplusplus
+  name: GetLayout()
+  nameWithType: D3D12VertexBuffer::GetLayout()
+  fullName: virtual const ShadowEngine::Rendering::BufferLayout& ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::GetLayout()
+  overload: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.GetLayout*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12Buffers.h
+    startLine: 16
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12Buffers.h
+    startLine: 16
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: virtual const ShadowEngine::Rendering::BufferLayout & GetLayout() const override'
+    return:
+      type: 1413e510ShadowEngine.Rendering.BufferLayout76390d34
+  overridden: ShadowEngine.Rendering.VertexBuffer.GetLayout()
+- uid: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.SetLayout(const ShadowEngine::Rendering::BufferLayout &)
+  id: BufferLayout &)
+  parent: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer
+  href: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.yml
+  langs:
+  - cplusplus
+  name: SetLayout(const ShadowEngine::Rendering::BufferLayout &layout)
+  nameWithType: D3D12VertexBuffer::SetLayout(const ShadowEngine::Rendering::BufferLayout &layout)
+  fullName: virtual void ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::SetLayout(const ShadowEngine::Rendering::BufferLayout &layout)
+  overload: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.SetLayout*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12Buffers.h
+    startLine: 17
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12Buffers.h
+    startLine: 17
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: virtual void SetLayout(const ShadowEngine::Rendering::BufferLayout &layout) override'
+    parameters:
+    - id: layout
+      type: 1413e510ShadowEngine.Rendering.BufferLayout76390d34
+  overridden: ShadowEngine.Rendering.VertexBuffer.SetLayout(const BufferLayout &)
+references:
+- uid: 7ca192cd
+  spec.cplusplus:
+  - name: void *
+    fullName: void *
+- uid: efd6fb5d
+  spec.cplusplus:
+  - name: uint32_t
+    fullName: uint32_t
+- uid: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.D3D12VertexBuffer*
+  name: D3D12VertexBuffer
+  nameWithType: D3D12VertexBuffer::D3D12VertexBuffer
+  fullName: ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::D3D12VertexBuffer
+- uid: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.~D3D12VertexBuffer*
+  name: ~D3D12VertexBuffer
+  nameWithType: D3D12VertexBuffer::~D3D12VertexBuffer
+  fullName: ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::~D3D12VertexBuffer
+- uid: 1413e510ShadowEngine.Rendering.BufferLayout76390d34
+  spec.cplusplus:
+  - name: 'const '
+    fullName: 'const '
+  - uid: ShadowEngine.Rendering.BufferLayout
+  - name: " &"
+    fullName: " &"
+- uid: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.GetLayout*
+  name: GetLayout
+  nameWithType: D3D12VertexBuffer::GetLayout
+  fullName: virtual const ShadowEngine::Rendering::BufferLayout& ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::GetLayout
+- uid: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.SetLayout*
+  name: SetLayout
+  nameWithType: D3D12VertexBuffer::SetLayout
+  fullName: virtual void ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::SetLayout
+- uid: 33d15c36
+  spec.cplusplus:
+  - name: const D3D12_VERTEX_BUFFER_VIEW &
+    fullName: const D3D12_VERTEX_BUFFER_VIEW &
+- uid: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.GetBufferView*
+  name: GetBufferView
+  nameWithType: D3D12VertexBuffer::GetBufferView
+  fullName: const D3D12_VERTEX_BUFFER_VIEW& ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::GetBufferView
+- uid: ShadowEngine.Rendering.VertexBuffer.Create(void *,uint32_t)
+  parent: ShadowEngine.Rendering.VertexBuffer
+  href: ShadowEngine.Rendering.VertexBuffer.yml
+  name: Create(void *vertices, uint32_t size)
+  nameWithType: VertexBuffer::Create(void *vertices, uint32_t size)
+  fullName: VertexBuffer * ShadowEngine::Rendering::VertexBuffer::Create(void *vertices, uint32_t size)
+  type: Method
+  syntax:
+    content: 'public: static VertexBuffer * Create(void *vertices, uint32_t size)'
+    parameters:
+    - id: vertices
+      type: 7ca192cd
+    - id: size
+      type: efd6fb5d
+    return:
+      type: ShadowEngine.Rendering.VertexBuffer68bc11b4
+- uid: ShadowEngine.Rendering.VertexBuffer.~VertexBuffer()
+  parent: ShadowEngine.Rendering.VertexBuffer
+  href: ShadowEngine.Rendering.VertexBuffer.yml
+  name: ~VertexBuffer()
+  nameWithType: VertexBuffer::~VertexBuffer()
+  fullName: virtual ShadowEngine::Rendering::VertexBuffer::~VertexBuffer()
+  type: Constructor
+  syntax:
+    content: 'public: virtual ~VertexBuffer()=default'
+- uid: ShadowEngine.Rendering.VertexBuffer
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.VertexBuffer.yml
+  name: VertexBuffer
+  nameWithType: VertexBuffer
+  fullName: ShadowEngine::Rendering::VertexBuffer
+  type: Class
+  syntax:
+    content: 'public: class VertexBuffer'
+- uid: _d3_d12_buffers_8h
+- uid: ShadowEngine.Rendering.BufferLayout
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.BufferLayout.yml
+  name: BufferLayout
+  nameWithType: BufferLayout
+  fullName: ShadowEngine::Rendering::BufferLayout
+  type: Class
+  syntax:
+    content: 'public: class BufferLayout'
+- uid: ShadowEngine.Rendering.VertexBuffer.GetLayout()
+  parent: ShadowEngine.Rendering.VertexBuffer
+  href: ShadowEngine.Rendering.VertexBuffer.yml
+  name: GetLayout()
+  nameWithType: VertexBuffer::GetLayout()
+  fullName: virtual const BufferLayout& ShadowEngine::Rendering::VertexBuffer::GetLayout()
+  type: Method
+  syntax:
+    content: 'public: virtual const BufferLayout & GetLayout() const =0'
+    return:
+      type: 1413e510ShadowEngine.Rendering.BufferLayout76390d34
+- uid: ShadowEngine.Rendering.VertexBuffer.SetLayout(const BufferLayout &)
+  parent: ShadowEngine.Rendering.VertexBuffer
+  href: ShadowEngine.Rendering.VertexBuffer.yml
+  name: SetLayout(const BufferLayout &layout)
+  nameWithType: VertexBuffer::SetLayout(const BufferLayout &layout)
+  fullName: virtual void ShadowEngine::Rendering::VertexBuffer::SetLayout(const BufferLayout &layout)
+  type: Method
+  syntax:
+    content: 'public: virtual void SetLayout(const BufferLayout &layout)=0'
+    parameters:
+    - id: layout
+      type: 1413e510ShadowEngine.Rendering.BufferLayout76390d34

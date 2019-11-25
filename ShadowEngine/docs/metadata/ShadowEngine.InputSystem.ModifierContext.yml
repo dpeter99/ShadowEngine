@@ -1,0 +1,150 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.InputSystem.ModifierContext
+  id: ShadowEngine.InputSystem.ModifierContext
+  parent: ShadowEngine.InputSystem
+  children:
+  - ShadowEngine.InputSystem.ModifierContext.bindingState_
+  - ShadowEngine.InputSystem.ModifierContext.continuous_
+  - ShadowEngine.InputSystem.ModifierContext.event_
+  - ShadowEngine.InputSystem.ModifierContext.outState_
+  href: ShadowEngine.InputSystem.ModifierContext.yml
+  langs:
+  - cplusplus
+  name: ModifierContext
+  nameWithType: ModifierContext
+  fullName: ShadowEngine::InputSystem::ModifierContext
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowInput/ModifierContext.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowInput/ModifierContext.h
+    startLine: 5
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/ModifierContext.h
+    startLine: 6
+  namespace: ShadowEngine.InputSystem
+  syntax:
+    content: 'public: class ModifierContext'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.InputSystem.ModifierContext.bindingState_
+  id: ShadowEngine.InputSystem.ModifierContext.bindingState_
+  parent: ShadowEngine.InputSystem.ModifierContext
+  href: ShadowEngine.InputSystem.ModifierContext.yml
+  langs:
+  - cplusplus
+  name: bindingState_
+  nameWithType: ModifierContext::bindingState_
+  fullName: bool ShadowEngine::InputSystem::ModifierContext::bindingState_
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/ModifierContext.h
+    startLine: 12
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/ModifierContext.h
+    startLine: 12
+  namespace: ShadowEngine.InputSystem
+  syntax:
+    content: 'public: bool bindingState_'
+    return:
+      type: 13ff06c5
+- uid: ShadowEngine.InputSystem.ModifierContext.continuous_
+  id: ShadowEngine.InputSystem.ModifierContext.continuous_
+  parent: ShadowEngine.InputSystem.ModifierContext
+  href: ShadowEngine.InputSystem.ModifierContext.yml
+  langs:
+  - cplusplus
+  name: continuous_
+  nameWithType: ModifierContext::continuous_
+  fullName: bool ShadowEngine::InputSystem::ModifierContext::continuous_
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/ModifierContext.h
+    startLine: 11
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/ModifierContext.h
+    startLine: 11
+  namespace: ShadowEngine.InputSystem
+  syntax:
+    content: 'public: bool continuous_'
+    return:
+      type: 13ff06c5
+- uid: ShadowEngine.InputSystem.ModifierContext.event_
+  id: ShadowEngine.InputSystem.ModifierContext.event_
+  parent: ShadowEngine.InputSystem.ModifierContext
+  href: ShadowEngine.InputSystem.ModifierContext.yml
+  langs:
+  - cplusplus
+  name: event_
+  nameWithType: ModifierContext::event_
+  fullName: const EventSystem::ShadowEvent* ShadowEngine::InputSystem::ModifierContext::event_
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/ModifierContext.h
+    startLine: 9
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/ModifierContext.h
+    startLine: 9
+  namespace: ShadowEngine.InputSystem
+  syntax:
+    content: 'public: const EventSystem::ShadowEvent * event_'
+    return:
+      type: 1413e510ShadowEngine.EventSystem.ShadowEvent68bc11b4
+- uid: ShadowEngine.InputSystem.ModifierContext.outState_
+  id: ShadowEngine.InputSystem.ModifierContext.outState_
+  parent: ShadowEngine.InputSystem.ModifierContext
+  href: ShadowEngine.InputSystem.ModifierContext.yml
+  langs:
+  - cplusplus
+  name: outState_
+  nameWithType: ModifierContext::outState_
+  fullName: ActionState ShadowEngine::InputSystem::ModifierContext::outState_
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/ModifierContext.h
+    startLine: 13
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/ModifierContext.h
+    startLine: 13
+  namespace: ShadowEngine.InputSystem
+  syntax:
+    content: 'public: ActionState outState_'
+    return:
+      type: e1ec438b
+references:
+- uid: 1413e510ShadowEngine.EventSystem.ShadowEvent68bc11b4
+  spec.cplusplus:
+  - name: 'const '
+    fullName: 'const '
+  - uid: ShadowEngine.EventSystem.ShadowEvent
+  - name: " *"
+    fullName: " *"
+- uid: 13ff06c5
+  spec.cplusplus:
+  - name: bool
+    fullName: bool
+- uid: e1ec438b
+  spec.cplusplus:
+  - name: ActionState
+    fullName: ActionState
+- uid: ShadowEngine.EventSystem.ShadowEvent
+  parent: ShadowEngine.EventSystem
+  href: ShadowEngine.EventSystem.ShadowEvent.yml
+  name: ShadowEvent
+  nameWithType: ShadowEvent
+  fullName: ShadowEngine::EventSystem::ShadowEvent
+  type: Class
+  syntax:
+    content: 'public: class ShadowEvent'

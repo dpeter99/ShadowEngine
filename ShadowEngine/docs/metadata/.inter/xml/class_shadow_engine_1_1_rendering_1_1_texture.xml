@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_rendering_1_1_texture" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ShadowEngine::Rendering::Texture</compoundname>
+    <derivedcompoundref refid="class_shadow_engine_1_1_rendering_1_1_texture2_d" prot="public" virt="non-virtual">ShadowEngine::Rendering::Texture2D</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_texture_1a78a07933dc2a3cf7417879e3d4380a5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ShadowEngine::Rendering::Texture::~Texture</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Texture</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Texture.h" line="12" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_texture_1aa96a4df357ef2dc85a60ad0a348ff64f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint32_t</type>
+        <definition>virtual uint32_t ShadowEngine::Rendering::Texture::GetWidth</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetWidth</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Texture.h" line="14" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_texture_1a0a3251a4aca8b4a9587d70b9600f2304" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint32_t</type>
+        <definition>virtual uint32_t ShadowEngine::Rendering::Texture::GetHeight</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetHeight</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Texture.h" line="15" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_texture_1a7ad9f4cd85f8416ad0eaf505372aaba8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::Rendering::Texture::Bind</definition>
+        <argsstring>(uint32_t slot=0) const =0</argsstring>
+        <name>Bind</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>slot</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Texture.h" line="17" column="1" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="648">
+        <label>ShadowEngine::Rendering::Texture</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_texture" />
+      </node>
+      <node id="649">
+        <label>ShadowEngine::Rendering::Texture2D</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_texture2_d" />
+        <childnode refid="648" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <location file="ShadowEngine/src/ShadowRenderer/Texture.h" line="10" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Texture.h" bodystart="9" bodyend="18" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_texture_1a7ad9f4cd85f8416ad0eaf505372aaba8" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::Texture</scope>
+        <name>Bind</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_texture_1a0a3251a4aca8b4a9587d70b9600f2304" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::Texture</scope>
+        <name>GetHeight</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_texture_1aa96a4df357ef2dc85a60ad0a348ff64f" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::Texture</scope>
+        <name>GetWidth</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_texture_1a78a07933dc2a3cf7417879e3d4380a5a" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::Texture</scope>
+        <name>~Texture</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

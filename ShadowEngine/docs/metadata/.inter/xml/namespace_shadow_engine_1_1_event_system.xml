@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="namespace_shadow_engine_1_1_event_system" kind="namespace" language="C++">
+    <compoundname>ShadowEngine::EventSystem</compoundname>
+    <innerclass refid="class_shadow_engine_1_1_event_system_1_1_i_shadow_event_listener" prot="public">ShadowEngine::EventSystem::IShadowEventListener</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_event_system_1_1_i_shadow_event_source" prot="public">ShadowEngine::EventSystem::IShadowEventSource</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_event_system_1_1_shadow_event" prot="public">ShadowEngine::EventSystem::ShadowEvent</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_event_system_1_1_shadow_event_manager" prot="public">ShadowEngine::EventSystem::ShadowEventManager</innerclass>
+    <innernamespace refid="namespace_shadow_engine_1_1_event_system_1_1_events">ShadowEngine::EventSystem::Events</innernamespace>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_shadow_event_8h_1a3a22b5a19dfcac0b0b89f5fe5d4e5bf0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; ShadowEngine::EventSystem::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const class ShadowEvent &amp;e)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const class <ref refid="class_shadow_engine_1_1_event_system_1_1_shadow_event" kindref="compound">ShadowEvent</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/ShadowEvent.h" line="31" column="1" bodyfile="ShadowEngine/src/ShadowEvents/ShadowEvent.h" bodystart="31" bodyend="34" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/ShadowEvents/Events/ApplicationEvent.h" line="6" column="1" />
+  </compounddef>
+</doxygen>

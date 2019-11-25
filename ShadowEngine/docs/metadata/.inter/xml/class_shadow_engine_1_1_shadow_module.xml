@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_shadow_module" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ShadowEngine::ShadowModule</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_s_h_object" prot="public" virt="non-virtual">ShadowEngine::SHObject</basecompoundref>
+    <derivedcompoundref refid="class_asset_manager" prot="public" virt="non-virtual">AssetManager</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_debug_1_1_debug_module" prot="public" virt="non-virtual">ShadowEngine::Debug::DebugModule</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_debug_gui_1_1_im_gui_module" prot="public" virt="non-virtual">ShadowEngine::DebugGui::ImGuiModule</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_entity_system_1_1_entity_system" prot="public" virt="non-virtual">ShadowEngine::EntitySystem::EntitySystem</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_event_system_1_1_shadow_event_manager" prot="public" virt="non-virtual">ShadowEngine::EventSystem::ShadowEventManager</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_input_system_1_1_shadow_action_system" prot="public" virt="non-virtual">ShadowEngine::InputSystem::ShadowActionSystem</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_log" prot="public" virt="non-virtual">ShadowEngine::Log</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_rendering_1_1_renderer" prot="public" virt="non-virtual">ShadowEngine::Rendering::Renderer</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_s_d_l_platform_1_1_s_d_l_module" prot="public" virt="non-virtual">ShadowEngine::SDLPlatform::SDLModule</derivedcompoundref>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_module_1aa6210b8806ad120be85977428b294bb0" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>SHObject_Base(<ref refid="class_shadow_engine_1_1_shadow_module" kindref="compound">ShadowModule</ref>) public void</type>
+        <definition>virtual SHObject_Base (ShadowModule) public void ShadowEngine::ShadowModule::Update</definition>
+        <argsstring>()=0</argsstring>
+        <name>Update</name>
+        <reimplementedby refid="class_shadow_engine_1_1_log_1ad04d535d5072c5e58da3d8276b648aa7">Update</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_debug_gui_1_1_im_gui_module_1a4913dda0b3c4d046a70b8994c6075cc3">Update</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_s_d_l_platform_1_1_s_d_l_module_1a0e02c29c1834049453ab4398d81d1df2">Update</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_debug_1_1_debug_module_1a687faa6db2724b9d0dead5dbca26a73b">Update</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_entity_system_1_1_entity_system_1a58c9ad4cb12c570556281bf26a6900c2">Update</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_rendering_1_1_renderer_1a6dcd5180c83b27b9ceb83b7ec3e7ebe4">Update</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_input_system_1_1_shadow_action_system_1a429e12b41bf08cca801e58f5a06b02db">Update</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_event_system_1_1_shadow_event_manager_1ae4fa7c9e991fc0e29198b6b5c22f2605">Update</reimplementedby>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowModules/ShadowModule.h" line="14" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_module_1aab2ad5a8a1bc8185cfe664f102481557" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::ShadowModule::Render</definition>
+        <argsstring>()=0</argsstring>
+        <name>Render</name>
+        <reimplementedby refid="class_shadow_engine_1_1_log_1a1c04cd1af4d11d124d59439491920cab">Render</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_debug_gui_1_1_im_gui_module_1a16039d6e9d9e7c1a7b9df63788223a72">Render</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_s_d_l_platform_1_1_s_d_l_module_1a72d59605b0cc151a0cea4f7e1db4991a">Render</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_debug_1_1_debug_module_1a93417ee70b992a5574dc04ab258a2318">Render</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_entity_system_1_1_entity_system_1ad6515689047de2f45a113d8dd358d0c2">Render</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_rendering_1_1_renderer_1a4cd2c292f8bbe5e0b495beb8f2786579">Render</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_input_system_1_1_shadow_action_system_1a92b7ba9cb3313e366be5f4cb07ccce42">Render</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_event_system_1_1_shadow_event_manager_1a493e8e933253e31f4503427b92c87ce8">Render</reimplementedby>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowModules/ShadowModule.h" line="16" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_module_1aff322cdcc841b388e7c9c77337053197" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::ShadowModule::LateRender</definition>
+        <argsstring>()=0</argsstring>
+        <name>LateRender</name>
+        <reimplementedby refid="class_shadow_engine_1_1_log_1aa5659f19c2b91d689283c68819f1c65e">LateRender</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_debug_gui_1_1_im_gui_module_1a6a7946f616e7a031440b3cadf572543b">LateRender</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_s_d_l_platform_1_1_s_d_l_module_1a3fd3c7817836b029b3ed8782056add06">LateRender</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_debug_1_1_debug_module_1a7f1ec5311a51d60b43706e78eed862c1">LateRender</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_entity_system_1_1_entity_system_1aab9f29b4fd692eb69dc4d13f70d926c6">LateRender</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_rendering_1_1_renderer_1ad9434e948fd757913cc7cb7734fcd5e6">LateRender</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_input_system_1_1_shadow_action_system_1af4556fa7028b6cbdedae7c605c728843">LateRender</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_event_system_1_1_shadow_event_manager_1a3b3506a5b49b51ce4b970bfe26628d04">LateRender</reimplementedby>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowModules/ShadowModule.h" line="18" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_module_1a128ea061c249cd5fe494b19f63eb0a5e" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string ShadowEngine::ShadowModule::GetName</definition>
+        <argsstring>()=0</argsstring>
+        <name>GetName</name>
+        <reimplementedby refid="class_shadow_engine_1_1_log_1a64ce114f0a8aaa3b87e60ac08529ef76">GetName</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_s_d_l_platform_1_1_s_d_l_module_1a33501ac38ce91b1f742fac8c8fe22014">GetName</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_debug_gui_1_1_im_gui_module_1a4c05fab699c7551589c7669d0000bbbd">GetName</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_debug_1_1_debug_module_1a7ef96bf7a8b8589877bf43b7d96af02f">GetName</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_entity_system_1_1_entity_system_1ab73ba3d6f67aabc02e6ede66e2bf7f3f">GetName</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_rendering_1_1_renderer_1ab105b56a32b5606539c0f0edac3f79df">GetName</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_input_system_1_1_shadow_action_system_1a29753fa86878fee35a37bfbc7963e953">GetName</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_event_system_1_1_shadow_event_manager_1a029f4c7bfb1cbb1bdb050d88829efcf5">GetName</reimplementedby>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowModules/ShadowModule.h" line="20" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_module_1a5670c2de476f38a07460b239f9b6d27a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::ShadowModule::ShadowModule</definition>
+        <argsstring>()</argsstring>
+        <name>ShadowModule</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowModules/ShadowModule.h" line="22" column="1" bodyfile="ShadowEngine/src/ShadowModules/ShadowModule.cpp" bodystart="5" bodyend="7" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_module_1a1b0c9a91a9133017708b982e6dbb9bdf" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>ShadowEngine::ShadowModule::~ShadowModule</definition>
+        <argsstring>()</argsstring>
+        <name>~ShadowModule</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowModules/ShadowModule.h" line="23" column="1" bodyfile="ShadowEngine/src/ShadowModules/ShadowModule.cpp" bodystart="9" bodyend="11" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="554">
+        <label>ShadowEngine::SDLPlatform::SDLModule</label>
+        <link refid="class_shadow_engine_1_1_s_d_l_platform_1_1_s_d_l_module" />
+        <childnode refid="544" relation="public-inheritance"></childnode>
+      </node>
+      <node id="545">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="546">
+        <label>AssetManager</label>
+        <link refid="class_asset_manager" />
+        <childnode refid="544" relation="public-inheritance"></childnode>
+      </node>
+      <node id="549">
+        <label>ShadowEngine::EntitySystem::EntitySystem</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_entity_system" />
+        <childnode refid="544" relation="public-inheritance"></childnode>
+      </node>
+      <node id="550">
+        <label>ShadowEngine::EventSystem::ShadowEventManager</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_shadow_event_manager" />
+        <childnode refid="544" relation="public-inheritance"></childnode>
+      </node>
+      <node id="548">
+        <label>ShadowEngine::DebugGui::ImGuiModule</label>
+        <link refid="class_shadow_engine_1_1_debug_gui_1_1_im_gui_module" />
+        <childnode refid="544" relation="public-inheritance"></childnode>
+      </node>
+      <node id="552">
+        <label>ShadowEngine::Log</label>
+        <link refid="class_shadow_engine_1_1_log" />
+        <childnode refid="544" relation="public-inheritance"></childnode>
+      </node>
+      <node id="553">
+        <label>ShadowEngine::Rendering::Renderer</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_renderer" />
+        <childnode refid="544" relation="public-inheritance"></childnode>
+      </node>
+      <node id="547">
+        <label>ShadowEngine::Debug::DebugModule</label>
+        <link refid="class_shadow_engine_1_1_debug_1_1_debug_module" />
+        <childnode refid="544" relation="public-inheritance"></childnode>
+      </node>
+      <node id="544">
+        <label>ShadowEngine::ShadowModule</label>
+        <link refid="class_shadow_engine_1_1_shadow_module" />
+        <childnode refid="545" relation="public-inheritance"></childnode>
+      </node>
+      <node id="551">
+        <label>ShadowEngine::InputSystem::ShadowActionSystem</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_shadow_action_system" />
+        <childnode refid="544" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="556">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="555">
+        <label>ShadowEngine::ShadowModule</label>
+        <link refid="class_shadow_engine_1_1_shadow_module" />
+        <childnode refid="556" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowModules/ShadowModule.h" line="7" column="1" bodyfile="ShadowEngine/src/ShadowModules/ShadowModule.h" bodystart="6" bodyend="24" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a35bf9fdc604caa67e1a2f1b0a9c574f2" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::ShadowModule</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_module_1a128ea061c249cd5fe494b19f63eb0a5e" prot="private" virt="pure-virtual">
+        <scope>ShadowEngine::ShadowModule</scope>
+        <name>GetName</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a230ca5dec944e67f8d57dfc743da7d94" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::ShadowModule</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::ShadowModule</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_module_1aff322cdcc841b388e7c9c77337053197" prot="private" virt="pure-virtual">
+        <scope>ShadowEngine::ShadowModule</scope>
+        <name>LateRender</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_module_1aab2ad5a8a1bc8185cfe664f102481557" prot="private" virt="pure-virtual">
+        <scope>ShadowEngine::ShadowModule</scope>
+        <name>Render</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_module_1a5670c2de476f38a07460b239f9b6d27a" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::ShadowModule</scope>
+        <name>ShadowModule</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_module_1aa6210b8806ad120be85977428b294bb0" prot="private" virt="pure-virtual">
+        <scope>ShadowEngine::ShadowModule</scope>
+        <name>Update</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_module_1a1b0c9a91a9133017708b982e6dbb9bdf" prot="private" virt="virtual">
+        <scope>ShadowEngine::ShadowModule</scope>
+        <name>~ShadowModule</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual">
+        <scope>ShadowEngine::ShadowModule</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

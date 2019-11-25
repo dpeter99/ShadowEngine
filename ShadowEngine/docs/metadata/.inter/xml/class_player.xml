@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_player" kind="class" language="C++" prot="public">
+    <compoundname>Player</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" prot="public" virt="non-virtual">ShadowEngine::EntitySystem::SceneEntity</basecompoundref>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_player_1a11d095d9b22d46f56ddfd76f87cbc59f" prot="public" static="yes" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Player::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Player.h" line="13" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Player.h" bodystart="13" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_player_1a7ad3c666f3161952f637217f41ccf848" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Player::SHObject_Base</definition>
+        <argsstring>(Player) Entity_Base(Player</argsstring>
+        <name>SHObject_Base</name>
+        <param>
+          <type>
+            <ref refid="class_player" kindref="compound">Player</ref>
+          </type>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Player.h" line="9" column="1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_1adadf7046d564eabdca1ce20080bb56ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player::Render</definition>
+        <argsstring>() override</argsstring>
+        <name>Render</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Player.h" line="17" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Player.cpp" bodystart="16" bodyend="19" />
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a4eaaeb9d0967fef59baac319b9cc8d60" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Player::Init</definition>
+        <argsstring>() override</argsstring>
+        <name>Init</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Player.h" line="20" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Player.cpp" bodystart="21" bodyend="23" />
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a4c618ea9123b386e5d9ef8809797d629" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Player::Start</definition>
+        <argsstring>() override</argsstring>
+        <name>Start</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Player.h" line="21" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Player.cpp" bodystart="25" bodyend="27" />
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a5e17be3418fa0ac0192c05efaf3dc8bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Player::Update</definition>
+        <argsstring>() override</argsstring>
+        <name>Update</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Player.h" line="22" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Player.cpp" bodystart="29" bodyend="31" />
+      </memberdef>
+      <memberdef kind="function" id="class_player_1af7c2586946a6687ad2fd5b1d928329a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Player::LateUpdate</definition>
+        <argsstring>() override</argsstring>
+        <name>LateUpdate</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Player.h" line="23" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Player.cpp" bodystart="33" bodyend="35" />
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a6ea74acc03257d0bdb130ddd479a044a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Player::LateRender</definition>
+        <argsstring>() override</argsstring>
+        <name>LateRender</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Player.h" line="24" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Player.cpp" bodystart="37" bodyend="39" />
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a1804eed138a1c2c294ea2c933fa40d8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>ShadowEngine::EntitySystem::EntityFlags</type>
+        <definition>ShadowEngine::EntitySystem::EntityFlags Player::GetFlags</definition>
+        <argsstring>() override</argsstring>
+        <name>GetFlags</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Player.h" line="25" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Player.cpp" bodystart="41" bodyend="44" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="432">
+        <label>ShadowEngine::EntitySystem::SceneEntity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" />
+        <childnode refid="433" relation="public-inheritance"></childnode>
+      </node>
+      <node id="433">
+        <label>Entity</label>
+      </node>
+      <node id="431">
+        <label>Player</label>
+        <link refid="class_player" />
+        <childnode refid="432" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="435">
+        <label>ShadowEngine::EntitySystem::SceneEntity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" />
+        <childnode refid="436" relation="public-inheritance"></childnode>
+      </node>
+      <node id="436">
+        <label>Entity</label>
+      </node>
+      <node id="434">
+        <label>Player</label>
+        <link refid="class_player" />
+        <childnode refid="435" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/EntitySystem/Entities/Player.h" line="8" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Player.h" bodystart="7" bodyend="26" />
+    <listofallmembers>
+      <member refid="class_player_1a1804eed138a1c2c294ea2c933fa40d8b" prot="public" virt="virtual">
+        <scope>Player</scope>
+        <name>GetFlags</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a973bfe0c2c49579e235fb9602f836f94" prot="public" virt="virtual">
+        <scope>Player</scope>
+        <name>GetTransform</name>
+      </member>
+      <member refid="class_player_1a11d095d9b22d46f56ddfd76f87cbc59f" prot="public" virt="non-virtual">
+        <scope>Player</scope>
+        <name>id</name>
+      </member>
+      <member refid="class_player_1a4eaaeb9d0967fef59baac319b9cc8d60" prot="public" virt="virtual">
+        <scope>Player</scope>
+        <name>Init</name>
+      </member>
+      <member refid="class_player_1a6ea74acc03257d0bdb130ddd479a044a" prot="public" virt="virtual">
+        <scope>Player</scope>
+        <name>LateRender</name>
+      </member>
+      <member refid="class_player_1af7c2586946a6687ad2fd5b1d928329a3" prot="public" virt="virtual">
+        <scope>Player</scope>
+        <name>LateUpdate</name>
+      </member>
+      <member refid="class_player_1adadf7046d564eabdca1ce20080bb56ed" prot="public" virt="non-virtual">
+        <scope>Player</scope>
+        <name>Render</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1afc8c3004bc7d6c473f9a6faaeac6abad" prot="public" virt="non-virtual">
+        <scope>Player</scope>
+        <name>SceneEntity</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a017ec5e9e4ff00c1f3d91072dd28ac7c" prot="public" virt="non-virtual">
+        <scope>Player</scope>
+        <name>SceneEntity</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a1fa641bdc27235315d094ea17e3ebcb2" prot="public" virt="non-virtual">
+        <scope>Player</scope>
+        <name>SetParent</name>
+      </member>
+      <member refid="class_player_1a7ad3c666f3161952f637217f41ccf848" prot="private" virt="non-virtual">
+        <scope>Player</scope>
+        <name>SHObject_Base</name>
+      </member>
+      <member refid="class_player_1a4c618ea9123b386e5d9ef8809797d629" prot="public" virt="virtual">
+        <scope>Player</scope>
+        <name>Start</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a843f7ccc0e2bd01702aed0f8b50c8c6a" prot="public" virt="non-virtual">
+        <scope>Player</scope>
+        <name>transform</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1afca0d7e875aa5cefb39a0957b902d1cd" prot="public" virt="virtual">
+        <scope>Player</scope>
+        <name>TransformChanged</name>
+      </member>
+      <member refid="class_player_1a5e17be3418fa0ac0192c05efaf3dc8bd" prot="public" virt="virtual">
+        <scope>Player</scope>
+        <name>Update</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

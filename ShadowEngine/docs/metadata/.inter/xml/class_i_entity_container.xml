@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_i_entity_container" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>IEntityContainer</compoundname>
+    <derivedcompoundref refid="class_entity_container" prot="public" virt="non-virtual">EntityContainer&lt;Type&gt;</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_i_entity_container_1ae74eeb71df42336333e171b9795b3059" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void *</type>
+        <definition>virtual void* IEntityContainer::CreateObject</definition>
+        <argsstring>()=0</argsstring>
+        <name>CreateObject</name>
+        <reimplementedby refid="class_entity_container_1adad753bec93e6eb0ce9a12edda2f8249">CreateObject</reimplementedby>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="6" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_i_entity_container_1a0d45929610cc0d38ee6e1103806807f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void IEntityContainer::DestroyObject</definition>
+        <argsstring>(void *object)=0</argsstring>
+        <name>DestroyObject</name>
+        <reimplementedby refid="class_entity_container_1af3a2e4890ad42d53f40710776cbd5851">DestroyObject</reimplementedby>
+        <param>
+          <type>void *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="9" column="1" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="185">
+        <label>IEntityContainer</label>
+        <link refid="class_i_entity_container" />
+      </node>
+      <node id="186">
+        <label>EntityContainer&lt;Type&gt;</label>
+        <link refid="class_entity_container" />
+        <childnode refid="185" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="3" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="3" bodyend="10" />
+    <listofallmembers>
+      <member refid="class_i_entity_container_1ae74eeb71df42336333e171b9795b3059" prot="public" virt="pure-virtual">
+        <scope>IEntityContainer</scope>
+        <name>CreateObject</name>
+      </member>
+      <member refid="class_i_entity_container_1a0d45929610cc0d38ee6e1103806807f0" prot="public" virt="pure-virtual">
+        <scope>IEntityContainer</scope>
+        <name>DestroyObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

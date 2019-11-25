@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_input_system_1_1_binding_a_n_d_inspector" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::InputSystem::BindingANDInspector</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_debug_1_1_inspector" prot="public" virt="non-virtual">ShadowEngine::Debug::Inspector</basecompoundref>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="46">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="44">
+        <label>ShadowEngine::InputSystem::BindingANDInspector</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_binding_a_n_d_inspector" />
+        <childnode refid="45" relation="public-inheritance"></childnode>
+      </node>
+      <node id="45">
+        <label>ShadowEngine::Debug::Inspector</label>
+        <link refid="class_shadow_engine_1_1_debug_1_1_inspector" />
+        <childnode refid="46" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="49">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="47">
+        <label>ShadowEngine::InputSystem::BindingANDInspector</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_binding_a_n_d_inspector" />
+        <childnode refid="48" relation="public-inheritance"></childnode>
+      </node>
+      <node id="48">
+        <label>ShadowEngine::Debug::Inspector</label>
+        <link refid="class_shadow_engine_1_1_debug_1_1_inspector" />
+        <childnode refid="49" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowInput/Inspectors/BindingANDInspector.h" line="13" column="1" bodyfile="ShadowEngine/src/ShadowInput/Inspectors/BindingANDInspector.h" bodystart="10" bodyend="42" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a35bf9fdc604caa67e1a2f1b0a9c574f2" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingANDInspector</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a230ca5dec944e67f8d57dfc743da7d94" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::BindingANDInspector</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::BindingANDInspector</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::BindingANDInspector</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

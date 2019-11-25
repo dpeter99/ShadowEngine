@@ -1,0 +1,100 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer
+  id: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer
+  parent: ShadowEngine.Rendering.D3D12
+  children:
+  - ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.D3D12DepthBuffer(D3D12_RECT)
+  - ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.GetDescriptorHandle()
+  href: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.yml
+  langs:
+  - cplusplus
+  name: D3D12DepthBuffer
+  nameWithType: D3D12DepthBuffer
+  fullName: ShadowEngine::Rendering::D3D12::D3D12DepthBuffer
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/Platform/D3D12/D3D12DepthBuffer.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/D3D12/D3D12DepthBuffer.h
+    startLine: 5
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12DepthBuffer.h
+    startLine: 6
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: class D3D12DepthBuffer'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.D3D12DepthBuffer(D3D12_RECT)
+  id: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.D3D12DepthBuffer(D3D12_RECT)
+  parent: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer
+  href: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.yml
+  langs:
+  - cplusplus
+  name: D3D12DepthBuffer(D3D12_RECT scissorRect)
+  nameWithType: D3D12DepthBuffer::D3D12DepthBuffer(D3D12_RECT scissorRect)
+  fullName: ShadowEngine::Rendering::D3D12::D3D12DepthBuffer::D3D12DepthBuffer(D3D12_RECT scissorRect)
+  overload: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.D3D12DepthBuffer*
+  type: Constructor
+  source:
+    remote: &o1
+      path: ShadowEngine/src/Platform/D3D12/D3D12DepthBuffer.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/D3D12/D3D12DepthBuffer.cpp
+    startLine: 6
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12DepthBuffer.h
+    startLine: 10
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: D3D12DepthBuffer(D3D12_RECT scissorRect)'
+    parameters:
+    - id: scissorRect
+      type: 60548d48
+- uid: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.GetDescriptorHandle()
+  id: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.GetDescriptorHandle()
+  parent: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer
+  href: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.yml
+  langs:
+  - cplusplus
+  name: GetDescriptorHandle()
+  nameWithType: D3D12DepthBuffer::GetDescriptorHandle()
+  fullName: CD3DX12_CPU_DESCRIPTOR_HANDLE ShadowEngine::Rendering::D3D12::D3D12DepthBuffer::GetDescriptorHandle()
+  overload: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.GetDescriptorHandle*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12DepthBuffer.cpp
+    startLine: 45
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12DepthBuffer.h
+    startLine: 12
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: CD3DX12_CPU_DESCRIPTOR_HANDLE GetDescriptorHandle()'
+    return:
+      type: 9eb51783
+references:
+- uid: 60548d48
+  spec.cplusplus:
+  - name: D3D12_RECT
+    fullName: D3D12_RECT
+- uid: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.D3D12DepthBuffer*
+  name: D3D12DepthBuffer
+  nameWithType: D3D12DepthBuffer::D3D12DepthBuffer
+  fullName: ShadowEngine::Rendering::D3D12::D3D12DepthBuffer::D3D12DepthBuffer
+- uid: 9eb51783
+  spec.cplusplus:
+  - name: CD3DX12_CPU_DESCRIPTOR_HANDLE
+    fullName: CD3DX12_CPU_DESCRIPTOR_HANDLE
+- uid: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.GetDescriptorHandle*
+  name: GetDescriptorHandle
+  nameWithType: D3D12DepthBuffer::GetDescriptorHandle
+  fullName: CD3DX12_CPU_DESCRIPTOR_HANDLE ShadowEngine::Rendering::D3D12::D3D12DepthBuffer::GetDescriptorHandle

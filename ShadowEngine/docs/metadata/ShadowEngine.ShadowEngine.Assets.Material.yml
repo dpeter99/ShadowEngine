@@ -1,0 +1,289 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.ShadowEngine.Assets.Material
+  id: ShadowEngine.ShadowEngine.Assets.Material
+  parent: ShadowEngine.ShadowEngine.Assets
+  children:
+  - ShadowEngine.ShadowEngine.Assets.Material.GetBuffer()
+  - ShadowEngine.ShadowEngine.Assets.Material.GetProperties()
+  - ShadowEngine.ShadowEngine.Assets.Material.GetShader()
+  - ShadowEngine.ShadowEngine.Assets.Material.Material(const Ref<Rendering::Shader> &)
+  - ShadowEngine.ShadowEngine.Assets.Material.SetProperty(const std::string &,const T &)
+  - ShadowEngine.ShadowEngine.Assets.Material.UpdateBufferIfDirty()
+  href: ShadowEngine.ShadowEngine.Assets.Material.yml
+  langs:
+  - cplusplus
+  name: Material
+  nameWithType: Material
+  fullName: ShadowEngine::ShadowEngine::Assets::Material
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowAsset/Assets/Material.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowAsset/Assets/Material.h
+    startLine: 15
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowAsset/Assets/Material.h
+    startLine: 16
+  namespace: ShadowEngine.ShadowEngine.Assets
+  syntax: &o2
+    content: 'public: class Material'
+  inheritance:
+  - System::Object
+  - ShadowAsset
+- uid: ShadowEngine.ShadowEngine.Assets.Material.GetBuffer()
+  id: ShadowEngine.ShadowEngine.Assets.Material.GetBuffer()
+  parent: ShadowEngine.ShadowEngine.Assets.Material
+  href: ShadowEngine.ShadowEngine.Assets.Material.yml
+  langs:
+  - cplusplus
+  name: GetBuffer()
+  nameWithType: Material::GetBuffer()
+  fullName: Ref<Rendering::ConstantBuffer> & ShadowEngine::Assets::Material::GetBuffer()
+  overload: ShadowEngine.ShadowEngine.Assets.Material.GetBuffer*
+  type: Method
+  source:
+    remote: &o1
+      path: ShadowEngine/src/ShadowAsset/Assets/Material.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowAsset/Assets/Material.cpp
+    startLine: 16
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowAsset/Assets/Material.h
+    startLine: 43
+  namespace: ShadowEngine.ShadowEngine.Assets
+  syntax:
+    content: 'public: Ref<Rendering::ConstantBuffer> & GetBuffer()'
+    return:
+      type: 2e1cc081ShadowEngine.Rendering.ConstantBuffer1a4c7661
+- uid: ShadowEngine.ShadowEngine.Assets.Material.GetProperties()
+  id: ShadowEngine.ShadowEngine.Assets.Material.GetProperties()
+  parent: ShadowEngine.ShadowEngine.Assets.Material
+  href: ShadowEngine.ShadowEngine.Assets.Material.yml
+  langs:
+  - cplusplus
+  name: GetProperties()
+  nameWithType: Material::GetProperties()
+  fullName: Ref<Rendering::ShaderPropertySheet> & ShadowEngine::Assets::Material::GetProperties()
+  overload: ShadowEngine.ShadowEngine.Assets.Material.GetProperties*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowAsset/Assets/Material.cpp
+    startLine: 6
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowAsset/Assets/Material.h
+    startLine: 27
+  namespace: ShadowEngine.ShadowEngine.Assets
+  syntax:
+    content: 'public: Ref<Rendering::ShaderPropertySheet> & GetProperties()'
+    return:
+      type: 2e1cc081ShadowEngine.Rendering.ShaderPropertySheet1a4c7661
+- uid: ShadowEngine.ShadowEngine.Assets.Material.GetShader()
+  id: ShadowEngine.ShadowEngine.Assets.Material.GetShader()
+  parent: ShadowEngine.ShadowEngine.Assets.Material
+  href: ShadowEngine.ShadowEngine.Assets.Material.yml
+  langs:
+  - cplusplus
+  name: GetShader()
+  nameWithType: Material::GetShader()
+  fullName: Ref<Rendering::Shader> ShadowEngine::Assets::Material::GetShader()
+  overload: ShadowEngine.ShadowEngine.Assets.Material.GetShader*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowAsset/Assets/Material.cpp
+    startLine: 11
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowAsset/Assets/Material.h
+    startLine: 28
+  namespace: ShadowEngine.ShadowEngine.Assets
+  syntax:
+    content: 'public: Ref<Rendering::Shader> GetShader()'
+    return:
+      type: 2e1cc081ShadowEngine.Rendering.Shadera08ddfce
+- uid: ShadowEngine.ShadowEngine.Assets.Material.Material(const Ref<Rendering::Shader> &)
+  id: Shader> &)
+  parent: ShadowEngine.ShadowEngine.Assets.Material
+  href: ShadowEngine.ShadowEngine.Assets.Material.yml
+  langs:
+  - cplusplus
+  name: Material(const Ref<Rendering::Shader> &shader)
+  nameWithType: Material::Material(const Ref<Rendering::Shader> &shader)
+  fullName: ShadowEngine::Assets::Material::Material(const Ref<Rendering::Shader> &shader)
+  overload: ShadowEngine.ShadowEngine.Assets.Material.Material*
+  type: Constructor
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowAsset/Assets/Material.cpp
+    startLine: 30
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowAsset/Assets/Material.h
+    startLine: 47
+  namespace: ShadowEngine.ShadowEngine.Assets
+  syntax:
+    content: 'public: Material(const Ref<Rendering::Shader> &shader)'
+    parameters:
+    - id: shader
+      type: 8253bb38ShadowEngine.Rendering.Shader1a4c7661
+- uid: ShadowEngine.ShadowEngine.Assets.Material.SetProperty(const std::string &,const T &)
+  id: string &,const T &)
+  parent: ShadowEngine.ShadowEngine.Assets.Material
+  href: ShadowEngine.ShadowEngine.Assets.Material.yml
+  langs:
+  - cplusplus
+  name: SetProperty(const std::string &name, const T &value)
+  nameWithType: Material::SetProperty(const std::string &name, const T &value)
+  fullName: void ShadowEngine::ShadowEngine::Assets::Material::SetProperty(const std::string &name, const T &value)
+  overload: ShadowEngine.ShadowEngine.Assets.Material.SetProperty*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowAsset/Assets/Material.h
+    startLine: 31
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowAsset/Assets/Material.h
+    startLine: 31
+  namespace: ShadowEngine.ShadowEngine.Assets
+  syntax:
+    content: 'public: void SetProperty(const std::string &name, const T &value)'
+    parameters:
+    - id: name
+      type: 360fc41e
+    - id: value
+      type: 2ad04b0d
+    typeParameters:
+    - id: class T
+      type: 07c9e456
+- uid: ShadowEngine.ShadowEngine.Assets.Material.UpdateBufferIfDirty()
+  id: ShadowEngine.ShadowEngine.Assets.Material.UpdateBufferIfDirty()
+  parent: ShadowEngine.ShadowEngine.Assets.Material
+  href: ShadowEngine.ShadowEngine.Assets.Material.yml
+  langs:
+  - cplusplus
+  name: UpdateBufferIfDirty()
+  nameWithType: Material::UpdateBufferIfDirty()
+  fullName: void ShadowEngine::Assets::Material::UpdateBufferIfDirty()
+  overload: ShadowEngine.ShadowEngine.Assets.Material.UpdateBufferIfDirty*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowAsset/Assets/Material.cpp
+    startLine: 21
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowAsset/Assets/Material.h
+    startLine: 44
+  namespace: ShadowEngine.ShadowEngine.Assets
+  syntax:
+    content: 'public: void UpdateBufferIfDirty()'
+references:
+- uid: 2e1cc081ShadowEngine.Rendering.ShaderPropertySheet1a4c7661
+  spec.cplusplus:
+  - name: Ref<
+    fullName: Ref<
+  - uid: ShadowEngine.Rendering.ShaderPropertySheet
+  - name: '> &'
+    fullName: '> &'
+- uid: ShadowEngine.ShadowEngine.Assets.Material.GetProperties*
+  name: GetProperties
+  nameWithType: Material::GetProperties
+  fullName: Ref<Rendering::ShaderPropertySheet> & ShadowEngine::Assets::Material::GetProperties
+- uid: 2e1cc081ShadowEngine.Rendering.Shadera08ddfce
+  spec.cplusplus:
+  - name: Ref<
+    fullName: Ref<
+  - uid: ShadowEngine.Rendering.Shader
+  - name: '>'
+    fullName: '>'
+- uid: ShadowEngine.ShadowEngine.Assets.Material.GetShader*
+  name: GetShader
+  nameWithType: Material::GetShader
+  fullName: Ref<Rendering::Shader> ShadowEngine::Assets::Material::GetShader
+- uid: 07c9e456
+  spec.cplusplus:
+  - name: class T
+    fullName: class T
+- uid: 360fc41e
+  spec.cplusplus:
+  - name: const std::string &
+    fullName: const std::string &
+- uid: 2ad04b0d
+  spec.cplusplus:
+  - name: const T &
+    fullName: const T &
+- uid: ShadowEngine.ShadowEngine.Assets.Material.SetProperty*
+  name: SetProperty
+  nameWithType: Material::SetProperty
+  fullName: void ShadowEngine::ShadowEngine::Assets::Material::SetProperty
+- uid: 2e1cc081ShadowEngine.Rendering.ConstantBuffer1a4c7661
+  spec.cplusplus:
+  - name: Ref<
+    fullName: Ref<
+  - uid: ShadowEngine.Rendering.ConstantBuffer
+  - name: '> &'
+    fullName: '> &'
+- uid: ShadowEngine.ShadowEngine.Assets.Material.GetBuffer*
+  name: GetBuffer
+  nameWithType: Material::GetBuffer
+  fullName: Ref<Rendering::ConstantBuffer> & ShadowEngine::Assets::Material::GetBuffer
+- uid: ShadowEngine.ShadowEngine.Assets.Material.UpdateBufferIfDirty*
+  name: UpdateBufferIfDirty
+  nameWithType: Material::UpdateBufferIfDirty
+  fullName: void ShadowEngine::Assets::Material::UpdateBufferIfDirty
+- uid: 8253bb38ShadowEngine.Rendering.Shader1a4c7661
+  spec.cplusplus:
+  - name: const Ref<
+    fullName: const Ref<
+  - uid: ShadowEngine.Rendering.Shader
+  - name: '> &'
+    fullName: '> &'
+- uid: ShadowEngine.ShadowEngine.Assets.Material.Material*
+  name: Material
+  nameWithType: Material::Material
+  fullName: ShadowEngine::Assets::Material::Material
+- uid: ShadowEngine.ShadowEngine.Assets.Material
+  parent: ShadowEngine.ShadowEngine.Assets
+  href: ShadowEngine.ShadowEngine.Assets.Material.yml
+  name: Material
+  nameWithType: Material
+  fullName: ShadowEngine::ShadowEngine::Assets::Material
+  type: Class
+  syntax: *o2
+- uid: ShadowEngine.Rendering.ShaderPropertySheet
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ShaderPropertySheet.yml
+  name: ShaderPropertySheet
+  nameWithType: ShaderPropertySheet
+  fullName: ShadowEngine::Rendering::ShaderPropertySheet
+  type: Class
+  summary: "<p>Variables in a shader. </p><p>ShaderPropertySheet Contains the variables defined by a shader. </p>"
+  syntax:
+    content: 'public: class ShaderPropertySheet'
+- uid: ShadowEngine.Rendering.ConstantBuffer
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ConstantBuffer.yml
+  name: ConstantBuffer
+  nameWithType: ConstantBuffer
+  fullName: ShadowEngine::Rendering::ConstantBuffer
+  type: Class
+  syntax:
+    content: 'public: class ConstantBuffer'
+- uid: ShadowEngine.Rendering.Shader
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.Shader.yml
+  name: Shader
+  nameWithType: Shader
+  fullName: ShadowEngine::Rendering::Shader
+  type: Class
+  syntax:
+    content: 'public: class Shader'

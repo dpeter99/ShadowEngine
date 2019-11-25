@@ -1,0 +1,706 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  children:
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.~Entity()
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Create(Scene *)
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Entity()
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Entity(Scene *)
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.GetFlags()
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.GetTransform()
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Init()
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.InitEntities(EntityManager *)
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.LateRender()
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.LateUpdate()
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.RegisterDefaultUpdate(EntityManager &)
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Render()
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.SetParent(rtm_ptr<Entity>)
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.SetScene(Scene *)
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Start()
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.TransformChanged(bool)
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Update()
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.UpdateEntities(EntityManager *)
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: Entity
+  nameWithType: Entity
+  fullName: ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::Entity
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/EntitySystem/Entity.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 64
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 65
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  summary: "<p>Base Entity in the scene </p><p>This is the base entity used in the game world. This should never be instanciated only the derived classes </p>"
+  syntax: &o2
+    content: 'public: class Entity : public HObject'
+  inheritance:
+  - System::Object
+  - ShadowEngine.SHObject
+  inheritedMembers:
+  - ShadowEngine.SHObject.GenerateId()
+  - ShadowEngine.SHObject.GetType()
+  - ShadowEngine.SHObject.GetTypeId()
+  - ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.operator<<
+  - ShadowEngine.SHObject.~SHObject()
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.~Entity()
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.~Entity()
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: ~Entity()
+  nameWithType: Entity::~Entity()
+  fullName: virtual ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::Entity::~Entity()
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.~Entity*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 118
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 118
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: virtual ~Entity()'
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Create(Scene *)
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Create(Scene *)
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: Create(Scene *scene)
+  nameWithType: Entity::Create(Scene *scene)
+  fullName: Entity * Entity::Create(Scene *scene)
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Create*
+  type: Method
+  source:
+    remote: &o1
+      path: ShadowEngine/src/EntitySystem/Entity.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/EntitySystem/Entity.cpp
+    startLine: 70
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 125
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  summary: "<p>Creates a new Entity </p>"
+  syntax:
+    content: 'public: virtual Entity * Create(Scene *scene)'
+    parameters:
+    - id: scene
+      type: a7ca76f8
+      description: <p>The scene that this entity is in</p>
+    return:
+      type: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity68bc11b4
+      description: <p>Pointer to the Entity created</p>
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Entity()
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Entity()
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: Entity()
+  nameWithType: Entity::Entity()
+  fullName: Entity::Entity()
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Entity*
+  type: Constructor
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entity.cpp
+    startLine: 60
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 110
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  summary: "<p>Empty default constructor </p>"
+  syntax:
+    content: 'public: Entity()'
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Entity(Scene *)
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Entity(Scene *)
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: Entity(Scene *scene)
+  nameWithType: Entity::Entity(Scene *scene)
+  fullName: Entity::Entity(Scene *scene)
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Entity*
+  type: Constructor
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entity.cpp
+    startLine: 65
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 116
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  summary: "<p>Constructor defining the scene it is located in </p>"
+  syntax:
+    content: 'public: Entity(Scene *scene)'
+    parameters:
+    - id: scene
+      type: a7ca76f8
+      description: <p>The scene that this entity is in</p>
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.GetFlags()
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.GetFlags()
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: GetFlags()
+  nameWithType: Entity::GetFlags()
+  fullName: EntityFlags Entity::GetFlags()
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.GetFlags*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entity.cpp
+    startLine: 32
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 152
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: virtual EntityFlags GetFlags()'
+    return:
+      type: 3e4d5727
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.GetTransform()
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.GetTransform()
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: GetTransform()
+  nameWithType: Entity::GetTransform()
+  fullName: ShadowEntity::Transform * Entity::GetTransform()
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.GetTransform*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entity.cpp
+    startLine: 45
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 156
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: virtual ShadowEntity::Transform * GetTransform()'
+    return:
+      type: ShadowEngine.ShadowEngine.ShadowEntity.Transform68bc11b4
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Init()
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Init()
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: Init()
+  nameWithType: Entity::Init()
+  fullName: void Entity::Init()
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Init*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entity.cpp
+    startLine: 75
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 131
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  summary: "<p>Called when the Entity needs to be initialised. </p><p>Called when the Entity needs to be initialised. Should be used as a constructor </p>"
+  syntax:
+    content: 'public: virtual void Init()'
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.InitEntities(EntityManager *)
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.InitEntities(EntityManager *)
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: InitEntities(EntityManager *mgr)
+  nameWithType: Entity::InitEntities(EntityManager *mgr)
+  fullName: static void ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::Entity::InitEntities(EntityManager *mgr)
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.InitEntities*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 184
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 184
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: static void InitEntities(EntityManager *mgr)'
+    parameters:
+    - id: mgr
+      type: 367615aa
+    typeParameters:
+    - id: class T
+      type: 07c9e456
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.LateRender()
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.LateRender()
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: LateRender()
+  nameWithType: Entity::LateRender()
+  fullName: void Entity::LateRender()
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.LateRender*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entity.cpp
+    startLine: 28
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 150
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: virtual void LateRender()'
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.LateUpdate()
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.LateUpdate()
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: LateUpdate()
+  nameWithType: Entity::LateUpdate()
+  fullName: void Entity::LateUpdate()
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.LateUpdate*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entity.cpp
+    startLine: 20
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 146
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  summary: "<p>Called every Tick after the first is finished </p>"
+  syntax:
+    content: 'public: virtual void LateUpdate()'
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.RegisterDefaultUpdate(EntityManager &)
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.RegisterDefaultUpdate(EntityManager &)
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: RegisterDefaultUpdate(EntityManager &mgr)
+  nameWithType: Entity::RegisterDefaultUpdate(EntityManager &mgr)
+  fullName: static void ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::Entity::RegisterDefaultUpdate(EntityManager &mgr)
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.RegisterDefaultUpdate*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 197
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 197
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: static void RegisterDefaultUpdate(EntityManager &mgr)'
+    parameters:
+    - id: mgr
+      type: c435ee2b
+    typeParameters:
+    - id: class T
+      type: 07c9e456
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Render()
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Render()
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: Render()
+  nameWithType: Entity::Render()
+  fullName: void Entity::Render()
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Render*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entity.cpp
+    startLine: 24
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 148
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: virtual void Render()'
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.SetParent(rtm_ptr<Entity>)
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.SetParent(rtm_ptr<Entity>)
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: SetParent(rtm_ptr<Entity> e)
+  nameWithType: Entity::SetParent(rtm_ptr<Entity> e)
+  fullName: void Entity::SetParent(rtm_ptr<Entity> e)
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.SetParent*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entity.cpp
+    startLine: 55
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 165
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: virtual void SetParent(rtm_ptr<Entity> e)'
+    parameters:
+    - id: e
+      type: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr78504a52ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entitya08ddfce
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.SetScene(Scene *)
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.SetScene(Scene *)
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: SetScene(Scene *se)
+  nameWithType: Entity::SetScene(Scene *se)
+  fullName: void Entity::SetScene(Scene *se)
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.SetScene*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entity.cpp
+    startLine: 50
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 163
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  summary: "<p>Sets the scene this Entity is in </p>"
+  syntax:
+    content: 'public: void SetScene(Scene *se)'
+    parameters:
+    - id: se
+      type: a7ca76f8
+      description: <p>The scene this entity belongs to</p>
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Start()
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Start()
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: Start()
+  nameWithType: Entity::Start()
+  fullName: void Entity::Start()
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Start*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entity.cpp
+    startLine: 12
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 136
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  summary: "<p>Called when the world starts or before the Entity get's it's first tick </p>"
+  syntax:
+    content: 'public: virtual void Start()'
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.TransformChanged(bool)
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.TransformChanged(bool)
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: TransformChanged(bool self)
+  nameWithType: Entity::TransformChanged(bool self)
+  fullName: void Entity::TransformChanged(bool self)
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.TransformChanged*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entity.cpp
+    startLine: 37
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 154
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: virtual void TransformChanged(bool self)'
+    parameters:
+    - id: self
+      type: 13ff06c5
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Update()
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Update()
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: Update()
+  nameWithType: Entity::Update()
+  fullName: void Entity::Update()
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Update*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entity.cpp
+    startLine: 16
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 141
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  summary: "<p>Called every tick </p>"
+  syntax:
+    content: 'public: virtual void Update()'
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.UpdateEntities(EntityManager *)
+  id: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.UpdateEntities(EntityManager *)
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  langs:
+  - cplusplus
+  name: UpdateEntities(EntityManager *mgr)
+  nameWithType: Entity::UpdateEntities(EntityManager *mgr)
+  fullName: static void ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::Entity::UpdateEntities(EntityManager *mgr)
+  overload: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.UpdateEntities*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 171
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entity.h
+    startLine: 171
+  namespace: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: static void UpdateEntities(EntityManager *mgr)'
+    parameters:
+    - id: mgr
+      type: 367615aa
+    typeParameters:
+    - id: class T
+      type: 07c9e456
+references:
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Entity*
+  name: Entity
+  nameWithType: Entity::Entity
+  fullName: Entity::Entity
+- uid: a7ca76f8
+  spec.cplusplus:
+  - name: Scene *
+    fullName: Scene *
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.~Entity*
+  name: ~Entity
+  nameWithType: Entity::~Entity
+  fullName: virtual ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::Entity::~Entity
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity68bc11b4
+  spec.cplusplus:
+  - uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  - name: " *"
+    fullName: " *"
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Create*
+  name: Create
+  nameWithType: Entity::Create
+  fullName: Entity * Entity::Create
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Init*
+  name: Init
+  nameWithType: Entity::Init
+  fullName: void Entity::Init
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Start*
+  name: Start
+  nameWithType: Entity::Start
+  fullName: void Entity::Start
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Update*
+  name: Update
+  nameWithType: Entity::Update
+  fullName: void Entity::Update
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.LateUpdate*
+  name: LateUpdate
+  nameWithType: Entity::LateUpdate
+  fullName: void Entity::LateUpdate
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.Render*
+  name: Render
+  nameWithType: Entity::Render
+  fullName: void Entity::Render
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.LateRender*
+  name: LateRender
+  nameWithType: Entity::LateRender
+  fullName: void Entity::LateRender
+- uid: 3e4d5727
+  spec.cplusplus:
+  - name: EntityFlags
+    fullName: EntityFlags
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.GetFlags*
+  name: GetFlags
+  nameWithType: Entity::GetFlags
+  fullName: EntityFlags Entity::GetFlags
+- uid: 13ff06c5
+  spec.cplusplus:
+  - name: bool
+    fullName: bool
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.TransformChanged*
+  name: TransformChanged
+  nameWithType: Entity::TransformChanged
+  fullName: void Entity::TransformChanged
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform68bc11b4
+  spec.cplusplus:
+  - uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  - name: " *"
+    fullName: " *"
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.GetTransform*
+  name: GetTransform
+  nameWithType: Entity::GetTransform
+  fullName: ShadowEntity::Transform * Entity::GetTransform
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.SetScene*
+  name: SetScene
+  nameWithType: Entity::SetScene
+  fullName: void Entity::SetScene
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr78504a52ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entitya08ddfce
+  spec.cplusplus:
+  - uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr
+  - name: <
+    fullName: <
+  - uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  - name: '>'
+    fullName: '>'
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.SetParent*
+  name: SetParent
+  nameWithType: Entity::SetParent
+  fullName: void Entity::SetParent
+- uid: 07c9e456
+  spec.cplusplus:
+  - name: class T
+    fullName: class T
+- uid: 367615aa
+  spec.cplusplus:
+  - name: EntityManager *
+    fullName: EntityManager *
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.UpdateEntities*
+  name: UpdateEntities
+  nameWithType: Entity::UpdateEntities
+  fullName: static void ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::Entity::UpdateEntities
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.InitEntities*
+  name: InitEntities
+  nameWithType: Entity::InitEntities
+  fullName: static void ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::Entity::InitEntities
+- uid: c435ee2b
+  spec.cplusplus:
+  - name: EntityManager &
+    fullName: EntityManager &
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.RegisterDefaultUpdate*
+  name: RegisterDefaultUpdate
+  nameWithType: Entity::RegisterDefaultUpdate
+  fullName: static void ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::Entity::RegisterDefaultUpdate
+- uid: ShadowEngine.SHObject.GenerateId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GenerateId()
+  nameWithType: SHObject::GenerateId()
+  fullName: static uint64_t ShadowEngine::SHObject::GenerateId()
+  type: Method
+  summary: "<p>Generates a new UID for each call. </p>"
+  syntax:
+    content: 'protected: static uint64_t GenerateId() noexcept'
+    return:
+      type: 6d8267d6
+      description: <p>Unique ID </p>
+- uid: ShadowEngine.SHObject.GetType()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetType()
+  nameWithType: SHObject::GetType()
+  fullName: virtual const std::string& ShadowEngine::SHObject::GetType()
+  type: Method
+  summary: "<p>Returns the top level class type name of the object. </p>"
+  syntax:
+    content: 'public: virtual const std::string & GetType() const =0'
+    return:
+      type: 360fc41e
+      description: <p>Class name string </p>
+- uid: ShadowEngine.SHObject.GetTypeId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetTypeId()
+  nameWithType: SHObject::GetTypeId()
+  fullName: virtual const uint64_t ShadowEngine::SHObject::GetTypeId()
+  type: Method
+  summary: "<p>Gets the top level type ID. </p>"
+  syntax:
+    content: 'public: virtual const uint64_t GetTypeId() const =0'
+    return:
+      type: 29dc5929
+      description: <p>UID of the class </p>
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.operator<<
+- uid: ShadowEngine.SHObject.~SHObject()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: ~SHObject()
+  nameWithType: SHObject::~SHObject()
+  fullName: virtual ShadowEngine::SHObject::~SHObject()
+  type: Constructor
+  syntax:
+    content: 'public: virtual ~SHObject()=default'
+- uid: ShadowEngine.SHObject
+  parent: ShadowEngine
+  href: ShadowEngine.SHObject.yml
+  name: SHObject
+  nameWithType: SHObject
+  fullName: ShadowEngine::SHObject
+  type: Class
+  summary: "<p>This is the base class for every class in the Engine that uses runtime reflection. </p>"
+  syntax:
+    content: 'public: class SHObject'
+- uid: _entity_8h
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  name: Entity
+  nameWithType: Entity
+  fullName: ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::Entity
+  type: Class
+  summary: "<p>Base Entity in the scene </p><p>This is the base entity used in the game world. This should never be instanciated only the derived classes </p>"
+  syntax: *o2
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr
+  parent: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.yml
+  name: rtm_ptr
+  nameWithType: rtm_ptr
+  fullName: ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::rtm_ptr
+  type: Class
+  syntax:
+    content: 'public: class rtm_ptr'
+    typeParameters:
+    - id: class
+      type: 4fedf2a2
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  parent: ShadowEngine.ShadowEngine.ShadowEntity
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  name: Transform
+  nameWithType: Transform
+  fullName: ShadowEngine::ShadowEngine::ShadowEntity::Transform
+  type: Class
+  syntax:
+    content: 'public: class Transform'

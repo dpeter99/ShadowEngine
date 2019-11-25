@@ -1,0 +1,479 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.InputSystem.Binding1D
+  id: ShadowEngine.InputSystem.Binding1D
+  parent: ShadowEngine.InputSystem
+  children:
+  - ShadowEngine.InputSystem.Binding1D.~Binding1D()
+  - ShadowEngine.InputSystem.Binding1D.Binding1D(InputBinding<I> *,InputBinding<I> *)
+  - ShadowEngine.InputSystem.Binding1D.DefaultBehaviour(ModifierContext &)
+  - ShadowEngine.InputSystem.Binding1D.GetNegativeBinding()
+  - ShadowEngine.InputSystem.Binding1D.GetPositiveBinding()
+  - ShadowEngine.InputSystem.Binding1D.ProcessEvent(BindingContext<float> &)
+  href: ShadowEngine.InputSystem.Binding1D.yml
+  langs:
+  - cplusplus
+  name: Binding1D
+  nameWithType: Binding1D
+  fullName: ShadowEngine::InputSystem::Binding1D
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowInput/Bindings/Binding1D.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowInput/Bindings/Binding1D.h
+    startLine: 10
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Bindings/Binding1D.h
+    startLine: 12
+  namespace: ShadowEngine.InputSystem
+  summary: "<p>This Binding represents a 1D value, in a float. </p>"
+  syntax: &o1
+    content: 'public: class Binding1D : public putBinding<float>'
+    typeParameters:
+    - id: class I
+      type: 6ba839cf
+  inheritance:
+  - System::Object
+  - ShadowEngine.SHObject
+  - ShadowEngine.InputSystem.IInputBinding
+  - ShadowEngine.InputSystem.InputBinding
+  inheritedMembers:
+  - ShadowEngine.InputSystem.InputBinding.AddModifier(InputModifier *)
+  - ShadowEngine.SHObject.GenerateId()
+  - ShadowEngine.InputSystem.InputBinding.GetData()
+  - ShadowEngine.InputSystem.InputBinding.GetModifier(int)
+  - ShadowEngine.SHObject.GetType()
+  - ShadowEngine.SHObject.GetTypeId()
+  - ShadowEngine.InputSystem.InputBinding.InputBinding()
+  - ShadowEngine.InputSystem.InputBinding.ModifierCount()
+  - ShadowEngine.InputSystem.InputBinding.ProcessContext(BindingContext<T> &,ModifierContext &)
+  - ShadowEngine.InputSystem.InputBinding.~InputBinding()
+  - ShadowEngine.SHObject.~SHObject()
+- uid: ShadowEngine.InputSystem.Binding1D.~Binding1D()
+  id: ShadowEngine.InputSystem.Binding1D.~Binding1D()
+  parent: ShadowEngine.InputSystem.Binding1D
+  href: ShadowEngine.InputSystem.Binding1D.yml
+  langs:
+  - cplusplus
+  name: ~Binding1D()
+  nameWithType: Binding1D::~Binding1D()
+  fullName: ShadowEngine::InputSystem::Binding1D<I>::~Binding1D()
+  overload: ShadowEngine.InputSystem.Binding1D.~Binding1D*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Bindings/Binding1D.h
+    startLine: 41
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Bindings/Binding1D.h
+    startLine: 41
+  namespace: ShadowEngine.InputSystem
+  summary: "<p>This should only be called by the Input system. </p>"
+  syntax:
+    content: 'public: ~Binding1D()'
+- uid: ShadowEngine.InputSystem.Binding1D.Binding1D(InputBinding<I> *,InputBinding<I> *)
+  id: ShadowEngine.InputSystem.Binding1D.Binding1D(InputBinding<I> *,InputBinding<I> *)
+  parent: ShadowEngine.InputSystem.Binding1D
+  href: ShadowEngine.InputSystem.Binding1D.yml
+  langs:
+  - cplusplus
+  name: Binding1D(InputBinding<I> *_positive, InputBinding<I> *_negative)
+  nameWithType: Binding1D::Binding1D(InputBinding<I> *_positive, InputBinding<I> *_negative)
+  fullName: ShadowEngine::InputSystem::Binding1D<I>::Binding1D(InputBinding<I> *_positive, InputBinding<I> *_negative)
+  overload: ShadowEngine.InputSystem.Binding1D.Binding1D*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Bindings/Binding1D.h
+    startLine: 33
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Bindings/Binding1D.h
+    startLine: 24
+  namespace: ShadowEngine.InputSystem
+  summary: "<p>Constructor. The suplied pointers will be cleaned automatically. </p>"
+  syntax:
+    content: 'public: Binding1D(InputBinding<I> *_positive, InputBinding<I> *_negative)'
+    parameters:
+    - id: _positive
+      type: ShadowEngine.InputSystem.InputBindingb6be683f
+      description: <p>Pointer to the positive binding </p>
+    - id: _negative
+      type: ShadowEngine.InputSystem.InputBindingb6be683f
+      description: <p>Pointer to the negative binding </p>
+- uid: ShadowEngine.InputSystem.Binding1D.DefaultBehaviour(ModifierContext &)
+  id: ShadowEngine.InputSystem.Binding1D.DefaultBehaviour(ModifierContext &)
+  parent: ShadowEngine.InputSystem.Binding1D
+  href: ShadowEngine.InputSystem.Binding1D.yml
+  langs:
+  - cplusplus
+  name: DefaultBehaviour(ModifierContext &ctx)
+  nameWithType: Binding1D::DefaultBehaviour(ModifierContext &ctx)
+  fullName: void ShadowEngine::InputSystem::Binding1D<I>::DefaultBehaviour(ModifierContext &ctx)
+  overload: ShadowEngine.InputSystem.Binding1D.DefaultBehaviour*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Bindings/Binding1D.h
+    startLine: 108
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Bindings/Binding1D.h
+    startLine: 108
+  namespace: ShadowEngine.InputSystem
+  summary: "<p>The default behaviour of this binding without modifiers. </p>"
+  syntax:
+    content: 'public: virtual void DefaultBehaviour(ModifierContext &ctx) override'
+    parameters:
+    - id: ctx
+      type: ShadowEngine.InputSystem.ModifierContext76390d34
+      description: <p>The Input Context that this will use </p>
+  overridden: ShadowEngine.InputSystem.InputBinding.DefaultBehaviour(ModifierContext &)
+- uid: ShadowEngine.InputSystem.Binding1D.GetNegativeBinding()
+  id: ShadowEngine.InputSystem.Binding1D.GetNegativeBinding()
+  parent: ShadowEngine.InputSystem.Binding1D
+  href: ShadowEngine.InputSystem.Binding1D.yml
+  langs:
+  - cplusplus
+  name: GetNegativeBinding()
+  nameWithType: Binding1D::GetNegativeBinding()
+  fullName: InputBinding<I>& ShadowEngine::InputSystem::Binding1D<I>::GetNegativeBinding()
+  overload: ShadowEngine.InputSystem.Binding1D.GetNegativeBinding*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Bindings/Binding1D.h
+    startLine: 147
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Bindings/Binding1D.h
+    startLine: 147
+  namespace: ShadowEngine.InputSystem
+  summary: "<p>Gets the Negative side binding. </p>"
+  syntax:
+    content: 'public: InputBinding<I> & GetNegativeBinding()'
+    return:
+      type: ShadowEngine.InputSystem.InputBinding91daedf4
+      description: <p>Reference of the Binding </p>
+- uid: ShadowEngine.InputSystem.Binding1D.GetPositiveBinding()
+  id: ShadowEngine.InputSystem.Binding1D.GetPositiveBinding()
+  parent: ShadowEngine.InputSystem.Binding1D
+  href: ShadowEngine.InputSystem.Binding1D.yml
+  langs:
+  - cplusplus
+  name: GetPositiveBinding()
+  nameWithType: Binding1D::GetPositiveBinding()
+  fullName: InputBinding<I>& ShadowEngine::InputSystem::Binding1D<I>::GetPositiveBinding()
+  overload: ShadowEngine.InputSystem.Binding1D.GetPositiveBinding*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Bindings/Binding1D.h
+    startLine: 138
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Bindings/Binding1D.h
+    startLine: 138
+  namespace: ShadowEngine.InputSystem
+  summary: "<p>Gets the Positive side binding. </p>"
+  syntax:
+    content: 'public: InputBinding<I> & GetPositiveBinding()'
+    return:
+      type: ShadowEngine.InputSystem.InputBinding91daedf4
+      description: <p>Reference of the Binding </p>
+- uid: ShadowEngine.InputSystem.Binding1D.ProcessEvent(BindingContext<float> &)
+  id: ShadowEngine.InputSystem.Binding1D.ProcessEvent(BindingContext<float> &)
+  parent: ShadowEngine.InputSystem.Binding1D
+  href: ShadowEngine.InputSystem.Binding1D.yml
+  langs:
+  - cplusplus
+  name: ProcessEvent(BindingContext<float> &event)
+  nameWithType: Binding1D::ProcessEvent(BindingContext<float> &event)
+  fullName: void ShadowEngine::InputSystem::Binding1D<I>::ProcessEvent(BindingContext<float> &event)
+  overload: ShadowEngine.InputSystem.Binding1D.ProcessEvent*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Bindings/Binding1D.h
+    startLine: 48
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Bindings/Binding1D.h
+    startLine: 48
+  namespace: ShadowEngine.InputSystem
+  summary: "<p>Processes a event. </p>"
+  syntax:
+    content: 'public: virtual void ProcessEvent(BindingContext<float> &event) override'
+    parameters:
+    - id: event
+      type: ShadowEngine.InputSystem.BindingContextbdd2fd83
+      description: <p>Event to process </p>
+  overridden: ShadowEngine.InputSystem.InputBinding.ProcessEvent(BindingContext<T> &)
+references:
+- uid: 6ba839cf
+  spec.cplusplus:
+  - name: class I
+    fullName: class I
+- uid: ShadowEngine.InputSystem.InputBindingb6be683f
+  spec.cplusplus:
+  - uid: ShadowEngine.InputSystem.InputBinding
+  - name: <I> *
+    fullName: <I> *
+- uid: ShadowEngine.InputSystem.Binding1D.Binding1D*
+  name: Binding1D
+  nameWithType: Binding1D::Binding1D
+  fullName: ShadowEngine::InputSystem::Binding1D<I>::Binding1D
+- uid: ShadowEngine.InputSystem.Binding1D.~Binding1D*
+  name: ~Binding1D
+  nameWithType: Binding1D::~Binding1D
+  fullName: ShadowEngine::InputSystem::Binding1D<I>::~Binding1D
+- uid: ShadowEngine.InputSystem.BindingContextbdd2fd83
+  spec.cplusplus:
+  - uid: ShadowEngine.InputSystem.BindingContext
+  - name: <float> &
+    fullName: <float> &
+- uid: ShadowEngine.InputSystem.Binding1D.ProcessEvent*
+  name: ProcessEvent
+  nameWithType: Binding1D::ProcessEvent
+  fullName: void ShadowEngine::InputSystem::Binding1D<I>::ProcessEvent
+- uid: ShadowEngine.InputSystem.ModifierContext76390d34
+  spec.cplusplus:
+  - uid: ShadowEngine.InputSystem.ModifierContext
+  - name: " &"
+    fullName: " &"
+- uid: ShadowEngine.InputSystem.Binding1D.DefaultBehaviour*
+  name: DefaultBehaviour
+  nameWithType: Binding1D::DefaultBehaviour
+  fullName: void ShadowEngine::InputSystem::Binding1D<I>::DefaultBehaviour
+- uid: ShadowEngine.InputSystem.InputBinding91daedf4
+  spec.cplusplus:
+  - uid: ShadowEngine.InputSystem.InputBinding
+  - name: <I> &
+    fullName: <I> &
+- uid: ShadowEngine.InputSystem.Binding1D.GetPositiveBinding*
+  name: GetPositiveBinding
+  nameWithType: Binding1D::GetPositiveBinding
+  fullName: InputBinding<I>& ShadowEngine::InputSystem::Binding1D<I>::GetPositiveBinding
+- uid: ShadowEngine.InputSystem.Binding1D.GetNegativeBinding*
+  name: GetNegativeBinding
+  nameWithType: Binding1D::GetNegativeBinding
+  fullName: InputBinding<I>& ShadowEngine::InputSystem::Binding1D<I>::GetNegativeBinding
+- uid: ShadowEngine.InputSystem.InputBinding.AddModifier(InputModifier *)
+  parent: ShadowEngine.InputSystem.InputBinding
+  href: ShadowEngine.InputSystem.InputBinding.yml
+  name: AddModifier(InputModifier *_m)
+  nameWithType: InputBinding::AddModifier(InputModifier *_m)
+  fullName: InputBinding* ShadowEngine::InputSystem::InputBinding<T>::AddModifier(InputModifier *_m)
+  type: Method
+  summary: "<p>Adds a modifier to the binding. The binding will free up the memory of the modifier. </p>"
+  syntax:
+    content: 'public: InputBinding * AddModifier(InputModifier *_m) override'
+    parameters:
+    - id: _m
+      type: ShadowEngine.InputSystem.InputModifier68bc11b4
+      description: <p>Pointer to the modifier </p>
+    return:
+      type: ShadowEngine.InputSystem.InputBinding68bc11b4
+      description: <p>Returns the binding itself for easier chaining </p>
+- uid: ShadowEngine.SHObject.GenerateId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GenerateId()
+  nameWithType: SHObject::GenerateId()
+  fullName: static uint64_t ShadowEngine::SHObject::GenerateId()
+  type: Method
+  summary: "<p>Generates a new UID for each call. </p>"
+  syntax:
+    content: 'protected: static uint64_t GenerateId() noexcept'
+    return:
+      type: 6d8267d6
+      description: <p>Unique ID </p>
+- uid: ShadowEngine.InputSystem.InputBinding.GetData()
+  parent: ShadowEngine.InputSystem.InputBinding
+  href: ShadowEngine.InputSystem.InputBinding.yml
+  name: GetData()
+  nameWithType: InputBinding::GetData()
+  fullName: T ShadowEngine::InputSystem::InputBinding<T>::GetData()
+  type: Method
+  summary: "<p>Gets the data form this binding. </p>"
+  syntax:
+    content: 'public: T GetData()'
+    return:
+      type: 8ce1ecb9
+      description: <p>The data </p>
+- uid: ShadowEngine.InputSystem.InputBinding.GetModifier(int)
+  parent: ShadowEngine.InputSystem.InputBinding
+  href: ShadowEngine.InputSystem.InputBinding.yml
+  name: GetModifier(int index)
+  nameWithType: InputBinding::GetModifier(int index)
+  fullName: InputModifier& ShadowEngine::InputSystem::InputBinding<T>::GetModifier(int index)
+  type: Method
+  summary: "<p>Gets a modifier form the list, at the given index. </p>"
+  syntax:
+    content: 'public: virtual InputModifier & GetModifier(int index) override'
+    parameters:
+    - id: index
+      type: f75371fa
+      description: <p>The index of the modifier </p>
+    return:
+      type: ShadowEngine.InputSystem.InputModifier76390d34
+      description: <p>Reference to the modifier </p>
+- uid: ShadowEngine.SHObject.GetType()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetType()
+  nameWithType: SHObject::GetType()
+  fullName: virtual const std::string& ShadowEngine::SHObject::GetType()
+  type: Method
+  summary: "<p>Returns the top level class type name of the object. </p>"
+  syntax:
+    content: 'public: virtual const std::string & GetType() const =0'
+    return:
+      type: 360fc41e
+      description: <p>Class name string </p>
+- uid: ShadowEngine.SHObject.GetTypeId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetTypeId()
+  nameWithType: SHObject::GetTypeId()
+  fullName: virtual const uint64_t ShadowEngine::SHObject::GetTypeId()
+  type: Method
+  summary: "<p>Gets the top level type ID. </p>"
+  syntax:
+    content: 'public: virtual const uint64_t GetTypeId() const =0'
+    return:
+      type: 29dc5929
+      description: <p>UID of the class </p>
+- uid: ShadowEngine.InputSystem.InputBinding.InputBinding()
+  parent: ShadowEngine.InputSystem.InputBinding
+  href: ShadowEngine.InputSystem.InputBinding.yml
+  name: InputBinding()
+  nameWithType: InputBinding::InputBinding()
+  fullName: ShadowEngine::InputSystem::InputBinding<T>::InputBinding()
+  type: Constructor
+  syntax:
+    content: 'public: InputBinding()'
+- uid: ShadowEngine.InputSystem.InputBinding.ModifierCount()
+  parent: ShadowEngine.InputSystem.InputBinding
+  href: ShadowEngine.InputSystem.InputBinding.yml
+  name: ModifierCount()
+  nameWithType: InputBinding::ModifierCount()
+  fullName: int ShadowEngine::InputSystem::InputBinding<T>::ModifierCount()
+  type: Method
+  summary: "<p>Gets the number of the modifiers in this Binding. </p>"
+  syntax:
+    content: 'public: virtual int ModifierCount() override'
+    return:
+      type: f75371fa
+      description: <p>Number of the modifiers </p>
+- uid: ShadowEngine.InputSystem.InputBinding.ProcessContext(BindingContext<T> &,ModifierContext &)
+  parent: ShadowEngine.InputSystem.InputBinding
+  href: ShadowEngine.InputSystem.InputBinding.yml
+  name: ProcessContext(BindingContext<T> &bdgCtx, ModifierContext &ctx)
+  nameWithType: InputBinding::ProcessContext(BindingContext<T> &bdgCtx, ModifierContext &ctx)
+  fullName: void ShadowEngine::InputSystem::InputBinding<T>::ProcessContext(BindingContext<T> &bdgCtx, ModifierContext &ctx)
+  type: Method
+  summary: "<p>Internal function to make the modifer handling easier. It. </p>"
+  syntax:
+    content: 'public: void ProcessContext(BindingContext<T> &bdgCtx, ModifierContext &ctx)'
+    parameters:
+    - id: bdgCtx
+      type: ShadowEngine.InputSystem.BindingContext515eeee4
+      description: <p>The binding context, got in ProcessEvent </p>
+    - id: ctx
+      type: ShadowEngine.InputSystem.ModifierContext76390d34
+      description: <p>The ModifierContect that will be given to the Modifiers to process </p>
+- uid: ShadowEngine.InputSystem.InputBinding.~InputBinding()
+  parent: ShadowEngine.InputSystem.InputBinding
+  href: ShadowEngine.InputSystem.InputBinding.yml
+  name: ~InputBinding()
+  nameWithType: InputBinding::~InputBinding()
+  fullName: virtual ShadowEngine::InputSystem::InputBinding<T>::~InputBinding()
+  type: Constructor
+  syntax:
+    content: 'public: virtual ~InputBinding()'
+- uid: ShadowEngine.SHObject.~SHObject()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: ~SHObject()
+  nameWithType: SHObject::~SHObject()
+  fullName: virtual ShadowEngine::SHObject::~SHObject()
+  type: Constructor
+  syntax:
+    content: 'public: virtual ~SHObject()=default'
+- uid: ShadowEngine.InputSystem.InputBinding
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.InputBinding.yml
+  name: InputBinding
+  nameWithType: InputBinding
+  fullName: ShadowEngine::InputSystem::InputBinding
+  type: Class
+  syntax:
+    content: 'public: class InputBinding'
+    typeParameters:
+    - id: class
+      type: 4fedf2a2
+- uid: _binding1_d_8h
+- uid: ShadowEngine.InputSystem.Binding1D
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.Binding1D.yml
+  name: Binding1D
+  nameWithType: Binding1D
+  fullName: ShadowEngine::InputSystem::Binding1D
+  type: Class
+  summary: "<p>This Binding represents a 1D value, in a float. </p>"
+  syntax: *o1
+- uid: ShadowEngine.InputSystem.InputBinding.ProcessEvent(BindingContext<T> &)
+  parent: ShadowEngine.InputSystem.InputBinding
+  href: ShadowEngine.InputSystem.InputBinding.yml
+  name: ProcessEvent(BindingContext<T> &event)
+  nameWithType: InputBinding::ProcessEvent(BindingContext<T> &event)
+  fullName: virtual void ShadowEngine::InputSystem::InputBinding<T>::ProcessEvent(BindingContext<T> &event)
+  type: Method
+  summary: "<p>Processes a event. </p>"
+  syntax:
+    content: 'public: virtual void ProcessEvent(BindingContext<T> &event)=0'
+    parameters:
+    - id: event
+      type: ShadowEngine.InputSystem.BindingContext515eeee4
+      description: <p>Event to process </p>
+- uid: ShadowEngine.InputSystem.BindingContext
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.BindingContext.yml
+  name: BindingContext
+  nameWithType: BindingContext
+  fullName: ShadowEngine::InputSystem::BindingContext
+  type: Class
+  summary: "<p>Context of the Binding calls. </p><p>This stores the data passed to input bindings. </p>"
+  syntax:
+    content: 'public: class BindingContext'
+    typeParameters:
+    - id: class
+      type: 4fedf2a2
+- uid: ShadowEngine.InputSystem.InputBinding.DefaultBehaviour(ModifierContext &)
+  parent: ShadowEngine.InputSystem.InputBinding
+  href: ShadowEngine.InputSystem.InputBinding.yml
+  name: DefaultBehaviour(ModifierContext &ctx)
+  nameWithType: InputBinding::DefaultBehaviour(ModifierContext &ctx)
+  fullName: virtual void ShadowEngine::InputSystem::InputBinding<T>::DefaultBehaviour(ModifierContext &ctx)
+  type: Method
+  summary: "<p>The default behaviour of this binding without modifiers. </p>"
+  syntax:
+    content: 'public: virtual void DefaultBehaviour(ModifierContext &ctx)=0'
+    parameters:
+    - id: ctx
+      type: ShadowEngine.InputSystem.ModifierContext76390d34
+      description: <p>The Input Context that this will use </p>
+- uid: ShadowEngine.InputSystem.ModifierContext
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.ModifierContext.yml
+  name: ModifierContext
+  nameWithType: ModifierContext
+  fullName: ShadowEngine::InputSystem::ModifierContext
+  type: Class
+  syntax:
+    content: 'public: class ModifierContext'

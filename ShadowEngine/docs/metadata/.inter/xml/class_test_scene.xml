@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_test_scene" kind="class" language="C++" prot="public">
+    <compoundname>TestScene</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_entity_system_1_1_scene" prot="public" virt="non-virtual">ShadowEngine::EntitySystem::Scene</basecompoundref>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_test_scene_1ad0399f58368764e372299dd8b81e719a" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual TestScene::~TestScene</definition>
+        <argsstring>()=default</argsstring>
+        <name>~TestScene</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowScene/TestScene.h" line="6" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_test_scene_1ae65155436f9e383eaed64c68059ea955" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TestScene::Init</definition>
+        <argsstring>() override</argsstring>
+        <name>Init</name>
+        <reimplements refid="class_shadow_engine_1_1_entity_system_1_1_scene_1acd326d6d9d627476ec72eaa7b7dad4b2">Init</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowScene/TestScene.h" line="8" column="1" bodyfile="ShadowEngine/src/ShadowScene/TestScene.cpp" bodystart="7" bodyend="38" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="636">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="637">
+        <label>std::enable_shared_from_this&lt;Scene&gt;</label>
+      </node>
+      <node id="634">
+        <label>TestScene</label>
+        <link refid="class_test_scene" />
+        <childnode refid="635" relation="public-inheritance"></childnode>
+      </node>
+      <node id="635">
+        <label>ShadowEngine::EntitySystem::Scene</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene" />
+        <childnode refid="636" relation="public-inheritance"></childnode>
+        <childnode refid="637" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="640">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="641">
+        <label>std::enable_shared_from_this&lt;Scene&gt;</label>
+      </node>
+      <node id="638">
+        <label>TestScene</label>
+        <link refid="class_test_scene" />
+        <childnode refid="639" relation="public-inheritance"></childnode>
+      </node>
+      <node id="639">
+        <label>ShadowEngine::EntitySystem::Scene</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene" />
+        <childnode refid="640" relation="public-inheritance"></childnode>
+        <childnode refid="641" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowScene/TestScene.h" line="5" column="1" bodyfile="ShadowEngine/src/ShadowScene/TestScene.h" bodystart="4" bodyend="9" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a35bf9fdc604caa67e1a2f1b0a9c574f2" prot="protected" virt="non-virtual">
+        <scope>TestScene</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a230ca5dec944e67f8d57dfc743da7d94" prot="public" virt="pure-virtual">
+        <scope>TestScene</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual">
+        <scope>TestScene</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="class_test_scene_1ae65155436f9e383eaed64c68059ea955" prot="private" virt="virtual">
+        <scope>TestScene</scope>
+        <name>Init</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual">
+        <scope>TestScene</scope>
+        <name>~SHObject</name>
+      </member>
+      <member refid="class_test_scene_1ad0399f58368764e372299dd8b81e719a" prot="private" virt="virtual">
+        <scope>TestScene</scope>
+        <name>~TestScene</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

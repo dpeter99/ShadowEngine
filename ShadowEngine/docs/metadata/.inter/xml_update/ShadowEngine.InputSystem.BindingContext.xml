@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.InputSystem.BindingContext" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::InputSystem::BindingContext</compoundname>
+    <includes refid="_binding_context_8h" local="no">BindingContext.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.BindingContext.event_" prot="public" static="no" mutable="no">
+        <type>const <ref refid="ShadowEngine.EventSystem.ShadowEvent" kindref="compound">EventSystem::ShadowEvent</ref> *</type>
+        <definition>const EventSystem::ShadowEvent* ShadowEngine::InputSystem::BindingContext&lt;T&gt;::event_</definition>
+        <argsstring></argsstring>
+        <name>event_</name>
+        <briefdescription>
+          <para>The event that triggered this call. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/BindingContext.h" line="36" column="1" bodyfile="ShadowEngine/src/ShadowInput/BindingContext.h" bodystart="36" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.BindingContext.continuous_" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ShadowEngine::InputSystem::BindingContext&lt;T&gt;::continuous_</definition>
+        <argsstring></argsstring>
+        <name>continuous_</name>
+        <briefdescription>
+          <para>Weather this binding should behave continuously. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/BindingContext.h" line="41" column="1" bodyfile="ShadowEngine/src/ShadowInput/BindingContext.h" bodystart="41" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.BindingContext.bindingState_" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ShadowEngine::InputSystem::BindingContext&lt;T&gt;::bindingState_</definition>
+        <argsstring></argsstring>
+        <name>bindingState_</name>
+        <briefdescription>
+          <para>The state of the binding. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/BindingContext.h" line="46" column="1" bodyfile="ShadowEngine/src/ShadowInput/BindingContext.h" bodystart="46" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.BindingContext.outState_" prot="public" static="no" mutable="no">
+        <type>ActionState</type>
+        <definition>ActionState ShadowEngine::InputSystem::BindingContext&lt;T&gt;::outState_</definition>
+        <argsstring></argsstring>
+        <name>outState_</name>
+        <briefdescription>
+          <para>The output state form this binding. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/BindingContext.h" line="51" column="1" bodyfile="ShadowEngine/src/ShadowInput/BindingContext.h" bodystart="51" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.BindingContext.data_" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T ShadowEngine::InputSystem::BindingContext&lt;T&gt;::data_</definition>
+        <argsstring></argsstring>
+        <name>data_</name>
+        <briefdescription>
+          <para>The data this binding gives the action. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/BindingContext.h" line="56" column="1" bodyfile="ShadowEngine/src/ShadowInput/BindingContext.h" bodystart="56" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.BindingContext.processed_" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ShadowEngine::InputSystem::BindingContext&lt;T&gt;::processed_</definition>
+        <argsstring></argsstring>
+        <name>processed_</name>
+        <briefdescription>
+          <para>If the binding actually activated. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/BindingContext.h" line="61" column="1" bodyfile="ShadowEngine/src/ShadowInput/BindingContext.h" bodystart="61" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.InputSystem.BindingContext.BindingContext(const EventSystem::ShadowEvent *,bool)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::BindingContext&lt;T&gt;::BindingContext</definition>
+        <argsstring>(const EventSystem::ShadowEvent *event, bool cont)</argsstring>
+        <name>BindingContext</name>
+        <param>
+          <type>const <ref refid="ShadowEngine.EventSystem.ShadowEvent" kindref="compound">EventSystem::ShadowEvent</ref> *</type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>cont</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/BindingContext.h" line="63" column="1" bodyfile="ShadowEngine/src/ShadowInput/BindingContext.h" bodystart="63" bodyend="71" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.BindingContext.~BindingContext()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::BindingContext&lt;T&gt;::~BindingContext</definition>
+        <argsstring>()</argsstring>
+        <name>~BindingContext</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/BindingContext.h" line="73" column="1" bodyfile="ShadowEngine/src/ShadowInput/BindingContext.h" bodystart="73" bodyend="75" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.BindingContext.GetEvent()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="ShadowEngine.EventSystem.ShadowEvent" kindref="compound">EventSystem::ShadowEvent</ref> *</type>
+        <definition>const EventSystem::ShadowEvent* ShadowEngine::InputSystem::BindingContext&lt;T&gt;::GetEvent</definition>
+        <argsstring>()</argsstring>
+        <name>GetEvent</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/BindingContext.h" line="77" column="1" bodyfile="ShadowEngine/src/ShadowInput/BindingContext.h" bodystart="77" bodyend="77" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+      <para>Context of the Binding calls. </para>
+    </briefdescription>
+    <detaileddescription>
+      <para>This stores the data passed to input bindings. <parameterlist kind="templateparam"><parameteritem><parameternamelist><parametername>T</parametername></parameternamelist><parameterdescription><para>The type of the data stored </para></parameterdescription></parameteritem></parameterlist></para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="53">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="54">
+        <label>T</label>
+      </node>
+      <node id="52">
+        <label>ShadowEngine::EventSystem::ShadowEvent</label>
+        <link refid="ShadowEngine.EventSystem.ShadowEvent" />
+        <childnode refid="53" relation="public-inheritance"></childnode>
+      </node>
+      <node id="51">
+        <label>ShadowEngine::InputSystem::BindingContext&lt;T&gt;</label>
+        <link refid="ShadowEngine.InputSystem.BindingContext" />
+        <childnode refid="52" relation="usage">
+          <edgelabel>event_</edgelabel>
+        </childnode>
+        <childnode refid="54" relation="usage">
+          <edgelabel>data_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowInput/BindingContext.h" line="31" column="1" bodyfile="ShadowEngine/src/ShadowInput/BindingContext.h" bodystart="30" bodyend="78" />
+    <listofallmembers>
+      <member refid="ShadowEngine.InputSystem.BindingContext.BindingContext(const EventSystem::ShadowEvent *,bool)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingContext</scope>
+        <name>BindingContext</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingContext.bindingState_" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingContext</scope>
+        <name>bindingState_</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingContext.continuous_" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingContext</scope>
+        <name>continuous_</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingContext.data_" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingContext</scope>
+        <name>data_</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingContext.event_" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingContext</scope>
+        <name>event_</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingContext.GetEvent()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingContext</scope>
+        <name>GetEvent</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingContext.outState_" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingContext</scope>
+        <name>outState_</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingContext.processed_" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingContext</scope>
+        <name>processed_</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.BindingContext.~BindingContext()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingContext</scope>
+        <name>~BindingContext</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

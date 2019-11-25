@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.InputSystem.IInputBinding" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ShadowEngine::InputSystem::IInputBinding</compoundname>
+    <basecompoundref refid="ShadowEngine.SHObject" prot="public" virt="non-virtual">ShadowEngine::SHObject</basecompoundref>
+    <derivedcompoundref refid="ShadowEngine.InputSystem.InputBinding" prot="public" virt="non-virtual">ShadowEngine::InputSystem::InputBinding&lt;bool&gt;</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.InputSystem.InputBinding" prot="public" virt="non-virtual">ShadowEngine::InputSystem::InputBinding&lt;float&gt;</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.InputSystem.InputBinding" prot="public" virt="non-virtual">ShadowEngine::InputSystem::InputBinding&lt;I&gt;</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.InputSystem.InputBinding" prot="public" virt="non-virtual">ShadowEngine::InputSystem::InputBinding&lt;ShadowMath::Vector2float&gt;</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.InputSystem.InputBinding" prot="public" virt="non-virtual">ShadowEngine::InputSystem::InputBinding&lt;T&gt;</derivedcompoundref>
+    <includes refid="_i_input_binding_8h" local="no">IInputBinding.h</includes>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="ShadowEngine.InputSystem.IInputBinding.GetModifier(int)" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>SHObject_Base(<ref refid="ShadowEngine.InputSystem.IInputBinding" kindref="compound">IInputBinding</ref>) public <ref refid="ShadowEngine.InputSystem.InputModifier" kindref="compound">InputModifier</ref> &amp;</type>
+        <definition>virtual SHObject_Base (IInputBinding) public InputModifier&amp; ShadowEngine::InputSystem::IInputBinding::GetModifier</definition>
+        <argsstring>(int index)=0</argsstring>
+        <name>GetModifier</name>
+        <reimplementedby refid="ShadowEngine.InputSystem.InputBinding.GetModifier(int)">GetModifier</reimplementedby>
+        <reimplementedby refid="ShadowEngine.InputSystem.InputBinding.GetModifier(int)">GetModifier</reimplementedby>
+        <reimplementedby refid="ShadowEngine.InputSystem.InputBinding.GetModifier(int)">GetModifier</reimplementedby>
+        <reimplementedby refid="ShadowEngine.InputSystem.InputBinding.GetModifier(int)">GetModifier</reimplementedby>
+        <reimplementedby refid="ShadowEngine.InputSystem.InputBinding.GetModifier(int)">GetModifier</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+          <para>Adds a new input modifier to the events modifier list. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>_m</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The new modifier that is added </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+            <simplesect kind="return">
+              <para>Returns the same object so it can be chained returns the modifier at the index </para>
+            </simplesect>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>index</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The index of the modifier needed </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+            <simplesect kind="return">
+              <para>The modifier requested </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/IInputBinding.h" line="27" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.IInputBinding.ModifierCount()" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int ShadowEngine::InputSystem::IInputBinding::ModifierCount</definition>
+        <argsstring>()=0</argsstring>
+        <name>ModifierCount</name>
+        <reimplementedby refid="ShadowEngine.InputSystem.InputBinding.ModifierCount()">ModifierCount</reimplementedby>
+        <reimplementedby refid="ShadowEngine.InputSystem.InputBinding.ModifierCount()">ModifierCount</reimplementedby>
+        <reimplementedby refid="ShadowEngine.InputSystem.InputBinding.ModifierCount()">ModifierCount</reimplementedby>
+        <reimplementedby refid="ShadowEngine.InputSystem.InputBinding.ModifierCount()">ModifierCount</reimplementedby>
+        <reimplementedby refid="ShadowEngine.InputSystem.InputBinding.ModifierCount()">ModifierCount</reimplementedby>
+        <briefdescription>
+          <para>Gets the modifier count of the InputBinding. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <simplesect kind="return">
+              <para>The count of the added modifiers </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/IInputBinding.h" line="34" column="1" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+      <para>Interface for the Bindings. </para>
+    </briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="189">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="192">
+        <label>ShadowEngine::InputSystem::KeyboardBinding</label>
+        <link refid="ShadowEngine.InputSystem.KeyboardBinding" />
+        <childnode refid="190" relation="public-inheritance"></childnode>
+      </node>
+      <node id="200">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;T&gt;</label>
+        <link refid="ShadowEngine.InputSystem.InputBinding" />
+        <childnode refid="188" relation="public-inheritance"></childnode>
+      </node>
+      <node id="190">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;bool&gt;</label>
+        <link refid="ShadowEngine.InputSystem.InputBinding" />
+        <childnode refid="188" relation="public-inheritance"></childnode>
+      </node>
+      <node id="193">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;float&gt;</label>
+        <link refid="ShadowEngine.InputSystem.InputBinding" />
+        <childnode refid="188" relation="public-inheritance"></childnode>
+      </node>
+      <node id="191">
+        <label>ShadowEngine::InputSystem::InputMapBinding</label>
+        <link refid="ShadowEngine.InputSystem.InputMapBinding" />
+        <childnode refid="190" relation="public-inheritance"></childnode>
+      </node>
+      <node id="196">
+        <label>ShadowEngine::InputSystem::BindingAND&lt;I&gt;</label>
+        <link refid="ShadowEngine.InputSystem.BindingAND" />
+        <childnode refid="195" relation="public-inheritance"></childnode>
+      </node>
+      <node id="199">
+        <label>ShadowEngine::InputSystem::Binding2D&lt;I&gt;</label>
+        <link refid="ShadowEngine.InputSystem.Binding2D" />
+        <childnode refid="198" relation="public-inheritance"></childnode>
+      </node>
+      <node id="195">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;I&gt;</label>
+        <link refid="ShadowEngine.InputSystem.InputBinding" />
+        <childnode refid="188" relation="public-inheritance"></childnode>
+      </node>
+      <node id="198">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;ShadowMath::Vector2float&gt;</label>
+        <link refid="ShadowEngine.InputSystem.InputBinding" />
+        <childnode refid="188" relation="public-inheritance"></childnode>
+      </node>
+      <node id="197">
+        <label>ShadowEngine::InputSystem::BindingOR&lt;I&gt;</label>
+        <link refid="ShadowEngine.InputSystem.BindingOR" />
+        <childnode refid="195" relation="public-inheritance"></childnode>
+      </node>
+      <node id="188">
+        <label>ShadowEngine::InputSystem::IInputBinding</label>
+        <link refid="ShadowEngine.InputSystem.IInputBinding" />
+        <childnode refid="189" relation="public-inheritance"></childnode>
+      </node>
+      <node id="194">
+        <label>ShadowEngine::InputSystem::Binding1D&lt;I&gt;</label>
+        <link refid="ShadowEngine.InputSystem.Binding1D" />
+        <childnode refid="193" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="202">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="201">
+        <label>ShadowEngine::InputSystem::IInputBinding</label>
+        <link refid="ShadowEngine.InputSystem.IInputBinding" />
+        <childnode refid="202" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowInput/IInputBinding.h" line="11" column="1" bodyfile="ShadowEngine/src/ShadowInput/IInputBinding.h" bodystart="10" bodyend="37" />
+    <listofallmembers>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::IInputBinding</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.IInputBinding.GetModifier(int)" prot="private" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::IInputBinding</scope>
+        <name>GetModifier</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::IInputBinding</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::IInputBinding</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.IInputBinding.ModifierCount()" prot="private" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::IInputBinding</scope>
+        <name>ModifierCount</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::IInputBinding</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

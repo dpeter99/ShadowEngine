@@ -1,0 +1,261 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer
+  id: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer
+  parent: ShadowEngine.Rendering.D3D12
+  children:
+  - ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.~D3D12ConstantBuffer()
+  - ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.CreateResources(size_t)
+  - ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.D3D12ConstantBuffer(size_t)
+  - ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.GetGPUVirtualAddress()
+  - ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.ReleaseResources()
+  - ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.Upload(void *,size_t)
+  href: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.yml
+  langs:
+  - cplusplus
+  name: D3D12ConstantBuffer
+  nameWithType: D3D12ConstantBuffer
+  fullName: ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h
+    startLine: 7
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h
+    startLine: 8
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: class D3D12ConstantBuffer : public nstantBufferImpl'
+  inheritance:
+  - System::Object
+  - ShadowEngine.Rendering.ConstantBufferImpl
+  inheritedMembers:
+  - ShadowEngine.Rendering.ConstantBufferImpl.Create(size_t)
+- uid: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.~D3D12ConstantBuffer()
+  id: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.~D3D12ConstantBuffer()
+  parent: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer
+  href: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.yml
+  langs:
+  - cplusplus
+  name: ~D3D12ConstantBuffer()
+  nameWithType: D3D12ConstantBuffer::~D3D12ConstantBuffer()
+  fullName: ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::~D3D12ConstantBuffer()
+  overload: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.~D3D12ConstantBuffer*
+  type: Constructor
+  source:
+    remote: &o1
+      path: ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.cpp
+    startLine: 12
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h
+    startLine: 16
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: ~D3D12ConstantBuffer()'
+- uid: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.CreateResources(size_t)
+  id: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.CreateResources(size_t)
+  parent: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer
+  href: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.yml
+  langs:
+  - cplusplus
+  name: CreateResources(size_t size)
+  nameWithType: D3D12ConstantBuffer::CreateResources(size_t size)
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::CreateResources(size_t size)
+  overload: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.CreateResources*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.cpp
+    startLine: 17
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h
+    startLine: 18
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: void CreateResources(size_t size)'
+    parameters:
+    - id: size
+      type: 9563f24b
+- uid: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.D3D12ConstantBuffer(size_t)
+  id: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.D3D12ConstantBuffer(size_t)
+  parent: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer
+  href: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.yml
+  langs:
+  - cplusplus
+  name: D3D12ConstantBuffer(size_t size)
+  nameWithType: D3D12ConstantBuffer::D3D12ConstantBuffer(size_t size)
+  fullName: ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::D3D12ConstantBuffer(size_t size)
+  overload: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.D3D12ConstantBuffer*
+  type: Constructor
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.cpp
+    startLine: 5
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h
+    startLine: 14
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: D3D12ConstantBuffer(size_t size)'
+    parameters:
+    - id: size
+      type: 9563f24b
+- uid: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.GetGPUVirtualAddress()
+  id: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.GetGPUVirtualAddress()
+  parent: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer
+  href: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.yml
+  langs:
+  - cplusplus
+  name: GetGPUVirtualAddress()
+  nameWithType: D3D12ConstantBuffer::GetGPUVirtualAddress()
+  fullName: D3D12_GPU_VIRTUAL_ADDRESS ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::GetGPUVirtualAddress()
+  overload: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.GetGPUVirtualAddress*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.cpp
+    startLine: 39
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h
+    startLine: 20
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: D3D12_GPU_VIRTUAL_ADDRESS GetGPUVirtualAddress() const'
+    return:
+      type: 034a11e4
+- uid: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.ReleaseResources()
+  id: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.ReleaseResources()
+  parent: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer
+  href: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.yml
+  langs:
+  - cplusplus
+  name: ReleaseResources()
+  nameWithType: D3D12ConstantBuffer::ReleaseResources()
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::ReleaseResources()
+  overload: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.ReleaseResources*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.cpp
+    startLine: 44
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h
+    startLine: 22
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: void ReleaseResources()'
+- uid: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.Upload(void *,size_t)
+  id: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.Upload(void *,size_t)
+  parent: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer
+  href: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.yml
+  langs:
+  - cplusplus
+  name: Upload(void *data, size_t size)
+  nameWithType: D3D12ConstantBuffer::Upload(void *data, size_t size)
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::Upload(void *data, size_t size)
+  overload: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.Upload*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.cpp
+    startLine: 54
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h
+    startLine: 24
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: virtual void Upload(void *data, size_t size) override'
+    parameters:
+    - id: data
+      type: 7ca192cd
+    - id: size
+      type: 9563f24b
+  overridden: ShadowEngine.Rendering.ConstantBufferImpl.Upload(void *,size_t)
+references:
+- uid: 9563f24b
+  spec.cplusplus:
+  - name: size_t
+    fullName: size_t
+- uid: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.D3D12ConstantBuffer*
+  name: D3D12ConstantBuffer
+  nameWithType: D3D12ConstantBuffer::D3D12ConstantBuffer
+  fullName: ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::D3D12ConstantBuffer
+- uid: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.~D3D12ConstantBuffer*
+  name: ~D3D12ConstantBuffer
+  nameWithType: D3D12ConstantBuffer::~D3D12ConstantBuffer
+  fullName: ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::~D3D12ConstantBuffer
+- uid: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.CreateResources*
+  name: CreateResources
+  nameWithType: D3D12ConstantBuffer::CreateResources
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::CreateResources
+- uid: 034a11e4
+  spec.cplusplus:
+  - name: D3D12_GPU_VIRTUAL_ADDRESS
+    fullName: D3D12_GPU_VIRTUAL_ADDRESS
+- uid: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.GetGPUVirtualAddress*
+  name: GetGPUVirtualAddress
+  nameWithType: D3D12ConstantBuffer::GetGPUVirtualAddress
+  fullName: D3D12_GPU_VIRTUAL_ADDRESS ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::GetGPUVirtualAddress
+- uid: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.ReleaseResources*
+  name: ReleaseResources
+  nameWithType: D3D12ConstantBuffer::ReleaseResources
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::ReleaseResources
+- uid: 7ca192cd
+  spec.cplusplus:
+  - name: void *
+    fullName: void *
+- uid: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.Upload*
+  name: Upload
+  nameWithType: D3D12ConstantBuffer::Upload
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::Upload
+- uid: ShadowEngine.Rendering.ConstantBufferImpl.Create(size_t)
+  parent: ShadowEngine.Rendering.ConstantBufferImpl
+  href: ShadowEngine.Rendering.ConstantBufferImpl.yml
+  name: Create(size_t size)
+  nameWithType: ConstantBufferImpl::Create(size_t size)
+  fullName: ConstantBufferImpl * ShadowEngine::Rendering::ConstantBufferImpl::Create(size_t size)
+  type: Method
+  syntax:
+    content: 'public: static ConstantBufferImpl * Create(size_t size)'
+    parameters:
+    - id: size
+      type: 9563f24b
+    return:
+      type: ShadowEngine.Rendering.ConstantBufferImpl68bc11b4
+- uid: ShadowEngine.Rendering.ConstantBufferImpl
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ConstantBufferImpl.yml
+  name: ConstantBufferImpl
+  nameWithType: ConstantBufferImpl
+  fullName: ShadowEngine::Rendering::ConstantBufferImpl
+  type: Class
+  syntax:
+    content: 'public: class ConstantBufferImpl'
+- uid: ShadowEngine.Rendering.ConstantBufferImpl.Upload(void *,size_t)
+  parent: ShadowEngine.Rendering.ConstantBufferImpl
+  href: ShadowEngine.Rendering.ConstantBufferImpl.yml
+  name: Upload(void *data, size_t size)
+  nameWithType: ConstantBufferImpl::Upload(void *data, size_t size)
+  fullName: virtual void ShadowEngine::Rendering::ConstantBufferImpl::Upload(void *data, size_t size)
+  type: Method
+  syntax:
+    content: 'public: virtual void Upload(void *data, size_t size)=0'
+    parameters:
+    - id: data
+      type: 7ca192cd
+    - id: size
+      type: 9563f24b

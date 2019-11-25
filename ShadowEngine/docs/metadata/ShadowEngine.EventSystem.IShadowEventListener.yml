@@ -1,0 +1,192 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.EventSystem.IShadowEventListener
+  id: ShadowEngine.EventSystem.IShadowEventListener
+  parent: ShadowEngine.EventSystem
+  children:
+  - ShadowEngine.EventSystem.IShadowEventListener.~IShadowEventListener()
+  - ShadowEngine.EventSystem.IShadowEventListener.IShadowEventListener()
+  - ShadowEngine.EventSystem.IShadowEventListener.OnEvent(ShadowEvent &)
+  href: ShadowEngine.EventSystem.IShadowEventListener.yml
+  langs:
+  - cplusplus
+  name: IShadowEventListener
+  nameWithType: IShadowEventListener
+  fullName: ShadowEngine::EventSystem::IShadowEventListener
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowEvents/IShadowEventListener.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowEvents/IShadowEventListener.h
+    startLine: 13
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/IShadowEventListener.h
+    startLine: 14
+  namespace: ShadowEngine.EventSystem
+  syntax:
+    content: 'public: class IShadowEventListener'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.EventSystem.IShadowEventListener.~IShadowEventListener()
+  id: ShadowEngine.EventSystem.IShadowEventListener.~IShadowEventListener()
+  parent: ShadowEngine.EventSystem.IShadowEventListener
+  href: ShadowEngine.EventSystem.IShadowEventListener.yml
+  langs:
+  - cplusplus
+  name: ~IShadowEventListener()
+  nameWithType: IShadowEventListener::~IShadowEventListener()
+  fullName: ShadowEngine::EventSystem::IShadowEventListener::~IShadowEventListener()
+  overload: ShadowEngine.EventSystem.IShadowEventListener.~IShadowEventListener*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/IShadowEventListener.h
+    startLine: 20
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/IShadowEventListener.h
+    startLine: 20
+  namespace: ShadowEngine.EventSystem
+  syntax:
+    content: 'public: ~IShadowEventListener()=default'
+- uid: ShadowEngine.EventSystem.IShadowEventListener.IShadowEventListener()
+  id: ShadowEngine.EventSystem.IShadowEventListener.IShadowEventListener()
+  parent: ShadowEngine.EventSystem.IShadowEventListener
+  href: ShadowEngine.EventSystem.IShadowEventListener.yml
+  langs:
+  - cplusplus
+  name: IShadowEventListener()
+  nameWithType: IShadowEventListener::IShadowEventListener()
+  fullName: ShadowEngine::EventSystem::IShadowEventListener::IShadowEventListener()
+  overload: ShadowEngine.EventSystem.IShadowEventListener.IShadowEventListener*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/IShadowEventListener.h
+    startLine: 19
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/IShadowEventListener.h
+    startLine: 19
+  namespace: ShadowEngine.EventSystem
+  syntax:
+    content: 'public: IShadowEventListener()=default'
+- uid: ShadowEngine.EventSystem.IShadowEventListener.OnEvent(ShadowEvent &)
+  id: ShadowEngine.EventSystem.IShadowEventListener.OnEvent(ShadowEvent &)
+  parent: ShadowEngine.EventSystem.IShadowEventListener
+  href: ShadowEngine.EventSystem.IShadowEventListener.yml
+  langs:
+  - cplusplus
+  name: OnEvent(ShadowEvent &e)
+  nameWithType: IShadowEventListener::OnEvent(ShadowEvent &e)
+  fullName: virtual void ShadowEngine::EventSystem::IShadowEventListener::OnEvent(ShadowEvent &e)
+  overload: ShadowEngine.EventSystem.IShadowEventListener.OnEvent*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/IShadowEventListener.h
+    startLine: 17
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/IShadowEventListener.h
+    startLine: 17
+  namespace: ShadowEngine.EventSystem
+  syntax:
+    content: 'public: virtual void OnEvent(ShadowEvent &e)=0'
+    parameters:
+    - id: e
+      type: ShadowEngine.EventSystem.ShadowEvent76390d34
+references:
+- uid: ShadowEngine.EventSystem.ShadowEvent76390d34
+  spec.cplusplus:
+  - uid: ShadowEngine.EventSystem.ShadowEvent
+  - name: " &"
+    fullName: " &"
+- uid: ShadowEngine.EventSystem.IShadowEventListener.OnEvent*
+  name: OnEvent
+  nameWithType: IShadowEventListener::OnEvent
+  fullName: virtual void ShadowEngine::EventSystem::IShadowEventListener::OnEvent
+- uid: ShadowEngine.EventSystem.IShadowEventListener.IShadowEventListener*
+  name: IShadowEventListener
+  nameWithType: IShadowEventListener::IShadowEventListener
+  fullName: ShadowEngine::EventSystem::IShadowEventListener::IShadowEventListener
+- uid: ShadowEngine.EventSystem.IShadowEventListener.~IShadowEventListener*
+  name: ~IShadowEventListener
+  nameWithType: IShadowEventListener::~IShadowEventListener
+  fullName: ShadowEngine::EventSystem::IShadowEventListener::~IShadowEventListener
+- uid: ShadowEngine.Debug.DebugModule
+  parent: ShadowEngine.Debug
+  href: ShadowEngine.Debug.DebugModule.yml
+  name: DebugModule
+  nameWithType: DebugModule
+  fullName: ShadowEngine::Debug::DebugModule
+  type: Class
+  syntax:
+    content: 'public: class DebugModule : public hadowModule, public hadowEventListener, public hadowImGui'
+- uid: ShadowEngine.DebugGui.ImGuiModule
+  parent: ShadowEngine.DebugGui
+  href: ShadowEngine.DebugGui.ImGuiModule.yml
+  name: ImGuiModule
+  nameWithType: ImGuiModule
+  fullName: ShadowEngine::DebugGui::ImGuiModule
+  type: Class
+  syntax:
+    content: 'public: class ImGuiModule : public hadowModule, public hadowEventListener'
+- uid: ShadowEngine.InputSystem.ShadowActionSystem
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.ShadowActionSystem.yml
+  name: ShadowActionSystem
+  nameWithType: ShadowActionSystem
+  fullName: ShadowEngine::InputSystem::ShadowActionSystem
+  type: Class
+  summary: "<p>The Action system. </p><p>This stores and processes the events </p>"
+  syntax:
+    content: 'public: class ShadowActionSystem'
+- uid: ShadowEngine.DebugGui.ImGuiModule.OnEvent(EventSystem::ShadowEvent &)
+  parent: ShadowEngine.DebugGui.ImGuiModule
+  href: ShadowEngine.DebugGui.ImGuiModule.yml
+  name: OnEvent(EventSystem::ShadowEvent &e)
+  nameWithType: ImGuiModule::OnEvent(EventSystem::ShadowEvent &e)
+  fullName: void ShadowEngine::DebugGui::ImGuiModule::OnEvent(EventSystem::ShadowEvent &e)
+  type: Method
+  syntax:
+    content: 'public: virtual void OnEvent(EventSystem::ShadowEvent &e) override'
+    parameters:
+    - id: e
+      type: ShadowEngine.EventSystem.ShadowEvent76390d34
+- uid: ShadowEngine.Debug.DebugModule.OnEvent(EventSystem::ShadowEvent &)
+  parent: ShadowEngine.Debug.DebugModule
+  href: ShadowEngine.Debug.DebugModule.yml
+  name: OnEvent(EventSystem::ShadowEvent &e)
+  nameWithType: DebugModule::OnEvent(EventSystem::ShadowEvent &e)
+  fullName: void ShadowEngine::Debug::DebugModule::OnEvent(EventSystem::ShadowEvent &e)
+  type: Method
+  syntax:
+    content: 'public: virtual void OnEvent(EventSystem::ShadowEvent &e) override'
+    parameters:
+    - id: e
+      type: ShadowEngine.EventSystem.ShadowEvent76390d34
+- uid: ShadowEngine.InputSystem.ShadowActionSystem.OnEvent(EventSystem::ShadowEvent &)
+  parent: ShadowEngine.InputSystem.ShadowActionSystem
+  href: ShadowEngine.InputSystem.ShadowActionSystem.yml
+  name: OnEvent(EventSystem::ShadowEvent &e)
+  nameWithType: ShadowActionSystem::OnEvent(EventSystem::ShadowEvent &e)
+  fullName: void ShadowEngine::InputSystem::ShadowActionSystem::OnEvent(EventSystem::ShadowEvent &e)
+  type: Method
+  syntax:
+    content: 'public: virtual void OnEvent(EventSystem::ShadowEvent &e) override'
+    parameters:
+    - id: e
+      type: ShadowEngine.EventSystem.ShadowEvent76390d34
+- uid: ShadowEngine.EventSystem.ShadowEvent
+  parent: ShadowEngine.EventSystem
+  href: ShadowEngine.EventSystem.ShadowEvent.yml
+  name: ShadowEvent
+  nameWithType: ShadowEvent
+  fullName: ShadowEngine::EventSystem::ShadowEvent
+  type: Class
+  syntax:
+    content: 'public: class ShadowEvent'

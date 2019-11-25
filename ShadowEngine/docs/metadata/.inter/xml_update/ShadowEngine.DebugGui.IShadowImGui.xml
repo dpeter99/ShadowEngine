@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.DebugGui.IShadowImGui" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ShadowEngine::DebugGui::IShadowImGui</compoundname>
+    <derivedcompoundref refid="ShadowEngine.Debug.DebugModule" prot="public" virt="non-virtual">ShadowEngine::Debug::DebugModule</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.DebugGui.IShadowImGui.OnGui()" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::DebugGui::IShadowImGui::OnGui</definition>
+        <argsstring>()=0</argsstring>
+        <name>OnGui</name>
+        <reimplementedby refid="ShadowEngine.Debug.DebugModule.OnGui()">OnGui</reimplementedby>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ImGui/IShadowImGui.h" line="8" column="1" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="274">
+        <label>ShadowEngine::DebugGui::IShadowImGui</label>
+        <link refid="ShadowEngine.DebugGui.IShadowImGui" />
+      </node>
+      <node id="275">
+        <label>ShadowEngine::Debug::DebugModule</label>
+        <link refid="ShadowEngine.Debug.DebugModule" />
+        <childnode refid="274" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <location file="ShadowEngine/src/ImGui/IShadowImGui.h" line="6" column="1" bodyfile="ShadowEngine/src/ImGui/IShadowImGui.h" bodystart="5" bodyend="9" />
+    <listofallmembers>
+      <member refid="ShadowEngine.DebugGui.IShadowImGui.OnGui()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::DebugGui::IShadowImGui</scope>
+        <name>OnGui</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

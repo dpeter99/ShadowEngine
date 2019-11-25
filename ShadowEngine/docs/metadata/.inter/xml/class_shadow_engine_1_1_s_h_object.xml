@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_s_h_object" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ShadowEngine::SHObject</compoundname>
+    <derivedcompoundref refid="class_shadow_engine_1_1_assets_1_1_shadow_asset" prot="public" virt="non-virtual">ShadowEngine::Assets::ShadowAsset</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_debug_1_1_inspector" prot="public" virt="non-virtual">ShadowEngine::Debug::Inspector</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_entity_system_1_1_scene" prot="public" virt="non-virtual">ShadowEngine::EntitySystem::Scene</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_event_system_1_1_shadow_event" prot="public" virt="non-virtual">ShadowEngine::EventSystem::ShadowEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_input_system_1_1_i_input_binding" prot="public" virt="non-virtual">ShadowEngine::InputSystem::IInputBinding</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_input_system_1_1_input_modifier" prot="public" virt="non-virtual">ShadowEngine::InputSystem::InputModifier</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_input_system_1_1_i_shadow_action" prot="public" virt="non-virtual">ShadowEngine::InputSystem::IShadowAction</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_rendering_1_1_i_shader_property" prot="public" virt="non-virtual">ShadowEngine::Rendering::IShaderProperty</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_engine_1_1_entity_system_1_1_entity" prot="public" virt="non-virtual">ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::Entity</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_shadow_module" prot="public" virt="non-virtual">ShadowEngine::ShadowModule</derivedcompoundref>
+    <includes refid="_s_h_object_8h" local="no">SHObject.h</includes>
+    <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_s_h_object_1a35bf9fdc604caa67e1a2f1b0a9c574f2" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>static uint64_t ShadowEngine::SHObject::GenerateId</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>GenerateId</name>
+        <briefdescription>
+          <para>Generates a new UID for each call. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <simplesect kind="return">
+              <para>Unique ID </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Core/SHObject.h" line="16" column="1" bodyfile="ShadowEngine/src/Core/SHObject.h" bodystart="16" bodyend="20" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_s_h_object_1a230ca5dec944e67f8d57dfc743da7d94" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const std::string &amp;</type>
+        <definition>virtual const std::string&amp; ShadowEngine::SHObject::GetType</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetType</name>
+        <briefdescription>
+          <para>Returns the top level class type name of the object. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <simplesect kind="return">
+              <para>Class name string </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Core/SHObject.h" line="27" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const uint64_t</type>
+        <definition>virtual const uint64_t ShadowEngine::SHObject::GetTypeId</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetTypeId</name>
+        <briefdescription>
+          <para>Gets the top level type ID. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <simplesect kind="return">
+              <para>UID of the class </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Core/SHObject.h" line="32" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ShadowEngine::SHObject::~SHObject</definition>
+        <argsstring>()=default</argsstring>
+        <name>~SHObject</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Core/SHObject.h" line="34" column="1" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+      <para>This is the base class for every class in the Engine that uses runtime reflection. </para>
+    </briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="627">
+        <label>ShadowEngine::SDLPlatform::SDLModule</label>
+        <link refid="class_shadow_engine_1_1_s_d_l_platform_1_1_s_d_l_module" />
+        <childnode refid="618" relation="public-inheritance"></childnode>
+      </node>
+      <node id="612">
+        <label>ShadowEngine::InputSystem::IShadowAction</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_i_shadow_action" />
+        <childnode refid="568" relation="public-inheritance"></childnode>
+      </node>
+      <node id="568">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="600">
+        <label>ShadowEngine::InputSystem::KeyboardBinding</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_keyboard_binding" />
+        <childnode refid="598" relation="public-inheritance"></childnode>
+      </node>
+      <node id="619">
+        <label>AssetManager</label>
+        <link refid="class_asset_manager" />
+        <childnode refid="618" relation="public-inheritance"></childnode>
+      </node>
+      <node id="617">
+        <label>ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem::Entity</label>
+        <link refid="class_shadow_engine_1_1_shadow_engine_1_1_shadow_engine_1_1_entity_system_1_1_entity" />
+        <childnode refid="568" relation="public-inheritance"></childnode>
+      </node>
+      <node id="608">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;T&gt;</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_input_binding" />
+        <childnode refid="597" relation="public-inheritance"></childnode>
+      </node>
+      <node id="581">
+        <label>ShadowEngine::InputSystem::KeyboardBindingInspector</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_keyboard_binding_inspector" />
+        <childnode refid="575" relation="public-inheritance"></childnode>
+      </node>
+      <node id="589">
+        <label>ShadowEngine::EventSystem::Events::KeyTypedEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_typed_event" />
+        <childnode refid="586" relation="public-inheritance"></childnode>
+      </node>
+      <node id="578">
+        <label>ShadowEngine::InputSystem::BindingANDInspector</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_binding_a_n_d_inspector" />
+        <childnode refid="575" relation="public-inheritance"></childnode>
+      </node>
+      <node id="598">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;bool&gt;</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_input_binding" />
+        <childnode refid="597" relation="public-inheritance"></childnode>
+      </node>
+      <node id="591">
+        <label>ShadowEngine::EventSystem::Events::MouseButtonPressedEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_mouse_button_pressed_event" />
+        <childnode refid="590" relation="public-inheritance"></childnode>
+      </node>
+      <node id="613">
+        <label>ShadowEngine::InputSystem::ShadowAction&lt;float&gt;</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_shadow_action" />
+        <childnode refid="612" relation="public-inheritance"></childnode>
+      </node>
+      <node id="611">
+        <label>ShadowEngine::InputSystem::ModifierRepeat</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_modifier_repeat" />
+        <childnode refid="609" relation="public-inheritance"></childnode>
+      </node>
+      <node id="588">
+        <label>ShadowEngine::EventSystem::Events::KeyReleasedEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_released_event" />
+        <childnode refid="586" relation="public-inheritance"></childnode>
+      </node>
+      <node id="622">
+        <label>ShadowEngine::EntitySystem::EntitySystem</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_entity_system" />
+        <childnode refid="618" relation="public-inheritance"></childnode>
+      </node>
+      <node id="585">
+        <label>ShadowEngine::EventSystem::ShadowEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_shadow_event" />
+        <childnode refid="568" relation="public-inheritance"></childnode>
+      </node>
+      <node id="592">
+        <label>ShadowEngine::EventSystem::Events::MouseButtonReleasedEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_mouse_button_released_event" />
+        <childnode refid="590" relation="public-inheritance"></childnode>
+      </node>
+      <node id="572">
+        <label>ShadowEngine::Assets::Texture2D</label>
+        <link refid="class_shadow_engine_1_1_assets_1_1_texture2_d" />
+        <childnode refid="569" relation="public-inheritance"></childnode>
+      </node>
+      <node id="623">
+        <label>ShadowEngine::EventSystem::ShadowEventManager</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_shadow_event_manager" />
+        <childnode refid="618" relation="public-inheritance"></childnode>
+      </node>
+      <node id="610">
+        <label>ShadowEngine::InputSystem::ModifierHold</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_modifier_hold" />
+        <childnode refid="609" relation="public-inheritance"></childnode>
+      </node>
+      <node id="601">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;float&gt;</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_input_binding" />
+        <childnode refid="597" relation="public-inheritance"></childnode>
+      </node>
+      <node id="574">
+        <label>ShadowEngine::World::ShadowWorld</label>
+        <link refid="class_shadow_engine_1_1_world_1_1_shadow_world" />
+        <childnode refid="569" relation="public-inheritance"></childnode>
+      </node>
+      <node id="621">
+        <label>ShadowEngine::DebugGui::ImGuiModule</label>
+        <link refid="class_shadow_engine_1_1_debug_gui_1_1_im_gui_module" />
+        <childnode refid="618" relation="public-inheritance"></childnode>
+      </node>
+      <node id="625">
+        <label>ShadowEngine::Log</label>
+        <link refid="class_shadow_engine_1_1_log" />
+        <childnode refid="618" relation="public-inheritance"></childnode>
+      </node>
+      <node id="615">
+        <label>ShadowEngine::Rendering::IShaderProperty</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_i_shader_property" />
+        <childnode refid="568" relation="public-inheritance"></childnode>
+      </node>
+      <node id="614">
+        <label>ShadowEngine::InputSystem::ShadowAction&lt;T&gt;</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_shadow_action" />
+        <childnode refid="612" relation="public-inheritance"></childnode>
+      </node>
+      <node id="573">
+        <label>ShadowEngine::World::MapChunk</label>
+        <link refid="class_shadow_engine_1_1_world_1_1_map_chunk" />
+        <childnode refid="569" relation="public-inheritance"></childnode>
+      </node>
+      <node id="599">
+        <label>ShadowEngine::InputSystem::InputMapBinding</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_input_map_binding" />
+        <childnode refid="598" relation="public-inheritance"></childnode>
+      </node>
+      <node id="616">
+        <label>ShadowEngine::Rendering::ShaderProperty&lt;T&gt;</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_shader_property" />
+        <childnode refid="615" relation="public-inheritance"></childnode>
+      </node>
+      <node id="582">
+        <label>ShadowEngine::InputSystem::ModifierHoldInspector</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_modifier_hold_inspector" />
+        <childnode refid="575" relation="public-inheritance"></childnode>
+      </node>
+      <node id="593">
+        <label>ShadowEngine::EventSystem::Events::MouseMovedEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_mouse_moved_event" />
+        <childnode refid="585" relation="public-inheritance"></childnode>
+      </node>
+      <node id="570">
+        <label>ShadowEngine::Assets::Mesh</label>
+        <link refid="class_shadow_engine_1_1_assets_1_1_mesh" />
+        <childnode refid="569" relation="public-inheritance"></childnode>
+      </node>
+      <node id="604">
+        <label>ShadowEngine::InputSystem::BindingAND&lt;I&gt;</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_binding_a_n_d" />
+        <childnode refid="603" relation="public-inheritance"></childnode>
+      </node>
+      <node id="584">
+        <label>TestScene</label>
+        <link refid="class_test_scene" />
+        <childnode refid="583" relation="public-inheritance"></childnode>
+      </node>
+      <node id="607">
+        <label>ShadowEngine::InputSystem::Binding2D&lt;I&gt;</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_binding2_d" />
+        <childnode refid="606" relation="public-inheritance"></childnode>
+      </node>
+      <node id="626">
+        <label>ShadowEngine::Rendering::Renderer</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_renderer" />
+        <childnode refid="618" relation="public-inheritance"></childnode>
+      </node>
+      <node id="609">
+        <label>ShadowEngine::InputSystem::InputModifier</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_input_modifier" />
+        <childnode refid="568" relation="public-inheritance"></childnode>
+      </node>
+      <node id="590">
+        <label>ShadowEngine::EventSystem::Events::MouseButtonEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_mouse_button_event" />
+        <childnode refid="585" relation="public-inheritance"></childnode>
+      </node>
+      <node id="620">
+        <label>ShadowEngine::Debug::DebugModule</label>
+        <link refid="class_shadow_engine_1_1_debug_1_1_debug_module" />
+        <childnode refid="618" relation="public-inheritance"></childnode>
+      </node>
+      <node id="603">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;I&gt;</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_input_binding" />
+        <childnode refid="597" relation="public-inheritance"></childnode>
+      </node>
+      <node id="606">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;ShadowMath::Vector2float&gt;</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_input_binding" />
+        <childnode refid="597" relation="public-inheritance"></childnode>
+      </node>
+      <node id="579">
+        <label>ShadowEngine::InputSystem::BindingORInspector</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_binding_o_r_inspector" />
+        <childnode refid="575" relation="public-inheritance"></childnode>
+      </node>
+      <node id="594">
+        <label>ShadowEngine::EventSystem::Events::MouseScrolledEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_mouse_scrolled_event" />
+        <childnode refid="585" relation="public-inheritance"></childnode>
+      </node>
+      <node id="595">
+        <label>ShadowEngine::EventSystem::Events::WindowCloseEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_window_close_event" />
+        <childnode refid="585" relation="public-inheritance"></childnode>
+      </node>
+      <node id="576">
+        <label>ShadowEngine::InputSystem::Binding1DInspector</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_binding1_d_inspector" />
+        <childnode refid="575" relation="public-inheritance"></childnode>
+      </node>
+      <node id="569">
+        <label>ShadowEngine::Assets::ShadowAsset</label>
+        <link refid="class_shadow_engine_1_1_assets_1_1_shadow_asset" />
+        <childnode refid="568" relation="public-inheritance"></childnode>
+      </node>
+      <node id="580">
+        <label>ShadowEngine::InputSystem::InputActionInspector</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_input_action_inspector" />
+        <childnode refid="575" relation="public-inheritance"></childnode>
+      </node>
+      <node id="596">
+        <label>ShadowEngine::EventSystem::Events::WindowResizeEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_window_resize_event" />
+        <childnode refid="585" relation="public-inheritance"></childnode>
+      </node>
+      <node id="618">
+        <label>ShadowEngine::ShadowModule</label>
+        <link refid="class_shadow_engine_1_1_shadow_module" />
+        <childnode refid="568" relation="public-inheritance"></childnode>
+      </node>
+      <node id="571">
+        <label>ShadowEngine::Assets::Texture</label>
+        <link refid="class_shadow_engine_1_1_assets_1_1_texture" />
+        <childnode refid="569" relation="public-inheritance"></childnode>
+      </node>
+      <node id="624">
+        <label>ShadowEngine::InputSystem::ShadowActionSystem</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_shadow_action_system" />
+        <childnode refid="618" relation="public-inheritance"></childnode>
+      </node>
+      <node id="605">
+        <label>ShadowEngine::InputSystem::BindingOR&lt;I&gt;</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_binding_o_r" />
+        <childnode refid="603" relation="public-inheritance"></childnode>
+      </node>
+      <node id="597">
+        <label>ShadowEngine::InputSystem::IInputBinding</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_i_input_binding" />
+        <childnode refid="568" relation="public-inheritance"></childnode>
+      </node>
+      <node id="602">
+        <label>ShadowEngine::InputSystem::Binding1D&lt;I&gt;</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_binding1_d" />
+        <childnode refid="601" relation="public-inheritance"></childnode>
+      </node>
+      <node id="583">
+        <label>ShadowEngine::EntitySystem::Scene</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene" />
+        <childnode refid="568" relation="public-inheritance"></childnode>
+      </node>
+      <node id="577">
+        <label>ShadowEngine::InputSystem::Binding2DInspector</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_binding2_d_inspector" />
+        <childnode refid="575" relation="public-inheritance"></childnode>
+      </node>
+      <node id="575">
+        <label>ShadowEngine::Debug::Inspector</label>
+        <link refid="class_shadow_engine_1_1_debug_1_1_inspector" />
+        <childnode refid="568" relation="public-inheritance"></childnode>
+      </node>
+      <node id="587">
+        <label>ShadowEngine::EventSystem::Events::KeyPressedEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_pressed_event" />
+        <childnode refid="586" relation="public-inheritance"></childnode>
+      </node>
+      <node id="586">
+        <label>ShadowEngine::EventSystem::Events::KeyEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_event" />
+        <childnode refid="585" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <location file="ShadowEngine/src/Core/SHObject.h" line="10" column="1" bodyfile="ShadowEngine/src/Core/SHObject.h" bodystart="9" bodyend="35" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a35bf9fdc604caa67e1a2f1b0a9c574f2" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::SHObject</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a230ca5dec944e67f8d57dfc743da7d94" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::SHObject</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::SHObject</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual">
+        <scope>ShadowEngine::SHObject</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

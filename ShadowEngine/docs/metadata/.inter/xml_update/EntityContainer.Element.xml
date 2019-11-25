@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="EntityContainer.Element" kind="union" language="C++" prot="private">
+    <compoundname>EntityContainer::Element</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="EntityContainer.Element.next" prot="public" static="no" mutable="no">
+        <type>Element *</type>
+        <definition>Element* EntityContainer&lt;Type&gt;::Element::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="18" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="18" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="EntityContainer.Element.element" prot="public" static="no" mutable="no">
+        <type>Type</type>
+        <definition>Type EntityContainer&lt;Type&gt;::Element::element</definition>
+        <argsstring></argsstring>
+        <name>element</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="19" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="19" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <collaborationgraph>
+      <node id="152">
+        <label>EntityContainer&lt;Type&gt;::Element</label>
+        <childnode refid="152" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="153" relation="usage">
+          <edgelabel>element</edgelabel>
+        </childnode>
+      </node>
+      <node id="153">
+        <label>Type</label>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="16" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="15" bodyend="20" />
+    <listofallmembers>
+      <member refid="EntityContainer.Element.element" prot="public" virt="non-virtual">
+        <scope>EntityContainer::Element</scope>
+        <name>element</name>
+      </member>
+      <member refid="EntityContainer.Element.next" prot="public" virt="non-virtual">
+        <scope>EntityContainer::Element</scope>
+        <name>next</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

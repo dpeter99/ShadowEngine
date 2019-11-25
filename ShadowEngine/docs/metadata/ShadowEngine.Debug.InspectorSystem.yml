@@ -1,0 +1,158 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Debug.InspectorSystem
+  id: ShadowEngine.Debug.InspectorSystem
+  parent: ShadowEngine.Debug
+  children:
+  - ShadowEngine.Debug.InspectorSystem.AddInspector(std::string,Inspector *)
+  - ShadowEngine.Debug.InspectorSystem.Draw(ShadowEngine::SHObject &)
+  - ShadowEngine.Debug.InspectorSystem.DrawSub(ShadowEngine::SHObject &)
+  href: ShadowEngine.Debug.InspectorSystem.yml
+  langs:
+  - cplusplus
+  name: InspectorSystem
+  nameWithType: InspectorSystem
+  fullName: ShadowEngine::Debug::InspectorSystem
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/Inspector/InspectorSystem.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Inspector/InspectorSystem.h
+    startLine: 7
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Inspector/InspectorSystem.h
+    startLine: 8
+  namespace: ShadowEngine.Debug
+  syntax:
+    content: 'public: class InspectorSystem'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.Debug.InspectorSystem.AddInspector(std::string,Inspector *)
+  id: string,Inspector *)
+  parent: ShadowEngine.Debug.InspectorSystem
+  href: ShadowEngine.Debug.InspectorSystem.yml
+  langs:
+  - cplusplus
+  name: AddInspector(std::string name, Inspector *inspector)
+  nameWithType: InspectorSystem::AddInspector(std::string name, Inspector *inspector)
+  fullName: void ShadowEngine::Debug::InspectorSystem::AddInspector(std::string name, Inspector *inspector)
+  overload: ShadowEngine.Debug.InspectorSystem.AddInspector*
+  type: Method
+  source:
+    remote: &o1
+      path: ShadowEngine/src/Inspector/InspectorSystem.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Inspector/InspectorSystem.cpp
+    startLine: 9
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Inspector/InspectorSystem.h
+    startLine: 14
+  namespace: ShadowEngine.Debug
+  syntax:
+    content: 'public: static void AddInspector(std::string name, Inspector *inspector)'
+    parameters:
+    - id: name
+      type: 9626e5dd
+    - id: inspector
+      type: ShadowEngine.Debug.Inspector68bc11b4
+- uid: ShadowEngine.Debug.InspectorSystem.Draw(ShadowEngine::SHObject &)
+  id: SHObject &)
+  parent: ShadowEngine.Debug.InspectorSystem
+  href: ShadowEngine.Debug.InspectorSystem.yml
+  langs:
+  - cplusplus
+  name: Draw(ShadowEngine::SHObject &obj)
+  nameWithType: InspectorSystem::Draw(ShadowEngine::SHObject &obj)
+  fullName: void ShadowEngine::Debug::InspectorSystem::Draw(ShadowEngine::SHObject &obj)
+  overload: ShadowEngine.Debug.InspectorSystem.Draw*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Inspector/InspectorSystem.cpp
+    startLine: 14
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Inspector/InspectorSystem.h
+    startLine: 16
+  namespace: ShadowEngine.Debug
+  syntax:
+    content: 'public: static void Draw(ShadowEngine::SHObject &obj)'
+    parameters:
+    - id: obj
+      type: ShadowEngine.SHObject76390d34
+- uid: ShadowEngine.Debug.InspectorSystem.DrawSub(ShadowEngine::SHObject &)
+  id: SHObject &)
+  parent: ShadowEngine.Debug.InspectorSystem
+  href: ShadowEngine.Debug.InspectorSystem.yml
+  langs:
+  - cplusplus
+  name: DrawSub(ShadowEngine::SHObject &obj)
+  nameWithType: InspectorSystem::DrawSub(ShadowEngine::SHObject &obj)
+  fullName: void ShadowEngine::Debug::InspectorSystem::DrawSub(ShadowEngine::SHObject &obj)
+  overload: ShadowEngine.Debug.InspectorSystem.DrawSub*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Inspector/InspectorSystem.cpp
+    startLine: 23
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Inspector/InspectorSystem.h
+    startLine: 18
+  namespace: ShadowEngine.Debug
+  syntax:
+    content: 'public: static void DrawSub(ShadowEngine::SHObject &obj)'
+    parameters:
+    - id: obj
+      type: ShadowEngine.SHObject76390d34
+references:
+- uid: 9626e5dd
+  spec.cplusplus:
+  - name: std::string
+    fullName: std::string
+- uid: ShadowEngine.Debug.Inspector68bc11b4
+  spec.cplusplus:
+  - uid: ShadowEngine.Debug.Inspector
+  - name: " *"
+    fullName: " *"
+- uid: ShadowEngine.Debug.InspectorSystem.AddInspector*
+  name: AddInspector
+  nameWithType: InspectorSystem::AddInspector
+  fullName: void ShadowEngine::Debug::InspectorSystem::AddInspector
+- uid: ShadowEngine.SHObject76390d34
+  spec.cplusplus:
+  - uid: ShadowEngine.SHObject
+  - name: " &"
+    fullName: " &"
+- uid: ShadowEngine.Debug.InspectorSystem.Draw*
+  name: Draw
+  nameWithType: InspectorSystem::Draw
+  fullName: void ShadowEngine::Debug::InspectorSystem::Draw
+- uid: ShadowEngine.Debug.InspectorSystem.DrawSub*
+  name: DrawSub
+  nameWithType: InspectorSystem::DrawSub
+  fullName: void ShadowEngine::Debug::InspectorSystem::DrawSub
+- uid: ShadowEngine.Debug.Inspector
+  parent: ShadowEngine.Debug
+  href: ShadowEngine.Debug.Inspector.yml
+  name: Inspector
+  nameWithType: Inspector
+  fullName: ShadowEngine::Debug::Inspector
+  type: Class
+  syntax:
+    content: 'public: class Inspector : public HObject'
+- uid: ShadowEngine.SHObject
+  parent: ShadowEngine
+  href: ShadowEngine.SHObject.yml
+  name: SHObject
+  nameWithType: SHObject
+  fullName: ShadowEngine::SHObject
+  type: Class
+  summary: "<p>This is the base class for every class in the Engine that uses runtime reflection. </p>"
+  syntax:
+    content: 'public: class SHObject'

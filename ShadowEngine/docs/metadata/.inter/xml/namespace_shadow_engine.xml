@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="namespace_shadow_engine" kind="namespace" language="C++">
+    <compoundname>ShadowEngine</compoundname>
+    <innerclass refid="class_shadow_engine_1_1_log" prot="public">ShadowEngine::Log</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_shadow_application" prot="public">ShadowEngine::ShadowApplication</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_shadow_module" prot="public">ShadowEngine::ShadowModule</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_shadow_module_manager" prot="public">ShadowEngine::ShadowModuleManager</innerclass>
+    <innerclass refid="class_shadow_engine_1_1_s_h_object" prot="public">ShadowEngine::SHObject</innerclass>
+    <innernamespace refid="namespace_shadow_engine_1_1_assets">ShadowEngine::Assets</innernamespace>
+    <innernamespace refid="namespace_shadow_engine_1_1_debug">ShadowEngine::Debug</innernamespace>
+    <innernamespace refid="namespace_shadow_engine_1_1_debug_gui">ShadowEngine::DebugGui</innernamespace>
+    <innernamespace refid="namespace_shadow_engine_1_1_entity_system">ShadowEngine::EntitySystem</innernamespace>
+    <innernamespace refid="namespace_shadow_engine_1_1_event_system">ShadowEngine::EventSystem</innernamespace>
+    <innernamespace refid="namespace_shadow_engine_1_1_input_system">ShadowEngine::InputSystem</innernamespace>
+    <innernamespace refid="namespace_shadow_engine_1_1_rendering">ShadowEngine::Rendering</innernamespace>
+    <innernamespace refid="namespace_shadow_engine_1_1_s_d_l_platform">ShadowEngine::SDLPlatform</innernamespace>
+    <innernamespace refid="namespace_shadow_engine_1_1_shadow_engine">ShadowEngine::ShadowEngine</innernamespace>
+    <innernamespace refid="namespace_shadow_engine_1_1_shadow_entity">ShadowEngine::ShadowEntity</innernamespace>
+    <innernamespace refid="namespace_shadow_engine_1_1_world">ShadowEngine::World</innernamespace>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_core_8h_1ab9148904aa58845b4f25cca4136e1e13" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::unique_ptr&lt;T&gt;</type>
+        <definition>using ShadowEngine::Scope = typedef std::unique_ptr&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>Scope</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Core/Core.h" line="18" column="1" bodyfile="ShadowEngine/src/Core/Core.h" bodystart="18" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="typedef" id="_core_8h_1a3875435a69cfafc7c151b2d6d509ea4e" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt;T&gt;</type>
+        <definition>using ShadowEngine::Ref = typedef std::shared_ptr&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>Ref</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Core/Core.h" line="21" column="1" bodyfile="ShadowEngine/src/Core/Core.h" bodystart="21" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/Core/Core.h" line="15" column="1" />
+  </compounddef>
+</doxygen>

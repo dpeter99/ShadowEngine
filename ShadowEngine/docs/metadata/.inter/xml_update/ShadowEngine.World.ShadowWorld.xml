@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.World.ShadowWorld" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::World::ShadowWorld</compoundname>
+    <basecompoundref refid="ShadowEngine.Assets.ShadowAsset" prot="public" virt="non-virtual">ShadowEngine::Assets::ShadowAsset</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="ShadowEngine.World.ShadowWorld.name" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ShadowEngine::World::ShadowWorld::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMap/ShadowWorld.h" line="64" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowWorld.h" bodystart="64" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.World.ShadowWorld.id" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ShadowEngine::World::ShadowWorld::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMap/ShadowWorld.h" line="65" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowWorld.h" bodystart="65" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.World.ShadowWorld.activeMap" prot="public" static="no" mutable="no">
+        <type>
+          <ref refid="ShadowEngine.World.LevelMap" kindref="compound">LevelMap</ref> *</type>
+        <definition>LevelMap* ShadowEngine::World::ShadowWorld::activeMap</definition>
+        <argsstring></argsstring>
+        <name>activeMap</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMap/ShadowWorld.h" line="68" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowWorld.h" bodystart="68" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.World.ShadowWorld.maps" prot="public" static="no" mutable="no">
+        <type>std::map&lt;std::string, <ref refid="ShadowEngine.World.LevelMap" kindref="compound">LevelMap</ref> *&gt;</type>
+        <definition>std::map&lt;std::string, LevelMap*&gt; ShadowEngine::World::ShadowWorld::maps</definition>
+        <argsstring></argsstring>
+        <name>maps</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMap/ShadowWorld.h" line="71" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowWorld.h" bodystart="71" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.World.ShadowWorld.chunkSizeX" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShadowEngine::World::ShadowWorld::chunkSizeX</definition>
+        <argsstring></argsstring>
+        <name>chunkSizeX</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMap/ShadowWorld.h" line="75" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowWorld.h" bodystart="75" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.World.ShadowWorld.chunkSizeY" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShadowEngine::World::ShadowWorld::chunkSizeY</definition>
+        <argsstring></argsstring>
+        <name>chunkSizeY</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMap/ShadowWorld.h" line="76" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowWorld.h" bodystart="76" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.World.ShadowWorld.Update(const ShadowMath::Vector2int &amp;)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::World::ShadowWorld::Update</definition>
+        <argsstring>(const ShadowMath::Vector2int &amp;pos)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>const <ref refid="ShadowMath.Vector2int" kindref="compound">ShadowMath::Vector2int</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMap/ShadowWorld.h" line="83" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowWorld.cpp" bodystart="10" bodyend="17" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.World.ShadowWorld.SetActiveMap(std::string)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::World::ShadowWorld::SetActiveMap</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>SetActiveMap</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMap/ShadowWorld.h" line="85" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowWorld.cpp" bodystart="19" bodyend="26" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="563">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="561">
+        <label>ShadowEngine::World::ShadowWorld</label>
+        <link refid="ShadowEngine.World.ShadowWorld" />
+        <childnode refid="562" relation="public-inheritance"></childnode>
+      </node>
+      <node id="562">
+        <label>ShadowEngine::Assets::ShadowAsset</label>
+        <link refid="ShadowEngine.Assets.ShadowAsset" />
+        <childnode refid="563" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="566">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="567">
+        <label>ShadowEngine::World::LevelMap</label>
+        <link refid="ShadowEngine.World.LevelMap" />
+        <childnode refid="564" relation="usage">
+          <edgelabel>world</edgelabel>
+        </childnode>
+      </node>
+      <node id="564">
+        <label>ShadowEngine::World::ShadowWorld</label>
+        <link refid="ShadowEngine.World.ShadowWorld" />
+        <childnode refid="565" relation="public-inheritance"></childnode>
+        <childnode refid="567" relation="usage">
+          <edgelabel>activeMap</edgelabel>
+        </childnode>
+      </node>
+      <node id="565">
+        <label>ShadowEngine::Assets::ShadowAsset</label>
+        <link refid="ShadowEngine.Assets.ShadowAsset" />
+        <childnode refid="566" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowMap/ShadowWorld.h" line="61" column="1" bodyfile="ShadowEngine/src/ShadowMap/ShadowWorld.h" bodystart="60" bodyend="86" />
+    <listofallmembers>
+      <member refid="ShadowEngine.World.ShadowWorld.activeMap" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::World::ShadowWorld</scope>
+        <name>activeMap</name>
+      </member>
+      <member refid="ShadowEngine.World.ShadowWorld.chunkSizeX" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::World::ShadowWorld</scope>
+        <name>chunkSizeX</name>
+      </member>
+      <member refid="ShadowEngine.World.ShadowWorld.chunkSizeY" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::World::ShadowWorld</scope>
+        <name>chunkSizeY</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::World::ShadowWorld</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::World::ShadowWorld</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::World::ShadowWorld</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.World.ShadowWorld.id" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::World::ShadowWorld</scope>
+        <name>id</name>
+      </member>
+      <member refid="ShadowEngine.World.ShadowWorld.maps" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::World::ShadowWorld</scope>
+        <name>maps</name>
+      </member>
+      <member refid="ShadowEngine.World.ShadowWorld.name" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::World::ShadowWorld</scope>
+        <name>name</name>
+      </member>
+      <member refid="ShadowEngine.World.ShadowWorld.SetActiveMap(std::string)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::World::ShadowWorld</scope>
+        <name>SetActiveMap</name>
+      </member>
+      <member refid="ShadowEngine.World.ShadowWorld.Update(const ShadowMath::Vector2int &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::World::ShadowWorld</scope>
+        <name>Update</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::World::ShadowWorld</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

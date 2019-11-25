@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_impl" prot="public" virt="non-virtual">ShadowEngine::Rendering::ConstantBufferImpl</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer_1a4bc45f9fff023a4b210a726496f50b53" prot="private" static="no" mutable="no">
+        <type>UINT8 *</type>
+        <definition>UINT8* ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::mappedPtr</definition>
+        <argsstring></argsstring>
+        <name>mappedPtr</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h" line="10" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h" bodystart="10" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer_1a0fc3de6318e5430ec31fb6c39be5ac05" prot="private" static="no" mutable="no">
+        <type>com_ptr&lt;ID3D12Resource&gt;</type>
+        <definition>com_ptr&lt;ID3D12Resource&gt; ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::constantBuffer</definition>
+        <argsstring></argsstring>
+        <name>constantBuffer</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h" line="11" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h" bodystart="11" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer_1aaa93d32f76d71d17c4589f6a733e220e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::D3D12ConstantBuffer</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>D3D12ConstantBuffer</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h" line="15" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.cpp" bodystart="6" bodyend="11" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer_1a19fe39bade942301bb106fd5f5985572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::~D3D12ConstantBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>~D3D12ConstantBuffer</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h" line="17" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.cpp" bodystart="13" bodyend="16" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer_1aa1ea3360f3d847d32b31335d0cfd6d02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::CreateResources</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>CreateResources</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h" line="19" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.cpp" bodystart="18" bodyend="38" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer_1ad6729fb366164a32d97d80afc3b819d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>D3D12_GPU_VIRTUAL_ADDRESS</type>
+        <definition>D3D12_GPU_VIRTUAL_ADDRESS ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::GetGPUVirtualAddress</definition>
+        <argsstring>() const</argsstring>
+        <name>GetGPUVirtualAddress</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h" line="21" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.cpp" bodystart="40" bodyend="43" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer_1a7483ca5238baab99c972cd78874a0c82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::ReleaseResources</definition>
+        <argsstring>()</argsstring>
+        <name>ReleaseResources</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h" line="23" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.cpp" bodystart="45" bodyend="53" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer_1abd78a76db54437670d504eccd66f4ce1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer::Upload</definition>
+        <argsstring>(void *data, size_t size) override</argsstring>
+        <name>Upload</name>
+        <reimplements refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_impl_1a1ed05a6816d6a2bce32cffb7fe1bc99d">Upload</reimplements>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h" line="25" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.cpp" bodystart="55" bodyend="58" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="106">
+        <label>ShadowEngine::Rendering::ConstantBufferImpl</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_impl" />
+      </node>
+      <node id="105">
+        <label>ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer" />
+        <childnode refid="106" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="108">
+        <label>ShadowEngine::Rendering::ConstantBufferImpl</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_impl" />
+      </node>
+      <node id="107">
+        <label>ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer" />
+        <childnode refid="108" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h" line="9" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12ConstantBuffer.h" bodystart="8" bodyend="26" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer_1a0fc3de6318e5430ec31fb6c39be5ac05" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer</scope>
+        <name>constantBuffer</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_impl_1a2dcf973c9de9a20437eba4b9ed6de9d9" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer</scope>
+        <name>Create</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer_1aa1ea3360f3d847d32b31335d0cfd6d02" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer</scope>
+        <name>CreateResources</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer_1aaa93d32f76d71d17c4589f6a733e220e" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer</scope>
+        <name>D3D12ConstantBuffer</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer_1ad6729fb366164a32d97d80afc3b819d4" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer</scope>
+        <name>GetGPUVirtualAddress</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer_1a4bc45f9fff023a4b210a726496f50b53" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer</scope>
+        <name>mappedPtr</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer_1a7483ca5238baab99c972cd78874a0c82" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer</scope>
+        <name>ReleaseResources</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer_1abd78a76db54437670d504eccd66f4ce1" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer</scope>
+        <name>Upload</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer_1a19fe39bade942301bb106fd5f5985572" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer</scope>
+        <name>~D3D12ConstantBuffer</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

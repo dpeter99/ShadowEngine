@@ -1,0 +1,156 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Debug.Inspector
+  id: ShadowEngine.Debug.Inspector
+  parent: ShadowEngine.Debug
+  href: ShadowEngine.Debug.Inspector.yml
+  langs:
+  - cplusplus
+  name: Inspector
+  nameWithType: Inspector
+  fullName: ShadowEngine::Debug::Inspector
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/Inspector/Inspector.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Inspector/Inspector.h
+    startLine: 5
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Inspector/Inspector.h
+    startLine: 7
+  namespace: ShadowEngine.Debug
+  syntax:
+    content: 'public: class Inspector : public HObject'
+  inheritance:
+  - System::Object
+  - ShadowEngine.SHObject
+  inheritedMembers:
+  - ShadowEngine.SHObject.GenerateId()
+  - ShadowEngine.SHObject.GetType()
+  - ShadowEngine.SHObject.GetTypeId()
+  - ShadowEngine.SHObject.~SHObject()
+references:
+- uid: ShadowEngine.SHObject.GenerateId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GenerateId()
+  nameWithType: SHObject::GenerateId()
+  fullName: static uint64_t ShadowEngine::SHObject::GenerateId()
+  type: Method
+  summary: "<p>Generates a new UID for each call. </p>"
+  syntax:
+    content: 'protected: static uint64_t GenerateId() noexcept'
+    return:
+      type: 6d8267d6
+      description: <p>Unique ID </p>
+- uid: ShadowEngine.SHObject.GetType()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetType()
+  nameWithType: SHObject::GetType()
+  fullName: virtual const std::string& ShadowEngine::SHObject::GetType()
+  type: Method
+  summary: "<p>Returns the top level class type name of the object. </p>"
+  syntax:
+    content: 'public: virtual const std::string & GetType() const =0'
+    return:
+      type: 360fc41e
+      description: <p>Class name string </p>
+- uid: ShadowEngine.SHObject.GetTypeId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetTypeId()
+  nameWithType: SHObject::GetTypeId()
+  fullName: virtual const uint64_t ShadowEngine::SHObject::GetTypeId()
+  type: Method
+  summary: "<p>Gets the top level type ID. </p>"
+  syntax:
+    content: 'public: virtual const uint64_t GetTypeId() const =0'
+    return:
+      type: 29dc5929
+      description: <p>UID of the class </p>
+- uid: ShadowEngine.SHObject.~SHObject()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: ~SHObject()
+  nameWithType: SHObject::~SHObject()
+  fullName: virtual ShadowEngine::SHObject::~SHObject()
+  type: Constructor
+  syntax:
+    content: 'public: virtual ~SHObject()=default'
+- uid: ShadowEngine.SHObject
+  parent: ShadowEngine
+  href: ShadowEngine.SHObject.yml
+  name: SHObject
+  nameWithType: SHObject
+  fullName: ShadowEngine::SHObject
+  type: Class
+  summary: "<p>This is the base class for every class in the Engine that uses runtime reflection. </p>"
+  syntax:
+    content: 'public: class SHObject'
+- uid: ShadowEngine.InputSystem.Binding1DInspector
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.Binding1DInspector.yml
+  name: Binding1DInspector
+  nameWithType: Binding1DInspector
+  fullName: ShadowEngine::InputSystem::Binding1DInspector
+  type: Class
+  syntax:
+    content: 'public: class Binding1DInspector : public spector'
+- uid: ShadowEngine.InputSystem.Binding2DInspector
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.Binding2DInspector.yml
+  name: Binding2DInspector
+  nameWithType: Binding2DInspector
+  fullName: ShadowEngine::InputSystem::Binding2DInspector
+  type: Class
+  syntax:
+    content: 'public: class Binding2DInspector : public spector'
+- uid: ShadowEngine.InputSystem.BindingANDInspector
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.BindingANDInspector.yml
+  name: BindingANDInspector
+  nameWithType: BindingANDInspector
+  fullName: ShadowEngine::InputSystem::BindingANDInspector
+  type: Class
+  syntax:
+    content: 'public: class BindingANDInspector : public spector'
+- uid: ShadowEngine.InputSystem.BindingORInspector
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.BindingORInspector.yml
+  name: BindingORInspector
+  nameWithType: BindingORInspector
+  fullName: ShadowEngine::InputSystem::BindingORInspector
+  type: Class
+  syntax:
+    content: 'public: class BindingORInspector : public spector'
+- uid: ShadowEngine.InputSystem.InputActionInspector
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.InputActionInspector.yml
+  name: InputActionInspector
+  nameWithType: InputActionInspector
+  fullName: ShadowEngine::InputSystem::InputActionInspector
+  type: Class
+  syntax:
+    content: 'public: class InputActionInspector : public spector'
+- uid: ShadowEngine.InputSystem.KeyboardBindingInspector
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.KeyboardBindingInspector.yml
+  name: KeyboardBindingInspector
+  nameWithType: KeyboardBindingInspector
+  fullName: ShadowEngine::InputSystem::KeyboardBindingInspector
+  type: Class
+  syntax:
+    content: 'public: class KeyboardBindingInspector'
+- uid: ShadowEngine.InputSystem.ModifierHoldInspector
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.ModifierHoldInspector.yml
+  name: ModifierHoldInspector
+  nameWithType: ModifierHoldInspector
+  fullName: ShadowEngine::InputSystem::ModifierHoldInspector
+  type: Class
+  syntax:
+    content: 'public: class ModifierHoldInspector'

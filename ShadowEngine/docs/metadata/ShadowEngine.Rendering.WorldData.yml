@@ -1,0 +1,56 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.WorldData
+  id: ShadowEngine.Rendering.WorldData
+  parent: ShadowEngine.Rendering
+  children:
+  - ShadowEngine.Rendering.WorldData.viewProjection
+  href: ShadowEngine.Rendering.WorldData.yml
+  langs:
+  - cplusplus
+  name: WorldData
+  nameWithType: WorldData
+  fullName: ShadowEngine::Rendering::WorldData
+  type: Struct
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 26
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 26
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: struct WorldData'
+- uid: ShadowEngine.Rendering.WorldData.viewProjection
+  id: ShadowEngine.Rendering.WorldData.viewProjection
+  parent: ShadowEngine.Rendering.WorldData
+  href: ShadowEngine.Rendering.WorldData.yml
+  langs:
+  - cplusplus
+  name: viewProjection
+  nameWithType: WorldData::viewProjection
+  fullName: glm::mat4x4 ShadowEngine::Rendering::WorldData::viewProjection
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 27
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 27
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: glm::mat4x4 viewProjection'
+    return:
+      type: 4da5d5de
+references:
+- uid: 4da5d5de
+  spec.cplusplus:
+  - name: glm::mat4x4
+    fullName: glm::mat4x4

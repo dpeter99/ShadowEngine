@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_fence" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::Rendering::D3D12::D3D12Fence</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_fence_1acd13404e93cc5137338a8a8047c37e86" prot="private" static="no" mutable="no">
+        <type>com_ptr&lt;ID3D12Fence&gt;</type>
+        <definition>com_ptr&lt;ID3D12Fence&gt; ShadowEngine::Rendering::D3D12::D3D12Fence::fence</definition>
+        <argsstring></argsstring>
+        <name>fence</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Fence.h" line="9" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Fence.h" bodystart="9" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_fence_1a67a656a0d807c8621def1e6b3c2f2cef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::D3D12::D3D12Fence::D3D12Fence</definition>
+        <argsstring>()</argsstring>
+        <name>D3D12Fence</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Fence.h" line="11" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Fence.cpp" bodystart="7" bodyend="11" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_fence_1a5946dab19f3e31b8bfe686ee211eba93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UINT64</type>
+        <definition>UINT64 ShadowEngine::Rendering::D3D12::D3D12Fence::GetCompletedValue</definition>
+        <argsstring>()</argsstring>
+        <name>GetCompletedValue</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Fence.h" line="13" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Fence.cpp" bodystart="12" bodyend="15" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_fence_1a347bc30a2591445aa436d6bd70232f60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::D3D12::D3D12Fence::SetEventOnCompletion</definition>
+        <argsstring>(const UINT64 fv, HANDLE fenceEvent)</argsstring>
+        <name>SetEventOnCompletion</name>
+        <param>
+          <type>const UINT64</type>
+          <declname>fv</declname>
+        </param>
+        <param>
+          <type>HANDLE</type>
+          <declname>fenceEvent</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Fence.h" line="15" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Fence.cpp" bodystart="16" bodyend="20" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_fence_1ad7ad92cfe652d467d6675589448dc255" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>com_ptr&lt;ID3D12Fence&gt;</type>
+        <definition>com_ptr&lt;ID3D12Fence&gt; ShadowEngine::Rendering::D3D12::D3D12Fence::GetFencePointer</definition>
+        <argsstring>()</argsstring>
+        <name>GetFencePointer</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Fence.h" line="17" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Fence.h" bodystart="17" bodyend="17" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/Platform/D3D12/D3D12Fence.h" line="8" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Fence.h" bodystart="7" bodyend="18" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_fence_1a67a656a0d807c8621def1e6b3c2f2cef" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Fence</scope>
+        <name>D3D12Fence</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_fence_1acd13404e93cc5137338a8a8047c37e86" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Fence</scope>
+        <name>fence</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_fence_1a5946dab19f3e31b8bfe686ee211eba93" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Fence</scope>
+        <name>GetCompletedValue</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_fence_1ad7ad92cfe652d467d6675589448dc255" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Fence</scope>
+        <name>GetFencePointer</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_fence_1a347bc30a2591445aa436d6bd70232f60" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12Fence</scope>
+        <name>SetEventOnCompletion</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

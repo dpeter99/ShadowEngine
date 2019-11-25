@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.DebugGui
+  id: ShadowEngine.DebugGui
+  children:
+  - ShadowEngine.DebugGui.ImGuiModule
+  - ShadowEngine.DebugGui.IShadowImGui
+  href: ShadowEngine.DebugGui.yml
+  langs:
+  - cplusplus
+  name: ShadowEngine::DebugGui
+  nameWithType: ShadowEngine::DebugGui
+  fullName: ShadowEngine::DebugGui
+  type: Namespace
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ImGui/ImGuiModule.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ImGui/ImGuiModule.cpp
+    startLine: 19
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ImGui/ImGuiModule.cpp
+    startLine: 19
+  syntax:
+    content: namespace ShadowEngine::DebugGui
+references:
+- uid: ShadowEngine.DebugGui.ImGuiModule
+  parent: ShadowEngine.DebugGui
+  href: ShadowEngine.DebugGui.ImGuiModule.yml
+  name: ImGuiModule
+  nameWithType: ImGuiModule
+  fullName: ShadowEngine::DebugGui::ImGuiModule
+  type: Class
+  syntax:
+    content: 'public: class ImGuiModule : public hadowModule, public hadowEventListener'
+- uid: ShadowEngine.DebugGui.IShadowImGui
+  parent: ShadowEngine.DebugGui
+  href: ShadowEngine.DebugGui.IShadowImGui.yml
+  name: IShadowImGui
+  nameWithType: IShadowImGui
+  fullName: ShadowEngine::DebugGui::IShadowImGui
+  type: Class
+  syntax:
+    content: 'public: class IShadowImGui'

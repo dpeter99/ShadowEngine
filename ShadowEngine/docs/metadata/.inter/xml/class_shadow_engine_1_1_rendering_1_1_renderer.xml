@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_rendering_1_1_renderer" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::Rendering::Renderer</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_shadow_module" prot="public" virt="non-virtual">ShadowEngine::ShadowModule</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_renderer_1ae5d2e45769feb90f6f8b8f07ef166402" prot="private" static="no" mutable="no">
+        <type>SHObject_Base(<ref refid="class_shadow_engine_1_1_rendering_1_1_renderer" kindref="compound">Renderer</ref>) private <ref refid="class_shadow_engine_1_1_rendering_1_1_render_scene" kindref="compound">RenderScene</ref> *</type>
+        <definition>SHObject_Base (Renderer) private RenderScene* ShadowEngine::Rendering::Renderer::scene</definition>
+        <argsstring></argsstring>
+        <name>scene</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Renderer.h" line="27" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Renderer.h" bodystart="27" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_renderer_1a1b368f89293a024cbb4b63dd16f25487" prot="public" static="yes" mutable="no">
+        <type>
+          <ref refid="class_shadow_engine_1_1_rendering_1_1_renderer" kindref="compound">Renderer</ref> *</type>
+        <definition>Renderer * ShadowEngine::Rendering::Renderer::instance</definition>
+        <argsstring></argsstring>
+        <name>instance</name>
+        <initializer>= NULL</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Renderer.h" line="33" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Renderer.h" bodystart="33" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_renderer_1a194adc02bed3d00ae68dabe814de9449" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::Renderer::Renderer</definition>
+        <argsstring>()</argsstring>
+        <name>Renderer</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Renderer.h" line="30" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Renderer.cpp" bodystart="13" bodyend="15" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_renderer_1acf5a06d0a2102d53c37c2e2c9e3f9273" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::Renderer::Init</definition>
+        <argsstring>() override</argsstring>
+        <name>Init</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Renderer.h" line="35" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Renderer.cpp" bodystart="17" bodyend="31" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_renderer_1a6dcd5180c83b27b9ceb83b7ec3e7ebe4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::Renderer::Update</definition>
+        <argsstring>() override</argsstring>
+        <name>Update</name>
+        <reimplements refid="class_shadow_engine_1_1_shadow_module_1aa6210b8806ad120be85977428b294bb0">Update</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Renderer.h" line="36" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Renderer.h" bodystart="36" bodyend="36" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_renderer_1a4cd2c292f8bbe5e0b495beb8f2786579" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::Renderer::Render</definition>
+        <argsstring>() override</argsstring>
+        <name>Render</name>
+        <reimplements refid="class_shadow_engine_1_1_shadow_module_1aab2ad5a8a1bc8185cfe664f102481557">Render</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Renderer.h" line="37" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Renderer.cpp" bodystart="33" bodyend="36" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_renderer_1ad9434e948fd757913cc7cb7734fcd5e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::Renderer::LateRender</definition>
+        <argsstring>() override</argsstring>
+        <name>LateRender</name>
+        <reimplements refid="class_shadow_engine_1_1_shadow_module_1aff322cdcc841b388e7c9c77337053197">LateRender</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Renderer.h" line="38" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Renderer.h" bodystart="38" bodyend="38" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_renderer_1ab105b56a32b5606539c0f0edac3f79df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string ShadowEngine::Rendering::Renderer::GetName</definition>
+        <argsstring>() override</argsstring>
+        <name>GetName</name>
+        <reimplements refid="class_shadow_engine_1_1_shadow_module_1a128ea061c249cd5fe494b19f63eb0a5e">GetName</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Renderer.h" line="40" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Renderer.h" bodystart="40" bodyend="40" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_renderer_1a62682978ce22f2ba46325da077d347f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::Renderer::BeginScene</definition>
+        <argsstring>(Camera *camera)</argsstring>
+        <name>BeginScene</name>
+        <param>
+          <type>
+            <ref refid="class_camera" kindref="compound">Camera</ref> *</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+          <para>Starts the Rendering scene Sets up the render API Sets up the render graph for the new frame. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Renderer.h" line="49" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Renderer.cpp" bodystart="39" bodyend="55" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_renderer_1afc876dcfd67a790574d4ab11edfc3830" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::Renderer::EndScene</definition>
+        <argsstring>()</argsstring>
+        <name>EndScene</name>
+        <briefdescription>
+          <para>Finishes the draw recording. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Renderer.h" line="54" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Renderer.cpp" bodystart="57" bodyend="62" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_renderer_1a10300c0743eb8df0e0dd2b00a4850da8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::Renderer::RenderNodes</definition>
+        <argsstring>()</argsstring>
+        <name>RenderNodes</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Renderer.h" line="56" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Renderer.cpp" bodystart="64" bodyend="71" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_renderer_1a4ae601fd604d7b1cafbc7d527ed88b09" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::Renderer::Submit</definition>
+        <argsstring>(const Ref&lt;Assets::Mesh&gt; mesh, const Ref&lt;Assets::Material&gt; shader, const glm::mat4 &amp;transform=glm::mat4(1.0f))</argsstring>
+        <name>Submit</name>
+        <param>
+          <type>const Ref&lt;<ref refid="class_shadow_engine_1_1_assets_1_1_mesh" kindref="compound">Assets::Mesh</ref>&gt;</type>
+          <declname>mesh</declname>
+        </param>
+        <param>
+          <type>const Ref&lt;Assets::Material&gt;</type>
+          <declname>shader</declname>
+        </param>
+        <param>
+          <type>const glm::mat4 &amp;</type>
+          <declname>transform</declname>
+          <defval>glm::mat4(1.0f)</defval>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Renderer.h" line="58" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Renderer.cpp" bodystart="73" bodyend="76" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_renderer_1a228965b038a4342ecb15a4ef4d64a305" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt;<ref refid="class_shadow_engine_1_1_rendering_1_1_render_node" kindref="compound">RenderNode</ref>&gt;</type>
+        <definition>Ref&lt;RenderNode&gt; ShadowEngine::Rendering::Renderer::AddRenderNode</definition>
+        <argsstring>(const Ref&lt;Assets::Mesh&gt; mesh, const Ref&lt;Assets::Material&gt; material, const glm::mat4 &amp;transform=glm::mat4(1.0f))</argsstring>
+        <name>AddRenderNode</name>
+        <param>
+          <type>const Ref&lt;<ref refid="class_shadow_engine_1_1_assets_1_1_mesh" kindref="compound">Assets::Mesh</ref>&gt;</type>
+          <declname>mesh</declname>
+        </param>
+        <param>
+          <type>const Ref&lt;Assets::Material&gt;</type>
+          <declname>material</declname>
+        </param>
+        <param>
+          <type>const glm::mat4 &amp;</type>
+          <declname>transform</declname>
+          <defval>glm::mat4(1.0f)</defval>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Renderer.h" line="60" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Renderer.cpp" bodystart="78" bodyend="84" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_renderer_1a2d1c3d0835961d1b31623bab78edd819" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>RendererAPI::API</type>
+        <definition>static RendererAPI::API ShadowEngine::Rendering::Renderer::GetAPI</definition>
+        <argsstring>()</argsstring>
+        <name>GetAPI</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Renderer.h" line="62" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Renderer.h" bodystart="62" bodyend="62" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="439">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="437">
+        <label>ShadowEngine::Rendering::Renderer</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_renderer" />
+        <childnode refid="438" relation="public-inheritance"></childnode>
+      </node>
+      <node id="438">
+        <label>ShadowEngine::ShadowModule</label>
+        <link refid="class_shadow_engine_1_1_shadow_module" />
+        <childnode refid="439" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="442">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="440">
+        <label>ShadowEngine::Rendering::Renderer</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_renderer" />
+        <childnode refid="441" relation="public-inheritance"></childnode>
+        <childnode refid="440" relation="usage">
+          <edgelabel>instance</edgelabel>
+        </childnode>
+      </node>
+      <node id="441">
+        <label>ShadowEngine::ShadowModule</label>
+        <link refid="class_shadow_engine_1_1_shadow_module" />
+        <childnode refid="442" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowRenderer/Renderer.h" line="21" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Renderer.h" bodystart="20" bodyend="64" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_renderer_1a228965b038a4342ecb15a4ef4d64a305" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>AddRenderNode</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_renderer_1a62682978ce22f2ba46325da077d347f7" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>BeginScene</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_renderer_1afc876dcfd67a790574d4ab11edfc3830" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>EndScene</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a35bf9fdc604caa67e1a2f1b0a9c574f2" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_renderer_1a2d1c3d0835961d1b31623bab78edd819" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>GetAPI</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_renderer_1ab105b56a32b5606539c0f0edac3f79df" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>GetName</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a230ca5dec944e67f8d57dfc743da7d94" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_renderer_1acf5a06d0a2102d53c37c2e2c9e3f9273" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>Init</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_renderer_1a1b368f89293a024cbb4b63dd16f25487" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>instance</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_renderer_1ad9434e948fd757913cc7cb7734fcd5e6" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>LateRender</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_renderer_1a4cd2c292f8bbe5e0b495beb8f2786579" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>Render</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_renderer_1a194adc02bed3d00ae68dabe814de9449" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>Renderer</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_renderer_1a10300c0743eb8df0e0dd2b00a4850da8" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>RenderNodes</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_renderer_1ae5d2e45769feb90f6f8b8f07ef166402" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>scene</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_renderer_1a4ae601fd604d7b1cafbc7d527ed88b09" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>Submit</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_renderer_1a6dcd5180c83b27b9ceb83b7ec3e7ebe4" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>Update</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::Renderer</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

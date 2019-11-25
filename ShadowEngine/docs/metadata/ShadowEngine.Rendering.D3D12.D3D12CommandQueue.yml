@@ -1,0 +1,196 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.D3D12.D3D12CommandQueue
+  id: ShadowEngine.Rendering.D3D12.D3D12CommandQueue
+  parent: ShadowEngine.Rendering.D3D12
+  children:
+  - ShadowEngine.Rendering.D3D12.D3D12CommandQueue.D3D12CommandQueue()
+  - ShadowEngine.Rendering.D3D12.D3D12CommandQueue.Execute(Ref<D3D12CommandList>)
+  - ShadowEngine.Rendering.D3D12.D3D12CommandQueue.GetInternalPtr()
+  - ShadowEngine.Rendering.D3D12.D3D12CommandQueue.Signal(Ref<D3D12Fence>,uint64_t)
+  href: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.yml
+  langs:
+  - cplusplus
+  name: D3D12CommandQueue
+  nameWithType: D3D12CommandQueue
+  fullName: ShadowEngine::Rendering::D3D12::D3D12CommandQueue
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/Platform/D3D12/D3D12CommandQueue.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/D3D12/D3D12CommandQueue.h
+    startLine: 8
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12CommandQueue.h
+    startLine: 9
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: class D3D12CommandQueue'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.D3D12CommandQueue()
+  id: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.D3D12CommandQueue()
+  parent: ShadowEngine.Rendering.D3D12.D3D12CommandQueue
+  href: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.yml
+  langs:
+  - cplusplus
+  name: D3D12CommandQueue()
+  nameWithType: D3D12CommandQueue::D3D12CommandQueue()
+  fullName: ShadowEngine::Rendering::D3D12::D3D12CommandQueue::D3D12CommandQueue()
+  overload: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.D3D12CommandQueue*
+  type: Constructor
+  source:
+    remote: &o1
+      path: ShadowEngine/src/Platform/D3D12/D3D12CommandQueue.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/D3D12/D3D12CommandQueue.cpp
+    startLine: 8
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12CommandQueue.h
+    startLine: 17
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: D3D12CommandQueue()'
+- uid: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.Execute(Ref<D3D12CommandList>)
+  id: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.Execute(Ref<D3D12CommandList>)
+  parent: ShadowEngine.Rendering.D3D12.D3D12CommandQueue
+  href: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.yml
+  langs:
+  - cplusplus
+  name: Execute(Ref<D3D12CommandList> commandList)
+  nameWithType: D3D12CommandQueue::Execute(Ref<D3D12CommandList> commandList)
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12CommandQueue::Execute(Ref<D3D12CommandList> commandList)
+  overload: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.Execute*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12CommandQueue.cpp
+    startLine: 20
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12CommandQueue.h
+    startLine: 30
+  namespace: ShadowEngine.Rendering.D3D12
+  summary: "<p>Executes a list of commands. </p>"
+  syntax:
+    content: 'public: void Execute(Ref<D3D12CommandList> commandList)'
+    parameters:
+    - id: commandList
+      type: 2e1cc081ShadowEngine.Rendering.D3D12.D3D12CommandLista08ddfce
+      description: <p>the list of commands ot execute </p>
+- uid: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.GetInternalPtr()
+  id: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.GetInternalPtr()
+  parent: ShadowEngine.Rendering.D3D12.D3D12CommandQueue
+  href: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.yml
+  langs:
+  - cplusplus
+  name: GetInternalPtr()
+  nameWithType: D3D12CommandQueue::GetInternalPtr()
+  fullName: com_ptr<ID3D12CommandQueue> ShadowEngine::Rendering::D3D12::D3D12CommandQueue::GetInternalPtr()
+  overload: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.GetInternalPtr*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12CommandQueue.h
+    startLine: 23
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12CommandQueue.h
+    startLine: 23
+  namespace: ShadowEngine.Rendering.D3D12
+  summary: "<p>Return the internal Dx12 pointer. </p>"
+  syntax:
+    content: 'public: com_ptr<ID3D12CommandQueue> GetInternalPtr() const'
+    return:
+      type: 78c20d7c
+      description: <p>com_ptr of the command queue </p>
+- uid: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.Signal(Ref<D3D12Fence>,uint64_t)
+  id: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.Signal(Ref<D3D12Fence>,uint64_t)
+  parent: ShadowEngine.Rendering.D3D12.D3D12CommandQueue
+  href: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.yml
+  langs:
+  - cplusplus
+  name: Signal(Ref<D3D12Fence> fence, uint64_t Value)
+  nameWithType: D3D12CommandQueue::Signal(Ref<D3D12Fence> fence, uint64_t Value)
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12CommandQueue::Signal(Ref<D3D12Fence> fence, uint64_t Value)
+  overload: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.Signal*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12CommandQueue.cpp
+    startLine: 27
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12CommandQueue.h
+    startLine: 32
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: void Signal(Ref<D3D12Fence> fence, uint64_t Value)'
+    parameters:
+    - id: fence
+      type: 2e1cc081ShadowEngine.Rendering.D3D12.D3D12Fencea08ddfce
+    - id: Value
+      type: 6d8267d6
+references:
+- uid: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.D3D12CommandQueue*
+  name: D3D12CommandQueue
+  nameWithType: D3D12CommandQueue::D3D12CommandQueue
+  fullName: ShadowEngine::Rendering::D3D12::D3D12CommandQueue::D3D12CommandQueue
+- uid: 78c20d7c
+  spec.cplusplus:
+  - name: com_ptr<ID3D12CommandQueue>
+    fullName: com_ptr<ID3D12CommandQueue>
+- uid: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.GetInternalPtr*
+  name: GetInternalPtr
+  nameWithType: D3D12CommandQueue::GetInternalPtr
+  fullName: com_ptr<ID3D12CommandQueue> ShadowEngine::Rendering::D3D12::D3D12CommandQueue::GetInternalPtr
+- uid: 2e1cc081ShadowEngine.Rendering.D3D12.D3D12CommandLista08ddfce
+  spec.cplusplus:
+  - name: Ref<
+    fullName: Ref<
+  - uid: ShadowEngine.Rendering.D3D12.D3D12CommandList
+  - name: '>'
+    fullName: '>'
+- uid: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.Execute*
+  name: Execute
+  nameWithType: D3D12CommandQueue::Execute
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12CommandQueue::Execute
+- uid: 2e1cc081ShadowEngine.Rendering.D3D12.D3D12Fencea08ddfce
+  spec.cplusplus:
+  - name: Ref<
+    fullName: Ref<
+  - uid: ShadowEngine.Rendering.D3D12.D3D12Fence
+  - name: '>'
+    fullName: '>'
+- uid: 6d8267d6
+  spec.cplusplus:
+  - name: uint64_t
+    fullName: uint64_t
+- uid: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.Signal*
+  name: Signal
+  nameWithType: D3D12CommandQueue::Signal
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12CommandQueue::Signal
+- uid: ShadowEngine.Rendering.D3D12.D3D12CommandList
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12CommandList.yml
+  name: D3D12CommandList
+  nameWithType: D3D12CommandList
+  fullName: ShadowEngine::Rendering::D3D12::D3D12CommandList
+  type: Class
+  summary: "<p>A list of commands Used to record graphics/compute commands and than submit them at once. </p>"
+  syntax:
+    content: 'public: class D3D12CommandList'
+- uid: ShadowEngine.Rendering.D3D12.D3D12Fence
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12Fence.yml
+  name: D3D12Fence
+  nameWithType: D3D12Fence
+  fullName: ShadowEngine::Rendering::D3D12::D3D12Fence
+  type: Class
+  syntax:
+    content: 'public: class D3D12Fence'
