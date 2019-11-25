@@ -2,4 +2,5 @@
 				 "CBV(b0)," \
                  "CBV(b1)," \
 				 "CBV(b2)," \
-                 "DescriptorTable(SRV(t0, numDescriptors=1))"
+                 "DescriptorTable(SRV(t0, numDescriptors=1))," \
+                 "StaticSampler(s0)"

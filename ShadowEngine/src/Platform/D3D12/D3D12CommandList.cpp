@@ -6,16 +6,17 @@
 #include "D3D12ConstantBuffer.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
-	D3D12CommandList::D3D12CommandList()
+
+	D3D12CommandList::D3D12CommandList(D3D12_COMMAND_LIST_TYPE type)
 	{
 		DX_API("Failed to create command allocator")
-		D3D12RendererAPI::device->CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE_DIRECT, IID_PPV_ARGS(commandAllocator.GetAddressOf()));
+			D3D12RendererAPI::device->CreateCommandAllocator(type, IID_PPV_ARGS(commandAllocator.GetAddressOf()));
 
 		DX_API("Failed to greate graphics command list")
-		D3D12RendererAPI::device->CreateCommandList(0, D3D12_COMMAND_LIST_TYPE_DIRECT, commandAllocator.Get(), nullptr, IID_PPV_ARGS(commandList.GetAddressOf()));
+			D3D12RendererAPI::device->CreateCommandList(0, type, commandAllocator.Get(), nullptr, IID_PPV_ARGS(commandList.GetAddressOf()));
 
 		commandList->Close();
-		
+
 		isBeingRecorded = false;
 	}
 
@@ -27,14 +28,14 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	void D3D12CommandList::Reset()
 	{
-		if (isBeingRecorded)
-			isBeingRecorded = false;
+		//if (isBeingRecorded)
+			isBeingRecorded = true;
 		
 		commandAllocator->Reset();
 		commandList->Reset(commandAllocator.Get(), nullptr);
 	}
 
-	void D3D12CommandList::StartRecording()
+	void D3D12CommandList::StartRecording [[deprecated]] ()
 	{
 		SH_CORE_ASSERT(isBeingRecorded, "Command list is already recording");
 		
@@ -77,8 +78,17 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	void D3D12CommandList::Close()
 	{
+		assert(isBeingRecorded);
+
+		isBeingRecorded = false;
+
 		DX_API("Failed to close command list")
 			commandList->Close();
+	}
+
+	bool D3D12CommandList::IsRecording()
+	{
+		return this->isBeingRecorded;
 	}
 
 	void D3D12CommandList::DrawMesh(const std::shared_ptr<Assets::Mesh>& mesh)
@@ -102,5 +112,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 		Ref<D3D12ConstantBuffer> dx12_buffer = std::dynamic_pointer_cast<D3D12::D3D12ConstantBuffer>(buffer.GetImpl());
 		commandList->SetGraphicsRootConstantBufferView(registerIndex, dx12_buffer->GetGPUVirtualAddress());
+	}
+	void D3D12CommandList::CopyTextureRegion(CD3DX12_TEXTURE_COPY_LOCATION* from, CD3DX12_TEXTURE_COPY_LOCATION* to)
+	{
+		commandList->CopyTextureRegion(to, 0, 0, 0, from, nullptr);
 	}
 }

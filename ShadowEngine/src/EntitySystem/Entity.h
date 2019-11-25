@@ -139,7 +139,7 @@ namespace ShadowEngine::EntitySystem
 		/// <summary>
 		/// Called every tick
 		/// </summary>
-		virtual void Update();
+		virtual void Update(float dt);
 
 		/// <summary>
 		/// Called every Tick after the first is finished
@@ -169,7 +169,7 @@ namespace ShadowEngine::EntitySystem
 
 	public:
 		template<class T>
-		static void UpdateEntities(EntityManager* mgr)
+		static void UpdateEntities(EntityManager* mgr, float dt)
 		{
 			EntityContainer<T>& container = *mgr->GetContainerByType<T>();
 
@@ -177,7 +177,7 @@ namespace ShadowEngine::EntitySystem
 
 			for each (auto& current in container)
 			{
-				current.Update();
+				current.Update(dt);
 			}
 		}
 

@@ -26,7 +26,7 @@ void Player::Start()
 {
 }
 
-void Player::Update()
+void Player::Update(float dt)
 {
 }
 

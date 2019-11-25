@@ -10,7 +10,8 @@
 #include "ShadowAsset/Assets/Mesh.h"
 #include "ShadowRenderer/Shader.h"
 #include "ShadowAsset/Assets/Material.h"
-
+#include "D3D12UploadManagger.h"
+#include "D3D12Texture.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
@@ -27,18 +28,19 @@ namespace ShadowEngine::Rendering::D3D12 {
 		static ShadowEngine::Ref<D3D12::D3D12Context> ctx;
 
 		
-		
+		Ref<D3D12Texture> t;
 	public:
 		/**
 		 * \brief The Graphics command queue
 		 */
 		Ref<D3D12::D3D12CommandQueue> command_queue;
-
 		
 		/**
-		 * \brief The command list used for recording render commands
+		 * \brief The command list used for recording render commands for the graphisc command queue
 		 */
 		Ref<D3D12::D3D12CommandList> command_list;
+
+		Ref<D3D12UploadManagger> upload_managger;
 
 		
 		/**
@@ -77,6 +79,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 		void StartFrame(Ref<ConstantBuffer> worldCB) override;
 		void EndFrame() override;
 		
+		void UploadResource(Ref<D3D12IUploadable> resource);
+
+		virtual void StartResourceUpload();
+
 		void WaitForPreviousFrame();
 		
 	};

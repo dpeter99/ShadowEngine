@@ -196,7 +196,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 		for (int j = 0; j < desc.Variables; ++j)
 		{
-			ID3D12ShaderReflectionVariable* var = a->GetVariableByIndex(0);
+			ID3D12ShaderReflectionVariable* var = a->GetVariableByIndex(j);
 
 			ID3D12ShaderReflectionType* type = var->GetType();
 			D3D12_SHADER_TYPE_DESC type_desc;

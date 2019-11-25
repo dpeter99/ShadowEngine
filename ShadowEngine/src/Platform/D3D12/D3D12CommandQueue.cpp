@@ -6,10 +6,10 @@
 
 namespace ShadowEngine::Rendering::D3D12 {
 
-	D3D12CommandQueue::D3D12CommandQueue()
+	D3D12CommandQueue::D3D12CommandQueue(D3D12_COMMAND_LIST_TYPE type)
 	{
 		D3D12_COMMAND_QUEUE_DESC commandQueueDesc;
-		commandQueueDesc.Type = D3D12_COMMAND_LIST_TYPE_DIRECT;
+		commandQueueDesc.Type = type;
 		commandQueueDesc.Priority = D3D12_COMMAND_QUEUE_PRIORITY_NORMAL;
 		commandQueueDesc.Flags = D3D12_COMMAND_QUEUE_FLAG_NONE;
 		commandQueueDesc.NodeMask = 0;

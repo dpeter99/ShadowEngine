@@ -15,7 +15,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		com_ptr<ID3D12CommandQueue> commandQueue{ nullptr };
 
 	public:
-		D3D12CommandQueue();
+		D3D12CommandQueue(D3D12_COMMAND_LIST_TYPE type = D3D12_COMMAND_LIST_TYPE_DIRECT);
 
 		/**
 		 * \brief Return the internal Dx12 pointer

@@ -198,6 +198,8 @@ namespace ShadowEngine::Rendering {
 				auto& prop = this->GetProperty(i);
 
 				memcpy(((char*)data + offset), prop->GetPropertyData(), prop->GetPropertyTypeSize());
+
+				offset += prop->GetPropertyTypeSize();
 			}
 
 			return data;

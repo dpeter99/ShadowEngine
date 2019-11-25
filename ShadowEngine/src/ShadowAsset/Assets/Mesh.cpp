@@ -78,8 +78,8 @@ namespace ShadowEngine::Assets {
 		for (unsigned int i = 0; i < mesh->mNumFaces; ++i) {
 			aiFace face = mesh->mFaces[i];
 			indices.emplace_back(face.mIndices[0]);
-			indices.emplace_back(face.mIndices[1]);
 			indices.emplace_back(face.mIndices[2]);
+			indices.emplace_back(face.mIndices[1]);
 		}
 
 

@@ -19,7 +19,7 @@ public:
 	// Inherited via SceneEntity
 	virtual void Init() override;
 	virtual void Start() override;
-	virtual void Update() override;
+	virtual void Update(float dt) override;
 	virtual void LateUpdate() override;
 	virtual void LateRender() override;
 	virtual ShadowEngine::EntitySystem::EntityFlags GetFlags() override;

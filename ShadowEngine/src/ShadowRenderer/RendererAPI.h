@@ -34,6 +34,8 @@ namespace ShadowEngine::Rendering {
 		 * \brief Finalizes the render command recording
 		 */
 		virtual void EndFrame() =0;
+
+		virtual void StartResourceUpload() = 0;
 		
 
 		inline static API GetAPI() { return s_API; }

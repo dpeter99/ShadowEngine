@@ -30,6 +30,11 @@ namespace ShadowEngine::Rendering {
 		scene = new RenderScene();
 	}
 
+	void Renderer::Update()
+	{
+		s_RendererAPI->StartResourceUpload();
+	}
+
 	void Renderer::Render()
 	{
 		RenderNodes();

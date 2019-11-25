@@ -14,7 +14,7 @@ namespace ShadowEngine::EntitySystem
 	{
 	}
 
-	void Entity::Update()
+	void Entity::Update(float dt)
 	{
 	}
 

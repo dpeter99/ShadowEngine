@@ -30,6 +30,12 @@ namespace ShadowEngine::ShadowEntity {
 		glm::quat GetRotation() { return rot; };
 		void SetRotation(glm::quat val) { rot = val; UpdateMatrix(); transformChanged(); };
 
+		glm::vec3 GetEulerRotation() { return glm::eulerAngles(rot); };
+		void SetEulerRotation(glm::vec3 val) { rot = glm::quat(val); UpdateMatrix(); transformChanged(); };
+
+		glm::vec3 GetForward() { return glm::vec3(0, 0, 1) * rot; };
+		glm::vec3 GetLeft() { return glm::vec3(1, 0, 0) * rot; };
+
 		glm::mat4 GetTransformMatrix() { return mat; };
 		glm::mat4 GetWorldTransformMatrix() { return w_mat; };
 

@@ -10,7 +10,7 @@ namespace ShadowEngine::EventSystem::Events {
 
 	public:
 		MouseMovedEvent(float x, float y, float x_delta, float y_delta, SDL_Event* ev)
-			: m_MouseX(x), m_MouseY(y), ShadowEvent(ev)
+			: m_MouseX(x), m_MouseY(y), m_MouseXDelta(x_delta), m_MouseYDelta(y_delta), ShadowEvent(ev)
 		{
 		}
 

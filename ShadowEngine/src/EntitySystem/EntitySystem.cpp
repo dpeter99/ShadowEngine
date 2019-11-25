@@ -1,5 +1,6 @@
 #include "shpch.h"
 #include "EntitySystem.h"
+#include <ShadowTime.h>
 
 namespace ShadowEngine::EntitySystem {
 
@@ -15,7 +16,9 @@ namespace ShadowEngine::EntitySystem {
 
 	void EntitySystem::Update()
 	{
-		entityMgr->UpdateEntities();
+		auto dt = Time::deltaTime_ms;
+
+		entityMgr->UpdateEntities(dt);
 	}
 
 	ShadowEngine::Scope<Scene>& EntitySystem::EntitySystem::GetActiveScene()

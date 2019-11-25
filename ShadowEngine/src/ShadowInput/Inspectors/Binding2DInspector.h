@@ -4,7 +4,7 @@
 #include "Inspector/Inspector.h"
 #include "imgui.h"
 #include "Inspector/InspectorSystem.h"
-#include <SDL2/SDL.h>
+#include <SDL.h>
 #include "ShadowInput/Bindings/Binding2D.h"
 
 namespace ShadowEngine::InputSystem

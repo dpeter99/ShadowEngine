@@ -7,6 +7,7 @@
 #include "D3D12CommandQueue.h"
 #include "ShadowAsset/Assets/Mesh.h"
 #include "D3D12Shader.h"
+#include <Platform\D3D12\D3D12Texture.h>
 
 namespace ShadowEngine::Rendering::D3D12 {
 
@@ -98,6 +99,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 		if (fenceEvent == NULL) {
 			DX_API("Failed to create windows event") HRESULT_FROM_WIN32(GetLastError());
 		}		
+
+		upload_managger = std::make_shared<D3D12UploadManagger>();
+
+		t = std::make_shared<D3D12Texture>("./Resources/Textures/TileSet_001.png");
+		UploadResource(t);
 	}
 
 	void D3D12RendererAPI::SetClearColor(const glm::vec4& color)
@@ -149,6 +155,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		command_list->ClearDepthStencilView(1.0f,0);
 
 		worldData=worldCB;
+
+		upload_managger->CheckForFnishedUploads();
 	}
 
 	void D3D12RendererAPI::EndFrame()
@@ -167,7 +175,19 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		swap_chain->Present(1, 0);
 
+		StartResourceUpload();
+
 		WaitForPreviousFrame();
+	}
+
+	void D3D12RendererAPI::UploadResource(Ref<D3D12IUploadable> resource)
+	{
+		upload_managger->Upload(resource);
+	}
+
+	void D3D12RendererAPI::StartResourceUpload()
+	{
+		upload_managger->StartUpload();
 	}
 
 	void D3D12RendererAPI::WaitForPreviousFrame() {

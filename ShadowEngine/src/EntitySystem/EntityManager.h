@@ -9,8 +9,9 @@ namespace ShadowEngine::EntitySystem {
 	
 	struct SystemCallbacks {
 		typedef void (*Callback)(EntityManager* mgr);
+		typedef void (*UpdateCallback)(EntityManager* mgr, float dt);
 
-		Callback update;
+		UpdateCallback update;
 		Callback init;
 	};
 
@@ -273,11 +274,11 @@ namespace ShadowEngine::EntitySystem {
 			systems.push_back(fn);
 		}
 
-		void UpdateEntities()
+		void UpdateEntities(float dt)
 		{
 			for each (auto & var in systems)
 			{
-				var.update(this);
+				var.update(this,dt);
 			}
 		}
 

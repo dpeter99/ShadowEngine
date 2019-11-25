@@ -1,7 +1,7 @@
 #include "shpch.h"
 
 #include "SDLEventSource.h"
-#include <SDL2/SDL.h>
+#include <SDL.h>
 #include "ShadowEvents/ShadowEventManager.h"
 #include "ShadowEvents/Events/KeyEvents.h"
 #include "ShadowEvents/Events/MouseEvents.h"
@@ -29,7 +29,7 @@ namespace ShadowEngine::SDLPlatform {
 			break;
 			case SDL_MOUSEMOTION:
 			{
-				event = new EventSystem::Events::MouseMovedEvent(test_event.motion.x, test_event.motion.y, &test_event);
+				event = new EventSystem::Events::MouseMovedEvent(test_event.motion.x, test_event.motion.y,test_event.motion.xrel,test_event.motion.yrel,&test_event);
 			}
 			break;
 			case SDL_MOUSEBUTTONDOWN:

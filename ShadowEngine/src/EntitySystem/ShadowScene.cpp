@@ -15,7 +15,7 @@ namespace ShadowEngine::EntitySystem {
 	{
 		for (auto& entity : m_entities)
 		{
-			entity->Update();
+			//entity->Update(dt);
 		}
 	}
 

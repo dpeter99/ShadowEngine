@@ -26,7 +26,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		bool isBeingRecorded;
 	public:
-		D3D12CommandList();
+		D3D12CommandList(D3D12_COMMAND_LIST_TYPE type = D3D12_COMMAND_LIST_TYPE_DIRECT);
 
 		/**
 		 * \brief 
@@ -73,11 +73,17 @@ namespace ShadowEngine::Rendering::D3D12 {
 		void ClearRenderTargetView(const float* color);
 
 		void ClearDepthStencilView(float depth, uint8_t stencil);
-		void Close();
+		
 		void DrawMesh(const std::shared_ptr<Assets::Mesh>& mesh);
 
 		void BindConstantBuffer(const Ref<ConstantBuffer>& buffer, int materialSlotIndex);
 		void BindConstantBuffer(const ConstantBuffer& buffer, int registerIndex);
+
+		void CopyTextureRegion(CD3DX12_TEXTURE_COPY_LOCATION* from, CD3DX12_TEXTURE_COPY_LOCATION* to);
+
+		void Close();
+
+		bool IsRecording();
 	};
 
 }

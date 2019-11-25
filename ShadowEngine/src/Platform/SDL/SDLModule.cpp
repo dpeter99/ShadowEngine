@@ -1,7 +1,7 @@
 #include "shpch.h"
 
 #include "SDLModule.h"
-#include <SDL2/SDL.h>
+#include <SDL.h>
 #include <cstdio>
 #include "glad/glad.h"
 #include <string>

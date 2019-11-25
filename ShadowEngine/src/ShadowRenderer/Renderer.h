@@ -33,7 +33,7 @@ namespace ShadowEngine::Rendering {
 		static Renderer* instance;
 
 		void Init() override;
-		void Update() override {};
+		void Update() override;
 		void Render() override;
 		void LateRender() override {};
 

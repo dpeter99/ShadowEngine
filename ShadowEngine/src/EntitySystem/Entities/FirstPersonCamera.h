@@ -16,9 +16,13 @@ private:
 	ShadowEngine::InputSystem::ShadowAction<float>* forward;
 
 	ShadowEngine::InputSystem::ShadowAction<float>* side;
+
+	ShadowEngine::InputSystem::ShadowAction<glm::vec2>* mouse;
+
+	ShadowEngine::InputSystem::ShadowAction<bool>* mouseButton;
 public:
 	void Init() override;
 
-	void Update() override;
+	void Update(float dt) override;
 };
 
