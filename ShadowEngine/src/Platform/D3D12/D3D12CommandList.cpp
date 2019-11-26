@@ -104,15 +104,40 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	void D3D12CommandList::BindConstantBuffer(const Ref<ConstantBuffer>& buffer, int registerIndex)
 	{
-		Ref<D3D12ConstantBuffer> dx12_buffer = std::dynamic_pointer_cast<D3D12::D3D12ConstantBuffer>(buffer->GetImpl());
+		D3D12ConstantBuffer* dx12_buffer = (D3D12ConstantBuffer*)buffer->GetImpl().get();
+		//Ref<D3D12ConstantBuffer> dx12_buffer = std::dynamic_pointer_cast<D3D12::D3D12ConstantBuffer>(buffer->GetImpl());
 		commandList->SetGraphicsRootConstantBufferView(registerIndex, dx12_buffer->GetGPUVirtualAddress());
 	}
 
 	void D3D12CommandList::BindConstantBuffer(const ConstantBuffer& buffer, int registerIndex)
 	{
-		Ref<D3D12ConstantBuffer> dx12_buffer = std::dynamic_pointer_cast<D3D12::D3D12ConstantBuffer>(buffer.GetImpl());
+		D3D12ConstantBuffer* dx12_buffer = (D3D12ConstantBuffer*)buffer.GetImpl().get();
+		//Ref<D3D12ConstantBuffer> dx12_buffer = std::dynamic_pointer_cast<D3D12::D3D12ConstantBuffer>(buffer.GetImpl());
 		commandList->SetGraphicsRootConstantBufferView(registerIndex, dx12_buffer->GetGPUVirtualAddress());
 	}
+	
+	void D3D12CommandList::BindDescriptorTableBuffer(const CD3DX12_GPU_DESCRIPTOR_HANDLE& handle, int registerIndex)
+	{
+		D3D12_GPU_DESCRIPTOR_HANDLE h = handle;
+		commandList->SetGraphicsRootDescriptorTable(registerIndex, h);
+	}
+
+	void D3D12CommandList::SetDescriptorHeaps(int count, ID3D12DescriptorHeap* const* descriptorHeaps)
+	{
+		commandList->SetDescriptorHeaps(count,descriptorHeaps);
+	}
+
+	void D3D12CommandList::SetDescriptorHeaps(std::vector<Ref<D3D12DescriptorHeap>> descriptorHeaps)
+	{
+		std::vector< ID3D12DescriptorHeap*> heaps;
+		for (auto && descriptorHeap : descriptorHeaps)
+		{
+			heaps.push_back(descriptorHeap->Get().Get());
+		}
+		ID3D12DescriptorHeap** data = heaps.data();
+		commandList->SetDescriptorHeaps(descriptorHeaps.size(), data);
+	}
+	
 	void D3D12CommandList::CopyTextureRegion(CD3DX12_TEXTURE_COPY_LOCATION* from, CD3DX12_TEXTURE_COPY_LOCATION* to)
 	{
 		commandList->CopyTextureRegion(to, 0, 0, 0, from, nullptr);

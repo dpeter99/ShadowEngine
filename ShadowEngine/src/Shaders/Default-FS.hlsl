@@ -13,9 +13,9 @@ SamplerState sampl : register(s0);
 [RootSignature(RootSig0)]
 float4 main(VSOutput input) :SV_Target
 {
-    float4 color = float4(1,1, 1, 1);
+    float4 color = txt.Sample(sampl, input.texCoord);
 
 	color *= tint;
 
-	return tint;
+	return color;
 }

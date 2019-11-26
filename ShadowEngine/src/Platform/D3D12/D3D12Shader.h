@@ -49,8 +49,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		static com_ptr<ID3DBlob> D3D12Shader::LoadCso(const std::string& VSfilePath);
 		void CreatePipelineDescriptor(D3D12_GRAPHICS_PIPELINE_STATE_DESC& psoDesc) const;
 		static D3D12_INPUT_LAYOUT_DESC CreateInputDescriptor(BufferLayout& layout);
+		void ExtractProperties();
 
-		
+
 	public:
 		D3D12Shader(const std::string& VSfilePath, const std::string& PSfilePath);
 		virtual ~D3D12Shader();
@@ -72,7 +73,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		* \return The com pointer of the root signature
 		*/
 		com_ptr<ID3D12RootSignature> GetRootSignature();
-
+		
 		int GetMaterialSlotIndex();
 		
 		virtual void Bind() const;

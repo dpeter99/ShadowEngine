@@ -81,6 +81,16 @@ DXGI_FORMAT ShadowEngine::Rendering::D3D12::D3D12Texture::SDLFormatToGXGI(SDL_Pi
 	}
 }
 
+ShadowEngine::Rendering::D3D12::com_ptr<ID3D12Resource> ShadowEngine::Rendering::D3D12::D3D12Texture::GetResource()
+{
+	return resource;
+}
+
+DXGI_FORMAT ShadowEngine::Rendering::D3D12::D3D12Texture::GetDXGIFormat()
+{
+	return format;
+}
+
 void ShadowEngine::Rendering::D3D12::D3D12Texture::RecordTransfer(Ref<D3D12::D3D12CommandList> commandList)
 {
 	CD3DX12_TEXTURE_COPY_LOCATION dst{ resource.Get(), 0 };

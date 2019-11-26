@@ -12,19 +12,41 @@ namespace ShadowEngine::Rendering {
 }
 
 namespace ShadowEngine::Assets {
+
+	class MaterialImpl
+	{
+	public:
+		static MaterialImpl* Create(Ref<Rendering::ShaderPropertySheet> propertySheet);
+
+		virtual void Upload() = 0;
+	};
 	
 	class Material : public ShadowAsset
 	{
 		SHObject_Base(Material)
 	private:
+			Ref<MaterialImpl> impl;
 		
+	private:
+
+		
+		/**
+		 * \brief The shader this material uses
+		 */
 		std::shared_ptr<ShadowEngine::Rendering::Shader> shader;
 
+		
+		/**
+		 * \brief The properties sheet this material is using
+		 */
 		Ref<Rendering::ShaderPropertySheet> properties;
 
-		Ref<Rendering::ConstantBuffer> shaderData;
+		Ref<Rendering::ConstantBuffer> [[depricated]] shaderData;
+
+
+		
 		bool dirty = true;
-	public:
+	public:		
 		Ref<Rendering::ShaderPropertySheet>& GetProperties();
 		Ref<Rendering::Shader> GetShader();
 
@@ -41,7 +63,10 @@ namespace ShadowEngine::Assets {
 			dirty = true;
 		}
 
-		Ref<Rendering::ConstantBuffer>& GetBuffer();
+		//Ref<Rendering::ConstantBuffer>& GetBuffer();
+
+		Ref<MaterialImpl> getImpl();
+		
 		void UpdateBufferIfDirty();
 		
 		

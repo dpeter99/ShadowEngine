@@ -27,6 +27,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		 */
 		static ShadowEngine::Ref<D3D12::D3D12Context> ctx;
 
+
+		static D3D12RendererAPI* Instance;
 		
 		Ref<D3D12Texture> t;
 	public:
@@ -64,6 +66,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		HANDLE fenceEvent;
 		unsigned long long fenceValue;
 		//unsigned int frameIndex;
+
+		Ref<D3D12DescriptorHeap> descriptorHeap_SRV_CBV;
 		
 		Ref<ConstantBuffer> worldData;
 
@@ -72,7 +76,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		virtual void SetClearColor(const glm::vec4& color) override;
 		virtual void Clear() override;
 
-		virtual void Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4& transform = glm::mat4(1.0f)) override;
+		//virtual void Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4& transform = glm::mat4(1.0f)) override;
 
 		virtual void Draw(const std::shared_ptr<Assets::Mesh>& mesh, const std::shared_ptr<Assets::Material>& shader,const ConstantBuffer& materialData) override;
 		
@@ -82,6 +86,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		void UploadResource(Ref<D3D12IUploadable> resource);
 
 		virtual void StartResourceUpload();
+
+		
+		
 
 		void WaitForPreviousFrame();
 		

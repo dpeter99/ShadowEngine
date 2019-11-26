@@ -27,7 +27,7 @@ namespace ShadowEngine::Rendering {
 		virtual Ref<ConstantBufferImpl> GetImpl() const { return impl; };
 
 		template <class T>
-		T* As()
+		T* As[[depricated]]()
 		{
 			return data;
 		}
@@ -75,6 +75,11 @@ namespace ShadowEngine::Rendering {
 			return &data;
 		}
 
+		template <class T>
+		T* As ()
+		{
+			return data;
+		}
 
 		void Set(void* d) override
 		{

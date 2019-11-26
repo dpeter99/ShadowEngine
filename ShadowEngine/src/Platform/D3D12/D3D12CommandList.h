@@ -8,6 +8,7 @@
 #include "ShadowAsset/Assets/Mesh.h"
 #include "ShadowRenderer/ConstantBuffer.h"
 #include <memory>
+#include "D3D12DescriptorHeap.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 	class D3D12SwapChain;
@@ -78,9 +79,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		void BindConstantBuffer(const Ref<ConstantBuffer>& buffer, int materialSlotIndex);
 		void BindConstantBuffer(const ConstantBuffer& buffer, int registerIndex);
+		void BindDescriptorTableBuffer(const CD3DX12_GPU_DESCRIPTOR_HANDLE& handle, int registerIndex);
 
 		void CopyTextureRegion(CD3DX12_TEXTURE_COPY_LOCATION* from, CD3DX12_TEXTURE_COPY_LOCATION* to);
 
+		void D3D12CommandList::SetDescriptorHeaps(int count, ID3D12DescriptorHeap* const* descriptorHeaps);
+		void D3D12CommandList::SetDescriptorHeaps(std::vector<Ref<D3D12DescriptorHeap>> descriptorHeaps);
+		
 		void Close();
 
 		bool IsRecording();

@@ -29,6 +29,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		DXGI_FORMAT SDLFormatToGXGI(SDL_PixelFormat& sdl);
 
 
+		com_ptr<ID3D12Resource> GetResource();
+		DXGI_FORMAT GetDXGIFormat();
+
 		// Inherited via D3D12IUploadable
 		virtual void RecordTransfer(Ref<D3D12::D3D12CommandList> cmd) override;
 

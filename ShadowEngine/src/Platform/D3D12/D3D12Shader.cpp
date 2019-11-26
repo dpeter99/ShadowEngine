@@ -110,6 +110,115 @@ namespace ShadowEngine::Rendering::D3D12 {
 		return layout_desc;
 	}
 
+	void D3D12Shader::ExtractProperties()
+	{
+		//################################################################
+		//Extract the Material data form the shader
+		//################################################################
+		
+		//Get the shader description
+		D3D12_SHADER_DESC shader_desc;
+		psReflection->GetDesc(&shader_desc);
+
+		//Get the correctly named Constant buffer reflection
+		//We use this to identify the Descriptor table containing the data concerning the material
+		//Like: floats, textures etc...
+		ID3D12ShaderReflectionConstantBuffer* a = psReflection->GetConstantBufferByName("MaterialData");
+
+		//The description of the actual contents of the buffer Constant buffer
+		D3D12_SHADER_BUFFER_DESC desc;
+		a->GetDesc(&desc);
+
+		
+		//We get the description of the buffer binding (binding pos etc.)
+		D3D12_SHADER_INPUT_BIND_DESC bindDesc;
+		psReflection->GetResourceBindingDescByName("MaterialData", &bindDesc);
+		
+
+		//Find the descriptor table that holds this input binding
+		const D3D12_ROOT_SIGNATURE_DESC& rootSignatureDesc = *(rsDeserializer->GetRootSignatureDesc());
+		
+		for (unsigned int i = 0; i < rootSignatureDesc.NumParameters; ++i) {
+			
+			const D3D12_ROOT_PARAMETER& param = rootSignatureDesc.pParameters[i];
+
+			//This is a Descriptor table
+			/*
+			if (param.ParameterType == D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE) {
+
+				if (param.DescriptorTable.NumDescriptorRanges == 0) {
+					continue;
+				}
+				bool correct = false;
+				//We iterate over all the descriptor ranges to find the one containing our "MaterialData" CB
+				for (int j = 0; j < param.DescriptorTable.NumDescriptorRanges; ++j)
+				{
+					D3D12_DESCRIPTOR_RANGE range = param.DescriptorTable.pDescriptorRanges[j];
+
+					//Check if our CB is in this range
+					if(range.RangeType == D3D12_DESCRIPTOR_RANGE_TYPE_CBV &&
+						range.BaseShaderRegister <= bindDesc.BindPoint &&
+						range.NumDescriptors + range.BaseShaderRegister -1 >= bindDesc.BindPoint &&
+						range.RegisterSpace == bindDesc.Space)
+					{
+						correct = true;
+						break;
+					}
+
+				}
+				if (correct) {
+					//We iterate over all the descriptor ranges to extract the parameters
+					for (int j = 0; j < param.DescriptorTable.NumDescriptorRanges; ++j)
+					{
+						D3D12_DESCRIPTOR_RANGE range = param.DescriptorTable.pDescriptorRanges[j];
+
+						//Check if our CB is in this range
+						if (range.RangeType == D3D12_DESCRIPTOR_RANGE_TYPE_SRV)
+						{
+							D3D12_SHADER_INPUT_BIND_DESC parameter_binding_desc;
+							psReflection->GetResourceBindingDesc(1, &parameter_binding_desc);
+							//psReflection->GetResourceBindingDescByName("txt", &parameter_binding_desc);
+
+
+							std::cout << "asd";
+						}
+					}
+				}
+
+			}
+			else */
+			if(param.ParameterType == D3D12_ROOT_PARAMETER_TYPE_CBV &&
+				param.Descriptor.ShaderRegister == bindDesc.BindPoint &&
+				param.Descriptor.RegisterSpace == bindDesc.Space)
+			{
+				this->materialDataIndex = i;
+				break;
+			}
+		}
+
+
+		
+		for (int j = 0; j < desc.Variables; ++j)
+		{
+			ID3D12ShaderReflectionVariable* var = a->GetVariableByIndex(j);
+
+			ID3D12ShaderReflectionType* type = var->GetType();
+			D3D12_SHADER_TYPE_DESC type_desc;
+
+			D3D12_SHADER_VARIABLE_DESC var_desc;
+			var->GetDesc(&var_desc);
+
+			type->GetDesc(&type_desc);
+
+			if (strcmp(type_desc.Name, "float4") == 0)
+			{
+				this->properties.AddProperty(new ShaderProperty<glm::vec4>(var_desc.Name));
+			}
+		}
+
+		properties.UpdataStruct();
+	}
+
 	/**
 	 * \brief Constructor for D3D12 Shaders.
 	 * \param VSfilePath File path to the Compiled HLSL Vertex shader
@@ -163,56 +272,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		pipelineState = pso;
 
-
-		//Extract the Material data form the shader
-
-		//Get the shader description
-		D3D12_SHADER_DESC shader_desc;
-		psReflection->GetDesc(&shader_desc);
-
-		//Get the correctly named Constant buffer reflection
-		ID3D12ShaderReflectionConstantBuffer* a = psReflection->GetConstantBufferByName("MaterialData");
-
-		D3D12_SHADER_INPUT_BIND_DESC bindDesc;
-		psReflection->GetResourceBindingDescByName("MaterialData", &bindDesc);
-		
-		//The description of the Constant buffer
-		D3D12_SHADER_BUFFER_DESC desc;
-		a->GetDesc(&desc);
-
-		//Find the binding index of the constant buffer binding
-		const D3D12_ROOT_SIGNATURE_DESC& rootSignatureDesc = *(rsDeserializer->GetRootSignatureDesc());
-		for (unsigned int i = 0; i < rootSignatureDesc.NumParameters; ++i) {
-			const D3D12_ROOT_PARAMETER& param = rootSignatureDesc.pParameters[i];
-			if (param.ParameterType == D3D12_ROOT_PARAMETER_TYPE_CBV &&
-				param.Descriptor.ShaderRegister == bindDesc.BindPoint &&
-				param.Descriptor.RegisterSpace == bindDesc.Space) {
-				this->materialDataIndex = i;
-				break;
-			}
-		}
-
-
-		
-		for (int j = 0; j < desc.Variables; ++j)
-		{
-			ID3D12ShaderReflectionVariable* var = a->GetVariableByIndex(j);
-
-			ID3D12ShaderReflectionType* type = var->GetType();
-			D3D12_SHADER_TYPE_DESC type_desc;
-
-			D3D12_SHADER_VARIABLE_DESC var_desc;
-			var->GetDesc(&var_desc);
-
-			type->GetDesc(&type_desc);
-
-			if (strcmp(type_desc.Name, "float4") == 0)
-			{
-				this->properties.AddProperty(new ShaderProperty<glm::vec4>(var_desc.Name));
-			}
-		}
-
-		properties.Finalize();
+		ExtractProperties();
 	}
 
 	D3D12Shader::~D3D12Shader()

@@ -8,13 +8,14 @@
 #include "ShadowAsset/Assets/Mesh.h"
 #include "D3D12Shader.h"
 #include <Platform\D3D12\D3D12Texture.h>
+#include "D3D12MaterialImpl.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
 	com_ptr<ID3D12Device> D3D12RendererAPI::device{ nullptr };
 	Ref<D3D12::D3D12Context> D3D12RendererAPI::ctx {nullptr};
 	
-	
+	D3D12RendererAPI* D3D12RendererAPI::Instance{ nullptr };
 	
 	/**
 	 * \brief Loads the GPU adapters
@@ -50,6 +51,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 	
 	void D3D12RendererAPI::Init(ShadowEngine::Ref<GraphicsContext> _ctx)
 	{
+		assert(Instance == nullptr);
+		Instance = this;
+		
 		this->ctx = std::dynamic_pointer_cast<D3D12Context>(_ctx);
 		
 		//Load in the GPU adapters
@@ -100,6 +104,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 			DX_API("Failed to create windows event") HRESULT_FROM_WIN32(GetLastError());
 		}		
 
+		//TODO: size
+		descriptorHeap_SRV_CBV = std::make_shared<D3D12DescriptorHeap>(D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE, D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV,500);
+		
 		upload_managger = std::make_shared<D3D12UploadManagger>();
 
 		t = std::make_shared<D3D12Texture>("./Resources/Textures/TileSet_001.png");
@@ -115,7 +122,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 		
 	}
-
+	/*
 	void D3D12RendererAPI::Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> material, const glm::mat4& transform)
 	{		
 		Ref<D3D12Shader> dx12_shader = std::dynamic_pointer_cast<D3D12::D3D12Shader>(material->GetShader());
@@ -123,14 +130,17 @@ namespace ShadowEngine::Rendering::D3D12 {
 		command_list->BindConstantBuffer(material->GetBuffer(), dx12_shader->GetMaterialSlotIndex());
 		command_list->DrawMesh(mesh);
 	}
-
+	*/
 	void D3D12RendererAPI::Draw(const std::shared_ptr<Assets::Mesh>& mesh, const std::shared_ptr<Assets::Material>& material, const ConstantBuffer& meshData)
 	{
 		Ref<D3D12Shader> dx12_shader = std::dynamic_pointer_cast<D3D12::D3D12Shader>(material->GetShader());
 		command_list->UseShader(dx12_shader);
 		command_list->BindConstantBuffer(worldData, 0);
 		command_list->BindConstantBuffer(meshData, 1);
-		command_list->BindConstantBuffer(material->GetBuffer(), dx12_shader->GetMaterialSlotIndex());
+
+		D3D12MaterialImpl* dx12_mat = (D3D12MaterialImpl*)material->getImpl().get();
+		dx12_mat->BindMaterialData(command_list);
+		
 		command_list->DrawMesh(mesh);
 	}
 
@@ -154,6 +164,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 		command_list->ClearRenderTargetView(clearColor);
 		command_list->ClearDepthStencilView(1.0f,0);
 
+		std::vector<Ref<D3D12DescriptorHeap>> heaps;
+		heaps.push_back(descriptorHeap_SRV_CBV);
+		command_list->SetDescriptorHeaps(heaps);
+		
 		worldData=worldCB;
 
 		upload_managger->CheckForFnishedUploads();

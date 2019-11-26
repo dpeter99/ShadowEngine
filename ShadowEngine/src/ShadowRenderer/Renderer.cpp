@@ -77,7 +77,8 @@ namespace ShadowEngine::Rendering {
 
 	void Renderer::Submit(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4& transform)
 	{
-		instance->s_RendererAPI->Draw(mesh, shader, transform);
+		//instance->s_RendererAPI->Draw(mesh, shader, transform);
+		
 	}
 
 	Ref<RenderNode> Renderer::AddRenderNode(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> material,
