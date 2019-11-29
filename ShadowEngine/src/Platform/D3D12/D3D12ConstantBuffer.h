@@ -9,7 +9,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 		UINT8* mappedPtr;
 		com_ptr<ID3D12Resource> constantBuffer;
-		
+
+		size_t actual_size;
 	public:
 
 		D3D12ConstantBuffer(size_t size);
@@ -22,6 +23,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		void ReleaseResources();
 
+		size_t GetSize() { return actual_size; };
+		
 		void Upload(void* data, size_t size) override;
 	};
 

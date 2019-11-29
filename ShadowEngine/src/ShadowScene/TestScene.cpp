@@ -23,7 +23,7 @@ void TestScene::Init()
 
 	auto m_Material = std::make_shared<ShadowEngine::Assets::Material>(m_Shader);
 
-	m_Material->SetProperty("tint", glm::vec4(1, 0, 0, 1));
+	m_Material->SetProperty("tint", glm::vec4(1, 1, 1, 1));
 	m_Material->UpdateBufferIfDirty();
 	//m_Material->SetProperty("o_color", glm::vec4(1,1, 1, 1));
 	

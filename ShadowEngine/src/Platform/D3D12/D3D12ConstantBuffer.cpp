@@ -7,7 +7,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		mappedPtr{nullptr},
 		constantBuffer{nullptr}
 	{
-		CreateResources(size);
+		actual_size = (size + 255) & ~255;
+		CreateResources(actual_size);
 	}
 
 	D3D12ConstantBuffer::~D3D12ConstantBuffer()

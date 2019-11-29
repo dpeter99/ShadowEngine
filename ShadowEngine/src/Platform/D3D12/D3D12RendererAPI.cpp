@@ -109,7 +109,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 		upload_managger = std::make_shared<D3D12UploadManagger>();
 
-		t = std::make_shared<D3D12Texture>("./Resources/Textures/TileSet_001.png");
+		t = std::make_shared<D3D12Texture>("./Resources/Textures/giraffe.png");
 		UploadResource(t);
 	}
 

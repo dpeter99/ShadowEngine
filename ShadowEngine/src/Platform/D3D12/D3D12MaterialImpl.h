@@ -29,31 +29,28 @@ namespace  ShadowEngine::Rendering::D3D12 {
 		{
 			this->shaderData = std::make_shared<Rendering::ConstantBuffer_ShaderPropertySheet>(propertySheet);
 			D3D12ConstantBuffer* dx12_buffer = ((D3D12ConstantBuffer*)shaderData->GetImpl().get());
-
+			shaderData->Upload();
 			
-			table = D3D12RendererAPI::Instance->descriptorHeap_SRV_CBV->Allocate(1);
+			table = D3D12RendererAPI::Instance->descriptorHeap_SRV_CBV->Allocate(2);
 			
-			/*
+			
 			D3D12_SHADER_RESOURCE_VIEW_DESC srvDesc = {};
 			srvDesc.ViewDimension = D3D12_SRV_DIMENSION_TEXTURE2D;
 			srvDesc.Shader4ComponentMapping = D3D12_DEFAULT_SHADER_4_COMPONENT_MAPPING;
-			srvDesc.Format = textures[0]->GetDXGIFormat();
-			srvDesc.Texture2D.MipLevels = 0;
-			srvDesc.Texture2D.MostDetailedMip = 0;
-			srvDesc.Texture2D.ResourceMinLODClamp = 0.0f;
-			D3D12RendererAPI::device->CreateShaderResourceView(textures[0]->GetResource().Get(), &srvDesc, tableStart);
+			srvDesc.Format = D3D12RendererAPI::Instance->t->GetDXGIFormat();
+			srvDesc.Texture2D.MipLevels = 1;
+			D3D12RendererAPI::device->CreateShaderResourceView(D3D12RendererAPI::Instance->t->GetResource().Get(), &srvDesc, table[1].CPU_TableStart);
 
-			tableStart.Offset(1, D3D12RendererAPI::Instance->descriptorHeap_SRV_CBV->GetOffsetSize());
-			*/
+			
 			D3D12_CONSTANT_BUFFER_VIEW_DESC cbvDesc = {};
 			cbvDesc.BufferLocation = dx12_buffer->GetGPUVirtualAddress();
-			cbvDesc.SizeInBytes = (propertySheet->GetSize() + 255) & ~255;    // CB size is required to be 256-byte aligned.
+			cbvDesc.SizeInBytes = dx12_buffer->GetSize();    // CB size is required to be 256-byte aligned.
 			D3D12RendererAPI::device->CreateConstantBufferView(&cbvDesc, table.CPU_TableStart);
 		}
 
 		void BindMaterialData(Ref<D3D12CommandList> commandList)
 		{
-			commandList->BindDescriptorTableBuffer(table.GPU_TableStart, 0);
+			commandList->BindDescriptorTableBuffer(table.GPU_TableStart, 2);
 		}
 
 		void Upload() override

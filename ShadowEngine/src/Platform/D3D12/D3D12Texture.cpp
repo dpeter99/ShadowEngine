@@ -4,7 +4,8 @@
 
 ShadowEngine::Rendering::D3D12::D3D12Texture::D3D12Texture(std::string path)
 {
-	auto img = IMG_Load(path.c_str());
+	auto img_temp = IMG_Load(path.c_str());
+	auto img = SDL_ConvertSurfaceFormat(img_temp, SDL_PIXELFORMAT_RGBA32, 0);
 
 	format = SDLFormatToGXGI(*img->format);
 	bitsPerPixel = img->format->BitsPerPixel;
@@ -53,7 +54,7 @@ ShadowEngine::Rendering::D3D12::D3D12Texture::D3D12Texture(std::string path)
 	DX_API("Failed to map upload resource")
 		uploadResource->Map(0, &readRange, &mappedPtr);
 
-	memcpy(mappedPtr, img->pixels, img->pitch * img->format->BitsPerPixel);
+	memcpy(mappedPtr, img->pixels, img->pitch * img->h);
 
 	uploadResource->Unmap(0, nullptr);
 
