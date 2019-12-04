@@ -97,8 +97,8 @@ project "ShadowEngine"
 	nuget { 
 		"Assimp:3.0.0",
 		"Assimp.redist:3.0.0",
-		"sdl2.nuget:2.0.9",
-		"sdl2.nuget.redist:2.0.9",
+		"sdl2.nuget:2.0.10",
+		"sdl2.nuget.redist:2.0.10",
 		"sdl2_image.nuget:2.0.5",
 		"sdl2_image.nuget.redist:2.0.5"
 	}
