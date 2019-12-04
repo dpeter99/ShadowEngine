@@ -3,7 +3,7 @@
 
 #include "Renderer.h"
 //#include "Platform/OpenGL/OpenGLTexture.h"
-
+/*
 namespace ShadowEngine::Rendering {
 
 	ShadowEngine::Ref<Texture2D> Texture2D::Create(const std::string& path)
@@ -19,3 +19,4 @@ namespace ShadowEngine::Rendering {
 	}
 
 }
+*/

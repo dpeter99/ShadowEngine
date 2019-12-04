@@ -13,6 +13,10 @@ namespace ShadowEngine::Rendering {
 
 namespace ShadowEngine::Assets {
 
+	/// <summary>
+	/// The actual render api implementation of materials
+	/// It shuld not be used by the user directly, but as the field of the Material Asset
+	/// </summary>
 	class MaterialImpl
 	{
 	public:
@@ -21,6 +25,13 @@ namespace ShadowEngine::Assets {
 		virtual void Upload() = 0;
 	};
 	
+	/// <summary>
+	/// Material asset
+	/// A material is the asset that we assign to the meshes. It specifies all the values that will be used for drawing the mesh.
+	/// Like: Textures, floats, positions etc..
+	/// 
+	/// This contains the renderer implementation and the asset information for this material.
+	/// </summary>
 	class Material : public ShadowAsset
 	{
 		SHObject_Base(Material)

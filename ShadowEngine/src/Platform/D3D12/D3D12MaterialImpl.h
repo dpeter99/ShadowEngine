@@ -6,7 +6,7 @@
 #include "ShadowRenderer/ConstantBuffer.h"
 #include "D3D12RendererAPI.h"
 #include "D3D12ConstantBuffer.h"
-#include "ShadowRenderer/MaterialImpl.h"
+//#include "ShadowRenderer/MaterialImpl.h"
 
 namespace  ShadowEngine::Rendering::D3D12 {
 

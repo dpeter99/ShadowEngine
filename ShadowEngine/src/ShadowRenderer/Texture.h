@@ -3,7 +3,7 @@
 #include <string>
 
 #include "Core/Core.h"
-
+/*
 namespace ShadowEngine::Rendering {
 
 	class Texture
@@ -24,3 +24,4 @@ namespace ShadowEngine::Rendering {
 	};
 
 }
+*/

@@ -111,3 +111,7 @@ void ShadowEngine::Rendering::D3D12::D3D12Texture::FinishedUploading()
 {
 	ready = true;
 }
+
+void ShadowEngine::Rendering::D3D12::D3D12Texture::Upload()
+{
+}
