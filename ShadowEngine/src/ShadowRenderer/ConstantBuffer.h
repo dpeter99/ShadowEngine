@@ -2,6 +2,8 @@
 #include "ShaderPropertySheet.h"
 #include "RendererAPI.h"
 
+#include <typeinfo>
+
 namespace ShadowEngine::Rendering {
 
 	class ConstantBufferImpl
@@ -9,7 +11,7 @@ namespace ShadowEngine::Rendering {
 	public:
 		virtual void Upload(void* data, size_t size) = 0;
 
-		static ConstantBufferImpl* Create(size_t size);
+		static ConstantBufferImpl* Create(size_t size, std::wstring debug_name);
 	};
 	
 	class ConstantBuffer
@@ -19,9 +21,9 @@ namespace ShadowEngine::Rendering {
 	public:
 		virtual ~ConstantBuffer() = default;
 
-		ConstantBuffer(size_t size)
+		ConstantBuffer(size_t size, std::wstring debug_name)
 		{
-			impl.reset(ConstantBufferImpl::Create(size));
+			impl.reset(ConstantBufferImpl::Create(size,debug_name));
 		}
 		
 		virtual Ref<ConstantBufferImpl> GetImpl() const { return impl; };
@@ -61,7 +63,7 @@ namespace ShadowEngine::Rendering {
 
 	public:
 
-		ConstantBuffer_Typed(): ConstantBuffer(sizeof(T))
+		ConstantBuffer_Typed(): ConstantBuffer(sizeof(T), s2ws( typeid(T).name()))
 		{
 			
 		}

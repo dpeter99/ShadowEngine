@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 #define BIT(x) (1 << x)
 
 #ifdef SH_ENABLE_ASSERTS
@@ -19,5 +21,7 @@ namespace ShadowEngine {
 
 	template<typename T>
 	using Ref = std::shared_ptr<T>;
+
+	
 
 }

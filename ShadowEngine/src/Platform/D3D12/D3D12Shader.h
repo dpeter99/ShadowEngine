@@ -51,6 +51,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 		static D3D12_INPUT_LAYOUT_DESC CreateInputDescriptor(BufferLayout& layout);
 		void ExtractProperties();
 
+		void ExtractCBProps(D3D12_SHADER_INPUT_BIND_DESC binding);
+
+		void Props();
+
 
 	public:
 		D3D12Shader(const std::string& VSfilePath, const std::string& PSfilePath);

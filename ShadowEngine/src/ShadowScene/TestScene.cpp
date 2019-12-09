@@ -24,6 +24,10 @@ void TestScene::Init()
 	auto m_Material = std::make_shared<ShadowEngine::Assets::Material>(m_Shader);
 
 	m_Material->SetProperty("tint", glm::vec4(1, 1, 1, 1));
+
+	auto Texture = std::make_shared<ShadowEngine::Assets::Texture2D>("./Resources/Textures/giraffe.png");
+	m_Material->SetTexture("Mat_Tex", Texture);
+
 	m_Material->UpdateBufferIfDirty();
 	//m_Material->SetProperty("o_color", glm::vec4(1,1, 1, 1));
 	

@@ -1,4 +1,4 @@
-#include "shpch.h"
+﻿#include "shpch.h"
 
 #include "D3D12Shader.h"
 #include "D3D12RendererAPI.h"
@@ -115,7 +115,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//################################################################
 		//Extract the Material data form the shader
 		//################################################################
-		
+
 		//Get the shader description
 		D3D12_SHADER_DESC shader_desc;
 		psReflection->GetDesc(&shader_desc);
@@ -129,27 +129,29 @@ namespace ShadowEngine::Rendering::D3D12 {
 		D3D12_SHADER_BUFFER_DESC desc;
 		a->GetDesc(&desc);
 
-		
+
 		//We get the description of the buffer binding (binding pos etc.)
 		D3D12_SHADER_INPUT_BIND_DESC bindDesc;
 		psReflection->GetResourceBindingDescByName("MaterialData", &bindDesc);
-		
+
 
 		//Find the descriptor table that holds this input binding
 		const D3D12_ROOT_SIGNATURE_DESC& rootSignatureDesc = *(rsDeserializer->GetRootSignatureDesc());
-		
+
 		for (unsigned int i = 0; i < rootSignatureDesc.NumParameters; ++i) {
-			
+
 			const D3D12_ROOT_PARAMETER& param = rootSignatureDesc.pParameters[i];
 
 			//This is a Descriptor table
 			/*
 			if (param.ParameterType == D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE) {
 
+				//Empty descriptor Table
 				if (param.DescriptorTable.NumDescriptorRanges == 0) {
 					continue;
 				}
 				bool correct = false;
+
 				//We iterate over all the descriptor ranges to find the one containing our "MaterialData" CB
 				for (int j = 0; j < param.DescriptorTable.NumDescriptorRanges; ++j)
 				{
@@ -186,8 +188,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 				}
 
 			}
-			else */
-			if(param.ParameterType == D3D12_ROOT_PARAMETER_TYPE_CBV &&
+			else*/
+			if (param.ParameterType == D3D12_ROOT_PARAMETER_TYPE_CBV &&
 				param.Descriptor.ShaderRegister == bindDesc.BindPoint &&
 				param.Descriptor.RegisterSpace == bindDesc.Space)
 			{
@@ -197,7 +199,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		}
 
 
-		
+		//Extract the material data variables
 		for (int j = 0; j < desc.Variables; ++j)
 		{
 			ID3D12ShaderReflectionVariable* var = a->GetVariableByIndex(j);
@@ -216,7 +218,244 @@ namespace ShadowEngine::Rendering::D3D12 {
 			}
 		}
 
+
+
 		properties.UpdataStruct();
+	}
+
+	void D3D12Shader::ExtractCBProps(D3D12_SHADER_INPUT_BIND_DESC binding) {
+
+		if (binding.Type != D3D_SIT_CBUFFER) {
+			return;
+		}
+
+		ID3D12ShaderReflectionConstantBuffer* a = psReflection->GetConstantBufferByName(binding.Name);
+
+		//The description of the actual contents of the Constant buffer
+		D3D12_SHADER_BUFFER_DESC desc;
+		a->GetDesc(&desc);
+
+		//Extract the material data variables
+		for (int j = 0; j < desc.Variables; ++j)
+		{
+			ID3D12ShaderReflectionVariable* var = a->GetVariableByIndex(j);
+
+			ID3D12ShaderReflectionType* type = var->GetType();
+			D3D12_SHADER_TYPE_DESC type_desc;
+
+			D3D12_SHADER_VARIABLE_DESC var_desc;
+			var->GetDesc(&var_desc);
+
+			type->GetDesc(&type_desc);
+
+			if (strcmp(type_desc.Name, "float4") == 0)
+			{
+				this->properties.AddProperty(new ShaderProperty<glm::vec4>(var_desc.Name));
+			}
+		}
+	}
+
+	void D3D12Shader::Props() {
+
+		//################################################################
+		//Extract the Material data form the shader
+		//################################################################
+
+		//Get the shader description
+		D3D12_SHADER_DESC shader_desc;
+		psReflection->GetDesc(&shader_desc);
+
+		std::vector<D3D12_SHADER_INPUT_BIND_DESC> parameters;
+		int descriptorTableParameterIndex = -1;
+
+		bool matCB = false;
+
+		for (size_t i = 0; i < shader_desc.BoundResources; i++)
+		{
+			D3D12_SHADER_INPUT_BIND_DESC binding_desc;
+			psReflection->GetResourceBindingDesc(i, &binding_desc);
+			bool matdata = false;
+			if (std::string(binding_desc.Name).rfind("Mat_", 0) == 0) {
+				matdata = true;
+				parameters.push_back(binding_desc);
+
+				if (binding_desc.Type == D3D_SIT_CBUFFER) {
+					SH_ASSERT(!matCB, "There can only be one material CB");
+
+					matCB = true;
+
+					ExtractCBProps(binding_desc);
+				}
+				else if (binding_desc.Type == D3D_SIT_TEXTURE) {
+					properties.AddTexture(new ShadowEngine::Rendering::ShaderRefProperty<Assets::Texture2D>(binding_desc.Name));
+
+				}
+			}
+
+			//Debug
+			{
+
+				std::cout << "Binding: Name:" << binding_desc.Name << std::endl;
+
+				{
+					std::string type = "Unknown";
+					switch (binding_desc.Type)
+					{
+					case(D3D_SIT_CBUFFER):
+						type = "D3D_SIT_CBUFFER";
+						break;
+					case(D3D_SIT_TBUFFER):
+						type = "D3D_SIT_TBUFFER";
+						break;
+					case(D3D_SIT_TEXTURE):
+						type = "D3D_SIT_TEXTURE";
+						break;
+					case(D3D_SIT_SAMPLER):
+						type = "D3D_SIT_SAMPLER";
+						break;
+					default:
+						break;
+					}
+
+					std::cout << "\t Type: " << type << std::endl;
+				}
+
+				std::cout << "\t BindPoint: " << binding_desc.BindPoint << std::endl;
+				std::cout << "\t BindCount: " << binding_desc.BindCount << std::endl;
+				std::cout << "\t Space: " << binding_desc.Space << std::endl;
+				std::wcout << "\t Material Data: " << (matdata ? "OK" : "NOP") << std::endl;
+
+			}
+
+		}
+
+		//Extract the rood signature
+		const D3D12_ROOT_SIGNATURE_DESC& rootSignatureDesc = *(rsDeserializer->GetRootSignatureDesc());
+
+		std::cout << "RootSig: " << std::endl;
+
+
+		for (size_t i = 0; i < rootSignatureDesc.NumParameters; i++)
+		{
+			D3D12_ROOT_PARAMETER param = rootSignatureDesc.pParameters[i];
+
+			//Debug info
+			{
+				std::string type = "Unknown";
+
+				switch (param.ParameterType)
+				{
+				case(D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE):
+					type = "D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE";
+					break;
+				case(D3D12_ROOT_PARAMETER_TYPE_32BIT_CONSTANTS):
+					type = "D3D12_ROOT_PARAMETER_TYPE_32BIT_CONSTANTS";
+					break;
+				case(D3D12_ROOT_PARAMETER_TYPE_CBV):
+					type = "D3D12_ROOT_PARAMETER_TYPE_CBV";
+					break;
+				case(D3D12_ROOT_PARAMETER_TYPE_SRV):
+					type = "D3D12_ROOT_PARAMETER_TYPE_SRV";
+					break;
+				case(D3D12_ROOT_PARAMETER_TYPE_UAV):
+					type = "D3D12_ROOT_PARAMETER_TYPE_UAV";
+					break;
+				default:
+					break;
+				}
+
+				std::cout << "\tParameter: Type: " << type << std::endl;
+			}
+
+			if (param.ParameterType == D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE) {
+
+				//Debug Info
+				{
+					std::cout << "\t\t Number of descriptors: " << param.DescriptorTable.NumDescriptorRanges << std::endl;
+					for (size_t i = 0; i < param.DescriptorTable.NumDescriptorRanges; i++)
+					{
+						D3D12_DESCRIPTOR_RANGE range = param.DescriptorTable.pDescriptorRanges[i];
+
+						{
+							std::string type = "Unknown";
+
+							switch (range.RangeType)
+							{
+							case(D3D12_DESCRIPTOR_RANGE_TYPE_SRV):
+								type = "D3D12_DESCRIPTOR_RANGE_TYPE_SRV";
+								break;
+							case(D3D12_DESCRIPTOR_RANGE_TYPE_UAV):
+								type = "D3D12_DESCRIPTOR_RANGE_TYPE_UAV";
+								break;
+							case(D3D12_DESCRIPTOR_RANGE_TYPE_CBV):
+								type = "D3D12_DESCRIPTOR_RANGE_TYPE_CBV";
+								break;
+							case(D3D12_DESCRIPTOR_RANGE_TYPE_SAMPLER):
+								type = "D3D12_DESCRIPTOR_RANGE_TYPE_SAMPLER";
+								break;
+							default:
+								break;
+							}
+
+							std::cout << "\t\t Descriptor: Type: " << type << std::endl;
+							std::cout << "\t\t\t Base Shader Register: " << range.BaseShaderRegister << std::endl;
+							std::cout << "\t\t\t Register space: " << range.RegisterSpace << std::endl;
+							std::cout << "\t\t\t Count: " << range.NumDescriptors << std::endl;
+						}
+					}
+				}
+
+				for (size_t j = 0; j < param.DescriptorTable.NumDescriptorRanges; j++)
+				{
+					D3D12_DESCRIPTOR_RANGE range = param.DescriptorTable.pDescriptorRanges[j];
+
+					for each (auto & matBinding in parameters)
+					{
+						if (((range.RangeType == D3D12_DESCRIPTOR_RANGE_TYPE_CBV && matBinding.Type == D3D_SIT_CBUFFER) ||
+							(range.RangeType == D3D12_DESCRIPTOR_RANGE_TYPE_SRV && matBinding.Type == D3D_SIT_TEXTURE)) &&
+							range.BaseShaderRegister <= matBinding.BindPoint &&
+							range.BaseShaderRegister + range.NumDescriptors >= matBinding.BindPoint &&
+							range.RegisterSpace == matBinding.Space)
+						{
+							SH_CORE_ERROR("Found");
+							if (descriptorTableParameterIndex == -1) {
+								descriptorTableParameterIndex = i;
+							}
+							else if (descriptorTableParameterIndex != i) {
+								SH_CORE_ERROR("All material data should be in the same descriptor table");
+							}
+						}
+					}
+				}
+
+			}
+			else if (param.ParameterType == D3D12_ROOT_PARAMETER_TYPE_CBV) {
+
+				//Debug info
+				{
+					std::cout << "\t\t Register Space: " << param.Descriptor.RegisterSpace << std::endl;
+					std::cout << "\t\t Shader Register: " << param.Descriptor.ShaderRegister << std::endl;
+				}
+
+				for each (auto & matBinding in parameters)
+				{
+					if (((param.ParameterType == D3D12_ROOT_PARAMETER_TYPE_CBV && matBinding.Type == D3D_SIT_CBUFFER) ||
+						(param.ParameterType == D3D12_ROOT_PARAMETER_TYPE_SRV && matBinding.Type == D3D_SIT_TEXTURE)) &&
+						param.Descriptor.ShaderRegister == matBinding.BindPoint &&
+						param.Descriptor.RegisterSpace == matBinding.Space)
+					{
+						SH_CORE_ERROR("Material data CB must be in a Descriptor table");
+					}
+				}
+
+
+			}
+		}
+
+		std::cout << properties.ToString();
+
+		std::cout << "asd";
+
 	}
 
 	/**
@@ -234,6 +473,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		depthStencilState.DepthEnable = FALSE;
 		depthStencilState.StencilEnable = FALSE;
 		dsvFormat = DXGI_FORMAT_UNKNOWN;
+
 
 		//Load Up the shader codes
 		VertexShaderByteCode = LoadCso(VSfilePath);
@@ -272,7 +512,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		pipelineState = pso;
 
-		ExtractProperties();
+		Props();
+		//ExtractProperties();
 	}
 
 	D3D12Shader::~D3D12Shader()

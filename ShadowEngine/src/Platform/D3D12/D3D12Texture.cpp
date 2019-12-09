@@ -2,7 +2,7 @@
 #include "D3D12Texture.h"
 #include "D3D12RendererAPI.h"
 
-ShadowEngine::Rendering::D3D12::D3D12Texture::D3D12Texture(std::string path)
+ShadowEngine::Rendering::D3D12::D3D12Texture2D::D3D12Texture2D(std::string path)
 {
 	auto img_temp = IMG_Load(path.c_str());
 	auto img = SDL_ConvertSurfaceFormat(img_temp, SDL_PIXELFORMAT_RGBA32, 0);
@@ -60,10 +60,10 @@ ShadowEngine::Rendering::D3D12::D3D12Texture::D3D12Texture(std::string path)
 
 	ready = false;
 
-	
+	D3D12::D3D12RendererAPI::Instance->UploadResource(Ref<D3D12Texture2D>( this));
 }
 
-DXGI_FORMAT ShadowEngine::Rendering::D3D12::D3D12Texture::SDLFormatToGXGI(SDL_PixelFormat& sdl) {
+DXGI_FORMAT ShadowEngine::Rendering::D3D12::D3D12Texture2D::SDLFormatToGXGI(SDL_PixelFormat& sdl) {
 	switch (sdl.format) {
 	case SDL_PIXELFORMAT_ARGB8888:
 		return DXGI_FORMAT_B8G8R8A8_UNORM;
@@ -82,17 +82,17 @@ DXGI_FORMAT ShadowEngine::Rendering::D3D12::D3D12Texture::SDLFormatToGXGI(SDL_Pi
 	}
 }
 
-ShadowEngine::Rendering::D3D12::com_ptr<ID3D12Resource> ShadowEngine::Rendering::D3D12::D3D12Texture::GetResource()
+ShadowEngine::Rendering::D3D12::com_ptr<ID3D12Resource> ShadowEngine::Rendering::D3D12::D3D12Texture2D::GetResource()
 {
 	return resource;
 }
 
-DXGI_FORMAT ShadowEngine::Rendering::D3D12::D3D12Texture::GetDXGIFormat()
+DXGI_FORMAT ShadowEngine::Rendering::D3D12::D3D12Texture2D::GetDXGIFormat()
 {
 	return format;
 }
 
-void ShadowEngine::Rendering::D3D12::D3D12Texture::RecordTransfer(Ref<D3D12::D3D12CommandList> commandList)
+void ShadowEngine::Rendering::D3D12::D3D12Texture2D::RecordTransfer(Ref<D3D12::D3D12CommandList> commandList)
 {
 	CD3DX12_TEXTURE_COPY_LOCATION dst{ resource.Get(), 0 };
 	D3D12_PLACED_SUBRESOURCE_FOOTPRINT psf;
@@ -107,11 +107,11 @@ void ShadowEngine::Rendering::D3D12::D3D12Texture::RecordTransfer(Ref<D3D12::D3D
 	commandList->ResourceBarrier(&CD3DX12_RESOURCE_BARRIER::Transition(resource.Get(), D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_COMMON));
 }
 
-void ShadowEngine::Rendering::D3D12::D3D12Texture::FinishedUploading()
+void ShadowEngine::Rendering::D3D12::D3D12Texture2D::FinishedUploading()
 {
 	ready = true;
 }
 
-void ShadowEngine::Rendering::D3D12::D3D12Texture::Upload()
+void ShadowEngine::Rendering::D3D12::D3D12Texture2D::Upload()
 {
 }

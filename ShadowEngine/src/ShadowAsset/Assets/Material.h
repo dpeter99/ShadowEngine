@@ -23,6 +23,7 @@ namespace ShadowEngine::Assets {
 		static MaterialImpl* Create(Ref<Rendering::ShaderPropertySheet> propertySheet);
 
 		virtual void Upload() = 0;
+		virtual void UploadTextures() = 0;
 	};
 	
 	/// <summary>
@@ -52,11 +53,12 @@ namespace ShadowEngine::Assets {
 		 */
 		Ref<Rendering::ShaderPropertySheet> properties;
 
-		Ref<Rendering::ConstantBuffer> [[depricated]] shaderData;
+		//Ref<Rendering::ConstantBuffer> [[depricated]] shaderData;
 
 
 		
 		bool dirty = true;
+		bool texture_dirty = true;
 	public:		
 		Ref<Rendering::ShaderPropertySheet>& GetProperties();
 		Ref<Rendering::Shader> GetShader();
@@ -72,6 +74,19 @@ namespace ShadowEngine::Assets {
 			property->SetValue(value);
 			properties->UpdataStruct();
 			dirty = true;
+		}
+
+		template<class T>
+		void SetTexture(const std::string& name, Ref<T> value) {
+
+			auto property = properties->GetTexture(name);
+			if (property == nullptr) {
+				SH_CORE_WARN("No property named: %s", name);
+				return;
+			}
+			property->SetValue(value);
+			//properties->UpdataStruct();
+			texture_dirty = true;
 		}
 
 		//Ref<Rendering::ConstantBuffer>& GetBuffer();

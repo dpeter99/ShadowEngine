@@ -12,7 +12,7 @@
 namespace ShadowEngine::Rendering::D3D12 {
 
 	
-	class D3D12Texture : public D3D12IUploadable, public Assets::Texture2DImpl
+	class D3D12Texture2D : public D3D12IUploadable, public Assets::Texture2DImpl
 	{
 		com_ptr<ID3D12Resource> resource;
 		com_ptr<ID3D12Resource> uploadResource;
@@ -24,7 +24,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		bool ready;
 	public:
 			
-		D3D12Texture(std::string path);
+		D3D12Texture2D(std::string path);
 
 
 

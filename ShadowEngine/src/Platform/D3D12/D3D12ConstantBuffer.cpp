@@ -3,9 +3,10 @@
 #include "D3D12RendererAPI.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
-	D3D12ConstantBuffer::D3D12ConstantBuffer(size_t size):
+	D3D12ConstantBuffer::D3D12ConstantBuffer(size_t size, std::wstring debug_name):
 		mappedPtr{nullptr},
-		constantBuffer{nullptr}
+		constantBuffer{nullptr},
+		debug_name( debug_name)
 	{
 		actual_size = (size + 255) & ~255;
 		CreateResources(actual_size);
@@ -32,10 +33,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 			constantBuffer->Map(0, &rr, reinterpret_cast<void**>(&mappedPtr));
 
 		// for debugging purposes, this will name and index the constant buffers for easier identifications
-		//static int Id = 0;
-		//std::wstringstream wss;
-		//wss << "CB(" << typeid(T).name() << ")#" << Id++;
-		//constantBuffer->SetName(wss.str().c_str());
+		static int Id = 0;
+		std::wstringstream wss;
+		wss << "CB(" << debug_name << ")#" << Id++;
+		constantBuffer->SetName(wss.str().c_str());
 	}
 
 	D3D12_GPU_VIRTUAL_ADDRESS D3D12ConstantBuffer::GetGPUVirtualAddress() const

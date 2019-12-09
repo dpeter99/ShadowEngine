@@ -17,7 +17,7 @@ namespace ShadowEngine::Rendering {
 		
 		const std::string& GetName() const { return name; };
 
-		virtual const std::string& GetPropertyTypeName() =0;
+		virtual std::string GetPropertyTypeName() =0;
 		virtual unsigned long long GetPropertyTypeSize() = 0;
 
 		virtual void* GetPropertyData() = 0;
@@ -48,7 +48,7 @@ namespace ShadowEngine::Rendering {
 			return new ShaderProperty<T>(*this);
 		}
 
-		const std::string& GetPropertyTypeName() override
+		std::string GetPropertyTypeName() override
 		{
 			return typeid(T).name();
 		}
@@ -62,7 +62,65 @@ namespace ShadowEngine::Rendering {
 		{
 			return &value;
 		}
+
+		T& GetPropertyDataTyped() {
+			return value;
+		}
 	};
+
+	//This holds a shader ptoperty that is Ref<T> to a other object
+	//Usefull for non in place resources like textures
+	template<class T>
+	class ShaderRefProperty : public IShaderProperty
+	{
+		SHObject_Base(ShaderRefProperty<T>)
+	private:
+		Ref<T> value;
+
+	public:
+		ShaderRefProperty(const std::string& name) : IShaderProperty(name) {}
+		ShaderRefProperty(const ShaderRefProperty& a)
+		{
+			this->name = a.name;
+			this->value = a.value;
+		}
+
+		void SetValue(const Ref<T>& data)
+		{
+			value = data;
+		}
+
+		void SetValue(const T* data)
+		{
+			value.reset(data);
+		}
+
+		IShaderProperty* Clone() override
+		{
+			return new ShaderRefProperty<T>(*this);
+		}
+
+		std::string GetPropertyTypeName() override
+		{
+			return typeid(T).name();
+		}
+
+		//Returns the size of the actual type T
+		unsigned long long GetPropertyTypeSize() override
+		{
+			return  sizeof(T);
+		}
+
+		void* GetPropertyData() override
+		{
+			return value.get();
+		}
+
+		T& GetPropertyDataTyped() {
+			return *value;
+		}
+	};
+
 
 	/**
 	 * ShaderPropertySheet Contains the variables defined by a shader. 
@@ -79,14 +137,14 @@ namespace ShadowEngine::Rendering {
 		 *
 		 * \brief The shader properties
 		 */
-		std::vector<std::unique_ptr<IShaderProperty>> shaderProperties;
+		std::vector<Scope<IShaderProperty>> shaderProperties;
 
 		/**
 		 * The shader properties stored in std::unique_ptr -s as this object is the owner.
 		 *
 		 * \brief The shader properties
 		 */
-		std::vector<std::unique_ptr<ShaderProperty<Assets::Texture>>> textures;
+		std::vector<Scope<IShaderProperty>> textures;
 		
 		size_t size = 0;
 		void* data;
@@ -103,10 +161,20 @@ namespace ShadowEngine::Rendering {
 				this->shaderProperties.push_back(std::unique_ptr<IShaderProperty>(property->Clone()));
 			}
 			this->size = a.size;
+
+			for (auto& text : a.textures)
+			{
+				this->textures.push_back(std::unique_ptr<IShaderProperty>(text->Clone()));
+			}
+
 			UpdataStruct();
 		}
 
 		ShaderPropertySheet() = default;
+
+#pragma region Properies
+
+
 
 		/**
 		 * \brief Returns the number of properties
@@ -115,7 +183,7 @@ namespace ShadowEngine::Rendering {
 		size_t GetPropertyCount() const { return  shaderProperties.size(); }
 
 		size_t GetSize() const { return size; }
-		
+
 		/**
 		 * \brief Gets a property by index
 		 * \param i The index of the needed property
@@ -177,7 +245,7 @@ namespace ShadowEngine::Rendering {
 
 			return nullptr;
 		}
-		
+
 		void AddProperty(IShaderProperty* p)
 		{
 			shaderProperties.push_back(std::unique_ptr<IShaderProperty>(p));
@@ -185,15 +253,23 @@ namespace ShadowEngine::Rendering {
 		}
 
 
+#pragma endregion
+
+		/**
+		 * \brief Returns the number of textures
+		 * \return Num of textures
+		 */
+		size_t GetTextureCount() const { return  textures.size(); }
 
 		/**
 		 * \brief Gets a property by index
 		 * \param i The index of the needed property
 		 * \return The IShaderProperty that was requested
 		 */
-		Scope<ShaderProperty<Assets::Texture>>& GetTexture(size_t i)
+		template<class T>
+		ShaderRefProperty<T>* GetTexture(size_t i)
 		{
-			return textures[i];
+			return static_cast<ShaderRefProperty<T>*>( textures[i].get());
 		}
 
 		/**
@@ -201,9 +277,10 @@ namespace ShadowEngine::Rendering {
 		 * \param i The index of the needed property
 		 * \return The IShaderProperty that was requested as const
 		 */
-		const Scope<ShaderProperty<Assets::Texture>>& GetTexture(size_t i) const
+		template<class T>
+		ShaderRefProperty<T> const* GetTexture(size_t i) const
 		{
-			return textures[i];
+			return static_cast<ShaderRefProperty<T>*>(textures[i].get());
 		}
 
 		/**
@@ -212,14 +289,14 @@ namespace ShadowEngine::Rendering {
 		 * \param name The name of the property being requested
 		 * \return Pointer to the ShaderProperty<T> that was requested
 		 */
-		ShaderProperty<Assets::Texture>* GetTexture(std::string name)
+		ShaderRefProperty<Assets::Texture>* GetTexture(std::string name)
 		{
 			for (auto& property : shaderProperties)
 			{
-				if (property->GetTypeId() == ShaderProperty<Assets::Texture>::TypeId() &&
+				if (property->GetTypeId() == ShaderRefProperty<Assets::Texture>::TypeId() &&
 					property->GetName() == name)
 				{
-					return static_cast<ShaderProperty<Assets::Texture>*>(property.get());
+					return static_cast<ShaderRefProperty<Assets::Texture>*>(property.get());
 				}
 			}
 
@@ -232,14 +309,14 @@ namespace ShadowEngine::Rendering {
 		 * \param name The name of the property being requested
 		 * \return Pointer to the ShaderProperty<T> that was requested as const
 		 */
-		ShaderProperty<Assets::Texture> const* GetTexture(std::string name) const
+		ShaderRefProperty<Assets::Texture> const* GetTexture(std::string name) const
 		{
 			for (auto& property : shaderProperties)
 			{
-				if (property->GetTypeId() == ShaderProperty<Assets::Texture>::TypeId() &&
+				if (property->GetTypeId() == ShaderRefProperty<Assets::Texture>::TypeId() &&
 					property->GetName() == name)
 				{
-					return static_cast<ShaderProperty<Assets::Texture>*>(property.get());
+					return static_cast<ShaderRefProperty<Assets::Texture>*>(property.get());
 				}
 			}
 			
@@ -247,9 +324,18 @@ namespace ShadowEngine::Rendering {
 		}
 
 		
-		void AddTexture(ShaderProperty<Assets::Texture>* p)
+		void AddTexture(ShaderRefProperty<Assets::Texture>* p)
 		{
-			textures.push_back(std::unique_ptr<ShaderProperty<Assets::Texture>>(p));
+			textures.push_back(Scope<ShaderRefProperty<Assets::Texture>>(p));
+		}
+
+		void AddTexture2D(ShaderRefProperty<Assets::Texture2D>* p) {
+			textures.push_back(Scope<ShaderRefProperty<Assets::Texture2D>>(p));
+		}
+
+		void AddTexture(IShaderProperty* p)
+		{
+			textures.push_back(std::unique_ptr<IShaderProperty>(p));
 		}
 		
 		/*
@@ -291,7 +377,32 @@ namespace ShadowEngine::Rendering {
 			return data;
 		}
 
-		
+
+
+		std::string ToString()
+		{
+			std::string res;
+			res += "Properties: \n";
+			for each (auto& var in shaderProperties)
+			{
+				res += var->GetName();
+				res += " : ";
+				res += var->GetPropertyTypeName();
+				res += "\n";
+
+			}
+			res += "Textures: \n";
+			for each (auto & var in textures)
+			{
+				res += var->GetName();
+				res += " : ";
+				res += var->GetPropertyTypeName();
+				res += "\n";
+
+			}
+
+			return res;
+		}
 	};
 
 

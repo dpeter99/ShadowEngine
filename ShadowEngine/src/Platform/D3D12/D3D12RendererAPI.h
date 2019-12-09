@@ -29,8 +29,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 
 		static D3D12RendererAPI* Instance;
-		
-		Ref<D3D12Texture> t;
+
 	public:
 		/**
 		 * \brief The Graphics command queue

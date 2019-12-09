@@ -48,6 +48,46 @@ namespace ShadowEngine::Rendering::D3D12 {
 			adapterId++;
 		} while (adapterQueryResult != DXGI_ERROR_NOT_FOUND);
 	}
+
+	IDXGIAdapter1* FindDevice(IDXGIFactory6* dxgiFactory) {
+		IDXGIAdapter1* adapter; // adapters are the graphics card (this includes the embedded graphics on the motherboard)
+
+		int adapterIndex = 0; // we'll start looking for directx 12  compatible graphics devices starting at index 0
+
+		bool adapterFound = false; // set this to true when a good one was found
+
+		// find first hardware gpu that supports d3d 12
+		while (dxgiFactory->EnumAdapters1(adapterIndex, &adapter) != DXGI_ERROR_NOT_FOUND)
+		{
+			DXGI_ADAPTER_DESC1 desc;
+			adapter->GetDesc1(&desc);
+
+			if (desc.Flags & DXGI_ADAPTER_FLAG_SOFTWARE)
+			{
+				// we dont want a software device
+				adapterIndex++; // add this line here. Its not currently in the downloadable project
+				continue;
+			}
+
+			// we want a device that is compatible with direct3d 12 (feature level 11 or higher)
+			HRESULT hr;
+			hr = D3D12CreateDevice(adapter, D3D_FEATURE_LEVEL_12_1, _uuidof(ID3D12Device), nullptr);
+			if (SUCCEEDED(hr))
+			{
+				adapterFound = true;
+				break;
+			}
+
+			adapterIndex++;
+		}
+
+		if (!adapterFound)
+		{
+			return nullptr;
+		}
+
+		return adapter;
+	}
 	
 	void D3D12RendererAPI::Init(ShadowEngine::Ref<GraphicsContext> _ctx)
 	{
@@ -57,22 +97,29 @@ namespace ShadowEngine::Rendering::D3D12 {
 		this->ctx = std::dynamic_pointer_cast<D3D12Context>(_ctx);
 		
 		//Load in the GPU adapters
-		std::vector<com_ptr<IDXGIAdapter1>> adapters;
-		GetAdapters(ctx->dxgiFactory.Get(), adapters);	
+		//std::vector<com_ptr<IDXGIAdapter1>> adapters;
+		//GetAdapters(ctx->dxgiFactory.Get(), adapters);	
 
 		// select your adapter here, NULL = system default
 		// Using the first adapter for now
-		IUnknown* selectedAdapter = (adapters.size() > 0) ? adapters[0].Get() : NULL;
+
+		
+
+		//IUnknown* selectedAdapter = (adapters.size() > 0) ? adapters[0].Get() : NULL;
 
 		com_ptr<ID3D12Debug> debug_controller;
 		D3D12GetDebugInterface(IID_PPV_ARGS(&debug_controller));
 		debug_controller->EnableDebugLayer();
 		
+		IDXGIAdapter1* adapter = FindDevice(ctx->dxgiFactory.Get());
 		//Create the D3D device
 		DX_API("Failed to create D3D Device")
-			D3D12CreateDevice(selectedAdapter, D3D_FEATURE_LEVEL_11_0, IID_PPV_ARGS(device.GetAddressOf()));
+			D3D12CreateDevice(adapter, D3D_FEATURE_LEVEL_11_0, IID_PPV_ARGS(device.GetAddressOf()));
 
 		
+		if (device == nullptr) {
+			throw new std::exception("No graphics card");
+		}
 		
 		viewPort.TopLeftX = 0;
 		viewPort.TopLeftY = 0;
@@ -109,8 +156,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 		upload_managger = std::make_shared<D3D12UploadManagger>();
 
-		t = std::make_shared<D3D12Texture>("./Resources/Textures/giraffe.png");
-		UploadResource(t);
+		
+		
 	}
 
 	void D3D12RendererAPI::SetClearColor(const glm::vec4& color)

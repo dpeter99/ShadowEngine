@@ -3,26 +3,34 @@
 #include "Core/SHObject.h"
 #include "ShadowAsset/ShadowAsset.h"
 
-#include "ShadowRenderer/Buffer.h"
-
 namespace ShadowEngine::Assets {
 
-	class Texture2DImpl {
+	class TextureImpl {
+		virtual void Upload() = 0;
+	};
+
+	class Texture2DImpl : public TextureImpl {
 	public:
 		static Ref<Texture2DImpl> Create(std::string path);
 
-		virtual void Upload() = 0;
+
 	};
 
 	class Texture : public ShadowAsset
 	{
 		SHObject_Base(Texture)
+	protected:
+		Ref<TextureImpl> impl;
+
 
 		//virtual uint32_t GetWidth() const = 0;
 		//virtual uint32_t GetHeight() const = 0;
 
 	public:
-		Texture();
+		Texture(std::string path);
+		//Texture();
+
+		virtual Ref<TextureImpl> getImpl() { return impl; };
 
 	};
 
@@ -30,7 +38,11 @@ namespace ShadowEngine::Assets {
 	{
 		SHObject_Base(Texture2D)
 
+	protected:
+
+
 	public:
+		Texture2D(std::string path);
 		Texture2D();
 
 	};

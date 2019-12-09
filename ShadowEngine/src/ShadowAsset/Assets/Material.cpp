@@ -41,6 +41,11 @@ namespace  ShadowEngine::Assets {
 			this->impl->Upload();
 			dirty = false;
 		}
+
+		if (texture_dirty) {
+			this->impl->UploadTextures();
+			texture_dirty = false;
+		}
 	}
 
 	Material::Material(const Ref<Rendering::Shader>& shader)

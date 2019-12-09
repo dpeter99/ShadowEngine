@@ -11,9 +11,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 		com_ptr<ID3D12Resource> constantBuffer;
 
 		size_t actual_size;
+
+		std::wstring debug_name;
 	public:
 
-		D3D12ConstantBuffer(size_t size);
+		D3D12ConstantBuffer(size_t size, std::wstring debug_name);
 
 		~D3D12ConstantBuffer();
 
