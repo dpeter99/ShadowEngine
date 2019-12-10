@@ -5,7 +5,7 @@
 
 #include "ShadowRenderer/Buffer.h"
 #include "ShadowRenderer/Shader.h"
-#include "ShadowRenderer/ShaderPropertySheet.h"
+#include "ShadowRenderer/ShaderProperties/ShaderPropertySheet.h"
 
 namespace ShadowEngine::Rendering {
 	class ConstantBuffer;
@@ -79,7 +79,7 @@ namespace ShadowEngine::Assets {
 		template<class T>
 		void SetTexture(const std::string& name, Ref<T> value) {
 
-			auto property = properties->GetTexture(name);
+			auto property = properties->GetTexture<T>(name);
 			if (property == nullptr) {
 				SH_CORE_WARN("No property named: %s", name);
 				return;

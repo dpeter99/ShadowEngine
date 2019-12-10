@@ -1,5 +1,5 @@
 #pragma once
-#include "ShaderPropertySheet.h"
+
 #include "RendererAPI.h"
 
 #include <typeinfo>

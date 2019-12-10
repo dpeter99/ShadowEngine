@@ -25,6 +25,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		 * \return Buffer view returned
 		 */
 		const D3D12_VERTEX_BUFFER_VIEW& GetBufferView() const { return vertexBufferView; };
+
 	private:
 		com_ptr<ID3D12Resource> vertexBuffer;
 		D3D12_VERTEX_BUFFER_VIEW vertexBufferView{};

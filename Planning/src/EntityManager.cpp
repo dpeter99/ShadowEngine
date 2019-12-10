@@ -707,7 +707,7 @@ public:
 	}
 };
 
-void main() {
+void main_entity() {
 	EntityManager entity_manager;
 
 	Scene s;

@@ -11,5 +11,7 @@ VSOutput main( Vertex vert )
     o.texCoord = vert.texCoord;
     o.color = vert.color;
 
+    o.worldPos = mul(modelMat, float4(vert.position, 1.0f));
+
 	return o;
 }

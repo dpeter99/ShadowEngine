@@ -49,6 +49,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	D3D12VertexBuffer::~D3D12VertexBuffer()
 	{
+		std::cout << "Vertex Buffer free";
 	}
 
 	/**
@@ -95,5 +96,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	D3D12IndexBuffer::~D3D12IndexBuffer()
 	{
+		std::cout << "Index Buffer free";
 	}
 }

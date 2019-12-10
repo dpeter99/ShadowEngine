@@ -6,6 +6,7 @@
 namespace ShadowEngine::Assets {
 
 	class TextureImpl {
+	public:
 		virtual void Upload() = 0;
 	};
 
@@ -32,6 +33,7 @@ namespace ShadowEngine::Assets {
 
 		virtual Ref<TextureImpl> getImpl() { return impl; };
 
+		void Upload() { impl->Upload(); };
 	};
 
 	class Texture2D : public Texture

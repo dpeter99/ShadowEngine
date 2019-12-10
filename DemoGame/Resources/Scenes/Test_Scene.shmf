@@ -1,0 +1,49 @@
+ShadowFormat_0_0_1
+Asset:{
+	UID:00001,
+	Type:Scene,
+}
+Scene:{
+	Type: 3D,
+	Solids:{
+		Solid:{
+			ID: 0
+			Side1:{
+				Points:{
+					Point:{x:0,y:0,z:0,u:0,v:0},
+					Point:{x:0,y:0,z:0,u:0,v:0},
+					Point:{x:0,y:0,z:0,u:0,v:0},
+					Point:{x:0,y:0,z:0,u:0,v:0}
+				}
+				Material:@{TEST/TEST}
+			}
+			Side2:{
+				Points:{
+					Point:{x:0,y:0,z:0,u:0,v:0},
+					Point:{x:0,y:0,z:0,u:0,v:0},
+					Point:{x:0,y:0,z:0,u:0,v:0},
+					Point:{x:0,y:0,z:0,u:0,v:0}
+				}
+				Material:@{TEST/TEST}
+			}
+			Side3:{
+				Points:{
+					Point:{x:0,y:0,z:0,u:0,v:0},
+					Point:{x:0,y:0,z:0,u:0,v:0},
+					Point:{x:0,y:0,z:0,u:0,v:0},
+					Point:{x:0,y:0,z:0,u:0,v:0}
+				}
+				Material:@{TEST/TEST}
+			}
+			Side4:{
+				Points:{
+					Point:{x:0,y:0,z:0,u:0,v:0},
+					Point:{x:0,y:0,z:0,u:0,v:0},
+					Point:{x:0,y:0,z:0,u:0,v:0},
+					Point:{x:0,y:0,z:0,u:0,v:0}
+				}
+				Material:@{TEST/TEST}
+			}
+		}
+	}
+}

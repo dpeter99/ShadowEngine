@@ -1,6 +1,6 @@
 #include "shpch.h"
-#include "D3D12Texture.h"
-#include "D3D12RendererAPI.h"
+#include "D3D12Texture2D.h"
+#include "Platform/D3D12/D3D12RendererAPI.h"
 
 ShadowEngine::Rendering::D3D12::D3D12Texture2D::D3D12Texture2D(std::string path)
 {
@@ -36,6 +36,8 @@ ShadowEngine::Rendering::D3D12::D3D12Texture2D::D3D12Texture2D(std::string path)
 			nullptr,
 			IID_PPV_ARGS(resource.GetAddressOf()));
 
+	resource->SetName(s2ws("Texture2D Commited resource").c_str());
+	
 	UINT64 copyableSize;
 	D3D12RendererAPI::device->GetCopyableFootprints(&resourceDesc, 0, 1, 0, nullptr, nullptr, nullptr, &copyableSize);
 
@@ -48,9 +50,12 @@ ShadowEngine::Rendering::D3D12::D3D12Texture2D::D3D12Texture2D(std::string path)
 			nullptr,
 			IID_PPV_ARGS(uploadResource.GetAddressOf()));
 
+	uploadResource->SetName(s2ws("Texture2D upload resource resource").c_str());
+
+	
 	CD3DX12_RANGE readRange{ 0,0 };
 	void* mappedPtr;
-
+	
 	DX_API("Failed to map upload resource")
 		uploadResource->Map(0, &readRange, &mappedPtr);
 
@@ -60,26 +65,7 @@ ShadowEngine::Rendering::D3D12::D3D12Texture2D::D3D12Texture2D(std::string path)
 
 	ready = false;
 
-	D3D12::D3D12RendererAPI::Instance->UploadResource(Ref<D3D12Texture2D>( this));
-}
 
-DXGI_FORMAT ShadowEngine::Rendering::D3D12::D3D12Texture2D::SDLFormatToGXGI(SDL_PixelFormat& sdl) {
-	switch (sdl.format) {
-	case SDL_PIXELFORMAT_ARGB8888:
-		return DXGI_FORMAT_B8G8R8A8_UNORM;
-	case SDL_PIXELFORMAT_RGB888:
-		return DXGI_FORMAT_B8G8R8X8_UNORM;
-	case SDL_PIXELFORMAT_YV12:
-	case SDL_PIXELFORMAT_IYUV:
-	case SDL_PIXELFORMAT_NV12:  /* For the Y texture */
-	case SDL_PIXELFORMAT_NV21:  /* For the Y texture */
-		return DXGI_FORMAT_R8_UNORM;
-	case SDL_PIXELFORMAT_ABGR8888:
-		return DXGI_FORMAT_R8G8B8A8_UNORM;
-	default:
-		return DXGI_FORMAT_UNKNOWN;
-
-	}
 }
 
 ShadowEngine::Rendering::D3D12::com_ptr<ID3D12Resource> ShadowEngine::Rendering::D3D12::D3D12Texture2D::GetResource()
@@ -114,4 +100,5 @@ void ShadowEngine::Rendering::D3D12::D3D12Texture2D::FinishedUploading()
 
 void ShadowEngine::Rendering::D3D12::D3D12Texture2D::Upload()
 {
+	D3D12::D3D12RendererAPI::Instance->UploadResource(this->shared_from_this());
 }

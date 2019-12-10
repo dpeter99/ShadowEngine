@@ -11,7 +11,6 @@
 #include "ShadowRenderer/Shader.h"
 #include "ShadowAsset/Assets/Material.h"
 #include "D3D12UploadManagger.h"
-#include "D3D12Texture.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 

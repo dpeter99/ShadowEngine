@@ -3,6 +3,8 @@
 #include <EntitySystem\Entities\Camera.h>
 #include "EntitySystem/Entities/MeshRenderer.h"
 #include "EntitySystem/Entities/FirstPersonCamera.h"
+#include "ShadowAsset/Assets/Textures/Texture.h"
+#include "ShadowAsset/Assets/Textures/TextureCubeMap.h"
 
 void TestScene::Init()
 {
@@ -14,8 +16,8 @@ void TestScene::Init()
 
 	auto fps = AddEntity< FirstPersonCamera>();
 	
-	
-
+	auto env_map = std::make_shared<ShadowEngine::Assets::TextureCubeMap>("./Resources/Textures/giraffe.png");
+	env_map->Upload();
 	
 	auto m_model = ShadowEngine::Assets::Mesh::LoadModel_obj("giraffe.obj");
 
@@ -26,8 +28,10 @@ void TestScene::Init()
 	m_Material->SetProperty("tint", glm::vec4(1, 1, 1, 1));
 
 	auto Texture = std::make_shared<ShadowEngine::Assets::Texture2D>("./Resources/Textures/giraffe.png");
+	Texture->Upload();
 	m_Material->SetTexture("Mat_Tex", Texture);
-
+	m_Material->SetTexture("Mat_Env", env_map);
+	
 	m_Material->UpdateBufferIfDirty();
 	//m_Material->SetProperty("o_color", glm::vec4(1,1, 1, 1));
 	

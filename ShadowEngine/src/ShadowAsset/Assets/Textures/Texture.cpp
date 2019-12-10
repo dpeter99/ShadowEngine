@@ -2,10 +2,14 @@
 #include "Texture.h"
 
 #include "ShadowRenderer/Renderer.h"
-#include "Platform/D3D12/D3D12Texture.h"
+#include "Platform/D3D12/Textures/D3D12Texture2D.h"
 
 namespace ShadowEngine::Assets {
 
+	Texture::Texture(std::string path)
+	{
+	}
+	
 	Ref<Texture2DImpl> ShadowEngine::Assets::Texture2DImpl::Create(std::string path)
 	{
 		switch (ShadowEngine::Rendering::Renderer::GetAPI())
@@ -23,8 +27,6 @@ namespace ShadowEngine::Assets {
 		impl = Texture2DImpl::Create(path);
 	}
 
-	Texture::Texture(std::string path)
-	{
-	}
+
 
 }

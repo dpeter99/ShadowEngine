@@ -3,6 +3,7 @@
 #include "D3D12Shader.h"
 #include "D3D12RendererAPI.h"
 #include "ShadowRenderer/DataStructs.h"
+#include "ShadowAsset/Assets/Textures/Texture.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 

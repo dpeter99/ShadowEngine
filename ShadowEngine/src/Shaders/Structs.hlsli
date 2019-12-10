@@ -12,6 +12,8 @@ struct VSOutput
     float3 normal : NORMAL;
     float2 texCoord : TEXCOORD;
     float4 color : COLOR;
+
+    float4 worldPos : WORLD;
 };
 
 cbuffer PerFrameCb : register(b0)
@@ -23,4 +25,5 @@ cbuffer PerFrameCb : register(b0)
 
 cbuffer PerObjectCb : register(b1) {
 	float4x4 modelMat;
+    float4x4 modelMatInverse;
 }

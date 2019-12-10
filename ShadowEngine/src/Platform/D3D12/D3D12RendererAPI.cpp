@@ -7,7 +7,6 @@
 #include "D3D12CommandQueue.h"
 #include "ShadowAsset/Assets/Mesh.h"
 #include "D3D12Shader.h"
-#include <Platform\D3D12\D3D12Texture.h>
 #include "D3D12MaterialImpl.h"
 
 namespace ShadowEngine::Rendering::D3D12 {

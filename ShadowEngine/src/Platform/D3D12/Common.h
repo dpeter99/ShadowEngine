@@ -15,6 +15,7 @@
 
 
 #include <dxgi1_5.h>
+#include <SDL.h>
 
 using IDXGIFactory6 = IDXGIFactory5;
 
@@ -47,7 +48,8 @@ namespace ShadowEngine::Rendering::D3D12
 				oss << File << "(" << Line << "): " << Message;
 
 				MessageBoxA(NULL, oss.str().c_str(), "Error!", MB_ICONSTOP | MB_OK);
-				exit(-1);
+				__debugbreak();
+				//exit(-1);
 			}
 		}
 	};
@@ -65,5 +67,25 @@ namespace ShadowEngine::Rendering::D3D12
 		va_end(va);
 		wstr.shrink_to_fit();
 		return wstr;
+	}
+
+	inline DXGI_FORMAT SDLFormatToGXGI(SDL_PixelFormat& sdl)
+	{
+		switch (sdl.format) {
+		case SDL_PIXELFORMAT_ARGB8888:
+			return DXGI_FORMAT_B8G8R8A8_UNORM;
+		case SDL_PIXELFORMAT_RGB888:
+			return DXGI_FORMAT_B8G8R8X8_UNORM;
+		case SDL_PIXELFORMAT_YV12:
+		case SDL_PIXELFORMAT_IYUV:
+		case SDL_PIXELFORMAT_NV12:  /* For the Y texture */
+		case SDL_PIXELFORMAT_NV21:  /* For the Y texture */
+			return DXGI_FORMAT_R8_UNORM;
+		case SDL_PIXELFORMAT_ABGR8888:
+			return DXGI_FORMAT_R8G8B8A8_UNORM;
+		default:
+			return DXGI_FORMAT_UNKNOWN;
+
+		}
 	}
 }

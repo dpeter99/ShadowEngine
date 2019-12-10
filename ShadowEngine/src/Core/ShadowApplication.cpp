@@ -63,7 +63,7 @@ namespace ShadowEngine {
 		auto scenemg = moduleManager.GetModuleByType<EntitySystem::EntitySystem>();
 		scenemg->LoadScene(new TestScene());
 
-		TestRenderer test;
+		//TestRenderer test;
 
 		while (running)
 		{
@@ -76,7 +76,7 @@ namespace ShadowEngine {
 
 			moduleManager.Update();
 
-			test.Update();
+			//test.Update();
 
 			moduleManager.Render();
 
