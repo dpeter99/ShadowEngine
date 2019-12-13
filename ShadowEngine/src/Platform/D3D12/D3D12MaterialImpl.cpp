@@ -51,7 +51,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 		if (!prop->IsEmpty()) {
 
-			int type = prop->GetPropertyDataTyped().GetTypeId();
+			unsigned long long type = prop->GetPropertyDataTyped().GetTypeId();
 
 			D3D12_SHADER_RESOURCE_VIEW_DESC srvDesc = {};
 
@@ -63,10 +63,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 				srvDesc.ViewDimension = D3D12_SRV_DIMENSION_TEXTURE2D;
 				srvDesc.Format = a->GetDXGIFormat();
 				srvDesc.Shader4ComponentMapping = D3D12_DEFAULT_SHADER_4_COMPONENT_MAPPING;
-				prop->GetPropertyData();
+
 				srvDesc.Texture2D.MipLevels = 1;
 				D3D12RendererAPI::device->CreateShaderResourceView(a->GetResource().Get(), &srvDesc,
-					table[i+1].CPU_TableStart);
+					table[i + 1].CPU_TableStart);
 			}
 			if (type == Assets::TextureCubeMap::TypeId())
 			{
@@ -75,13 +75,14 @@ namespace ShadowEngine::Rendering::D3D12 {
 				srvDesc.ViewDimension = D3D12_SRV_DIMENSION_TEXTURECUBE;
 				srvDesc.Format = a->GetDXGIFormat();
 				srvDesc.Shader4ComponentMapping = D3D12_DEFAULT_SHADER_4_COMPONENT_MAPPING;
-				prop->GetPropertyData();
+				srvDesc.TextureCube.MipLevels = 1;
 				srvDesc.Texture2D.MipLevels = 1;
+
 				D3D12RendererAPI::device->CreateShaderResourceView(a->GetResource().Get(), &srvDesc,
 					table[i + 1].CPU_TableStart);
 			}
 		}
-		
+
 	}
 
 	void D3D12MaterialImpl::UploadTextures()

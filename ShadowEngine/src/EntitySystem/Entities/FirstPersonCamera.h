@@ -9,7 +9,6 @@ class FirstPersonCamera: public ShadowEngine::EntitySystem::SceneEntity
 	Entity_Base(FirstPersonCamera, ShadowEngine::EntitySystem::SceneEntity)
 
 private:
-	std::string a = "FPS Cam ABCD";
 	
 	ShadowEngine::EntitySystem::rtm_ptr<Camera> cam;
 

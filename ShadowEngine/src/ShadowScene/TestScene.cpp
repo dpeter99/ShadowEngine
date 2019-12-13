@@ -5,6 +5,7 @@
 #include "EntitySystem/Entities/FirstPersonCamera.h"
 #include "ShadowAsset/Assets/Textures/Texture.h"
 #include "ShadowAsset/Assets/Textures/TextureCubeMap.h"
+#include "EntitySystem/Entities/SkySphere.h"
 
 void TestScene::Init()
 {
@@ -12,7 +13,7 @@ void TestScene::Init()
 	//c->SetCameraType(CameraType::Perspective);
 	//c->transform.SetPosition({ 0,0.0f,-10.0f });
 
-
+	auto sky = AddEntity<SkySphere>();
 
 	auto fps = AddEntity< FirstPersonCamera>();
 	

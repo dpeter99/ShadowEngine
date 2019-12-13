@@ -4,6 +4,7 @@
 #include "D3D12RendererAPI.h"
 #include "ShadowRenderer/DataStructs.h"
 #include "ShadowAsset/Assets/Textures/Texture.h"
+#include "ShadowAsset/Assets/Textures/TextureCubeMap.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
@@ -111,6 +112,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		return layout_desc;
 	}
 
+	//old
 	void D3D12Shader::ExtractProperties()
 	{
 		//################################################################
@@ -288,8 +290,17 @@ namespace ShadowEngine::Rendering::D3D12 {
 					ExtractCBProps(binding_desc);
 				}
 				else if (binding_desc.Type == D3D_SIT_TEXTURE) {
-					properties.AddTexture(new ShadowEngine::Rendering::ShaderRefProperty<Assets::Texture2D>(binding_desc.Name));
-
+					switch (binding_desc.Dimension)
+					{
+					case(D3D_SRV_DIMENSION_TEXTURE2D):
+						properties.AddTexture(new ShadowEngine::Rendering::ShaderRefProperty<Assets::Texture2D>(binding_desc.Name));
+						break;
+					case(D3D_SRV_DIMENSION_TEXTURECUBE):
+						properties.AddTexture(new ShadowEngine::Rendering::ShaderRefProperty<Assets::TextureCubeMap>(binding_desc.Name));
+						break;
+					default:
+						break;
+					}
 				}
 			}
 
@@ -324,6 +335,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 				std::cout << "\t BindPoint: " << binding_desc.BindPoint << std::endl;
 				std::cout << "\t BindCount: " << binding_desc.BindCount << std::endl;
 				std::cout << "\t Space: " << binding_desc.Space << std::endl;
+				std::cout << "\t Dim: " << binding_desc.Dimension << std::endl;
 				std::wcout << "\t Material Data: " << (matdata ? "OK" : "NOP") << std::endl;
 
 			}
@@ -470,10 +482,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 		blendState = CD3DX12_BLEND_DESC(D3D12_DEFAULT);
 		rasterizerState = CD3DX12_RASTERIZER_DESC(D3D12_DEFAULT);
 		rasterizerState.CullMode = D3D12_CULL_MODE_FRONT;
+		
 		depthStencilState = CD3DX12_DEPTH_STENCIL_DESC(D3D12_DEFAULT);
-		depthStencilState.DepthEnable = FALSE;
+		depthStencilState.DepthEnable = TRUE;
+		depthStencilState.DepthFunc = D3D12_COMPARISON_FUNC_LESS;
 		depthStencilState.StencilEnable = FALSE;
-		dsvFormat = DXGI_FORMAT_UNKNOWN;
+		dsvFormat = DXGI_FORMAT_D32_FLOAT;
 
 
 		//Load Up the shader codes

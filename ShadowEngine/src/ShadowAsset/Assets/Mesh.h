@@ -5,6 +5,7 @@
 
 #include "ShadowRenderer/Buffer.h"
 
+
 namespace ShadowEngine::Assets {
 
 	class Mesh : public ShadowAsset
@@ -24,5 +25,7 @@ namespace ShadowEngine::Assets {
 			uint32_t* indexData, unsigned index_count);
 
 		static Ref<Mesh> LoadModel_obj(const std::string& filePath);
+
+		static Ref<Mesh> CreateSphere(int LatLines, int LongLines);
 	};
 }

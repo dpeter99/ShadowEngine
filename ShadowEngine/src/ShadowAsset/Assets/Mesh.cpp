@@ -8,12 +8,18 @@
 #include "ShadowRenderer/DataStructs.h"
 #include "Platform/D3D12/Common.h"
 
+#include <glm/glm.hpp>
+#include <map>
+
 namespace ShadowEngine::Assets {
 
 
 	Mesh::Mesh(void* vertices, unsigned sizeInBytes, unsigned stride, uint32_t* indexData,
 		unsigned indexDataSizeInBytes)
 	{
+		SH_ASSERT(sizeInBytes == 0, "Vertex buffer can't be 0 size");
+		SH_ASSERT(indexDataSizeInBytes == 0, "Index buffer can't be 0 size");
+		
 		vertex_buffer.reset(ShadowEngine::Rendering::VertexBuffer::Create(vertices, sizeInBytes));
 		index_buffer.reset(ShadowEngine::Rendering::IndexBuffer::Create(indexData, indexDataSizeInBytes));
 	}
@@ -21,10 +27,10 @@ namespace ShadowEngine::Assets {
 	Mesh::Mesh(void* vertices, unsigned vert_count,
 		uint32_t* indexData, unsigned index_count)
 	{
-		vertex_buffer.reset(ShadowEngine::Rendering::VertexBuffer::Create(vertices, vert_count* sizeof(Rendering::Vertex)));
-		index_buffer.reset(ShadowEngine::Rendering::IndexBuffer::Create(indexData, index_count*sizeof(uint32_t)));
+		vertex_buffer.reset(ShadowEngine::Rendering::VertexBuffer::Create(vertices, vert_count * sizeof(Rendering::Vertex)));
+		index_buffer.reset(ShadowEngine::Rendering::IndexBuffer::Create(indexData, index_count * sizeof(uint32_t)));
 	}
-	
+
 	Ref<Mesh> Mesh::LoadModel_obj(const std::string& filePath) {
 		std::string path = "./Resources/Model/" + filePath;
 
@@ -34,8 +40,8 @@ namespace ShadowEngine::Assets {
 
 		if (scene == nullptr)
 			std::cout << importer.GetErrorString();
-		
-		SH_ASSERT(scene != nullptr,"Failed to load obj file: '%s'. Assimp error message: '%s'",path.c_str(), importer.GetErrorString());
+
+		SH_ASSERT(scene != nullptr, "Failed to load obj file: '%s'. Assimp error message: '%s'", path.c_str(), importer.GetErrorString());
 
 		ASSERT(scene->HasMeshes(), "Obj file: '%s' does not contain a mesh.", path.c_str());
 
@@ -92,8 +98,12 @@ namespace ShadowEngine::Assets {
 
 		Ref<Mesh> m = std::make_shared<Mesh>(vertices.data(), vertices.size(),
 			indices.data(), indices.size());
-		
+
 		return m;
 
 	}
+
+	
+
 }
+

@@ -38,20 +38,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 			format = SDLFormatToGXGI(*img->format);
 			bitsPerPixel = img->format->BitsPerPixel;
 
-			//CPU side descriptor;
-			ZeroMemory(&resourceDesc, sizeof(D3D12_RESOURCE_DESC));
-			resourceDesc.DepthOrArraySize = 1;
-			resourceDesc.Height = (unsigned int)img->h;
-			resourceDesc.Width = (unsigned int)img->w;
-			resourceDesc.Format = SDLFormatToGXGI(*img->format);
-			resourceDesc.MipLevels = 1;
-			resourceDesc.Dimension = D3D12_RESOURCE_DIMENSION_TEXTURE2D;
-			resourceDesc.Alignment = 0;
-			resourceDesc.SampleDesc.Count = 1;
-			resourceDesc.SampleDesc.Quality = 0;
-			resourceDesc.Layout = D3D12_TEXTURE_LAYOUT_UNKNOWN;
-			resourceDesc.Flags = D3D12_RESOURCE_FLAG_NONE;
-
 			com_ptr<ID3D12Resource> cpuRes;
 
 			DX_API("failed to create committed resource for texture file (upload buffer)")

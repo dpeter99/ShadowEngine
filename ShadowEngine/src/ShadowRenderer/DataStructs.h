@@ -17,6 +17,15 @@ namespace ShadowEngine::Rendering {
 		 * \brief The default layout of the meshes being used
 		 */
 		static BufferLayout input_layout;
+
+		Vertex(glm::vec3 pos) :pos(pos), normal({ 0,0,0 }), uv({ 0,0 }), color({ 0,0,0,0 })
+		{}
+
+		Vertex(glm::vec3 pos, glm::vec3 normal, glm::vec2 uv, glm::vec4 color) :pos(pos), normal(normal), uv(uv), color(color)
+		{}
+
+		Vertex() :pos({0,0,0}), normal({ 0,0,0 }), uv({ 0,0 }), color({ 0,0,0,0 })
+		{}
 	};
 
 	struct ModelData

@@ -16,6 +16,13 @@ struct VSOutput
     float4 worldPos : WORLD;
 };
 
+struct VSOutput_SkyBox
+{
+	float4 position : SV_Position;
+	float3 texCoord : TEXCOORD;
+	float4 worldPos : WORLD;
+};
+
 cbuffer PerFrameCb : register(b0)
 {
 	float4x4 viewProjMat;
