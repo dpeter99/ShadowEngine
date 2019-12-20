@@ -13,6 +13,8 @@
 #include "ShadowTime.h"
 #include "Inspector/Inspector.h"
 #include "Inspector/InspectorSystem.h"
+#include "EntitySystem/EntitySystem.h"
+#include <Core\ShadowApplication.h>
 
 namespace ShadowEngine::Debug {
 
@@ -62,6 +64,36 @@ namespace ShadowEngine::Debug {
 		ImGui::End();
 	}
 
+	void DebugModule::DebugHierarchy()
+	{
+		static bool shown;
+
+		auto* scenemg = ShadowEngine::ShadowApplication::Get().GetModuleManager().GetModuleByType<EntitySystem::EntitySystem>();
+		
+		ImGui::Begin("Hierarchy", &shown, ImGuiWindowFlags_MenuBar);
+
+		auto& scene = scenemg->GetActiveScene();
+		
+		if( ImGui::TreeNode((void*)&scene,scene->Type().c_str()))
+		{
+			for each (auto& entity in scene->m_entities)
+			{
+				if (ImGui::TreeNode((void*)&entity, entity->name.c_str()))
+				{
+					
+					ImGui::TreePop();
+				}
+			}
+
+			ImGui::TreePop();
+		}
+
+
+		
+		
+		ImGui::End();
+	}
+
 	void DebugModule::OnGui()
 	{
 		//ImGui::ShowDemoWindow();
@@ -90,6 +122,8 @@ namespace ShadowEngine::Debug {
 		ImGui::End();
 
 		ActionDebug();
+
+		DebugHierarchy();
 	}
 
 }

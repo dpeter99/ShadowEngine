@@ -19,8 +19,8 @@ namespace ShadowEngine::EntitySystem
 
 namespace ShadowEngine::EntitySystem
 {
-	class Entity;
-	
+	//class Entity;
+
 	template<class Type>
 	class rtm_ptr
 	{
@@ -31,9 +31,9 @@ namespace ShadowEngine::EntitySystem
 	public:
 		rtm_ptr(Type* ptr) : m_ptr(ptr), m_uid(ptr->m_runtimeUID) {}
 
-		rtm_ptr() :  m_ptr(nullptr){}
-		
-		inline Type* operator->()
+		rtm_ptr() : m_ptr(nullptr) {}
+
+		Type* operator->() const
 		{
 			if (m_ptr->m_runtimeUID != m_uid) {
 				assert(m_ptr->m_runtimeUID == m_uid);
@@ -49,12 +49,12 @@ namespace ShadowEngine::EntitySystem
 			return rtm_ptr<T>(m_ptr);
 		}
 
-		
+
 	};
 
 	enum class EntityFlags {
 		NONE = 0,
-		HAS_TICK= 1 << 0,
+		HAS_TICK = 1 << 0,
 		HAS_LATE_TICK = 1 << 1
 	};
 
@@ -65,7 +65,7 @@ namespace ShadowEngine::EntitySystem
 	class Entity : public SHObject
 	{
 		SHObject_Base(Entity)
-		
+
 	public:
 		/// <summary>
 		/// This is the Globaly unique ID of this Entity
@@ -89,6 +89,9 @@ namespace ShadowEngine::EntitySystem
 		/// To use this Entity for lookup use the LUT in the EntityManager
 		int m_runtimeIndex;
 
+		///The name of this entity
+		std::string name;
+
 		
 		/// <summary>
 		/// The scene this Enity is assigned to
@@ -100,10 +103,10 @@ namespace ShadowEngine::EntitySystem
 		*/
 		std::vector<rtm_ptr<Entity>> internalHierarchy;
 
-		std::vector<Entity> hierarchy;
+		std::vector<rtm_ptr<Entity>> hierarchy;
 
 		rtm_ptr<Entity> parent;
-		
+
 	public:
 		/// <summary>
 		/// Empty default constructor
@@ -125,36 +128,48 @@ namespace ShadowEngine::EntitySystem
 		/// <returns>Pointer to the Entity created</returns>
 		virtual Entity* Create(Scene* scene);
 
+		virtual void Build();
+		
 		/// Called when the Entity needs to be initialised. Should be used as a constructor
 		/// <summary>
 		/// Called when the Entity needs to be initialised.
 		/// </summary>
 		virtual  void Init();
-		
+
 		/// <summary>
 		/// Called when the world starts or before the Entity get's it's first tick
 		/// </summary>
-		virtual void Start();
+		virtual void Start() {};
 
 		/// <summary>
 		/// Called every tick
 		/// </summary>
-		virtual void Update(float dt);
+		virtual void Update(float dt) {};
 
 		/// <summary>
 		/// Called every Tick after the first is finished
 		/// </summary>
-		virtual void LateUpdate();
+		virtual void LateUpdate() {};
 
-		virtual void Render();
+		virtual void Render() {};
 
-		virtual  void LateRender();
+		virtual  void LateRender() {};
 
 		virtual EntityFlags GetFlags();
 
-		virtual void TransformChanged(bool self);
+		
 
 		virtual ShadowEntity::Transform* GetTransform();
+	public:
+		//Internal call
+		virtual void ParentTransformUpdated()
+		{
+			TransformChanged();
+		};
+	public:
+		//Override for custom behaviour on transform change
+		virtual void TransformChanged() {};
+
 		
 	public:
 		/// <summary>
@@ -164,7 +179,27 @@ namespace ShadowEngine::EntitySystem
 		void SetScene(Scene* se);
 
 		virtual void SetParent(rtm_ptr<Entity> e);
-		
+
+
+		template<class T, class ...ARGS>
+		rtm_ptr<T> AddChildEntity(ARGS&&... args) {
+			rtm_ptr<T> ptr = EntityManager::Instance->AddEntity<T>(std::forward<ARGS>(args)...);
+			ptr->scene = scene;
+			hierarchy.push_back(ptr);
+
+			return ptr;
+		}
+
+		template<class T, class ...ARGS>
+		rtm_ptr<T> AddInternalChildEntity(ARGS&&... args) {
+			rtm_ptr<T> ptr = EntityManager::Instance->AddEntity<T>(std::forward<ARGS>(args)...);
+			ptr->scene = scene;
+			internalHierarchy.push_back(ptr);
+
+			return ptr;
+		}
+
+	public:
 		friend std::ostream& operator<<(std::ostream& os, const Entity& dt);
 
 	public:
@@ -175,7 +210,7 @@ namespace ShadowEngine::EntitySystem
 
 			int c = 0;
 
-			for each (auto& current in container)
+			for each (auto & current in container)
 			{
 				current.Update(dt);
 			}

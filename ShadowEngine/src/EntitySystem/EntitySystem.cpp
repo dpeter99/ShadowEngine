@@ -21,12 +21,12 @@ namespace ShadowEngine::EntitySystem {
 		entityMgr->UpdateEntities(dt);
 	}
 
-	ShadowEngine::Scope<Scene>& EntitySystem::EntitySystem::GetActiveScene()
+	Scope<Scene>& EntitySystem::GetActiveScene()
 	{
 		return activeScene;
 	}
 
-	void EntitySystem::EntitySystem::LoadEmptyScene()
+	void EntitySystem::LoadEmptyScene()
 	{
 		if (activeScene != NULL)
 		{
@@ -46,6 +46,8 @@ namespace ShadowEngine::EntitySystem {
 		activeScene.reset(scene);
 
 		scene->Init();
+
+		entityMgr->InitEntities();
 
 		SH_CORE_TRACE("SceneLoaded");
 	}

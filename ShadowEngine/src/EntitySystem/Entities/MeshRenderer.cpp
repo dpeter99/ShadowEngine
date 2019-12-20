@@ -9,7 +9,7 @@ void MeshRenderer::Init()
 	UpdateRenderNode();
 }
 
-void MeshRenderer::TransformChanged(bool self)
+void MeshRenderer::TransformChanged()
 {
 	if(node.get() != nullptr)
 	UpdateRenderNode();

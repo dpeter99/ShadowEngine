@@ -19,15 +19,21 @@ namespace ShadowEngine::DebugGui {
 		void Update() override {};
 		void Render() override {};
 		void LateRender() override;
-
+		void AfterFrameEnd() override;
 
 		void OnEvent(EventSystem::ShadowEvent& e) override;
 
+
+		static void StartFrame();
+		static void OtherWindows();
+
+		
 		std::string GetName() override { return "ImGuiModule"; };
 
 		static void AddGUICall(IShadowImGui* g);
 
 		ImGuiModule();
 		~ImGuiModule();
+		
 	};
 }

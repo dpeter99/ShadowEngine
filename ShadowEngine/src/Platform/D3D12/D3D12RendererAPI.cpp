@@ -8,6 +8,7 @@
 #include "ShadowAsset/Assets/Mesh.h"
 #include "D3D12Shader.h"
 #include "D3D12MaterialImpl.h"
+#include "ImGui/ImGuiModule.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
@@ -218,6 +219,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		worldData=worldCB;
 
 		upload_managger->CheckForFnishedUploads();
+
+
+		DebugGui::ImGuiModule::StartFrame();
 	}
 
 	void D3D12RendererAPI::EndFrame()
@@ -234,6 +238,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//TODO:move this to submitting code
 		command_queue->Execute(command_list);
 
+		DebugGui::ImGuiModule::OtherWindows();
+		
 		swap_chain->Present(1, 0);
 
 		StartResourceUpload();

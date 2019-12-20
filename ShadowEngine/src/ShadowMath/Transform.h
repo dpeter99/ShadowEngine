@@ -2,14 +2,6 @@
 
 #include <glm/glm.hpp>
 #include <glm/gtc/quaternion.hpp>
-#include "Util/Callback.h"
-#include "EntitySystem/Entity.h"
-
-
-namespace ShadowEngine::EntitySystem
-{
-	class SceneEntity;
-}
 
 namespace ShadowEngine::ShadowEntity {
 
@@ -17,53 +9,48 @@ namespace ShadowEngine::ShadowEntity {
 	{
 	public:
 		Transform();
-		Transform(glm::vec3 pos);
-		Transform(glm::vec3 pos, glm::vec3 size);
-		Transform(glm::vec3 pos, glm::vec3 size, glm::quat rotation);
+		Transform(const Transform& other);
+		Transform(const glm::vec3& pos);
+		Transform(const glm::vec3& pos, const glm::vec3& size);
+		Transform(const glm::vec3& pos, const glm::vec3& size, const glm::quat& rotation);
+
 
 		glm::vec3 GetPosition() { return position; }
-		void SetPosition(glm::vec3 val);;
+		void SetPosition(glm::vec3 val) { position = val; UpdateMatrix(); }
+		
 
 		glm::vec3 GetScale() { return scale; };
-		void SetScale(glm::vec3 val) { scale = val; UpdateMatrix(); transformChanged(); };
+		void SetScale(glm::vec3 val) { scale = val; UpdateMatrix(); };
 
 		glm::quat GetRotation() { return rot; };
-		void SetRotation(glm::quat val) { rot = val; UpdateMatrix(); transformChanged(); };
+		void SetRotation(glm::quat val) { rot = val; UpdateMatrix(); };
 
 		glm::vec3 GetEulerRotation() { return glm::eulerAngles(rot); };
-		void SetEulerRotation(glm::vec3 val) { rot = glm::quat(val); UpdateMatrix(); transformChanged(); };
+		void SetEulerRotation(glm::vec3 val) { rot = glm::quat(val); UpdateMatrix(); };
 
 		glm::vec3 GetForward() { return glm::vec3(0, 0, 1) * rot; };
 		glm::vec3 GetLeft() { return glm::vec3(1, 0, 0) * rot; };
 
+		static Transform Multiply(const Transform* A, const Transform* B);
+		Transform operator*(const Transform& Other) const
+		{
+			Transform Output = Multiply(this, &Other);
+			return Output;
+		}
+		
 		glm::mat4 GetTransformMatrix() { return mat; };
-		glm::mat4 GetWorldTransformMatrix() { return w_mat; };
-
-		void AssignEntity(EntitySystem::Entity* e) { entity = e; }
-		
-		Callback [[DEPRECATED]] transformChanged;
-
-		EntitySystem::rtm_ptr<EntitySystem::Entity> entity;
-		
-		//Transform* parent = nullptr;
 
 		void UpdateMatrix();
-		void UpdateLocalMatrix();
-		void UpdateWorldMatrix();
+
+		glm::mat4 GetMatrix();;
 	private:
-		
+
 
 		glm::vec3 position;
 		glm::vec3 scale;
 		glm::quat rot;
 
-		glm::vec3 w_position;
-		glm::vec3 w_scale;
-		glm::quat w_rot;
-		
 		glm::mat4 mat;
-
-		glm::mat4 w_mat;
 	};
 
 }

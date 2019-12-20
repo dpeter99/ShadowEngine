@@ -16,7 +16,7 @@ class Camera :
 	Entity_Base(Camera, ShadowEngine::EntitySystem::SceneEntity);
 
 private:
-	void TransformChanged(bool self) override;
+	void TransformChanged() override;
 	
 	void ortho_RecalculateViewMatrix();
 	void ortho_Setup();

@@ -14,8 +14,10 @@ void TestScene::Init()
 	//c->transform.SetPosition({ 0,0.0f,-10.0f });
 
 	auto sky = AddEntity<SkySphere>();
+	sky->name = "Sky";
 
 	auto fps = AddEntity< FirstPersonCamera>();
+	fps->name = "Fps Camera";
 	
 	auto env_map = std::make_shared<ShadowEngine::Assets::TextureCubeMap>("./Resources/Textures/giraffe.png");
 	env_map->Upload();
@@ -37,6 +39,7 @@ void TestScene::Init()
 	//m_Material->SetProperty("o_color", glm::vec4(1,1, 1, 1));
 	
 	auto r = AddEntity<MeshRenderer>();
+	r->name = "Giraffe";
 	r->transform.SetPosition(glm::vec3(0, 0, 0));
 	r->transform.SetScale({ 1.0f,1.0f,1.0f });
 	

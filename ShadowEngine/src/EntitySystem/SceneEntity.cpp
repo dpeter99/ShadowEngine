@@ -3,12 +3,10 @@
 
 namespace ShadowEngine::EntitySystem {
 
-	void SceneEntity::TransformChanged(bool self)
+
+	void SceneEntity::SetParent(rtm_ptr<Entity> e)
 	{
-		if(!self)
-		this->transform.UpdateMatrix();
-		
-		Entity::TransformChanged(self);
+		Entity::SetParent(e);
 	}
 
 	ShadowEntity::Transform* SceneEntity::GetTransform()
@@ -16,10 +14,76 @@ namespace ShadowEngine::EntitySystem {
 		return &this->transform;
 	}
 
-	void SceneEntity::SetParent(rtm_ptr<Entity> e)
+	
+	ShadowEntity::Transform SceneEntity::CalcNewComponentToWorld(
+		const ShadowEntity::Transform& NewRelativeTransform) const
 	{
-		Entity::SetParent(e);
+		if (this->parent)
+		{
+			return NewRelativeTransform * *parent->GetTransform();
+		}
+		else
+		{
+			return NewRelativeTransform;
+		}
+	}
 
-		//transform.parent = e->GetTransform();
+	void SceneEntity::SetPosition(glm::vec3 location)
+	{
+		if (transform.GetPosition() != location) {
+			this->transform.SetPosition(location);
+			this->w_transform = CalcNewComponentToWorld(this->transform);
+			TransformUpdated();
+		}
+	}
+
+	void SceneEntity::SetRotation(glm::vec3 rotation)
+	{
+		if (transform.GetRotation() != glm::quat(rotation)) {
+			this->transform.SetRotation(rotation);
+			this->w_transform = CalcNewComponentToWorld(this->transform);
+			TransformUpdated();
+		}
+	}
+
+	void SceneEntity::SetScale(glm::vec3 scale)
+	{
+		if (transform.GetScale() != scale) {
+			this->transform.SetScale(scale);
+			this->w_transform = CalcNewComponentToWorld(this->transform);
+			TransformUpdated();
+		}
+	}
+	
+	void SceneEntity::SetRelativeTransform(const ShadowEntity::Transform& NewTransform)
+	{
+		this->transform = NewTransform;
+		this->w_transform = CalcNewComponentToWorld(NewTransform);
+		TransformUpdated();
+	}
+
+	void SceneEntity::TransformUpdated()
+	{
+
+		TransformChanged();
+		
+		//This transform has changed so we need to update the children about it
+		for each (auto & child in hierarchy)
+		{
+			child->ParentTransformUpdated();
+		}
+
+		for each (auto & child in internalHierarchy)
+		{
+			child->ParentTransformUpdated();
+		}
+	}
+
+	void SceneEntity::ParentTransformUpdated()
+	{
+		//Recalculat the transform, this always uses the parent or world.
+		CalcNewComponentToWorld(this->transform);
+
+		TransformUpdated();
 	}
 }

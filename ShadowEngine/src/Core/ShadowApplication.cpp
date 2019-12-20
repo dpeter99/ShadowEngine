@@ -40,9 +40,9 @@ namespace ShadowEngine {
 		moduleManager.PushModule(new EventSystem::ShadowEventManager());
 		moduleManager.PushModule(new SDLPlatform::SDLModule());
 		moduleManager.PushModule(new ShadowEngine::Rendering::Renderer());
-		//moduleManager.PushModule(new DebugGui::ImGuiModule());
+		moduleManager.PushModule(new DebugGui::ImGuiModule());
 		moduleManager.PushModule(new InputSystem::ShadowActionSystem());
-		//moduleManager.PushModule(new Debug::DebugModule());
+		moduleManager.PushModule(new Debug::DebugModule());
 		moduleManager.PushModule(new EntitySystem::EntitySystem());
 
 		moduleManager.Init();
@@ -84,7 +84,9 @@ namespace ShadowEngine {
 
 			renderer->EndScene();
 
-			SDL_GL_SwapWindow(window_->winPtr);
+			//SDL_GL_SwapWindow(window_->winPtr);
+
+			moduleManager.AfterFrameEnd();
 		}
 	}
 }

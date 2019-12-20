@@ -276,7 +276,7 @@ namespace ShadowEngine::EntitySystem {
 
 		void UpdateEntities(float dt)
 		{
-			for each (auto & var in systems)
+			for (auto & var : systems)
 			{
 				var.update(this,dt);
 			}
@@ -284,7 +284,7 @@ namespace ShadowEngine::EntitySystem {
 
 		void InitEntities()
 		{
-			for each (auto & var in systems)
+			for (auto & var : systems)
 			{
 				var.init(this);
 			}

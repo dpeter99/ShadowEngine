@@ -20,8 +20,11 @@ private:
 
 	ShadowEngine::InputSystem::ShadowAction<bool>* mouseButton;
 public:
+	void Build() override;
+	
 	void Init() override;
 
 	void Update(float dt) override;
+	
 };
 

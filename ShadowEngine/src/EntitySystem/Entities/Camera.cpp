@@ -5,10 +5,8 @@
 #include "Core/ShadowApplication.h"
 #include "EntitySystem/ShadowScene.h"
 
-void Camera::TransformChanged(bool self)
-{
-	SceneEntity::TransformChanged(self);
-	
+void Camera::TransformChanged()
+{	
 	switch (type)
 	{
 	case CameraType::Orthographic:
@@ -56,7 +54,7 @@ void Camera::ortho_Setup()
 
 void Camera::ortho_RecalculateViewMatrix()
 {
-	m_ViewMatrix = glm::inverse(transform.GetWorldTransformMatrix());
+	m_ViewMatrix = glm::inverse(w_transform.GetMatrix());
 	m_ViewProjectionMatrix = m_ProjectionMatrix * m_ViewMatrix;
 }
 
@@ -75,7 +73,7 @@ void Camera::persp_Setup()
 
 void Camera::persp_RecalculateViewMatrix()
 {
-	m_ViewMatrix = glm::inverse(transform.GetWorldTransformMatrix());
+	m_ViewMatrix = glm::inverse(w_transform.GetMatrix());
 	m_ViewProjectionMatrix = m_ProjectionMatrix * m_ViewMatrix;
 }
 

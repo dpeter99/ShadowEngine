@@ -14,9 +14,15 @@
 
 #include <SDL.h>
 
+void FirstPersonCamera::Build()
+{
+	cam = AddInternalChildEntity<Camera>();
+}
+
 void FirstPersonCamera::Init()
 {
-	cam = scene->AddEntity<Camera>();
+	//cam = scene->AddEntity<Camera>();
+	
 	this->internalHierarchy.push_back(cam);
 	cam->SetParent(this);
 

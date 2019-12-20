@@ -7,7 +7,7 @@ namespace ShadowEngine::EntitySystem {
 	{
 		for (auto& entity : m_entities)
 		{
-			entity->Start();
+			//entity->Start();
 		}
 	}
 
@@ -23,7 +23,7 @@ namespace ShadowEngine::EntitySystem {
 	{
 		for (auto& entity : m_entities)
 		{
-			entity->LateUpdate();
+			//entity->LateUpdate();
 		}
 	}
 
@@ -31,7 +31,7 @@ namespace ShadowEngine::EntitySystem {
 	{
 		for (auto& entity : m_entities)
 		{
-			entity->Render();
+			//entity->Render();
 		}
 	}
 
@@ -39,7 +39,7 @@ namespace ShadowEngine::EntitySystem {
 	{
 		for (auto& entity : m_entities)
 		{
-			entity->LateRender();
+			//entity->LateRender();
 		}
 	}
 
@@ -47,7 +47,7 @@ namespace ShadowEngine::EntitySystem {
 
 		for (auto& entity : m_entities)
 		{
-			entity->Init();
+			//entity->Init();
 		}
 	}
 }

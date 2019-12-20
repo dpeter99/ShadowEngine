@@ -34,6 +34,18 @@ group "Dependencies"
 	
 	include "ShadowEngineBuild/dependencies/TiledSharp"
 
+project "Glm"
+	location "ShadowEngine/dependencies/glm"
+	kind "None"
+	language "C++"
+	cppdialect "C++17"
+
+	files
+    {
+        "ShadowEngine/dependencies/glm/glm/**.hpp",
+		"ShadowEngine/dependencies/glm/glm/**.inl",
+    }
+
 group ""
 
 project "ShadowEngine"
@@ -60,8 +72,6 @@ project "ShadowEngine"
 		"%{prj.name}/src/**.hlsli",
 		"%{prj.name}/dependencies/stb_image/**.h",
 		"%{prj.name}/dependencies/stb_image/**.cpp",
-		"%{prj.name}/dependencies/glm/glm/**.hpp",
-		"%{prj.name}/dependencies/glm/glm/**.inl",
 	}
 
 	defines
@@ -85,6 +95,7 @@ project "ShadowEngine"
 	{ 
 		"Glad",
 		"ImGui",
+		"Glm",
 		
 		"ShadowEngineBuild",
 		

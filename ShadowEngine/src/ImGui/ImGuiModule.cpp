@@ -1,19 +1,20 @@
 #include "shpch.h"
-
+#include "ImGuiModule.h"
 
 #include "Core/ShadowApplication.h"
-#include "Util/Utility.h"
-#include "ShadowEvents/Events/KeyEvents.h"
 #include "ShadowEvents/Events/MouseEvents.h"
 #include "ShadowEvents/ShadowEventManager.h"
-#include "ShadowTime.h"
-#include "ShadowEvents/Events/ApplicationEvent.h"
+
+#include "ShadowRenderer/RendererAPI.h"
+
+#include "Platform/D3D12/D3D12RendererAPI.h"
 
 #include "imgui.h"
 #include "examples/imgui_impl_sdl.h"
 #include "examples/imgui_impl_opengl3.h"
+#include "examples/imgui_impl_dx12.h"
 
-#include "ImGuiModule.h"
+
 #include <SDL.h>
 #include "Platform/SDL/SDLModule.h"
 
@@ -32,7 +33,7 @@ namespace ShadowEngine::DebugGui {
 		io.BackendFlags |= ImGuiBackendFlags_HasMouseCursors;
 		io.BackendFlags |= ImGuiBackendFlags_HasSetMousePos;
 		io.ConfigFlags |= ImGuiConfigFlags_::ImGuiConfigFlags_DockingEnable;           // Enable Docking
-		io.ConfigFlags |= ImGuiConfigFlags_::ImGuiConfigFlags_ViewportsEnable;         // Enable Multi-Viewport / Platform Windows
+		//io.ConfigFlags |= ImGuiConfigFlags_::ImGuiConfigFlags_ViewportsEnable;         // Enable Multi-Viewport / Platform Windows
 
 		// TEMPORARY: should eventually use ShadowEngine::Rendering key codes
 		// Keyboard mapping. ImGui will use those indices to peek into the io.KeysDown[] array.
@@ -62,41 +63,102 @@ namespace ShadowEngine::DebugGui {
 
 
 		ImGui_ImplSDL2_InitForOpenGL(ShadowEngine::ShadowApplication::Get().GetWindow().winPtr, SDLPlatform::SDLModule::GetInstance().GetGlContext());
-		ImGui_ImplOpenGL3_Init("#version 410");
+		
+
+		switch (Rendering::RendererAPI::GetAPI())
+		{
+		case Rendering::RendererAPI::API::OpenGL:
+			ImGui_ImplOpenGL3_Init("#version 410");
+			break;
+		case Rendering::RendererAPI::API::D3D12:
+
+			auto desc = Rendering::D3D12::D3D12RendererAPI::Instance->descriptorHeap_SRV_CBV->Allocate(1);
+			ImGui_ImplDX12_Init(Rendering::D3D12::D3D12RendererAPI::Instance->device.Get(),
+								1,
+								DXGI_FORMAT_R8G8B8A8_UNORM,
+								Rendering::D3D12::D3D12RendererAPI::Instance->descriptorHeap_SRV_CBV->Get().Get(),
+								desc.CPU_TableStart,
+								desc.GPU_TableStart);
+			break;
+		default:
+			break;
+		}
+	}
+
+	void ImGuiModule::StartFrame()
+	{
+		switch (Rendering::RendererAPI::GetAPI())
+		{
+		case Rendering::RendererAPI::API::OpenGL:
+			ImGui_ImplOpenGL3_NewFrame();
+			break;
+		case Rendering::RendererAPI::API::D3D12:
+			ImGui_ImplDX12_NewFrame();
+			break;
+		default:
+			break;
+		}
+
+		ImGui_ImplSDL2_NewFrame(ShadowEngine::ShadowApplication::Get().GetWindow().winPtr);
+
+		ImGui::NewFrame();
+	}
+
+	void ImGuiModule::OtherWindows()
+	{
+		ImGuiIO& io = ImGui::GetIO();
+
+		if (Rendering::RendererAPI::GetAPI() == Rendering::RendererAPI::API::OpenGL) {
+			if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
+			{
+				SDL_Window* backup_current_window = SDL_GL_GetCurrentWindow();
+				SDL_GLContext backup_current_context = SDL_GL_GetCurrentContext();
+				ImGui::UpdatePlatformWindows();
+				ImGui::RenderPlatformWindowsDefault();
+				SDL_GL_MakeCurrent(backup_current_window, backup_current_context);
+			}
+		}
+		else
+		{
+			if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
+			{
+				ImGui::UpdatePlatformWindows();
+				ImGui::RenderPlatformWindowsDefault(NULL, (void*)(Rendering::D3D12::D3D12RendererAPI::Instance->command_list->GetCommandList().Get()));
+			}
+		}
 	}
 
 	void ImGuiModule::LateRender()
 	{
 
 		ImGuiIO& io = ImGui::GetIO();
-		/*
-		ShadowApplication& app = ShadowApplication::Get();
-		io.DisplaySize = ImVec2(app.GetWindow().Width, app.GetWindow().Height);
-
-		float time = Time::deltaTime_ms;
-		io.DeltaTime = time;
-		*/
-		// Start the Dear ImGui frame
-		ImGui_ImplOpenGL3_NewFrame();
-		ImGui_ImplSDL2_NewFrame(ShadowEngine::ShadowApplication::Get().GetWindow().winPtr);
-		ImGui::NewFrame();
 
 		for (auto gui_call : guiCalls)
 		{
 			gui_call->OnGui();
 		}
 
+		
 		ImGui::Render();
-		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
-		if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
+		switch (Rendering::RendererAPI::GetAPI())
 		{
-			SDL_Window* backup_current_window = SDL_GL_GetCurrentWindow();
-			SDL_GLContext backup_current_context = SDL_GL_GetCurrentContext();
-			ImGui::UpdatePlatformWindows();
-			ImGui::RenderPlatformWindowsDefault();
-			SDL_GL_MakeCurrent(backup_current_window, backup_current_context);
+		case Rendering::RendererAPI::API::OpenGL:
+			ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+			break;
+		case Rendering::RendererAPI::API::D3D12:
+			ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(),Rendering::D3D12::D3D12RendererAPI::Instance->command_list->GetCommandList().Get());
+			break;
+		default:
+			break;
 		}
+		
+		
+	}
+
+	void ImGuiModule::AfterFrameEnd()
+	{
+		
 	}
 
 	void ImGuiModule::OnEvent(EventSystem::ShadowEvent& e)
@@ -155,6 +217,8 @@ namespace ShadowEngine::DebugGui {
 		}
 		*/
 	}
+
+
 
 	void ImGuiModule::AddGUICall(IShadowImGui* g)
 	{

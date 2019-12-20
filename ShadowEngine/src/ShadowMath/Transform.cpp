@@ -1,11 +1,8 @@
 #include "shpch.h"
 #include "Transform.h"
-#include "EntitySystem/Entity.h"
-
 
 #include <glm/gtx/quaternion.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-#include "EntitySystem/SceneEntity.h"
 
 namespace ShadowEngine::ShadowEntity {
 
@@ -18,67 +15,99 @@ namespace ShadowEngine::ShadowEntity {
 		UpdateMatrix();
 	}
 
-	Transform::Transform(glm::vec3 pos) : position(pos)
+	Transform::Transform(const Transform& other)
+	{
+		position = other.position;
+		scale = other.scale;
+		rot = other.rot;
+	}
+
+	Transform::Transform(const glm::vec3& pos) : position(pos)
 	{
 		scale = glm::vec3(1, 1, 1);
 		rot = glm::quat({ 0,0,0 });
 		UpdateMatrix();
 	}
 
-	Transform::Transform(glm::vec3 pos, glm::vec3 size) :position(pos), scale(size)
+	Transform::Transform(const glm::vec3& pos, const glm::vec3& size) :position(pos), scale(size)
 	{
 		rot = glm::quat({ 0,0,0 });
 
 		UpdateMatrix();
 	}
 
-	Transform::Transform(glm::vec3 pos, glm::vec3 size, glm::quat rotation) :position(pos), scale(size), rot(rotation)
+	Transform::Transform(const glm::vec3& pos, const glm::vec3& size, const glm::quat& rotation)
+		:position(pos),
+		scale(size),
+		rot(rotation)
 	{
 
 		UpdateMatrix();
 	}
 
-	void Transform::SetPosition(glm::vec3 val)
+	/** Returns Multiplied Transform of 2 FTransforms **/
+			///P:\_Other\UnrealEngine\Engine\Source\Runtime\Core\Public\Math\TransformVectorized.h:1480
+	Transform Transform::Multiply(const Transform* A, const Transform* B)
 	{
-		position = val;
+		Transform OutTransform;
 
-		if (this->entity->parent)
-			w_position = this->entity->parent->GetTransform()->GetPosition() + position;
-		else
-			w_position = position;		
-		
-		UpdateMatrix();
-		//transformChanged();
-		if(entity)
-		entity->TransformChanged(true);
+		//A->DiagnosticCheckNaN_All();
+		//B->DiagnosticCheckNaN_All();
+		//
+		//checkSlow(A->IsRotationNormalized());
+		//checkSlow(B->IsRotationNormalized());
+		//
+		//	When Q = quaternion, S = single scalar scale, and T = translation
+		//	QST(A) = Q(A), S(A), T(A), and QST(B) = Q(B), S(B), T(B)
+		//
+		//	QST (AxB) 
+		//
+		// QST(A) = Q(A)*S(A)*P*-Q(A) + T(A)
+		// QST(AxB) = Q(B)*S(B)*QST(A)*-Q(B) + T(B)
+		// QST(AxB) = Q(B)*S(B)*[Q(A)*S(A)*P*-Q(A) + T(A)]*-Q(B) + T(B)
+		// QST(AxB) = Q(B)*S(B)*Q(A)*S(A)*P*-Q(A)*-Q(B) + Q(B)*S(B)*T(A)*-Q(B) + T(B)
+		// QST(AxB) = [Q(B)*Q(A)]*[S(B)*S(A)]*P*-[Q(B)*Q(A)] + Q(B)*S(B)*T(A)*-Q(B) + T(B)
+		//
+		//	Q(AxB) = Q(B)*Q(A)
+		//	S(AxB) = S(A)*S(B)
+		//	T(AxB) = Q(B)*S(B)*T(A)*-Q(B) + T(B)
+		//checkSlow(VectorGetComponent(A->Scale3D, 3) == 0.f);
+		//checkSlow(VectorGetComponent(B->Scale3D, 3) == 0.f);
+		//
+		/*
+		if (Private_AnyHasNegativeScale(A->Scale3D, B->Scale3D))
+		{
+			// @note, if you have 0 scale with negative, you're going to lose rotation as it can't convert back to quat
+			MultiplyUsingMatrixWithScale(OutTransform, A, B);
+		}
+		else*/
+		{
+			// RotationResult = B.Rotation * A.Rotation
+			OutTransform.rot = B->rot * A->rot; //VectorQuaternionMultiply2(QuatB, QuatA);
+
+			// TranslateResult = B.Rotate(B.Scale * A.Translation) + B.Translate
+			const glm::vec3 ScaledTransA = A->position * B->scale; // VectorMultiply(TranslateA, ScaleB);
+			const glm::vec3 RotatedTranslate = glm::rotate(B->rot, ScaledTransA);
+			OutTransform.position = RotatedTranslate + B->position;
+
+			// ScaleResult = Scale.B * Scale.A
+			OutTransform.scale = A->scale * B->scale;
+		}
+
+		return OutTransform;
 	}
 
 	void Transform::UpdateMatrix()
 	{
-		UpdateLocalMatrix();
-		UpdateWorldMatrix();
+		this->mat =
+			glm::translate(glm::mat4(1), position) *
+			glm::toMat4(rot) *
+			glm::scale(glm::mat4(1), scale);
 	}
-	
-	void Transform::UpdateLocalMatrix()
+
+	glm::mat4 Transform::GetMatrix()
 	{
-		this->mat = 
-			glm::translate(glm::mat4(1), position) * 
-			glm::toMat4(rot)*
-			glm::scale(glm::mat4(1),scale);
-
-		//this->mat = glm::translate(glm::mat4(1.0f), position);
-
+		return mat;
 	}
-
-	void Transform::UpdateWorldMatrix()
-	{
-		if (this->entity  && this->entity->parent)
-			this->w_mat = this->entity->parent->GetTransform()->w_mat * this->mat;
-		else
-			this->w_mat = this->mat;
-		//this->mat = glm::translate(glm::mat4(1.0f), position);
-
-	}
-
 
 }

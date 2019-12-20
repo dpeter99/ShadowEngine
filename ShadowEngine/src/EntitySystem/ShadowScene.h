@@ -2,9 +2,10 @@
 #include <memory>
 
 #include "Core/SHObject.h"
-#include "Entities/Camera.h"
 #include "Entity.h"
 #include "EntityManager.h"
+
+class Camera;
 
 namespace ShadowEngine::EntitySystem {
 	
@@ -33,13 +34,6 @@ namespace ShadowEngine::EntitySystem {
 
 		virtual void Render();
 		virtual void LateRender();
-
-		template<class T>
-		T* [[deprecated]] AddNewInstance()
-		{
-			m_entities.push_back(std::make_unique<T>(this));
-			return dynamic_cast<T*>(m_entities.back().get());
-		}
 
 		template<class T, class ...ARGS>
 		rtm_ptr<T> AddEntity(ARGS&&... args) {

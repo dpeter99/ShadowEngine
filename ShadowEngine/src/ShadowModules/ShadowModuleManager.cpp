@@ -64,3 +64,11 @@ void ShadowEngine::ShadowModuleManager::Render()
 		module->Render();
 	}
 }
+
+void ShadowEngine::ShadowModuleManager::AfterFrameEnd()
+{
+	for (auto& module : modules)
+	{
+		module->AfterFrameEnd();
+	}
+}

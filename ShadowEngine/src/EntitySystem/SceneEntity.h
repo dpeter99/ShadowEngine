@@ -1,11 +1,12 @@
 #pragma once
 
-
 #include <glm/glm.hpp>
 #include <glm/gtx/quaternion.hpp>
+
 #include "Entity.h"
 #include "ShadowMath/Transform.h"
-#include <EntitySystem\EntityBase.h>
+#include "EntitySystem\EntityBase.h"
+#include "EntitySystem\ShadowScene.h"
 
 #define BIND_EVENT_FN(x, ...) std::bind(&x, this, __VA_ARGS__)
 
@@ -20,84 +21,63 @@ namespace ShadowEngine::EntitySystem {
 		SHObject_Base(SceneEntity);
 
 		Entity_Base_NoCtor(SceneEntity, Entity);
-		
-	public:
-		struct Transform
-		{
-			glm::vec3 position;
-			glm::vec3 scale;
-			glm::quat rot;
 
-			/** Returns Multiplied Transform of 2 FTransforms **/
-			Transform* Transform::Multiply(const Transform* A, const Transform* B)
-			{
-				Transform* OutTransform;
-				
-				//A->DiagnosticCheckNaN_All();
-				//B->DiagnosticCheckNaN_All();
-
-				//checkSlow(A->IsRotationNormalized());
-				//checkSlow(B->IsRotationNormalized());
-
-				//	When Q = quaternion, S = single scalar scale, and T = translation
-				//	QST(A) = Q(A), S(A), T(A), and QST(B) = Q(B), S(B), T(B)
-
-				//	QST (AxB) 
-
-				// QST(A) = Q(A)*S(A)*P*-Q(A) + T(A)
-				// QST(AxB) = Q(B)*S(B)*QST(A)*-Q(B) + T(B)
-				// QST(AxB) = Q(B)*S(B)*[Q(A)*S(A)*P*-Q(A) + T(A)]*-Q(B) + T(B)
-				// QST(AxB) = Q(B)*S(B)*Q(A)*S(A)*P*-Q(A)*-Q(B) + Q(B)*S(B)*T(A)*-Q(B) + T(B)
-				// QST(AxB) = [Q(B)*Q(A)]*[S(B)*S(A)]*P*-[Q(B)*Q(A)] + Q(B)*S(B)*T(A)*-Q(B) + T(B)
-
-				//	Q(AxB) = Q(B)*Q(A)
-				//	S(AxB) = S(A)*S(B)
-				//	T(AxB) = Q(B)*S(B)*T(A)*-Q(B) + T(B)
-				//checkSlow(VectorGetComponent(A->Scale3D, 3) == 0.f);
-				//checkSlow(VectorGetComponent(B->Scale3D, 3) == 0.f);
-
-				/*
-				if (Private_AnyHasNegativeScale(A->Scale3D, B->Scale3D))
-				{
-					// @note, if you have 0 scale with negative, you're going to lose rotation as it can't convert back to quat
-					MultiplyUsingMatrixWithScale(OutTransform, A, B);
-				}
-				else*/
-				{					
-					// RotationResult = B.Rotation * A.Rotation
-					OutTransform->rot = B->rot * A->rot; //VectorQuaternionMultiply2(QuatB, QuatA);
-
-					// TranslateResult = B.Rotate(B.Scale * A.Translation) + B.Translate
-					const glm::vec3 ScaledTransA = A->position * B->scale; // VectorMultiply(TranslateA, ScaleB);
-					const glm::vec3 RotatedTranslate = glm::rotate(B->rot, ScaledTransA);
-					OutTransform->position = RotatedTranslate + B->position;
-
-					// ScaleResult = Scale.B * Scale.A
-					OutTransform->scale = A->scale * B->scale;
-				}
-
-				return OutTransform;
-			}
-		};
-		
 	public:
 		ShadowEntity::Transform transform;
+		ShadowEntity::Transform w_transform;
 
-		SceneEntity() :Entity() { transform.AssignEntity(this); }
+	public:
+		SceneEntity() :Entity() { }
 
-		SceneEntity(EntitySystem::Scene* scene) : Entity(scene)
+		SceneEntity(Scene* scene) : Entity(scene)
 		{
-			transform.transformChanged += std::bind(&SceneEntity::TransformChanged, this, true);
-			transform.AssignEntity(this);
 		};
 
-		virtual void TransformChanged(bool self) override;
+
+
+		void SetParent(rtm_ptr<Entity> e) override;
 
 		virtual ShadowEntity::Transform* GetTransform();
-		
-		void SetParent(rtm_ptr<Entity> e) override;
-		
-		
+
+		ShadowEntity::Transform CalcNewComponentToWorld(const ShadowEntity::Transform& NewRelativeTransform) const;
+
+		/**
+		 * Sets the position of the entity relative to it's parent or the world.
+		 *
+		 * \brief
+		 *
+		 * \param Position The new position of this entity
+		 */
+		void SetPosition(glm::vec3 Position);
+		/**
+		 * Sets the Rotation of the entity relative to it's parent or the world.
+		 *
+		 * \brief
+		 *
+		 * \param Rotation The new Rotation of this entity
+		 */
+		void SetRotation(glm::vec3 Rotation);
+		/**
+		 * Sets the Size of the entity relative to it's parent or the world.
+		 *
+		 * \brief
+		 *
+		 * \param Size The new Size of this entity
+		 */
+		void SetScale(glm::vec3 Size);
+		/**
+		 * Sets the transform of the entity relative to it's parent or the world.
+		 *
+		 * \brief
+		 *
+		 * \param Transform The new Transform of this entity
+		 */
+		void SetRelativeTransform(const ShadowEntity::Transform& Transform);
+
+		///Called after the transform of this was updated manually
+		void TransformUpdated();
+	protected:
+		void ParentTransformUpdated() override;
 	};
 
 }

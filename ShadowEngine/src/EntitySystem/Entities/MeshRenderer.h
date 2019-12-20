@@ -27,7 +27,7 @@ public:
 	ShadowEngine::Ref<ShadowEngine::Assets::Material> SetMaterial() { return mat; };
 	
 private:
-	void TransformChanged(bool self) override;;
+	void TransformChanged() override;;
 
 	void UpdateRenderNode();
 

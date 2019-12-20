@@ -1,7 +1,3 @@
-//
-// Created by dpete on 2/12/2019.
-//
-
 #include "shpch.h"
 
 #include <iostream>
@@ -10,37 +6,10 @@
 
 namespace ShadowEngine::EntitySystem
 {
-	void Entity::Start()
-	{
-	}
-
-	void Entity::Update(float dt)
-	{
-	}
-
-	void Entity::LateUpdate()
-	{
-	}
-
-	void Entity::Render()
-	{
-	}
-
-	void Entity::LateRender()
-	{
-	}
-
+	
 	EntityFlags Entity::GetFlags()
 	{
 		return EntityFlags::NONE;
-	}
-
-	void Entity::TransformChanged(bool self)
-	{
-		for each (auto e in internalHierarchy)
-		{
-			e->TransformChanged(false);
-		}
 	}
 
 	ShadowEntity::Transform* Entity::GetTransform()
@@ -73,6 +42,10 @@ namespace ShadowEngine::EntitySystem
 		throw "The base entity cannot be instantiated";
 	}
 
+	void Entity::Build()
+	{
+	}
+
 	void Entity::Init()
 	{
 	}
@@ -82,6 +55,4 @@ namespace ShadowEngine::EntitySystem
 		os << dt.GetType();
 		return os;
 	}
-
-	//bool Entity::registered = ShadowEntity::EntityRegistry::PreRegisterEntity(id);
 }

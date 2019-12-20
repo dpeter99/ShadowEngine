@@ -14,6 +14,8 @@ namespace ShadowEngine::Debug {
 
 		void DebugModule::ActionDebug();
 
+		void DebugHierarchy();
+		
 	public:
 
 		bool active;
