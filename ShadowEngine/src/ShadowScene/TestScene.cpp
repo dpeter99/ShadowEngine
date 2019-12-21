@@ -15,6 +15,7 @@ void TestScene::Init()
 
 	auto sky = AddEntity<SkySphere>();
 	sky->name = "Sky";
+	
 
 	auto fps = AddEntity< FirstPersonCamera>();
 	fps->name = "Fps Camera";
@@ -46,5 +47,5 @@ void TestScene::Init()
 	r->SetMesh(m_model);
 	r->SetMaterial(m_Material);
 	
-	Scene::Init();
+	//Scene::Init();
 }

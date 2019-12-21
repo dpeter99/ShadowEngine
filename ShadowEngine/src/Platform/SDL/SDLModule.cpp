@@ -23,7 +23,7 @@ namespace ShadowEngine::SDLPlatform {
 			//return false;
 		}
 
-		ShadowApplication::Get().SetWindow(new ShadowWindow(1000, 600));
+		ShadowApplication::Get().SetWindow(new ShadowWindow(1500, 1024));
 	}
 
 	SDLModule::SDLModule()

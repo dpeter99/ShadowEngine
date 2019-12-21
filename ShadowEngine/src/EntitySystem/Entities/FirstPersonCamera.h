@@ -28,3 +28,11 @@ public:
 	
 };
 
+class FirstPersonCameraInspector : public ShadowEngine::Debug::EntityInspector {
+
+public:
+	void Draw(ShadowEngine::EntitySystem::rtm_ptr<ShadowEngine::EntitySystem::Entity>& obj) override {
+		//ShadowEngine::EntitySystem::rtm_ptr<Camera> cam = obj;
+		DrawTransformInspector((ShadowEngine::EntitySystem::rtm_ptr<ShadowEngine::EntitySystem::SceneEntity>)obj);
+	}
+};

@@ -3,6 +3,8 @@
 #include "ShadowAsset/Assets/Mesh.h"
 #include "ShadowAsset/Assets/Material.h"
 #include "ShadowRenderer/RenderScene.h"
+#include <Inspector\EntityInspector.h>
+#include <EntitySystem\Entities\Internal\Inspectors\DefaultInspectors.h>
 
 class MeshRenderer:
 	public ShadowEngine::EntitySystem::SceneEntity
@@ -33,3 +35,11 @@ private:
 
 };
 
+class MeshRendererInspector : public ShadowEngine::Debug::EntityInspector {
+
+public:
+	void Draw(ShadowEngine::EntitySystem::rtm_ptr<ShadowEngine::EntitySystem::Entity>& obj) override {
+		//ShadowEngine::EntitySystem::rtm_ptr<Camera> cam = obj;
+		DrawTransformInspector((ShadowEngine::EntitySystem::rtm_ptr<ShadowEngine::EntitySystem::SceneEntity>)obj);
+	}
+};

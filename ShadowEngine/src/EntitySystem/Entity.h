@@ -24,6 +24,7 @@ namespace ShadowEngine::EntitySystem
 	template<class Type>
 	class rtm_ptr
 	{
+	private:
 		Type* m_ptr;
 
 		int m_uid;
@@ -32,23 +33,45 @@ namespace ShadowEngine::EntitySystem
 		rtm_ptr(Type* ptr) : m_ptr(ptr), m_uid(ptr->m_runtimeUID) {}
 
 		rtm_ptr() : m_ptr(nullptr) {}
-
+		
+		template<class T>
+		rtm_ptr(const rtm_ptr<T>& o) {
+			m_ptr = (Type*)o.getInternalPointer();
+			m_uid = o.getInternalUID();
+		}
+		
 		Type* operator->() const
 		{
 			if (m_ptr->m_runtimeUID != m_uid) {
 				assert(m_ptr->m_runtimeUID == m_uid);
 				return nullptr;
 			}
-			return m_ptr;
+			return ((Type*)m_ptr);
 		}
 
 		inline operator bool() const { return m_ptr != nullptr && m_ptr->m_runtimeUID == m_uid; }
+
+		template<class T>
+		inline bool operator ==(rtm_ptr<T> o) const {
+			return m_ptr == o.m_ptr &&
+					m_uid == o.m_uid; 
+		}
 
 		template<class T>
 		inline operator rtm_ptr<T>() const {
 			return rtm_ptr<T>(m_ptr);
 		}
 
+		void null() {
+			m_ptr = nullptr;
+			m_uid = -1;
+		}
+
+		void* getInternalPointer() const{
+			return (void*)m_ptr; 
+		}
+
+		int getInternalUID() const { return m_uid; }
 
 	};
 
@@ -128,13 +151,13 @@ namespace ShadowEngine::EntitySystem
 		/// <returns>Pointer to the Entity created</returns>
 		virtual Entity* Create(Scene* scene);
 
-		virtual void Build();
+		virtual void Build() {};
 		
 		/// Called when the Entity needs to be initialised. Should be used as a constructor
 		/// <summary>
 		/// Called when the Entity needs to be initialised.
 		/// </summary>
-		virtual  void Init();
+		virtual  void Init() {};
 
 		/// <summary>
 		/// Called when the world starts or before the Entity get's it's first tick
@@ -186,6 +209,7 @@ namespace ShadowEngine::EntitySystem
 			rtm_ptr<T> ptr = EntityManager::Instance->AddEntity<T>(std::forward<ARGS>(args)...);
 			ptr->scene = scene;
 			hierarchy.push_back(ptr);
+			ptr->SetParent(this);
 
 			return ptr;
 		}
@@ -195,6 +219,7 @@ namespace ShadowEngine::EntitySystem
 			rtm_ptr<T> ptr = EntityManager::Instance->AddEntity<T>(std::forward<ARGS>(args)...);
 			ptr->scene = scene;
 			internalHierarchy.push_back(ptr);
+			ptr->SetParent(this);
 
 			return ptr;
 		}
@@ -223,7 +248,7 @@ namespace ShadowEngine::EntitySystem
 
 			int c = 0;
 
-			for each (auto current in container)
+			for each (auto & current in container)
 			{
 				current.Init();
 			}

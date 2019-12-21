@@ -9,6 +9,8 @@ class SkySphere: public ShadowEngine::EntitySystem::Entity
 private:
 	ShadowEngine::EntitySystem::rtm_ptr<MeshRenderer> renderer;
 public:
+	void Build() override;
+
 	void Init() override;
 	
 };

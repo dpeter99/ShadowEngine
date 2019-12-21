@@ -74,6 +74,31 @@ namespace ShadowEngine::EntitySystem {
 		 */
 		void SetRelativeTransform(const ShadowEntity::Transform& Transform);
 
+		/**
+		 * Sets the position of the entity relative to it's parent or the world.
+		 *
+		 * \brief
+		 *
+		 * \param Position The new position of this entity
+		 */
+		glm::vec3 GetPosition();
+		/**
+		 * Sets the Rotation of the entity relative to it's parent or the world.
+		 *
+		 * \brief
+		 *
+		 * \param Rotation The new Rotation of this entity
+		 */
+		glm::vec3 GetRotation();
+		/**
+		 * Sets the Size of the entity relative to it's parent or the world.
+		 *
+		 * \brief
+		 *
+		 * \param Size The new Size of this entity
+		 */
+		glm::vec3 GetScale();
+
 		///Called after the transform of this was updated manually
 		void TransformUpdated();
 	protected:

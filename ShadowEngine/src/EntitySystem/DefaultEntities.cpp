@@ -15,6 +15,7 @@ namespace ShadowEngine::EntitySystem
 	void EntityRegistry::PreRegisterDefaults()
 	{
 		this->RegisterEntity("info_player_start", new Player());
+		//this->RegisterEntity("camera", new Camera());
 		this->RegisterEntity("light", new Light());
 	}
 }

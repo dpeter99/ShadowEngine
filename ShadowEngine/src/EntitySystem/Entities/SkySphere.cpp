@@ -2,10 +2,17 @@
 #include "SkySphere.h"
 #include "EntitySystem/ShadowScene.h"
 #include "ShadowAsset/Assets/Textures/TextureCubeMap.h"
+#include "Camera.h"
+
+void SkySphere::Build()
+{
+	renderer = AddInternalChildEntity<MeshRenderer>();
+	renderer->name = "renderer";
+}
 
 void SkySphere::Init()
 {
-	renderer = scene->AddEntity<MeshRenderer>();
+	
 
 	renderer->SetMesh( ShadowEngine::Assets::Mesh::CreateSphere(0, 0));
 	
@@ -21,5 +28,6 @@ void SkySphere::Init()
 	m_Material->UpdateBufferIfDirty();
 
 	renderer->SetMaterial(m_Material);
-	renderer->transform.SetScale({ 5,5,5 });
+	renderer->SetScale({ 2,2,2 });
+	renderer->SetPosition({0,0,0});
 }

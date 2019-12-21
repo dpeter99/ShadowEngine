@@ -19,30 +19,6 @@ namespace ShadowEngine::EntitySystem {
 		}
 	}
 
-	void Scene::LateUpdate()
-	{
-		for (auto& entity : m_entities)
-		{
-			//entity->LateUpdate();
-		}
-	}
-
-	void Scene::Render()
-	{
-		for (auto& entity : m_entities)
-		{
-			//entity->Render();
-		}
-	}
-
-	void Scene::LateRender()
-	{
-		for (auto& entity : m_entities)
-		{
-			//entity->LateRender();
-		}
-	}
-
 	void Scene::Init() {
 
 		for (auto& entity : m_entities)

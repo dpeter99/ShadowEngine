@@ -62,11 +62,26 @@ namespace ShadowEngine::EntitySystem {
 		TransformUpdated();
 	}
 
+	glm::vec3 SceneEntity::GetPosition()
+	{
+		return this->transform.GetPosition();
+	}
+
+	glm::vec3 SceneEntity::GetRotation()
+	{
+		return glm::eulerAngles( this->transform.GetRotation());
+	}
+
+	glm::vec3 SceneEntity::GetScale()
+	{
+		return this->transform.GetScale();
+	}
+
 	void SceneEntity::TransformUpdated()
 	{
 
 		TransformChanged();
-		
+
 		//This transform has changed so we need to update the children about it
 		for each (auto & child in hierarchy)
 		{
@@ -82,7 +97,7 @@ namespace ShadowEngine::EntitySystem {
 	void SceneEntity::ParentTransformUpdated()
 	{
 		//Recalculat the transform, this always uses the parent or world.
-		CalcNewComponentToWorld(this->transform);
+		this->w_transform = CalcNewComponentToWorld(this->transform);
 
 		TransformUpdated();
 	}

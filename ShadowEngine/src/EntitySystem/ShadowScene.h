@@ -4,6 +4,7 @@
 #include "Core/SHObject.h"
 #include "Entity.h"
 #include "EntityManager.h"
+#include "ShadowMath/Transform.h"
 
 class Camera;
 
@@ -16,6 +17,8 @@ namespace ShadowEngine::EntitySystem {
 	public:
 		std::list<rtm_ptr<Entity>> m_entities;
 
+		ShadowEntity::Transform centerTransform;
+
 		//Main Camera ref
 		Camera* mainCamera;
 
@@ -27,18 +30,15 @@ namespace ShadowEngine::EntitySystem {
 
 		virtual void Init();
 
-		//Functions called for each entity
+		
 		virtual void Start();
 		virtual void Update();
-		virtual void LateUpdate();
-
-		virtual void Render();
-		virtual void LateRender();
 
 		template<class T, class ...ARGS>
 		rtm_ptr<T> AddEntity(ARGS&&... args) {
 			rtm_ptr<T> ptr = EntityManager::Instance->AddEntity<T>(std::forward<ARGS>(args)...);
 			ptr->scene = this;
+			ptr->Build();
 			m_entities.push_back(ptr);
 
 			return ptr;
@@ -55,6 +55,10 @@ namespace ShadowEngine::EntitySystem {
 			{
 				EntityManager::Instance->RemoveEntity(var);
 			}
+		}
+
+		ShadowEntity::Transform* GetCenter() {
+			return &centerTransform;
 		}
 	};
 

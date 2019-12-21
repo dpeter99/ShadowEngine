@@ -27,5 +27,6 @@ namespace ShadowEngine::Assets {
 		static Ref<Mesh> LoadModel_obj(const std::string& filePath);
 
 		static Ref<Mesh> CreateSphere(int LatLines, int LongLines);
+		static Ref<Mesh> CreateInverseSphere(int LatLines, int LongLines);
 	};
 }

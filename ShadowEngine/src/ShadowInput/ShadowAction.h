@@ -191,22 +191,22 @@ namespace ShadowEngine::InputSystem
 
 		void Performed()
 		{
-			std::cout << GetName() << " Was performed !" << std::endl;
+			//std::cout << GetName() << " Was performed !" << std::endl;
 		}
 
 		void Started()
 		{
-			std::cout << GetName() << " Was started !" << std::endl;
+			//std::cout << GetName() << " Was started !" << std::endl;
 		}
 
 		void Progress()
 		{
-			std::cout << GetName() << " Progress !" << std::endl;
+			//std::cout << GetName() << " Progress !" << std::endl;
 		}
 
 		void Canceled()
 		{
-			std::cout << GetName() << " Was canceled !" << std::endl;
+			//std::cout << GetName() << " Was canceled !" << std::endl;
 		}
 	};
 }

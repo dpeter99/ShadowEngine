@@ -1,7 +1,8 @@
 #pragma once
 #include "glm/glm.hpp"
 #include "EntitySystem/SceneEntity.h"
-
+#include "Inspector/EntityInspector.h"
+#include "Internal/Inspectors/DefaultInspectors.h"
 
 enum class CameraType {
 	Orthographic,
@@ -39,14 +40,6 @@ public:
 	const glm::mat4& GetViewProjectionMatrix() const { return m_ViewProjectionMatrix; }
 
 	void SetCameraType(CameraType t);;
-	
-
-
-
-	
-
-	
-
 
 public:
 	void Init() override;
@@ -54,3 +47,11 @@ public:
 
 };
 
+class CameraInspector : public ShadowEngine::Debug::EntityInspector {
+
+public:
+	void Draw(ShadowEngine::EntitySystem::rtm_ptr<ShadowEngine::EntitySystem::Entity>& obj) override {
+		//ShadowEngine::EntitySystem::rtm_ptr<Camera> cam = obj;
+		DrawTransformInspector((ShadowEngine::EntitySystem::rtm_ptr<ShadowEngine::EntitySystem::SceneEntity>)obj);
+	}
+};

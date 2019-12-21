@@ -3,6 +3,8 @@
 #include <iostream>
 #include "Entity.h"
 #include "EntityRegistry.h"
+#include "ShadowScene.h"
+
 
 namespace ShadowEngine::EntitySystem
 {
@@ -14,7 +16,13 @@ namespace ShadowEngine::EntitySystem
 
 	ShadowEntity::Transform* Entity::GetTransform()
 	{
-		return parent->GetTransform();
+		if (parent) {
+			return parent->GetTransform();
+		}
+		else {
+			return this->scene->GetCenter();
+		}
+		
 	}
 
 	void Entity::SetScene(Scene* se)
@@ -40,14 +48,6 @@ namespace ShadowEngine::EntitySystem
 	Entity* Entity::Create(Scene* scene)
 	{
 		throw "The base entity cannot be instantiated";
-	}
-
-	void Entity::Build()
-	{
-	}
-
-	void Entity::Init()
-	{
 	}
 
 	std::ostream& operator<<(std::ostream& os, const Entity& dt)

@@ -17,14 +17,12 @@
 void FirstPersonCamera::Build()
 {
 	cam = AddInternalChildEntity<Camera>();
+	cam->name = "Camera";
 }
 
 void FirstPersonCamera::Init()
 {
 	//cam = scene->AddEntity<Camera>();
-	
-	this->internalHierarchy.push_back(cam);
-	cam->SetParent(this);
 
 	cam->SetCameraType(CameraType::Perspective);
 	cam->transform.SetPosition({ 0,0.0f,0.0f });
@@ -87,7 +85,7 @@ void FirstPersonCamera::Update(float dt)
 	//rot.y += 0.01f;
 	
 
-	this->transform.SetRotation(glm::quat(rot));
-	this->transform.SetPosition(pos);
+	//this->SetRotation(glm::quat(rot));
+	this->SetPosition(pos);
 
 }
