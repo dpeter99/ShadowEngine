@@ -14,7 +14,7 @@ namespace ShadowEngine::EntitySystem {
 		return &this->transform;
 	}
 
-	
+
 	ShadowEntity::Transform SceneEntity::CalcNewComponentToWorld(
 		const ShadowEntity::Transform& NewRelativeTransform) const
 	{
@@ -24,8 +24,8 @@ namespace ShadowEngine::EntitySystem {
 		}
 		else
 		{
-			if(scene != nullptr)
-			return NewRelativeTransform * *scene->GetCenter();
+			if (scene != nullptr)
+				return NewRelativeTransform * *scene->GetCenter();
 
 			return NewRelativeTransform;
 		}
@@ -48,7 +48,15 @@ namespace ShadowEngine::EntitySystem {
 			TransformUpdated();
 		}
 	}
+	/*
+	void SceneEntity::RotateBy(glm::vec3 rotation)
+	{
+		this->transform.RotateByEulerRotation(rotation);
+		this->w_transform = CalcNewComponentToWorld(this->transform);
+		TransformUpdated();
 
+	}
+	*/
 	void SceneEntity::SetScale(glm::vec3 scale)
 	{
 		if (transform.GetScale() != scale) {
@@ -57,7 +65,7 @@ namespace ShadowEngine::EntitySystem {
 			TransformUpdated();
 		}
 	}
-	
+
 	void SceneEntity::SetRelativeTransform(const ShadowEntity::Transform& NewTransform)
 	{
 		this->transform = NewTransform;

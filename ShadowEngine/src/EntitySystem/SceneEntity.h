@@ -106,6 +106,8 @@ namespace ShadowEngine::EntitySystem {
 		 */
 		glm::vec3 GetScale();
 
+		void RotateBy(glm::vec3 rotation);
+
 		glm::mat4 GetWorldTransformMatrix();
 
 		///Called after the transform of this was updated manually

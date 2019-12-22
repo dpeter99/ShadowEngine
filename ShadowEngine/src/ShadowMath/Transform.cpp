@@ -2,6 +2,7 @@
 #include "Transform.h"
 
 #include <glm/gtx/quaternion.hpp>
+#include <glm/gtx/rotate_vector.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
 namespace ShadowEngine::ShadowEntity {
@@ -10,7 +11,7 @@ namespace ShadowEngine::ShadowEntity {
 	{
 		position = glm::vec3(0, 0, 0);
 		scale = glm::vec3(1, 1, 1);
-		rot = glm::quat({0,0,0});
+		rot = glm::vec3({0,0,0});
 		
 
 		UpdateMatrix();
@@ -29,20 +30,20 @@ namespace ShadowEngine::ShadowEntity {
 	Transform::Transform(const glm::vec3& pos) : position(pos)
 	{
 		scale = glm::vec3(1, 1, 1);
-		rot = glm::quat({ 0,0,0 });
+		rot = glm::vec3({ 0,0,0 });
 		
 		UpdateMatrix();
 	}
 
 	Transform::Transform(const glm::vec3& pos, const glm::vec3& size) :position(pos), scale(size)
 	{
-		rot = glm::quat({ 0,0,0 });
+		rot = glm::vec3({ 0,0,0 });
 		
 
 		UpdateMatrix();
 	}
 
-	Transform::Transform(const glm::vec3& pos, const glm::vec3& size, const glm::quat& rotation)
+	Transform::Transform(const glm::vec3& pos, const glm::vec3& size, const glm::vec3& rotation)
 		:position(pos),
 		scale(size),
 		rot(rotation)
@@ -100,11 +101,17 @@ namespace ShadowEngine::ShadowEntity {
 		else*/
 		{
 			// RotationResult = B.Rotation * A.Rotation
-			OutTransform.rot = B->rot * A->rot; //VectorQuaternionMultiply2(QuatB, QuatA);
+			OutTransform.rot = B->rot + A->rot; //VectorQuaternionMultiply2(QuatB, QuatA);
 
 			// TranslateResult = B.Rotate(B.Scale * A.Translation) + B.Translate
 			const glm::vec3 ScaledTransA = A->position * B->scale; // VectorMultiply(TranslateA, ScaleB);
-			const glm::vec3 RotatedTranslate = glm::rotate(B->rot, ScaledTransA);
+
+			glm::vec3 rotated = glm::rotateX(ScaledTransA, B->rot.x);
+			rotated = glm::rotateY(rotated, B->rot.y);
+			rotated = glm::rotateZ(rotated, B->rot.z);
+
+			//const glm::vec3 RotatedTranslate = glm::rotate(B->rot, ScaledTransA);
+			const glm::vec3 RotatedTranslate = rotated;
 			OutTransform.position = RotatedTranslate + B->position;
 
 			// ScaleResult = Scale.B * Scale.A
@@ -118,8 +125,8 @@ namespace ShadowEngine::ShadowEntity {
 	{
 		this->mat =
 			glm::translate(glm::mat4(1), position) *
-			glm::toMat4(rot) *
-			//glm::toMat4( glm::quat( glm::radians(rot_vec))) *
+			//glm::toMat4(rot) *
+			glm::toMat4( glm::quat( glm::radians(rot))) *
 			glm::scale(glm::mat4(1), scale);
 	}
 

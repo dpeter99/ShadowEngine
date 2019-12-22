@@ -12,8 +12,8 @@ namespace ShadowEngine::ShadowEntity {
 		Transform(const Transform& other);
 		Transform(const glm::vec3& pos);
 		Transform(const glm::vec3& pos, const glm::vec3& size);
-		Transform(const glm::vec3& pos, const glm::vec3& size, const glm::quat& rotation);
-		//Transform(const glm::vec3& pos, const glm::vec3& size, const glm::vec3& rotation);
+		//Transform(const glm::vec3& pos, const glm::vec3& size, const glm::quat& rotation);
+		Transform(const glm::vec3& pos, const glm::vec3& size, const glm::vec3& rotation);
 
 
 		glm::vec3 GetPosition() { return position; }
@@ -35,18 +35,46 @@ namespace ShadowEngine::ShadowEntity {
 			return val;
 		}
 
+		/*
 		glm::vec3 GetEulerRotation() { return glm::degrees(glm::eulerAngles(rot)); };
 		void SetEulerRotation(glm::vec3 val) { 
 			rot = glm::quat(glm::radians(normalizeAngles(val)));			
 
+			
+
 			UpdateMatrix(); 
 		};
 
-		//glm::vec3 GetEulerRotation() { return rot_vec; };
-		//void SetEulerRotation(glm::vec3 val) { rot_vec = val; UpdateMatrix(); };
+		void RotateByEulerRotation(glm::vec3 val) {
+			rot *= glm::quat(glm::radians(val));
 
-		glm::vec3 GetForward() { return glm::vec3(0, 0, 1) * rot; };
-		glm::vec3 GetLeft() { return glm::vec3(1, 0, 0) * rot; };
+			UpdateMatrix();
+		};
+		*/
+
+		glm::vec3 GetEulerRotation() { return rot; };
+		void SetEulerRotation(glm::vec3 val) { rot = val; UpdateMatrix(); };
+
+		glm::vec3 GetForward() { 
+			glm::vec3 front;
+			front.x = cos(glm::radians(rot.x)) * cos(glm::radians(rot.y));
+			front.y = sin(glm::radians(rot.x));
+			front.z = cos(glm::radians(rot.x)) * sin(glm::radians(rot.y));
+			return glm::normalize(front);
+			//return glm::rotate(glm:: glm::vec3(0, 0, 1) * rot; 
+		};
+		glm::vec3 GetLeft() { 
+			return glm::normalize(glm::cross({ 0,1,0 }, rot));
+			return glm::vec3(1, 0, 0) * rot; 
+		};
+
+		glm::vec3 GetRight() {
+			return glm::normalize(glm::cross({0,1,0}, rot));
+		}
+
+		glm::vec3 GetUp() {
+			return glm::cross(rot, GetRight());
+		}
 
 		static Transform Multiply(const Transform* A, const Transform* B);
 		Transform operator*(const Transform& Other) const
@@ -65,7 +93,9 @@ namespace ShadowEngine::ShadowEntity {
 
 		glm::vec3 position;
 		glm::vec3 scale;
-		glm::quat rot;
+		glm::vec3 rot;
+
+		//glm::quat rot;
 
 		glm::mat4 mat;
 	};
