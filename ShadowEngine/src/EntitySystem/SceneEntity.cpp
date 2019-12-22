@@ -24,6 +24,9 @@ namespace ShadowEngine::EntitySystem {
 		}
 		else
 		{
+			if(scene != nullptr)
+			return NewRelativeTransform * *scene->GetCenter();
+
 			return NewRelativeTransform;
 		}
 	}
@@ -39,8 +42,8 @@ namespace ShadowEngine::EntitySystem {
 
 	void SceneEntity::SetRotation(glm::vec3 rotation)
 	{
-		if (transform.GetRotation() != glm::quat(rotation)) {
-			this->transform.SetRotation(rotation);
+		if (transform.GetEulerRotation() != rotation) {
+			this->transform.SetEulerRotation(rotation);
 			this->w_transform = CalcNewComponentToWorld(this->transform);
 			TransformUpdated();
 		}
@@ -69,12 +72,17 @@ namespace ShadowEngine::EntitySystem {
 
 	glm::vec3 SceneEntity::GetRotation()
 	{
-		return glm::eulerAngles( this->transform.GetRotation());
+		return this->transform.GetEulerRotation();
 	}
 
 	glm::vec3 SceneEntity::GetScale()
 	{
 		return this->transform.GetScale();
+	}
+
+	glm::mat4 SceneEntity::GetWorldTransformMatrix()
+	{
+		return w_transform.GetTransformMatrix();
 	}
 
 	void SceneEntity::TransformUpdated()

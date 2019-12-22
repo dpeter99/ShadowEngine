@@ -12,6 +12,8 @@
 
 #include "EntitySystem/ShadowScene.h"
 
+#include <iostream>
+
 #include <SDL.h>
 
 void FirstPersonCamera::Build()
@@ -63,7 +65,7 @@ void FirstPersonCamera::Init()
 void FirstPersonCamera::Update(float dt)
 {
 	auto pos = this->transform.GetPosition();
-	auto rot = this->transform.GetEulerRotation();
+	auto rot = this->GetRotation();
 
 	if (forward->GetPerformed()) {
 		pos += this->transform.GetForward() * (forward->GetData() * 0.001f * dt);
@@ -78,14 +80,16 @@ void FirstPersonCamera::Update(float dt)
 		rot.y += mouse->GetData().x * 0.02;
 		rot.x += mouse->GetData().y * 0.02;
 		rot.x= glm::clamp(rot.x,-360.0f / 2, +360.0f / 2);
+		rot.y = glm::clamp(rot.y, -360.0f / 2, +360.0f / 2);
 
 		//std::cout << "Nice";
 	}
 
-	//rot.y += 0.01f;
+	rot.y += 1.f;
 	
+	std::cout << "Pos: x:" << rot.x << ",\t y:" << rot.y << ",\t z:" << rot.z << std::endl;
 
-	//this->SetRotation(glm::quat(rot));
+	this->SetRotation(rot);
 	this->SetPosition(pos);
 
 }

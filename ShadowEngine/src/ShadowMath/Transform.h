@@ -13,6 +13,7 @@ namespace ShadowEngine::ShadowEntity {
 		Transform(const glm::vec3& pos);
 		Transform(const glm::vec3& pos, const glm::vec3& size);
 		Transform(const glm::vec3& pos, const glm::vec3& size, const glm::quat& rotation);
+		Transform(const glm::vec3& pos, const glm::vec3& size, const glm::vec3& rotation);
 
 
 		glm::vec3 GetPosition() { return position; }
@@ -22,11 +23,15 @@ namespace ShadowEngine::ShadowEntity {
 		glm::vec3 GetScale() { return scale; };
 		void SetScale(glm::vec3 val) { scale = val; UpdateMatrix(); };
 
-		glm::quat GetRotation() { return rot; };
-		void SetRotation(glm::quat val) { rot = val; UpdateMatrix(); };
+		//glm::quat GetRotation() { return rot; };
+		//void SetRotation(glm::quat val) { rot = val; UpdateMatrix(); };
 
-		glm::vec3 GetEulerRotation() { return glm::eulerAngles(rot); };
-		void SetEulerRotation(glm::vec3 val) { rot = glm::quat(val); UpdateMatrix(); };
+		//TODO:Fix qats
+		glm::vec3 GetEulerRotation() { return glm::degrees(glm::eulerAngles(rot)); };
+		void SetEulerRotation(glm::vec3 val) { rot = glm::quat(glm::radians(val)); UpdateMatrix(); };
+
+		//glm::vec3 GetEulerRotation() { return rot_vec; };
+		//void SetEulerRotation(glm::vec3 val) { rot_vec = val; UpdateMatrix(); };
 
 		glm::vec3 GetForward() { return glm::vec3(0, 0, 1) * rot; };
 		glm::vec3 GetLeft() { return glm::vec3(1, 0, 0) * rot; };

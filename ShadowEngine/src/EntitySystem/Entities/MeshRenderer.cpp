@@ -17,6 +17,6 @@ void MeshRenderer::TransformChanged()
 
 void MeshRenderer::UpdateRenderNode()
 {	
-	node->GetCB()->modelToWorld = transform.GetTransformMatrix();
+	node->GetCB()->modelToWorld = GetWorldTransformMatrix();
 	node->GetCB().Upload();
 }

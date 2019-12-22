@@ -27,10 +27,17 @@ namespace ShadowEngine::EntitySystem {
 		ShadowEntity::Transform w_transform;
 
 	public:
-		SceneEntity() :Entity() { }
+		SceneEntity() :Entity() 
+		{
+			scene = nullptr;
+			this->transform = ShadowEntity::Transform({ 0,0,0 });
+			this->w_transform = CalcNewComponentToWorld(this->transform);
+		}
 
 		SceneEntity(Scene* scene) : Entity(scene)
 		{
+			this->transform = ShadowEntity::Transform({ 0,0,0 });
+			this->w_transform = CalcNewComponentToWorld(this->transform);
 		};
 
 
@@ -98,6 +105,8 @@ namespace ShadowEngine::EntitySystem {
 		 * \param Size The new Size of this entity
 		 */
 		glm::vec3 GetScale();
+
+		glm::mat4 GetWorldTransformMatrix();
 
 		///Called after the transform of this was updated manually
 		void TransformUpdated();

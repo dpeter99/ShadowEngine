@@ -169,7 +169,7 @@ namespace ShadowEngine::Debug {
 
 	void DebugModule::OnGui()
 	{
-		//ImGui::ShowDemoWindow();
+		ImGui::ShowDemoWindow();
 
 		ImGui::Begin("Time", &active, ImGuiWindowFlags_MenuBar);
 
