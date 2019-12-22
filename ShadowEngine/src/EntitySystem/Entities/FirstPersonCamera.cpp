@@ -79,8 +79,8 @@ void FirstPersonCamera::Update(float dt)
 
 		rot.y += mouse->GetData().x * 0.02;
 		rot.x += mouse->GetData().y * 0.02;
-		rot.x= glm::clamp(rot.x,-360.0f / 2, +360.0f / 2);
-		rot.y = glm::clamp(rot.y, -360.0f / 2, +360.0f / 2);
+		//rot.x= glm::clamp(rot.x,-360.0f / 2, +360.0f / 2);
+		//rot.y = glm::clamp(rot.y, -360.0f / 2, +360.0f / 2);
 
 		//std::cout << "Nice";
 	}

@@ -7,7 +7,7 @@
 
 
 void DrawTransformInspector(ShadowEngine::EntitySystem::rtm_ptr<ShadowEngine::EntitySystem::SceneEntity>& entity) {
-	if (ImGui::TreeNode("Transform"))
+	if (ImGui::TreeNodeEx("Transform",ImGuiTreeNodeFlags_DefaultOpen))
 	{
 		auto pos = entity->GetPosition();
 		float vec3_p[3] = { pos.x, pos.y, pos.z};

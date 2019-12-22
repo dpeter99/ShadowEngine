@@ -95,7 +95,7 @@ namespace ShadowEngine::Debug {
 
 				if (ImGui::IsItemClicked()) {
 					selected_ent = entity;
-					selected_inspector.null();
+					selected_inspector = entity;
 				}
 
 			}

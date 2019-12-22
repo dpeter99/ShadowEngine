@@ -13,7 +13,7 @@ namespace ShadowEngine::ShadowEntity {
 		Transform(const glm::vec3& pos);
 		Transform(const glm::vec3& pos, const glm::vec3& size);
 		Transform(const glm::vec3& pos, const glm::vec3& size, const glm::quat& rotation);
-		Transform(const glm::vec3& pos, const glm::vec3& size, const glm::vec3& rotation);
+		//Transform(const glm::vec3& pos, const glm::vec3& size, const glm::vec3& rotation);
 
 
 		glm::vec3 GetPosition() { return position; }
@@ -27,8 +27,20 @@ namespace ShadowEngine::ShadowEntity {
 		//void SetRotation(glm::quat val) { rot = val; UpdateMatrix(); };
 
 		//TODO:Fix qats
+		glm::vec3 normalizeAngles(glm::vec3 val) {
+			val.x = val.x < 0 ? 360 - val.x : val.x;
+			val.y = val.y < 0 ? 360 - val.y : val.y;
+			val.z = val.z < 0 ? 360 - val.z : val.z;
+
+			return val;
+		}
+
 		glm::vec3 GetEulerRotation() { return glm::degrees(glm::eulerAngles(rot)); };
-		void SetEulerRotation(glm::vec3 val) { rot = glm::quat(glm::radians(val)); UpdateMatrix(); };
+		void SetEulerRotation(glm::vec3 val) { 
+			rot = glm::quat(glm::radians(normalizeAngles(val)));			
+
+			UpdateMatrix(); 
+		};
 
 		//glm::vec3 GetEulerRotation() { return rot_vec; };
 		//void SetEulerRotation(glm::vec3 val) { rot_vec = val; UpdateMatrix(); };

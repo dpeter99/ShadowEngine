@@ -51,14 +51,16 @@ namespace ShadowEngine::ShadowEntity {
 		UpdateMatrix();
 	}
 
+	/*
 	Transform::Transform(const glm::vec3& pos, const glm::vec3& size, const glm::vec3& rotation)
 		:position(pos),
 		scale(size),
-		rot(rotation)
+		rot(glm::radians(rotation))
 	{
 
 		UpdateMatrix();
 	}
+	*/
 
 	/** Returns Multiplied Transform of 2 FTransforms **/
 			///P:\_Other\UnrealEngine\Engine\Source\Runtime\Core\Public\Math\TransformVectorized.h:1480
