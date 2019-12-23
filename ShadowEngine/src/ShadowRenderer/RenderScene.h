@@ -32,7 +32,7 @@ namespace ShadowEngine::Rendering
 
 		LightNode()
 		{
-			
+			std::memset(this, 0, sizeof(LightNode));
 		}
 	};
 

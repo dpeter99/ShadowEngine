@@ -1,3 +1,6 @@
+#ifndef __STRUCTS_HLSL__
+#define __STRUCTS_HLSL__
+
 struct Vertex
 {
     float3 position : POSITION;
@@ -26,7 +29,7 @@ struct VSOutput_SkyBox
 struct Light
 {
 	uint type; float3 pos;
-	float3 dir;
+	float4 dir;
 	float4 ambient;
 	float4 diffuse;
 	float3 att; float range;
@@ -45,3 +48,5 @@ cbuffer PerObjectCb : register(b1) {
 	float4x4 modelMat;
     float4x4 modelMatInverse;
 }
+
+#endif // __STRUCTS_HLSL__

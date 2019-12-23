@@ -74,7 +74,7 @@ namespace ShadowEngine::Rendering {
 			(*cb)->lights[i].type = (UINT)LightNodes[i]->type;
 			(*cb)->lights[i].ambient = LightNodes[i]->ambient;
 			(*cb)->lights[i].diffuse = LightNodes[i]->diffuse;
-			(*cb)->lights[i].dir = LightNodes[i]->dir;
+			(*cb)->lights[i].dir = glm::vec4( LightNodes[i]->dir,0);
 
 			(*cb)->lights[i].pos = LightNodes[i]->pos;
 			(*cb)->lights[i].range = LightNodes[i]->range;

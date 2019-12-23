@@ -37,13 +37,13 @@ namespace ShadowEngine::Rendering {
 	{
 		UINT type; glm::vec3 pos;
 
-		glm::vec3 dir; float pad5;
+		glm::vec4 dir;
 
 		glm::vec4 ambient;
 
 		glm::vec4 diffuse;
 
-		glm::vec3 att; 
+		glm::vec3 att;
 
 		float range;
 	};
