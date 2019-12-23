@@ -481,11 +481,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//Load in the default values for now
 		blendState = CD3DX12_BLEND_DESC(D3D12_DEFAULT);
 		rasterizerState = CD3DX12_RASTERIZER_DESC(D3D12_DEFAULT);
-		rasterizerState.CullMode = D3D12_CULL_MODE_FRONT;
+		rasterizerState.CullMode = D3D12_CULL_MODE_NONE;
 		
 		depthStencilState = CD3DX12_DEPTH_STENCIL_DESC(D3D12_DEFAULT);
 		depthStencilState.DepthEnable = TRUE;
-		depthStencilState.DepthFunc = D3D12_COMPARISON_FUNC_LESS;
+		depthStencilState.DepthFunc = D3D12_COMPARISON_FUNC_LESS_EQUAL;
 		depthStencilState.StencilEnable = FALSE;
 		dsvFormat = DXGI_FORMAT_D32_FLOAT;
 

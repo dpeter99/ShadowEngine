@@ -58,7 +58,7 @@ namespace ShadowEngine::ShadowEntity {
 		glm::vec3 GetForward() { 
 			glm::vec3 front;
 			front.x = cos(glm::radians(rot.x)) * cos(glm::radians(rot.y));
-			front.y = sin(glm::radians(rot.y));
+			front.y = sin(glm::radians(rot.x));
 			front.z = cos(glm::radians(rot.x)) * sin(glm::radians(rot.y));
 			return glm::normalize(front);
 			//return glm::rotate(glm:: glm::vec3(0, 0, 1) * rot; 

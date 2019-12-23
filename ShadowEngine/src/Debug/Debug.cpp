@@ -16,6 +16,8 @@
 #include "EntitySystem/EntitySystem.h"
 #include <Core\ShadowApplication.h>
 
+#include "ImGui/IconsFontAwesome5.h"
+
 namespace ShadowEngine::Debug {
 
 	DebugModule::DebugModule() : active(false)
@@ -86,7 +88,7 @@ namespace ShadowEngine::Debug {
 				if (selected_ent == entity)
 					node_flags |= ImGuiTreeNodeFlags_Selected;
 
-				if (ImGui::TreeNodeEx(entity->name.c_str(), node_flags))
+				if (ImGui::TreeNodeEx((std::string(ICON_FA_CUBE) + " " + entity->name).c_str(), node_flags))
 				{
 
 

@@ -17,10 +17,32 @@
 
 #include <SDL.h>
 #include "Platform/SDL/SDLModule.h"
+#include <ImGui\ImGui_Utils.h>
 
 namespace ShadowEngine::DebugGui {
 
 	ImGuiModule* ImGuiModule::instance = nullptr;
+
+	static ImFont* _fontRegular = nullptr;
+	static ImFont* _fontSolid = nullptr;
+
+	void LoadFontAwesome()
+	{
+		// Loads fonts
+		ImGuiIO& io = ImGui::GetIO();
+		io.Fonts->AddFontDefault();
+		static ImWchar ranges[] = { 0xf000, 0xf82f, 0 };
+		ImFontConfig config;
+		config.MergeMode = true;
+		auto fontRegularPath
+			= std::string("./Resources/Fonts/") + FONT_ICON_FILE_NAME_FAR;
+		_fontRegular = io.Fonts->AddFontFromFileTTF(fontRegularPath.c_str(),
+			ImGui::IconSize, &config, ranges);
+		auto fontSolidPath
+			= std::string("./Resources/Fonts/") + FONT_ICON_FILE_NAME_FAS;
+		_fontSolid = io.Fonts->AddFontFromFileTTF(fontSolidPath.c_str(),
+			ImGui::IconSize, &config, ranges);
+	}
 
 	void ImGuiModule::Init()
 	{
@@ -28,6 +50,8 @@ namespace ShadowEngine::DebugGui {
 
 		ImGui::CreateContext();
 		ImGui::StyleColorsDark();
+
+		LoadFontAwesome();
 
 		ImGuiIO& io = ImGui::GetIO();
 		io.BackendFlags |= ImGuiBackendFlags_HasMouseCursors;

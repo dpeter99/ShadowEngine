@@ -31,3 +31,8 @@ void SkySphere::Init()
 	renderer->SetScale({ 2,2,2 });
 	renderer->SetPosition({0,0,0});
 }
+
+void SkySphere::Update(float dt)
+{
+	renderer->SetPosition(scene->mainCamera->parent->GetTransform()->GetPosition());
+}

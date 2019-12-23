@@ -3,11 +3,13 @@
 #include "DefaultInspectors.h"
 
 #include "imgui.h"
+#include "ImGui/IconsFontAwesome5.h"
 
 
 
 void DrawTransformInspector(ShadowEngine::EntitySystem::rtm_ptr<ShadowEngine::EntitySystem::SceneEntity>& entity) {
-	if (ImGui::TreeNodeEx("Transform",ImGuiTreeNodeFlags_DefaultOpen))
+
+	if (ImGui::CollapsingHeader((std::string(ICON_FA_MAP_MARKER) + " Transform").c_str(),ImGuiTreeNodeFlags_DefaultOpen))
 	{
 		auto pos = entity->GetPosition();
 		float vec3_p[3] = { pos.x, pos.y, pos.z};
@@ -27,6 +29,10 @@ void DrawTransformInspector(ShadowEngine::EntitySystem::rtm_ptr<ShadowEngine::En
 			entity->SetScale(glm::vec3(vec3_s[0], vec3_s[1], vec3_s[2]));
 		}
 
-		ImGui::TreePop();
+		auto forward = entity->GetTransform()->GetForward();
+		float forward_vec[3] = { forward.x, forward.y, forward.z };
+		ImGui::InputFloat3("forvard", forward_vec);
+
+		//ImGui::TreePop();
 	}
 }
