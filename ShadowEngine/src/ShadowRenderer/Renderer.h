@@ -58,6 +58,8 @@ namespace ShadowEngine::Rendering {
 		static void Submit(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4& transform = glm::mat4(1.0f));
 
 		static Ref<RenderNode> AddRenderNode(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> material, const glm::mat4& transform = glm::mat4(1.0f));
+
+		static Ref<LightNode> AddLightNode();
 		
 		inline static RendererAPI::API GetAPI() { return RendererAPI::GetAPI(); }
 

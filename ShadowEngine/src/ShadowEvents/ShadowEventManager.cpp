@@ -51,6 +51,8 @@ namespace ShadowEngine::EventSystem {
 			for (auto listener : eventConsumers)
 			{
 				listener->OnEvent(*e);
+				if (e->Handled)
+					break;
 			}
 			eventQueue.pop();
 		}

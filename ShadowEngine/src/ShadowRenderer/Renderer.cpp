@@ -45,9 +45,9 @@ namespace ShadowEngine::Rendering {
 	{
 		assert(camera != nullptr);
 		
-		auto cb = scene->GetWorldData().get();
-		(*cb)->viewProjection = camera->GetViewProjectionMatrix();
-		cb->Upload();
+		scene->SetCamera(camera);
+
+		scene->PrepareWorldData();
 
 		s_RendererAPI->StartFrame(scene->GetWorldData());
 		
@@ -86,6 +86,12 @@ namespace ShadowEngine::Rendering {
 	{
 		auto node = instance->scene->AddRenderNode(mesh, material);
 		node->UpdateTransform(transform);
+		return  node;
+	}
+
+	Ref<LightNode> Renderer::AddLightNode()
+	{
+		auto node = instance->scene->AddLightNode();
 		return  node;
 	}
 }

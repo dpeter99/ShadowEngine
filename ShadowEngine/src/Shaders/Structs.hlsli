@@ -23,11 +23,22 @@ struct VSOutput_SkyBox
 	float4 worldPos : WORLD;
 };
 
+struct Light
+{
+	uint type; float3 pos;
+	float3 dir;
+	float4 ambient;
+	float4 diffuse;
+	float3 att; float range;
+};
+
 cbuffer PerFrameCb : register(b0)
 {
 	float4x4 viewProjMat;
 	float4x4 rayDir;
 	float4 cameraPos;
+    
+	Light lights[5];
 }
 
 cbuffer PerObjectCb : register(b1) {

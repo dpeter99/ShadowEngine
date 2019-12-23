@@ -14,12 +14,29 @@ SamplerState sampl : register(s0);
 [RootSignature(RootSig0)]
 float4 main(VSOutput input) :SV_Target
 {
-    float4 color = Mat_Tex.Sample(sampl, input.texCoord);
+	
+	/*
+	
 
-	color *= tint;
+    float4 diffuse = ObjTexture.Sample( ObjSamplerState, input.TexCoord );
 
-	float3 viewDir = normalize(cameraPos.xyz - input.worldPos.xyz);
-	color *= Mat_Env.Sample(sampl, reflect(-viewDir, normalize(input.normal)));
+    
 
-	return color;
+    
+    
+    
+    return float4(finalColor, diffuse.a);
+	*/
+	input.normal = normalize(input.normal);
+	
+	
+    float4 diffuse = Mat_Tex.Sample(sampl, input.texCoord) * tint;
+
+	float3 outputColor;
+	
+	outputColor = diffuse * lights[0].ambient;
+	
+	outputColor += saturate(dot(lights[0].dir, input.normal) * lights[0].diffuse * diffuse);
+
+	return float4(outputColor, diffuse.a);
 }

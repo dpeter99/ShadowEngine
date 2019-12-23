@@ -187,10 +187,16 @@ namespace ShadowEngine::DebugGui {
 
 	void ImGuiModule::OnEvent(EventSystem::ShadowEvent& e)
 	{
+		if (ImGui::GetIO().WantCaptureMouse) {
+			e.Handled = true;
+		}
 
-
-		ImGui_ImplSDL2_ProcessEvent(e.GetSDLEvnet());
-
+		//bool used = ImGui_ImplSDL2_ProcessEvent(e.GetSDLEvnet());
+		/*
+		if (used) {
+			e.Handled = true;
+		}
+		*/
 		/*
 		ImGuiIO& io = ImGui::GetIO();
 

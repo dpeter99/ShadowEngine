@@ -8,7 +8,7 @@
 #include "Entity.h"
 
 #include "Entities/Player.h"
-#include "Entities/Light.h"
+#include "Entities/DirectionalLight.h"
 
 namespace ShadowEngine::EntitySystem
 {
@@ -16,6 +16,6 @@ namespace ShadowEngine::EntitySystem
 	{
 		this->RegisterEntity("info_player_start", new Player());
 		//this->RegisterEntity("camera", new Camera());
-		this->RegisterEntity("light", new Light());
+		this->RegisterEntity("light", new DirectionalLight());
 	}
 }

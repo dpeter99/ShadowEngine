@@ -33,7 +33,26 @@ namespace ShadowEngine::Rendering {
 		glm::mat4x4 modelToWorld;
 	};
 
+	struct LightData
+	{
+		UINT type; glm::vec3 pos;
+
+		glm::vec3 dir; float pad5;
+
+		glm::vec4 ambient;
+
+		glm::vec4 diffuse;
+
+		glm::vec3 att; 
+
+		float range;
+	};
+
 	struct WorldData {
 		glm::mat4x4 viewProjection;
+		glm::mat4x4 rayDir;
+		glm::vec4 cameraPos;
+
+		LightData lights[5];
 	};
 }

@@ -6,6 +6,8 @@
 #include "ShadowAsset/Assets/Textures/Texture.h"
 #include "ShadowAsset/Assets/Textures/TextureCubeMap.h"
 #include "EntitySystem/Entities/SkySphere.h"
+#include <EntitySystem\Entities\DirectionalLight.h>
+#include <EntitySystem\Entities\PointLight.h>
 
 void TestScene::Init()
 {
@@ -16,7 +18,6 @@ void TestScene::Init()
 	auto sky = AddEntity<SkySphere>();
 	sky->name = "Sky";
 	
-
 	auto fps = AddEntity< FirstPersonCamera>();
 	fps->name = "Fps Camera";
 	
@@ -47,5 +48,18 @@ void TestScene::Init()
 	r->SetMesh(m_model);
 	r->SetMaterial(m_Material);
 	
+	auto sky_light = AddEntity<DirectionalLight>();
+	sky_light->name = "Sun light";
+	sky_light->direction = { ::cos(270),::sin(25),::sin(270) };
+	sky_light->diffuse = { 0.70, 0.80, 1.00,1 };
+	sky_light->ambient = { 1.0f, 1.0f, 1.0f, 1.0f };
+
+	auto light = AddEntity<PointLight>();
+	light->name = "light";
+	light->diffuse = { 1,0,0,1 };
+	light->range = 2;
+	light->attenuation = { 0.0f, 0.2f, 0.0f };
+
+
 	//Scene::Init();
 }
