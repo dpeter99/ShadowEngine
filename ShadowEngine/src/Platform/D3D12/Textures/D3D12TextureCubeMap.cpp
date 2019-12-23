@@ -5,17 +5,49 @@
 
 namespace ShadowEngine::Rendering::D3D12 {
 
+	std::string GetCubemapFileName(std::string path, int i) {
+		auto poss = path.find_last_of(".");
+		if (poss != std::string::npos) {
+			std::string postfix;
+			switch (i) {
+			case 0:
+				postfix = "_ft";
+				break;
+			case 1:
+				postfix = "_bk";
+				break;
+			case 2:
+				postfix = "_up";
+				break;
+			case 3:
+				postfix = "_dn";
+				break;
+			case 4:
+				postfix = "_rt";
+				break;
+			case 5:
+				postfix = "_lf";
+				break;
+			}
+
+			path = path.insert(poss, postfix);
+		}
+
+		return path;
+	}
+
 	D3D12TextureCubeMap::D3D12TextureCubeMap(std::string path)
 	{
-		auto img_temp = IMG_Load(path.c_str());
-
+		std::string temp = GetCubemapFileName(path,0);
+		auto img_temp = IMG_Load(temp.c_str());
+		auto img_temp_converted = SDL_ConvertSurfaceFormat(img_temp, SDL_PIXELFORMAT_RGBA32, 0);
 
 		//D3D12_RESOURCE_DESC for the GPU resource;
 		ZeroMemory(&resourceDesc, sizeof(D3D12_RESOURCE_DESC));
 		resourceDesc.DepthOrArraySize = 6;
-		resourceDesc.Height = (unsigned int)img_temp->h;
-		resourceDesc.Width = (unsigned int)img_temp->w;
-		resourceDesc.Format = SDLFormatToGXGI(*img_temp->format);
+		resourceDesc.Height = (unsigned int)img_temp_converted->h;
+		resourceDesc.Width = (unsigned int)img_temp_converted->w;
+		resourceDesc.Format = SDLFormatToGXGI(*img_temp_converted->format);
 		resourceDesc.MipLevels = 1;
 		resourceDesc.Dimension = D3D12_RESOURCE_DIMENSION_TEXTURE2D;
 		resourceDesc.Alignment = 0;
@@ -25,6 +57,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		resourceDesc.Flags = D3D12_RESOURCE_FLAG_NONE;
 
 		SDL_FreeSurface(img_temp);
+		SDL_FreeSurface(img_temp_converted);
 
 		UINT64 copyableSize;
 		D3D12RendererAPI::device->GetCopyableFootprints(&resourceDesc, 0, 6, 0, nullptr, nullptr, nullptr, &copyableSize);
@@ -32,7 +65,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//Load in the images
 		for (size_t i = 0; i < 6; i++)
 		{
-			auto img_temp = IMG_Load(path.c_str());
+			
+
+			auto img_temp = IMG_Load(GetCubemapFileName(path,i).c_str());
 			auto img = SDL_ConvertSurfaceFormat(img_temp, SDL_PIXELFORMAT_RGBA32, 0);
 
 			format = SDLFormatToGXGI(*img->format);

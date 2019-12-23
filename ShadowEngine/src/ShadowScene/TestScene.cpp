@@ -20,7 +20,7 @@ void TestScene::Init()
 	auto fps = AddEntity< FirstPersonCamera>();
 	fps->name = "Fps Camera";
 	
-	auto env_map = std::make_shared<ShadowEngine::Assets::TextureCubeMap>("./Resources/Textures/giraffe.png");
+	auto env_map = std::make_shared<ShadowEngine::Assets::TextureCubeMap>("./Resources/Textures/cube_maps/ame_ash/ashcanyon.tga");
 	env_map->Upload();
 	
 	auto m_model = ShadowEngine::Assets::Mesh::LoadModel_obj("giraffe.obj");

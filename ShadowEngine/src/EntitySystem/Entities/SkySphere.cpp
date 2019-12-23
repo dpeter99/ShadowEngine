@@ -20,7 +20,7 @@ void SkySphere::Init()
 
 	auto m_Material = std::make_shared<ShadowEngine::Assets::Material>(m_Shader);
 
-	auto env_map = std::make_shared<ShadowEngine::Assets::TextureCubeMap>("./Resources/Textures/giraffe.png");
+	auto env_map = std::make_shared<ShadowEngine::Assets::TextureCubeMap>("./Resources/Textures/cube_maps/ame_ash/ashcanyon.tga");
 	env_map->Upload();
 	m_Material->SetTexture("Mat_Env", env_map);
 	m_Material->SetProperty("tint", glm::vec4(1, 1, 1, 1));

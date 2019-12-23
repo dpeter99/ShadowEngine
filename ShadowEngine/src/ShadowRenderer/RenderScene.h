@@ -2,6 +2,7 @@
 
 
 #include "ShadowRenderer/ConstantBuffer.h"
+#include "ShadowAsset/Assets/Textures/TextureCubeMap.h"
 #include "DataStructs.h"
 
 namespace ShadowEngine::Rendering
@@ -40,6 +41,8 @@ namespace ShadowEngine::Rendering
 		Ref<RenderNode> AddRenderNode(Ref<Assets::Mesh> mesh, Ref<Assets::Material> material);
 
 		Ref<ConstantBuffer_Typed<WorldData>> GetWorldData();
+
+		Ref<ShadowEngine::Assets::TextureCubeMap> EnvMap;
 
 		using iterator = RenderNodeList::iterator;
 		using const_iterator = RenderNodeList::const_iterator;

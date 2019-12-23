@@ -73,7 +73,7 @@ void FirstPersonCamera::Update(float dt)
 	}
 
 	if (side->GetPerformed()) {
-		pos += this->transform.GetLeft() * ( side->GetData() * 0.001f * dt);
+		pos += this->transform.GetRight() * ( side->GetData() * -0.001f * dt);
 	}
 
 	if (mouseButton->GetState() == ShadowEngine::InputSystem::ActionState::Progress && mouse->GetPerformed()) {

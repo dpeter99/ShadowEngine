@@ -58,22 +58,18 @@ namespace ShadowEngine::ShadowEntity {
 		glm::vec3 GetForward() { 
 			glm::vec3 front;
 			front.x = cos(glm::radians(rot.x)) * cos(glm::radians(rot.y));
-			front.y = sin(glm::radians(rot.x));
+			front.y = sin(glm::radians(rot.y));
 			front.z = cos(glm::radians(rot.x)) * sin(glm::radians(rot.y));
 			return glm::normalize(front);
 			//return glm::rotate(glm:: glm::vec3(0, 0, 1) * rot; 
 		};
-		glm::vec3 GetLeft() { 
-			return glm::normalize(glm::cross({ 0,1,0 }, rot));
-			return glm::vec3(1, 0, 0) * rot; 
-		};
 
 		glm::vec3 GetRight() {
-			return glm::normalize(glm::cross({0,1,0}, rot));
+			return glm::normalize(glm::cross(GetForward(), {0,1,0}));
 		}
 
 		glm::vec3 GetUp() {
-			return glm::cross(rot, GetRight());
+			return glm::normalize(glm::cross(GetRight(), GetForward()));
 		}
 
 		static Transform Multiply(const Transform* A, const Transform* B);
