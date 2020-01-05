@@ -72,6 +72,8 @@ project "ShadowEngine"
 		"%{prj.name}/src/**.hlsli",
 		"%{prj.name}/dependencies/stb_image/**.h",
 		"%{prj.name}/dependencies/stb_image/**.cpp",
+		"%{prj.name}/dependencies/imgui/examples/imgui_impl_dx12.cpp",
+		"%{prj.name}/dependencies/imgui/examples/imgui_impl_dx12.h"
 	}
 
 	defines
@@ -95,7 +97,7 @@ project "ShadowEngine"
 	{ 
 		"Glad",
 		"ImGui",
-		"Glm",
+		
 		
 		"ShadowEngineBuild",
 		
