@@ -1,0 +1,174 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.GraphicsContext
+  id: ShadowEngine.Rendering.GraphicsContext
+  parent: ShadowEngine.Rendering
+  children:
+  - ShadowEngine.Rendering.GraphicsContext.Create(ShadowWindow *)
+  - ShadowEngine.Rendering.GraphicsContext.Init()
+  - ShadowEngine.Rendering.GraphicsContext.SwapBuffers()
+  href: ShadowEngine.Rendering.GraphicsContext.yml
+  langs:
+  - cplusplus
+  name: GraphicsContext
+  nameWithType: GraphicsContext
+  fullName: ShadowEngine::Rendering::GraphicsContext
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowRenderer/GraphicsContext.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/GraphicsContext.h
+    startLine: 7
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/GraphicsContext.h
+    startLine: 8
+  namespace: ShadowEngine.Rendering
+  syntax: &o1
+    content: 'public: class GraphicsContext'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.Rendering.GraphicsContext.Create(ShadowWindow *)
+  id: ShadowEngine.Rendering.GraphicsContext.Create(ShadowWindow *)
+  parent: ShadowEngine.Rendering.GraphicsContext
+  href: ShadowEngine.Rendering.GraphicsContext.yml
+  langs:
+  - cplusplus
+  name: Create(ShadowWindow *window)
+  nameWithType: GraphicsContext::Create(ShadowWindow *window)
+  fullName: Ref<GraphicsContext> ShadowEngine::Rendering::GraphicsContext::Create(ShadowWindow *window)
+  overload: ShadowEngine.Rendering.GraphicsContext.Create*
+  type: Method
+  source:
+    remote:
+      path: ShadowEngine/src/ShadowRenderer/GraphicsContext.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/GraphicsContext.cpp
+    startLine: 11
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/GraphicsContext.h
+    startLine: 13
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: static Ref<GraphicsContext> Create(ShadowWindow *window)'
+    parameters:
+    - id: window
+      type: ShadowWindow68bc11b4
+    return:
+      type: 2e1cc081ShadowEngine.Rendering.GraphicsContexta08ddfce
+- uid: ShadowEngine.Rendering.GraphicsContext.Init()
+  id: ShadowEngine.Rendering.GraphicsContext.Init()
+  parent: ShadowEngine.Rendering.GraphicsContext
+  href: ShadowEngine.Rendering.GraphicsContext.yml
+  langs:
+  - cplusplus
+  name: Init()
+  nameWithType: GraphicsContext::Init()
+  fullName: virtual void ShadowEngine::Rendering::GraphicsContext::Init()
+  overload: ShadowEngine.Rendering.GraphicsContext.Init*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/GraphicsContext.h
+    startLine: 10
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/GraphicsContext.h
+    startLine: 10
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual void Init()=0'
+- uid: ShadowEngine.Rendering.GraphicsContext.SwapBuffers()
+  id: ShadowEngine.Rendering.GraphicsContext.SwapBuffers()
+  parent: ShadowEngine.Rendering.GraphicsContext
+  href: ShadowEngine.Rendering.GraphicsContext.yml
+  langs:
+  - cplusplus
+  name: SwapBuffers()
+  nameWithType: GraphicsContext::SwapBuffers()
+  fullName: virtual void ShadowEngine::Rendering::GraphicsContext::SwapBuffers()
+  overload: ShadowEngine.Rendering.GraphicsContext.SwapBuffers*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/GraphicsContext.h
+    startLine: 11
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/GraphicsContext.h
+    startLine: 11
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual void SwapBuffers()=0'
+references:
+- uid: ShadowEngine.Rendering.GraphicsContext.Init*
+  name: Init
+  nameWithType: GraphicsContext::Init
+  fullName: virtual void ShadowEngine::Rendering::GraphicsContext::Init
+- uid: ShadowEngine.Rendering.GraphicsContext.SwapBuffers*
+  name: SwapBuffers
+  nameWithType: GraphicsContext::SwapBuffers
+  fullName: virtual void ShadowEngine::Rendering::GraphicsContext::SwapBuffers
+- uid: ShadowWindow68bc11b4
+  spec.cplusplus:
+  - uid: ShadowWindow
+  - name: " *"
+    fullName: " *"
+- uid: 2e1cc081ShadowEngine.Rendering.GraphicsContexta08ddfce
+  spec.cplusplus:
+  - name: Ref<
+    fullName: Ref<
+  - uid: ShadowEngine.Rendering.GraphicsContext
+  - name: '>'
+    fullName: '>'
+- uid: ShadowEngine.Rendering.GraphicsContext.Create*
+  name: Create
+  nameWithType: GraphicsContext::Create
+  fullName: Ref<GraphicsContext> ShadowEngine::Rendering::GraphicsContext::Create
+- uid: ShadowEngine.Rendering.D3D12.D3D12Context
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12Context.yml
+  name: D3D12Context
+  nameWithType: D3D12Context
+  fullName: ShadowEngine::Rendering::D3D12::D3D12Context
+  type: Class
+  syntax:
+    content: 'public: class D3D12Context : public aphicsContext'
+- uid: ShadowEngine.Rendering.D3D12.D3D12Context.Init()
+  parent: ShadowEngine.Rendering.D3D12.D3D12Context
+  href: ShadowEngine.Rendering.D3D12.D3D12Context.yml
+  name: Init()
+  nameWithType: D3D12Context::Init()
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12Context::Init()
+  type: Method
+  syntax:
+    content: 'public: virtual void Init() override'
+- uid: ShadowEngine.Rendering.D3D12.D3D12Context.SwapBuffers()
+  parent: ShadowEngine.Rendering.D3D12.D3D12Context
+  href: ShadowEngine.Rendering.D3D12.D3D12Context.yml
+  name: SwapBuffers()
+  nameWithType: D3D12Context::SwapBuffers()
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12Context::SwapBuffers()
+  type: Method
+  syntax:
+    content: 'public: virtual void SwapBuffers() override'
+- uid: ShadowEngine.Rendering.GraphicsContext
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.GraphicsContext.yml
+  name: GraphicsContext
+  nameWithType: GraphicsContext
+  fullName: ShadowEngine::Rendering::GraphicsContext
+  type: Class
+  syntax: *o1
+- uid: ShadowWindow
+  href: ShadowWindow.yml
+  name: ShadowWindow
+  nameWithType: ShadowWindow
+  fullName: ShadowWindow
+  type: Class
+  syntax:
+    content: 'public: class ShadowWindow'

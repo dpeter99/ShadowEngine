@@ -4,13 +4,6 @@
 
 namespace ShadowEngine::Assets {
 
-	ShadowAsset::ShadowAsset()
-	{
-	}
 
-
-	ShadowAsset::~ShadowAsset()
-	{
-	}
 
 }

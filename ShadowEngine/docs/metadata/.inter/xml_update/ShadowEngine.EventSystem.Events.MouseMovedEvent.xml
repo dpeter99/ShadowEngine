@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.EventSystem.Events.MouseMovedEvent" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::EventSystem::Events::MouseMovedEvent</compoundname>
+    <basecompoundref refid="ShadowEngine.EventSystem.ShadowEvent" prot="public" virt="non-virtual">ShadowEngine::EventSystem::ShadowEvent</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="ShadowEngine.EventSystem.Events.MouseMovedEvent.m_MouseX" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ShadowEngine::EventSystem::Events::MouseMovedEvent::m_MouseX</definition>
+        <argsstring></argsstring>
+        <name>m_MouseX</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" line="27" column="1" bodyfile="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" bodystart="27" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.EventSystem.Events.MouseMovedEvent.m_MouseY" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ShadowEngine::EventSystem::Events::MouseMovedEvent::m_MouseY</definition>
+        <argsstring></argsstring>
+        <name>m_MouseY</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" line="27" column="1" bodyfile="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" bodystart="27" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="ShadowEngine.EventSystem.Events.MouseMovedEvent.SHObject_Base(MouseMovedEvent)" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EventSystem::Events::MouseMovedEvent::SHObject_Base</definition>
+        <argsstring>(MouseMovedEvent) public</argsstring>
+        <name>SHObject_Base</name>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.EventSystem.Events.MouseMovedEvent" kindref="compound">MouseMovedEvent</ref>
+          </type>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" line="9" column="1" bodyfile="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" bodystart="9" bodyend="15" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EventSystem.Events.MouseMovedEvent.GetX()" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float ShadowEngine::EventSystem::Events::MouseMovedEvent::GetX</definition>
+        <argsstring>() const</argsstring>
+        <name>GetX</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" line="17" column="1" bodyfile="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" bodystart="17" bodyend="17" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EventSystem.Events.MouseMovedEvent.GetY()" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float ShadowEngine::EventSystem::Events::MouseMovedEvent::GetY</definition>
+        <argsstring>() const</argsstring>
+        <name>GetY</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" line="18" column="1" bodyfile="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" bodystart="18" bodyend="18" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EventSystem.Events.MouseMovedEvent.ToString()" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string ShadowEngine::EventSystem::Events::MouseMovedEvent::ToString</definition>
+        <argsstring>() const override</argsstring>
+        <name>ToString</name>
+        <reimplements refid="ShadowEngine.EventSystem.ShadowEvent.ToString()">ToString</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" line="20" column="1" bodyfile="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" bodystart="20" bodyend="25" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="419">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="418">
+        <label>ShadowEngine::EventSystem::ShadowEvent</label>
+        <link refid="ShadowEngine.EventSystem.ShadowEvent" />
+        <childnode refid="419" relation="public-inheritance"></childnode>
+      </node>
+      <node id="417">
+        <label>ShadowEngine::EventSystem::Events::MouseMovedEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.MouseMovedEvent" />
+        <childnode refid="418" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="422">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="421">
+        <label>ShadowEngine::EventSystem::ShadowEvent</label>
+        <link refid="ShadowEngine.EventSystem.ShadowEvent" />
+        <childnode refid="422" relation="public-inheritance"></childnode>
+      </node>
+      <node id="420">
+        <label>ShadowEngine::EventSystem::Events::MouseMovedEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.MouseMovedEvent" />
+        <childnode refid="421" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" line="8" column="1" bodyfile="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" bodystart="7" bodyend="28" />
+    <listofallmembers>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseMovedEvent</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.GetSDLEvnet()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseMovedEvent</scope>
+        <name>GetSDLEvnet</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseMovedEvent</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseMovedEvent</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.Events.MouseMovedEvent.GetX()" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseMovedEvent</scope>
+        <name>GetX</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.Events.MouseMovedEvent.GetY()" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseMovedEvent</scope>
+        <name>GetY</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.Handled" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseMovedEvent</scope>
+        <name>Handled</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.Events.MouseMovedEvent.m_MouseX" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseMovedEvent</scope>
+        <name>m_MouseX</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.Events.MouseMovedEvent.m_MouseY" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseMovedEvent</scope>
+        <name>m_MouseY</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.ShadowEvent(SDL_Event *)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseMovedEvent</scope>
+        <name>ShadowEvent</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.Events.MouseMovedEvent.SHObject_Base(MouseMovedEvent)" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseMovedEvent</scope>
+        <name>SHObject_Base</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.Events.MouseMovedEvent.ToString()" prot="private" virt="virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseMovedEvent</scope>
+        <name>ToString</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.~ShadowEvent()" prot="public" virt="virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseMovedEvent</scope>
+        <name>~ShadowEvent</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseMovedEvent</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.InputSystem.InputMapBinding" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::InputSystem::InputMapBinding</compoundname>
+    <basecompoundref refid="ShadowEngine.InputSystem.InputBinding" prot="public" virt="non-virtual">ShadowEngine::InputSystem::InputBinding&lt;bool&gt;</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.InputSystem.InputMapBinding.InputMapBinding(const char *)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::InputMapBinding::InputMapBinding</definition>
+        <argsstring>(const char *map)</argsstring>
+        <name>InputMapBinding</name>
+        <param>
+          <type>const char *</type>
+          <declname>map</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/InputMapBinding.h" line="11" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.InputMapBinding.~InputMapBinding()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::InputMapBinding::~InputMapBinding</definition>
+        <argsstring>()</argsstring>
+        <name>~InputMapBinding</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/InputMapBinding.h" line="12" column="1" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="231">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="229">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;bool&gt;</label>
+        <link refid="ShadowEngine.InputSystem.InputBinding" />
+        <childnode refid="230" relation="public-inheritance"></childnode>
+      </node>
+      <node id="228">
+        <label>ShadowEngine::InputSystem::InputMapBinding</label>
+        <link refid="ShadowEngine.InputSystem.InputMapBinding" />
+        <childnode refid="229" relation="public-inheritance"></childnode>
+      </node>
+      <node id="230">
+        <label>ShadowEngine::InputSystem::IInputBinding</label>
+        <link refid="ShadowEngine.InputSystem.IInputBinding" />
+        <childnode refid="231" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="235">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="233">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;bool&gt;</label>
+        <link refid="ShadowEngine.InputSystem.InputBinding" />
+        <childnode refid="234" relation="public-inheritance"></childnode>
+      </node>
+      <node id="232">
+        <label>ShadowEngine::InputSystem::InputMapBinding</label>
+        <link refid="ShadowEngine.InputSystem.InputMapBinding" />
+        <childnode refid="233" relation="public-inheritance"></childnode>
+      </node>
+      <node id="234">
+        <label>ShadowEngine::InputSystem::IInputBinding</label>
+        <link refid="ShadowEngine.InputSystem.IInputBinding" />
+        <childnode refid="235" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowInput/Bindings/InputMapBinding.h" line="9" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/InputMapBinding.h" bodystart="7" bodyend="13" />
+    <listofallmembers>
+      <member refid="ShadowEngine.InputSystem.InputBinding.AddModifier(InputModifier *)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::InputMapBinding</scope>
+        <name>AddModifier</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.DefaultBehaviour(ModifierContext &amp;)" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::InputMapBinding</scope>
+        <name>DefaultBehaviour</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::InputMapBinding</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.GetData()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::InputMapBinding</scope>
+        <name>GetData</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.GetModifier(int)" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::InputMapBinding</scope>
+        <name>GetModifier</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::InputMapBinding</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::InputMapBinding</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.InputBinding()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::InputMapBinding</scope>
+        <name>InputBinding</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputMapBinding.InputMapBinding(const char *)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::InputMapBinding</scope>
+        <name>InputMapBinding</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.ModifierCount()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::InputMapBinding</scope>
+        <name>ModifierCount</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.ProcessContext(BindingContext&lt;T&gt; &amp;,ModifierContext &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::InputMapBinding</scope>
+        <name>ProcessContext</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.ProcessEvent(BindingContext&lt;T&gt; &amp;)" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::InputMapBinding</scope>
+        <name>ProcessEvent</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.~InputBinding()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::InputMapBinding</scope>
+        <name>~InputBinding</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputMapBinding.~InputMapBinding()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::InputMapBinding</scope>
+        <name>~InputMapBinding</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::InputMapBinding</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

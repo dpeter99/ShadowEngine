@@ -1,0 +1,154 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.CommandQueue
+  id: ShadowEngine.Rendering.CommandQueue
+  parent: ShadowEngine.Rendering
+  children:
+  - ShadowEngine.Rendering.CommandQueue.~CommandQueue()
+  - ShadowEngine.Rendering.CommandQueue.Create()
+  - ShadowEngine.Rendering.CommandQueue.Execute(Ref<CommandList>)
+  href: ShadowEngine.Rendering.CommandQueue.yml
+  langs:
+  - cplusplus
+  name: CommandQueue
+  nameWithType: CommandQueue
+  fullName: ShadowEngine::Rendering::CommandQueue
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowRenderer/CommandQueue.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/CommandQueue.h
+    startLine: 8
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/CommandQueue.h
+    startLine: 9
+  namespace: ShadowEngine.Rendering
+  summary: "<p>The execution queue witch can execute a Command List. </p>"
+  syntax: &o1
+    content: 'public: class CommandQueue'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.Rendering.CommandQueue.~CommandQueue()
+  id: ShadowEngine.Rendering.CommandQueue.~CommandQueue()
+  parent: ShadowEngine.Rendering.CommandQueue
+  href: ShadowEngine.Rendering.CommandQueue.yml
+  langs:
+  - cplusplus
+  name: ~CommandQueue()
+  nameWithType: CommandQueue::~CommandQueue()
+  fullName: virtual ShadowEngine::Rendering::CommandQueue::~CommandQueue()
+  overload: ShadowEngine.Rendering.CommandQueue.~CommandQueue*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/CommandQueue.h
+    startLine: 13
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/CommandQueue.h
+    startLine: 13
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual ~CommandQueue()=default'
+- uid: ShadowEngine.Rendering.CommandQueue.Create()
+  id: ShadowEngine.Rendering.CommandQueue.Create()
+  parent: ShadowEngine.Rendering.CommandQueue
+  href: ShadowEngine.Rendering.CommandQueue.yml
+  langs:
+  - cplusplus
+  name: Create()
+  nameWithType: CommandQueue::Create()
+  fullName: std::shared_ptr<CommandQueue> ShadowEngine::Rendering::CommandQueue::Create()
+  overload: ShadowEngine.Rendering.CommandQueue.Create*
+  type: Method
+  source:
+    remote:
+      path: ShadowEngine/src/ShadowRenderer/CommandQueue.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/CommandQueue.cpp
+    startLine: 7
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/CommandQueue.h
+    startLine: 15
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: static Ref<CommandQueue> Create()'
+    return:
+      type: 2e1cc081ShadowEngine.Rendering.CommandQueuea08ddfce
+- uid: ShadowEngine.Rendering.CommandQueue.Execute(Ref<CommandList>)
+  id: ShadowEngine.Rendering.CommandQueue.Execute(Ref<CommandList>)
+  parent: ShadowEngine.Rendering.CommandQueue
+  href: ShadowEngine.Rendering.CommandQueue.yml
+  langs:
+  - cplusplus
+  name: Execute(Ref<CommandList> commandList)
+  nameWithType: CommandQueue::Execute(Ref<CommandList> commandList)
+  fullName: virtual void ShadowEngine::Rendering::CommandQueue::Execute(Ref<CommandList> commandList)
+  overload: ShadowEngine.Rendering.CommandQueue.Execute*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/CommandQueue.h
+    startLine: 11
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/CommandQueue.h
+    startLine: 11
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual void Execute(Ref<CommandList> commandList)=0'
+    parameters:
+    - id: commandList
+      type: 2e1cc081ShadowEngine.Rendering.CommandLista08ddfce
+references:
+- uid: 2e1cc081ShadowEngine.Rendering.CommandLista08ddfce
+  spec.cplusplus:
+  - name: Ref<
+    fullName: Ref<
+  - uid: ShadowEngine.Rendering.CommandList
+  - name: '>'
+    fullName: '>'
+- uid: ShadowEngine.Rendering.CommandQueue.Execute*
+  name: Execute
+  nameWithType: CommandQueue::Execute
+  fullName: virtual void ShadowEngine::Rendering::CommandQueue::Execute
+- uid: ShadowEngine.Rendering.CommandQueue.~CommandQueue*
+  name: ~CommandQueue
+  nameWithType: CommandQueue::~CommandQueue
+  fullName: virtual ShadowEngine::Rendering::CommandQueue::~CommandQueue
+- uid: 2e1cc081ShadowEngine.Rendering.CommandQueuea08ddfce
+  spec.cplusplus:
+  - name: Ref<
+    fullName: Ref<
+  - uid: ShadowEngine.Rendering.CommandQueue
+  - name: '>'
+    fullName: '>'
+- uid: ShadowEngine.Rendering.CommandQueue.Create*
+  name: Create
+  nameWithType: CommandQueue::Create
+  fullName: std::shared_ptr<CommandQueue> ShadowEngine::Rendering::CommandQueue::Create
+- uid: _command_queue_8h
+- uid: ShadowEngine.Rendering.CommandList
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.CommandList.yml
+  name: CommandList
+  nameWithType: CommandList
+  fullName: ShadowEngine::Rendering::CommandList
+  type: Class
+  summary: "<p>A list of commands to be submitted to a CommandQueue. </p>"
+  syntax:
+    content: 'public: class CommandList'
+- uid: ShadowEngine.Rendering.CommandQueue
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.CommandQueue.yml
+  name: CommandQueue
+  nameWithType: CommandQueue
+  fullName: ShadowEngine::Rendering::CommandQueue
+  type: Class
+  summary: "<p>The execution queue witch can execute a Command List. </p>"
+  syntax: *o1

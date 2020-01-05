@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.Rendering.Texture2D" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::Rendering::Texture2D</compoundname>
+    <basecompoundref refid="ShadowEngine.Rendering.Texture" prot="public" virt="non-virtual">ShadowEngine::Rendering::Texture</basecompoundref>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="ShadowEngine.Rendering.Texture2D.Create(const std::string &amp;)" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ShadowEngine::Ref&lt;<ref refid="ShadowEngine.Rendering.Texture2D" kindref="compound">Texture2D</ref>&gt;</type>
+        <definition>ShadowEngine::Ref&lt;Texture2D&gt; ShadowEngine::Rendering::Texture2D::Create</definition>
+        <argsstring>(const std::string &amp;path)</argsstring>
+        <name>Create</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Texture.h" line="23" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Texture.cpp" bodystart="9" bodyend="19" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="652">
+        <label>ShadowEngine::Rendering::Texture</label>
+        <link refid="ShadowEngine.Rendering.Texture" />
+      </node>
+      <node id="651">
+        <label>ShadowEngine::Rendering::Texture2D</label>
+        <link refid="ShadowEngine.Rendering.Texture2D" />
+        <childnode refid="652" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="654">
+        <label>ShadowEngine::Rendering::Texture</label>
+        <link refid="ShadowEngine.Rendering.Texture" />
+      </node>
+      <node id="653">
+        <label>ShadowEngine::Rendering::Texture2D</label>
+        <link refid="ShadowEngine.Rendering.Texture2D" />
+        <childnode refid="654" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowRenderer/Texture.h" line="21" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Texture.h" bodystart="20" bodyend="24" />
+    <listofallmembers>
+      <member refid="ShadowEngine.Rendering.Texture.Bind(uint32_t)" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::Texture2D</scope>
+        <name>Bind</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.Texture2D.Create(const std::string &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Texture2D</scope>
+        <name>Create</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.Texture.GetHeight()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::Texture2D</scope>
+        <name>GetHeight</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.Texture.GetWidth()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::Texture2D</scope>
+        <name>GetWidth</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.Texture.~Texture()" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::Texture2D</scope>
+        <name>~Texture</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

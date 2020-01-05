@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_assets_1_1_asset_loader" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::Assets::AssetLoader</compoundname>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_assets_1_1_asset_loader_1a314dbd42b231808a652d35080f158bdd" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="class_shadow_engine_1_1_assets_1_1_element" kindref="compound">Element</ref> *</type>
+        <definition>Element * ShadowEngine::Assets::AssetLoader::LoadFile</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>LoadFile</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription>
+          <para>Parses a file into DOM The caller has to call free on the returned Element tree </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetLoader.h" line="32" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetLoader.cpp" bodystart="273" bodyend="346" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_assets_1_1_asset_loader_1ad9aedfb4435b6873034ccff23d5e564e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="class_shadow_engine_1_1_world_1_1_map_chunk" kindref="compound">World::MapChunk</ref> *</type>
+        <definition>static World::MapChunk* ShadowEngine::Assets::AssetLoader::LoadMap</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>LoadMap</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetLoader.h" line="35" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_assets_1_1_asset_loader_1ac130eba89ae44e97f2ccf4a2e5e38346" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="class_shadow_engine_1_1_world_1_1_shadow_world" kindref="compound">World::ShadowWorld</ref> *</type>
+        <definition>static World::ShadowWorld* ShadowEngine::Assets::AssetLoader::LoadWorld</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>LoadWorld</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetLoader.h" line="37" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_assets_1_1_asset_loader_1a7a87944d3b1a1a6d14e7576c8d614380" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>static T* ShadowEngine::Assets::AssetLoader::LoadAsset</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>LoadAsset</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetLoader.h" line="40" column="1" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/ShadowAsset/AssetLoader.h" line="31" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetLoader.h" bodystart="30" bodyend="41" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_assets_1_1_asset_loader_1a7a87944d3b1a1a6d14e7576c8d614380" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Assets::AssetLoader</scope>
+        <name>LoadAsset</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_assets_1_1_asset_loader_1a314dbd42b231808a652d35080f158bdd" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Assets::AssetLoader</scope>
+        <name>LoadFile</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_assets_1_1_asset_loader_1ad9aedfb4435b6873034ccff23d5e564e" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Assets::AssetLoader</scope>
+        <name>LoadMap</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_assets_1_1_asset_loader_1ac130eba89ae44e97f2ccf4a2e5e38346" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Assets::AssetLoader</scope>
+        <name>LoadWorld</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

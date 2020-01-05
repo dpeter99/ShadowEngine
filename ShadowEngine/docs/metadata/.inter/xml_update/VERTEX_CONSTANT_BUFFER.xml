@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="VERTEX_CONSTANT_BUFFER" kind="struct" language="C++" prot="public">
+    <compoundname>VERTEX_CONSTANT_BUFFER</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="VERTEX_CONSTANT_BUFFER.mvp" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float VERTEX_CONSTANT_BUFFER::mvp[4][4]</definition>
+        <argsstring>[4][4]</argsstring>
+        <name>mvp</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ImGui/imgui_impl_dx12.cpp" line="64" column="1" bodyfile="ShadowEngine/src/ImGui/imgui_impl_dx12.cpp" bodystart="64" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/ImGui/imgui_impl_dx12.cpp" line="63" column="1" bodyfile="ShadowEngine/src/ImGui/imgui_impl_dx12.cpp" bodystart="62" bodyend="65" />
+    <listofallmembers>
+      <member refid="VERTEX_CONSTANT_BUFFER.mvp" prot="public" virt="non-virtual">
+        <scope>VERTEX_CONSTANT_BUFFER</scope>
+        <name>mvp</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

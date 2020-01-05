@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_event_system_1_1_i_shadow_event_listener" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ShadowEngine::EventSystem::IShadowEventListener</compoundname>
+    <derivedcompoundref refid="class_shadow_engine_1_1_debug_1_1_debug_module" prot="public" virt="non-virtual">ShadowEngine::Debug::DebugModule</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_debug_gui_1_1_im_gui_module" prot="public" virt="non-virtual">ShadowEngine::DebugGui::ImGuiModule</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_input_system_1_1_shadow_action_system" prot="public" virt="non-virtual">ShadowEngine::InputSystem::ShadowActionSystem</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_event_system_1_1_i_shadow_event_listener_1adc95131ac7bb2334a5441027de2d8b35" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::EventSystem::IShadowEventListener::OnEvent</definition>
+        <argsstring>(ShadowEvent &amp;e)=0</argsstring>
+        <name>OnEvent</name>
+        <reimplementedby refid="class_shadow_engine_1_1_debug_gui_1_1_im_gui_module_1a6367d671f64e80703cebfb1ba3f0f71a">OnEvent</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_debug_1_1_debug_module_1abc95c50debbbf0c6c0954e1017a776d9">OnEvent</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_input_system_1_1_shadow_action_system_1a065cb236016e59bcfcf879ce3189bddc">OnEvent</reimplementedby>
+        <param>
+          <type>
+            <ref refid="class_shadow_engine_1_1_event_system_1_1_shadow_event" kindref="compound">ShadowEvent</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/IShadowEventListener.h" line="18" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_event_system_1_1_i_shadow_event_listener_1af581024ad1bf4e9313353be84ea47abd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EventSystem::IShadowEventListener::IShadowEventListener</definition>
+        <argsstring>()=default</argsstring>
+        <name>IShadowEventListener</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/IShadowEventListener.h" line="20" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_event_system_1_1_i_shadow_event_listener_1ade497109c2dcfa7638206b1901002fd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EventSystem::IShadowEventListener::~IShadowEventListener</definition>
+        <argsstring>()=default</argsstring>
+        <name>~IShadowEventListener</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/IShadowEventListener.h" line="21" column="1" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="266">
+        <label>ShadowEngine::EventSystem::IShadowEventListener</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_i_shadow_event_listener" />
+      </node>
+      <node id="268">
+        <label>ShadowEngine::DebugGui::ImGuiModule</label>
+        <link refid="class_shadow_engine_1_1_debug_gui_1_1_im_gui_module" />
+        <childnode refid="266" relation="public-inheritance"></childnode>
+      </node>
+      <node id="267">
+        <label>ShadowEngine::Debug::DebugModule</label>
+        <link refid="class_shadow_engine_1_1_debug_1_1_debug_module" />
+        <childnode refid="266" relation="public-inheritance"></childnode>
+      </node>
+      <node id="269">
+        <label>ShadowEngine::InputSystem::ShadowActionSystem</label>
+        <link refid="class_shadow_engine_1_1_input_system_1_1_shadow_action_system" />
+        <childnode refid="266" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <location file="ShadowEngine/src/ShadowEvents/IShadowEventListener.h" line="15" column="1" bodyfile="ShadowEngine/src/ShadowEvents/IShadowEventListener.h" bodystart="14" bodyend="22" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_event_system_1_1_i_shadow_event_listener_1af581024ad1bf4e9313353be84ea47abd" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::IShadowEventListener</scope>
+        <name>IShadowEventListener</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_event_system_1_1_i_shadow_event_listener_1adc95131ac7bb2334a5441027de2d8b35" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::EventSystem::IShadowEventListener</scope>
+        <name>OnEvent</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_event_system_1_1_i_shadow_event_listener_1ade497109c2dcfa7638206b1901002fd6" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::IShadowEventListener</scope>
+        <name>~IShadowEventListener</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

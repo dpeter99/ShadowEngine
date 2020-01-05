@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.SDLPlatform" kind="namespace" language="C++">
+    <compoundname>ShadowEngine::SDLPlatform</compoundname>
+    <innerclass refid="ShadowEngine.SDLPlatform.SDLEventSource" prot="public">ShadowEngine::SDLPlatform::SDLEventSource</innerclass>
+    <innerclass refid="ShadowEngine.SDLPlatform.SDLModule" prot="public">ShadowEngine::SDLPlatform::SDLModule</innerclass>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/Platform/SDL/SDLEventSource.cpp" line="10" column="1" />
+  </compounddef>
+</doxygen>

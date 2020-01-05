@@ -16,14 +16,15 @@
 #include "ShadowRenderer/Renderer.h"
 
 #include "../TestRenderer.h"
-#include "ShadowScene/SceneManager.h"
+
 #include "ShadowScene/TestScene.h"
+#include "EntitySystem/EntitySystem.h"
 
 namespace ShadowEngine {
 
 	ShadowApplication* ShadowApplication::instance = nullptr;
 
-	ShadowApplication::ShadowApplication()
+	ShadowApplication::ShadowApplication() : window_(nullptr)
 	{
 		instance = this;
 	}
@@ -42,7 +43,7 @@ namespace ShadowEngine {
 		moduleManager.PushModule(new DebugGui::ImGuiModule());
 		moduleManager.PushModule(new InputSystem::ShadowActionSystem());
 		moduleManager.PushModule(new Debug::DebugModule());
-		moduleManager.PushModule(new Scene::SceneManager());
+		moduleManager.PushModule(new EntitySystem::EntitySystem());
 
 		moduleManager.Init();
 
@@ -59,32 +60,33 @@ namespace ShadowEngine {
 
 		auto renderer = moduleManager.GetModuleByType<ShadowEngine::Rendering::Renderer>();
 
-		auto scenemg = moduleManager.GetModuleByType<Scene::SceneManager>();
+		auto scenemg = moduleManager.GetModuleByType<EntitySystem::EntitySystem>();
 		scenemg->LoadScene(new TestScene());
 
-
-		TestRenderer test;
+		//TestRenderer test;
 
 		while (running)
 		{
 			Time::UpdateTime();
 
-			renderer->BeginScene(*scenemg->GetActiveScene()->mainCamera);
+			renderer->BeginScene(scenemg->GetActiveScene()->mainCamera);
 
 			EventSystem::ShadowEventManager::PollEvents();
 			EventSystem::ShadowEventManager::ProcessEvents();
 
 			moduleManager.Update();
 
-			test.Update();
+			//test.Update();
 
 			moduleManager.Render();
 
 			moduleManager.LateRender();
 
-			ShadowEngine::Rendering::Renderer::EndScene();
+			renderer->EndScene();
 
-			SDL_GL_SwapWindow(window_->winPtr);
+			//SDL_GL_SwapWindow(window_->winPtr);
+
+			moduleManager.AfterFrameEnd();
 		}
 	}
 }

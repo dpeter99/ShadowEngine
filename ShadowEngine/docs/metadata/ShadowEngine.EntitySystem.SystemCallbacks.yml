@@ -1,0 +1,87 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.EntitySystem.SystemCallbacks
+  id: ShadowEngine.EntitySystem.SystemCallbacks
+  parent: ShadowEngine.EntitySystem
+  children:
+  - ShadowEngine.EntitySystem.SystemCallbacks.init
+  - ShadowEngine.EntitySystem.SystemCallbacks.update
+  href: ShadowEngine.EntitySystem.SystemCallbacks.yml
+  langs:
+  - cplusplus
+  name: SystemCallbacks
+  nameWithType: SystemCallbacks
+  fullName: ShadowEngine::EntitySystem::SystemCallbacks
+  type: Struct
+  source:
+    remote: &o0
+      path: ShadowEngine/src/EntitySystem/EntityManager.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 9
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 9
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: struct SystemCallbacks'
+  inheritedMembers:
+  - ShadowEngine.EntitySystem.SystemCallbacks.Callback
+- uid: ShadowEngine.EntitySystem.SystemCallbacks.init
+  id: ShadowEngine.EntitySystem.SystemCallbacks.init
+  parent: ShadowEngine.EntitySystem.SystemCallbacks
+  href: ShadowEngine.EntitySystem.SystemCallbacks.yml
+  langs:
+  - cplusplus
+  name: init
+  nameWithType: SystemCallbacks::init
+  fullName: Callback ShadowEngine::EntitySystem::SystemCallbacks::init
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 13
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 13
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: Callback init'
+    return:
+      type: Callback
+- uid: ShadowEngine.EntitySystem.SystemCallbacks.update
+  id: ShadowEngine.EntitySystem.SystemCallbacks.update
+  parent: ShadowEngine.EntitySystem.SystemCallbacks
+  href: ShadowEngine.EntitySystem.SystemCallbacks.yml
+  langs:
+  - cplusplus
+  name: update
+  nameWithType: SystemCallbacks::update
+  fullName: Callback ShadowEngine::EntitySystem::SystemCallbacks::update
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 12
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityManager.h
+    startLine: 12
+  namespace: ShadowEngine.EntitySystem
+  syntax:
+    content: 'public: Callback update'
+    return:
+      type: Callback
+references:
+- uid: ShadowEngine.EntitySystem.SystemCallbacks.Callback
+- uid: Callback
+  href: Callback.yml
+  name: Callback
+  nameWithType: Callback
+  fullName: Callback
+  type: Class
+  syntax:
+    content: 'public: class Callback'

@@ -1,0 +1,142 @@
+### YamlMime:ManagedReference
+items:
+- uid: Callback
+  id: Callback
+  children:
+  - Callback.~Callback()
+  - Callback.Callback()
+  - Callback.operator()()
+  - Callback.operator+=(std::function<void()>)
+  href: Callback.yml
+  langs:
+  - cplusplus
+  name: Callback
+  nameWithType: Callback
+  fullName: Callback
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/Util/Callback.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Util/Callback.h
+    startLine: 4
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Util/Callback.h
+    startLine: 5
+  syntax:
+    content: 'public: class Callback'
+  inheritance:
+  - System::Object
+- uid: Callback.~Callback()
+  id: Callback.~Callback()
+  parent: Callback
+  href: Callback.yml
+  langs:
+  - cplusplus
+  name: ~Callback()
+  nameWithType: Callback::~Callback()
+  fullName: Callback::~Callback()
+  overload: Callback.~Callback*
+  type: Constructor
+  source:
+    remote: &o1
+      path: ShadowEngine/src/Util/Callback.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Util/Callback.cpp
+    startLine: 23
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Util/Callback.h
+    startLine: 16
+  syntax:
+    content: 'public: ~Callback()'
+- uid: Callback.Callback()
+  id: Callback.Callback()
+  parent: Callback
+  href: Callback.yml
+  langs:
+  - cplusplus
+  name: Callback()
+  nameWithType: Callback::Callback()
+  fullName: Callback::Callback()
+  overload: Callback.Callback*
+  type: Constructor
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Util/Callback.cpp
+    startLine: 18
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Util/Callback.h
+    startLine: 15
+  syntax:
+    content: 'public: Callback()'
+- uid: Callback.operator()()
+  id: Callback.operator()()
+  parent: Callback
+  href: Callback.yml
+  langs:
+  - cplusplus
+  name: operator()()
+  nameWithType: Callback::operator()()
+  fullName: void Callback::operator()()
+  overload: Callback.operator*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Util/Callback.cpp
+    startLine: 5
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Util/Callback.h
+    startLine: 11
+  syntax:
+    content: 'public: void operator()()'
+- uid: Callback.operator+=(std::function<void()>)
+  id: function<void()>)
+  parent: Callback
+  href: Callback.yml
+  langs:
+  - cplusplus
+  name: operator+=(std::function<void()> fn)
+  nameWithType: Callback::operator+=(std::function<void()> fn)
+  fullName: void Callback::operator+=(std::function<void()> fn)
+  overload: Callback.operator+=*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Util/Callback.cpp
+    startLine: 13
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Util/Callback.h
+    startLine: 12
+  syntax:
+    content: 'public: void operator+=(std::function<void()> fn)'
+    parameters:
+    - id: fn
+      type: e3a51db0
+references:
+- uid: Callback.operator*
+  name: operator
+  nameWithType: Callback::operator
+  fullName: void Callback::operator
+- uid: e3a51db0
+  spec.cplusplus:
+  - name: std::function<void()>
+    fullName: std::function<void()>
+- uid: Callback.operator+=*
+  name: operator+=
+  nameWithType: Callback::operator+=
+  fullName: void Callback::operator+=
+- uid: Callback.Callback*
+  name: Callback
+  nameWithType: Callback::Callback
+  fullName: Callback::Callback
+- uid: Callback.~Callback*
+  name: ~Callback
+  nameWithType: Callback::~Callback
+  fullName: Callback::~Callback

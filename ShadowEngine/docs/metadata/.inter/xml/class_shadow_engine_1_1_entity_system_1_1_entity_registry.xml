@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_entity_system_1_1_entity_registry" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::EntitySystem::EntityRegistry</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_entity_system_1_1_entity_registry_1a98a04781a0df9ba68b7130cd367838aa" prot="public" static="yes" mutable="no">
+        <type>
+          <ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_registry" kindref="compound">EntityRegistry</ref> *</type>
+        <definition>EntityRegistry * ShadowEngine::EntitySystem::EntityRegistry::_registry</definition>
+        <argsstring></argsstring>
+        <name>_registry</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityRegistry.h" line="20" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityRegistry.h" bodystart="20" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_entity_system_1_1_entity_registry_1ad7b2c7f70f78a6852de5c5bc5e8de29a" prot="public" static="no" mutable="no">
+        <type>std::map&lt;std::string, Entity *&gt;</type>
+        <definition>std::map&lt;std::string, Entity*&gt; ShadowEngine::EntitySystem::EntityRegistry::EntityRegistryMap</definition>
+        <argsstring></argsstring>
+        <name>EntityRegistryMap</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityRegistry.h" line="26" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityRegistry.h" bodystart="26" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_registry_1a7f3eda27d6d5402a40270e719b634903" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EntitySystem::EntityRegistry::EntityRegistry</definition>
+        <argsstring>()</argsstring>
+        <name>EntityRegistry</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityRegistry.h" line="22" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityRegistry.cpp" bodystart="29" bodyend="40" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_registry_1a06b7f5a6c5f46384ef8c99733d2f77b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ShadowEngine::EntitySystem::EntityRegistry::RegisterEntity</definition>
+        <argsstring>(std::string, Entity *entityTemplate)</argsstring>
+        <name>RegisterEntity</name>
+        <param>
+          <type>std::string</type>
+        </param>
+        <param>
+          <type>Entity *</type>
+          <declname>entityTemplate</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityRegistry.h" line="29" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityRegistry.cpp" bodystart="14" bodyend="18" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_registry_1a05d532a53aa22e5b209d2422631aa665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntityRegistry::ListPreRegisteredEntitys</definition>
+        <argsstring>()</argsstring>
+        <name>ListPreRegisteredEntitys</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityRegistry.h" line="31" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityRegistry.cpp" bodystart="20" bodyend="24" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_registry_1a3e3f383fd90e0576fad09d7209a4fffa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Entity *</type>
+        <definition>Entity * ShadowEngine::EntitySystem::EntityRegistry::InstaciateEntity</definition>
+        <argsstring>(std::string)</argsstring>
+        <name>InstaciateEntity</name>
+        <param>
+          <type>std::string</type>
+          <defname>id</defname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityRegistry.h" line="35" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityRegistry.cpp" bodystart="42" bodyend="46" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_registry_1aa7102f47765c3bcb2c2db05e5ff981dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntityRegistry::PreRegisterDefaults</definition>
+        <argsstring>()</argsstring>
+        <name>PreRegisterDefaults</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityRegistry.h" line="40" column="1" bodyfile="ShadowEngine/src/EntitySystem/DefaultEntities.cpp" bodystart="15" bodyend="19" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <collaborationgraph>
+      <node id="165">
+        <label>ShadowEngine::EntitySystem::EntityRegistry</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_entity_registry" />
+        <childnode refid="165" relation="usage">
+          <edgelabel>_registry</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/EntitySystem/EntityRegistry.h" line="15" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityRegistry.h" bodystart="14" bodyend="41" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_registry_1a98a04781a0df9ba68b7130cd367838aa" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityRegistry</scope>
+        <name>_registry</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_registry_1a7f3eda27d6d5402a40270e719b634903" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityRegistry</scope>
+        <name>EntityRegistry</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_registry_1ad7b2c7f70f78a6852de5c5bc5e8de29a" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityRegistry</scope>
+        <name>EntityRegistryMap</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_registry_1a3e3f383fd90e0576fad09d7209a4fffa" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityRegistry</scope>
+        <name>InstaciateEntity</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_registry_1a05d532a53aa22e5b209d2422631aa665" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityRegistry</scope>
+        <name>ListPreRegisteredEntitys</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_registry_1aa7102f47765c3bcb2c2db05e5ff981dc" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityRegistry</scope>
+        <name>PreRegisterDefaults</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_registry_1a06b7f5a6c5f46384ef8c99733d2f77b1" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntityRegistry</scope>
+        <name>RegisterEntity</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

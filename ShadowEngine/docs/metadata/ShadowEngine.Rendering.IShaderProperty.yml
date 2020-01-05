@@ -1,0 +1,373 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.IShaderProperty
+  id: ShadowEngine.Rendering.IShaderProperty
+  parent: ShadowEngine.Rendering
+  children:
+  - ShadowEngine.Rendering.IShaderProperty.Clone()
+  - ShadowEngine.Rendering.IShaderProperty.GetName()
+  - ShadowEngine.Rendering.IShaderProperty.GetPropertyData()
+  - ShadowEngine.Rendering.IShaderProperty.GetPropertyTypeName()
+  - ShadowEngine.Rendering.IShaderProperty.GetPropertyTypeSize()
+  - ShadowEngine.Rendering.IShaderProperty.IShaderProperty()
+  - ShadowEngine.Rendering.IShaderProperty.IShaderProperty(const std::string &)
+  href: ShadowEngine.Rendering.IShaderProperty.yml
+  langs:
+  - cplusplus
+  name: IShaderProperty
+  nameWithType: IShaderProperty
+  fullName: ShadowEngine::Rendering::IShaderProperty
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 5
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 6
+  namespace: ShadowEngine.Rendering
+  syntax: &o1
+    content: 'public: class IShaderProperty : public HObject'
+  inheritance:
+  - System::Object
+  - ShadowEngine.SHObject
+  inheritedMembers:
+  - ShadowEngine.SHObject.GenerateId()
+  - ShadowEngine.SHObject.GetType()
+  - ShadowEngine.SHObject.GetTypeId()
+  - ShadowEngine.SHObject.~SHObject()
+- uid: ShadowEngine.Rendering.IShaderProperty.Clone()
+  id: ShadowEngine.Rendering.IShaderProperty.Clone()
+  parent: ShadowEngine.Rendering.IShaderProperty
+  href: ShadowEngine.Rendering.IShaderProperty.yml
+  langs:
+  - cplusplus
+  name: Clone()
+  nameWithType: IShaderProperty::Clone()
+  fullName: virtual IShaderProperty* ShadowEngine::Rendering::IShaderProperty::Clone()
+  overload: ShadowEngine.Rendering.IShaderProperty.Clone*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 14
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 14
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual IShaderProperty * Clone()=0'
+    return:
+      type: ShadowEngine.Rendering.IShaderProperty68bc11b4
+- uid: ShadowEngine.Rendering.IShaderProperty.GetName()
+  id: ShadowEngine.Rendering.IShaderProperty.GetName()
+  parent: ShadowEngine.Rendering.IShaderProperty
+  href: ShadowEngine.Rendering.IShaderProperty.yml
+  langs:
+  - cplusplus
+  name: GetName()
+  nameWithType: IShaderProperty::GetName()
+  fullName: const std::string& ShadowEngine::Rendering::IShaderProperty::GetName()
+  overload: ShadowEngine.Rendering.IShaderProperty.GetName*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 16
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 16
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: const std::string & GetName() const'
+    return:
+      type: 360fc41e
+- uid: ShadowEngine.Rendering.IShaderProperty.GetPropertyData()
+  id: ShadowEngine.Rendering.IShaderProperty.GetPropertyData()
+  parent: ShadowEngine.Rendering.IShaderProperty
+  href: ShadowEngine.Rendering.IShaderProperty.yml
+  langs:
+  - cplusplus
+  name: GetPropertyData()
+  nameWithType: IShaderProperty::GetPropertyData()
+  fullName: virtual void* ShadowEngine::Rendering::IShaderProperty::GetPropertyData()
+  overload: ShadowEngine.Rendering.IShaderProperty.GetPropertyData*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 21
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 21
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual void * GetPropertyData()=0'
+    return:
+      type: 7ca192cd
+- uid: ShadowEngine.Rendering.IShaderProperty.GetPropertyTypeName()
+  id: ShadowEngine.Rendering.IShaderProperty.GetPropertyTypeName()
+  parent: ShadowEngine.Rendering.IShaderProperty
+  href: ShadowEngine.Rendering.IShaderProperty.yml
+  langs:
+  - cplusplus
+  name: GetPropertyTypeName()
+  nameWithType: IShaderProperty::GetPropertyTypeName()
+  fullName: virtual const std::string& ShadowEngine::Rendering::IShaderProperty::GetPropertyTypeName()
+  overload: ShadowEngine.Rendering.IShaderProperty.GetPropertyTypeName*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 18
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 18
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual const std::string & GetPropertyTypeName()=0'
+    return:
+      type: 360fc41e
+- uid: ShadowEngine.Rendering.IShaderProperty.GetPropertyTypeSize()
+  id: ShadowEngine.Rendering.IShaderProperty.GetPropertyTypeSize()
+  parent: ShadowEngine.Rendering.IShaderProperty
+  href: ShadowEngine.Rendering.IShaderProperty.yml
+  langs:
+  - cplusplus
+  name: GetPropertyTypeSize()
+  nameWithType: IShaderProperty::GetPropertyTypeSize()
+  fullName: virtual unsigned long long ShadowEngine::Rendering::IShaderProperty::GetPropertyTypeSize()
+  overload: ShadowEngine.Rendering.IShaderProperty.GetPropertyTypeSize*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 19
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 19
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual unsigned long long GetPropertyTypeSize()=0'
+    return:
+      type: 388be2e0
+- uid: ShadowEngine.Rendering.IShaderProperty.IShaderProperty()
+  id: ShadowEngine.Rendering.IShaderProperty.IShaderProperty()
+  parent: ShadowEngine.Rendering.IShaderProperty
+  href: ShadowEngine.Rendering.IShaderProperty.yml
+  langs:
+  - cplusplus
+  name: IShaderProperty()
+  nameWithType: IShaderProperty::IShaderProperty()
+  fullName: ShadowEngine::Rendering::IShaderProperty::IShaderProperty()
+  overload: ShadowEngine.Rendering.IShaderProperty.IShaderProperty*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 12
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 12
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: IShaderProperty()=default'
+- uid: ShadowEngine.Rendering.IShaderProperty.IShaderProperty(const std::string &)
+  id: string &)
+  parent: ShadowEngine.Rendering.IShaderProperty
+  href: ShadowEngine.Rendering.IShaderProperty.yml
+  langs:
+  - cplusplus
+  name: IShaderProperty(const std::string &name)
+  nameWithType: IShaderProperty::IShaderProperty(const std::string &name)
+  fullName: ShadowEngine::Rendering::IShaderProperty::IShaderProperty(const std::string &name)
+  overload: ShadowEngine.Rendering.IShaderProperty.IShaderProperty*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 11
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h
+    startLine: 11
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: IShaderProperty(const std::string &name)'
+    parameters:
+    - id: name
+      type: 360fc41e
+references:
+- uid: 360fc41e
+  spec.cplusplus:
+  - name: const std::string &
+    fullName: const std::string &
+- uid: ShadowEngine.Rendering.IShaderProperty.IShaderProperty*
+  name: IShaderProperty
+  nameWithType: IShaderProperty::IShaderProperty
+  fullName: ShadowEngine::Rendering::IShaderProperty::IShaderProperty
+- uid: ShadowEngine.Rendering.IShaderProperty68bc11b4
+  spec.cplusplus:
+  - uid: ShadowEngine.Rendering.IShaderProperty
+  - name: " *"
+    fullName: " *"
+- uid: ShadowEngine.Rendering.IShaderProperty.Clone*
+  name: Clone
+  nameWithType: IShaderProperty::Clone
+  fullName: virtual IShaderProperty* ShadowEngine::Rendering::IShaderProperty::Clone
+- uid: ShadowEngine.Rendering.IShaderProperty.GetName*
+  name: GetName
+  nameWithType: IShaderProperty::GetName
+  fullName: const std::string& ShadowEngine::Rendering::IShaderProperty::GetName
+- uid: ShadowEngine.Rendering.IShaderProperty.GetPropertyTypeName*
+  name: GetPropertyTypeName
+  nameWithType: IShaderProperty::GetPropertyTypeName
+  fullName: virtual const std::string& ShadowEngine::Rendering::IShaderProperty::GetPropertyTypeName
+- uid: 388be2e0
+  spec.cplusplus:
+  - name: unsigned long long
+    fullName: unsigned long long
+- uid: ShadowEngine.Rendering.IShaderProperty.GetPropertyTypeSize*
+  name: GetPropertyTypeSize
+  nameWithType: IShaderProperty::GetPropertyTypeSize
+  fullName: virtual unsigned long long ShadowEngine::Rendering::IShaderProperty::GetPropertyTypeSize
+- uid: 7ca192cd
+  spec.cplusplus:
+  - name: void *
+    fullName: void *
+- uid: ShadowEngine.Rendering.IShaderProperty.GetPropertyData*
+  name: GetPropertyData
+  nameWithType: IShaderProperty::GetPropertyData
+  fullName: virtual void* ShadowEngine::Rendering::IShaderProperty::GetPropertyData
+- uid: ShadowEngine.SHObject.GenerateId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GenerateId()
+  nameWithType: SHObject::GenerateId()
+  fullName: static uint64_t ShadowEngine::SHObject::GenerateId()
+  type: Method
+  summary: "<p>Generates a new UID for each call. </p>"
+  syntax:
+    content: 'protected: static uint64_t GenerateId() noexcept'
+    return:
+      type: 6d8267d6
+      description: <p>Unique ID </p>
+- uid: ShadowEngine.SHObject.GetType()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetType()
+  nameWithType: SHObject::GetType()
+  fullName: virtual const std::string& ShadowEngine::SHObject::GetType()
+  type: Method
+  summary: "<p>Returns the top level class type name of the object. </p>"
+  syntax:
+    content: 'public: virtual const std::string & GetType() const =0'
+    return:
+      type: 360fc41e
+      description: <p>Class name string </p>
+- uid: ShadowEngine.SHObject.GetTypeId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetTypeId()
+  nameWithType: SHObject::GetTypeId()
+  fullName: virtual const uint64_t ShadowEngine::SHObject::GetTypeId()
+  type: Method
+  summary: "<p>Gets the top level type ID. </p>"
+  syntax:
+    content: 'public: virtual const uint64_t GetTypeId() const =0'
+    return:
+      type: 29dc5929
+      description: <p>UID of the class </p>
+- uid: ShadowEngine.SHObject.~SHObject()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: ~SHObject()
+  nameWithType: SHObject::~SHObject()
+  fullName: virtual ShadowEngine::SHObject::~SHObject()
+  type: Constructor
+  syntax:
+    content: 'public: virtual ~SHObject()=default'
+- uid: ShadowEngine.SHObject
+  parent: ShadowEngine
+  href: ShadowEngine.SHObject.yml
+  name: SHObject
+  nameWithType: SHObject
+  fullName: ShadowEngine::SHObject
+  type: Class
+  summary: "<p>This is the base class for every class in the Engine that uses runtime reflection. </p>"
+  syntax:
+    content: 'public: class SHObject'
+- uid: ShadowEngine.Rendering.ShaderProperty
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ShaderProperty.yml
+  name: ShaderProperty
+  nameWithType: ShaderProperty
+  fullName: ShadowEngine::Rendering::ShaderProperty
+  type: Class
+  syntax:
+    content: 'public: class ShaderProperty'
+    typeParameters:
+    - id: class T
+      type: 07c9e456
+- uid: ShadowEngine.Rendering.IShaderProperty
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.IShaderProperty.yml
+  name: IShaderProperty
+  nameWithType: IShaderProperty
+  fullName: ShadowEngine::Rendering::IShaderProperty
+  type: Class
+  syntax: *o1
+- uid: ShadowEngine.Rendering.ShaderProperty.Clone()
+  parent: ShadowEngine.Rendering.ShaderProperty
+  href: ShadowEngine.Rendering.ShaderProperty.yml
+  name: Clone()
+  nameWithType: ShaderProperty::Clone()
+  fullName: IShaderProperty* ShadowEngine::Rendering::ShaderProperty<T>::Clone()
+  type: Method
+  syntax:
+    content: 'public: virtual IShaderProperty * Clone() override'
+    return:
+      type: ShadowEngine.Rendering.IShaderProperty68bc11b4
+- uid: ShadowEngine.Rendering.ShaderProperty.GetPropertyTypeName()
+  parent: ShadowEngine.Rendering.ShaderProperty
+  href: ShadowEngine.Rendering.ShaderProperty.yml
+  name: GetPropertyTypeName()
+  nameWithType: ShaderProperty::GetPropertyTypeName()
+  fullName: const std::string& ShadowEngine::Rendering::ShaderProperty<T>::GetPropertyTypeName()
+  type: Method
+  syntax:
+    content: 'public: virtual const std::string & GetPropertyTypeName() override'
+    return:
+      type: 360fc41e
+- uid: ShadowEngine.Rendering.ShaderProperty.GetPropertyTypeSize()
+  parent: ShadowEngine.Rendering.ShaderProperty
+  href: ShadowEngine.Rendering.ShaderProperty.yml
+  name: GetPropertyTypeSize()
+  nameWithType: ShaderProperty::GetPropertyTypeSize()
+  fullName: unsigned long long ShadowEngine::Rendering::ShaderProperty<T>::GetPropertyTypeSize()
+  type: Method
+  syntax:
+    content: 'public: virtual unsigned long long GetPropertyTypeSize() override'
+    return:
+      type: 388be2e0
+- uid: ShadowEngine.Rendering.ShaderProperty.GetPropertyData()
+  parent: ShadowEngine.Rendering.ShaderProperty
+  href: ShadowEngine.Rendering.ShaderProperty.yml
+  name: GetPropertyData()
+  nameWithType: ShaderProperty::GetPropertyData()
+  fullName: void* ShadowEngine::Rendering::ShaderProperty<T>::GetPropertyData()
+  type: Method
+  syntax:
+    content: 'public: virtual void * GetPropertyData() override'
+    return:
+      type: 7ca192cd

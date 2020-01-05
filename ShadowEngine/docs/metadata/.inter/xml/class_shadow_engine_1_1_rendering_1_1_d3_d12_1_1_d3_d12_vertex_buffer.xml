@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::Rendering::D3D12::D3D12VertexBuffer</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_rendering_1_1_vertex_buffer" prot="public" virt="non-virtual">ShadowEngine::Rendering::VertexBuffer</basecompoundref>
+    <includes refid="_d3_d12_buffers_8h" local="no">D3D12Buffers.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer_1ac2bc6925d05d93742b089388c5249080" prot="private" static="no" mutable="no">
+        <type>com_ptr&lt;ID3D12Resource&gt;</type>
+        <definition>com_ptr&lt;ID3D12Resource&gt; ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::vertexBuffer</definition>
+        <argsstring></argsstring>
+        <name>vertexBuffer</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Buffers.h" line="29" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Buffers.h" bodystart="27" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer_1ac3d167021d4424261680db443f51149d" prot="private" static="no" mutable="no">
+        <type>D3D12_VERTEX_BUFFER_VIEW</type>
+        <definition>D3D12_VERTEX_BUFFER_VIEW ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::vertexBufferView</definition>
+        <argsstring></argsstring>
+        <name>vertexBufferView</name>
+        <initializer>{}</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Buffers.h" line="30" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Buffers.h" bodystart="30" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer_1af078c567d3e37ed821d081580333692e" prot="private" static="no" mutable="no">
+        <type>
+          <ref refid="class_shadow_engine_1_1_rendering_1_1_buffer_layout" kindref="compound">ShadowEngine::Rendering::BufferLayout</ref>
+        </type>
+        <definition>ShadowEngine::Rendering::BufferLayout ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::m_Layout</definition>
+        <argsstring></argsstring>
+        <name>m_Layout</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Buffers.h" line="31" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Buffers.h" bodystart="31" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer_1a9d985baff10286e312508f176b998423" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::D3D12VertexBuffer</definition>
+        <argsstring>(void *vertices, uint32_t size)</argsstring>
+        <name>D3D12VertexBuffer</name>
+        <param>
+          <type>void *</type>
+          <declname>vertices</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+          <para>Constructor for Dx12 Vertex Buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>vertices</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The vertex data for this buffer to store </para>
+                </parameterdescription>
+              </parameteritem>
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>size</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>the size of the data (total length in bites) </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Buffers.h" line="14" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Buffers.cpp" bodystart="14" bodyend="48" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer_1a385923ffa4cceedb2b8f3b619ee561e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::~D3D12VertexBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>~D3D12VertexBuffer</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Buffers.h" line="15" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Buffers.cpp" bodystart="50" bodyend="52" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer_1acf92540a041f6ac7f5944685a1b0c7c8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const <ref refid="class_shadow_engine_1_1_rendering_1_1_buffer_layout" kindref="compound">ShadowEngine::Rendering::BufferLayout</ref> &amp;</type>
+        <definition>virtual const ShadowEngine::Rendering::BufferLayout&amp; ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::GetLayout</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetLayout</name>
+        <reimplements refid="class_shadow_engine_1_1_rendering_1_1_vertex_buffer_1a07b3443c8531cb95658fd3181c9c03e0">GetLayout</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Buffers.h" line="17" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Buffers.h" bodystart="17" bodyend="17" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer_1a2ee07dd55a51499e27c1e126678377da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::SetLayout</definition>
+        <argsstring>(const ShadowEngine::Rendering::BufferLayout &amp;layout) override</argsstring>
+        <name>SetLayout</name>
+        <reimplements refid="class_shadow_engine_1_1_rendering_1_1_vertex_buffer_1a57ad5af2518c7589926882037f0eac89">SetLayout</reimplements>
+        <param>
+          <type>const <ref refid="class_shadow_engine_1_1_rendering_1_1_buffer_layout" kindref="compound">ShadowEngine::Rendering::BufferLayout</ref> &amp;</type>
+          <declname>layout</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Buffers.h" line="18" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Buffers.h" bodystart="18" bodyend="18" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer_1a1878f21a10422fbdced259a7439cda79" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const D3D12_VERTEX_BUFFER_VIEW &amp;</type>
+        <definition>const D3D12_VERTEX_BUFFER_VIEW&amp; ShadowEngine::Rendering::D3D12::D3D12VertexBuffer::GetBufferView</definition>
+        <argsstring>() const</argsstring>
+        <name>GetBufferView</name>
+        <briefdescription>
+          <para>Returns the Buffer View. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>Returns the buffer view to this vertex buffer. It returns a D3D12_VERTEX_BUFFER_VIEW struct witch is the Dx12 type for Vertex buffer views</para>
+          <para>
+            <simplesect kind="return">
+              <para>Buffer view returned </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Platform/D3D12/D3D12Buffers.h" line="27" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Buffers.h" bodystart="27" bodyend="27" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+      <para>Vertex Buffer holding vertices in a Dx12 way This hold the vertex buffer and the buffer view for it as well. </para>
+    </briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="136">
+        <label>ShadowEngine::Rendering::VertexBuffer</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_vertex_buffer" />
+      </node>
+      <node id="135">
+        <label>ShadowEngine::Rendering::D3D12::D3D12VertexBuffer</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer" />
+        <childnode refid="136" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="138">
+        <label>ShadowEngine::Rendering::VertexBuffer</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_vertex_buffer" />
+      </node>
+      <node id="137">
+        <label>ShadowEngine::Rendering::D3D12::D3D12VertexBuffer</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer" />
+        <childnode refid="138" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/Platform/D3D12/D3D12Buffers.h" line="12" column="1" bodyfile="ShadowEngine/src/Platform/D3D12/D3D12Buffers.h" bodystart="11" bodyend="32" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_vertex_buffer_1adbec64d2f1ed41ad13e670f9142c0d30" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12VertexBuffer</scope>
+        <name>Create</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer_1a9d985baff10286e312508f176b998423" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12VertexBuffer</scope>
+        <name>D3D12VertexBuffer</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer_1a1878f21a10422fbdced259a7439cda79" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12VertexBuffer</scope>
+        <name>GetBufferView</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer_1acf92540a041f6ac7f5944685a1b0c7c8" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12VertexBuffer</scope>
+        <name>GetLayout</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer_1af078c567d3e37ed821d081580333692e" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12VertexBuffer</scope>
+        <name>m_Layout</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer_1a2ee07dd55a51499e27c1e126678377da" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12VertexBuffer</scope>
+        <name>SetLayout</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer_1ac2bc6925d05d93742b089388c5249080" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12VertexBuffer</scope>
+        <name>vertexBuffer</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer_1ac3d167021d4424261680db443f51149d" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12VertexBuffer</scope>
+        <name>vertexBufferView</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_vertex_buffer_1a385923ffa4cceedb2b8f3b619ee561e5" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12VertexBuffer</scope>
+        <name>~D3D12VertexBuffer</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_vertex_buffer_1af5a4fd9b03053e5d35133862a1679751" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::D3D12::D3D12VertexBuffer</scope>
+        <name>~VertexBuffer</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

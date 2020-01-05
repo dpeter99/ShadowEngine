@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.Rendering.BufferElement" kind="struct" language="C++" prot="public">
+    <compoundname>ShadowEngine::Rendering::BufferElement</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="ShadowEngine.Rendering.BufferElement.Name" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ShadowEngine::Rendering::BufferElement::Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="36" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="36" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.Rendering.BufferElement.Type" prot="public" static="no" mutable="no">
+        <type>ShaderDataType</type>
+        <definition>ShaderDataType ShadowEngine::Rendering::BufferElement::Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="37" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="37" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.Rendering.BufferElement.Size" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ShadowEngine::Rendering::BufferElement::Size</definition>
+        <argsstring></argsstring>
+        <name>Size</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="38" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="38" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.Rendering.BufferElement.Offset" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ShadowEngine::Rendering::BufferElement::Offset</definition>
+        <argsstring></argsstring>
+        <name>Offset</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="39" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="39" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.Rendering.BufferElement.Normalized" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ShadowEngine::Rendering::BufferElement::Normalized</definition>
+        <argsstring></argsstring>
+        <name>Normalized</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="40" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="40" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.Rendering.BufferElement.BufferElement()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::BufferElement::BufferElement</definition>
+        <argsstring>()</argsstring>
+        <name>BufferElement</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="42" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="42" bodyend="43" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.Rendering.BufferElement.BufferElement(ShaderDataType,const std::string &amp;,bool)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::BufferElement::BufferElement</definition>
+        <argsstring>(ShaderDataType type, const std::string &amp;name, bool normalized=false)</argsstring>
+        <name>BufferElement</name>
+        <param>
+          <type>ShaderDataType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>normalized</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="45" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="45" bodyend="48" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.Rendering.BufferElement.GetComponentCount()" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t ShadowEngine::Rendering::BufferElement::GetComponentCount</definition>
+        <argsstring>() const</argsstring>
+        <name>GetComponentCount</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="50" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="50" bodyend="69" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="35" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="34" bodyend="70" />
+    <listofallmembers>
+      <member refid="ShadowEngine.Rendering.BufferElement.BufferElement()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferElement</scope>
+        <name>BufferElement</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.BufferElement.BufferElement(ShaderDataType,const std::string &amp;,bool)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferElement</scope>
+        <name>BufferElement</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.BufferElement.GetComponentCount()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferElement</scope>
+        <name>GetComponentCount</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.BufferElement.Name" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferElement</scope>
+        <name>Name</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.BufferElement.Normalized" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferElement</scope>
+        <name>Normalized</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.BufferElement.Offset" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferElement</scope>
+        <name>Offset</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.BufferElement.Size" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferElement</scope>
+        <name>Size</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.BufferElement.Type" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferElement</scope>
+        <name>Type</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

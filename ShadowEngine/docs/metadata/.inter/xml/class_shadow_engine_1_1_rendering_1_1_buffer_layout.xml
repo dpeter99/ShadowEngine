@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_rendering_1_1_buffer_layout" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::Rendering::BufferLayout</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1a079a8d4ffabffeb45b7a60c3a5367722" prot="private" static="no" mutable="no">
+        <type>std::vector&lt;<ref refid="struct_shadow_engine_1_1_rendering_1_1_buffer_element" kindref="compound">BufferElement</ref>&gt;</type>
+        <definition>std::vector&lt;BufferElement&gt; ShadowEngine::Rendering::BufferLayout::m_Elements</definition>
+        <argsstring></argsstring>
+        <name>m_Elements</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="103" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="103" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1a5698bea88a13cf49e8ddc4d7b975b711" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ShadowEngine::Rendering::BufferLayout::m_Stride</definition>
+        <argsstring></argsstring>
+        <name>m_Stride</name>
+        <initializer>= 0</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="104" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="104" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1ad33af992faaf3e52e98bf206db6d5ba9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::BufferLayout::BufferLayout</definition>
+        <argsstring>()</argsstring>
+        <name>BufferLayout</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="75" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="75" bodyend="75" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1af614a10b8dd16a3cf66ff1ec42625d29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::BufferLayout::BufferLayout</definition>
+        <argsstring>(const std::initializer_list&lt;BufferElement&gt; &amp;elements)</argsstring>
+        <name>BufferLayout</name>
+        <param>
+          <type>const std::initializer_list&lt;<ref refid="struct_shadow_engine_1_1_rendering_1_1_buffer_element" kindref="compound">BufferElement</ref>&gt; &amp;</type>
+          <declname>elements</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="77" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="77" bodyend="81" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1a9930e873768474b3da8d1ca03c642430" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t ShadowEngine::Rendering::BufferLayout::GetStride</definition>
+        <argsstring>() const</argsstring>
+        <name>GetStride</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="83" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="83" bodyend="83" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1a12c4fa2737abd0fb55c4fec62b14f134" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt;<ref refid="struct_shadow_engine_1_1_rendering_1_1_buffer_element" kindref="compound">BufferElement</ref>&gt; &amp;</type>
+        <definition>const std::vector&lt;BufferElement&gt;&amp; ShadowEngine::Rendering::BufferLayout::GetElements</definition>
+        <argsstring>() const</argsstring>
+        <name>GetElements</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="84" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="84" bodyend="84" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1aed4f503a513b7ca3bda4a2b6ae4f3006" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt;<ref refid="struct_shadow_engine_1_1_rendering_1_1_buffer_element" kindref="compound">BufferElement</ref>&gt;::iterator</type>
+        <definition>std::vector&lt;BufferElement&gt;::iterator ShadowEngine::Rendering::BufferLayout::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="86" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="86" bodyend="86" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1a8b948f8e3de44d56fbc77c2ba6adef09" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt;<ref refid="struct_shadow_engine_1_1_rendering_1_1_buffer_element" kindref="compound">BufferElement</ref>&gt;::iterator</type>
+        <definition>std::vector&lt;BufferElement&gt;::iterator ShadowEngine::Rendering::BufferLayout::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="87" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="87" bodyend="87" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1a0a66be3332f388cd982391d89f31b7cb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt;<ref refid="struct_shadow_engine_1_1_rendering_1_1_buffer_element" kindref="compound">BufferElement</ref>&gt;::const_iterator</type>
+        <definition>std::vector&lt;BufferElement&gt;::const_iterator ShadowEngine::Rendering::BufferLayout::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="88" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="88" bodyend="88" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1a1ae8c560524ed6a89df10fdfe833063c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt;<ref refid="struct_shadow_engine_1_1_rendering_1_1_buffer_element" kindref="compound">BufferElement</ref>&gt;::const_iterator</type>
+        <definition>std::vector&lt;BufferElement&gt;::const_iterator ShadowEngine::Rendering::BufferLayout::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="89" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="89" bodyend="89" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1a8757d6aa91b13185d4e7de27b74720a1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::BufferLayout::CalculateOffsetsAndStride</definition>
+        <argsstring>()</argsstring>
+        <name>CalculateOffsetsAndStride</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="91" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="91" bodyend="101" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/ShadowRenderer/Buffer.h" line="73" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Buffer.h" bodystart="72" bodyend="105" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1aed4f503a513b7ca3bda4a2b6ae4f3006" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferLayout</scope>
+        <name>begin</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1a0a66be3332f388cd982391d89f31b7cb" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferLayout</scope>
+        <name>begin</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1ad33af992faaf3e52e98bf206db6d5ba9" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferLayout</scope>
+        <name>BufferLayout</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1af614a10b8dd16a3cf66ff1ec42625d29" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferLayout</scope>
+        <name>BufferLayout</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1a8757d6aa91b13185d4e7de27b74720a1" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferLayout</scope>
+        <name>CalculateOffsetsAndStride</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1a8b948f8e3de44d56fbc77c2ba6adef09" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferLayout</scope>
+        <name>end</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1a1ae8c560524ed6a89df10fdfe833063c" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferLayout</scope>
+        <name>end</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1a12c4fa2737abd0fb55c4fec62b14f134" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferLayout</scope>
+        <name>GetElements</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1a9930e873768474b3da8d1ca03c642430" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferLayout</scope>
+        <name>GetStride</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1a079a8d4ffabffeb45b7a60c3a5367722" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferLayout</scope>
+        <name>m_Elements</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_buffer_layout_1a5698bea88a13cf49e8ddc4d7b975b711" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::BufferLayout</scope>
+        <name>m_Stride</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

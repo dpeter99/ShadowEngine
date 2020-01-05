@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_light" kind="class" language="C++" prot="public">
+    <compoundname>Light</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" prot="public" virt="non-virtual">ShadowEngine::EntitySystem::SceneEntity</basecompoundref>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_light_1a935814cdf6482bb8a7505952dad6fb4a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Light::SHObject_Base</definition>
+        <argsstring>(Light) Entity_Base(Light</argsstring>
+        <name>SHObject_Base</name>
+        <param>
+          <type>
+            <ref refid="class_light" kindref="compound">Light</ref>
+          </type>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Light.h" line="7" column="1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_light_1a9379a7e8dd7fd6bb04a8d50ce874b8c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Light::Render</definition>
+        <argsstring>() override</argsstring>
+        <name>Render</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/Light.h" line="11" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Light.cpp" bodystart="6" bodyend="9" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="332">
+        <label>ShadowEngine::EntitySystem::SceneEntity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" />
+        <childnode refid="333" relation="public-inheritance"></childnode>
+      </node>
+      <node id="331">
+        <label>Light</label>
+        <link refid="class_light" />
+        <childnode refid="332" relation="public-inheritance"></childnode>
+      </node>
+      <node id="333">
+        <label>Entity</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="335">
+        <label>ShadowEngine::EntitySystem::SceneEntity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" />
+        <childnode refid="336" relation="public-inheritance"></childnode>
+      </node>
+      <node id="334">
+        <label>Light</label>
+        <link refid="class_light" />
+        <childnode refid="335" relation="public-inheritance"></childnode>
+      </node>
+      <node id="336">
+        <label>Entity</label>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/EntitySystem/Entities/Light.h" line="6" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/Light.h" bodystart="5" bodyend="12" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a973bfe0c2c49579e235fb9602f836f94" prot="public" virt="virtual">
+        <scope>Light</scope>
+        <name>GetTransform</name>
+      </member>
+      <member refid="class_light_1a9379a7e8dd7fd6bb04a8d50ce874b8c9" prot="public" virt="non-virtual">
+        <scope>Light</scope>
+        <name>Render</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1afc8c3004bc7d6c473f9a6faaeac6abad" prot="public" virt="non-virtual">
+        <scope>Light</scope>
+        <name>SceneEntity</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a017ec5e9e4ff00c1f3d91072dd28ac7c" prot="public" virt="non-virtual">
+        <scope>Light</scope>
+        <name>SceneEntity</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a1fa641bdc27235315d094ea17e3ebcb2" prot="public" virt="non-virtual">
+        <scope>Light</scope>
+        <name>SetParent</name>
+      </member>
+      <member refid="class_light_1a935814cdf6482bb8a7505952dad6fb4a" prot="private" virt="non-virtual">
+        <scope>Light</scope>
+        <name>SHObject_Base</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a843f7ccc0e2bd01702aed0f8b50c8c6a" prot="public" virt="non-virtual">
+        <scope>Light</scope>
+        <name>transform</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1afca0d7e875aa5cefb39a0957b902d1cd" prot="public" virt="virtual">
+        <scope>Light</scope>
+        <name>TransformChanged</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

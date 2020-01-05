@@ -1,0 +1,136 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.EventSystem.Events
+  id: ShadowEngine.EventSystem.Events
+  children:
+  - ShadowEngine.EventSystem.Events.KeyEvent
+  - ShadowEngine.EventSystem.Events.KeyPressedEvent
+  - ShadowEngine.EventSystem.Events.KeyReleasedEvent
+  - ShadowEngine.EventSystem.Events.KeyTypedEvent
+  - ShadowEngine.EventSystem.Events.MouseButtonEvent
+  - ShadowEngine.EventSystem.Events.MouseButtonPressedEvent
+  - ShadowEngine.EventSystem.Events.MouseButtonReleasedEvent
+  - ShadowEngine.EventSystem.Events.MouseMovedEvent
+  - ShadowEngine.EventSystem.Events.MouseScrolledEvent
+  - ShadowEngine.EventSystem.Events.WindowCloseEvent
+  - ShadowEngine.EventSystem.Events.WindowResizeEvent
+  href: ShadowEngine.EventSystem.Events.yml
+  langs:
+  - cplusplus
+  name: ShadowEngine::EventSystem::Events
+  nameWithType: ShadowEngine::EventSystem::Events
+  fullName: ShadowEngine::EventSystem::Events
+  type: Namespace
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowEvents/Events/ApplicationEvent.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowEvents/Events/ApplicationEvent.h
+    startLine: 5
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowEvents/Events/ApplicationEvent.h
+    startLine: 5
+  syntax:
+    content: namespace ShadowEngine::EventSystem::Events
+references:
+- uid: ShadowEngine.EventSystem.Events.KeyEvent
+  parent: ShadowEngine.EventSystem.Events
+  href: ShadowEngine.EventSystem.Events.KeyEvent.yml
+  name: KeyEvent
+  nameWithType: KeyEvent
+  fullName: ShadowEngine::EventSystem::Events::KeyEvent
+  type: Class
+  syntax:
+    content: 'public: class KeyEvent : public adowEvent'
+- uid: ShadowEngine.EventSystem.Events.KeyPressedEvent
+  parent: ShadowEngine.EventSystem.Events
+  href: ShadowEngine.EventSystem.Events.KeyPressedEvent.yml
+  name: KeyPressedEvent
+  nameWithType: KeyPressedEvent
+  fullName: ShadowEngine::EventSystem::Events::KeyPressedEvent
+  type: Class
+  syntax:
+    content: 'public: class KeyPressedEvent : public Event'
+- uid: ShadowEngine.EventSystem.Events.KeyReleasedEvent
+  parent: ShadowEngine.EventSystem.Events
+  href: ShadowEngine.EventSystem.Events.KeyReleasedEvent.yml
+  name: KeyReleasedEvent
+  nameWithType: KeyReleasedEvent
+  fullName: ShadowEngine::EventSystem::Events::KeyReleasedEvent
+  type: Class
+  syntax:
+    content: 'public: class KeyReleasedEvent : public Event'
+- uid: ShadowEngine.EventSystem.Events.KeyTypedEvent
+  parent: ShadowEngine.EventSystem.Events
+  href: ShadowEngine.EventSystem.Events.KeyTypedEvent.yml
+  name: KeyTypedEvent
+  nameWithType: KeyTypedEvent
+  fullName: ShadowEngine::EventSystem::Events::KeyTypedEvent
+  type: Class
+  syntax:
+    content: 'public: class KeyTypedEvent : public Event'
+- uid: ShadowEngine.EventSystem.Events.MouseButtonEvent
+  parent: ShadowEngine.EventSystem.Events
+  href: ShadowEngine.EventSystem.Events.MouseButtonEvent.yml
+  name: MouseButtonEvent
+  nameWithType: MouseButtonEvent
+  fullName: ShadowEngine::EventSystem::Events::MouseButtonEvent
+  type: Class
+  syntax:
+    content: 'public: class MouseButtonEvent : public adowEvent'
+- uid: ShadowEngine.EventSystem.Events.MouseButtonPressedEvent
+  parent: ShadowEngine.EventSystem.Events
+  href: ShadowEngine.EventSystem.Events.MouseButtonPressedEvent.yml
+  name: MouseButtonPressedEvent
+  nameWithType: MouseButtonPressedEvent
+  fullName: ShadowEngine::EventSystem::Events::MouseButtonPressedEvent
+  type: Class
+  syntax:
+    content: 'public: class MouseButtonPressedEvent : public seButtonEvent'
+- uid: ShadowEngine.EventSystem.Events.MouseButtonReleasedEvent
+  parent: ShadowEngine.EventSystem.Events
+  href: ShadowEngine.EventSystem.Events.MouseButtonReleasedEvent.yml
+  name: MouseButtonReleasedEvent
+  nameWithType: MouseButtonReleasedEvent
+  fullName: ShadowEngine::EventSystem::Events::MouseButtonReleasedEvent
+  type: Class
+  syntax:
+    content: 'public: class MouseButtonReleasedEvent : public seButtonEvent'
+- uid: ShadowEngine.EventSystem.Events.MouseMovedEvent
+  parent: ShadowEngine.EventSystem.Events
+  href: ShadowEngine.EventSystem.Events.MouseMovedEvent.yml
+  name: MouseMovedEvent
+  nameWithType: MouseMovedEvent
+  fullName: ShadowEngine::EventSystem::Events::MouseMovedEvent
+  type: Class
+  syntax:
+    content: 'public: class MouseMovedEvent : public adowEvent'
+- uid: ShadowEngine.EventSystem.Events.MouseScrolledEvent
+  parent: ShadowEngine.EventSystem.Events
+  href: ShadowEngine.EventSystem.Events.MouseScrolledEvent.yml
+  name: MouseScrolledEvent
+  nameWithType: MouseScrolledEvent
+  fullName: ShadowEngine::EventSystem::Events::MouseScrolledEvent
+  type: Class
+  syntax:
+    content: 'public: class MouseScrolledEvent : public adowEvent'
+- uid: ShadowEngine.EventSystem.Events.WindowCloseEvent
+  parent: ShadowEngine.EventSystem.Events
+  href: ShadowEngine.EventSystem.Events.WindowCloseEvent.yml
+  name: WindowCloseEvent
+  nameWithType: WindowCloseEvent
+  fullName: ShadowEngine::EventSystem::Events::WindowCloseEvent
+  type: Class
+  syntax:
+    content: 'public: class WindowCloseEvent : public adowEvent'
+- uid: ShadowEngine.EventSystem.Events.WindowResizeEvent
+  parent: ShadowEngine.EventSystem.Events
+  href: ShadowEngine.EventSystem.Events.WindowResizeEvent.yml
+  name: WindowResizeEvent
+  nameWithType: WindowResizeEvent
+  fullName: ShadowEngine::EventSystem::Events::WindowResizeEvent
+  type: Class
+  syntax:
+    content: 'public: class WindowResizeEvent : public adowEvent'

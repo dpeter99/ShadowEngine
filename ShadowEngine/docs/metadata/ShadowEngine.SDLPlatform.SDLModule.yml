@@ -1,0 +1,375 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.SDLPlatform.SDLModule
+  id: ShadowEngine.SDLPlatform.SDLModule
+  parent: ShadowEngine.SDLPlatform
+  children:
+  - ShadowEngine.SDLPlatform.SDLModule.~SDLModule()
+  - ShadowEngine.SDLPlatform.SDLModule.GetGlContext()
+  - ShadowEngine.SDLPlatform.SDLModule.GetInstance()
+  - ShadowEngine.SDLPlatform.SDLModule.GetName()
+  - ShadowEngine.SDLPlatform.SDLModule.Init()
+  - ShadowEngine.SDLPlatform.SDLModule.LateRender()
+  - ShadowEngine.SDLPlatform.SDLModule.Render()
+  - ShadowEngine.SDLPlatform.SDLModule.SDLModule()
+  - ShadowEngine.SDLPlatform.SDLModule.Update()
+  href: ShadowEngine.SDLPlatform.SDLModule.yml
+  langs:
+  - cplusplus
+  name: SDLModule
+  nameWithType: SDLModule
+  fullName: ShadowEngine::SDLPlatform::SDLModule
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/Platform/SDL/SDLModule.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/SDL/SDLModule.h
+    startLine: 6
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/SDL/SDLModule.h
+    startLine: 7
+  namespace: ShadowEngine.SDLPlatform
+  syntax: &o2
+    content: 'public: class SDLModule : public hadowModule'
+  inheritance:
+  - System::Object
+  - ShadowEngine.SHObject
+  - ShadowEngine.ShadowModule
+  inheritedMembers:
+  - ShadowEngine.SHObject.GenerateId()
+  - ShadowEngine.SHObject.GetType()
+  - ShadowEngine.SHObject.GetTypeId()
+  - ShadowEngine.SHObject.~SHObject()
+- uid: ShadowEngine.SDLPlatform.SDLModule.~SDLModule()
+  id: ShadowEngine.SDLPlatform.SDLModule.~SDLModule()
+  parent: ShadowEngine.SDLPlatform.SDLModule
+  href: ShadowEngine.SDLPlatform.SDLModule.yml
+  langs:
+  - cplusplus
+  name: ~SDLModule()
+  nameWithType: SDLModule::~SDLModule()
+  fullName: ShadowEngine::SDLPlatform::SDLModule::~SDLModule()
+  overload: ShadowEngine.SDLPlatform.SDLModule.~SDLModule*
+  type: Constructor
+  source:
+    remote: &o1
+      path: ShadowEngine/src/Platform/SDL/SDLModule.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/SDL/SDLModule.cpp
+    startLine: 33
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/SDL/SDLModule.h
+    startLine: 29
+  namespace: ShadowEngine.SDLPlatform
+  syntax:
+    content: 'public: ~SDLModule()'
+- uid: ShadowEngine.SDLPlatform.SDLModule.GetGlContext()
+  id: ShadowEngine.SDLPlatform.SDLModule.GetGlContext()
+  parent: ShadowEngine.SDLPlatform.SDLModule
+  href: ShadowEngine.SDLPlatform.SDLModule.yml
+  langs:
+  - cplusplus
+  name: GetGlContext()
+  nameWithType: SDLModule::GetGlContext()
+  fullName: SDL_GLContext& ShadowEngine::SDLPlatform::SDLModule::GetGlContext()
+  overload: ShadowEngine.SDLPlatform.SDLModule.GetGlContext*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/SDL/SDLModule.h
+    startLine: 26
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/SDL/SDLModule.h
+    startLine: 26
+  namespace: ShadowEngine.SDLPlatform
+  syntax:
+    content: 'public: SDL_GLContext & GetGlContext()'
+    return:
+      type: 81a818ec
+- uid: ShadowEngine.SDLPlatform.SDLModule.GetInstance()
+  id: ShadowEngine.SDLPlatform.SDLModule.GetInstance()
+  parent: ShadowEngine.SDLPlatform.SDLModule
+  href: ShadowEngine.SDLPlatform.SDLModule.yml
+  langs:
+  - cplusplus
+  name: GetInstance()
+  nameWithType: SDLModule::GetInstance()
+  fullName: static SDLModule& ShadowEngine::SDLPlatform::SDLModule::GetInstance()
+  overload: ShadowEngine.SDLPlatform.SDLModule.GetInstance*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/SDL/SDLModule.h
+    startLine: 16
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/SDL/SDLModule.h
+    startLine: 16
+  namespace: ShadowEngine.SDLPlatform
+  syntax:
+    content: 'public: static SDLModule & GetInstance()'
+    return:
+      type: ShadowEngine.SDLPlatform.SDLModule76390d34
+- uid: ShadowEngine.SDLPlatform.SDLModule.GetName()
+  id: ShadowEngine.SDLPlatform.SDLModule.GetName()
+  parent: ShadowEngine.SDLPlatform.SDLModule
+  href: ShadowEngine.SDLPlatform.SDLModule.yml
+  langs:
+  - cplusplus
+  name: GetName()
+  nameWithType: SDLModule::GetName()
+  fullName: std::string ShadowEngine::SDLPlatform::SDLModule::GetName()
+  overload: ShadowEngine.SDLPlatform.SDLModule.GetName*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/SDL/SDLModule.h
+    startLine: 24
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/SDL/SDLModule.h
+    startLine: 24
+  namespace: ShadowEngine.SDLPlatform
+  syntax:
+    content: 'public: virtual std::string GetName() override'
+    return:
+      type: 9626e5dd
+  overridden: ShadowEngine.ShadowModule.GetName()
+- uid: ShadowEngine.SDLPlatform.SDLModule.Init()
+  id: ShadowEngine.SDLPlatform.SDLModule.Init()
+  parent: ShadowEngine.SDLPlatform.SDLModule
+  href: ShadowEngine.SDLPlatform.SDLModule.yml
+  langs:
+  - cplusplus
+  name: Init()
+  nameWithType: SDLModule::Init()
+  fullName: void ShadowEngine::SDLPlatform::SDLModule::Init()
+  overload: ShadowEngine.SDLPlatform.SDLModule.Init*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/SDL/SDLModule.cpp
+    startLine: 13
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/SDL/SDLModule.h
+    startLine: 18
+  namespace: ShadowEngine.SDLPlatform
+  syntax:
+    content: 'public: void Init() override'
+- uid: ShadowEngine.SDLPlatform.SDLModule.LateRender()
+  id: ShadowEngine.SDLPlatform.SDLModule.LateRender()
+  parent: ShadowEngine.SDLPlatform.SDLModule
+  href: ShadowEngine.SDLPlatform.SDLModule.yml
+  langs:
+  - cplusplus
+  name: LateRender()
+  nameWithType: SDLModule::LateRender()
+  fullName: void ShadowEngine::SDLPlatform::SDLModule::LateRender()
+  overload: ShadowEngine.SDLPlatform.SDLModule.LateRender*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/SDL/SDLModule.h
+    startLine: 22
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/SDL/SDLModule.h
+    startLine: 22
+  namespace: ShadowEngine.SDLPlatform
+  syntax:
+    content: 'public: virtual void LateRender() override'
+  overridden: ShadowEngine.ShadowModule.LateRender()
+- uid: ShadowEngine.SDLPlatform.SDLModule.Render()
+  id: ShadowEngine.SDLPlatform.SDLModule.Render()
+  parent: ShadowEngine.SDLPlatform.SDLModule
+  href: ShadowEngine.SDLPlatform.SDLModule.yml
+  langs:
+  - cplusplus
+  name: Render()
+  nameWithType: SDLModule::Render()
+  fullName: void ShadowEngine::SDLPlatform::SDLModule::Render()
+  overload: ShadowEngine.SDLPlatform.SDLModule.Render*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/SDL/SDLModule.h
+    startLine: 21
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/SDL/SDLModule.h
+    startLine: 21
+  namespace: ShadowEngine.SDLPlatform
+  syntax:
+    content: 'public: virtual void Render() override'
+  overridden: ShadowEngine.ShadowModule.Render()
+- uid: ShadowEngine.SDLPlatform.SDLModule.SDLModule()
+  id: ShadowEngine.SDLPlatform.SDLModule.SDLModule()
+  parent: ShadowEngine.SDLPlatform.SDLModule
+  href: ShadowEngine.SDLPlatform.SDLModule.yml
+  langs:
+  - cplusplus
+  name: SDLModule()
+  nameWithType: SDLModule::SDLModule()
+  fullName: ShadowEngine::SDLPlatform::SDLModule::SDLModule()
+  overload: ShadowEngine.SDLPlatform.SDLModule.SDLModule*
+  type: Constructor
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/SDL/SDLModule.cpp
+    startLine: 28
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/SDL/SDLModule.h
+    startLine: 28
+  namespace: ShadowEngine.SDLPlatform
+  syntax:
+    content: 'public: SDLModule()'
+- uid: ShadowEngine.SDLPlatform.SDLModule.Update()
+  id: ShadowEngine.SDLPlatform.SDLModule.Update()
+  parent: ShadowEngine.SDLPlatform.SDLModule
+  href: ShadowEngine.SDLPlatform.SDLModule.yml
+  langs:
+  - cplusplus
+  name: Update()
+  nameWithType: SDLModule::Update()
+  fullName: void ShadowEngine::SDLPlatform::SDLModule::Update()
+  overload: ShadowEngine.SDLPlatform.SDLModule.Update*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Platform/SDL/SDLModule.h
+    startLine: 20
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/SDL/SDLModule.h
+    startLine: 20
+  namespace: ShadowEngine.SDLPlatform
+  syntax:
+    content: 'public: virtual void Update() override'
+  overridden: ShadowEngine.ShadowModule.Update()
+references:
+- uid: ShadowEngine.SDLPlatform.SDLModule76390d34
+  spec.cplusplus:
+  - uid: ShadowEngine.SDLPlatform.SDLModule
+  - name: " &"
+    fullName: " &"
+- uid: ShadowEngine.SDLPlatform.SDLModule.GetInstance*
+  name: GetInstance
+  nameWithType: SDLModule::GetInstance
+  fullName: static SDLModule& ShadowEngine::SDLPlatform::SDLModule::GetInstance
+- uid: ShadowEngine.SDLPlatform.SDLModule.Init*
+  name: Init
+  nameWithType: SDLModule::Init
+  fullName: void ShadowEngine::SDLPlatform::SDLModule::Init
+- uid: ShadowEngine.SDLPlatform.SDLModule.Update*
+  name: Update
+  nameWithType: SDLModule::Update
+  fullName: void ShadowEngine::SDLPlatform::SDLModule::Update
+- uid: ShadowEngine.SDLPlatform.SDLModule.Render*
+  name: Render
+  nameWithType: SDLModule::Render
+  fullName: void ShadowEngine::SDLPlatform::SDLModule::Render
+- uid: ShadowEngine.SDLPlatform.SDLModule.LateRender*
+  name: LateRender
+  nameWithType: SDLModule::LateRender
+  fullName: void ShadowEngine::SDLPlatform::SDLModule::LateRender
+- uid: 9626e5dd
+  spec.cplusplus:
+  - name: std::string
+    fullName: std::string
+- uid: ShadowEngine.SDLPlatform.SDLModule.GetName*
+  name: GetName
+  nameWithType: SDLModule::GetName
+  fullName: std::string ShadowEngine::SDLPlatform::SDLModule::GetName
+- uid: 81a818ec
+  spec.cplusplus:
+  - name: SDL_GLContext &
+    fullName: SDL_GLContext &
+- uid: ShadowEngine.SDLPlatform.SDLModule.GetGlContext*
+  name: GetGlContext
+  nameWithType: SDLModule::GetGlContext
+  fullName: SDL_GLContext& ShadowEngine::SDLPlatform::SDLModule::GetGlContext
+- uid: ShadowEngine.SDLPlatform.SDLModule.SDLModule*
+  name: SDLModule
+  nameWithType: SDLModule::SDLModule
+  fullName: ShadowEngine::SDLPlatform::SDLModule::SDLModule
+- uid: ShadowEngine.SDLPlatform.SDLModule.~SDLModule*
+  name: ~SDLModule
+  nameWithType: SDLModule::~SDLModule
+  fullName: ShadowEngine::SDLPlatform::SDLModule::~SDLModule
+- uid: ShadowEngine.SHObject.GenerateId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GenerateId()
+  nameWithType: SHObject::GenerateId()
+  fullName: static uint64_t ShadowEngine::SHObject::GenerateId()
+  type: Method
+  summary: "<p>Generates a new UID for each call. </p>"
+  syntax:
+    content: 'protected: static uint64_t GenerateId() noexcept'
+    return:
+      type: 6d8267d6
+      description: <p>Unique ID </p>
+- uid: ShadowEngine.SHObject.GetType()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetType()
+  nameWithType: SHObject::GetType()
+  fullName: virtual const std::string& ShadowEngine::SHObject::GetType()
+  type: Method
+  summary: "<p>Returns the top level class type name of the object. </p>"
+  syntax:
+    content: 'public: virtual const std::string & GetType() const =0'
+    return:
+      type: 360fc41e
+      description: <p>Class name string </p>
+- uid: ShadowEngine.SHObject.GetTypeId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetTypeId()
+  nameWithType: SHObject::GetTypeId()
+  fullName: virtual const uint64_t ShadowEngine::SHObject::GetTypeId()
+  type: Method
+  summary: "<p>Gets the top level type ID. </p>"
+  syntax:
+    content: 'public: virtual const uint64_t GetTypeId() const =0'
+    return:
+      type: 29dc5929
+      description: <p>UID of the class </p>
+- uid: ShadowEngine.SHObject.~SHObject()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: ~SHObject()
+  nameWithType: SHObject::~SHObject()
+  fullName: virtual ShadowEngine::SHObject::~SHObject()
+  type: Constructor
+  syntax:
+    content: 'public: virtual ~SHObject()=default'
+- uid: ShadowEngine.ShadowModule
+  parent: ShadowEngine
+  href: ShadowEngine.ShadowModule.yml
+  name: ShadowModule
+  nameWithType: ShadowModule
+  fullName: ShadowEngine::ShadowModule
+  type: Class
+  syntax:
+    content: 'public: class ShadowModule'
+- uid: ShadowEngine.SDLPlatform.SDLModule
+  parent: ShadowEngine.SDLPlatform
+  href: ShadowEngine.SDLPlatform.SDLModule.yml
+  name: SDLModule
+  nameWithType: SDLModule
+  fullName: ShadowEngine::SDLPlatform::SDLModule
+  type: Class
+  syntax: *o2
+- uid: ShadowEngine.ShadowModule.Update()
+- uid: ShadowEngine.ShadowModule.Render()
+- uid: ShadowEngine.ShadowModule.LateRender()
+- uid: ShadowEngine.ShadowModule.GetName()

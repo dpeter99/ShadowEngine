@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.InputSystem.BindingORInspector" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::InputSystem::BindingORInspector</compoundname>
+    <basecompoundref refid="ShadowEngine.Debug.Inspector" prot="public" virt="non-virtual">ShadowEngine::Debug::Inspector</basecompoundref>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="65">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="63">
+        <label>ShadowEngine::InputSystem::BindingORInspector</label>
+        <link refid="ShadowEngine.InputSystem.BindingORInspector" />
+        <childnode refid="64" relation="public-inheritance"></childnode>
+      </node>
+      <node id="64">
+        <label>ShadowEngine::Debug::Inspector</label>
+        <link refid="ShadowEngine.Debug.Inspector" />
+        <childnode refid="65" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="68">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="66">
+        <label>ShadowEngine::InputSystem::BindingORInspector</label>
+        <link refid="ShadowEngine.InputSystem.BindingORInspector" />
+        <childnode refid="67" relation="public-inheritance"></childnode>
+      </node>
+      <node id="67">
+        <label>ShadowEngine::Debug::Inspector</label>
+        <link refid="ShadowEngine.Debug.Inspector" />
+        <childnode refid="68" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowInput/Inspectors/BindingORInspector.h" line="14" column="1" bodyfile="ShadowEngine/src/ShadowInput/Inspectors/BindingORInspector.h" bodystart="11" bodyend="43" />
+    <listofallmembers>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::BindingORInspector</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::BindingORInspector</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::BindingORInspector</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::BindingORInspector</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

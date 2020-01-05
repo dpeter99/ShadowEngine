@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_time" kind="class" language="C++" prot="public">
+    <compoundname>Time</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_time_1a1395f20078ad669ce3477402d92074fa" prot="private" static="yes" mutable="no">
+        <type>Uint64</type>
+        <definition>Uint64 Time::NOW</definition>
+        <argsstring></argsstring>
+        <name>NOW</name>
+        <initializer>= SDL_GetPerformanceCounter()</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowTime.h" line="8" column="1" bodyfile="ShadowEngine/src/ShadowTime.h" bodystart="8" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_time_1a82b99ca989920481d48c7e13a7cb0ca0" prot="public" static="yes" mutable="no">
+        <type>Uint64</type>
+        <definition>Uint64 Time::LAST</definition>
+        <argsstring></argsstring>
+        <name>LAST</name>
+        <initializer>= 0</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowTime.h" line="12" column="1" bodyfile="ShadowEngine/src/ShadowTime.h" bodystart="12" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_time_1ac80d4360b9928730fb071843f2e387e2" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double Time::deltaTime</definition>
+        <argsstring></argsstring>
+        <name>deltaTime</name>
+        <initializer>= 0</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowTime.h" line="14" column="1" bodyfile="ShadowEngine/src/ShadowTime.h" bodystart="14" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_time_1afd57ca7faa749df75f5280ccd08df8e0" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double Time::deltaTime_ms</definition>
+        <argsstring></argsstring>
+        <name>deltaTime_ms</name>
+        <initializer>= 0</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowTime.h" line="15" column="1" bodyfile="ShadowEngine/src/ShadowTime.h" bodystart="15" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_time_1a91e25ccface4140293a492a410071acf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Time::UpdateTime</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateTime</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowTime.h" line="17" column="1" bodyfile="ShadowEngine/src/ShadowTime.cpp" bodystart="13" bodyend="33" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/ShadowTime.h" line="7" column="1" bodyfile="ShadowEngine/src/ShadowTime.h" bodystart="6" bodyend="18" />
+    <listofallmembers>
+      <member refid="class_time_1ac80d4360b9928730fb071843f2e387e2" prot="public" virt="non-virtual">
+        <scope>Time</scope>
+        <name>deltaTime</name>
+      </member>
+      <member refid="class_time_1afd57ca7faa749df75f5280ccd08df8e0" prot="public" virt="non-virtual">
+        <scope>Time</scope>
+        <name>deltaTime_ms</name>
+      </member>
+      <member refid="class_time_1a82b99ca989920481d48c7e13a7cb0ca0" prot="public" virt="non-virtual">
+        <scope>Time</scope>
+        <name>LAST</name>
+      </member>
+      <member refid="class_time_1a1395f20078ad669ce3477402d92074fa" prot="private" virt="non-virtual">
+        <scope>Time</scope>
+        <name>NOW</name>
+      </member>
+      <member refid="class_time_1a91e25ccface4140293a492a410071acf" prot="public" virt="non-virtual">
+        <scope>Time</scope>
+        <name>UpdateTime</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

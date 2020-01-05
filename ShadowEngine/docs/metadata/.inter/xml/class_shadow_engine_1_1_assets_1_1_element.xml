@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_assets_1_1_element" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::Assets::Element</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_assets_1_1_element_1a7649c5b97a38646b4be3cedaca2915d6" prot="public" static="no" mutable="no">
+        <type>
+          <ref refid="class_shadow_engine_1_1_assets_1_1_element" kindref="compound">Element</ref> *</type>
+        <definition>Element* ShadowEngine::Assets::Element::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetLoader.h" line="14" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetLoader.h" bodystart="14" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_assets_1_1_element_1a713e3a39656b9c76723f040afaf3003e" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ShadowEngine::Assets::Element::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetLoader.h" line="16" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetLoader.h" bodystart="16" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_assets_1_1_element_1a220c59c7b2ee2c385cd948fef4a95d93" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ShadowEngine::Assets::Element::isBlock</definition>
+        <argsstring></argsstring>
+        <name>isBlock</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetLoader.h" line="18" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetLoader.h" bodystart="18" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_assets_1_1_element_1a5a44640387b7c3a6c603ed2a245c0fe8" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ShadowEngine::Assets::Element::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetLoader.h" line="20" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetLoader.h" bodystart="20" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_assets_1_1_element_1a0b46a0d2a36498555f8ff6bf61628689" prot="public" static="no" mutable="no">
+        <type>std::list&lt;<ref refid="class_shadow_engine_1_1_assets_1_1_element" kindref="compound">Element</ref> *&gt;</type>
+        <definition>std::list&lt;Element*&gt; ShadowEngine::Assets::Element::properties_old</definition>
+        <argsstring></argsstring>
+        <name>properties_old</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetLoader.h" line="22" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetLoader.h" bodystart="22" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_assets_1_1_element_1ac5a3095867dc06abdd64f222c28e83a2" prot="public" static="no" mutable="no">
+        <type>std::map&lt;std::string, <ref refid="class_shadow_engine_1_1_assets_1_1_element" kindref="compound">Element</ref> *&gt;</type>
+        <definition>std::map&lt;std::string, Element*&gt; ShadowEngine::Assets::Element::properties</definition>
+        <argsstring></argsstring>
+        <name>properties</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetLoader.h" line="23" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetLoader.h" bodystart="23" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_assets_1_1_element_1a8f7aa33731388ab5cf1eebb4aecf8e83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string ShadowEngine::Assets::Element::GetStringProperty</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>GetStringProperty</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetLoader.h" line="25" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetLoader.cpp" bodystart="348" bodyend="361" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_assets_1_1_element_1adf957fd22b15217273f9865c7c139a12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Assets::Element::~Element</definition>
+        <argsstring>()</argsstring>
+        <name>~Element</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetLoader.h" line="27" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetLoader.cpp" bodystart="363" bodyend="370" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <collaborationgraph>
+      <node id="150">
+        <label>ShadowEngine::Assets::Element</label>
+        <link refid="class_shadow_engine_1_1_assets_1_1_element" />
+        <childnode refid="150" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowAsset/AssetLoader.h" line="12" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetLoader.h" bodystart="11" bodyend="28" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_assets_1_1_element_1a8f7aa33731388ab5cf1eebb4aecf8e83" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Assets::Element</scope>
+        <name>GetStringProperty</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_assets_1_1_element_1a220c59c7b2ee2c385cd948fef4a95d93" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Assets::Element</scope>
+        <name>isBlock</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_assets_1_1_element_1a713e3a39656b9c76723f040afaf3003e" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Assets::Element</scope>
+        <name>name</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_assets_1_1_element_1a7649c5b97a38646b4be3cedaca2915d6" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Assets::Element</scope>
+        <name>parent</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_assets_1_1_element_1ac5a3095867dc06abdd64f222c28e83a2" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Assets::Element</scope>
+        <name>properties</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_assets_1_1_element_1a0b46a0d2a36498555f8ff6bf61628689" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Assets::Element</scope>
+        <name>properties_old</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_assets_1_1_element_1a5a44640387b7c3a6c603ed2a245c0fe8" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Assets::Element</scope>
+        <name>value</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_assets_1_1_element_1adf957fd22b15217273f9865c7c139a12" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Assets::Element</scope>
+        <name>~Element</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

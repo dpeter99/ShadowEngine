@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.EventSystem.Events.KeyEvent" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::EventSystem::Events::KeyEvent</compoundname>
+    <basecompoundref refid="ShadowEngine.EventSystem.ShadowEvent" prot="public" virt="non-virtual">ShadowEngine::EventSystem::ShadowEvent</basecompoundref>
+    <derivedcompoundref refid="ShadowEngine.EventSystem.Events.KeyPressedEvent" prot="public" virt="non-virtual">ShadowEngine::EventSystem::Events::KeyPressedEvent</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.EventSystem.Events.KeyReleasedEvent" prot="public" virt="non-virtual">ShadowEngine::EventSystem::Events::KeyReleasedEvent</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.EventSystem.Events.KeyTypedEvent" prot="public" virt="non-virtual">ShadowEngine::EventSystem::Events::KeyTypedEvent</derivedcompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="ShadowEngine.EventSystem.Events.KeyEvent.m_KeyCode" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShadowEngine::EventSystem::Events::KeyEvent::m_KeyCode</definition>
+        <argsstring></argsstring>
+        <name>m_KeyCode</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/Events/KeyEvents.h" line="21" column="1" bodyfile="ShadowEngine/src/ShadowEvents/Events/KeyEvents.h" bodystart="21" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="ShadowEngine.EventSystem.Events.KeyEvent.SHObject_Base(KeyEvent)" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EventSystem::Events::KeyEvent::SHObject_Base</definition>
+        <argsstring>(KeyEvent) public</argsstring>
+        <name>SHObject_Base</name>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.EventSystem.Events.KeyEvent" kindref="compound">KeyEvent</ref>
+          </type>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/Events/KeyEvents.h" line="10" column="1" bodyfile="ShadowEngine/src/ShadowEvents/Events/KeyEvents.h" bodystart="10" bodyend="19" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="295">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="298">
+        <label>ShadowEngine::EventSystem::Events::KeyTypedEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.KeyTypedEvent" />
+        <childnode refid="293" relation="public-inheritance"></childnode>
+      </node>
+      <node id="297">
+        <label>ShadowEngine::EventSystem::Events::KeyReleasedEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.KeyReleasedEvent" />
+        <childnode refid="293" relation="public-inheritance"></childnode>
+      </node>
+      <node id="294">
+        <label>ShadowEngine::EventSystem::ShadowEvent</label>
+        <link refid="ShadowEngine.EventSystem.ShadowEvent" />
+        <childnode refid="295" relation="public-inheritance"></childnode>
+      </node>
+      <node id="296">
+        <label>ShadowEngine::EventSystem::Events::KeyPressedEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.KeyPressedEvent" />
+        <childnode refid="293" relation="public-inheritance"></childnode>
+      </node>
+      <node id="293">
+        <label>ShadowEngine::EventSystem::Events::KeyEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.KeyEvent" />
+        <childnode refid="294" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="301">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="300">
+        <label>ShadowEngine::EventSystem::ShadowEvent</label>
+        <link refid="ShadowEngine.EventSystem.ShadowEvent" />
+        <childnode refid="301" relation="public-inheritance"></childnode>
+      </node>
+      <node id="299">
+        <label>ShadowEngine::EventSystem::Events::KeyEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.KeyEvent" />
+        <childnode refid="300" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowEvents/Events/KeyEvents.h" line="9" column="1" bodyfile="ShadowEngine/src/ShadowEvents/Events/KeyEvents.h" bodystart="8" bodyend="22" />
+    <listofallmembers>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.GetSDLEvnet()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>GetSDLEvnet</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.Handled" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>Handled</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.Events.KeyEvent.m_KeyCode" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>m_KeyCode</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.ShadowEvent(SDL_Event *)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>ShadowEvent</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.Events.KeyEvent.SHObject_Base(KeyEvent)" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>SHObject_Base</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.ToString()" prot="public" virt="virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>ToString</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.~ShadowEvent()" prot="public" virt="virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>~ShadowEvent</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

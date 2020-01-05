@@ -15,7 +15,7 @@
 
 #include "AssetLoader.h"
 #include "ShadowMap/ShadowMapChunk.h"
-#include "ShadowEntity/EntityRegistry.h"
+#include "EntitySystem/EntityRegistry.h"
 
 /*
 ShadowMapChunk* AssetLoader::LoadMap(std::string name) {
@@ -252,8 +252,8 @@ namespace ShadowEngine::Assets {
 
 				std::string name = entityElement->name;
 
-				ShadowEntity::Entity* ent;
-				ent = ShadowEntity::EntityRegistry::_registry->InstaciateEntity(name);
+				EntitySystem::Entity* ent;
+				ent = EntitySystem::EntityRegistry::_registry->InstaciateEntity(name);
 
 
 				map->entities.push_back(ent);

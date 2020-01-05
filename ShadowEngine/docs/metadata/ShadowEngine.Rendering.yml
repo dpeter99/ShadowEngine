@@ -1,0 +1,335 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering
+  id: ShadowEngine.Rendering
+  children:
+  - ShadowEngine.Rendering.BufferElement
+  - ShadowEngine.Rendering.BufferLayout
+  - ShadowEngine.Rendering.CommandList
+  - ShadowEngine.Rendering.CommandQueue
+  - ShadowEngine.Rendering.ConstantBuffer
+  - ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet
+  - ShadowEngine.Rendering.ConstantBuffer_Typed
+  - ShadowEngine.Rendering.ConstantBufferImpl
+  - ShadowEngine.Rendering.GraphicsContext
+  - ShadowEngine.Rendering.IndexBuffer
+  - ShadowEngine.Rendering.IShaderProperty
+  - ShadowEngine.Rendering.ModelData
+  - ShadowEngine.Rendering.OrthographicCamera
+  - ShadowEngine.Rendering.Renderer
+  - ShadowEngine.Rendering.RendererAPI
+  - ShadowEngine.Rendering.RenderNode
+  - ShadowEngine.Rendering.RenderScene
+  - ShadowEngine.Rendering.Shader
+  - ShadowEngine.Rendering.ShaderProperty
+  - ShadowEngine.Rendering.ShaderPropertySheet
+  - ShadowEngine.Rendering.Texture
+  - ShadowEngine.Rendering.Texture2D
+  - ShadowEngine.Rendering.Vertex
+  - ShadowEngine.Rendering.VertexBuffer
+  - ShadowEngine.Rendering.WorldData
+  - ShadowEngine.Rendering.ShaderDataTypeSize(ShaderDataType)
+  href: ShadowEngine.Rendering.yml
+  langs:
+  - cplusplus
+  name: ShadowEngine::Rendering
+  nameWithType: ShadowEngine::Rendering
+  fullName: ShadowEngine::Rendering
+  type: Namespace
+  source:
+    remote: &o0
+      path: ShadowEngine/src/Platform/D3D12/Common.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 24
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/Common.h
+    startLine: 24
+  syntax:
+    content: namespace ShadowEngine::Rendering
+- uid: ShadowEngine.Rendering.ShaderDataTypeSize(ShaderDataType)
+  id: ShadowEngine.Rendering.ShaderDataTypeSize(ShaderDataType)
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.yml
+  langs:
+  - cplusplus
+  name: ShaderDataTypeSize(ShaderDataType type)
+  nameWithType: ShadowEngine::Rendering::ShaderDataTypeSize(ShaderDataType type)
+  fullName: static uint32_t ShadowEngine::Rendering::ShaderDataTypeSize(ShaderDataType type)
+  overload: ShadowEngine.Rendering.ShaderDataTypeSize*
+  type: Method
+  source:
+    remote: &o1
+      path: ShadowEngine/src/ShadowRenderer/Buffer.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 12
+  header:
+    remote: *o1
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 12
+  syntax:
+    content: 'public: static uint32_t ShaderDataTypeSize(ShaderDataType type)'
+    parameters:
+    - id: type
+      type: a0af3baf
+    return:
+      type: efd6fb5d
+references:
+- uid: a0af3baf
+  spec.cplusplus:
+  - name: ShaderDataType
+    fullName: ShaderDataType
+- uid: efd6fb5d
+  spec.cplusplus:
+  - name: uint32_t
+    fullName: uint32_t
+- uid: ShadowEngine.Rendering.ShaderDataTypeSize*
+  name: ShaderDataTypeSize
+  nameWithType: ShadowEngine::Rendering::ShaderDataTypeSize
+  fullName: static uint32_t ShadowEngine::Rendering::ShaderDataTypeSize
+- uid: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.yml
+  name: ShadowEngine::Rendering::D3D12
+  nameWithType: ShadowEngine::Rendering::D3D12
+  fullName: ShadowEngine::Rendering::D3D12
+  type: Namespace
+  syntax:
+    content: namespace ShadowEngine::Rendering::D3D12
+- uid: ShadowEngine.Rendering.BufferElement
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.BufferElement.yml
+  name: BufferElement
+  nameWithType: BufferElement
+  fullName: ShadowEngine::Rendering::BufferElement
+  type: Struct
+  syntax:
+    content: 'public: struct BufferElement'
+- uid: ShadowEngine.Rendering.BufferLayout
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.BufferLayout.yml
+  name: BufferLayout
+  nameWithType: BufferLayout
+  fullName: ShadowEngine::Rendering::BufferLayout
+  type: Class
+  syntax:
+    content: 'public: class BufferLayout'
+- uid: ShadowEngine.Rendering.CommandList
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.CommandList.yml
+  name: CommandList
+  nameWithType: CommandList
+  fullName: ShadowEngine::Rendering::CommandList
+  type: Class
+  summary: "<p>A list of commands to be submitted to a CommandQueue. </p>"
+  syntax:
+    content: 'public: class CommandList'
+- uid: ShadowEngine.Rendering.CommandQueue
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.CommandQueue.yml
+  name: CommandQueue
+  nameWithType: CommandQueue
+  fullName: ShadowEngine::Rendering::CommandQueue
+  type: Class
+  summary: "<p>The execution queue witch can execute a Command List. </p>"
+  syntax:
+    content: 'public: class CommandQueue'
+- uid: ShadowEngine.Rendering.ConstantBuffer
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ConstantBuffer.yml
+  name: ConstantBuffer
+  nameWithType: ConstantBuffer
+  fullName: ShadowEngine::Rendering::ConstantBuffer
+  type: Class
+  syntax:
+    content: 'public: class ConstantBuffer'
+- uid: ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet.yml
+  name: ConstantBuffer_ShaderPropertySheet
+  nameWithType: ConstantBuffer_ShaderPropertySheet
+  fullName: ShadowEngine::Rendering::ConstantBuffer_ShaderPropertySheet
+  type: Class
+  syntax:
+    content: 'public: class ConstantBuffer_ShaderPropertySheet : public nstantBuffer'
+- uid: ShadowEngine.Rendering.ConstantBuffer_Typed
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ConstantBuffer_Typed.yml
+  name: ConstantBuffer_Typed
+  nameWithType: ConstantBuffer_Typed
+  fullName: ShadowEngine::Rendering::ConstantBuffer_Typed
+  type: Class
+  syntax:
+    content: 'public: class ConstantBuffer_Typed : public nstantBuffer'
+    typeParameters:
+    - id: class
+      type: 4fedf2a2
+- uid: ShadowEngine.Rendering.ConstantBufferImpl
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ConstantBufferImpl.yml
+  name: ConstantBufferImpl
+  nameWithType: ConstantBufferImpl
+  fullName: ShadowEngine::Rendering::ConstantBufferImpl
+  type: Class
+  syntax:
+    content: 'public: class ConstantBufferImpl'
+- uid: ShadowEngine.Rendering.GraphicsContext
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.GraphicsContext.yml
+  name: GraphicsContext
+  nameWithType: GraphicsContext
+  fullName: ShadowEngine::Rendering::GraphicsContext
+  type: Class
+  syntax:
+    content: 'public: class GraphicsContext'
+- uid: ShadowEngine.Rendering.IndexBuffer
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.IndexBuffer.yml
+  name: IndexBuffer
+  nameWithType: IndexBuffer
+  fullName: ShadowEngine::Rendering::IndexBuffer
+  type: Class
+  syntax:
+    content: 'public: class IndexBuffer'
+- uid: ShadowEngine.Rendering.IShaderProperty
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.IShaderProperty.yml
+  name: IShaderProperty
+  nameWithType: IShaderProperty
+  fullName: ShadowEngine::Rendering::IShaderProperty
+  type: Class
+  syntax:
+    content: 'public: class IShaderProperty : public HObject'
+- uid: ShadowEngine.Rendering.ModelData
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ModelData.yml
+  name: ModelData
+  nameWithType: ModelData
+  fullName: ShadowEngine::Rendering::ModelData
+  type: Struct
+  syntax:
+    content: 'public: struct ModelData'
+- uid: ShadowEngine.Rendering.OrthographicCamera
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.OrthographicCamera.yml
+  name: OrthographicCamera
+  nameWithType: OrthographicCamera
+  fullName: ShadowEngine::Rendering::OrthographicCamera
+  type: Class
+  syntax:
+    content: 'public: class OrthographicCamera'
+- uid: ShadowEngine.Rendering.Renderer
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.Renderer.yml
+  name: Renderer
+  nameWithType: Renderer
+  fullName: ShadowEngine::Rendering::Renderer
+  type: Class
+  syntax:
+    content: 'public: class Renderer : public hadowModule'
+- uid: ShadowEngine.Rendering.RendererAPI
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.RendererAPI.yml
+  name: RendererAPI
+  nameWithType: RendererAPI
+  fullName: ShadowEngine::Rendering::RendererAPI
+  type: Class
+  syntax:
+    content: 'public: class RendererAPI'
+- uid: ShadowEngine.Rendering.RenderNode
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.RenderNode.yml
+  name: RenderNode
+  nameWithType: RenderNode
+  fullName: ShadowEngine::Rendering::RenderNode
+  type: Class
+  syntax:
+    content: 'public: class RenderNode'
+- uid: ShadowEngine.Rendering.RenderScene
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.RenderScene.yml
+  name: RenderScene
+  nameWithType: RenderScene
+  fullName: ShadowEngine::Rendering::RenderScene
+  type: Class
+  syntax:
+    content: 'public: class RenderScene'
+- uid: ShadowEngine.Rendering.Shader
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.Shader.yml
+  name: Shader
+  nameWithType: Shader
+  fullName: ShadowEngine::Rendering::Shader
+  type: Class
+  syntax:
+    content: 'public: class Shader'
+- uid: ShadowEngine.Rendering.ShaderProperty
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ShaderProperty.yml
+  name: ShaderProperty
+  nameWithType: ShaderProperty
+  fullName: ShadowEngine::Rendering::ShaderProperty
+  type: Class
+  syntax:
+    content: 'public: class ShaderProperty : public haderProperty'
+    typeParameters:
+    - id: class T
+      type: 07c9e456
+- uid: ShadowEngine.Rendering.ShaderPropertySheet
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ShaderPropertySheet.yml
+  name: ShaderPropertySheet
+  nameWithType: ShaderPropertySheet
+  fullName: ShadowEngine::Rendering::ShaderPropertySheet
+  type: Class
+  summary: "<p>Variables in a shader. </p><p>ShaderPropertySheet Contains the variables defined by a shader. </p>"
+  syntax:
+    content: 'public: class ShaderPropertySheet'
+- uid: ShadowEngine.Rendering.Texture
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.Texture.yml
+  name: Texture
+  nameWithType: Texture
+  fullName: ShadowEngine::Rendering::Texture
+  type: Class
+  syntax:
+    content: 'public: class Texture'
+- uid: ShadowEngine.Rendering.Texture2D
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.Texture2D.yml
+  name: Texture2D
+  nameWithType: Texture2D
+  fullName: ShadowEngine::Rendering::Texture2D
+  type: Class
+  syntax:
+    content: 'public: class Texture2D : public xture'
+- uid: ShadowEngine.Rendering.Vertex
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.Vertex.yml
+  name: Vertex
+  nameWithType: Vertex
+  fullName: ShadowEngine::Rendering::Vertex
+  type: Struct
+  syntax:
+    content: 'public: struct Vertex'
+- uid: ShadowEngine.Rendering.VertexBuffer
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.VertexBuffer.yml
+  name: VertexBuffer
+  nameWithType: VertexBuffer
+  fullName: ShadowEngine::Rendering::VertexBuffer
+  type: Class
+  syntax:
+    content: 'public: class VertexBuffer'
+- uid: ShadowEngine.Rendering.WorldData
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.WorldData.yml
+  name: WorldData
+  nameWithType: WorldData
+  fullName: ShadowEngine::Rendering::WorldData
+  type: Struct
+  syntax:
+    content: 'public: struct WorldData'

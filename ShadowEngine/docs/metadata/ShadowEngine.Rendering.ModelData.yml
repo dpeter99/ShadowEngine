@@ -1,0 +1,56 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.ModelData
+  id: ShadowEngine.Rendering.ModelData
+  parent: ShadowEngine.Rendering
+  children:
+  - ShadowEngine.Rendering.ModelData.modelToWorld
+  href: ShadowEngine.Rendering.ModelData.yml
+  langs:
+  - cplusplus
+  name: ModelData
+  nameWithType: ModelData
+  fullName: ShadowEngine::Rendering::ModelData
+  type: Struct
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 21
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 22
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: struct ModelData'
+- uid: ShadowEngine.Rendering.ModelData.modelToWorld
+  id: ShadowEngine.Rendering.ModelData.modelToWorld
+  parent: ShadowEngine.Rendering.ModelData
+  href: ShadowEngine.Rendering.ModelData.yml
+  langs:
+  - cplusplus
+  name: modelToWorld
+  nameWithType: ModelData::modelToWorld
+  fullName: glm::mat4x4 ShadowEngine::Rendering::ModelData::modelToWorld
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 23
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/DataStructs.h
+    startLine: 23
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: glm::mat4x4 modelToWorld'
+    return:
+      type: 4da5d5de
+references:
+- uid: 4da5d5de
+  spec.cplusplus:
+  - name: glm::mat4x4
+    fullName: glm::mat4x4

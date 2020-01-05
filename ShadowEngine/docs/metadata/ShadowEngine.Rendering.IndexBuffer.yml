@@ -1,0 +1,165 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.IndexBuffer
+  id: ShadowEngine.Rendering.IndexBuffer
+  parent: ShadowEngine.Rendering
+  children:
+  - ShadowEngine.Rendering.IndexBuffer.~IndexBuffer()
+  - ShadowEngine.Rendering.IndexBuffer.Create(uint32_t *,uint32_t)
+  - ShadowEngine.Rendering.IndexBuffer.GetCount()
+  href: ShadowEngine.Rendering.IndexBuffer.yml
+  langs:
+  - cplusplus
+  name: IndexBuffer
+  nameWithType: IndexBuffer
+  fullName: ShadowEngine::Rendering::IndexBuffer
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowRenderer/Buffer.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 120
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 121
+  namespace: ShadowEngine.Rendering
+  syntax: &o1
+    content: 'public: class IndexBuffer'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.Rendering.IndexBuffer.~IndexBuffer()
+  id: ShadowEngine.Rendering.IndexBuffer.~IndexBuffer()
+  parent: ShadowEngine.Rendering.IndexBuffer
+  href: ShadowEngine.Rendering.IndexBuffer.yml
+  langs:
+  - cplusplus
+  name: ~IndexBuffer()
+  nameWithType: IndexBuffer::~IndexBuffer()
+  fullName: virtual ShadowEngine::Rendering::IndexBuffer::~IndexBuffer()
+  overload: ShadowEngine.Rendering.IndexBuffer.~IndexBuffer*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 123
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 123
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual ~IndexBuffer()=default'
+- uid: ShadowEngine.Rendering.IndexBuffer.Create(uint32_t *,uint32_t)
+  id: ShadowEngine.Rendering.IndexBuffer.Create(uint32_t *,uint32_t)
+  parent: ShadowEngine.Rendering.IndexBuffer
+  href: ShadowEngine.Rendering.IndexBuffer.yml
+  langs:
+  - cplusplus
+  name: Create(uint32_t *indices, uint32_t size)
+  nameWithType: IndexBuffer::Create(uint32_t *indices, uint32_t size)
+  fullName: IndexBuffer * ShadowEngine::Rendering::IndexBuffer::Create(uint32_t *indices, uint32_t size)
+  overload: ShadowEngine.Rendering.IndexBuffer.Create*
+  type: Method
+  source:
+    remote:
+      path: ShadowEngine/src/ShadowRenderer/Buffer.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/Buffer.cpp
+    startLine: 23
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 130
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: static IndexBuffer * Create(uint32_t *indices, uint32_t size)'
+    parameters:
+    - id: indices
+      type: ce022359
+    - id: size
+      type: efd6fb5d
+    return:
+      type: ShadowEngine.Rendering.IndexBuffer68bc11b4
+- uid: ShadowEngine.Rendering.IndexBuffer.GetCount()
+  id: ShadowEngine.Rendering.IndexBuffer.GetCount()
+  parent: ShadowEngine.Rendering.IndexBuffer
+  href: ShadowEngine.Rendering.IndexBuffer.yml
+  langs:
+  - cplusplus
+  name: GetCount()
+  nameWithType: IndexBuffer::GetCount()
+  fullName: virtual uint32_t ShadowEngine::Rendering::IndexBuffer::GetCount()
+  overload: ShadowEngine.Rendering.IndexBuffer.GetCount*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 128
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 128
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual uint32_t GetCount() const =0'
+    return:
+      type: efd6fb5d
+references:
+- uid: ShadowEngine.Rendering.IndexBuffer.~IndexBuffer*
+  name: ~IndexBuffer
+  nameWithType: IndexBuffer::~IndexBuffer
+  fullName: virtual ShadowEngine::Rendering::IndexBuffer::~IndexBuffer
+- uid: efd6fb5d
+  spec.cplusplus:
+  - name: uint32_t
+    fullName: uint32_t
+- uid: ShadowEngine.Rendering.IndexBuffer.GetCount*
+  name: GetCount
+  nameWithType: IndexBuffer::GetCount
+  fullName: virtual uint32_t ShadowEngine::Rendering::IndexBuffer::GetCount
+- uid: ce022359
+  spec.cplusplus:
+  - name: uint32_t *
+    fullName: uint32_t *
+- uid: ShadowEngine.Rendering.IndexBuffer68bc11b4
+  spec.cplusplus:
+  - uid: ShadowEngine.Rendering.IndexBuffer
+  - name: " *"
+    fullName: " *"
+- uid: ShadowEngine.Rendering.IndexBuffer.Create*
+  name: Create
+  nameWithType: IndexBuffer::Create
+  fullName: IndexBuffer * ShadowEngine::Rendering::IndexBuffer::Create
+- uid: ShadowEngine.Rendering.D3D12.D3D12IndexBuffer
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12IndexBuffer.yml
+  name: D3D12IndexBuffer
+  nameWithType: D3D12IndexBuffer
+  fullName: ShadowEngine::Rendering::D3D12::D3D12IndexBuffer
+  type: Class
+  summary: "<p>Index Buffer holding an index array in a Dx12 way This hold the index buffer and the buffer view for it as well. </p>"
+  syntax:
+    content: 'public: class D3D12IndexBuffer : public dexBuffer'
+- uid: ShadowEngine.Rendering.D3D12.D3D12IndexBuffer.GetCount()
+  parent: ShadowEngine.Rendering.D3D12.D3D12IndexBuffer
+  href: ShadowEngine.Rendering.D3D12.D3D12IndexBuffer.yml
+  name: GetCount()
+  nameWithType: D3D12IndexBuffer::GetCount()
+  fullName: virtual uint32_t ShadowEngine::Rendering::D3D12::D3D12IndexBuffer::GetCount()
+  type: Method
+  syntax:
+    content: 'public: virtual uint32_t GetCount() const'
+    return:
+      type: efd6fb5d
+- uid: ShadowEngine.Rendering.IndexBuffer
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.IndexBuffer.yml
+  name: IndexBuffer
+  nameWithType: IndexBuffer
+  fullName: ShadowEngine::Rendering::IndexBuffer
+  type: Class
+  syntax: *o1

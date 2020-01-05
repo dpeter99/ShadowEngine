@@ -1,0 +1,284 @@
+### YamlMime:ManagedReference
+items:
+- uid: EntityContainer.MemoryChunk
+  id: EntityContainer.MemoryChunk
+  parent: EntityContainer
+  children:
+  - EntityContainer.MemoryChunk.allocate()
+  - EntityContainer.MemoryChunk.chunkEnd
+  - EntityContainer.MemoryChunk.chunkStart
+  - EntityContainer.MemoryChunk.count
+  - EntityContainer.MemoryChunk.free(void *)
+  - EntityContainer.MemoryChunk.FreeFlag
+  - EntityContainer.MemoryChunk.MemoryChunk()
+  - EntityContainer.MemoryChunk.metadata
+  - EntityContainer.MemoryChunk.nextFree
+  href: EntityContainer.MemoryChunk.yml
+  langs:
+  - cplusplus
+  name: MemoryChunk
+  nameWithType: MemoryChunk
+  fullName: EntityContainer::MemoryChunk
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/EntitySystem/EntityContainer.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 27
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 28
+  namespace: EntityContainer
+  syntax:
+    content: 'public: class MemoryChunk'
+  inheritance:
+  - System::Object
+- uid: EntityContainer.MemoryChunk.allocate()
+  id: EntityContainer.MemoryChunk.allocate()
+  parent: EntityContainer.MemoryChunk
+  href: EntityContainer.MemoryChunk.yml
+  langs:
+  - cplusplus
+  name: allocate()
+  nameWithType: MemoryChunk::allocate()
+  fullName: Type* EntityContainer<Type>::MemoryChunk::allocate()
+  overload: EntityContainer.MemoryChunk.allocate*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 56
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 56
+  namespace: EntityContainer
+  syntax:
+    content: 'public: Type * allocate()'
+    return:
+      type: e74c40fa
+- uid: EntityContainer.MemoryChunk.chunkEnd
+  id: EntityContainer.MemoryChunk.chunkEnd
+  parent: EntityContainer.MemoryChunk
+  href: EntityContainer.MemoryChunk.yml
+  langs:
+  - cplusplus
+  name: chunkEnd
+  nameWithType: MemoryChunk::chunkEnd
+  fullName: Element* EntityContainer<Type>::MemoryChunk::chunkEnd
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 31
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 31
+  namespace: EntityContainer
+  syntax:
+    content: 'public: Element * chunkEnd'
+    return:
+      type: c4a88fac
+- uid: EntityContainer.MemoryChunk.chunkStart
+  id: EntityContainer.MemoryChunk.chunkStart
+  parent: EntityContainer.MemoryChunk
+  href: EntityContainer.MemoryChunk.yml
+  langs:
+  - cplusplus
+  name: chunkStart
+  nameWithType: MemoryChunk::chunkStart
+  fullName: Element* EntityContainer<Type>::MemoryChunk::chunkStart
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 30
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 30
+  namespace: EntityContainer
+  syntax:
+    content: 'public: Element * chunkStart'
+    return:
+      type: c4a88fac
+- uid: EntityContainer.MemoryChunk.count
+  id: EntityContainer.MemoryChunk.count
+  parent: EntityContainer.MemoryChunk
+  href: EntityContainer.MemoryChunk.yml
+  langs:
+  - cplusplus
+  name: count
+  nameWithType: MemoryChunk::count
+  fullName: int EntityContainer<Type>::MemoryChunk::count
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 33
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 33
+  namespace: EntityContainer
+  syntax:
+    content: 'public: int count'
+    return:
+      type: f75371fa
+- uid: EntityContainer.MemoryChunk.free(void *)
+  id: EntityContainer.MemoryChunk.free(void *)
+  parent: EntityContainer.MemoryChunk
+  href: EntityContainer.MemoryChunk.yml
+  langs:
+  - cplusplus
+  name: free(void *ptr)
+  nameWithType: MemoryChunk::free(void *ptr)
+  fullName: void EntityContainer<Type>::MemoryChunk::free(void *ptr)
+  overload: EntityContainer.MemoryChunk.free*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 70
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 70
+  namespace: EntityContainer
+  syntax:
+    content: 'public: void free(void *ptr)'
+    parameters:
+    - id: ptr
+      type: 7ca192cd
+- uid: EntityContainer.MemoryChunk.FreeFlag
+  id: EntityContainer.MemoryChunk.FreeFlag
+  parent: EntityContainer.MemoryChunk
+  href: EntityContainer.MemoryChunk.yml
+  langs:
+  - cplusplus
+  name: FreeFlag
+  nameWithType: MemoryChunk::FreeFlag
+  fullName: const bool EntityContainer<Type>::MemoryChunk::FreeFlag
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 34
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 34
+  namespace: EntityContainer
+  syntax:
+    content: 'public: static const bool FreeFlag= true'
+    return:
+      type: 855db65e
+- uid: EntityContainer.MemoryChunk.MemoryChunk()
+  id: EntityContainer.MemoryChunk.MemoryChunk()
+  parent: EntityContainer.MemoryChunk
+  href: EntityContainer.MemoryChunk.yml
+  langs:
+  - cplusplus
+  name: MemoryChunk()
+  nameWithType: MemoryChunk::MemoryChunk()
+  fullName: EntityContainer<Type>::MemoryChunk::MemoryChunk()
+  overload: EntityContainer.MemoryChunk.MemoryChunk*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 40
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 40
+  namespace: EntityContainer
+  syntax:
+    content: 'public: MemoryChunk()'
+- uid: EntityContainer.MemoryChunk.metadata
+  id: EntityContainer.MemoryChunk.metadata
+  parent: EntityContainer.MemoryChunk
+  href: EntityContainer.MemoryChunk.yml
+  langs:
+  - cplusplus
+  name: metadata
+  nameWithType: MemoryChunk::metadata
+  fullName: bool EntityContainer<Type>::MemoryChunk::metadata[MAX_OBJECTS_IN_CHUNK]
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 35
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 35
+  namespace: EntityContainer
+  syntax:
+    content: 'public: bool metadata[MAX_OBJECTS_IN_CHUNK]'
+    return:
+      type: 13ff06c5
+- uid: EntityContainer.MemoryChunk.nextFree
+  id: EntityContainer.MemoryChunk.nextFree
+  parent: EntityContainer.MemoryChunk
+  href: EntityContainer.MemoryChunk.yml
+  langs:
+  - cplusplus
+  name: nextFree
+  nameWithType: MemoryChunk::nextFree
+  fullName: Element* EntityContainer<Type>::MemoryChunk::nextFree
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 38
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/EntityContainer.h
+    startLine: 38
+  namespace: EntityContainer
+  syntax:
+    content: 'public: Element * nextFree'
+    return:
+      type: c4a88fac
+references:
+- uid: c4a88fac
+  spec.cplusplus:
+  - name: Element *
+    fullName: Element *
+- uid: f75371fa
+  spec.cplusplus:
+  - name: int
+    fullName: int
+- uid: 13ff06c5
+  spec.cplusplus:
+  - name: bool
+    fullName: bool
+- uid: 855db65e
+  spec.cplusplus:
+  - name: const bool
+    fullName: const bool
+- uid: EntityContainer.MemoryChunk.MemoryChunk*
+  name: MemoryChunk
+  nameWithType: MemoryChunk::MemoryChunk
+  fullName: EntityContainer<Type>::MemoryChunk::MemoryChunk
+- uid: e74c40fa
+  spec.cplusplus:
+  - name: Type *
+    fullName: Type *
+- uid: EntityContainer.MemoryChunk.allocate*
+  name: allocate
+  nameWithType: MemoryChunk::allocate
+  fullName: Type* EntityContainer<Type>::MemoryChunk::allocate
+- uid: 7ca192cd
+  spec.cplusplus:
+  - name: void *
+    fullName: void *
+- uid: EntityContainer.MemoryChunk.free*
+  name: free
+  nameWithType: MemoryChunk::free
+  fullName: void EntityContainer<Type>::MemoryChunk::free

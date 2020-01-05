@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_rendering_1_1_constant_buffer" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ShadowEngine::Rendering::ConstantBuffer</compoundname>
+    <derivedcompoundref refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer___typed" prot="public" virt="non-virtual">ShadowEngine::Rendering::ConstantBuffer_Typed&lt;ShadowEngine::Rendering::ModelData&gt;</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer___shader_property_sheet" prot="public" virt="non-virtual">ShadowEngine::Rendering::ConstantBuffer_ShaderPropertySheet</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer___typed" prot="public" virt="non-virtual">ShadowEngine::Rendering::ConstantBuffer_Typed&lt;T&gt;</derivedcompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_constant_buffer_1adc34b0557186201781f825de4d3b3015" prot="protected" static="no" mutable="no">
+        <type>Ref&lt;<ref refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_impl" kindref="compound">ConstantBufferImpl</ref>&gt;</type>
+        <definition>Ref&lt;ConstantBufferImpl&gt; ShadowEngine::Rendering::ConstantBuffer::impl</definition>
+        <argsstring></argsstring>
+        <name>impl</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ConstantBuffer.h" line="18" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ConstantBuffer.h" bodystart="18" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_constant_buffer_1ac32dd98905e55946e8bef8fee05b11f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ShadowEngine::Rendering::ConstantBuffer::~ConstantBuffer</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ConstantBuffer</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ConstantBuffer.h" line="20" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_constant_buffer_1a7e5c5b6f92cf7b6bb1526432feef8128" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::ConstantBuffer::ConstantBuffer</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>ConstantBuffer</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ConstantBuffer.h" line="22" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ConstantBuffer.h" bodystart="22" bodyend="25" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_constant_buffer_1a4a369d354f656b4fa279e18648b57980" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>Ref&lt;<ref refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_impl" kindref="compound">ConstantBufferImpl</ref>&gt;</type>
+        <definition>virtual Ref&lt;ConstantBufferImpl&gt; ShadowEngine::Rendering::ConstantBuffer::GetImpl</definition>
+        <argsstring>() const</argsstring>
+        <name>GetImpl</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ConstantBuffer.h" line="27" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ConstantBuffer.h" bodystart="27" bodyend="27" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_constant_buffer_1ae3bd157dfecbc68d2b380b5c057d68fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T* ShadowEngine::Rendering::ConstantBuffer::As</definition>
+        <argsstring>()</argsstring>
+        <name>As</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ConstantBuffer.h" line="30" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ConstantBuffer.h" bodystart="30" bodyend="33" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_constant_buffer_1a08a78574e615d564ae1cab69f91b1a47" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::Rendering::ConstantBuffer::Set</definition>
+        <argsstring>(void *d)=0</argsstring>
+        <name>Set</name>
+        <reimplementedby refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer___shader_property_sheet_1ab204baadf9980554c8849173a9ae999f">Set</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer___typed_1abbb205bc2521c05abd5526ad714607fc">Set</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer___typed_1abbb205bc2521c05abd5526ad714607fc">Set</reimplementedby>
+        <param>
+          <type>void *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ConstantBuffer.h" line="37" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_constant_buffer_1a3aaa27968efc9b8d780df929c5440b7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::Rendering::ConstantBuffer::Upload</definition>
+        <argsstring>()=0</argsstring>
+        <name>Upload</name>
+        <reimplementedby refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer___shader_property_sheet_1a70500d4f5f6bf1f82b2902158be54cdb">Upload</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer___typed_1a148b037a80b4dd1c2d13a6dda95bfc75">Upload</reimplementedby>
+        <reimplementedby refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer___typed_1a148b037a80b4dd1c2d13a6dda95bfc75">Upload</reimplementedby>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ConstantBuffer.h" line="38" column="1" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="88">
+        <label>ShadowEngine::Rendering::ConstantBuffer_Typed&lt;T&gt;</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer___typed" />
+        <childnode refid="85" relation="public-inheritance"></childnode>
+      </node>
+      <node id="87">
+        <label>ShadowEngine::Rendering::ConstantBuffer_ShaderPropertySheet</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer___shader_property_sheet" />
+        <childnode refid="85" relation="public-inheritance"></childnode>
+      </node>
+      <node id="86">
+        <label>ShadowEngine::Rendering::ConstantBuffer_Typed&lt;ShadowEngine::Rendering::ModelData&gt;</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer___typed" />
+        <childnode refid="85" relation="public-inheritance"></childnode>
+      </node>
+      <node id="85">
+        <label>ShadowEngine::Rendering::ConstantBuffer</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer" />
+      </node>
+    </inheritancegraph>
+    <location file="ShadowEngine/src/ShadowRenderer/ConstantBuffer.h" line="16" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ConstantBuffer.h" bodystart="15" bodyend="40" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_1ae3bd157dfecbc68d2b380b5c057d68fd" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ConstantBuffer</scope>
+        <name>As</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_1a7e5c5b6f92cf7b6bb1526432feef8128" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ConstantBuffer</scope>
+        <name>ConstantBuffer</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_1a4a369d354f656b4fa279e18648b57980" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::ConstantBuffer</scope>
+        <name>GetImpl</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_1adc34b0557186201781f825de4d3b3015" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ConstantBuffer</scope>
+        <name>impl</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_1a08a78574e615d564ae1cab69f91b1a47" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::ConstantBuffer</scope>
+        <name>Set</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_1a3aaa27968efc9b8d780df929c5440b7a" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::ConstantBuffer</scope>
+        <name>Upload</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_1ac32dd98905e55946e8bef8fee05b11f4" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::ConstantBuffer</scope>
+        <name>~ConstantBuffer</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

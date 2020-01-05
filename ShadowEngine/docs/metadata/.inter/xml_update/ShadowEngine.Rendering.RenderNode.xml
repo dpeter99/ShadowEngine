@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.Rendering.RenderNode" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::Rendering::RenderNode</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="ShadowEngine.Rendering.RenderNode.modelDataCB" prot="private" static="no" mutable="no">
+        <type>
+          <ref refid="ShadowEngine.Rendering.ConstantBuffer_Typed" kindref="compound">ConstantBuffer_Typed</ref>&lt;<ref refid="ShadowEngine.Rendering.ModelData" kindref="compound">ModelData</ref>&gt;</type>
+        <definition>ConstantBuffer_Typed&lt;ModelData&gt; ShadowEngine::Rendering::RenderNode::modelDataCB</definition>
+        <argsstring></argsstring>
+        <name>modelDataCB</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/RenderScene.h" line="11" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/RenderScene.h" bodystart="11" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.Rendering.RenderNode.mesh" prot="private" static="no" mutable="no">
+        <type>Ref&lt;<ref refid="ShadowEngine.Assets.Mesh" kindref="compound">Assets::Mesh</ref>&gt;</type>
+        <definition>Ref&lt;Assets::Mesh&gt; ShadowEngine::Rendering::RenderNode::mesh</definition>
+        <argsstring></argsstring>
+        <name>mesh</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/RenderScene.h" line="12" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/RenderScene.h" bodystart="12" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.Rendering.RenderNode.mat" prot="private" static="no" mutable="no">
+        <type>Ref&lt;Assets::Material&gt;</type>
+        <definition>Ref&lt;Assets::Material&gt; ShadowEngine::Rendering::RenderNode::mat</definition>
+        <argsstring></argsstring>
+        <name>mat</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/RenderScene.h" line="13" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/RenderScene.h" bodystart="13" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.Rendering.RenderNode.RenderNode(Ref&lt;Assets::Mesh&gt;,Ref&lt;Assets::Material&gt;)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::RenderNode::RenderNode</definition>
+        <argsstring>(Ref&lt;Assets::Mesh&gt; mesh, Ref&lt;Assets::Material&gt; material)</argsstring>
+        <name>RenderNode</name>
+        <param>
+          <type>Ref&lt;<ref refid="ShadowEngine.Assets.Mesh" kindref="compound">Assets::Mesh</ref>&gt;</type>
+          <declname>mesh</declname>
+        </param>
+        <param>
+          <type>Ref&lt;Assets::Material&gt;</type>
+          <declname>material</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/RenderScene.h" line="16" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/RenderScene.cpp" bodystart="5" bodyend="9" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.Rendering.RenderNode.GetMesh()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt;<ref refid="ShadowEngine.Assets.Mesh" kindref="compound">Assets::Mesh</ref>&gt;</type>
+        <definition>Ref&lt;Assets::Mesh&gt; ShadowEngine::Rendering::RenderNode::GetMesh</definition>
+        <argsstring>()</argsstring>
+        <name>GetMesh</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/RenderScene.h" line="18" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/RenderScene.cpp" bodystart="11" bodyend="14" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.Rendering.RenderNode.GetMaterial()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt;Assets::Material&gt;</type>
+        <definition>Ref&lt;Assets::Material&gt; ShadowEngine::Rendering::RenderNode::GetMaterial</definition>
+        <argsstring>()</argsstring>
+        <name>GetMaterial</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/RenderScene.h" line="20" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/RenderScene.cpp" bodystart="16" bodyend="19" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.Rendering.RenderNode.GetCB()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="ShadowEngine.Rendering.ConstantBuffer_Typed" kindref="compound">ConstantBuffer_Typed</ref>&lt;<ref refid="ShadowEngine.Rendering.ModelData" kindref="compound">ModelData</ref>&gt; &amp;</type>
+        <definition>ConstantBuffer_Typed&lt;ModelData&gt; &amp; ShadowEngine::Rendering::RenderNode::GetCB</definition>
+        <argsstring>()</argsstring>
+        <name>GetCB</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/RenderScene.h" line="22" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/RenderScene.cpp" bodystart="21" bodyend="24" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.Rendering.RenderNode.UpdateTransform(glm::mat4x4)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::RenderNode::UpdateTransform</definition>
+        <argsstring>(glm::mat4x4 trans)</argsstring>
+        <name>UpdateTransform</name>
+        <param>
+          <type>glm::mat4x4</type>
+          <declname>trans</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/RenderScene.h" line="24" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/RenderScene.cpp" bodystart="26" bodyend="30" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/ShadowRenderer/RenderScene.h" line="10" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/RenderScene.h" bodystart="9" bodyend="25" />
+    <listofallmembers>
+      <member refid="ShadowEngine.Rendering.RenderNode.GetCB()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::RenderNode</scope>
+        <name>GetCB</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.RenderNode.GetMaterial()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::RenderNode</scope>
+        <name>GetMaterial</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.RenderNode.GetMesh()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::RenderNode</scope>
+        <name>GetMesh</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.RenderNode.mat" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::RenderNode</scope>
+        <name>mat</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.RenderNode.mesh" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::RenderNode</scope>
+        <name>mesh</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.RenderNode.modelDataCB" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::RenderNode</scope>
+        <name>modelDataCB</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.RenderNode.RenderNode(Ref&lt;Assets::Mesh&gt;,Ref&lt;Assets::Material&gt;)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::RenderNode</scope>
+        <name>RenderNode</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.RenderNode.UpdateTransform(glm::mat4x4)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::RenderNode</scope>
+        <name>UpdateTransform</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

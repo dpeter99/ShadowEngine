@@ -1,0 +1,566 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  id: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  parent: ShadowEngine.ShadowEngine.ShadowEntity
+  children:
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.AssignEntity(EntitySystem::Entity *)
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.entity
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetPosition()
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetRotation()
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetScale()
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetTransformMatrix()
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetWorldTransformMatrix()
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetPosition(glm::vec3)
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetRotation(glm::quat)
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetScale(glm::vec3)
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform()
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform(glm::vec3)
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform(glm::vec3,glm::vec3)
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform(glm::vec3,glm::vec3,glm::quat)
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.transformChanged
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateLocalMatrix()
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateMatrix()
+  - ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateWorldMatrix()
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: Transform
+  nameWithType: Transform
+  fullName: ShadowEngine::ShadowEngine::ShadowEntity::Transform
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowMath/Transform.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 15
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 16
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: class Transform'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.AssignEntity(EntitySystem::Entity *)
+  id: Entity *)
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: AssignEntity(EntitySystem::Entity *e)
+  nameWithType: Transform::AssignEntity(EntitySystem::Entity *e)
+  fullName: void ShadowEngine::ShadowEngine::ShadowEntity::Transform::AssignEntity(EntitySystem::Entity *e)
+  overload: ShadowEngine.ShadowEngine.ShadowEntity.Transform.AssignEntity*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 35
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 35
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: void AssignEntity(EntitySystem::Entity *e)'
+    parameters:
+    - id: e
+      type: bd34ad7a
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.entity
+  id: ShadowEngine.ShadowEngine.ShadowEntity.Transform.entity
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: entity
+  nameWithType: Transform::entity
+  fullName: EntitySystem::rtm_ptr<EntitySystem::Entity> ShadowEngine::ShadowEngine::ShadowEntity::Transform::entity
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 39
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 39
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: EntitySystem::rtm_ptr<EntitySystem::Entity> entity'
+    return:
+      type: ee2de201
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetPosition()
+  id: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetPosition()
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: GetPosition()
+  nameWithType: Transform::GetPosition()
+  fullName: glm::vec3 ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetPosition()
+  overload: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetPosition*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 23
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 23
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: glm::vec3 GetPosition()'
+    return:
+      type: 369f4715
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetRotation()
+  id: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetRotation()
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: GetRotation()
+  nameWithType: Transform::GetRotation()
+  fullName: glm::quat ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetRotation()
+  overload: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetRotation*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 29
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 29
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: glm::quat GetRotation()'
+    return:
+      type: afb75ed4
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetScale()
+  id: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetScale()
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: GetScale()
+  nameWithType: Transform::GetScale()
+  fullName: glm::vec3 ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetScale()
+  overload: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetScale*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 26
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 26
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: glm::vec3 GetScale()'
+    return:
+      type: 369f4715
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetTransformMatrix()
+  id: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetTransformMatrix()
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: GetTransformMatrix()
+  nameWithType: Transform::GetTransformMatrix()
+  fullName: glm::mat4 ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetTransformMatrix()
+  overload: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetTransformMatrix*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 32
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 32
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: glm::mat4 GetTransformMatrix()'
+    return:
+      type: 95d96a91
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetWorldTransformMatrix()
+  id: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetWorldTransformMatrix()
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: GetWorldTransformMatrix()
+  nameWithType: Transform::GetWorldTransformMatrix()
+  fullName: glm::mat4 ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetWorldTransformMatrix()
+  overload: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetWorldTransformMatrix*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 33
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 33
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: glm::mat4 GetWorldTransformMatrix()'
+    return:
+      type: 95d96a91
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetPosition(glm::vec3)
+  id: vec3)
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: SetPosition(glm::vec3 val)
+  nameWithType: Transform::SetPosition(glm::vec3 val)
+  fullName: void ShadowEngine::ShadowEntity::Transform::SetPosition(glm::vec3 val)
+  overload: ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetPosition*
+  type: Method
+  source:
+    remote: &o1
+      path: ShadowEngine/src/ShadowMath/Transform.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowMath/Transform.cpp
+    startLine: 40
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 24
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: void SetPosition(glm::vec3 val)'
+    parameters:
+    - id: val
+      type: 369f4715
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetRotation(glm::quat)
+  id: quat)
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: SetRotation(glm::quat val)
+  nameWithType: Transform::SetRotation(glm::quat val)
+  fullName: void ShadowEngine::ShadowEngine::ShadowEntity::Transform::SetRotation(glm::quat val)
+  overload: ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetRotation*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 30
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 30
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: void SetRotation(glm::quat val)'
+    parameters:
+    - id: val
+      type: afb75ed4
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetScale(glm::vec3)
+  id: vec3)
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: SetScale(glm::vec3 val)
+  nameWithType: Transform::SetScale(glm::vec3 val)
+  fullName: void ShadowEngine::ShadowEngine::ShadowEntity::Transform::SetScale(glm::vec3 val)
+  overload: ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetScale*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 27
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 27
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: void SetScale(glm::vec3 val)'
+    parameters:
+    - id: val
+      type: 369f4715
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform()
+  id: ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform()
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: Transform()
+  nameWithType: Transform::Transform()
+  fullName: ShadowEngine::ShadowEntity::Transform::Transform()
+  overload: ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform*
+  type: Constructor
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Transform.cpp
+    startLine: 11
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 18
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: Transform()'
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform(glm::vec3)
+  id: vec3)
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: Transform(glm::vec3 pos)
+  nameWithType: Transform::Transform(glm::vec3 pos)
+  fullName: ShadowEngine::ShadowEntity::Transform::Transform(glm::vec3 pos)
+  overload: ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform*
+  type: Constructor
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Transform.cpp
+    startLine: 20
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 19
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: Transform(glm::vec3 pos)'
+    parameters:
+    - id: pos
+      type: 369f4715
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform(glm::vec3,glm::vec3)
+  id: vec3)
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: Transform(glm::vec3 pos, glm::vec3 size)
+  nameWithType: Transform::Transform(glm::vec3 pos, glm::vec3 size)
+  fullName: ShadowEngine::ShadowEntity::Transform::Transform(glm::vec3 pos, glm::vec3 size)
+  overload: ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform*
+  type: Constructor
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Transform.cpp
+    startLine: 27
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 20
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: Transform(glm::vec3 pos, glm::vec3 size)'
+    parameters:
+    - id: pos
+      type: 369f4715
+    - id: size
+      type: 369f4715
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform(glm::vec3,glm::vec3,glm::quat)
+  id: quat)
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: Transform(glm::vec3 pos, glm::vec3 size, glm::quat rotation)
+  nameWithType: Transform::Transform(glm::vec3 pos, glm::vec3 size, glm::quat rotation)
+  fullName: ShadowEngine::ShadowEntity::Transform::Transform(glm::vec3 pos, glm::vec3 size, glm::quat rotation)
+  overload: ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform*
+  type: Constructor
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Transform.cpp
+    startLine: 34
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 21
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: Transform(glm::vec3 pos, glm::vec3 size, glm::quat rotation)'
+    parameters:
+    - id: pos
+      type: 369f4715
+    - id: size
+      type: 369f4715
+    - id: rotation
+      type: afb75ed4
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.transformChanged
+  id: ShadowEngine.ShadowEngine.ShadowEntity.Transform.transformChanged
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: transformChanged
+  nameWithType: Transform::transformChanged
+  fullName: Callback ShadowEngine::ShadowEngine::ShadowEntity::Transform::transformChanged
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 37
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 37
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: Callback transformChanged'
+    return:
+      type: Callback
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateLocalMatrix()
+  id: ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateLocalMatrix()
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: UpdateLocalMatrix()
+  nameWithType: Transform::UpdateLocalMatrix()
+  fullName: void ShadowEngine::ShadowEntity::Transform::UpdateLocalMatrix()
+  overload: ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateLocalMatrix*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Transform.cpp
+    startLine: 61
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 44
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: void UpdateLocalMatrix()'
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateMatrix()
+  id: ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateMatrix()
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: UpdateMatrix()
+  nameWithType: Transform::UpdateMatrix()
+  fullName: void ShadowEngine::ShadowEntity::Transform::UpdateMatrix()
+  overload: ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateMatrix*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Transform.cpp
+    startLine: 55
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 43
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: void UpdateMatrix()'
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateWorldMatrix()
+  id: ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateWorldMatrix()
+  parent: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+  href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+  langs:
+  - cplusplus
+  name: UpdateWorldMatrix()
+  nameWithType: Transform::UpdateWorldMatrix()
+  fullName: void ShadowEngine::ShadowEntity::Transform::UpdateWorldMatrix()
+  overload: ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateWorldMatrix*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Transform.cpp
+    startLine: 72
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Transform.h
+    startLine: 45
+  namespace: ShadowEngine.ShadowEngine.ShadowEntity
+  syntax:
+    content: 'public: void UpdateWorldMatrix()'
+references:
+- uid: ee2de201
+  spec.cplusplus:
+  - name: EntitySystem::rtm_ptr<EntitySystem::Entity>
+    fullName: EntitySystem::rtm_ptr<EntitySystem::Entity>
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.Transform*
+  name: Transform
+  nameWithType: Transform::Transform
+  fullName: ShadowEngine::ShadowEntity::Transform::Transform
+- uid: 369f4715
+  spec.cplusplus:
+  - name: glm::vec3
+    fullName: glm::vec3
+- uid: afb75ed4
+  spec.cplusplus:
+  - name: glm::quat
+    fullName: glm::quat
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetPosition*
+  name: GetPosition
+  nameWithType: Transform::GetPosition
+  fullName: glm::vec3 ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetPosition
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetPosition*
+  name: SetPosition
+  nameWithType: Transform::SetPosition
+  fullName: void ShadowEngine::ShadowEntity::Transform::SetPosition
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetScale*
+  name: GetScale
+  nameWithType: Transform::GetScale
+  fullName: glm::vec3 ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetScale
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetScale*
+  name: SetScale
+  nameWithType: Transform::SetScale
+  fullName: void ShadowEngine::ShadowEngine::ShadowEntity::Transform::SetScale
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetRotation*
+  name: GetRotation
+  nameWithType: Transform::GetRotation
+  fullName: glm::quat ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetRotation
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.SetRotation*
+  name: SetRotation
+  nameWithType: Transform::SetRotation
+  fullName: void ShadowEngine::ShadowEngine::ShadowEntity::Transform::SetRotation
+- uid: 95d96a91
+  spec.cplusplus:
+  - name: glm::mat4
+    fullName: glm::mat4
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetTransformMatrix*
+  name: GetTransformMatrix
+  nameWithType: Transform::GetTransformMatrix
+  fullName: glm::mat4 ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetTransformMatrix
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.GetWorldTransformMatrix*
+  name: GetWorldTransformMatrix
+  nameWithType: Transform::GetWorldTransformMatrix
+  fullName: glm::mat4 ShadowEngine::ShadowEngine::ShadowEntity::Transform::GetWorldTransformMatrix
+- uid: bd34ad7a
+  spec.cplusplus:
+  - name: EntitySystem::Entity *
+    fullName: EntitySystem::Entity *
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.AssignEntity*
+  name: AssignEntity
+  nameWithType: Transform::AssignEntity
+  fullName: void ShadowEngine::ShadowEngine::ShadowEntity::Transform::AssignEntity
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateMatrix*
+  name: UpdateMatrix
+  nameWithType: Transform::UpdateMatrix
+  fullName: void ShadowEngine::ShadowEntity::Transform::UpdateMatrix
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateLocalMatrix*
+  name: UpdateLocalMatrix
+  nameWithType: Transform::UpdateLocalMatrix
+  fullName: void ShadowEngine::ShadowEntity::Transform::UpdateLocalMatrix
+- uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform.UpdateWorldMatrix*
+  name: UpdateWorldMatrix
+  nameWithType: Transform::UpdateWorldMatrix
+  fullName: void ShadowEngine::ShadowEntity::Transform::UpdateWorldMatrix
+- uid: Callback
+  href: Callback.yml
+  name: Callback
+  nameWithType: Callback
+  fullName: Callback
+  type: Class
+  syntax:
+    content: 'public: class Callback'

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.Rendering.CommandList" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ShadowEngine::Rendering::CommandList</compoundname>
+    <includes refid="_command_list_8h" local="no">CommandList.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.Rendering.CommandList.~CommandList()" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ShadowEngine::Rendering::CommandList::~CommandList</definition>
+        <argsstring>()=default</argsstring>
+        <name>~CommandList</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/CommandList.h" line="11" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.Rendering.CommandList.Reset()" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::Rendering::CommandList::Reset</definition>
+        <argsstring>()=0</argsstring>
+        <name>Reset</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/CommandList.h" line="13" column="1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="ShadowEngine.Rendering.CommandList.Create()" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Ref&lt;<ref refid="ShadowEngine.Rendering.CommandList" kindref="compound">CommandList</ref>&gt;</type>
+        <definition>std::shared_ptr&lt;CommandList&gt; ShadowEngine::Rendering::CommandList::Create</definition>
+        <argsstring>()</argsstring>
+        <name>Create</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/CommandList.h" line="16" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/CommandList.cpp" bodystart="8" bodyend="18" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+      <para>A list of commands to be submitted to a CommandQueue. </para>
+    </briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/ShadowRenderer/CommandList.h" line="9" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/CommandList.h" bodystart="8" bodyend="17" />
+    <listofallmembers>
+      <member refid="ShadowEngine.Rendering.CommandList.Create()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::CommandList</scope>
+        <name>Create</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.CommandList.Reset()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::CommandList</scope>
+        <name>Reset</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.CommandList.~CommandList()" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::CommandList</scope>
+        <name>~CommandList</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

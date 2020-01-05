@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="struct_shadow_engine_1_1_rendering_1_1_model_data" kind="struct" language="C++" prot="public">
+    <compoundname>ShadowEngine::Rendering::ModelData</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_shadow_engine_1_1_rendering_1_1_model_data_1a9d59b0f5fa2c8f45a1eef39aebbeb0ce" prot="public" static="no" mutable="no">
+        <type>glm::mat4x4</type>
+        <definition>glm::mat4x4 ShadowEngine::Rendering::ModelData::modelToWorld</definition>
+        <argsstring></argsstring>
+        <name>modelToWorld</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/DataStructs.h" line="24" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/DataStructs.h" bodystart="24" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/ShadowRenderer/DataStructs.h" line="23" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/DataStructs.h" bodystart="22" bodyend="25" />
+    <listofallmembers>
+      <member refid="struct_shadow_engine_1_1_rendering_1_1_model_data_1a9d59b0f5fa2c8f45a1eef39aebbeb0ce" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ModelData</scope>
+        <name>modelToWorld</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

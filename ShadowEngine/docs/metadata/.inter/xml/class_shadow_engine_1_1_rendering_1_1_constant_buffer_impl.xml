@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_rendering_1_1_constant_buffer_impl" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ShadowEngine::Rendering::ConstantBufferImpl</compoundname>
+    <derivedcompoundref refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer" prot="public" virt="non-virtual">ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_constant_buffer_impl_1a1ed05a6816d6a2bce32cffb7fe1bc99d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::Rendering::ConstantBufferImpl::Upload</definition>
+        <argsstring>(void *data, size_t size)=0</argsstring>
+        <name>Upload</name>
+        <reimplementedby refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer_1abd78a76db54437670d504eccd66f4ce1">Upload</reimplementedby>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ConstantBuffer.h" line="10" column="1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_constant_buffer_impl_1a2dcf973c9de9a20437eba4b9ed6de9d9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_impl" kindref="compound">ConstantBufferImpl</ref> *</type>
+        <definition>ConstantBufferImpl * ShadowEngine::Rendering::ConstantBufferImpl::Create</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>Create</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ConstantBuffer.h" line="12" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ConstantBuffer.cpp" bodystart="9" bodyend="20" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="98">
+        <label>ShadowEngine::Rendering::ConstantBufferImpl</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_impl" />
+      </node>
+      <node id="99">
+        <label>ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_constant_buffer" />
+        <childnode refid="98" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <location file="ShadowEngine/src/ShadowRenderer/ConstantBuffer.h" line="8" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ConstantBuffer.h" bodystart="7" bodyend="13" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_impl_1a2dcf973c9de9a20437eba4b9ed6de9d9" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ConstantBufferImpl</scope>
+        <name>Create</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_constant_buffer_impl_1a1ed05a6816d6a2bce32cffb7fe1bc99d" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::ConstantBufferImpl</scope>
+        <name>Upload</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

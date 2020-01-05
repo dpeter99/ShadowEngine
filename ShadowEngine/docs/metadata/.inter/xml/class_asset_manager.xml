@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_asset_manager" kind="class" language="C++" prot="public">
+    <compoundname>AssetManager</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_shadow_module" prot="public" virt="non-virtual">ShadowEngine::ShadowModule</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_asset_manager_1a8717588a7cfc66bb3d356a09b016f872" prot="private" static="yes" mutable="no">
+        <type>
+          <ref refid="class_asset_manager" kindref="compound">AssetManager</ref> *</type>
+        <definition>AssetManager * AssetManager::instance</definition>
+        <argsstring></argsstring>
+        <name>instance</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetManager.h" line="14" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetManager.h" bodystart="14" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_asset_manager_1aebac98e557cbf4dab1ed688bb784458d" prot="public" static="no" mutable="no">
+        <type>std::map&lt;int, <ref refid="class_shadow_engine_1_1_assets_1_1_shadow_asset" kindref="compound">ShadowEngine::Assets::ShadowAsset</ref> *&gt;</type>
+        <definition>std::map&lt;int, ShadowEngine::Assets::ShadowAsset*&gt; AssetManager::loadedAssets</definition>
+        <argsstring></argsstring>
+        <name>loadedAssets</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetManager.h" line="26" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetManager.h" bodystart="26" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_asset_manager_1af879bc2a4809be94c47a7c7e5bc797cc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AssetManager::nextID</definition>
+        <argsstring></argsstring>
+        <name>nextID</name>
+        <initializer>= 0</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetManager.h" line="28" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetManager.h" bodystart="28" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_asset_manager_1ab77cff44e29404b4439b87fde9299433" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>
+          <ref refid="class_asset_manager" kindref="compound">AssetManager</ref> *</type>
+        <definition>static AssetManager* AssetManager::getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetManager.h" line="19" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetManager.h" bodystart="19" bodyend="22" />
+      </memberdef>
+      <memberdef kind="function" id="class_asset_manager_1acba1a9ea6c2a9e313f9db50e98955b5e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>static T* AssetManager::GetAsset</definition>
+        <argsstring>(std::string path)</argsstring>
+        <name>GetAsset</name>
+        <param>
+          <type>std::string</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetManager.h" line="45" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetManager.h" bodystart="45" bodyend="63" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_asset_manager_1a750ae7b39b633fbb6594443aa3ca704b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AssetManager::AssetManager</definition>
+        <argsstring>()</argsstring>
+        <name>AssetManager</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetManager.h" line="30" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetManager.cpp" bodystart="9" bodyend="12" />
+      </memberdef>
+      <memberdef kind="function" id="class_asset_manager_1a9c89817cbf3516f1451c116e89f47d30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AssetManager::~AssetManager</definition>
+        <argsstring>()</argsstring>
+        <name>~AssetManager</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetManager.h" line="31" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetManager.cpp" bodystart="15" bodyend="17" />
+      </memberdef>
+      <memberdef kind="function" id="class_asset_manager_1a55bd85c8f3492ae0d0d0664fe4fa0a05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AssetManager::CheckLoaded</definition>
+        <argsstring>(std::string path, ShadowEngine::Assets::ShadowAsset **asset)</argsstring>
+        <name>CheckLoaded</name>
+        <param>
+          <type>std::string</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>
+            <ref refid="class_shadow_engine_1_1_assets_1_1_shadow_asset" kindref="compound">ShadowEngine::Assets::ShadowAsset</ref> **</type>
+          <declname>asset</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetManager.h" line="35" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetManager.cpp" bodystart="19" bodyend="32" />
+      </memberdef>
+      <memberdef kind="function" id="class_asset_manager_1a48c1b5a9b1b27b385808febc1f686e18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssetManager::UnloadAsset</definition>
+        <argsstring>(std::string)</argsstring>
+        <name>UnloadAsset</name>
+        <param>
+          <type>std::string</type>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetManager.h" line="38" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetManager.cpp" bodystart="34" bodyend="36" />
+      </memberdef>
+      <memberdef kind="function" id="class_asset_manager_1a085ecbd52ceeb86037ac96c7bef9c778" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssetManager::UnloadAsset</definition>
+        <argsstring>(ShadowEngine::Assets::ShadowAsset *asset)</argsstring>
+        <name>UnloadAsset</name>
+        <param>
+          <type>
+            <ref refid="class_shadow_engine_1_1_assets_1_1_shadow_asset" kindref="compound">ShadowEngine::Assets::ShadowAsset</ref> *</type>
+          <declname>asset</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetManager.h" line="39" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetManager.cpp" bodystart="38" bodyend="43" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="2">
+        <label>AssetManager</label>
+        <link refid="class_asset_manager" />
+        <childnode refid="3" relation="public-inheritance"></childnode>
+      </node>
+      <node id="3">
+        <label>ShadowEngine::ShadowModule</label>
+        <link refid="class_shadow_engine_1_1_shadow_module" />
+        <childnode refid="4" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="5">
+        <label>AssetManager</label>
+        <link refid="class_asset_manager" />
+        <childnode refid="6" relation="public-inheritance"></childnode>
+      </node>
+      <node id="6">
+        <label>ShadowEngine::ShadowModule</label>
+        <link refid="class_shadow_engine_1_1_shadow_module" />
+        <childnode refid="7" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowAsset/AssetManager.h" line="11" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetManager.h" bodystart="10" bodyend="64" />
+    <listofallmembers>
+      <member refid="class_asset_manager_1a750ae7b39b633fbb6594443aa3ca704b" prot="public" virt="non-virtual">
+        <scope>AssetManager</scope>
+        <name>AssetManager</name>
+      </member>
+      <member refid="class_asset_manager_1a55bd85c8f3492ae0d0d0664fe4fa0a05" prot="public" virt="non-virtual">
+        <scope>AssetManager</scope>
+        <name>CheckLoaded</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a35bf9fdc604caa67e1a2f1b0a9c574f2" prot="protected" virt="non-virtual">
+        <scope>AssetManager</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="class_asset_manager_1acba1a9ea6c2a9e313f9db50e98955b5e" prot="public" virt="non-virtual">
+        <scope>AssetManager</scope>
+        <name>GetAsset</name>
+      </member>
+      <member refid="class_asset_manager_1ab77cff44e29404b4439b87fde9299433" prot="public" virt="non-virtual">
+        <scope>AssetManager</scope>
+        <name>getInstance</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a230ca5dec944e67f8d57dfc743da7d94" prot="public" virt="pure-virtual">
+        <scope>AssetManager</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual">
+        <scope>AssetManager</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="class_asset_manager_1a8717588a7cfc66bb3d356a09b016f872" prot="private" virt="non-virtual">
+        <scope>AssetManager</scope>
+        <name>instance</name>
+      </member>
+      <member refid="class_asset_manager_1aebac98e557cbf4dab1ed688bb784458d" prot="public" virt="non-virtual">
+        <scope>AssetManager</scope>
+        <name>loadedAssets</name>
+      </member>
+      <member refid="class_asset_manager_1af879bc2a4809be94c47a7c7e5bc797cc" prot="public" virt="non-virtual">
+        <scope>AssetManager</scope>
+        <name>nextID</name>
+      </member>
+      <member refid="class_asset_manager_1a48c1b5a9b1b27b385808febc1f686e18" prot="public" virt="non-virtual">
+        <scope>AssetManager</scope>
+        <name>UnloadAsset</name>
+      </member>
+      <member refid="class_asset_manager_1a085ecbd52ceeb86037ac96c7bef9c778" prot="public" virt="non-virtual">
+        <scope>AssetManager</scope>
+        <name>UnloadAsset</name>
+      </member>
+      <member refid="class_asset_manager_1a9c89817cbf3516f1451c116e89f47d30" prot="public" virt="non-virtual">
+        <scope>AssetManager</scope>
+        <name>~AssetManager</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual">
+        <scope>AssetManager</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

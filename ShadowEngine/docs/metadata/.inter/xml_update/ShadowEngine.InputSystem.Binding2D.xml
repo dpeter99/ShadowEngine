@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.InputSystem.Binding2D" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::InputSystem::Binding2D</compoundname>
+    <basecompoundref refid="ShadowEngine.InputSystem.InputBinding" prot="public" virt="non-virtual">ShadowEngine::InputSystem::InputBinding&lt;ShadowMath::Vector2float&gt;</basecompoundref>
+    <includes refid="_binding2_d_8h" local="no">Binding2D.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class I</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.Binding2D.xpos_" prot="private" static="no" mutable="no">
+        <type>
+          <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;I&gt; *</type>
+        <definition>InputBinding&lt;I&gt;* ShadowEngine::InputSystem::Binding2D&lt;I&gt;::xpos_</definition>
+        <argsstring></argsstring>
+        <name>xpos_</name>
+        <briefdescription>
+          <para>The positive X binding. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" line="20" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" bodystart="20" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.Binding2D.xneg_" prot="private" static="no" mutable="no">
+        <type>
+          <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;I&gt; *</type>
+        <definition>InputBinding&lt;I&gt;* ShadowEngine::InputSystem::Binding2D&lt;I&gt;::xneg_</definition>
+        <argsstring></argsstring>
+        <name>xneg_</name>
+        <briefdescription>
+          <para>The negative X binding. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" line="24" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" bodystart="24" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.Binding2D.ypos_" prot="private" static="no" mutable="no">
+        <type>
+          <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;I&gt; *</type>
+        <definition>InputBinding&lt;I&gt;* ShadowEngine::InputSystem::Binding2D&lt;I&gt;::ypos_</definition>
+        <argsstring></argsstring>
+        <name>ypos_</name>
+        <briefdescription>
+          <para>The positive Y binding. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" line="29" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" bodystart="29" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.Binding2D.yneg_" prot="private" static="no" mutable="no">
+        <type>
+          <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;I&gt; *</type>
+        <definition>InputBinding&lt;I&gt;* ShadowEngine::InputSystem::Binding2D&lt;I&gt;::yneg_</definition>
+        <argsstring></argsstring>
+        <name>yneg_</name>
+        <briefdescription>
+          <para>The negative Y binding. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" line="33" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" bodystart="33" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.InputSystem.Binding2D.Binding2D(InputBinding&lt;I&gt; *,InputBinding&lt;I&gt; *,InputBinding&lt;I&gt; *,InputBinding&lt;I&gt; *)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::Binding2D&lt;I&gt;::Binding2D</definition>
+        <argsstring>(InputBinding&lt;I&gt; *_xpositive, InputBinding&lt;I&gt; *_xnegative, InputBinding&lt;I&gt; *_ypositive, InputBinding&lt;I&gt; *_ynegative)</argsstring>
+        <name>Binding2D</name>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;I&gt; *</type>
+          <declname>_xpositive</declname>
+        </param>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;I&gt; *</type>
+          <declname>_xnegative</declname>
+        </param>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;I&gt; *</type>
+          <declname>_ypositive</declname>
+        </param>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;I&gt; *</type>
+          <declname>_ynegative</declname>
+        </param>
+        <briefdescription>
+          <para>Constructor for the Binding2D. The pointers will be freed up by the binding. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>_xpositive</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>Positive X Direction </para>
+                </parameterdescription>
+              </parameteritem>
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>_xnegative</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>Negative X Direction </para>
+                </parameterdescription>
+              </parameteritem>
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>_ypositive</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>Positive Y Direction </para>
+                </parameterdescription>
+              </parameteritem>
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>_ynegative</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>Negative Y Direction </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" line="33" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" bodystart="44" bodyend="47" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.Binding2D.~Binding2D()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::Binding2D&lt;I&gt;::~Binding2D</definition>
+        <argsstring>()</argsstring>
+        <name>~Binding2D</name>
+        <briefdescription>
+          <para>This should only be called by the Input system. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" line="52" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" bodystart="52" bodyend="58" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.Binding2D.ProcessEvent(BindingContext&lt;ShadowMath::Vector2float&gt; &amp;)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::Binding2D&lt;I&gt;::ProcessEvent</definition>
+        <argsstring>(BindingContext&lt;ShadowMath::Vector2float&gt; &amp;event) override</argsstring>
+        <name>ProcessEvent</name>
+        <reimplements refid="ShadowEngine.InputSystem.InputBinding.ProcessEvent(BindingContext&lt;T&gt; &amp;)">ProcessEvent</reimplements>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.InputSystem.BindingContext" kindref="compound">BindingContext</ref>&lt;<ref refid="ShadowMath.Vector2float" kindref="compound">ShadowMath::Vector2float</ref>&gt; &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+          <para>Processes a event. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>event</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>Event to process </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" line="60" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" bodystart="60" bodyend="132" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.Binding2D.DefaultBehaviour(ModifierContext &amp;)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::Binding2D&lt;I&gt;::DefaultBehaviour</definition>
+        <argsstring>(ModifierContext &amp;ctx) override</argsstring>
+        <name>DefaultBehaviour</name>
+        <reimplements refid="ShadowEngine.InputSystem.InputBinding.DefaultBehaviour(ModifierContext &amp;)">DefaultBehaviour</reimplements>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.InputSystem.ModifierContext" kindref="compound">ModifierContext</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+          <para>The default behaviour of this binding without modifiers. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>ctx</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>The Input Context that this will use </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" line="134" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" bodystart="134" bodyend="158" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.Binding2D.GetXPositiveBinding()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>
+          <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;I&gt; &amp;</type>
+        <definition>InputBinding&lt;I&gt;&amp; ShadowEngine::InputSystem::Binding2D&lt;I&gt;::GetXPositiveBinding</definition>
+        <argsstring>()</argsstring>
+        <name>GetXPositiveBinding</name>
+        <briefdescription>
+          <para>Gets the X positive binding. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <simplesect kind="return">
+              <para>Reference of the binding </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" line="164" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" bodystart="164" bodyend="167" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.Binding2D.GetXNegativeBinding()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>
+          <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;I&gt; &amp;</type>
+        <definition>InputBinding&lt;I&gt;&amp; ShadowEngine::InputSystem::Binding2D&lt;I&gt;::GetXNegativeBinding</definition>
+        <argsstring>()</argsstring>
+        <name>GetXNegativeBinding</name>
+        <briefdescription>
+          <para>Gets the X negative binding. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <simplesect kind="return">
+              <para>Reference of the binding </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" line="173" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" bodystart="173" bodyend="176" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.Binding2D.GetYPositiveBinding()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>
+          <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;I&gt; &amp;</type>
+        <definition>InputBinding&lt;I&gt;&amp; ShadowEngine::InputSystem::Binding2D&lt;I&gt;::GetYPositiveBinding</definition>
+        <argsstring>()</argsstring>
+        <name>GetYPositiveBinding</name>
+        <briefdescription>
+          <para>Gets the Y positive binding. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <simplesect kind="return">
+              <para>Reference of the binding </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" line="182" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" bodystart="182" bodyend="185" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.Binding2D.GetYNegativeBinding()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>
+          <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;I&gt; &amp;</type>
+        <definition>InputBinding&lt;I&gt;&amp; ShadowEngine::InputSystem::Binding2D&lt;I&gt;::GetYNegativeBinding</definition>
+        <argsstring>()</argsstring>
+        <name>GetYNegativeBinding</name>
+        <briefdescription>
+          <para>Gets the Y negative binding. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <simplesect kind="return">
+              <para>Reference of the binding </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" line="191" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" bodystart="191" bodyend="194" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+      <para>This Binding represents a 2D value, in a Vector2float. </para>
+    </briefdescription>
+    <detaileddescription>
+      <para>
+        <parameterlist kind="templateparam">
+          <parameteritem>
+            <parameternamelist>
+              <parametername>I</parametername>
+            </parameternamelist>
+            <parameterdescription>
+              <para>The type that the sub bindings will provide. It must have float addition and substraction operators </para>
+            </parameterdescription>
+          </parameteritem>
+        </parameterlist>
+      </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="25">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="22">
+        <label>ShadowEngine::InputSystem::Binding2D&lt;I&gt;</label>
+        <link refid="ShadowEngine.InputSystem.Binding2D" />
+        <childnode refid="23" relation="public-inheritance"></childnode>
+      </node>
+      <node id="23">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;ShadowMath::Vector2float&gt;</label>
+        <link refid="ShadowEngine.InputSystem.InputBinding" />
+        <childnode refid="24" relation="public-inheritance"></childnode>
+      </node>
+      <node id="24">
+        <label>ShadowEngine::InputSystem::IInputBinding</label>
+        <link refid="ShadowEngine.InputSystem.IInputBinding" />
+        <childnode refid="25" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="29">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="26">
+        <label>ShadowEngine::InputSystem::Binding2D&lt;I&gt;</label>
+        <link refid="ShadowEngine.InputSystem.Binding2D" />
+        <childnode refid="27" relation="public-inheritance"></childnode>
+      </node>
+      <node id="27">
+        <label>ShadowEngine::InputSystem::InputBinding&lt;ShadowMath::Vector2float&gt;</label>
+        <link refid="ShadowEngine.InputSystem.InputBinding" />
+        <childnode refid="28" relation="public-inheritance"></childnode>
+      </node>
+      <node id="28">
+        <label>ShadowEngine::InputSystem::IInputBinding</label>
+        <link refid="ShadowEngine.InputSystem.IInputBinding" />
+        <childnode refid="29" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" line="16" column="1" bodyfile="ShadowEngine/src/ShadowInput/Bindings/Binding2D.h" bodystart="14" bodyend="195" />
+    <listofallmembers>
+      <member refid="ShadowEngine.InputSystem.InputBinding.AddModifier(InputModifier *)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>AddModifier</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.Binding2D.Binding2D(InputBinding&lt;I&gt; *,InputBinding&lt;I&gt; *,InputBinding&lt;I&gt; *,InputBinding&lt;I&gt; *)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>Binding2D</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.Binding2D.DefaultBehaviour(ModifierContext &amp;)" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>DefaultBehaviour</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.GetData()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>GetData</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.GetModifier(int)" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>GetModifier</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.Binding2D.GetXNegativeBinding()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>GetXNegativeBinding</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.Binding2D.GetXPositiveBinding()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>GetXPositiveBinding</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.Binding2D.GetYNegativeBinding()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>GetYNegativeBinding</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.Binding2D.GetYPositiveBinding()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>GetYPositiveBinding</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.InputBinding()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>InputBinding</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.ModifierCount()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>ModifierCount</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.ProcessContext(BindingContext&lt;T&gt; &amp;,ModifierContext &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>ProcessContext</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.Binding2D.ProcessEvent(BindingContext&lt;ShadowMath::Vector2float&gt; &amp;)" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>ProcessEvent</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.Binding2D.xneg_" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>xneg_</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.Binding2D.xpos_" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>xpos_</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.Binding2D.yneg_" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>yneg_</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.Binding2D.ypos_" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>ypos_</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.Binding2D.~Binding2D()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>~Binding2D</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputBinding.~InputBinding()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>~InputBinding</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::Binding2D</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

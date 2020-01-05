@@ -7,16 +7,16 @@
 //#include "GL/gl.h"
 
 //#include <SDL2/SDL.h>
-#include <ShadowEntity/EntityRegistry.h>
+#include <EntitySystem/EntityRegistry.h>
 #include "Core/ShadowApplication.h"
 
 #include "ShadowScene/TestScene.h"
 
-#include "ShadowEntity/Entities/Camera.h"
+#include "EntitySystem/Entities/Camera.h"
 
 int main(int argc, char* argv[])
 {
-	ShadowEngine::ShadowEntity::EntityRegistry registry;
+	ShadowEngine::EntitySystem::EntityRegistry registry;
 
 	
 

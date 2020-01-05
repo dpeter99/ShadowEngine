@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_entity_container_1_1_memory_chunk" kind="class" language="C++" prot="public">
+    <compoundname>EntityContainer::MemoryChunk</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_entity_container_1_1_memory_chunk_1a43dd310de363768ac2b6e671e49718a3" prot="public" static="no" mutable="no">
+        <type>Element *</type>
+        <definition>Element* EntityContainer&lt;Type&gt;::MemoryChunk::chunkStart</definition>
+        <argsstring></argsstring>
+        <name>chunkStart</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="31" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="31" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_container_1_1_memory_chunk_1a2bdea7b940104453da184040726ad932" prot="public" static="no" mutable="no">
+        <type>Element *</type>
+        <definition>Element* EntityContainer&lt;Type&gt;::MemoryChunk::chunkEnd</definition>
+        <argsstring></argsstring>
+        <name>chunkEnd</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="32" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="32" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_container_1_1_memory_chunk_1a8a36ffe28f08e134b71b9737b8481a52" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EntityContainer&lt;Type&gt;::MemoryChunk::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="34" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="34" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_container_1_1_memory_chunk_1abd3fbd4ff38168d5fe909ae2be231cbc" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EntityContainer&lt;Type&gt;::MemoryChunk::metadata[MAX_OBJECTS_IN_CHUNK]</definition>
+        <argsstring>[MAX_OBJECTS_IN_CHUNK]</argsstring>
+        <name>metadata</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="36" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="36" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_container_1_1_memory_chunk_1a52f9cac7d033c08dd6184b07eab22350" prot="public" static="no" mutable="no">
+        <type>Element *</type>
+        <definition>Element* EntityContainer&lt;Type&gt;::MemoryChunk::nextFree</definition>
+        <argsstring></argsstring>
+        <name>nextFree</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="39" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="39" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_entity_container_1_1_memory_chunk_1aa5312324ba258e2750ece9d096770bf4" prot="public" static="yes" mutable="no">
+        <type>const bool</type>
+        <definition>const bool EntityContainer&lt;Type&gt;::MemoryChunk::FreeFlag</definition>
+        <argsstring></argsstring>
+        <name>FreeFlag</name>
+        <initializer>= true</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="35" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="35" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_entity_container_1_1_memory_chunk_1a546df07e18eef2ec6c3ffd6f1aaf4d29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EntityContainer&lt;Type&gt;::MemoryChunk::MemoryChunk</definition>
+        <argsstring>()</argsstring>
+        <name>MemoryChunk</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="41" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="41" bodyend="55" />
+      </memberdef>
+      <memberdef kind="function" id="class_entity_container_1_1_memory_chunk_1a4a830185f98beb16b1bb01a9ea337ca2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Type *</type>
+        <definition>Type* EntityContainer&lt;Type&gt;::MemoryChunk::allocate</definition>
+        <argsstring>()</argsstring>
+        <name>allocate</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="57" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="57" bodyend="69" />
+      </memberdef>
+      <memberdef kind="function" id="class_entity_container_1_1_memory_chunk_1a789f4924b419c648de4896b5e0cb3955" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityContainer&lt;Type&gt;::MemoryChunk::free</definition>
+        <argsstring>(void *ptr)</argsstring>
+        <name>free</name>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="71" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="71" bodyend="80" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <collaborationgraph>
+      <node id="355">
+        <label>EntityContainer&lt;Type&gt;::Element</label>
+        <childnode refid="355" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="356" relation="usage">
+          <edgelabel>element</edgelabel>
+        </childnode>
+      </node>
+      <node id="356">
+        <label>Type</label>
+      </node>
+      <node id="354">
+        <label>EntityContainer&lt;Type&gt;::MemoryChunk</label>
+        <link refid="class_entity_container_1_1_memory_chunk" />
+        <childnode refid="355" relation="usage">
+          <edgelabel>chunkStart</edgelabel>
+          <edgelabel>nextFree</edgelabel>
+          <edgelabel>chunkEnd</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="29" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="28" bodyend="81" />
+    <listofallmembers>
+      <member refid="class_entity_container_1_1_memory_chunk_1a4a830185f98beb16b1bb01a9ea337ca2" prot="public" virt="non-virtual">
+        <scope>EntityContainer::MemoryChunk</scope>
+        <name>allocate</name>
+      </member>
+      <member refid="class_entity_container_1_1_memory_chunk_1a2bdea7b940104453da184040726ad932" prot="public" virt="non-virtual">
+        <scope>EntityContainer::MemoryChunk</scope>
+        <name>chunkEnd</name>
+      </member>
+      <member refid="class_entity_container_1_1_memory_chunk_1a43dd310de363768ac2b6e671e49718a3" prot="public" virt="non-virtual">
+        <scope>EntityContainer::MemoryChunk</scope>
+        <name>chunkStart</name>
+      </member>
+      <member refid="class_entity_container_1_1_memory_chunk_1a8a36ffe28f08e134b71b9737b8481a52" prot="public" virt="non-virtual">
+        <scope>EntityContainer::MemoryChunk</scope>
+        <name>count</name>
+      </member>
+      <member refid="class_entity_container_1_1_memory_chunk_1a789f4924b419c648de4896b5e0cb3955" prot="public" virt="non-virtual">
+        <scope>EntityContainer::MemoryChunk</scope>
+        <name>free</name>
+      </member>
+      <member refid="class_entity_container_1_1_memory_chunk_1aa5312324ba258e2750ece9d096770bf4" prot="public" virt="non-virtual">
+        <scope>EntityContainer::MemoryChunk</scope>
+        <name>FreeFlag</name>
+      </member>
+      <member refid="class_entity_container_1_1_memory_chunk_1a546df07e18eef2ec6c3ffd6f1aaf4d29" prot="public" virt="non-virtual">
+        <scope>EntityContainer::MemoryChunk</scope>
+        <name>MemoryChunk</name>
+      </member>
+      <member refid="class_entity_container_1_1_memory_chunk_1abd3fbd4ff38168d5fe909ae2be231cbc" prot="public" virt="non-virtual">
+        <scope>EntityContainer::MemoryChunk</scope>
+        <name>metadata</name>
+      </member>
+      <member refid="class_entity_container_1_1_memory_chunk_1a52f9cac7d033c08dd6184b07eab22350" prot="public" virt="non-virtual">
+        <scope>EntityContainer::MemoryChunk</scope>
+        <name>nextFree</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

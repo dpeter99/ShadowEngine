@@ -4,7 +4,7 @@
 
 namespace ShadowMath
 {
-	class Vector2float
+	class [[deprecated("Use glm instead")]] Vector2float
 	{
 	public:
 		float x;

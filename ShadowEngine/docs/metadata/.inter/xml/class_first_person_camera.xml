@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_first_person_camera" kind="class" language="C++" prot="public">
+    <compoundname>FirstPersonCamera</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" prot="public" virt="non-virtual">ShadowEngine::EntitySystem::SceneEntity</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_first_person_camera_1a888b7c031eedd6faaddbe5168b392829" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string FirstPersonCamera::a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <initializer>= "FPS Cam ABCD"</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/FirstPersonCamera.h" line="12" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/FirstPersonCamera.h" bodystart="12" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_first_person_camera_1a20974d904fa6d2c1b8dadc1c6550e351" prot="private" static="no" mutable="no">
+        <type>ShadowEngine::EntitySystem::rtm_ptr&lt;<ref refid="class_camera" kindref="compound">Camera</ref>&gt;</type>
+        <definition>ShadowEngine::EntitySystem::rtm_ptr&lt;Camera&gt; FirstPersonCamera::cam</definition>
+        <argsstring></argsstring>
+        <name>cam</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/FirstPersonCamera.h" line="14" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/FirstPersonCamera.h" bodystart="14" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_first_person_camera_1ac4335224884ebf5a3ad24fe49748cd73" prot="private" static="no" mutable="no">
+        <type>
+          <ref refid="class_shadow_engine_1_1_input_system_1_1_shadow_action" kindref="compound">ShadowEngine::InputSystem::ShadowAction</ref>&lt;float&gt; *</type>
+        <definition>ShadowEngine::InputSystem::ShadowAction&lt;float&gt;* FirstPersonCamera::forward</definition>
+        <argsstring></argsstring>
+        <name>forward</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/FirstPersonCamera.h" line="16" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/FirstPersonCamera.h" bodystart="16" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_first_person_camera_1ac608f4c6e0d9570b64dc93ce4b27712e" prot="private" static="no" mutable="no">
+        <type>
+          <ref refid="class_shadow_engine_1_1_input_system_1_1_shadow_action" kindref="compound">ShadowEngine::InputSystem::ShadowAction</ref>&lt;float&gt; *</type>
+        <definition>ShadowEngine::InputSystem::ShadowAction&lt;float&gt;* FirstPersonCamera::side</definition>
+        <argsstring></argsstring>
+        <name>side</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/FirstPersonCamera.h" line="18" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/FirstPersonCamera.h" bodystart="18" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_first_person_camera_1aabb3b25a1333a4f8ec5f8996f4fe5805" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FirstPersonCamera::SHObject_Base</definition>
+        <argsstring>(FirstPersonCamera) Entity_Base(FirstPersonCamera</argsstring>
+        <name>SHObject_Base</name>
+        <param>
+          <type>
+            <ref refid="class_first_person_camera" kindref="compound">FirstPersonCamera</ref>
+          </type>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/FirstPersonCamera.h" line="8" column="1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_first_person_camera_1aa8844af6c3b3ab98c4baa4145f3c0408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FirstPersonCamera::Init</definition>
+        <argsstring>() override</argsstring>
+        <name>Init</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/FirstPersonCamera.h" line="20" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/FirstPersonCamera.cpp" bodystart="14" bodyend="43" />
+      </memberdef>
+      <memberdef kind="function" id="class_first_person_camera_1a3e1ddb17d6b9c0d6aeb2b24f6525265b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FirstPersonCamera::Update</definition>
+        <argsstring>() override</argsstring>
+        <name>Update</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/Entities/FirstPersonCamera.h" line="22" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/FirstPersonCamera.cpp" bodystart="45" bodyend="59" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="173">
+        <label>ShadowEngine::EntitySystem::SceneEntity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" />
+        <childnode refid="174" relation="public-inheritance"></childnode>
+      </node>
+      <node id="174">
+        <label>Entity</label>
+      </node>
+      <node id="172">
+        <label>FirstPersonCamera</label>
+        <link refid="class_first_person_camera" />
+        <childnode refid="173" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="176">
+        <label>ShadowEngine::EntitySystem::SceneEntity</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity" />
+        <childnode refid="177" relation="public-inheritance"></childnode>
+      </node>
+      <node id="177">
+        <label>Entity</label>
+      </node>
+      <node id="175">
+        <label>FirstPersonCamera</label>
+        <link refid="class_first_person_camera" />
+        <childnode refid="176" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/EntitySystem/Entities/FirstPersonCamera.h" line="7" column="1" bodyfile="ShadowEngine/src/EntitySystem/Entities/FirstPersonCamera.h" bodystart="6" bodyend="23" />
+    <listofallmembers>
+      <member refid="class_first_person_camera_1a888b7c031eedd6faaddbe5168b392829" prot="private" virt="non-virtual">
+        <scope>FirstPersonCamera</scope>
+        <name>a</name>
+      </member>
+      <member refid="class_first_person_camera_1a20974d904fa6d2c1b8dadc1c6550e351" prot="private" virt="non-virtual">
+        <scope>FirstPersonCamera</scope>
+        <name>cam</name>
+      </member>
+      <member refid="class_first_person_camera_1ac4335224884ebf5a3ad24fe49748cd73" prot="private" virt="non-virtual">
+        <scope>FirstPersonCamera</scope>
+        <name>forward</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a973bfe0c2c49579e235fb9602f836f94" prot="public" virt="virtual">
+        <scope>FirstPersonCamera</scope>
+        <name>GetTransform</name>
+      </member>
+      <member refid="class_first_person_camera_1aa8844af6c3b3ab98c4baa4145f3c0408" prot="public" virt="non-virtual">
+        <scope>FirstPersonCamera</scope>
+        <name>Init</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1afc8c3004bc7d6c473f9a6faaeac6abad" prot="public" virt="non-virtual">
+        <scope>FirstPersonCamera</scope>
+        <name>SceneEntity</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a017ec5e9e4ff00c1f3d91072dd28ac7c" prot="public" virt="non-virtual">
+        <scope>FirstPersonCamera</scope>
+        <name>SceneEntity</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a1fa641bdc27235315d094ea17e3ebcb2" prot="public" virt="non-virtual">
+        <scope>FirstPersonCamera</scope>
+        <name>SetParent</name>
+      </member>
+      <member refid="class_first_person_camera_1aabb3b25a1333a4f8ec5f8996f4fe5805" prot="private" virt="non-virtual">
+        <scope>FirstPersonCamera</scope>
+        <name>SHObject_Base</name>
+      </member>
+      <member refid="class_first_person_camera_1ac608f4c6e0d9570b64dc93ce4b27712e" prot="private" virt="non-virtual">
+        <scope>FirstPersonCamera</scope>
+        <name>side</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1a843f7ccc0e2bd01702aed0f8b50c8c6a" prot="public" virt="non-virtual">
+        <scope>FirstPersonCamera</scope>
+        <name>transform</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_scene_entity_1afca0d7e875aa5cefb39a0957b902d1cd" prot="public" virt="virtual">
+        <scope>FirstPersonCamera</scope>
+        <name>TransformChanged</name>
+      </member>
+      <member refid="class_first_person_camera_1a3e1ddb17d6b9c0d6aeb2b24f6525265b" prot="public" virt="non-virtual">
+        <scope>FirstPersonCamera</scope>
+        <name>Update</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

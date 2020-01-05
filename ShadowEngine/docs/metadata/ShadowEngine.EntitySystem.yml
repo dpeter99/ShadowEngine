@@ -1,0 +1,133 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.EntitySystem
+  id: ShadowEngine.EntitySystem
+  children:
+  - ShadowEngine.EntitySystem.EntityManager
+  - ShadowEngine.EntitySystem.EntityRegistry
+  - ShadowEngine.EntitySystem.EntitySystem
+  - ShadowEngine.EntitySystem.Scene
+  - ShadowEngine.EntitySystem.SceneEntity
+  - ShadowEngine.EntitySystem.SystemCallbacks
+  - ShadowEngine.EntitySystem.operator<<(std::ostream &,const Entity &)
+  href: ShadowEngine.EntitySystem.yml
+  langs:
+  - cplusplus
+  name: ShadowEngine::EntitySystem
+  nameWithType: ShadowEngine::EntitySystem
+  fullName: ShadowEngine::EntitySystem
+  type: Namespace
+  source:
+    remote: &o0
+      path: ShadowEngine/src/EntitySystem/DefaultEntities.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/EntitySystem/DefaultEntities.cpp
+    startLine: 13
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/DefaultEntities.cpp
+    startLine: 13
+  syntax:
+    content: namespace ShadowEngine::EntitySystem
+- uid: ShadowEngine.EntitySystem.operator<<(std::ostream &,const Entity &)
+  id: ostream &,const Entity &)
+  parent: ShadowEngine.EntitySystem
+  href: ShadowEngine.EntitySystem.yml
+  langs:
+  - cplusplus
+  name: operator<<(std::ostream &os, const Entity &dt)
+  nameWithType: ShadowEngine::EntitySystem::operator<<(std::ostream &os, const Entity &dt)
+  fullName: std::ostream& ShadowEngine::EntitySystem::operator<<(std::ostream &os, const Entity &dt)
+  overload: ShadowEngine.EntitySystem.operator<<*
+  type: Method
+  source:
+    remote: &o1
+      path: ShadowEngine/src/EntitySystem/Entity.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/EntitySystem/Entity.cpp
+    startLine: 79
+  header:
+    remote: *o1
+    path: ShadowEngine/src/EntitySystem/Entity.cpp
+    startLine: 79
+  syntax:
+    content: 'public: std::ostream & operator<<(std::ostream &os, const Entity &dt)'
+    parameters:
+    - id: os
+      type: 49c1ef81
+    - id: dt
+      type: c0689d9e
+    return:
+      type: 49c1ef81
+references:
+- uid: 49c1ef81
+  spec.cplusplus:
+  - name: std::ostream &
+    fullName: std::ostream &
+- uid: c0689d9e
+  spec.cplusplus:
+  - name: const Entity &
+    fullName: const Entity &
+- uid: ShadowEngine.EntitySystem.operator<<*
+  name: operator<<
+  nameWithType: ShadowEngine::EntitySystem::operator<<
+  fullName: std::ostream& ShadowEngine::EntitySystem::operator<<
+- uid: ShadowEngine.EntitySystem.EntityManager
+  parent: ShadowEngine.EntitySystem
+  href: ShadowEngine.EntitySystem.EntityManager.yml
+  name: EntityManager
+  nameWithType: EntityManager
+  fullName: ShadowEngine::EntitySystem::EntityManager
+  type: Class
+  summary: "<p>Manages the memory and IDs of Entities. </p>"
+  syntax:
+    content: 'public: class EntityManager'
+- uid: ShadowEngine.EntitySystem.EntityRegistry
+  parent: ShadowEngine.EntitySystem
+  href: ShadowEngine.EntitySystem.EntityRegistry.yml
+  name: EntityRegistry
+  nameWithType: EntityRegistry
+  fullName: ShadowEngine::EntitySystem::EntityRegistry
+  type: Class
+  syntax:
+    content: 'public: class EntityRegistry'
+- uid: ShadowEngine.EntitySystem.EntitySystem
+  parent: ShadowEngine.EntitySystem
+  href: ShadowEngine.EntitySystem.EntitySystem.yml
+  name: EntitySystem
+  nameWithType: EntitySystem
+  fullName: ShadowEngine::EntitySystem::EntitySystem
+  type: Class
+  summary: "<p>The module that manages all the Entities and Scenes </p>"
+  syntax:
+    content: 'public: class EntitySystem : public hadowModule'
+- uid: ShadowEngine.EntitySystem.Scene
+  parent: ShadowEngine.EntitySystem
+  href: ShadowEngine.EntitySystem.Scene.yml
+  name: Scene
+  nameWithType: Scene
+  fullName: ShadowEngine::EntitySystem::Scene
+  type: Class
+  syntax:
+    content: 'public: class Scene : public HObject'
+- uid: ShadowEngine.EntitySystem.SceneEntity
+  parent: ShadowEngine.EntitySystem
+  href: ShadowEngine.EntitySystem.SceneEntity.yml
+  name: SceneEntity
+  nameWithType: SceneEntity
+  fullName: ShadowEngine::EntitySystem::SceneEntity
+  type: Class
+  summary: "<p>Entitys that have a world positon </p>"
+  syntax:
+    content: 'public: class SceneEntity'
+- uid: ShadowEngine.EntitySystem.SystemCallbacks
+  parent: ShadowEngine.EntitySystem
+  href: ShadowEngine.EntitySystem.SystemCallbacks.yml
+  name: SystemCallbacks
+  nameWithType: SystemCallbacks
+  fullName: ShadowEngine::EntitySystem::SystemCallbacks
+  type: Struct
+  syntax:
+    content: 'public: struct SystemCallbacks'

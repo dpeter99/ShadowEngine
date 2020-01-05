@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_entity_container" kind="class" language="C++" prot="public">
+    <compoundname>EntityContainer</compoundname>
+    <basecompoundref refid="class_i_entity_container" prot="public" virt="non-virtual">IEntityContainer</basecompoundref>
+    <innerclass refid="union_entity_container_1_1_element" prot="private">EntityContainer::Element</innerclass>
+    <innerclass refid="class_entity_container_1_1iterator" prot="public">EntityContainer::iterator</innerclass>
+    <innerclass refid="class_entity_container_1_1_memory_chunk" prot="public">EntityContainer::MemoryChunk</innerclass>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>Type</declname>
+        <defname>Type</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="class_entity_container_1abf38a94d7d07f49bf355f141da4412c3" prot="protected" static="no">
+        <type>std::vector&lt;<ref refid="class_entity_container_1_1_memory_chunk" kindref="compound">MemoryChunk</ref> *&gt;</type>
+        <definition>using EntityContainer&lt;Type&gt;::MemoryChunks =  std::vector&lt;MemoryChunk*&gt;</definition>
+        <argsstring></argsstring>
+        <name>MemoryChunks</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="85" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="85" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_entity_container_1a4dae0522aa67a674fdddcd5eb35f5ca8" prot="private" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t EntityContainer&lt;Type&gt;::MAX_OBJECTS_IN_CHUNK</definition>
+        <argsstring></argsstring>
+        <name>MAX_OBJECTS_IN_CHUNK</name>
+        <initializer>= 2048</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="22" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="22" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_container_1a602cdee1f511d8326e9d4021b18b171e" prot="private" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t EntityContainer&lt;Type&gt;::ELEMENT_SIZE</definition>
+        <argsstring></argsstring>
+        <name>ELEMENT_SIZE</name>
+        <initializer>= (sizeof(Element))</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="23" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="23" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_container_1a6221db36df9c448f01a2cc094848ef4a" prot="private" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t EntityContainer&lt;Type&gt;::ALLOC_SIZE</definition>
+        <argsstring></argsstring>
+        <name>ALLOC_SIZE</name>
+        <initializer>= ELEMENT_SIZE * MAX_OBJECTS_IN_CHUNK</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="24" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="24" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_entity_container_1a0f09ddca9d2c8c21f708c83477ae5c73" prot="public" static="no" mutable="no">
+        <type>MemoryChunks</type>
+        <definition>MemoryChunks EntityContainer&lt;Type&gt;::m_Chunks</definition>
+        <argsstring></argsstring>
+        <name>m_Chunks</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="162" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="162" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_entity_container_1aca0c5ab8e5fab6f9d7423cf333570575" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>EntityContainer&lt;Type&gt;::EntityContainer</definition>
+        <argsstring>()</argsstring>
+        <name>EntityContainer</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="166" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="166" bodyend="169" />
+      </memberdef>
+      <memberdef kind="function" id="class_entity_container_1adad753bec93e6eb0ce9a12edda2f8249" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void *</type>
+        <definition>void* EntityContainer&lt;Type&gt;::CreateObject</definition>
+        <argsstring>()</argsstring>
+        <name>CreateObject</name>
+        <reimplements refid="class_i_entity_container_1ae74eeb71df42336333e171b9795b3059">CreateObject</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="171" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="171" bodyend="206" />
+      </memberdef>
+      <memberdef kind="function" id="class_entity_container_1af3a2e4890ad42d53f40710776cbd5851" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void EntityContainer&lt;Type&gt;::DestroyObject</definition>
+        <argsstring>(void *object)</argsstring>
+        <name>DestroyObject</name>
+        <reimplements refid="class_i_entity_container_1a0d45929610cc0d38ee6e1103806807f0">DestroyObject</reimplements>
+        <param>
+          <type>void *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="208" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="208" bodyend="225" />
+      </memberdef>
+      <memberdef kind="function" id="class_entity_container_1a3c3878994c5c6d0f08cf985a58720ee0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>
+          <ref refid="class_entity_container_1_1iterator" kindref="compound">iterator</ref>
+        </type>
+        <definition>iterator EntityContainer&lt;Type&gt;::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="228" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="228" bodyend="231" />
+      </memberdef>
+      <memberdef kind="function" id="class_entity_container_1aae3b6436077a3abfdbd81361cba3bce4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>
+          <ref refid="class_entity_container_1_1iterator" kindref="compound">iterator</ref>
+        </type>
+        <definition>iterator EntityContainer&lt;Type&gt;::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="233" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="233" bodyend="233" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="159">
+        <label>IEntityContainer</label>
+        <link refid="class_i_entity_container" />
+      </node>
+      <node id="158">
+        <label>EntityContainer&lt;Type&gt;</label>
+        <link refid="class_entity_container" />
+        <childnode refid="159" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="161">
+        <label>IEntityContainer</label>
+        <link refid="class_i_entity_container" />
+      </node>
+      <node id="160">
+        <label>EntityContainer&lt;Type&gt;</label>
+        <link refid="class_entity_container" />
+        <childnode refid="161" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/EntitySystem/EntityContainer.h" line="13" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntityContainer.h" bodystart="13" bodyend="235" />
+    <listofallmembers>
+      <member refid="class_entity_container_1a6221db36df9c448f01a2cc094848ef4a" prot="private" virt="non-virtual">
+        <scope>EntityContainer</scope>
+        <name>ALLOC_SIZE</name>
+      </member>
+      <member refid="class_entity_container_1a3c3878994c5c6d0f08cf985a58720ee0" prot="public" virt="non-virtual">
+        <scope>EntityContainer</scope>
+        <name>begin</name>
+      </member>
+      <member refid="class_entity_container_1adad753bec93e6eb0ce9a12edda2f8249" prot="public" virt="virtual">
+        <scope>EntityContainer</scope>
+        <name>CreateObject</name>
+      </member>
+      <member refid="class_entity_container_1af3a2e4890ad42d53f40710776cbd5851" prot="public" virt="virtual">
+        <scope>EntityContainer</scope>
+        <name>DestroyObject</name>
+      </member>
+      <member refid="class_entity_container_1a602cdee1f511d8326e9d4021b18b171e" prot="private" virt="non-virtual">
+        <scope>EntityContainer</scope>
+        <name>ELEMENT_SIZE</name>
+      </member>
+      <member refid="class_entity_container_1aae3b6436077a3abfdbd81361cba3bce4" prot="public" virt="non-virtual">
+        <scope>EntityContainer</scope>
+        <name>end</name>
+      </member>
+      <member refid="class_entity_container_1aca0c5ab8e5fab6f9d7423cf333570575" prot="public" virt="non-virtual">
+        <scope>EntityContainer</scope>
+        <name>EntityContainer</name>
+      </member>
+      <member refid="class_entity_container_1a0f09ddca9d2c8c21f708c83477ae5c73" prot="public" virt="non-virtual">
+        <scope>EntityContainer</scope>
+        <name>m_Chunks</name>
+      </member>
+      <member refid="class_entity_container_1a4dae0522aa67a674fdddcd5eb35f5ca8" prot="private" virt="non-virtual">
+        <scope>EntityContainer</scope>
+        <name>MAX_OBJECTS_IN_CHUNK</name>
+      </member>
+      <member refid="class_entity_container_1abf38a94d7d07f49bf355f141da4412c3" prot="protected" virt="non-virtual">
+        <scope>EntityContainer</scope>
+        <name>MemoryChunks</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

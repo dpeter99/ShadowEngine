@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine" kind="namespace" language="C++">
+    <compoundname>ShadowEngine</compoundname>
+    <innerclass refid="ShadowEngine.Log" prot="public">ShadowEngine::Log</innerclass>
+    <innerclass refid="ShadowEngine.ShadowApplication" prot="public">ShadowEngine::ShadowApplication</innerclass>
+    <innerclass refid="ShadowEngine.ShadowModule" prot="public">ShadowEngine::ShadowModule</innerclass>
+    <innerclass refid="ShadowEngine.ShadowModuleManager" prot="public">ShadowEngine::ShadowModuleManager</innerclass>
+    <innerclass refid="ShadowEngine.SHObject" prot="public">ShadowEngine::SHObject</innerclass>
+    <innernamespace refid="ShadowEngine.Assets">ShadowEngine::Assets</innernamespace>
+    <innernamespace refid="ShadowEngine.Debug">ShadowEngine::Debug</innernamespace>
+    <innernamespace refid="ShadowEngine.DebugGui">ShadowEngine::DebugGui</innernamespace>
+    <innernamespace refid="ShadowEngine.EntitySystem">ShadowEngine::EntitySystem</innernamespace>
+    <innernamespace refid="ShadowEngine.EventSystem">ShadowEngine::EventSystem</innernamespace>
+    <innernamespace refid="ShadowEngine.InputSystem">ShadowEngine::InputSystem</innernamespace>
+    <innernamespace refid="ShadowEngine.Rendering">ShadowEngine::Rendering</innernamespace>
+    <innernamespace refid="ShadowEngine.SDLPlatform">ShadowEngine::SDLPlatform</innernamespace>
+    <innernamespace refid="ShadowEngine.ShadowEngine">ShadowEngine::ShadowEngine</innernamespace>
+    <innernamespace refid="ShadowEngine.ShadowEntity">ShadowEngine::ShadowEntity</innernamespace>
+    <innernamespace refid="ShadowEngine.World">ShadowEngine::World</innernamespace>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ShadowEngine.Scope" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::unique_ptr&lt;T&gt;</type>
+        <definition>using ShadowEngine::Scope = typedef std::unique_ptr&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>Scope</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Core/Core.h" line="18" column="1" bodyfile="ShadowEngine/src/Core/Core.h" bodystart="18" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="typedef" id="ShadowEngine.Ref" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt;T&gt;</type>
+        <definition>using ShadowEngine::Ref = typedef std::shared_ptr&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>Ref</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Core/Core.h" line="21" column="1" bodyfile="ShadowEngine/src/Core/Core.h" bodystart="21" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/Core/Core.h" line="15" column="1" />
+  </compounddef>
+</doxygen>

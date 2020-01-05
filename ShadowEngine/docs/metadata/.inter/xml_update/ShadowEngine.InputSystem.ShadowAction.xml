@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.InputSystem.ShadowAction" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::InputSystem::ShadowAction</compoundname>
+    <basecompoundref refid="ShadowEngine.InputSystem.IShadowAction" prot="public" virt="non-virtual">ShadowEngine::InputSystem::IShadowAction</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.ShadowAction.active" prot="private" static="no" mutable="no">
+        <type>SHObject_Base(<ref refid="ShadowEngine.InputSystem.ShadowAction" kindref="compound">ShadowAction</ref>&lt;T&gt;) std bool</type>
+        <definition>SHObject_Base (ShadowAction&lt;T&gt;) std bool ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::active</definition>
+        <argsstring></argsstring>
+        <name>active</name>
+        <briefdescription>
+          <para>weather this action is active and listening </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="22" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="15" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.ShadowAction.performed_b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::performed_b</definition>
+        <argsstring></argsstring>
+        <name>performed_b</name>
+        <briefdescription>
+          <para>Weather it was active in the current frame. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="27" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="27" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.ShadowAction.performed_b_last" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::performed_b_last</definition>
+        <argsstring></argsstring>
+        <name>performed_b_last</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="29" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="29" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.ShadowAction.data" prot="private" static="no" mutable="no">
+        <type>T</type>
+        <definition>T ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+          <para>The data state of the action. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="34" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="34" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.ShadowAction.binding_" prot="private" static="no" mutable="no">
+        <type>
+          <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;T&gt; *</type>
+        <definition>InputBinding&lt;T&gt;* ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::binding_</definition>
+        <argsstring></argsstring>
+        <name>binding_</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="39" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="39" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.ShadowAction.state_" prot="private" static="no" mutable="no">
+        <type>ActionState</type>
+        <definition>ActionState ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="40" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="40" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.ShadowAction.continuous_" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::continuous_</definition>
+        <argsstring></argsstring>
+        <name>continuous_</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="42" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="42" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="ShadowEngine.InputSystem.ShadowAction.InputActionInspector" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class InputActionInspector</definition>
+        <argsstring></argsstring>
+        <name>InputActionInspector</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="45" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="45" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="ShadowEngine.InputSystem.ShadowAction.performed" prot="public" static="no" mutable="no">
+        <type>
+          <ref refid="Callback" kindref="compound">Callback</ref>
+        </type>
+        <definition>Callback ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::performed</definition>
+        <argsstring></argsstring>
+        <name>performed</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="47" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="47" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.ShadowAction(std::string,InputBinding&lt;T&gt; *,bool)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::ShadowAction</definition>
+        <argsstring>(std::string a, InputBinding&lt;T&gt; *b, bool continuous=false)</argsstring>
+        <name>ShadowAction</name>
+        <param>
+          <type>std::string</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.InputSystem.InputBinding" kindref="compound">InputBinding</ref>&lt;T&gt; *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>continuous</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="49" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="49" bodyend="63" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.~ShadowAction()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::~ShadowAction</definition>
+        <argsstring>()</argsstring>
+        <name>~ShadowAction</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="65" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="65" bodyend="68" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.ProcessEvent(EventSystem::ShadowEvent &amp;)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::ProcessEvent</definition>
+        <argsstring>(EventSystem::ShadowEvent &amp;e) override</argsstring>
+        <name>ProcessEvent</name>
+        <reimplements refid="ShadowEngine.InputSystem.IShadowAction.ProcessEvent(EventSystem::ShadowEvent &amp;)">ProcessEvent</reimplements>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.EventSystem.ShadowEvent" kindref="compound">EventSystem::ShadowEvent</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+          <para>Updates the Action with the event passed in. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>e</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>Event object </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="75" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="75" bodyend="87" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.AddEventListener(ActionState)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::AddEventListener</definition>
+        <argsstring>(ActionState state) override</argsstring>
+        <name>AddEventListener</name>
+        <reimplements refid="ShadowEngine.InputSystem.IShadowAction.AddEventListener(ActionState)">AddEventListener</reimplements>
+        <param>
+          <type>ActionState</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="90" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="90" bodyend="92" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.RemoveEventListener()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::RemoveEventListener</definition>
+        <argsstring>() override</argsstring>
+        <name>RemoveEventListener</name>
+        <reimplements refid="ShadowEngine.InputSystem.IShadowAction.RemoveEventListener()">RemoveEventListener</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="94" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="94" bodyend="96" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.SetActive(bool)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::SetActive</definition>
+        <argsstring>(bool set) override</argsstring>
+        <name>SetActive</name>
+        <reimplements refid="ShadowEngine.InputSystem.IShadowAction.SetActive(bool)">SetActive</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>set</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="99" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="99" bodyend="102" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.GetName()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::GetName</definition>
+        <argsstring>() override</argsstring>
+        <name>GetName</name>
+        <reimplements refid="ShadowEngine.InputSystem.IShadowAction.GetName()">GetName</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="104" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="104" bodyend="107" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.GetState()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>ActionState</type>
+        <definition>ActionState ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::GetState</definition>
+        <argsstring>() override</argsstring>
+        <name>GetState</name>
+        <reimplements refid="ShadowEngine.InputSystem.IShadowAction.GetState()">GetState</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="109" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="109" bodyend="112" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.SetState(ActionState)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::SetState</definition>
+        <argsstring>(ActionState state) override</argsstring>
+        <name>SetState</name>
+        <reimplements refid="ShadowEngine.InputSystem.IShadowAction.SetState(ActionState)">SetState</reimplements>
+        <param>
+          <type>ActionState</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="115" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="115" bodyend="154" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.GetBinding()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>
+          <ref refid="ShadowEngine.InputSystem.IInputBinding" kindref="compound">IInputBinding</ref> &amp;</type>
+        <definition>IInputBinding&amp; ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::GetBinding</definition>
+        <argsstring>() override</argsstring>
+        <name>GetBinding</name>
+        <reimplements refid="ShadowEngine.InputSystem.IShadowAction.GetBinding()">GetBinding</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="156" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="156" bodyend="159" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.IsContinuous()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::IsContinuous</definition>
+        <argsstring>() override</argsstring>
+        <name>IsContinuous</name>
+        <reimplements refid="ShadowEngine.InputSystem.IShadowAction.IsContinuous()">IsContinuous</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="161" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="161" bodyend="164" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.SetContinuous(bool)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::SetContinuous</definition>
+        <argsstring>(bool set) override</argsstring>
+        <name>SetContinuous</name>
+        <reimplements refid="ShadowEngine.InputSystem.IShadowAction.SetContinuous(bool)">SetContinuous</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>set</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="167" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="167" bodyend="170" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.GetPerformed()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::GetPerformed</definition>
+        <argsstring>() override</argsstring>
+        <name>GetPerformed</name>
+        <reimplements refid="ShadowEngine.InputSystem.IShadowAction.GetPerformed()">GetPerformed</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="172" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="172" bodyend="175" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.GetData()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T</type>
+        <definition>const T ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::GetData</definition>
+        <argsstring>()</argsstring>
+        <name>GetData</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="177" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="177" bodyend="180" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.Update()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::Update</definition>
+        <argsstring>() override</argsstring>
+        <name>Update</name>
+        <reimplements refid="ShadowEngine.InputSystem.IShadowAction.Update()">Update</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="182" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="182" bodyend="189" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.Performed()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::Performed</definition>
+        <argsstring>()</argsstring>
+        <name>Performed</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="192" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="192" bodyend="195" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.Started()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::Started</definition>
+        <argsstring>()</argsstring>
+        <name>Started</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="197" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="197" bodyend="200" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.Progress()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::Progress</definition>
+        <argsstring>()</argsstring>
+        <name>Progress</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="202" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="202" bodyend="205" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.ShadowAction.Canceled()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::InputSystem::ShadowAction&lt;T&gt;::Canceled</definition>
+        <argsstring>()</argsstring>
+        <name>Canceled</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/ShadowAction.h" line="207" column="1" bodyfile="ShadowEngine/src/ShadowInput/ShadowAction.h" bodystart="207" bodyend="210" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="491">
+        <label>ShadowEngine::InputSystem::IShadowAction</label>
+        <link refid="ShadowEngine.InputSystem.IShadowAction" />
+        <childnode refid="492" relation="public-inheritance"></childnode>
+      </node>
+      <node id="492">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="490">
+        <label>ShadowEngine::InputSystem::ShadowAction&lt;T&gt;</label>
+        <link refid="ShadowEngine.InputSystem.ShadowAction" />
+        <childnode refid="491" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="494">
+        <label>ShadowEngine::InputSystem::IShadowAction</label>
+        <link refid="ShadowEngine.InputSystem.IShadowAction" />
+        <childnode refid="495" relation="public-inheritance"></childnode>
+      </node>
+      <node id="495">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="496">
+        <label>Callback</label>
+        <link refid="Callback" />
+      </node>
+      <node id="493">
+        <label>ShadowEngine::InputSystem::ShadowAction&lt;T&gt;</label>
+        <link refid="ShadowEngine.InputSystem.ShadowAction" />
+        <childnode refid="494" relation="public-inheritance"></childnode>
+        <childnode refid="496" relation="usage">
+          <edgelabel>performed</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowInput/InputBinding.h" line="16" column="1" bodyfile="ShadowEngine/src/ShadowInput/InputBinding.h" bodystart="16" bodyend="-1" />
+    <listofallmembers>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.active" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>active</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.AddEventListener(ActionState)" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>AddEventListener</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.binding_" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>binding_</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.Canceled()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>Canceled</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.continuous_" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>continuous_</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.data" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>data</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.GetBinding()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>GetBinding</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.GetData()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>GetData</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.GetName()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>GetName</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.GetPerformed()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>GetPerformed</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.GetState()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>GetState</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.InputActionInspector" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>InputActionInspector</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.IsContinuous()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>IsContinuous</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.performed" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>performed</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.Performed()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>Performed</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.performed_b" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>performed_b</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.performed_b_last" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>performed_b_last</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.ProcessEvent(EventSystem::ShadowEvent &amp;)" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>ProcessEvent</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.Progress()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>Progress</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.RemoveEventListener()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>RemoveEventListener</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.SetActive(bool)" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>SetActive</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.SetContinuous(bool)" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>SetContinuous</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.SetState(ActionState)" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>SetState</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.ShadowAction(std::string,InputBinding&lt;T&gt; *,bool)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>ShadowAction</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.Started()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>Started</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.state_" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>state_</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.Update()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>Update</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.ShadowAction.~ShadowAction()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>~ShadowAction</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::ShadowAction</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

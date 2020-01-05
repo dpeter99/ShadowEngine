@@ -7,45 +7,62 @@
 
 #include "OrthographicCamera.h"
 #include "Shader.h"
+#include "ShadowAsset/Assets/Mesh.h"
+
+#include "ShadowRenderer/DataStructs.h"
+#include "RenderScene.h"
 
 
 class Camera;
 
 namespace ShadowEngine::Rendering {
-
+	
 	class Renderer : public ShadowEngine::ShadowModule
 	{
 		SHObject_Base(Renderer)
 		
-	public:
-		Renderer* instance;
+	private:
+		RendererAPI* s_RendererAPI = nullptr;
 
+		RenderScene* scene = nullptr;
 		
+	public:
+		Renderer();
+
+		//Singleton Instance
+		static Renderer* instance;
+
 		void Init() override;
-		void Update() override {};
-		void Render() override {};
+		void Update() override;
+		void Render() override;
 		void LateRender() override {};
-		
+
 		std::string GetName() override { return "Renderer"; }
 
-		static void BeginScene(Camera& camera);
-		static void EndScene();
 
-		static void Submit(const std::shared_ptr<Shader>& shader, const std::shared_ptr<VertexArray>& vertexArray, const glm::mat4& transform = glm::mat4(1.0f));
 
+		/**
+		 * \brief Starts the Rendering scene
+		 * Sets up the render API
+		 * Sets up the render graph for the new frame
+		 */
+		void BeginScene(Camera* camera);
+		
+		/**
+		 * \brief Finishes the draw recording
+		 */
+		void EndScene();
+
+		void RenderNodes();
+		
+		static void Submit(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4& transform = glm::mat4(1.0f));
+
+		static Ref<RenderNode> AddRenderNode(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> material, const glm::mat4& transform = glm::mat4(1.0f));
+
+		static Ref<LightNode> AddLightNode();
+		
 		inline static RendererAPI::API GetAPI() { return RendererAPI::GetAPI(); }
 
-
-	private:
-
-		static RendererAPI* s_RendererAPI;
-
-		struct SceneData
-		{
-			glm::mat4 ViewProjectionMatrix;
-		};
-
-		static SceneData* s_SceneData;
 	};
 
 

@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_rendering_1_1_shader" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ShadowEngine::Rendering::Shader</compoundname>
+    <derivedcompoundref refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader" prot="public" virt="non-virtual">ShadowEngine::Rendering::D3D12::D3D12Shader</derivedcompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_rendering_1_1_shader_1a53d65d688776b788912489f46a4d5b79" prot="protected" static="no" mutable="no">
+        <type>
+          <ref refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet" kindref="compound">ShaderPropertySheet</ref>
+        </type>
+        <definition>ShaderPropertySheet ShadowEngine::Rendering::Shader::properties</definition>
+        <argsstring></argsstring>
+        <name>properties</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Shader.h" line="11" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Shader.h" bodystart="11" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_1ab0d77a3a1c647ec7c1afb4db0d319b7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ShadowEngine::Rendering::Shader::~Shader</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Shader</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Shader.h" line="13" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_1a7d655e5a14f329e121c3d407ddab2643" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet" kindref="compound">ShaderPropertySheet</ref> *</type>
+        <definition>ShaderPropertySheet * ShadowEngine::Rendering::Shader::GetPropertiesCopy</definition>
+        <argsstring>()</argsstring>
+        <name>GetPropertiesCopy</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Shader.h" line="15" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Shader.cpp" bodystart="10" bodyend="13" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_1afc05fb8a1a6e995068fe23ff252e908e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::Rendering::Shader::Bind</definition>
+        <argsstring>() const =0</argsstring>
+        <name>Bind</name>
+        <reimplementedby refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a6ddf408e699a63c57834db95a39fe741">Bind</reimplementedby>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Shader.h" line="17" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_1a55ed945a5763d0f55fb906dd0f4ce2fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ShadowEngine::Rendering::Shader::Unbind</definition>
+        <argsstring>() const =0</argsstring>
+        <name>Unbind</name>
+        <reimplementedby refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader_1a2c3962cffc7d480cdecd2b144a9adf4f">Unbind</reimplementedby>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Shader.h" line="18" column="1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_1a7477061178ab257b6759a6ff298dd298" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="class_shadow_engine_1_1_rendering_1_1_shader" kindref="compound">Shader</ref> *</type>
+        <definition>Shader * ShadowEngine::Rendering::Shader::Create</definition>
+        <argsstring>(const std::string &amp;vertexSrc, const std::string &amp;fragmentSrc)</argsstring>
+        <name>Create</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>vertexSrc</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fragmentSrc</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Shader.h" line="20" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Shader.cpp" bodystart="15" bodyend="25" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_rendering_1_1_shader_1aae3d65f64cced607235c648a6ce9e4c9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="class_shadow_engine_1_1_rendering_1_1_shader" kindref="compound">Shader</ref> *</type>
+        <definition>Shader * ShadowEngine::Rendering::Shader::CreateFromCompiled</definition>
+        <argsstring>(const std::string &amp;VSfilePath, const std::string &amp;PSfilePath)</argsstring>
+        <name>CreateFromCompiled</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>VSfilePath</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>PSfilePath</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/Shader.h" line="21" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Shader.cpp" bodystart="27" bodyend="37" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="479">
+        <label>ShadowEngine::Rendering::D3D12::D3D12Shader</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_d3_d12_1_1_d3_d12_shader" />
+        <childnode refid="478" relation="public-inheritance"></childnode>
+      </node>
+      <node id="478">
+        <label>ShadowEngine::Rendering::Shader</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_shader" />
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="481">
+        <label>ShadowEngine::Rendering::ShaderPropertySheet</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_shader_property_sheet" />
+      </node>
+      <node id="480">
+        <label>ShadowEngine::Rendering::Shader</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_shader" />
+        <childnode refid="481" relation="usage">
+          <edgelabel>properties</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowRenderer/Shader.h" line="9" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/Shader.h" bodystart="8" bodyend="22" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_1afc05fb8a1a6e995068fe23ff252e908e" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::Shader</scope>
+        <name>Bind</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_1a7477061178ab257b6759a6ff298dd298" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Shader</scope>
+        <name>Create</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_1aae3d65f64cced607235c648a6ce9e4c9" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Shader</scope>
+        <name>CreateFromCompiled</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_1a7d655e5a14f329e121c3d407ddab2643" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Shader</scope>
+        <name>GetPropertiesCopy</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_1a53d65d688776b788912489f46a4d5b79" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Shader</scope>
+        <name>properties</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_1a55ed945a5763d0f55fb906dd0f4ce2fe" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::Shader</scope>
+        <name>Unbind</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_rendering_1_1_shader_1ab0d77a3a1c647ec7c1afb4db0d319b7b" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::Shader</scope>
+        <name>~Shader</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

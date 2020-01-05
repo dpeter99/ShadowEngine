@@ -1,0 +1,110 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Assets.Mesh
+  id: ShadowEngine.Assets.Mesh
+  parent: ShadowEngine.Assets
+  href: ShadowEngine.Assets.Mesh.yml
+  langs:
+  - cplusplus
+  name: Mesh
+  nameWithType: Mesh
+  fullName: ShadowEngine::Assets::Mesh
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowAsset/Assets/Mesh.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowAsset/Assets/Mesh.h
+    startLine: 9
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowAsset/Assets/Mesh.h
+    startLine: 10
+  namespace: ShadowEngine.Assets
+  syntax: &o1
+    content: 'public: class Mesh : public adowAsset'
+  inheritance:
+  - System::Object
+  - ShadowEngine.SHObject
+  - ShadowEngine.Assets.ShadowAsset
+  inheritedMembers:
+  - ShadowEngine.SHObject.GenerateId()
+  - ShadowEngine.SHObject.GetType()
+  - ShadowEngine.SHObject.GetTypeId()
+  - ShadowEngine.SHObject.~SHObject()
+references:
+- uid: ShadowEngine.SHObject.GenerateId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GenerateId()
+  nameWithType: SHObject::GenerateId()
+  fullName: static uint64_t ShadowEngine::SHObject::GenerateId()
+  type: Method
+  summary: "<p>Generates a new UID for each call. </p>"
+  syntax:
+    content: 'protected: static uint64_t GenerateId() noexcept'
+    return:
+      type: 6d8267d6
+      description: <p>Unique ID </p>
+- uid: ShadowEngine.SHObject.GetType()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetType()
+  nameWithType: SHObject::GetType()
+  fullName: virtual const std::string& ShadowEngine::SHObject::GetType()
+  type: Method
+  summary: "<p>Returns the top level class type name of the object. </p>"
+  syntax:
+    content: 'public: virtual const std::string & GetType() const =0'
+    return:
+      type: 360fc41e
+      description: <p>Class name string </p>
+- uid: ShadowEngine.SHObject.GetTypeId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetTypeId()
+  nameWithType: SHObject::GetTypeId()
+  fullName: virtual const uint64_t ShadowEngine::SHObject::GetTypeId()
+  type: Method
+  summary: "<p>Gets the top level type ID. </p>"
+  syntax:
+    content: 'public: virtual const uint64_t GetTypeId() const =0'
+    return:
+      type: 29dc5929
+      description: <p>UID of the class </p>
+- uid: ShadowEngine.SHObject.~SHObject()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: ~SHObject()
+  nameWithType: SHObject::~SHObject()
+  fullName: virtual ShadowEngine::SHObject::~SHObject()
+  type: Constructor
+  syntax:
+    content: 'public: virtual ~SHObject()=default'
+- uid: ShadowEngine.Assets.ShadowAsset
+  parent: ShadowEngine.Assets
+  href: ShadowEngine.Assets.ShadowAsset.yml
+  name: ShadowAsset
+  nameWithType: ShadowAsset
+  fullName: ShadowEngine::Assets::ShadowAsset
+  type: Class
+  syntax:
+    content: 'public: class ShadowAsset'
+- uid: ShadowEngine.Assets.Mesh
+  parent: ShadowEngine.Assets
+  href: ShadowEngine.Assets.Mesh.yml
+  name: Mesh
+  nameWithType: Mesh
+  fullName: ShadowEngine::Assets::Mesh
+  type: Class
+  syntax: *o1
+- uid: ShadowEngine.Rendering.VertexBuffer
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.VertexBuffer.yml
+  name: VertexBuffer
+  nameWithType: VertexBuffer
+  fullName: ShadowEngine::Rendering::VertexBuffer
+  type: Class
+  syntax:
+    content: 'public: class VertexBuffer'

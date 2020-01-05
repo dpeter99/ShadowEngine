@@ -1,0 +1,316 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.InputSystem.ModifierHold
+  id: ShadowEngine.InputSystem.ModifierHold
+  parent: ShadowEngine.InputSystem
+  children:
+  - ShadowEngine.InputSystem.ModifierHold.~ModifierHold()
+  - ShadowEngine.InputSystem.ModifierHold.GetDeltaTime()
+  - ShadowEngine.InputSystem.ModifierHold.GetWaitTime()
+  - ShadowEngine.InputSystem.ModifierHold.ModifierHold(const double)
+  - ShadowEngine.InputSystem.ModifierHold.ProcessInput(ModifierContext &)
+  - ShadowEngine.InputSystem.ModifierHold.RequiresContinuous()
+  href: ShadowEngine.InputSystem.ModifierHold.yml
+  langs:
+  - cplusplus
+  name: ModifierHold
+  nameWithType: ModifierHold
+  fullName: ShadowEngine::InputSystem::ModifierHold
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h
+    startLine: 8
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h
+    startLine: 10
+  namespace: ShadowEngine.InputSystem
+  summary: "<p>Hold modifier. Only activates when the binding has been active for the specified time. </p>"
+  syntax: &o2
+    content: 'public: class ModifierHold : public putModifier'
+  inheritance:
+  - System::Object
+  - ShadowEngine.SHObject
+  - ShadowEngine.InputSystem.InputModifier
+  inheritedMembers:
+  - ShadowEngine.SHObject.GenerateId()
+  - ShadowEngine.SHObject.GetType()
+  - ShadowEngine.SHObject.GetTypeId()
+  - ShadowEngine.SHObject.~SHObject()
+- uid: ShadowEngine.InputSystem.ModifierHold.~ModifierHold()
+  id: ShadowEngine.InputSystem.ModifierHold.~ModifierHold()
+  parent: ShadowEngine.InputSystem.ModifierHold
+  href: ShadowEngine.InputSystem.ModifierHold.yml
+  langs:
+  - cplusplus
+  name: ~ModifierHold()
+  nameWithType: ModifierHold::~ModifierHold()
+  fullName: ShadowEngine::InputSystem::ModifierHold::~ModifierHold()
+  overload: ShadowEngine.InputSystem.ModifierHold.~ModifierHold*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h
+    startLine: 48
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h
+    startLine: 48
+  namespace: ShadowEngine.InputSystem
+  syntax:
+    content: 'public: ~ModifierHold()'
+- uid: ShadowEngine.InputSystem.ModifierHold.GetDeltaTime()
+  id: ShadowEngine.InputSystem.ModifierHold.GetDeltaTime()
+  parent: ShadowEngine.InputSystem.ModifierHold
+  href: ShadowEngine.InputSystem.ModifierHold.yml
+  langs:
+  - cplusplus
+  name: GetDeltaTime()
+  nameWithType: ModifierHold::GetDeltaTime()
+  fullName: double ShadowEngine::InputSystem::ModifierHold::GetDeltaTime()
+  overload: ShadowEngine.InputSystem.ModifierHold.GetDeltaTime*
+  type: Method
+  source:
+    remote: &o1
+      path: ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.cpp
+    startLine: 12
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h
+    startLine: 35
+  namespace: ShadowEngine.InputSystem
+  summary: "<p>Gets the current delta time. </p>"
+  syntax:
+    content: 'public: double GetDeltaTime()'
+    return:
+      type: a07dcde8
+- uid: ShadowEngine.InputSystem.ModifierHold.GetWaitTime()
+  id: ShadowEngine.InputSystem.ModifierHold.GetWaitTime()
+  parent: ShadowEngine.InputSystem.ModifierHold
+  href: ShadowEngine.InputSystem.ModifierHold.yml
+  langs:
+  - cplusplus
+  name: GetWaitTime()
+  nameWithType: ModifierHold::GetWaitTime()
+  fullName: double ShadowEngine::InputSystem::ModifierHold::GetWaitTime()
+  overload: ShadowEngine.InputSystem.ModifierHold.GetWaitTime*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.cpp
+    startLine: 7
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h
+    startLine: 29
+  namespace: ShadowEngine.InputSystem
+  summary: "<p>Gets the time this will wait for. </p>"
+  syntax:
+    content: 'public: double GetWaitTime()'
+    return:
+      type: a07dcde8
+- uid: ShadowEngine.InputSystem.ModifierHold.ModifierHold(const double)
+  id: ShadowEngine.InputSystem.ModifierHold.ModifierHold(const double)
+  parent: ShadowEngine.InputSystem.ModifierHold
+  href: ShadowEngine.InputSystem.ModifierHold.yml
+  langs:
+  - cplusplus
+  name: ModifierHold(const double time)
+  nameWithType: ModifierHold::ModifierHold(const double time)
+  fullName: ShadowEngine::InputSystem::ModifierHold::ModifierHold(const double time)
+  overload: ShadowEngine.InputSystem.ModifierHold.ModifierHold*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h
+    startLine: 43
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h
+    startLine: 43
+  namespace: ShadowEngine.InputSystem
+  summary: "<p>Constructor, gets the time it should wait. </p>"
+  syntax:
+    content: 'public: ModifierHold(const double time)'
+    parameters:
+    - id: time
+      type: f02c0752
+      description: <p>Wait time </p>
+- uid: ShadowEngine.InputSystem.ModifierHold.ProcessInput(ModifierContext &)
+  id: ShadowEngine.InputSystem.ModifierHold.ProcessInput(ModifierContext &)
+  parent: ShadowEngine.InputSystem.ModifierHold
+  href: ShadowEngine.InputSystem.ModifierHold.yml
+  langs:
+  - cplusplus
+  name: ProcessInput(ModifierContext &ctx)
+  nameWithType: ModifierHold::ProcessInput(ModifierContext &ctx)
+  fullName: void ShadowEngine::InputSystem::ModifierHold::ProcessInput(ModifierContext &ctx)
+  overload: ShadowEngine.InputSystem.ModifierHold.ProcessInput*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.cpp
+    startLine: 17
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h
+    startLine: 37
+  namespace: ShadowEngine.InputSystem
+  syntax:
+    content: 'public: void ProcessInput(ModifierContext &ctx) override'
+    parameters:
+    - id: ctx
+      type: ShadowEngine.InputSystem.ModifierContext76390d34
+- uid: ShadowEngine.InputSystem.ModifierHold.RequiresContinuous()
+  id: ShadowEngine.InputSystem.ModifierHold.RequiresContinuous()
+  parent: ShadowEngine.InputSystem.ModifierHold
+  href: ShadowEngine.InputSystem.ModifierHold.yml
+  langs:
+  - cplusplus
+  name: RequiresContinuous()
+  nameWithType: ModifierHold::RequiresContinuous()
+  fullName: bool ShadowEngine::InputSystem::ModifierHold::RequiresContinuous()
+  overload: ShadowEngine.InputSystem.ModifierHold.RequiresContinuous*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.cpp
+    startLine: 39
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowInput/Modifiers/ModifierHold.h
+    startLine: 53
+  namespace: ShadowEngine.InputSystem
+  summary: "<p>Processes a event. Called after the binding processed it. </p>"
+  syntax:
+    content: 'public: virtual bool RequiresContinuous() override'
+    return:
+      type: 13ff06c5
+      description: <p>true if it needs continuous binding </p>
+  overridden: ShadowEngine.InputSystem.InputModifier.RequiresContinuous()
+references:
+- uid: a07dcde8
+  spec.cplusplus:
+  - name: double
+    fullName: double
+- uid: ShadowEngine.InputSystem.ModifierHold.GetWaitTime*
+  name: GetWaitTime
+  nameWithType: ModifierHold::GetWaitTime
+  fullName: double ShadowEngine::InputSystem::ModifierHold::GetWaitTime
+- uid: ShadowEngine.InputSystem.ModifierHold.GetDeltaTime*
+  name: GetDeltaTime
+  nameWithType: ModifierHold::GetDeltaTime
+  fullName: double ShadowEngine::InputSystem::ModifierHold::GetDeltaTime
+- uid: ShadowEngine.InputSystem.ModifierContext76390d34
+  spec.cplusplus:
+  - uid: ShadowEngine.InputSystem.ModifierContext
+  - name: " &"
+    fullName: " &"
+- uid: ShadowEngine.InputSystem.ModifierHold.ProcessInput*
+  name: ProcessInput
+  nameWithType: ModifierHold::ProcessInput
+  fullName: void ShadowEngine::InputSystem::ModifierHold::ProcessInput
+- uid: f02c0752
+  spec.cplusplus:
+  - name: const double
+    fullName: const double
+- uid: ShadowEngine.InputSystem.ModifierHold.ModifierHold*
+  name: ModifierHold
+  nameWithType: ModifierHold::ModifierHold
+  fullName: ShadowEngine::InputSystem::ModifierHold::ModifierHold
+- uid: ShadowEngine.InputSystem.ModifierHold.~ModifierHold*
+  name: ~ModifierHold
+  nameWithType: ModifierHold::~ModifierHold
+  fullName: ShadowEngine::InputSystem::ModifierHold::~ModifierHold
+- uid: 13ff06c5
+  spec.cplusplus:
+  - name: bool
+    fullName: bool
+- uid: ShadowEngine.InputSystem.ModifierHold.RequiresContinuous*
+  name: RequiresContinuous
+  nameWithType: ModifierHold::RequiresContinuous
+  fullName: bool ShadowEngine::InputSystem::ModifierHold::RequiresContinuous
+- uid: ShadowEngine.SHObject.GenerateId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GenerateId()
+  nameWithType: SHObject::GenerateId()
+  fullName: static uint64_t ShadowEngine::SHObject::GenerateId()
+  type: Method
+  summary: "<p>Generates a new UID for each call. </p>"
+  syntax:
+    content: 'protected: static uint64_t GenerateId() noexcept'
+    return:
+      type: 6d8267d6
+      description: <p>Unique ID </p>
+- uid: ShadowEngine.SHObject.GetType()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetType()
+  nameWithType: SHObject::GetType()
+  fullName: virtual const std::string& ShadowEngine::SHObject::GetType()
+  type: Method
+  summary: "<p>Returns the top level class type name of the object. </p>"
+  syntax:
+    content: 'public: virtual const std::string & GetType() const =0'
+    return:
+      type: 360fc41e
+      description: <p>Class name string </p>
+- uid: ShadowEngine.SHObject.GetTypeId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetTypeId()
+  nameWithType: SHObject::GetTypeId()
+  fullName: virtual const uint64_t ShadowEngine::SHObject::GetTypeId()
+  type: Method
+  summary: "<p>Gets the top level type ID. </p>"
+  syntax:
+    content: 'public: virtual const uint64_t GetTypeId() const =0'
+    return:
+      type: 29dc5929
+      description: <p>UID of the class </p>
+- uid: ShadowEngine.SHObject.~SHObject()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: ~SHObject()
+  nameWithType: SHObject::~SHObject()
+  fullName: virtual ShadowEngine::SHObject::~SHObject()
+  type: Constructor
+  syntax:
+    content: 'public: virtual ~SHObject()=default'
+- uid: ShadowEngine.InputSystem.InputModifier
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.InputModifier.yml
+  name: InputModifier
+  nameWithType: InputModifier
+  fullName: ShadowEngine::InputSystem::InputModifier
+  type: Class
+  syntax:
+    content: 'public: class InputModifier : public HObject'
+- uid: _modifier_hold_8h
+- uid: ShadowEngine.InputSystem.ModifierHold
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.ModifierHold.yml
+  name: ModifierHold
+  nameWithType: ModifierHold
+  fullName: ShadowEngine::InputSystem::ModifierHold
+  type: Class
+  summary: "<p>Hold modifier. Only activates when the binding has been active for the specified time. </p>"
+  syntax: *o2
+- uid: ShadowEngine.InputSystem.ModifierContext
+  parent: ShadowEngine.InputSystem
+  href: ShadowEngine.InputSystem.ModifierContext.yml
+  name: ModifierContext
+  nameWithType: ModifierContext
+  fullName: ShadowEngine::InputSystem::ModifierContext
+  type: Class
+  syntax:
+    content: 'public: class ModifierContext'
+- uid: ShadowEngine.InputSystem.InputModifier.RequiresContinuous()

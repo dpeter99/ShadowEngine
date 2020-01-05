@@ -1,0 +1,150 @@
+### YamlMime:ManagedReference
+items:
+- uid: Light
+  id: Light
+  children:
+  - Light.Render()
+  href: Light.yml
+  langs:
+  - cplusplus
+  name: Light
+  nameWithType: Light
+  fullName: Light
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/EntitySystem/Entities/Light.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/EntitySystem/Entities/Light.h
+    startLine: 4
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entities/Light.h
+    startLine: 5
+  syntax: &o1
+    content: 'public: class Light : public eneEntity'
+  inheritance:
+  - System::Object
+  - Entity
+  - ShadowEngine.EntitySystem.SceneEntity
+  inheritedMembers:
+  - ShadowEngine.EntitySystem.SceneEntity.GetTransform()
+  - ShadowEngine.EntitySystem.SceneEntity.SceneEntity()
+  - ShadowEngine.EntitySystem.SceneEntity.SceneEntity(EntitySystem::Scene *)
+  - ShadowEngine.EntitySystem.SceneEntity.SetParent(rtm_ptr<Entity>)
+  - ShadowEngine.EntitySystem.SceneEntity.transform
+  - ShadowEngine.EntitySystem.SceneEntity.TransformChanged(bool)
+- uid: Light.Render()
+  id: Light.Render()
+  parent: Light
+  href: Light.yml
+  langs:
+  - cplusplus
+  name: Render()
+  nameWithType: Light::Render()
+  fullName: void Light::Render()
+  overload: Light.Render*
+  type: Method
+  source:
+    remote:
+      path: ShadowEngine/src/EntitySystem/Entities/Light.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/EntitySystem/Entities/Light.cpp
+    startLine: 5
+  header:
+    remote: *o0
+    path: ShadowEngine/src/EntitySystem/Entities/Light.h
+    startLine: 10
+  syntax:
+    content: 'public: void Render() override'
+references:
+- uid: Light.Render*
+  name: Render
+  nameWithType: Light::Render
+  fullName: void Light::Render
+- uid: ShadowEngine.EntitySystem.SceneEntity.GetTransform()
+  parent: ShadowEngine.EntitySystem.SceneEntity
+  href: ShadowEngine.EntitySystem.SceneEntity.yml
+  name: GetTransform()
+  nameWithType: SceneEntity::GetTransform()
+  fullName: ShadowEntity::Transform * ShadowEngine::EntitySystem::SceneEntity::GetTransform()
+  type: Method
+  syntax:
+    content: 'public: virtual ShadowEntity::Transform * GetTransform()'
+    return:
+      type: 1b41cd80
+- uid: ShadowEngine.EntitySystem.SceneEntity.SceneEntity()
+  parent: ShadowEngine.EntitySystem.SceneEntity
+  href: ShadowEngine.EntitySystem.SceneEntity.yml
+  name: SceneEntity()
+  nameWithType: SceneEntity::SceneEntity()
+  fullName: ShadowEngine::EntitySystem::SceneEntity::SceneEntity()
+  type: Constructor
+  syntax:
+    content: 'public: SceneEntity()'
+- uid: ShadowEngine.EntitySystem.SceneEntity.SceneEntity(EntitySystem::Scene *)
+  parent: ShadowEngine.EntitySystem.SceneEntity
+  href: ShadowEngine.EntitySystem.SceneEntity.yml
+  name: SceneEntity(EntitySystem::Scene *scene)
+  nameWithType: SceneEntity::SceneEntity(EntitySystem::Scene *scene)
+  fullName: ShadowEngine::EntitySystem::SceneEntity::SceneEntity(EntitySystem::Scene *scene)
+  type: Constructor
+  syntax:
+    content: 'public: SceneEntity(EntitySystem::Scene *scene)'
+    parameters:
+    - id: scene
+      type: ShadowEngine.EntitySystem.Scene68bc11b4
+- uid: ShadowEngine.EntitySystem.SceneEntity.SetParent(rtm_ptr<Entity>)
+  parent: ShadowEngine.EntitySystem.SceneEntity
+  href: ShadowEngine.EntitySystem.SceneEntity.yml
+  name: SetParent(rtm_ptr<Entity> e)
+  nameWithType: SceneEntity::SetParent(rtm_ptr<Entity> e)
+  fullName: void ShadowEngine::EntitySystem::SceneEntity::SetParent(rtm_ptr<Entity> e)
+  type: Method
+  syntax:
+    content: 'public: void SetParent(rtm_ptr<Entity> e) override'
+    parameters:
+    - id: e
+      type: 7ab5790a
+- uid: ShadowEngine.EntitySystem.SceneEntity.transform
+  parent: ShadowEngine.EntitySystem.SceneEntity
+  href: ShadowEngine.EntitySystem.SceneEntity.yml
+  name: transform
+  nameWithType: SceneEntity::transform
+  fullName: ShadowEntity::Transform ShadowEngine::EntitySystem::SceneEntity::transform
+  type: Field
+  syntax:
+    content: 'public: ShadowEntity::Transform transform'
+    return:
+      type: ccf1867e
+- uid: ShadowEngine.EntitySystem.SceneEntity.TransformChanged(bool)
+  parent: ShadowEngine.EntitySystem.SceneEntity
+  href: ShadowEngine.EntitySystem.SceneEntity.yml
+  name: TransformChanged(bool self)
+  nameWithType: SceneEntity::TransformChanged(bool self)
+  fullName: void ShadowEngine::EntitySystem::SceneEntity::TransformChanged(bool self)
+  type: Method
+  syntax:
+    content: 'public: virtual void TransformChanged(bool self) override'
+    parameters:
+    - id: self
+      type: 13ff06c5
+- uid: ShadowEngine.EntitySystem.SceneEntity
+  parent: ShadowEngine.EntitySystem
+  href: ShadowEngine.EntitySystem.SceneEntity.yml
+  name: SceneEntity
+  nameWithType: SceneEntity
+  fullName: ShadowEngine::EntitySystem::SceneEntity
+  type: Class
+  summary: "<p>Entitys that have a world positon </p>"
+  syntax:
+    content: 'public: class SceneEntity'
+- uid: Light
+  href: Light.yml
+  name: Light
+  nameWithType: Light
+  fullName: Light
+  type: Class
+  syntax: *o1

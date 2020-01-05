@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_entity_system_1_1_entity_system" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::EntitySystem::EntitySystem</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_shadow_module" prot="public" virt="non-virtual">ShadowEngine::ShadowModule</basecompoundref>
+    <includes refid="_entity_system_8h" local="no">EntitySystem.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_entity_system_1_1_entity_system_1ace3f51fa9709db51f1b9a9e570e18e13" prot="private" static="no" mutable="no">
+        <type>SHObject_Base(<ref refid="class_shadow_engine_1_1_entity_system_1_1_entity_system" kindref="compound">EntitySystem</ref>) private Scope&lt;<ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">Scene</ref>&gt;</type>
+        <definition>SHObject_Base (EntitySystem) private Scope&lt;Scene&gt; ShadowEngine::EntitySystem::EntitySystem::activeScene</definition>
+        <argsstring></argsstring>
+        <name>activeScene</name>
+        <briefdescription>
+          <para>The main reference to the EntityManager </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>Reference to the active scene </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="25" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.h" bodystart="15" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_system_1a990f38c09918bf2be5576f9bcd6344bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EntitySystem::EntitySystem::EntitySystem</definition>
+        <argsstring>()</argsstring>
+        <name>EntitySystem</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="29" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.cpp" bodystart="6" bodyend="9" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_system_1ab73ba3d6f67aabc02e6ede66e2bf7f3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string ShadowEngine::EntitySystem::EntitySystem::GetName</definition>
+        <argsstring>() override</argsstring>
+        <name>GetName</name>
+        <reimplements refid="class_shadow_engine_1_1_shadow_module_1a128ea061c249cd5fe494b19f63eb0a5e">GetName</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="31" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.h" bodystart="31" bodyend="31" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_system_1a379f080200d8ec3d32bd4083eeeb5617" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntitySystem::Init</definition>
+        <argsstring>() override</argsstring>
+        <name>Init</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="33" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.cpp" bodystart="11" bodyend="14" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_system_1a58c9ad4cb12c570556281bf26a6900c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntitySystem::Update</definition>
+        <argsstring>() override</argsstring>
+        <name>Update</name>
+        <reimplements refid="class_shadow_engine_1_1_shadow_module_1aa6210b8806ad120be85977428b294bb0">Update</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="34" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.cpp" bodystart="16" bodyend="19" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_system_1ad6515689047de2f45a113d8dd358d0c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntitySystem::Render</definition>
+        <argsstring>() override</argsstring>
+        <name>Render</name>
+        <reimplements refid="class_shadow_engine_1_1_shadow_module_1aab2ad5a8a1bc8185cfe664f102481557">Render</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="36" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.h" bodystart="36" bodyend="36" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_system_1aab9f29b4fd692eb69dc4d13f70d926c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntitySystem::LateRender</definition>
+        <argsstring>() override</argsstring>
+        <name>LateRender</name>
+        <reimplements refid="class_shadow_engine_1_1_shadow_module_1aff322cdcc841b388e7c9c77337053197">LateRender</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="37" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.h" bodystart="37" bodyend="37" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_system_1adfde058288b5cbbe90f28e3c14ebbbaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntitySystem::LoadEmptyScene</definition>
+        <argsstring>()</argsstring>
+        <name>LoadEmptyScene</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="39" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.cpp" bodystart="26" bodyend="34" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_system_1a85fafd089097c8f8164d997f4391c74a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::EntitySystem::EntitySystem::LoadScene</definition>
+        <argsstring>(Scene *scene)</argsstring>
+        <name>LoadScene</name>
+        <param>
+          <type>
+            <ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">Scene</ref> *</type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="40" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.cpp" bodystart="36" bodyend="48" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_entity_system_1_1_entity_system_1ad0791d9ad2cdcc69c37c8a1dd5d8a303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ShadowEngine::Scope&lt;<ref refid="class_shadow_engine_1_1_entity_system_1_1_scene" kindref="compound">Scene</ref>&gt; &amp;</type>
+        <definition>ShadowEngine::Scope&lt;Scene&gt; &amp; ShadowEngine::EntitySystem::EntitySystem::GetActiveScene</definition>
+        <argsstring>()</argsstring>
+        <name>GetActiveScene</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="42" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.cpp" bodystart="21" bodyend="24" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+      <para>The module that manages all the Entities and Scenes </para>
+    </briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="168">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="166">
+        <label>ShadowEngine::EntitySystem::EntitySystem</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_entity_system" />
+        <childnode refid="167" relation="public-inheritance"></childnode>
+      </node>
+      <node id="167">
+        <label>ShadowEngine::ShadowModule</label>
+        <link refid="class_shadow_engine_1_1_shadow_module" />
+        <childnode refid="168" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="171">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="169">
+        <label>ShadowEngine::EntitySystem::EntitySystem</label>
+        <link refid="class_shadow_engine_1_1_entity_system_1_1_entity_system" />
+        <childnode refid="170" relation="public-inheritance"></childnode>
+      </node>
+      <node id="170">
+        <label>ShadowEngine::ShadowModule</label>
+        <link refid="class_shadow_engine_1_1_shadow_module" />
+        <childnode refid="171" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/EntitySystem/EntitySystem.h" line="14" column="1" bodyfile="ShadowEngine/src/EntitySystem/EntitySystem.h" bodystart="13" bodyend="43" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_system_1ace3f51fa9709db51f1b9a9e570e18e13" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>activeScene</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_system_1a990f38c09918bf2be5576f9bcd6344bd" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>EntitySystem</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a35bf9fdc604caa67e1a2f1b0a9c574f2" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_system_1ad0791d9ad2cdcc69c37c8a1dd5d8a303" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>GetActiveScene</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_system_1ab73ba3d6f67aabc02e6ede66e2bf7f3f" prot="public" virt="virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>GetName</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a230ca5dec944e67f8d57dfc743da7d94" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_system_1a379f080200d8ec3d32bd4083eeeb5617" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>Init</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_system_1aab9f29b4fd692eb69dc4d13f70d926c6" prot="public" virt="virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>LateRender</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_system_1adfde058288b5cbbe90f28e3c14ebbbaf" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>LoadEmptyScene</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_system_1a85fafd089097c8f8164d997f4391c74a" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>LoadScene</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_system_1ad6515689047de2f45a113d8dd358d0c2" prot="public" virt="virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>Render</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_entity_system_1_1_entity_system_1a58c9ad4cb12c570556281bf26a6900c2" prot="public" virt="virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>Update</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual">
+        <scope>ShadowEngine::EntitySystem::EntitySystem</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: Time
+  id: Time
+  children:
+  - Time.deltaTime
+  - Time.deltaTime_ms
+  - Time.LAST
+  - Time.UpdateTime()
+  href: Time.yml
+  langs:
+  - cplusplus
+  name: Time
+  nameWithType: Time
+  fullName: Time
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowTime.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowTime.h
+    startLine: 5
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowTime.h
+    startLine: 6
+  syntax:
+    content: 'public: class Time'
+  inheritance:
+  - System::Object
+- uid: Time.deltaTime
+  id: Time.deltaTime
+  parent: Time
+  href: Time.yml
+  langs:
+  - cplusplus
+  name: deltaTime
+  nameWithType: Time::deltaTime
+  fullName: double Time::deltaTime
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowTime.h
+    startLine: 13
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowTime.h
+    startLine: 13
+  syntax:
+    content: 'public: static double deltaTime= 0'
+    return:
+      type: a07dcde8
+- uid: Time.deltaTime_ms
+  id: Time.deltaTime_ms
+  parent: Time
+  href: Time.yml
+  langs:
+  - cplusplus
+  name: deltaTime_ms
+  nameWithType: Time::deltaTime_ms
+  fullName: double Time::deltaTime_ms
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowTime.h
+    startLine: 14
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowTime.h
+    startLine: 14
+  syntax:
+    content: 'public: static double deltaTime_ms= 0'
+    return:
+      type: a07dcde8
+- uid: Time.LAST
+  id: Time.LAST
+  parent: Time
+  href: Time.yml
+  langs:
+  - cplusplus
+  name: LAST
+  nameWithType: Time::LAST
+  fullName: Uint64 Time::LAST
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowTime.h
+    startLine: 11
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowTime.h
+    startLine: 11
+  syntax:
+    content: 'public: static Uint64 LAST= 0'
+    return:
+      type: 385070c9
+- uid: Time.UpdateTime()
+  id: Time.UpdateTime()
+  parent: Time
+  href: Time.yml
+  langs:
+  - cplusplus
+  name: UpdateTime()
+  nameWithType: Time::UpdateTime()
+  fullName: void Time::UpdateTime()
+  overload: Time.UpdateTime*
+  type: Method
+  source:
+    remote:
+      path: ShadowEngine/src/ShadowTime.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowTime.cpp
+    startLine: 12
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowTime.h
+    startLine: 16
+  syntax:
+    content: 'public: static void UpdateTime()'
+references:
+- uid: 385070c9
+  spec.cplusplus:
+  - name: Uint64
+    fullName: Uint64
+- uid: a07dcde8
+  spec.cplusplus:
+  - name: double
+    fullName: double
+- uid: Time.UpdateTime*
+  name: UpdateTime
+  nameWithType: Time::UpdateTime
+  fullName: void Time::UpdateTime

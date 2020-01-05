@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="struct_im_gui_viewport_data_dx12" kind="struct" language="C++" prot="public">
+    <compoundname>ImGuiViewportDataDx12</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_im_gui_viewport_data_dx12_1aa78b84a5e3be01c17599028c2c7c7ef4" prot="public" static="no" mutable="no">
+        <type>IDXGISwapChain3 *</type>
+        <definition>IDXGISwapChain3* ImGuiViewportDataDx12::SwapChain</definition>
+        <argsstring></argsstring>
+        <name>SwapChain</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ImGui/imgui_impl_dx12.cpp" line="672" column="1" bodyfile="ShadowEngine/src/ImGui/imgui_impl_dx12.cpp" bodystart="672" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_im_gui_viewport_data_dx12_1a1dcc21aa5587aa2ca024f39536c234e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ImGuiViewportDataDx12::ImGuiViewportDataDx12</definition>
+        <argsstring>()</argsstring>
+        <name>ImGuiViewportDataDx12</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ImGui/imgui_impl_dx12.cpp" line="674" column="1" bodyfile="ShadowEngine/src/ImGui/imgui_impl_dx12.cpp" bodystart="674" bodyend="674" />
+      </memberdef>
+      <memberdef kind="function" id="struct_im_gui_viewport_data_dx12_1ade20b52e9c11b373f35c7a1875b81ab0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ImGuiViewportDataDx12::~ImGuiViewportDataDx12</definition>
+        <argsstring>()</argsstring>
+        <name>~ImGuiViewportDataDx12</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ImGui/imgui_impl_dx12.cpp" line="675" column="1" bodyfile="ShadowEngine/src/ImGui/imgui_impl_dx12.cpp" bodystart="675" bodyend="675" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/ImGui/imgui_impl_dx12.cpp" line="671" column="1" bodyfile="ShadowEngine/src/ImGui/imgui_impl_dx12.cpp" bodystart="670" bodyend="676" />
+    <listofallmembers>
+      <member refid="struct_im_gui_viewport_data_dx12_1a1dcc21aa5587aa2ca024f39536c234e7" prot="public" virt="non-virtual">
+        <scope>ImGuiViewportDataDx12</scope>
+        <name>ImGuiViewportDataDx12</name>
+      </member>
+      <member refid="struct_im_gui_viewport_data_dx12_1aa78b84a5e3be01c17599028c2c7c7ef4" prot="public" virt="non-virtual">
+        <scope>ImGuiViewportDataDx12</scope>
+        <name>SwapChain</name>
+      </member>
+      <member refid="struct_im_gui_viewport_data_dx12_1ade20b52e9c11b373f35c7a1875b81ab0" prot="public" virt="non-virtual">
+        <scope>ImGuiViewportDataDx12</scope>
+        <name>~ImGuiViewportDataDx12</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

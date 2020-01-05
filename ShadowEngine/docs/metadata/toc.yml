@@ -1,0 +1,453 @@
+### YamlMime:TableOfContent
+- uid: AssetManager
+  name: AssetManager
+  href: AssetManager.yml
+- uid: Callback
+  name: Callback
+  href: Callback.yml
+- uid: Camera
+  name: Camera
+  href: Camera.yml
+- uid: EntityContainer
+  name: EntityContainer
+  href: EntityContainer.yml
+  items:
+  - uid: EntityContainer.iterator
+    name: iterator
+    href: EntityContainer.iterator.yml
+  - uid: EntityContainer.MemoryChunk
+    name: MemoryChunk
+    href: EntityContainer.MemoryChunk.yml
+- uid: FirstPersonCamera
+  name: FirstPersonCamera
+  href: FirstPersonCamera.yml
+- uid: FrameResources
+  name: FrameResources
+  href: FrameResources.yml
+- uid: IEntityContainer
+  name: IEntityContainer
+  href: IEntityContainer.yml
+- uid: ImGuiViewportDataDx12
+  name: ImGuiViewportDataDx12
+  href: ImGuiViewportDataDx12.yml
+- uid: Light
+  name: Light
+  href: Light.yml
+- uid: MeshRenderer
+  name: MeshRenderer
+  href: MeshRenderer.yml
+- uid: Player
+  name: Player
+  href: Player.yml
+- uid: ShadowEngine
+  name: ShadowEngine
+  href: ShadowEngine.yml
+  items:
+  - uid: ShadowEngine.Log
+    name: Log
+    href: ShadowEngine.Log.yml
+  - uid: ShadowEngine.ShadowApplication
+    name: ShadowApplication
+    href: ShadowEngine.ShadowApplication.yml
+  - uid: ShadowEngine.ShadowModule
+    name: ShadowModule
+    href: ShadowEngine.ShadowModule.yml
+  - uid: ShadowEngine.ShadowModuleManager
+    name: ShadowModuleManager
+    href: ShadowEngine.ShadowModuleManager.yml
+  - uid: ShadowEngine.SHObject
+    name: SHObject
+    href: ShadowEngine.SHObject.yml
+- uid: ShadowEngine.Assets
+  name: ShadowEngine::Assets
+  href: ShadowEngine.Assets.yml
+  items:
+  - uid: ShadowEngine.Assets.AssetLoader
+    name: AssetLoader
+    href: ShadowEngine.Assets.AssetLoader.yml
+  - uid: ShadowEngine.Assets.Element
+    name: Element
+    href: ShadowEngine.Assets.Element.yml
+  - uid: ShadowEngine.Assets.Mesh
+    name: Mesh
+    href: ShadowEngine.Assets.Mesh.yml
+  - uid: ShadowEngine.Assets.ShadowAsset
+    name: ShadowAsset
+    href: ShadowEngine.Assets.ShadowAsset.yml
+  - uid: ShadowEngine.Assets.Texture
+    name: Texture
+    href: ShadowEngine.Assets.Texture.yml
+  - uid: ShadowEngine.Assets.Texture2D
+    name: Texture2D
+    href: ShadowEngine.Assets.Texture2D.yml
+- uid: ShadowEngine.Debug
+  name: ShadowEngine::Debug
+  href: ShadowEngine.Debug.yml
+  items:
+  - uid: ShadowEngine.Debug.DebugModule
+    name: DebugModule
+    href: ShadowEngine.Debug.DebugModule.yml
+  - uid: ShadowEngine.Debug.Inspector
+    name: Inspector
+    href: ShadowEngine.Debug.Inspector.yml
+  - uid: ShadowEngine.Debug.InspectorSystem
+    name: InspectorSystem
+    href: ShadowEngine.Debug.InspectorSystem.yml
+- uid: ShadowEngine.DebugGui
+  name: ShadowEngine::DebugGui
+  href: ShadowEngine.DebugGui.yml
+  items:
+  - uid: ShadowEngine.DebugGui.ImGuiModule
+    name: ImGuiModule
+    href: ShadowEngine.DebugGui.ImGuiModule.yml
+  - uid: ShadowEngine.DebugGui.IShadowImGui
+    name: IShadowImGui
+    href: ShadowEngine.DebugGui.IShadowImGui.yml
+- uid: ShadowEngine.EntitySystem
+  name: ShadowEngine::EntitySystem
+  href: ShadowEngine.EntitySystem.yml
+  items:
+  - uid: ShadowEngine.EntitySystem.EntityManager
+    name: EntityManager
+    href: ShadowEngine.EntitySystem.EntityManager.yml
+  - uid: ShadowEngine.EntitySystem.EntityRegistry
+    name: EntityRegistry
+    href: ShadowEngine.EntitySystem.EntityRegistry.yml
+  - uid: ShadowEngine.EntitySystem.EntitySystem
+    name: EntitySystem
+    href: ShadowEngine.EntitySystem.EntitySystem.yml
+  - uid: ShadowEngine.EntitySystem.Scene
+    name: Scene
+    href: ShadowEngine.EntitySystem.Scene.yml
+  - uid: ShadowEngine.EntitySystem.SceneEntity
+    name: SceneEntity
+    href: ShadowEngine.EntitySystem.SceneEntity.yml
+  - uid: ShadowEngine.EntitySystem.SystemCallbacks
+    name: SystemCallbacks
+    href: ShadowEngine.EntitySystem.SystemCallbacks.yml
+- uid: ShadowEngine.EventSystem
+  name: ShadowEngine::EventSystem
+  href: ShadowEngine.EventSystem.yml
+  items:
+  - uid: ShadowEngine.EventSystem.IShadowEventListener
+    name: IShadowEventListener
+    href: ShadowEngine.EventSystem.IShadowEventListener.yml
+  - uid: ShadowEngine.EventSystem.IShadowEventSource
+    name: IShadowEventSource
+    href: ShadowEngine.EventSystem.IShadowEventSource.yml
+  - uid: ShadowEngine.EventSystem.ShadowEvent
+    name: ShadowEvent
+    href: ShadowEngine.EventSystem.ShadowEvent.yml
+  - uid: ShadowEngine.EventSystem.ShadowEventManager
+    name: ShadowEventManager
+    href: ShadowEngine.EventSystem.ShadowEventManager.yml
+- uid: ShadowEngine.EventSystem.Events
+  name: ShadowEngine::EventSystem::Events
+  href: ShadowEngine.EventSystem.Events.yml
+  items:
+  - uid: ShadowEngine.EventSystem.Events.KeyEvent
+    name: KeyEvent
+    href: ShadowEngine.EventSystem.Events.KeyEvent.yml
+  - uid: ShadowEngine.EventSystem.Events.KeyPressedEvent
+    name: KeyPressedEvent
+    href: ShadowEngine.EventSystem.Events.KeyPressedEvent.yml
+  - uid: ShadowEngine.EventSystem.Events.KeyReleasedEvent
+    name: KeyReleasedEvent
+    href: ShadowEngine.EventSystem.Events.KeyReleasedEvent.yml
+  - uid: ShadowEngine.EventSystem.Events.KeyTypedEvent
+    name: KeyTypedEvent
+    href: ShadowEngine.EventSystem.Events.KeyTypedEvent.yml
+  - uid: ShadowEngine.EventSystem.Events.MouseButtonEvent
+    name: MouseButtonEvent
+    href: ShadowEngine.EventSystem.Events.MouseButtonEvent.yml
+  - uid: ShadowEngine.EventSystem.Events.MouseButtonPressedEvent
+    name: MouseButtonPressedEvent
+    href: ShadowEngine.EventSystem.Events.MouseButtonPressedEvent.yml
+  - uid: ShadowEngine.EventSystem.Events.MouseButtonReleasedEvent
+    name: MouseButtonReleasedEvent
+    href: ShadowEngine.EventSystem.Events.MouseButtonReleasedEvent.yml
+  - uid: ShadowEngine.EventSystem.Events.MouseMovedEvent
+    name: MouseMovedEvent
+    href: ShadowEngine.EventSystem.Events.MouseMovedEvent.yml
+  - uid: ShadowEngine.EventSystem.Events.MouseScrolledEvent
+    name: MouseScrolledEvent
+    href: ShadowEngine.EventSystem.Events.MouseScrolledEvent.yml
+  - uid: ShadowEngine.EventSystem.Events.WindowCloseEvent
+    name: WindowCloseEvent
+    href: ShadowEngine.EventSystem.Events.WindowCloseEvent.yml
+  - uid: ShadowEngine.EventSystem.Events.WindowResizeEvent
+    name: WindowResizeEvent
+    href: ShadowEngine.EventSystem.Events.WindowResizeEvent.yml
+- uid: ShadowEngine.InputSystem
+  name: ShadowEngine::InputSystem
+  href: ShadowEngine.InputSystem.yml
+  items:
+  - uid: ShadowEngine.InputSystem.Binding1D
+    name: Binding1D
+    href: ShadowEngine.InputSystem.Binding1D.yml
+  - uid: ShadowEngine.InputSystem.Binding1DInspector
+    name: Binding1DInspector
+    href: ShadowEngine.InputSystem.Binding1DInspector.yml
+  - uid: ShadowEngine.InputSystem.Binding2D
+    name: Binding2D
+    href: ShadowEngine.InputSystem.Binding2D.yml
+  - uid: ShadowEngine.InputSystem.Binding2DInspector
+    name: Binding2DInspector
+    href: ShadowEngine.InputSystem.Binding2DInspector.yml
+  - uid: ShadowEngine.InputSystem.BindingAND
+    name: BindingAND
+    href: ShadowEngine.InputSystem.BindingAND.yml
+  - uid: ShadowEngine.InputSystem.BindingANDInspector
+    name: BindingANDInspector
+    href: ShadowEngine.InputSystem.BindingANDInspector.yml
+  - uid: ShadowEngine.InputSystem.BindingContext
+    name: BindingContext
+    href: ShadowEngine.InputSystem.BindingContext.yml
+  - uid: ShadowEngine.InputSystem.BindingOR
+    name: BindingOR
+    href: ShadowEngine.InputSystem.BindingOR.yml
+  - uid: ShadowEngine.InputSystem.BindingORInspector
+    name: BindingORInspector
+    href: ShadowEngine.InputSystem.BindingORInspector.yml
+  - uid: ShadowEngine.InputSystem.IInputBinding
+    name: IInputBinding
+    href: ShadowEngine.InputSystem.IInputBinding.yml
+  - uid: ShadowEngine.InputSystem.InputActionInspector
+    name: InputActionInspector
+    href: ShadowEngine.InputSystem.InputActionInspector.yml
+  - uid: ShadowEngine.InputSystem.InputBinding
+    name: InputBinding
+    href: ShadowEngine.InputSystem.InputBinding.yml
+  - uid: ShadowEngine.InputSystem.InputMapBinding
+    name: InputMapBinding
+    href: ShadowEngine.InputSystem.InputMapBinding.yml
+  - uid: ShadowEngine.InputSystem.InputModifier
+    name: InputModifier
+    href: ShadowEngine.InputSystem.InputModifier.yml
+  - uid: ShadowEngine.InputSystem.IShadowAction
+    name: IShadowAction
+    href: ShadowEngine.InputSystem.IShadowAction.yml
+  - uid: ShadowEngine.InputSystem.KeyboardBinding
+    name: KeyboardBinding
+    href: ShadowEngine.InputSystem.KeyboardBinding.yml
+  - uid: ShadowEngine.InputSystem.KeyboardBindingInspector
+    name: KeyboardBindingInspector
+    href: ShadowEngine.InputSystem.KeyboardBindingInspector.yml
+  - uid: ShadowEngine.InputSystem.ModifierContext
+    name: ModifierContext
+    href: ShadowEngine.InputSystem.ModifierContext.yml
+  - uid: ShadowEngine.InputSystem.ModifierHold
+    name: ModifierHold
+    href: ShadowEngine.InputSystem.ModifierHold.yml
+  - uid: ShadowEngine.InputSystem.ModifierHoldInspector
+    name: ModifierHoldInspector
+    href: ShadowEngine.InputSystem.ModifierHoldInspector.yml
+  - uid: ShadowEngine.InputSystem.ModifierRepeat
+    name: ModifierRepeat
+    href: ShadowEngine.InputSystem.ModifierRepeat.yml
+  - uid: ShadowEngine.InputSystem.ShadowAction
+    name: ShadowAction
+    href: ShadowEngine.InputSystem.ShadowAction.yml
+  - uid: ShadowEngine.InputSystem.ShadowActionSystem
+    name: ShadowActionSystem
+    href: ShadowEngine.InputSystem.ShadowActionSystem.yml
+- uid: ShadowEngine.Rendering
+  name: ShadowEngine::Rendering
+  href: ShadowEngine.Rendering.yml
+  items:
+  - uid: ShadowEngine.Rendering.BufferElement
+    name: BufferElement
+    href: ShadowEngine.Rendering.BufferElement.yml
+  - uid: ShadowEngine.Rendering.BufferLayout
+    name: BufferLayout
+    href: ShadowEngine.Rendering.BufferLayout.yml
+  - uid: ShadowEngine.Rendering.CommandList
+    name: CommandList
+    href: ShadowEngine.Rendering.CommandList.yml
+  - uid: ShadowEngine.Rendering.CommandQueue
+    name: CommandQueue
+    href: ShadowEngine.Rendering.CommandQueue.yml
+  - uid: ShadowEngine.Rendering.ConstantBuffer
+    name: ConstantBuffer
+    href: ShadowEngine.Rendering.ConstantBuffer.yml
+  - uid: ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet
+    name: ConstantBuffer_ShaderPropertySheet
+    href: ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet.yml
+  - uid: ShadowEngine.Rendering.ConstantBuffer_Typed
+    name: ConstantBuffer_Typed
+    href: ShadowEngine.Rendering.ConstantBuffer_Typed.yml
+  - uid: ShadowEngine.Rendering.ConstantBufferImpl
+    name: ConstantBufferImpl
+    href: ShadowEngine.Rendering.ConstantBufferImpl.yml
+  - uid: ShadowEngine.Rendering.GraphicsContext
+    name: GraphicsContext
+    href: ShadowEngine.Rendering.GraphicsContext.yml
+  - uid: ShadowEngine.Rendering.IndexBuffer
+    name: IndexBuffer
+    href: ShadowEngine.Rendering.IndexBuffer.yml
+  - uid: ShadowEngine.Rendering.IShaderProperty
+    name: IShaderProperty
+    href: ShadowEngine.Rendering.IShaderProperty.yml
+  - uid: ShadowEngine.Rendering.ModelData
+    name: ModelData
+    href: ShadowEngine.Rendering.ModelData.yml
+  - uid: ShadowEngine.Rendering.OrthographicCamera
+    name: OrthographicCamera
+    href: ShadowEngine.Rendering.OrthographicCamera.yml
+  - uid: ShadowEngine.Rendering.Renderer
+    name: Renderer
+    href: ShadowEngine.Rendering.Renderer.yml
+  - uid: ShadowEngine.Rendering.RendererAPI
+    name: RendererAPI
+    href: ShadowEngine.Rendering.RendererAPI.yml
+  - uid: ShadowEngine.Rendering.RenderNode
+    name: RenderNode
+    href: ShadowEngine.Rendering.RenderNode.yml
+  - uid: ShadowEngine.Rendering.RenderScene
+    name: RenderScene
+    href: ShadowEngine.Rendering.RenderScene.yml
+  - uid: ShadowEngine.Rendering.Shader
+    name: Shader
+    href: ShadowEngine.Rendering.Shader.yml
+  - uid: ShadowEngine.Rendering.ShaderProperty
+    name: ShaderProperty
+    href: ShadowEngine.Rendering.ShaderProperty.yml
+  - uid: ShadowEngine.Rendering.ShaderPropertySheet
+    name: ShaderPropertySheet
+    href: ShadowEngine.Rendering.ShaderPropertySheet.yml
+  - uid: ShadowEngine.Rendering.Texture
+    name: Texture
+    href: ShadowEngine.Rendering.Texture.yml
+  - uid: ShadowEngine.Rendering.Texture2D
+    name: Texture2D
+    href: ShadowEngine.Rendering.Texture2D.yml
+  - uid: ShadowEngine.Rendering.Vertex
+    name: Vertex
+    href: ShadowEngine.Rendering.Vertex.yml
+  - uid: ShadowEngine.Rendering.VertexBuffer
+    name: VertexBuffer
+    href: ShadowEngine.Rendering.VertexBuffer.yml
+  - uid: ShadowEngine.Rendering.WorldData
+    name: WorldData
+    href: ShadowEngine.Rendering.WorldData.yml
+- uid: ShadowEngine.Rendering.D3D12
+  name: ShadowEngine::Rendering::D3D12
+  href: ShadowEngine.Rendering.D3D12.yml
+  items:
+  - uid: ShadowEngine.Rendering.D3D12.D3D12CommandList
+    name: D3D12CommandList
+    href: ShadowEngine.Rendering.D3D12.D3D12CommandList.yml
+  - uid: ShadowEngine.Rendering.D3D12.D3D12CommandQueue
+    name: D3D12CommandQueue
+    href: ShadowEngine.Rendering.D3D12.D3D12CommandQueue.yml
+  - uid: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer
+    name: D3D12ConstantBuffer
+    href: ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.yml
+  - uid: ShadowEngine.Rendering.D3D12.D3D12Context
+    name: D3D12Context
+    href: ShadowEngine.Rendering.D3D12.D3D12Context.yml
+  - uid: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer
+    name: D3D12DepthBuffer
+    href: ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.yml
+  - uid: ShadowEngine.Rendering.D3D12.D3D12DescriptorHeap
+    name: D3D12DescriptorHeap
+    href: ShadowEngine.Rendering.D3D12.D3D12DescriptorHeap.yml
+  - uid: ShadowEngine.Rendering.D3D12.D3D12Fence
+    name: D3D12Fence
+    href: ShadowEngine.Rendering.D3D12.D3D12Fence.yml
+  - uid: ShadowEngine.Rendering.D3D12.D3D12IndexBuffer
+    name: D3D12IndexBuffer
+    href: ShadowEngine.Rendering.D3D12.D3D12IndexBuffer.yml
+  - uid: ShadowEngine.Rendering.D3D12.D3D12RendererAPI
+    name: D3D12RendererAPI
+    href: ShadowEngine.Rendering.D3D12.D3D12RendererAPI.yml
+  - uid: ShadowEngine.Rendering.D3D12.D3D12Shader
+    name: D3D12Shader
+    href: ShadowEngine.Rendering.D3D12.D3D12Shader.yml
+  - uid: ShadowEngine.Rendering.D3D12.D3D12SwapChain
+    name: D3D12SwapChain
+    href: ShadowEngine.Rendering.D3D12.D3D12SwapChain.yml
+  - uid: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer
+    name: D3D12VertexBuffer
+    href: ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.yml
+  - uid: ShadowEngine.Rendering.D3D12.HResultTester
+    name: HResultTester
+    href: ShadowEngine.Rendering.D3D12.HResultTester.yml
+- uid: ShadowEngine.SDLPlatform
+  name: ShadowEngine::SDLPlatform
+  href: ShadowEngine.SDLPlatform.yml
+  items:
+  - uid: ShadowEngine.SDLPlatform.SDLEventSource
+    name: SDLEventSource
+    href: ShadowEngine.SDLPlatform.SDLEventSource.yml
+  - uid: ShadowEngine.SDLPlatform.SDLModule
+    name: SDLModule
+    href: ShadowEngine.SDLPlatform.SDLModule.yml
+- uid: ShadowEngine.ShadowEngine.Assets
+  name: ShadowEngine::ShadowEngine::Assets
+  href: ShadowEngine.ShadowEngine.Assets.yml
+  items:
+  - uid: ShadowEngine.ShadowEngine.Assets.Material
+    name: Material
+    href: ShadowEngine.ShadowEngine.Assets.Material.yml
+- uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem
+  name: ShadowEngine::ShadowEngine::ShadowEngine::EntitySystem
+  href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.yml
+  items:
+  - uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity
+    name: Entity
+    href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.Entity.yml
+  - uid: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr
+    name: rtm_ptr
+    href: ShadowEngine.ShadowEngine.ShadowEngine.EntitySystem.rtm_ptr.yml
+- uid: ShadowEngine.ShadowEngine.ShadowEntity
+  name: ShadowEngine::ShadowEngine::ShadowEntity
+  href: ShadowEngine.ShadowEngine.ShadowEntity.yml
+  items:
+  - uid: ShadowEngine.ShadowEngine.ShadowEntity.Transform
+    name: Transform
+    href: ShadowEngine.ShadowEngine.ShadowEntity.Transform.yml
+- uid: ShadowEngine.World
+  name: ShadowEngine::World
+  href: ShadowEngine.World.yml
+  items:
+  - uid: ShadowEngine.World.LevelMap
+    name: LevelMap
+    href: ShadowEngine.World.LevelMap.yml
+  - uid: ShadowEngine.World.MapChunk
+    name: MapChunk
+    href: ShadowEngine.World.MapChunk.yml
+  - uid: ShadowEngine.World.ShadowMapLayer
+    name: ShadowMapLayer
+    href: ShadowEngine.World.ShadowMapLayer.yml
+  - uid: ShadowEngine.World.ShadowMapRenderer
+    name: ShadowMapRenderer
+    href: ShadowEngine.World.ShadowMapRenderer.yml
+  - uid: ShadowEngine.World.ShadowWorld
+    name: ShadowWorld
+    href: ShadowEngine.World.ShadowWorld.yml
+- uid: ShadowMath
+  name: ShadowMath
+  href: ShadowMath.yml
+  items:
+  - uid: ShadowMath.Vector2float
+    name: Vector2float
+    href: ShadowMath.Vector2float.yml
+  - uid: ShadowMath.Vector2int
+    name: Vector2int
+    href: ShadowMath.Vector2int.yml
+- uid: ShadowWindow
+  name: ShadowWindow
+  href: ShadowWindow.yml
+- uid: TestRenderer
+  name: TestRenderer
+  href: TestRenderer.yml
+- uid: TestScene
+  name: TestScene
+  href: TestScene.yml
+- uid: Time
+  name: Time
+  href: Time.yml
+- uid: VERTEX_CONSTANT_BUFFER
+  name: VERTEX_CONSTANT_BUFFER
+  href: VERTEX_CONSTANT_BUFFER.yml

@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_log" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::Log</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_shadow_module" prot="public" virt="non-virtual">ShadowEngine::ShadowModule</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_log_1adf46dd88dd43ccab3deb4deed15dfcca" prot="private" static="yes" mutable="no">
+        <type>std::shared_ptr&lt;spdlog::logger&gt;</type>
+        <definition>std::shared_ptr&lt;spdlog::logger&gt; ShadowEngine::Log::s_CoreLogger</definition>
+        <argsstring></argsstring>
+        <name>s_CoreLogger</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Log.h" line="26" column="1" bodyfile="ShadowEngine/src/Log.h" bodystart="26" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="class_shadow_engine_1_1_log_1a298b71e745b5adb40e954d2d7fe11579" prot="private" static="yes" mutable="no">
+        <type>std::shared_ptr&lt;spdlog::logger&gt;</type>
+        <definition>std::shared_ptr&lt;spdlog::logger&gt; ShadowEngine::Log::s_ClientLogger</definition>
+        <argsstring></argsstring>
+        <name>s_ClientLogger</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Log.h" line="27" column="1" bodyfile="ShadowEngine/src/Log.h" bodystart="27" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_log_1ad04d535d5072c5e58da3d8276b648aa7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>SHObject_Base(<ref refid="class_shadow_engine_1_1_log" kindref="compound">Log</ref>) public void</type>
+        <definition>SHObject_Base (Log) public void ShadowEngine::Log::Update</definition>
+        <argsstring>() override</argsstring>
+        <name>Update</name>
+        <reimplements refid="class_shadow_engine_1_1_shadow_module_1aa6210b8806ad120be85977428b294bb0">Update</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Log.h" line="18" column="1" bodyfile="ShadowEngine/src/Log.h" bodystart="18" bodyend="18" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_log_1aa5659f19c2b91d689283c68819f1c65e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Log::LateRender</definition>
+        <argsstring>() override</argsstring>
+        <name>LateRender</name>
+        <reimplements refid="class_shadow_engine_1_1_shadow_module_1aff322cdcc841b388e7c9c77337053197">LateRender</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Log.h" line="19" column="1" bodyfile="ShadowEngine/src/Log.h" bodystart="19" bodyend="19" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_log_1a1c04cd1af4d11d124d59439491920cab" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Log::Render</definition>
+        <argsstring>() override</argsstring>
+        <name>Render</name>
+        <reimplements refid="class_shadow_engine_1_1_shadow_module_1aab2ad5a8a1bc8185cfe664f102481557">Render</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Log.h" line="20" column="1" bodyfile="ShadowEngine/src/Log.h" bodystart="20" bodyend="20" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_log_1a64ce114f0a8aaa3b87e60ac08529ef76" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string ShadowEngine::Log::GetName</definition>
+        <argsstring>() override</argsstring>
+        <name>GetName</name>
+        <reimplements refid="class_shadow_engine_1_1_shadow_module_1a128ea061c249cd5fe494b19f63eb0a5e">GetName</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Log.h" line="21" column="1" bodyfile="ShadowEngine/src/Log.h" bodystart="21" bodyend="21" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_log_1a16e0994b74c53bb79d026b050fc279f2" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt;spdlog::logger&gt; &amp;</type>
+        <definition>static std::shared_ptr&lt;spdlog::logger&gt;&amp; ShadowEngine::Log::GetCoreLogger</definition>
+        <argsstring>()</argsstring>
+        <name>GetCoreLogger</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Log.h" line="23" column="1" bodyfile="ShadowEngine/src/Log.h" bodystart="23" bodyend="23" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_log_1a9b2b4c94a10a8c4f53ba0bd47513e712" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt;spdlog::logger&gt; &amp;</type>
+        <definition>static std::shared_ptr&lt;spdlog::logger&gt;&amp; ShadowEngine::Log::GetClientLogger</definition>
+        <argsstring>()</argsstring>
+        <name>GetClientLogger</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/Log.h" line="24" column="1" bodyfile="ShadowEngine/src/Log.h" bodystart="24" bodyend="24" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="339">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="337">
+        <label>ShadowEngine::Log</label>
+        <link refid="class_shadow_engine_1_1_log" />
+        <childnode refid="338" relation="public-inheritance"></childnode>
+      </node>
+      <node id="338">
+        <label>ShadowEngine::ShadowModule</label>
+        <link refid="class_shadow_engine_1_1_shadow_module" />
+        <childnode refid="339" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="342">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="340">
+        <label>ShadowEngine::Log</label>
+        <link refid="class_shadow_engine_1_1_log" />
+        <childnode refid="341" relation="public-inheritance"></childnode>
+      </node>
+      <node id="341">
+        <label>ShadowEngine::ShadowModule</label>
+        <link refid="class_shadow_engine_1_1_shadow_module" />
+        <childnode refid="342" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/Log.h" line="13" column="1" bodyfile="ShadowEngine/src/Log.h" bodystart="12" bodyend="28" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a35bf9fdc604caa67e1a2f1b0a9c574f2" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::Log</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_log_1a9b2b4c94a10a8c4f53ba0bd47513e712" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Log</scope>
+        <name>GetClientLogger</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_log_1a16e0994b74c53bb79d026b050fc279f2" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Log</scope>
+        <name>GetCoreLogger</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_log_1a64ce114f0a8aaa3b87e60ac08529ef76" prot="private" virt="virtual">
+        <scope>ShadowEngine::Log</scope>
+        <name>GetName</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a230ca5dec944e67f8d57dfc743da7d94" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Log</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Log</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_log_1aa5659f19c2b91d689283c68819f1c65e" prot="private" virt="virtual">
+        <scope>ShadowEngine::Log</scope>
+        <name>LateRender</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_log_1a1c04cd1af4d11d124d59439491920cab" prot="private" virt="virtual">
+        <scope>ShadowEngine::Log</scope>
+        <name>Render</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_log_1a298b71e745b5adb40e954d2d7fe11579" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Log</scope>
+        <name>s_ClientLogger</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_log_1adf46dd88dd43ccab3deb4deed15dfcca" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Log</scope>
+        <name>s_CoreLogger</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_log_1ad04d535d5072c5e58da3d8276b648aa7" prot="private" virt="virtual">
+        <scope>ShadowEngine::Log</scope>
+        <name>Update</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual">
+        <scope>ShadowEngine::Log</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

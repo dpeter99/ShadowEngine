@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.Rendering.ShaderProperty" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::Rendering::ShaderProperty</compoundname>
+    <basecompoundref refid="ShadowEngine.Rendering.IShaderProperty" prot="public" virt="non-virtual">ShadowEngine::Rendering::IShaderProperty</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="ShadowEngine.Rendering.ShaderProperty.SHObject_Base(ShaderProperty&lt;T&gt;)" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::ShaderProperty&lt;T&gt;::SHObject_Base</definition>
+        <argsstring>(ShaderProperty&lt;T&gt;) T value</argsstring>
+        <name>SHObject_Base</name>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.Rendering.ShaderProperty" kindref="compound">ShaderProperty</ref>&lt;T&gt;</type>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="28" column="1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.Rendering.ShaderProperty.ShaderProperty(const std::string &amp;)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::ShaderProperty&lt;T&gt;::ShaderProperty</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>ShaderProperty</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="33" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="33" bodyend="33" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.Rendering.ShaderProperty.ShaderProperty(const ShaderProperty &amp;)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::Rendering::ShaderProperty&lt;T&gt;::ShaderProperty</definition>
+        <argsstring>(const ShaderProperty &amp;a)</argsstring>
+        <name>ShaderProperty</name>
+        <param>
+          <type>const <ref refid="ShadowEngine.Rendering.ShaderProperty" kindref="compound">ShaderProperty</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="34" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="34" bodyend="38" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.Rendering.ShaderProperty.SetValue(const T &amp;)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::Rendering::ShaderProperty&lt;T&gt;::SetValue</definition>
+        <argsstring>(const T &amp;data)</argsstring>
+        <name>SetValue</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="40" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="40" bodyend="43" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.Rendering.ShaderProperty.Clone()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>
+          <ref refid="ShadowEngine.Rendering.IShaderProperty" kindref="compound">IShaderProperty</ref> *</type>
+        <definition>IShaderProperty* ShadowEngine::Rendering::ShaderProperty&lt;T&gt;::Clone</definition>
+        <argsstring>() override</argsstring>
+        <name>Clone</name>
+        <reimplements refid="ShadowEngine.Rendering.IShaderProperty.Clone()">Clone</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="45" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="45" bodyend="48" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.Rendering.ShaderProperty.GetPropertyTypeName()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; ShadowEngine::Rendering::ShaderProperty&lt;T&gt;::GetPropertyTypeName</definition>
+        <argsstring>() override</argsstring>
+        <name>GetPropertyTypeName</name>
+        <reimplements refid="ShadowEngine.Rendering.IShaderProperty.GetPropertyTypeName()">GetPropertyTypeName</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="50" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="50" bodyend="53" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.Rendering.ShaderProperty.GetPropertyTypeSize()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>unsigned long long</type>
+        <definition>unsigned long long ShadowEngine::Rendering::ShaderProperty&lt;T&gt;::GetPropertyTypeSize</definition>
+        <argsstring>() override</argsstring>
+        <name>GetPropertyTypeSize</name>
+        <reimplements refid="ShadowEngine.Rendering.IShaderProperty.GetPropertyTypeSize()">GetPropertyTypeSize</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="55" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="55" bodyend="58" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.Rendering.ShaderProperty.GetPropertyData()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void *</type>
+        <definition>void* ShadowEngine::Rendering::ShaderProperty&lt;T&gt;::GetPropertyData</definition>
+        <argsstring>() override</argsstring>
+        <name>GetPropertyData</name>
+        <reimplements refid="ShadowEngine.Rendering.IShaderProperty.GetPropertyData()">GetPropertyData</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="60" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="60" bodyend="63" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="484">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="483">
+        <label>ShadowEngine::Rendering::IShaderProperty</label>
+        <link refid="ShadowEngine.Rendering.IShaderProperty" />
+        <childnode refid="484" relation="public-inheritance"></childnode>
+      </node>
+      <node id="482">
+        <label>ShadowEngine::Rendering::ShaderProperty&lt;T&gt;</label>
+        <link refid="ShadowEngine.Rendering.ShaderProperty" />
+        <childnode refid="483" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="487">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="486">
+        <label>ShadowEngine::Rendering::IShaderProperty</label>
+        <link refid="ShadowEngine.Rendering.IShaderProperty" />
+        <childnode refid="487" relation="public-inheritance"></childnode>
+      </node>
+      <node id="485">
+        <label>ShadowEngine::Rendering::ShaderProperty&lt;T&gt;</label>
+        <link refid="ShadowEngine.Rendering.ShaderProperty" />
+        <childnode refid="486" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" line="27" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/ShaderPropertySheet.h" bodystart="26" bodyend="64" />
+    <listofallmembers>
+      <member refid="ShadowEngine.Rendering.ShaderProperty.Clone()" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::ShaderProperty</scope>
+        <name>Clone</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderProperty</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.IShaderProperty.GetName()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderProperty</scope>
+        <name>GetName</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.ShaderProperty.GetPropertyData()" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::ShaderProperty</scope>
+        <name>GetPropertyData</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.ShaderProperty.GetPropertyTypeName()" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::ShaderProperty</scope>
+        <name>GetPropertyTypeName</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.ShaderProperty.GetPropertyTypeSize()" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::ShaderProperty</scope>
+        <name>GetPropertyTypeSize</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::ShaderProperty</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Rendering::ShaderProperty</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.IShaderProperty.IShaderProperty(const std::string &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderProperty</scope>
+        <name>IShaderProperty</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.IShaderProperty.IShaderProperty()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderProperty</scope>
+        <name>IShaderProperty</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.ShaderProperty.SetValue(const T &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderProperty</scope>
+        <name>SetValue</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.ShaderProperty.ShaderProperty(const std::string &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderProperty</scope>
+        <name>ShaderProperty</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.ShaderProperty.ShaderProperty(const ShaderProperty &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderProperty</scope>
+        <name>ShaderProperty</name>
+      </member>
+      <member refid="ShadowEngine.Rendering.ShaderProperty.SHObject_Base(ShaderProperty&lt;T&gt;)" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::ShaderProperty</scope>
+        <name>SHObject_Base</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::Rendering::ShaderProperty</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

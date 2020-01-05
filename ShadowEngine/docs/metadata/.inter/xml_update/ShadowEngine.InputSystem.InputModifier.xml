@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.InputSystem.InputModifier" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ShadowEngine::InputSystem::InputModifier</compoundname>
+    <basecompoundref refid="ShadowEngine.SHObject" prot="public" virt="non-virtual">ShadowEngine::SHObject</basecompoundref>
+    <derivedcompoundref refid="ShadowEngine.InputSystem.ModifierHold" prot="public" virt="non-virtual">ShadowEngine::InputSystem::ModifierHold</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.InputSystem.ModifierRepeat" prot="public" virt="non-virtual">ShadowEngine::InputSystem::ModifierRepeat</derivedcompoundref>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="ShadowEngine.InputSystem.InputModifier.RequiresContinuous()" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>SHObject_Base(<ref refid="ShadowEngine.InputSystem.InputModifier" kindref="compound">InputModifier</ref>) public bool</type>
+        <definition>virtual SHObject_Base (InputModifier) public bool ShadowEngine::InputSystem::InputModifier::RequiresContinuous</definition>
+        <argsstring>()=0</argsstring>
+        <name>RequiresContinuous</name>
+        <reimplementedby refid="ShadowEngine.InputSystem.ModifierHold.RequiresContinuous()">RequiresContinuous</reimplementedby>
+        <briefdescription>
+          <para>Processes a event. Called after the binding processed it. </para>
+        </briefdescription>
+        <detaileddescription>
+          <para>
+            <parameterlist kind="param">
+              <parameteritem>
+                <parameternamelist>
+                  <parametername>ctx</parametername>
+                </parameternamelist>
+                <parameterdescription>
+                  <para>Modifier context that provides data about the event Weather this modifier needs the binding to act continuous </para>
+                </parameterdescription>
+              </parameteritem>
+            </parameterlist>
+            <simplesect kind="return">
+              <para>true if it needs continuous binding </para>
+            </simplesect>
+          </para>
+        </detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/InputModifier.h" line="26" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.InputModifier.InputModifier()" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::InputSystem::InputModifier::InputModifier</definition>
+        <argsstring>()</argsstring>
+        <name>InputModifier</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/InputModifier.h" line="28" column="1" bodyfile="ShadowEngine/src/ShadowInput/InputModifier.h" bodystart="28" bodyend="31" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.InputSystem.InputModifier.~InputModifier()" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ShadowEngine::InputSystem::InputModifier::~InputModifier</definition>
+        <argsstring>()</argsstring>
+        <name>~InputModifier</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowInput/InputModifier.h" line="32" column="1" bodyfile="ShadowEngine/src/ShadowInput/InputModifier.h" bodystart="32" bodyend="35" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="237">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="239">
+        <label>ShadowEngine::InputSystem::ModifierRepeat</label>
+        <link refid="ShadowEngine.InputSystem.ModifierRepeat" />
+        <childnode refid="236" relation="public-inheritance"></childnode>
+      </node>
+      <node id="238">
+        <label>ShadowEngine::InputSystem::ModifierHold</label>
+        <link refid="ShadowEngine.InputSystem.ModifierHold" />
+        <childnode refid="236" relation="public-inheritance"></childnode>
+      </node>
+      <node id="236">
+        <label>ShadowEngine::InputSystem::InputModifier</label>
+        <link refid="ShadowEngine.InputSystem.InputModifier" />
+        <childnode refid="237" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="241">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="240">
+        <label>ShadowEngine::InputSystem::InputModifier</label>
+        <link refid="ShadowEngine.InputSystem.InputModifier" />
+        <childnode refid="241" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowInput/InputModifier.h" line="10" column="1" bodyfile="ShadowEngine/src/ShadowInput/InputModifier.h" bodystart="9" bodyend="36" />
+    <listofallmembers>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::InputModifier</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::InputModifier</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::InputModifier</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputModifier.InputModifier()" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::InputSystem::InputModifier</scope>
+        <name>InputModifier</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputModifier.RequiresContinuous()" prot="private" virt="pure-virtual">
+        <scope>ShadowEngine::InputSystem::InputModifier</scope>
+        <name>RequiresContinuous</name>
+      </member>
+      <member refid="ShadowEngine.InputSystem.InputModifier.~InputModifier()" prot="private" virt="virtual">
+        <scope>ShadowEngine::InputSystem::InputModifier</scope>
+        <name>~InputModifier</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::InputSystem::InputModifier</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

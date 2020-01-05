@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowMath.Vector2float" kind="class" language="C++" prot="public">
+    <compoundname>ShadowMath::Vector2float</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="ShadowMath.Vector2float.x" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ShadowMath::Vector2float::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="10" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.h" bodystart="10" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowMath.Vector2float.y" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ShadowMath::Vector2float::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="11" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.h" bodystart="11" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="ShadowMath.Vector2float.zero" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref></type>
+        <definition>const Vector2float ShadowMath::Vector2float::zero</definition>
+        <argsstring></argsstring>
+        <name>zero</name>
+        <initializer>= <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref>(0, 0)</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="13" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.h" bodystart="13" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowMath.Vector2float.Vector2float(float,float)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowMath::Vector2float::Vector2float</definition>
+        <argsstring>(float x, float y)</argsstring>
+        <name>Vector2float</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="15" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.h" bodystart="15" bodyend="19" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.Vector2float()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowMath::Vector2float::Vector2float</definition>
+        <argsstring>()</argsstring>
+        <name>Vector2float</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="21" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.h" bodystart="21" bodyend="25" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.Vector2float(const Vector2float &amp;)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowMath::Vector2float::Vector2float</definition>
+        <argsstring>(const Vector2float &amp;cpy)</argsstring>
+        <name>Vector2float</name>
+        <param>
+          <type>const <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref> &amp;</type>
+          <declname>cpy</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="27" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.h" bodystart="27" bodyend="31" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.Magnitude()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ShadowMath::Vector2float::Magnitude</definition>
+        <argsstring>()</argsstring>
+        <name>Magnitude</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="33" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="20" bodyend="23" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.MagnitudeSqr()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ShadowMath::Vector2float::MagnitudeSqr</definition>
+        <argsstring>()</argsstring>
+        <name>MagnitudeSqr</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="35" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="15" bodyend="18" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.Normalize()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowMath::Vector2float::Normalize</definition>
+        <argsstring>()</argsstring>
+        <name>Normalize</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="37" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="25" bodyend="30" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.LeftNormal()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref>
+        </type>
+        <definition>Vector2float ShadowMath::Vector2float::LeftNormal</definition>
+        <argsstring>()</argsstring>
+        <name>LeftNormal</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="39" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="32" bodyend="35" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.RightNormal()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref>
+        </type>
+        <definition>Vector2float ShadowMath::Vector2float::RightNormal</definition>
+        <argsstring>()</argsstring>
+        <name>RightNormal</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="41" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="37" bodyend="40" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.Angle()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ShadowMath::Vector2float::Angle</definition>
+        <argsstring>()</argsstring>
+        <name>Angle</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="43" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="42" bodyend="45" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.DotProduct(Vector2float,Vector2float)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const float</type>
+        <definition>const float ShadowMath::Vector2float::DotProduct</definition>
+        <argsstring>(Vector2float a, Vector2float b)</argsstring>
+        <name>DotProduct</name>
+        <param>
+          <type>
+            <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref>
+          </type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>
+            <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref>
+          </type>
+          <declname>b</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="45" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="57" bodyend="60" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.Lerp(Vector2float,Vector2float,int)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref></type>
+        <definition>const Vector2float ShadowMath::Vector2float::Lerp</definition>
+        <argsstring>(Vector2float a, Vector2float b, int t)</argsstring>
+        <name>Lerp</name>
+        <param>
+          <type>
+            <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref>
+          </type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>
+            <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref>
+          </type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="47" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="47" bodyend="55" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.Distance(Vector2float,Vector2float)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const float</type>
+        <definition>const float ShadowMath::Vector2float::Distance</definition>
+        <argsstring>(Vector2float a, Vector2float b)</argsstring>
+        <name>Distance</name>
+        <param>
+          <type>
+            <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref>
+          </type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>
+            <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref>
+          </type>
+          <declname>b</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="49" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="62" bodyend="65" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.operator+(const Vector2float &amp;)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref>
+        </type>
+        <definition>Vector2float ShadowMath::Vector2float::operator+</definition>
+        <argsstring>(const Vector2float &amp;b)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="51" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="67" bodyend="73" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.operator-(const Vector2float &amp;)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref>
+        </type>
+        <definition>Vector2float ShadowMath::Vector2float::operator-</definition>
+        <argsstring>(const Vector2float &amp;b)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="53" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="75" bodyend="81" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.operator *(const Vector2float &amp;)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref>
+        </type>
+        <definition>Vector2float ShadowMath::Vector2float::operator *</definition>
+        <argsstring>(const Vector2float &amp;b)</argsstring>
+        <name>operator *</name>
+        <param>
+          <type>const <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="55" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="83" bodyend="89" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.operator *(const int &amp;)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref>
+        </type>
+        <definition>Vector2float ShadowMath::Vector2float::operator *</definition>
+        <argsstring>(const int &amp;b)</argsstring>
+        <name>operator *</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="57" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="119" bodyend="122" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.operator *(const float &amp;)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref>
+        </type>
+        <definition>Vector2float ShadowMath::Vector2float::operator *</definition>
+        <argsstring>(const float &amp;b)</argsstring>
+        <name>operator *</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="59" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="91" bodyend="94" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.operator==(const Vector2float)" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ShadowMath::Vector2float::operator==</definition>
+        <argsstring>(const Vector2float b) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="61" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="97" bodyend="100" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.operator!=(const Vector2float)" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ShadowMath::Vector2float::operator!=</definition>
+        <argsstring>(const Vector2float b) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="ShadowMath.Vector2float" kindref="compound">Vector2float</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="63" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="102" bodyend="105" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.operator[](int)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float &amp;</type>
+        <definition>float &amp; ShadowMath::Vector2float::operator[]</definition>
+        <argsstring>(int i)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="65" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="107" bodyend="117" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2float.operator Vector2int()" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowMath::Vector2float::operator Vector2int</definition>
+        <argsstring>()</argsstring>
+        <name>operator Vector2int</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="67" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.cpp" bodystart="125" bodyend="129" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <collaborationgraph>
+      <node id="667">
+        <label>ShadowMath::Vector2float</label>
+        <link refid="ShadowMath.Vector2float" />
+        <childnode refid="667" relation="usage">
+          <edgelabel>zero</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowMath/Vector2float.h" line="8" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2float.h" bodystart="7" bodyend="68" />
+    <listofallmembers>
+      <member refid="ShadowMath.Vector2float.Angle()" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>Angle</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.Distance(Vector2float,Vector2float)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>Distance</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.DotProduct(Vector2float,Vector2float)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>DotProduct</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.LeftNormal()" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>LeftNormal</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.Lerp(Vector2float,Vector2float,int)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>Lerp</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.Magnitude()" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>Magnitude</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.MagnitudeSqr()" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>MagnitudeSqr</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.Normalize()" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>Normalize</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.operator *(const Vector2float &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>operator *</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.operator *(const int &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>operator *</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.operator *(const float &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>operator *</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.operator Vector2int()" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>operator Vector2int</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.operator!=(const Vector2float)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>operator!=</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.operator+(const Vector2float &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>operator+</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.operator-(const Vector2float &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>operator-</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.operator==(const Vector2float)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>operator==</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.operator[](int)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>operator[]</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.RightNormal()" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>RightNormal</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.Vector2float(float,float)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>Vector2float</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.Vector2float()" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>Vector2float</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.Vector2float(const Vector2float &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>Vector2float</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.x" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>x</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.y" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>y</name>
+      </member>
+      <member refid="ShadowMath.Vector2float.zero" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2float</scope>
+        <name>zero</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

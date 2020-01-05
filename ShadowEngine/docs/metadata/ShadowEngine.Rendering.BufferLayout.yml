@@ -1,0 +1,240 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.BufferLayout
+  id: ShadowEngine.Rendering.BufferLayout
+  parent: ShadowEngine.Rendering
+  children:
+  - ShadowEngine.Rendering.BufferLayout.begin()
+  - ShadowEngine.Rendering.BufferLayout.BufferLayout()
+  - ShadowEngine.Rendering.BufferLayout.BufferLayout(const std::initializer_list<BufferElement> &)
+  - ShadowEngine.Rendering.BufferLayout.end()
+  - ShadowEngine.Rendering.BufferLayout.GetElements()
+  - ShadowEngine.Rendering.BufferLayout.GetStride()
+  href: ShadowEngine.Rendering.BufferLayout.yml
+  langs:
+  - cplusplus
+  name: BufferLayout
+  nameWithType: BufferLayout
+  fullName: ShadowEngine::Rendering::BufferLayout
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowRenderer/Buffer.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 71
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 72
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: class BufferLayout'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.Rendering.BufferLayout.begin()
+  id: ShadowEngine.Rendering.BufferLayout.begin()
+  parent: ShadowEngine.Rendering.BufferLayout
+  href: ShadowEngine.Rendering.BufferLayout.yml
+  langs:
+  - cplusplus
+  name: begin()
+  nameWithType: BufferLayout::begin()
+  fullName: std::vector<BufferElement>::iterator ShadowEngine::Rendering::BufferLayout::begin()
+  overload: ShadowEngine.Rendering.BufferLayout.begin*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 85
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 85
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: std::vector<BufferElement>::iterator begin()'
+    return:
+      type: 06bff8eaShadowEngine.Rendering.BufferElement395afd5b
+- uid: ShadowEngine.Rendering.BufferLayout.BufferLayout()
+  id: ShadowEngine.Rendering.BufferLayout.BufferLayout()
+  parent: ShadowEngine.Rendering.BufferLayout
+  href: ShadowEngine.Rendering.BufferLayout.yml
+  langs:
+  - cplusplus
+  name: BufferLayout()
+  nameWithType: BufferLayout::BufferLayout()
+  fullName: ShadowEngine::Rendering::BufferLayout::BufferLayout()
+  overload: ShadowEngine.Rendering.BufferLayout.BufferLayout*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 74
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 74
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: BufferLayout()'
+- uid: ShadowEngine.Rendering.BufferLayout.BufferLayout(const std::initializer_list<BufferElement> &)
+  id: initializer_list<BufferElement> &)
+  parent: ShadowEngine.Rendering.BufferLayout
+  href: ShadowEngine.Rendering.BufferLayout.yml
+  langs:
+  - cplusplus
+  name: BufferLayout(const std::initializer_list<BufferElement> &elements)
+  nameWithType: BufferLayout::BufferLayout(const std::initializer_list<BufferElement> &elements)
+  fullName: ShadowEngine::Rendering::BufferLayout::BufferLayout(const std::initializer_list<BufferElement> &elements)
+  overload: ShadowEngine.Rendering.BufferLayout.BufferLayout*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 76
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 76
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: BufferLayout(const std::initializer_list<BufferElement> &elements)'
+    parameters:
+    - id: elements
+      type: e363b8d1ShadowEngine.Rendering.BufferElement1a4c7661
+- uid: ShadowEngine.Rendering.BufferLayout.end()
+  id: ShadowEngine.Rendering.BufferLayout.end()
+  parent: ShadowEngine.Rendering.BufferLayout
+  href: ShadowEngine.Rendering.BufferLayout.yml
+  langs:
+  - cplusplus
+  name: end()
+  nameWithType: BufferLayout::end()
+  fullName: std::vector<BufferElement>::iterator ShadowEngine::Rendering::BufferLayout::end()
+  overload: ShadowEngine.Rendering.BufferLayout.end*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 86
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 86
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: std::vector<BufferElement>::iterator end()'
+    return:
+      type: 06bff8eaShadowEngine.Rendering.BufferElement395afd5b
+- uid: ShadowEngine.Rendering.BufferLayout.GetElements()
+  id: ShadowEngine.Rendering.BufferLayout.GetElements()
+  parent: ShadowEngine.Rendering.BufferLayout
+  href: ShadowEngine.Rendering.BufferLayout.yml
+  langs:
+  - cplusplus
+  name: GetElements()
+  nameWithType: BufferLayout::GetElements()
+  fullName: const std::vector<BufferElement>& ShadowEngine::Rendering::BufferLayout::GetElements()
+  overload: ShadowEngine.Rendering.BufferLayout.GetElements*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 83
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 83
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: const std::vector<BufferElement> & GetElements() const'
+    return:
+      type: 6a2fb334ShadowEngine.Rendering.BufferElement1a4c7661
+- uid: ShadowEngine.Rendering.BufferLayout.GetStride()
+  id: ShadowEngine.Rendering.BufferLayout.GetStride()
+  parent: ShadowEngine.Rendering.BufferLayout
+  href: ShadowEngine.Rendering.BufferLayout.yml
+  langs:
+  - cplusplus
+  name: GetStride()
+  nameWithType: BufferLayout::GetStride()
+  fullName: uint32_t ShadowEngine::Rendering::BufferLayout::GetStride()
+  overload: ShadowEngine.Rendering.BufferLayout.GetStride*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 82
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/Buffer.h
+    startLine: 82
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: uint32_t GetStride() const'
+    return:
+      type: efd6fb5d
+references:
+- uid: ShadowEngine.Rendering.BufferLayout.BufferLayout*
+  name: BufferLayout
+  nameWithType: BufferLayout::BufferLayout
+  fullName: ShadowEngine::Rendering::BufferLayout::BufferLayout
+- uid: e363b8d1ShadowEngine.Rendering.BufferElement1a4c7661
+  spec.cplusplus:
+  - name: const std::initializer_list<
+    fullName: const std::initializer_list<
+  - uid: ShadowEngine.Rendering.BufferElement
+  - name: '> &'
+    fullName: '> &'
+- uid: efd6fb5d
+  spec.cplusplus:
+  - name: uint32_t
+    fullName: uint32_t
+- uid: ShadowEngine.Rendering.BufferLayout.GetStride*
+  name: GetStride
+  nameWithType: BufferLayout::GetStride
+  fullName: uint32_t ShadowEngine::Rendering::BufferLayout::GetStride
+- uid: 6a2fb334ShadowEngine.Rendering.BufferElement1a4c7661
+  spec.cplusplus:
+  - name: const std::vector<
+    fullName: const std::vector<
+  - uid: ShadowEngine.Rendering.BufferElement
+  - name: '> &'
+    fullName: '> &'
+- uid: ShadowEngine.Rendering.BufferLayout.GetElements*
+  name: GetElements
+  nameWithType: BufferLayout::GetElements
+  fullName: const std::vector<BufferElement>& ShadowEngine::Rendering::BufferLayout::GetElements
+- uid: 06bff8eaShadowEngine.Rendering.BufferElement395afd5b
+  spec.cplusplus:
+  - name: std::vector<
+    fullName: std::vector<
+  - uid: ShadowEngine.Rendering.BufferElement
+  - name: '>::iterator'
+    fullName: '>::iterator'
+- uid: ShadowEngine.Rendering.BufferLayout.begin*
+  name: begin
+  nameWithType: BufferLayout::begin
+  fullName: std::vector<BufferElement>::iterator ShadowEngine::Rendering::BufferLayout::begin
+- uid: ShadowEngine.Rendering.BufferLayout.end*
+  name: end
+  nameWithType: BufferLayout::end
+  fullName: std::vector<BufferElement>::iterator ShadowEngine::Rendering::BufferLayout::end
+- uid: 06bff8eaShadowEngine.Rendering.BufferElement808ea8f6
+  spec.cplusplus:
+  - name: std::vector<
+    fullName: std::vector<
+  - uid: ShadowEngine.Rendering.BufferElement
+  - name: '>::const_iterator'
+    fullName: '>::const_iterator'
+- uid: ShadowEngine.Rendering.BufferElement
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.BufferElement.yml
+  name: BufferElement
+  nameWithType: BufferElement
+  fullName: ShadowEngine::Rendering::BufferElement
+  type: Struct
+  syntax:
+    content: 'public: struct BufferElement'

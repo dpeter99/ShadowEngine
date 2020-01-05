@@ -1,0 +1,324 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.ConstantBuffer
+  id: ShadowEngine.Rendering.ConstantBuffer
+  parent: ShadowEngine.Rendering
+  children:
+  - ShadowEngine.Rendering.ConstantBuffer.~ConstantBuffer()
+  - ShadowEngine.Rendering.ConstantBuffer.As()
+  - ShadowEngine.Rendering.ConstantBuffer.ConstantBuffer(size_t)
+  - ShadowEngine.Rendering.ConstantBuffer.GetImpl()
+  - ShadowEngine.Rendering.ConstantBuffer.impl
+  - ShadowEngine.Rendering.ConstantBuffer.Set(void *)
+  - ShadowEngine.Rendering.ConstantBuffer.Upload()
+  href: ShadowEngine.Rendering.ConstantBuffer.yml
+  langs:
+  - cplusplus
+  name: ConstantBuffer
+  nameWithType: ConstantBuffer
+  fullName: ShadowEngine::Rendering::ConstantBuffer
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowRenderer/ConstantBuffer.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/ConstantBuffer.h
+    startLine: 14
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ConstantBuffer.h
+    startLine: 15
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: class ConstantBuffer'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.Rendering.ConstantBuffer.~ConstantBuffer()
+  id: ShadowEngine.Rendering.ConstantBuffer.~ConstantBuffer()
+  parent: ShadowEngine.Rendering.ConstantBuffer
+  href: ShadowEngine.Rendering.ConstantBuffer.yml
+  langs:
+  - cplusplus
+  name: ~ConstantBuffer()
+  nameWithType: ConstantBuffer::~ConstantBuffer()
+  fullName: virtual ShadowEngine::Rendering::ConstantBuffer::~ConstantBuffer()
+  overload: ShadowEngine.Rendering.ConstantBuffer.~ConstantBuffer*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ConstantBuffer.h
+    startLine: 19
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ConstantBuffer.h
+    startLine: 19
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual ~ConstantBuffer()=default'
+- uid: ShadowEngine.Rendering.ConstantBuffer.As()
+  id: ShadowEngine.Rendering.ConstantBuffer.As()
+  parent: ShadowEngine.Rendering.ConstantBuffer
+  href: ShadowEngine.Rendering.ConstantBuffer.yml
+  langs:
+  - cplusplus
+  name: As()
+  nameWithType: ConstantBuffer::As()
+  fullName: T* ShadowEngine::Rendering::ConstantBuffer::As()
+  overload: ShadowEngine.Rendering.ConstantBuffer.As*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ConstantBuffer.h
+    startLine: 29
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ConstantBuffer.h
+    startLine: 29
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: T * As()'
+    typeParameters:
+    - id: class T
+      type: 07c9e456
+    return:
+      type: af4b7b18
+- uid: ShadowEngine.Rendering.ConstantBuffer.ConstantBuffer(size_t)
+  id: ShadowEngine.Rendering.ConstantBuffer.ConstantBuffer(size_t)
+  parent: ShadowEngine.Rendering.ConstantBuffer
+  href: ShadowEngine.Rendering.ConstantBuffer.yml
+  langs:
+  - cplusplus
+  name: ConstantBuffer(size_t size)
+  nameWithType: ConstantBuffer::ConstantBuffer(size_t size)
+  fullName: ShadowEngine::Rendering::ConstantBuffer::ConstantBuffer(size_t size)
+  overload: ShadowEngine.Rendering.ConstantBuffer.ConstantBuffer*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ConstantBuffer.h
+    startLine: 21
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ConstantBuffer.h
+    startLine: 21
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: ConstantBuffer(size_t size)'
+    parameters:
+    - id: size
+      type: 9563f24b
+- uid: ShadowEngine.Rendering.ConstantBuffer.GetImpl()
+  id: ShadowEngine.Rendering.ConstantBuffer.GetImpl()
+  parent: ShadowEngine.Rendering.ConstantBuffer
+  href: ShadowEngine.Rendering.ConstantBuffer.yml
+  langs:
+  - cplusplus
+  name: GetImpl()
+  nameWithType: ConstantBuffer::GetImpl()
+  fullName: virtual Ref<ConstantBufferImpl> ShadowEngine::Rendering::ConstantBuffer::GetImpl()
+  overload: ShadowEngine.Rendering.ConstantBuffer.GetImpl*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ConstantBuffer.h
+    startLine: 26
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ConstantBuffer.h
+    startLine: 26
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual Ref<ConstantBufferImpl> GetImpl() const'
+    return:
+      type: 2e1cc081ShadowEngine.Rendering.ConstantBufferImpla08ddfce
+- uid: ShadowEngine.Rendering.ConstantBuffer.impl
+  id: ShadowEngine.Rendering.ConstantBuffer.impl
+  parent: ShadowEngine.Rendering.ConstantBuffer
+  href: ShadowEngine.Rendering.ConstantBuffer.yml
+  langs:
+  - cplusplus
+  name: impl
+  nameWithType: ConstantBuffer::impl
+  fullName: Ref<ConstantBufferImpl> ShadowEngine::Rendering::ConstantBuffer::impl
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ConstantBuffer.h
+    startLine: 17
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ConstantBuffer.h
+    startLine: 17
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'protected: Ref<ConstantBufferImpl> impl'
+    return:
+      type: 2e1cc081ShadowEngine.Rendering.ConstantBufferImpla08ddfce
+- uid: ShadowEngine.Rendering.ConstantBuffer.Set(void *)
+  id: ShadowEngine.Rendering.ConstantBuffer.Set(void *)
+  parent: ShadowEngine.Rendering.ConstantBuffer
+  href: ShadowEngine.Rendering.ConstantBuffer.yml
+  langs:
+  - cplusplus
+  name: Set(void *d)
+  nameWithType: ConstantBuffer::Set(void *d)
+  fullName: virtual void ShadowEngine::Rendering::ConstantBuffer::Set(void *d)
+  overload: ShadowEngine.Rendering.ConstantBuffer.Set*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ConstantBuffer.h
+    startLine: 36
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ConstantBuffer.h
+    startLine: 36
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual void Set(void *d)=0'
+    parameters:
+    - id: d
+      type: 7ca192cd
+- uid: ShadowEngine.Rendering.ConstantBuffer.Upload()
+  id: ShadowEngine.Rendering.ConstantBuffer.Upload()
+  parent: ShadowEngine.Rendering.ConstantBuffer
+  href: ShadowEngine.Rendering.ConstantBuffer.yml
+  langs:
+  - cplusplus
+  name: Upload()
+  nameWithType: ConstantBuffer::Upload()
+  fullName: virtual void ShadowEngine::Rendering::ConstantBuffer::Upload()
+  overload: ShadowEngine.Rendering.ConstantBuffer.Upload*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ConstantBuffer.h
+    startLine: 37
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/ConstantBuffer.h
+    startLine: 37
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual void Upload()=0'
+references:
+- uid: 2e1cc081ShadowEngine.Rendering.ConstantBufferImpla08ddfce
+  spec.cplusplus:
+  - name: Ref<
+    fullName: Ref<
+  - uid: ShadowEngine.Rendering.ConstantBufferImpl
+  - name: '>'
+    fullName: '>'
+- uid: ShadowEngine.Rendering.ConstantBuffer.~ConstantBuffer*
+  name: ~ConstantBuffer
+  nameWithType: ConstantBuffer::~ConstantBuffer
+  fullName: virtual ShadowEngine::Rendering::ConstantBuffer::~ConstantBuffer
+- uid: 9563f24b
+  spec.cplusplus:
+  - name: size_t
+    fullName: size_t
+- uid: ShadowEngine.Rendering.ConstantBuffer.ConstantBuffer*
+  name: ConstantBuffer
+  nameWithType: ConstantBuffer::ConstantBuffer
+  fullName: ShadowEngine::Rendering::ConstantBuffer::ConstantBuffer
+- uid: ShadowEngine.Rendering.ConstantBuffer.GetImpl*
+  name: GetImpl
+  nameWithType: ConstantBuffer::GetImpl
+  fullName: virtual Ref<ConstantBufferImpl> ShadowEngine::Rendering::ConstantBuffer::GetImpl
+- uid: 07c9e456
+  spec.cplusplus:
+  - name: class T
+    fullName: class T
+- uid: af4b7b18
+  spec.cplusplus:
+  - name: T *
+    fullName: T *
+- uid: ShadowEngine.Rendering.ConstantBuffer.As*
+  name: As
+  nameWithType: ConstantBuffer::As
+  fullName: T* ShadowEngine::Rendering::ConstantBuffer::As
+- uid: 7ca192cd
+  spec.cplusplus:
+  - name: void *
+    fullName: void *
+- uid: ShadowEngine.Rendering.ConstantBuffer.Set*
+  name: Set
+  nameWithType: ConstantBuffer::Set
+  fullName: virtual void ShadowEngine::Rendering::ConstantBuffer::Set
+- uid: ShadowEngine.Rendering.ConstantBuffer.Upload*
+  name: Upload
+  nameWithType: ConstantBuffer::Upload
+  fullName: virtual void ShadowEngine::Rendering::ConstantBuffer::Upload
+- uid: ShadowEngine.Rendering.ConstantBuffer_Typed
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ConstantBuffer_Typed.yml
+  name: ConstantBuffer_Typed
+  nameWithType: ConstantBuffer_Typed
+  fullName: ShadowEngine::Rendering::ConstantBuffer_Typed
+  type: Class
+  syntax:
+    content: 'public: class ConstantBuffer_Typed'
+    typeParameters:
+    - id: class
+      type: 4fedf2a2
+- uid: ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet.yml
+  name: ConstantBuffer_ShaderPropertySheet
+  nameWithType: ConstantBuffer_ShaderPropertySheet
+  fullName: ShadowEngine::Rendering::ConstantBuffer_ShaderPropertySheet
+  type: Class
+  syntax:
+    content: 'public: class ConstantBuffer_ShaderPropertySheet'
+- uid: ShadowEngine.Rendering.ConstantBufferImpl
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ConstantBufferImpl.yml
+  name: ConstantBufferImpl
+  nameWithType: ConstantBufferImpl
+  fullName: ShadowEngine::Rendering::ConstantBufferImpl
+  type: Class
+  syntax:
+    content: 'public: class ConstantBufferImpl'
+- uid: ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet.Set(void *)
+  parent: ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet
+  href: ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet.yml
+  name: Set(void *d)
+  nameWithType: ConstantBuffer_ShaderPropertySheet::Set(void *d)
+  fullName: void ShadowEngine::Rendering::ConstantBuffer_ShaderPropertySheet::Set(void *d)
+  type: Method
+  syntax:
+    content: 'public: virtual void Set(void *d) override'
+    parameters:
+    - id: d
+      type: 7ca192cd
+- uid: ShadowEngine.Rendering.ConstantBuffer_Typed.Set(void *)
+  parent: ShadowEngine.Rendering.ConstantBuffer_Typed
+  href: ShadowEngine.Rendering.ConstantBuffer_Typed.yml
+  name: Set(void *d)
+  nameWithType: ConstantBuffer_Typed::Set(void *d)
+  fullName: void ShadowEngine::Rendering::ConstantBuffer_Typed<T>::Set(void *d)
+  type: Method
+  syntax:
+    content: 'public: virtual void Set(void *d) override'
+    parameters:
+    - id: d
+      type: 7ca192cd
+- uid: ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet.Upload()
+  parent: ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet
+  href: ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet.yml
+  name: Upload()
+  nameWithType: ConstantBuffer_ShaderPropertySheet::Upload()
+  fullName: void ShadowEngine::Rendering::ConstantBuffer_ShaderPropertySheet::Upload()
+  type: Method
+  syntax:
+    content: 'public: virtual void Upload() override'
+- uid: ShadowEngine.Rendering.ConstantBuffer_Typed.Upload()
+  parent: ShadowEngine.Rendering.ConstantBuffer_Typed
+  href: ShadowEngine.Rendering.ConstantBuffer_Typed.yml
+  name: Upload()
+  nameWithType: ConstantBuffer_Typed::Upload()
+  fullName: void ShadowEngine::Rendering::ConstantBuffer_Typed<T>::Upload()
+  type: Method
+  syntax:
+    content: 'public: virtual void Upload() override'

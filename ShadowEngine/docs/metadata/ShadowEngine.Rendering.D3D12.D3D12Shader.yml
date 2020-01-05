@@ -1,0 +1,366 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.D3D12.D3D12Shader
+  id: ShadowEngine.Rendering.D3D12.D3D12Shader
+  parent: ShadowEngine.Rendering.D3D12
+  children:
+  - ShadowEngine.Rendering.D3D12.D3D12Shader.~D3D12Shader()
+  - ShadowEngine.Rendering.D3D12.D3D12Shader.Bind()
+  - ShadowEngine.Rendering.D3D12.D3D12Shader.D3D12Shader(const std::string &,const std::string &)
+  - ShadowEngine.Rendering.D3D12.D3D12Shader.GetMaterialSlotIndex()
+  - ShadowEngine.Rendering.D3D12.D3D12Shader.GetPipelineState()
+  - ShadowEngine.Rendering.D3D12.D3D12Shader.GetRootSignature()
+  - ShadowEngine.Rendering.D3D12.D3D12Shader.Unbind()
+  href: ShadowEngine.Rendering.D3D12.D3D12Shader.yml
+  langs:
+  - cplusplus
+  name: D3D12Shader
+  nameWithType: D3D12Shader
+  fullName: ShadowEngine::Rendering::D3D12::D3D12Shader
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/Platform/D3D12/D3D12Shader.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.h
+    startLine: 24
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.h
+    startLine: 26
+  namespace: ShadowEngine.Rendering.D3D12
+  summary: "<p>Represents the shader byte code that can be used to draw. </p><p>D3D12Shader is the type ShadowEngine uses to represent byte code that has been compiled form HLSL to be used in the Dx12 renderer. Users should not handle D3D12Shader's by itself, but the ShadowEngine::Rendering::Shader class and it's Create function to make sure the shader class is made for the right render API. Sample Usage:</p>\r\n<p>var shader = ShadowEngine::Rendering::Shader::CreateFromCompiled(\"Shaders/Default-VS.cso\", \"Shaders/Default-FS.cso\"); </p>"
+  syntax:
+    content: 'public: class D3D12Shader : public ader'
+  inheritance:
+  - System::Object
+  - ShadowEngine.Rendering.Shader
+  inheritedMembers:
+  - ShadowEngine.Rendering.Shader.Create(const std::string &,const std::string &)
+  - ShadowEngine.Rendering.Shader.CreateFromCompiled(const std::string &,const std::string &)
+  - ShadowEngine.Rendering.Shader.GetPropertiesCopy()
+  - ShadowEngine.Rendering.Shader.properties
+  - ShadowEngine.Rendering.Shader.~Shader()
+- uid: ShadowEngine.Rendering.D3D12.D3D12Shader.~D3D12Shader()
+  id: ShadowEngine.Rendering.D3D12.D3D12Shader.~D3D12Shader()
+  parent: ShadowEngine.Rendering.D3D12.D3D12Shader
+  href: ShadowEngine.Rendering.D3D12.D3D12Shader.yml
+  langs:
+  - cplusplus
+  name: ~D3D12Shader()
+  nameWithType: D3D12Shader::~D3D12Shader()
+  fullName: ShadowEngine::Rendering::D3D12::D3D12Shader::~D3D12Shader()
+  overload: ShadowEngine.Rendering.D3D12.D3D12Shader.~D3D12Shader*
+  type: Constructor
+  source:
+    remote: &o1
+      path: ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp
+    startLine: 217
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.h
+    startLine: 55
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: virtual ~D3D12Shader()'
+- uid: ShadowEngine.Rendering.D3D12.D3D12Shader.Bind()
+  id: ShadowEngine.Rendering.D3D12.D3D12Shader.Bind()
+  parent: ShadowEngine.Rendering.D3D12.D3D12Shader
+  href: ShadowEngine.Rendering.D3D12.D3D12Shader.yml
+  langs:
+  - cplusplus
+  name: Bind()
+  nameWithType: D3D12Shader::Bind()
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12Shader::Bind()
+  overload: ShadowEngine.Rendering.D3D12.D3D12Shader.Bind*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp
+    startLine: 237
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.h
+    startLine: 77
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: virtual void Bind() const'
+  overridden: ShadowEngine.Rendering.Shader.Bind()
+- uid: ShadowEngine.Rendering.D3D12.D3D12Shader.D3D12Shader(const std::string &,const std::string &)
+  id: string &)
+  parent: ShadowEngine.Rendering.D3D12.D3D12Shader
+  href: ShadowEngine.Rendering.D3D12.D3D12Shader.yml
+  langs:
+  - cplusplus
+  name: D3D12Shader(const std::string &VSfilePath, const std::string &PSfilePath)
+  nameWithType: D3D12Shader::D3D12Shader(const std::string &VSfilePath, const std::string &PSfilePath)
+  fullName: ShadowEngine::Rendering::D3D12::D3D12Shader::D3D12Shader(const std::string &VSfilePath, const std::string &PSfilePath)
+  overload: ShadowEngine.Rendering.D3D12.D3D12Shader.D3D12Shader*
+  type: Constructor
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp
+    startLine: 117
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.h
+    startLine: 54
+  namespace: ShadowEngine.Rendering.D3D12
+  summary: "<p>Constructor for D3D12 Shaders. </p>"
+  syntax:
+    content: 'public: D3D12Shader(const std::string &VSfilePath, const std::string &PSfilePath)'
+    parameters:
+    - id: VSfilePath
+      type: 360fc41e
+      description: <p>File path to the Compiled HLSL Vertex shader </p>
+    - id: PSfilePath
+      type: 360fc41e
+      description: <p>File path to the Compiled HLSL Fragment shader </p>
+- uid: ShadowEngine.Rendering.D3D12.D3D12Shader.GetMaterialSlotIndex()
+  id: ShadowEngine.Rendering.D3D12.D3D12Shader.GetMaterialSlotIndex()
+  parent: ShadowEngine.Rendering.D3D12.D3D12Shader
+  href: ShadowEngine.Rendering.D3D12.D3D12Shader.yml
+  langs:
+  - cplusplus
+  name: GetMaterialSlotIndex()
+  nameWithType: D3D12Shader::GetMaterialSlotIndex()
+  fullName: int ShadowEngine::Rendering::D3D12::D3D12Shader::GetMaterialSlotIndex()
+  overload: ShadowEngine.Rendering.D3D12.D3D12Shader.GetMaterialSlotIndex*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp
+    startLine: 232
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.h
+    startLine: 75
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: int GetMaterialSlotIndex()'
+    return:
+      type: f75371fa
+- uid: ShadowEngine.Rendering.D3D12.D3D12Shader.GetPipelineState()
+  id: ShadowEngine.Rendering.D3D12.D3D12Shader.GetPipelineState()
+  parent: ShadowEngine.Rendering.D3D12.D3D12Shader
+  href: ShadowEngine.Rendering.D3D12.D3D12Shader.yml
+  langs:
+  - cplusplus
+  name: GetPipelineState()
+  nameWithType: D3D12Shader::GetPipelineState()
+  fullName: com_ptr<ID3D12PipelineState> ShadowEngine::Rendering::D3D12::D3D12Shader::GetPipelineState()
+  overload: ShadowEngine.Rendering.D3D12.D3D12Shader.GetPipelineState*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp
+    startLine: 222
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.h
+    startLine: 64
+  namespace: ShadowEngine.Rendering.D3D12
+  summary: "<p>Returns the pipeline state. </p><p>Used to get the pipe line state object for the represented shader code. Returns the default Dx12 ID3D12PipelineState object</p>\r\n<p></p>"
+  syntax:
+    content: 'public: com_ptr<ID3D12PipelineState> GetPipelineState()'
+    return:
+      type: 46b89998
+      description: <p>The com pointer of the root signature </p>
+- uid: ShadowEngine.Rendering.D3D12.D3D12Shader.GetRootSignature()
+  id: ShadowEngine.Rendering.D3D12.D3D12Shader.GetRootSignature()
+  parent: ShadowEngine.Rendering.D3D12.D3D12Shader
+  href: ShadowEngine.Rendering.D3D12.D3D12Shader.yml
+  langs:
+  - cplusplus
+  name: GetRootSignature()
+  nameWithType: D3D12Shader::GetRootSignature()
+  fullName: com_ptr<ID3D12RootSignature> ShadowEngine::Rendering::D3D12::D3D12Shader::GetRootSignature()
+  overload: ShadowEngine.Rendering.D3D12.D3D12Shader.GetRootSignature*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp
+    startLine: 227
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.h
+    startLine: 73
+  namespace: ShadowEngine.Rendering.D3D12
+  summary: "<p>Returns the Root signature. </p><p>Used to get the root signature of the represented shader code. Returns the default Dx12 ID3D12RootSignature object</p>\r\n<p></p>"
+  syntax:
+    content: 'public: com_ptr<ID3D12RootSignature> GetRootSignature()'
+    return:
+      type: b13b4b02
+      description: <p>The com pointer of the root signature </p>
+- uid: ShadowEngine.Rendering.D3D12.D3D12Shader.Unbind()
+  id: ShadowEngine.Rendering.D3D12.D3D12Shader.Unbind()
+  parent: ShadowEngine.Rendering.D3D12.D3D12Shader
+  href: ShadowEngine.Rendering.D3D12.D3D12Shader.yml
+  langs:
+  - cplusplus
+  name: Unbind()
+  nameWithType: D3D12Shader::Unbind()
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12Shader::Unbind()
+  overload: ShadowEngine.Rendering.D3D12.D3D12Shader.Unbind*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp
+    startLine: 242
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Platform/D3D12/D3D12Shader.h
+    startLine: 78
+  namespace: ShadowEngine.Rendering.D3D12
+  syntax:
+    content: 'public: virtual void Unbind() const'
+  overridden: ShadowEngine.Rendering.Shader.Unbind()
+references:
+- uid: 360fc41e
+  spec.cplusplus:
+  - name: const std::string &
+    fullName: const std::string &
+- uid: ShadowEngine.Rendering.D3D12.D3D12Shader.D3D12Shader*
+  name: D3D12Shader
+  nameWithType: D3D12Shader::D3D12Shader
+  fullName: ShadowEngine::Rendering::D3D12::D3D12Shader::D3D12Shader
+- uid: ShadowEngine.Rendering.D3D12.D3D12Shader.~D3D12Shader*
+  name: ~D3D12Shader
+  nameWithType: D3D12Shader::~D3D12Shader
+  fullName: ShadowEngine::Rendering::D3D12::D3D12Shader::~D3D12Shader
+- uid: 46b89998
+  spec.cplusplus:
+  - name: com_ptr<ID3D12PipelineState>
+    fullName: com_ptr<ID3D12PipelineState>
+- uid: ShadowEngine.Rendering.D3D12.D3D12Shader.GetPipelineState*
+  name: GetPipelineState
+  nameWithType: D3D12Shader::GetPipelineState
+  fullName: com_ptr<ID3D12PipelineState> ShadowEngine::Rendering::D3D12::D3D12Shader::GetPipelineState
+- uid: b13b4b02
+  spec.cplusplus:
+  - name: com_ptr<ID3D12RootSignature>
+    fullName: com_ptr<ID3D12RootSignature>
+- uid: ShadowEngine.Rendering.D3D12.D3D12Shader.GetRootSignature*
+  name: GetRootSignature
+  nameWithType: D3D12Shader::GetRootSignature
+  fullName: com_ptr<ID3D12RootSignature> ShadowEngine::Rendering::D3D12::D3D12Shader::GetRootSignature
+- uid: f75371fa
+  spec.cplusplus:
+  - name: int
+    fullName: int
+- uid: ShadowEngine.Rendering.D3D12.D3D12Shader.GetMaterialSlotIndex*
+  name: GetMaterialSlotIndex
+  nameWithType: D3D12Shader::GetMaterialSlotIndex
+  fullName: int ShadowEngine::Rendering::D3D12::D3D12Shader::GetMaterialSlotIndex
+- uid: ShadowEngine.Rendering.D3D12.D3D12Shader.Bind*
+  name: Bind
+  nameWithType: D3D12Shader::Bind
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12Shader::Bind
+- uid: ShadowEngine.Rendering.D3D12.D3D12Shader.Unbind*
+  name: Unbind
+  nameWithType: D3D12Shader::Unbind
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12Shader::Unbind
+- uid: ShadowEngine.Rendering.Shader.Create(const std::string &,const std::string &)
+  parent: ShadowEngine.Rendering.Shader
+  href: ShadowEngine.Rendering.Shader.yml
+  name: Create(const std::string &vertexSrc, const std::string &fragmentSrc)
+  nameWithType: Shader::Create(const std::string &vertexSrc, const std::string &fragmentSrc)
+  fullName: Shader * ShadowEngine::Rendering::Shader::Create(const std::string &vertexSrc, const std::string &fragmentSrc)
+  type: Method
+  syntax:
+    content: 'public: static Shader * Create(const std::string &vertexSrc, const std::string &fragmentSrc)'
+    parameters:
+    - id: vertexSrc
+      type: 360fc41e
+    - id: fragmentSrc
+      type: 360fc41e
+    return:
+      type: ShadowEngine.Rendering.Shader68bc11b4
+- uid: ShadowEngine.Rendering.Shader.CreateFromCompiled(const std::string &,const std::string &)
+  parent: ShadowEngine.Rendering.Shader
+  href: ShadowEngine.Rendering.Shader.yml
+  name: CreateFromCompiled(const std::string &VSfilePath, const std::string &PSfilePath)
+  nameWithType: Shader::CreateFromCompiled(const std::string &VSfilePath, const std::string &PSfilePath)
+  fullName: Shader * ShadowEngine::Rendering::Shader::CreateFromCompiled(const std::string &VSfilePath, const std::string &PSfilePath)
+  type: Method
+  syntax:
+    content: 'public: static Shader * CreateFromCompiled(const std::string &VSfilePath, const std::string &PSfilePath)'
+    parameters:
+    - id: VSfilePath
+      type: 360fc41e
+    - id: PSfilePath
+      type: 360fc41e
+    return:
+      type: ShadowEngine.Rendering.Shader68bc11b4
+- uid: ShadowEngine.Rendering.Shader.GetPropertiesCopy()
+  parent: ShadowEngine.Rendering.Shader
+  href: ShadowEngine.Rendering.Shader.yml
+  name: GetPropertiesCopy()
+  nameWithType: Shader::GetPropertiesCopy()
+  fullName: ShaderPropertySheet * ShadowEngine::Rendering::Shader::GetPropertiesCopy()
+  type: Method
+  syntax:
+    content: 'public: ShaderPropertySheet * GetPropertiesCopy()'
+    return:
+      type: ShadowEngine.Rendering.ShaderPropertySheet68bc11b4
+- uid: ShadowEngine.Rendering.Shader.properties
+  parent: ShadowEngine.Rendering.Shader
+  href: ShadowEngine.Rendering.Shader.yml
+  name: properties
+  nameWithType: Shader::properties
+  fullName: ShaderPropertySheet ShadowEngine::Rendering::Shader::properties
+  type: Field
+  syntax:
+    content: 'protected: ShaderPropertySheet properties'
+    return:
+      type: ShadowEngine.Rendering.ShaderPropertySheet
+- uid: ShadowEngine.Rendering.Shader.~Shader()
+  parent: ShadowEngine.Rendering.Shader
+  href: ShadowEngine.Rendering.Shader.yml
+  name: ~Shader()
+  nameWithType: Shader::~Shader()
+  fullName: virtual ShadowEngine::Rendering::Shader::~Shader()
+  type: Constructor
+  syntax:
+    content: 'public: virtual ~Shader()=default'
+- uid: ShadowEngine.Rendering.Shader
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.Shader.yml
+  name: Shader
+  nameWithType: Shader
+  fullName: ShadowEngine::Rendering::Shader
+  type: Class
+  syntax:
+    content: 'public: class Shader'
+- uid: _d3_d12_shader_8h
+- uid: ShadowEngine.Rendering.BufferLayout
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.BufferLayout.yml
+  name: BufferLayout
+  nameWithType: BufferLayout
+  fullName: ShadowEngine::Rendering::BufferLayout
+  type: Class
+  syntax:
+    content: 'public: class BufferLayout'
+- uid: ShadowEngine.Rendering.Shader.Bind()
+  parent: ShadowEngine.Rendering.Shader
+  href: ShadowEngine.Rendering.Shader.yml
+  name: Bind()
+  nameWithType: Shader::Bind()
+  fullName: virtual void ShadowEngine::Rendering::Shader::Bind()
+  type: Method
+  syntax:
+    content: 'public: virtual void Bind() const =0'
+- uid: ShadowEngine.Rendering.Shader.Unbind()
+  parent: ShadowEngine.Rendering.Shader
+  href: ShadowEngine.Rendering.Shader.yml
+  name: Unbind()
+  nameWithType: Shader::Unbind()
+  fullName: virtual void ShadowEngine::Rendering::Shader::Unbind()
+  type: Method
+  syntax:
+    content: 'public: virtual void Unbind() const =0'

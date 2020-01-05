@@ -1,0 +1,785 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowMath.Vector2float
+  id: ShadowMath.Vector2float
+  parent: ShadowMath
+  children:
+  - ShadowMath.Vector2float.Angle()
+  - ShadowMath.Vector2float.Distance(Vector2float,Vector2float)
+  - ShadowMath.Vector2float.DotProduct(Vector2float,Vector2float)
+  - ShadowMath.Vector2float.LeftNormal()
+  - ShadowMath.Vector2float.Lerp(Vector2float,Vector2float,int)
+  - ShadowMath.Vector2float.Magnitude()
+  - ShadowMath.Vector2float.MagnitudeSqr()
+  - ShadowMath.Vector2float.Normalize()
+  - ShadowMath.Vector2float.operator *(const float &)
+  - ShadowMath.Vector2float.operator *(const int &)
+  - ShadowMath.Vector2float.operator *(const Vector2float &)
+  - ShadowMath.Vector2float.operator Vector2int()
+  - ShadowMath.Vector2float.operator!=(const Vector2float)
+  - ShadowMath.Vector2float.operator-(const Vector2float &)
+  - ShadowMath.Vector2float.operator[](int)
+  - ShadowMath.Vector2float.operator+(const Vector2float &)
+  - ShadowMath.Vector2float.operator==(const Vector2float)
+  - ShadowMath.Vector2float.RightNormal()
+  - ShadowMath.Vector2float.Vector2float()
+  - ShadowMath.Vector2float.Vector2float(const Vector2float &)
+  - ShadowMath.Vector2float.Vector2float(float,float)
+  - ShadowMath.Vector2float.x
+  - ShadowMath.Vector2float.y
+  - ShadowMath.Vector2float.zero
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: Vector2float
+  nameWithType: Vector2float
+  fullName: ShadowMath::Vector2float
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowMath/Vector2float.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 6
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 7
+  namespace: ShadowMath
+  syntax: &o2
+    content: 'public: class Vector2float'
+  inheritance:
+  - System::Object
+- uid: ShadowMath.Vector2float.Angle()
+  id: ShadowMath.Vector2float.Angle()
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: Angle()
+  nameWithType: Vector2float::Angle()
+  fullName: float ShadowMath::Vector2float::Angle()
+  overload: ShadowMath.Vector2float.Angle*
+  type: Method
+  source:
+    remote: &o1
+      path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 41
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 42
+  namespace: ShadowMath
+  syntax:
+    content: 'public: float Angle()'
+    return:
+      type: 64de6a54
+- uid: ShadowMath.Vector2float.Distance(Vector2float,Vector2float)
+  id: ShadowMath.Vector2float.Distance(Vector2float,Vector2float)
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: Distance(Vector2float a, Vector2float b)
+  nameWithType: Vector2float::Distance(Vector2float a, Vector2float b)
+  fullName: const float ShadowMath::Vector2float::Distance(Vector2float a, Vector2float b)
+  overload: ShadowMath.Vector2float.Distance*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 61
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 48
+  namespace: ShadowMath
+  syntax:
+    content: 'public: const float Distance(Vector2float a, Vector2float b)'
+    parameters:
+    - id: a
+      type: ShadowMath.Vector2float
+    - id: b
+      type: ShadowMath.Vector2float
+    return:
+      type: "52e77931"
+- uid: ShadowMath.Vector2float.DotProduct(Vector2float,Vector2float)
+  id: ShadowMath.Vector2float.DotProduct(Vector2float,Vector2float)
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: DotProduct(Vector2float a, Vector2float b)
+  nameWithType: Vector2float::DotProduct(Vector2float a, Vector2float b)
+  fullName: const float ShadowMath::Vector2float::DotProduct(Vector2float a, Vector2float b)
+  overload: ShadowMath.Vector2float.DotProduct*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 56
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 44
+  namespace: ShadowMath
+  syntax:
+    content: 'public: const float DotProduct(Vector2float a, Vector2float b)'
+    parameters:
+    - id: a
+      type: ShadowMath.Vector2float
+    - id: b
+      type: ShadowMath.Vector2float
+    return:
+      type: "52e77931"
+- uid: ShadowMath.Vector2float.LeftNormal()
+  id: ShadowMath.Vector2float.LeftNormal()
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: LeftNormal()
+  nameWithType: Vector2float::LeftNormal()
+  fullName: Vector2float ShadowMath::Vector2float::LeftNormal()
+  overload: ShadowMath.Vector2float.LeftNormal*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 31
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 38
+  namespace: ShadowMath
+  syntax:
+    content: 'public: Vector2float LeftNormal()'
+    return:
+      type: ShadowMath.Vector2float
+- uid: ShadowMath.Vector2float.Lerp(Vector2float,Vector2float,int)
+  id: ShadowMath.Vector2float.Lerp(Vector2float,Vector2float,int)
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: Lerp(Vector2float a, Vector2float b, int t)
+  nameWithType: Vector2float::Lerp(Vector2float a, Vector2float b, int t)
+  fullName: const Vector2float ShadowMath::Vector2float::Lerp(Vector2float a, Vector2float b, int t)
+  overload: ShadowMath.Vector2float.Lerp*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 46
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 46
+  namespace: ShadowMath
+  syntax:
+    content: 'public: const Vector2float Lerp(Vector2float a, Vector2float b, int t)'
+    parameters:
+    - id: a
+      type: ShadowMath.Vector2float
+    - id: b
+      type: ShadowMath.Vector2float
+    - id: t
+      type: f75371fa
+    return:
+      type: 1413e510ShadowMath.Vector2float
+- uid: ShadowMath.Vector2float.Magnitude()
+  id: ShadowMath.Vector2float.Magnitude()
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: Magnitude()
+  nameWithType: Vector2float::Magnitude()
+  fullName: float ShadowMath::Vector2float::Magnitude()
+  overload: ShadowMath.Vector2float.Magnitude*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 19
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 32
+  namespace: ShadowMath
+  syntax:
+    content: 'public: float Magnitude()'
+    return:
+      type: 64de6a54
+- uid: ShadowMath.Vector2float.MagnitudeSqr()
+  id: ShadowMath.Vector2float.MagnitudeSqr()
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: MagnitudeSqr()
+  nameWithType: Vector2float::MagnitudeSqr()
+  fullName: float ShadowMath::Vector2float::MagnitudeSqr()
+  overload: ShadowMath.Vector2float.MagnitudeSqr*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 14
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 34
+  namespace: ShadowMath
+  syntax:
+    content: 'public: float MagnitudeSqr()'
+    return:
+      type: 64de6a54
+- uid: ShadowMath.Vector2float.Normalize()
+  id: ShadowMath.Vector2float.Normalize()
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: Normalize()
+  nameWithType: Vector2float::Normalize()
+  fullName: void ShadowMath::Vector2float::Normalize()
+  overload: ShadowMath.Vector2float.Normalize*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 24
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 36
+  namespace: ShadowMath
+  syntax:
+    content: 'public: void Normalize()'
+- uid: ShadowMath.Vector2float.operator *(const float &)
+  id: ShadowMath.Vector2float.operator *(const float &)
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: operator *(const float &b)
+  nameWithType: Vector2float::operator *(const float &b)
+  fullName: Vector2float ShadowMath::Vector2float::operator *(const float &b)
+  overload: ShadowMath.Vector2float.operator **
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 90
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 58
+  namespace: ShadowMath
+  syntax:
+    content: 'public: Vector2float operator *(const float &b)'
+    parameters:
+    - id: b
+      type: c9f46a36
+    return:
+      type: ShadowMath.Vector2float
+- uid: ShadowMath.Vector2float.operator *(const int &)
+  id: ShadowMath.Vector2float.operator *(const int &)
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: operator *(const int &b)
+  nameWithType: Vector2float::operator *(const int &b)
+  fullName: Vector2float ShadowMath::Vector2float::operator *(const int &b)
+  overload: ShadowMath.Vector2float.operator **
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 118
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 56
+  namespace: ShadowMath
+  syntax:
+    content: 'public: Vector2float operator *(const int &b)'
+    parameters:
+    - id: b
+      type: 5f989471
+    return:
+      type: ShadowMath.Vector2float
+- uid: ShadowMath.Vector2float.operator *(const Vector2float &)
+  id: ShadowMath.Vector2float.operator *(const Vector2float &)
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: operator *(const Vector2float &b)
+  nameWithType: Vector2float::operator *(const Vector2float &b)
+  fullName: Vector2float ShadowMath::Vector2float::operator *(const Vector2float &b)
+  overload: ShadowMath.Vector2float.operator **
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 82
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 54
+  namespace: ShadowMath
+  syntax:
+    content: 'public: Vector2float operator *(const Vector2float &b)'
+    parameters:
+    - id: b
+      type: 1413e510ShadowMath.Vector2float76390d34
+    return:
+      type: ShadowMath.Vector2float
+- uid: ShadowMath.Vector2float.operator Vector2int()
+  id: ShadowMath.Vector2float.operator Vector2int()
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: operator Vector2int()
+  nameWithType: Vector2float::operator Vector2int()
+  fullName: ShadowMath::Vector2float::operator Vector2int()
+  overload: ShadowMath.Vector2float.operator Vector2int*
+  type: Constructor
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 124
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 66
+  namespace: ShadowMath
+  syntax:
+    content: 'public: operator Vector2int()'
+- uid: ShadowMath.Vector2float.operator!=(const Vector2float)
+  id: ShadowMath.Vector2float.operator!=(const Vector2float)
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: operator!=(const Vector2float b)
+  nameWithType: Vector2float::operator!=(const Vector2float b)
+  fullName: bool ShadowMath::Vector2float::operator!=(const Vector2float b)
+  overload: ShadowMath.Vector2float.operator!=*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 101
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 62
+  namespace: ShadowMath
+  syntax:
+    content: 'public: bool operator!=(const Vector2float b) const'
+    parameters:
+    - id: b
+      type: 1413e510ShadowMath.Vector2float
+    return:
+      type: 13ff06c5
+- uid: ShadowMath.Vector2float.operator-(const Vector2float &)
+  id: ShadowMath.Vector2float.operator-(const Vector2float &)
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: operator-(const Vector2float &b)
+  nameWithType: Vector2float::operator-(const Vector2float &b)
+  fullName: Vector2float ShadowMath::Vector2float::operator-(const Vector2float &b)
+  overload: ShadowMath.Vector2float.operator-*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 74
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 52
+  namespace: ShadowMath
+  syntax:
+    content: 'public: Vector2float operator-(const Vector2float &b)'
+    parameters:
+    - id: b
+      type: 1413e510ShadowMath.Vector2float76390d34
+    return:
+      type: ShadowMath.Vector2float
+- uid: ShadowMath.Vector2float.operator[](int)
+  id: ShadowMath.Vector2float.operator[](int)
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: operator[](int i)
+  nameWithType: Vector2float::operator[](int i)
+  fullName: float & ShadowMath::Vector2float::operator[](int i)
+  overload: ShadowMath.Vector2float.operator[]*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 106
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 64
+  namespace: ShadowMath
+  syntax:
+    content: 'public: float & operator[](int i)'
+    parameters:
+    - id: i
+      type: f75371fa
+    return:
+      type: 52209f83
+- uid: ShadowMath.Vector2float.operator+(const Vector2float &)
+  id: ShadowMath.Vector2float.operator+(const Vector2float &)
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: operator+(const Vector2float &b)
+  nameWithType: Vector2float::operator+(const Vector2float &b)
+  fullName: Vector2float ShadowMath::Vector2float::operator+(const Vector2float &b)
+  overload: ShadowMath.Vector2float.operator+*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 66
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 50
+  namespace: ShadowMath
+  syntax:
+    content: 'public: Vector2float operator+(const Vector2float &b)'
+    parameters:
+    - id: b
+      type: 1413e510ShadowMath.Vector2float76390d34
+    return:
+      type: ShadowMath.Vector2float
+- uid: ShadowMath.Vector2float.operator==(const Vector2float)
+  id: ShadowMath.Vector2float.operator==(const Vector2float)
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: operator==(const Vector2float b)
+  nameWithType: Vector2float::operator==(const Vector2float b)
+  fullName: bool ShadowMath::Vector2float::operator==(const Vector2float b)
+  overload: ShadowMath.Vector2float.operator==*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 96
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 60
+  namespace: ShadowMath
+  syntax:
+    content: 'public: bool operator==(const Vector2float b) const'
+    parameters:
+    - id: b
+      type: 1413e510ShadowMath.Vector2float
+    return:
+      type: 13ff06c5
+- uid: ShadowMath.Vector2float.RightNormal()
+  id: ShadowMath.Vector2float.RightNormal()
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: RightNormal()
+  nameWithType: Vector2float::RightNormal()
+  fullName: Vector2float ShadowMath::Vector2float::RightNormal()
+  overload: ShadowMath.Vector2float.RightNormal*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowMath/Vector2float.cpp
+    startLine: 36
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 40
+  namespace: ShadowMath
+  syntax:
+    content: 'public: Vector2float RightNormal()'
+    return:
+      type: ShadowMath.Vector2float
+- uid: ShadowMath.Vector2float.Vector2float()
+  id: ShadowMath.Vector2float.Vector2float()
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: Vector2float()
+  nameWithType: Vector2float::Vector2float()
+  fullName: ShadowMath::Vector2float::Vector2float()
+  overload: ShadowMath.Vector2float.Vector2float*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 20
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 20
+  namespace: ShadowMath
+  syntax:
+    content: 'public: Vector2float()'
+- uid: ShadowMath.Vector2float.Vector2float(const Vector2float &)
+  id: ShadowMath.Vector2float.Vector2float(const Vector2float &)
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: Vector2float(const Vector2float &cpy)
+  nameWithType: Vector2float::Vector2float(const Vector2float &cpy)
+  fullName: ShadowMath::Vector2float::Vector2float(const Vector2float &cpy)
+  overload: ShadowMath.Vector2float.Vector2float*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 26
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 26
+  namespace: ShadowMath
+  syntax:
+    content: 'public: Vector2float(const Vector2float &cpy)'
+    parameters:
+    - id: cpy
+      type: 1413e510ShadowMath.Vector2float76390d34
+- uid: ShadowMath.Vector2float.Vector2float(float,float)
+  id: ShadowMath.Vector2float.Vector2float(float,float)
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: Vector2float(float x, float y)
+  nameWithType: Vector2float::Vector2float(float x, float y)
+  fullName: ShadowMath::Vector2float::Vector2float(float x, float y)
+  overload: ShadowMath.Vector2float.Vector2float*
+  type: Constructor
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 14
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 14
+  namespace: ShadowMath
+  syntax:
+    content: 'public: Vector2float(float x, float y)'
+    parameters:
+    - id: x
+      type: 64de6a54
+    - id: y
+      type: 64de6a54
+- uid: ShadowMath.Vector2float.x
+  id: ShadowMath.Vector2float.x
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: x
+  nameWithType: Vector2float::x
+  fullName: float ShadowMath::Vector2float::x
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 9
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 9
+  namespace: ShadowMath
+  syntax:
+    content: 'public: float x'
+    return:
+      type: 64de6a54
+- uid: ShadowMath.Vector2float.y
+  id: ShadowMath.Vector2float.y
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: y
+  nameWithType: Vector2float::y
+  fullName: float ShadowMath::Vector2float::y
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 10
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 10
+  namespace: ShadowMath
+  syntax:
+    content: 'public: float y'
+    return:
+      type: 64de6a54
+- uid: ShadowMath.Vector2float.zero
+  id: ShadowMath.Vector2float.zero
+  parent: ShadowMath.Vector2float
+  href: ShadowMath.Vector2float.yml
+  langs:
+  - cplusplus
+  name: zero
+  nameWithType: Vector2float::zero
+  fullName: const Vector2float ShadowMath::Vector2float::zero
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 12
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowMath/Vector2float.h
+    startLine: 12
+  namespace: ShadowMath
+  syntax:
+    content: 'public: static const Vector2float zero= Vector2float(0, 0)'
+    return:
+      type: 1413e510ShadowMath.Vector2float
+references:
+- uid: 64de6a54
+  spec.cplusplus:
+  - name: float
+    fullName: float
+- uid: 1413e510ShadowMath.Vector2float
+  spec.cplusplus:
+  - name: 'const '
+    fullName: 'const '
+  - uid: ShadowMath.Vector2float
+- uid: ShadowMath.Vector2float.Vector2float*
+  name: Vector2float
+  nameWithType: Vector2float::Vector2float
+  fullName: ShadowMath::Vector2float::Vector2float
+- uid: 1413e510ShadowMath.Vector2float76390d34
+  spec.cplusplus:
+  - name: 'const '
+    fullName: 'const '
+  - uid: ShadowMath.Vector2float
+  - name: " &"
+    fullName: " &"
+- uid: ShadowMath.Vector2float.Magnitude*
+  name: Magnitude
+  nameWithType: Vector2float::Magnitude
+  fullName: float ShadowMath::Vector2float::Magnitude
+- uid: ShadowMath.Vector2float.MagnitudeSqr*
+  name: MagnitudeSqr
+  nameWithType: Vector2float::MagnitudeSqr
+  fullName: float ShadowMath::Vector2float::MagnitudeSqr
+- uid: ShadowMath.Vector2float.Normalize*
+  name: Normalize
+  nameWithType: Vector2float::Normalize
+  fullName: void ShadowMath::Vector2float::Normalize
+- uid: ShadowMath.Vector2float.LeftNormal*
+  name: LeftNormal
+  nameWithType: Vector2float::LeftNormal
+  fullName: Vector2float ShadowMath::Vector2float::LeftNormal
+- uid: ShadowMath.Vector2float.RightNormal*
+  name: RightNormal
+  nameWithType: Vector2float::RightNormal
+  fullName: Vector2float ShadowMath::Vector2float::RightNormal
+- uid: ShadowMath.Vector2float.Angle*
+  name: Angle
+  nameWithType: Vector2float::Angle
+  fullName: float ShadowMath::Vector2float::Angle
+- uid: "52e77931"
+  spec.cplusplus:
+  - name: const float
+    fullName: const float
+- uid: ShadowMath.Vector2float.DotProduct*
+  name: DotProduct
+  nameWithType: Vector2float::DotProduct
+  fullName: const float ShadowMath::Vector2float::DotProduct
+- uid: f75371fa
+  spec.cplusplus:
+  - name: int
+    fullName: int
+- uid: ShadowMath.Vector2float.Lerp*
+  name: Lerp
+  nameWithType: Vector2float::Lerp
+  fullName: const Vector2float ShadowMath::Vector2float::Lerp
+- uid: ShadowMath.Vector2float.Distance*
+  name: Distance
+  nameWithType: Vector2float::Distance
+  fullName: const float ShadowMath::Vector2float::Distance
+- uid: ShadowMath.Vector2float.operator+*
+  name: operator+
+  nameWithType: Vector2float::operator+
+  fullName: Vector2float ShadowMath::Vector2float::operator+
+- uid: ShadowMath.Vector2float.operator-*
+  name: operator-
+  nameWithType: Vector2float::operator-
+  fullName: Vector2float ShadowMath::Vector2float::operator-
+- uid: ShadowMath.Vector2float.operator **
+  name: operator *
+  nameWithType: Vector2float::operator *
+  fullName: Vector2float ShadowMath::Vector2float::operator *
+- uid: 5f989471
+  spec.cplusplus:
+  - name: const int &
+    fullName: const int &
+- uid: c9f46a36
+  spec.cplusplus:
+  - name: const float &
+    fullName: const float &
+- uid: 13ff06c5
+  spec.cplusplus:
+  - name: bool
+    fullName: bool
+- uid: ShadowMath.Vector2float.operator==*
+  name: operator==
+  nameWithType: Vector2float::operator==
+  fullName: bool ShadowMath::Vector2float::operator==
+- uid: ShadowMath.Vector2float.operator!=*
+  name: operator!=
+  nameWithType: Vector2float::operator!=
+  fullName: bool ShadowMath::Vector2float::operator!=
+- uid: 52209f83
+  spec.cplusplus:
+  - name: float &
+    fullName: float &
+- uid: ShadowMath.Vector2float.operator[]*
+  name: operator[]
+  nameWithType: Vector2float::operator[]
+  fullName: float & ShadowMath::Vector2float::operator[]
+- uid: ShadowMath.Vector2float.operator Vector2int*
+  name: operator Vector2int
+  nameWithType: Vector2float::operator Vector2int
+  fullName: ShadowMath::Vector2float::operator Vector2int
+- uid: ShadowMath.Vector2float
+  parent: ShadowMath
+  href: ShadowMath.Vector2float.yml
+  name: Vector2float
+  nameWithType: Vector2float
+  fullName: ShadowMath::Vector2float
+  type: Class
+  syntax: *o2

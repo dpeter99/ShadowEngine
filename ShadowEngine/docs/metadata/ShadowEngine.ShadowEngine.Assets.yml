@@ -1,0 +1,36 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.ShadowEngine.Assets
+  id: ShadowEngine.ShadowEngine.Assets
+  children:
+  - ShadowEngine.ShadowEngine.Assets.Material
+  href: ShadowEngine.ShadowEngine.Assets.yml
+  langs:
+  - cplusplus
+  name: ShadowEngine::ShadowEngine::Assets
+  nameWithType: ShadowEngine::ShadowEngine::Assets
+  fullName: ShadowEngine::ShadowEngine::Assets
+  type: Namespace
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowAsset/Assets/Material.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowAsset/Assets/Material.h
+    startLine: 13
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowAsset/Assets/Material.h
+    startLine: 13
+  syntax:
+    content: namespace ShadowEngine::ShadowEngine::Assets
+references:
+- uid: ShadowEngine.ShadowEngine.Assets.Material
+  parent: ShadowEngine.ShadowEngine.Assets
+  href: ShadowEngine.ShadowEngine.Assets.Material.yml
+  name: Material
+  nameWithType: Material
+  fullName: ShadowEngine::ShadowEngine::Assets::Material
+  type: Class
+  syntax:
+    content: 'public: class Material'

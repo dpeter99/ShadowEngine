@@ -1,0 +1,235 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.RenderNode
+  id: ShadowEngine.Rendering.RenderNode
+  parent: ShadowEngine.Rendering
+  children:
+  - ShadowEngine.Rendering.RenderNode.GetCB()
+  - ShadowEngine.Rendering.RenderNode.GetMaterial()
+  - ShadowEngine.Rendering.RenderNode.GetMesh()
+  - ShadowEngine.Rendering.RenderNode.RenderNode(Ref<Assets::Mesh>,Ref<Assets::Material>)
+  - ShadowEngine.Rendering.RenderNode.UpdateTransform(glm::mat4x4)
+  href: ShadowEngine.Rendering.RenderNode.yml
+  langs:
+  - cplusplus
+  name: RenderNode
+  nameWithType: RenderNode
+  fullName: ShadowEngine::Rendering::RenderNode
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowRenderer/RenderScene.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/RenderScene.h
+    startLine: 8
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RenderScene.h
+    startLine: 9
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: class RenderNode'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.Rendering.RenderNode.GetCB()
+  id: ShadowEngine.Rendering.RenderNode.GetCB()
+  parent: ShadowEngine.Rendering.RenderNode
+  href: ShadowEngine.Rendering.RenderNode.yml
+  langs:
+  - cplusplus
+  name: GetCB()
+  nameWithType: RenderNode::GetCB()
+  fullName: ConstantBuffer_Typed<ModelData> & ShadowEngine::Rendering::RenderNode::GetCB()
+  overload: ShadowEngine.Rendering.RenderNode.GetCB*
+  type: Method
+  source:
+    remote: &o1
+      path: ShadowEngine/src/ShadowRenderer/RenderScene.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/RenderScene.cpp
+    startLine: 20
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RenderScene.h
+    startLine: 21
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: ConstantBuffer_Typed<ModelData> & GetCB()'
+    return:
+      type: ShadowEngine.Rendering.ConstantBuffer_Typed78504a52ShadowEngine.Rendering.ModelData1a4c7661
+- uid: ShadowEngine.Rendering.RenderNode.GetMaterial()
+  id: ShadowEngine.Rendering.RenderNode.GetMaterial()
+  parent: ShadowEngine.Rendering.RenderNode
+  href: ShadowEngine.Rendering.RenderNode.yml
+  langs:
+  - cplusplus
+  name: GetMaterial()
+  nameWithType: RenderNode::GetMaterial()
+  fullName: Ref<Assets::Material> ShadowEngine::Rendering::RenderNode::GetMaterial()
+  overload: ShadowEngine.Rendering.RenderNode.GetMaterial*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowRenderer/RenderScene.cpp
+    startLine: 15
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RenderScene.h
+    startLine: 19
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: Ref<Assets::Material> GetMaterial()'
+    return:
+      type: 00f970b7
+- uid: ShadowEngine.Rendering.RenderNode.GetMesh()
+  id: ShadowEngine.Rendering.RenderNode.GetMesh()
+  parent: ShadowEngine.Rendering.RenderNode
+  href: ShadowEngine.Rendering.RenderNode.yml
+  langs:
+  - cplusplus
+  name: GetMesh()
+  nameWithType: RenderNode::GetMesh()
+  fullName: Ref<Assets::Mesh> ShadowEngine::Rendering::RenderNode::GetMesh()
+  overload: ShadowEngine.Rendering.RenderNode.GetMesh*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowRenderer/RenderScene.cpp
+    startLine: 10
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RenderScene.h
+    startLine: 17
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: Ref<Assets::Mesh> GetMesh()'
+    return:
+      type: 2e1cc081ShadowEngine.Assets.Mesha08ddfce
+- uid: ShadowEngine.Rendering.RenderNode.RenderNode(Ref<Assets::Mesh>,Ref<Assets::Material>)
+  id: Material>)
+  parent: ShadowEngine.Rendering.RenderNode
+  href: ShadowEngine.Rendering.RenderNode.yml
+  langs:
+  - cplusplus
+  name: RenderNode(Ref<Assets::Mesh> mesh, Ref<Assets::Material> material)
+  nameWithType: RenderNode::RenderNode(Ref<Assets::Mesh> mesh, Ref<Assets::Material> material)
+  fullName: ShadowEngine::Rendering::RenderNode::RenderNode(Ref<Assets::Mesh> mesh, Ref<Assets::Material> material)
+  overload: ShadowEngine.Rendering.RenderNode.RenderNode*
+  type: Constructor
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowRenderer/RenderScene.cpp
+    startLine: 4
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RenderScene.h
+    startLine: 15
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: RenderNode(Ref<Assets::Mesh> mesh, Ref<Assets::Material> material)'
+    parameters:
+    - id: mesh
+      type: 2e1cc081ShadowEngine.Assets.Mesha08ddfce
+    - id: material
+      type: 00f970b7
+- uid: ShadowEngine.Rendering.RenderNode.UpdateTransform(glm::mat4x4)
+  id: mat4x4)
+  parent: ShadowEngine.Rendering.RenderNode
+  href: ShadowEngine.Rendering.RenderNode.yml
+  langs:
+  - cplusplus
+  name: UpdateTransform(glm::mat4x4 trans)
+  nameWithType: RenderNode::UpdateTransform(glm::mat4x4 trans)
+  fullName: void ShadowEngine::Rendering::RenderNode::UpdateTransform(glm::mat4x4 trans)
+  overload: ShadowEngine.Rendering.RenderNode.UpdateTransform*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/ShadowRenderer/RenderScene.cpp
+    startLine: 25
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RenderScene.h
+    startLine: 23
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: void UpdateTransform(glm::mat4x4 trans)'
+    parameters:
+    - id: trans
+      type: 4da5d5de
+references:
+- uid: 2e1cc081ShadowEngine.Assets.Mesha08ddfce
+  spec.cplusplus:
+  - name: Ref<
+    fullName: Ref<
+  - uid: ShadowEngine.Assets.Mesh
+  - name: '>'
+    fullName: '>'
+- uid: 00f970b7
+  spec.cplusplus:
+  - name: Ref<Assets::Material>
+    fullName: Ref<Assets::Material>
+- uid: ShadowEngine.Rendering.RenderNode.RenderNode*
+  name: RenderNode
+  nameWithType: RenderNode::RenderNode
+  fullName: ShadowEngine::Rendering::RenderNode::RenderNode
+- uid: ShadowEngine.Rendering.RenderNode.GetMesh*
+  name: GetMesh
+  nameWithType: RenderNode::GetMesh
+  fullName: Ref<Assets::Mesh> ShadowEngine::Rendering::RenderNode::GetMesh
+- uid: ShadowEngine.Rendering.RenderNode.GetMaterial*
+  name: GetMaterial
+  nameWithType: RenderNode::GetMaterial
+  fullName: Ref<Assets::Material> ShadowEngine::Rendering::RenderNode::GetMaterial
+- uid: ShadowEngine.Rendering.ConstantBuffer_Typed78504a52ShadowEngine.Rendering.ModelData1a4c7661
+  spec.cplusplus:
+  - uid: ShadowEngine.Rendering.ConstantBuffer_Typed
+  - name: <
+    fullName: <
+  - uid: ShadowEngine.Rendering.ModelData
+  - name: '> &'
+    fullName: '> &'
+- uid: ShadowEngine.Rendering.RenderNode.GetCB*
+  name: GetCB
+  nameWithType: RenderNode::GetCB
+  fullName: ConstantBuffer_Typed<ModelData> & ShadowEngine::Rendering::RenderNode::GetCB
+- uid: 4da5d5de
+  spec.cplusplus:
+  - name: glm::mat4x4
+    fullName: glm::mat4x4
+- uid: ShadowEngine.Rendering.RenderNode.UpdateTransform*
+  name: UpdateTransform
+  nameWithType: RenderNode::UpdateTransform
+  fullName: void ShadowEngine::Rendering::RenderNode::UpdateTransform
+- uid: ShadowEngine.Rendering.ConstantBuffer_Typed
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ConstantBuffer_Typed.yml
+  name: ConstantBuffer_Typed
+  nameWithType: ConstantBuffer_Typed
+  fullName: ShadowEngine::Rendering::ConstantBuffer_Typed
+  type: Class
+  syntax:
+    content: 'public: class ConstantBuffer_Typed : public nstantBuffer'
+    typeParameters:
+    - id: class
+      type: 4fedf2a2
+- uid: ShadowEngine.Rendering.ModelData
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ModelData.yml
+  name: ModelData
+  nameWithType: ModelData
+  fullName: ShadowEngine::Rendering::ModelData
+  type: Struct
+  syntax:
+    content: 'public: struct ModelData'
+- uid: ShadowEngine.Assets.Mesh
+  parent: ShadowEngine.Assets
+  href: ShadowEngine.Assets.Mesh.yml
+  name: Mesh
+  nameWithType: Mesh
+  fullName: ShadowEngine::Assets::Mesh
+  type: Class
+  syntax:
+    content: 'public: class Mesh : public adowAsset'

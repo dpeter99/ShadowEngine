@@ -4,6 +4,7 @@
 
 namespace ShadowEngine::Rendering {
 
+	DECLSPEC_DEPRECATED
 	class OrthographicCamera
 	{
 	public:

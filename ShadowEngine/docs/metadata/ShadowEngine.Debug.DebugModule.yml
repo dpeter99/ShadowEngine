@@ -1,0 +1,460 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Debug.DebugModule
+  id: ShadowEngine.Debug.DebugModule
+  parent: ShadowEngine.Debug
+  children:
+  - ShadowEngine.Debug.DebugModule.~DebugModule()
+  - ShadowEngine.Debug.DebugModule.active
+  - ShadowEngine.Debug.DebugModule.DebugModule()
+  - ShadowEngine.Debug.DebugModule.GetName()
+  - ShadowEngine.Debug.DebugModule.Init()
+  - ShadowEngine.Debug.DebugModule.LateRender()
+  - ShadowEngine.Debug.DebugModule.OnEvent(EventSystem::ShadowEvent &)
+  - ShadowEngine.Debug.DebugModule.OnGui()
+  - ShadowEngine.Debug.DebugModule.Render()
+  - ShadowEngine.Debug.DebugModule.Update()
+  href: ShadowEngine.Debug.DebugModule.yml
+  langs:
+  - cplusplus
+  name: DebugModule
+  nameWithType: DebugModule
+  fullName: ShadowEngine::Debug::DebugModule
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/Debug/Debug.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Debug/Debug.h
+    startLine: 8
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Debug/Debug.h
+    startLine: 12
+  namespace: ShadowEngine.Debug
+  syntax:
+    content: 'public: class DebugModule : public hadowModule, public hadowEventListener, public hadowImGui'
+  inheritance:
+  - System::Object
+  - ShadowEngine.SHObject
+  - ShadowEngine.ShadowModule
+  inheritedMembers:
+  - ShadowEngine.SHObject.GenerateId()
+  - ShadowEngine.SHObject.GetType()
+  - ShadowEngine.SHObject.GetTypeId()
+  - ShadowEngine.EventSystem.IShadowEventListener.IShadowEventListener()
+  - ShadowEngine.EventSystem.IShadowEventListener.~IShadowEventListener()
+  - ShadowEngine.SHObject.~SHObject()
+- uid: ShadowEngine.Debug.DebugModule.~DebugModule()
+  id: ShadowEngine.Debug.DebugModule.~DebugModule()
+  parent: ShadowEngine.Debug.DebugModule
+  href: ShadowEngine.Debug.DebugModule.yml
+  langs:
+  - cplusplus
+  name: ~DebugModule()
+  nameWithType: DebugModule::~DebugModule()
+  fullName: ShadowEngine::Debug::DebugModule::~DebugModule()
+  overload: ShadowEngine.Debug.DebugModule.~DebugModule*
+  type: Constructor
+  source:
+    remote: &o1
+      path: ShadowEngine/src/Debug/Debug.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/Debug/Debug.cpp
+    startLine: 22
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Debug/Debug.h
+    startLine: 33
+  namespace: ShadowEngine.Debug
+  syntax:
+    content: 'public: virtual ~DebugModule()'
+- uid: ShadowEngine.Debug.DebugModule.active
+  id: ShadowEngine.Debug.DebugModule.active
+  parent: ShadowEngine.Debug.DebugModule
+  href: ShadowEngine.Debug.DebugModule.yml
+  langs:
+  - cplusplus
+  name: active
+  nameWithType: DebugModule::active
+  fullName: bool ShadowEngine::Debug::DebugModule::active
+  type: Field
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Debug/Debug.h
+    startLine: 18
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Debug/Debug.h
+    startLine: 18
+  namespace: ShadowEngine.Debug
+  syntax:
+    content: 'public: bool active'
+    return:
+      type: 13ff06c5
+- uid: ShadowEngine.Debug.DebugModule.DebugModule()
+  id: ShadowEngine.Debug.DebugModule.DebugModule()
+  parent: ShadowEngine.Debug.DebugModule
+  href: ShadowEngine.Debug.DebugModule.yml
+  langs:
+  - cplusplus
+  name: DebugModule()
+  nameWithType: DebugModule::DebugModule()
+  fullName: ShadowEngine::Debug::DebugModule::DebugModule()
+  overload: ShadowEngine.Debug.DebugModule.DebugModule*
+  type: Constructor
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Debug/Debug.cpp
+    startLine: 18
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Debug/Debug.h
+    startLine: 32
+  namespace: ShadowEngine.Debug
+  syntax:
+    content: 'public: DebugModule()'
+- uid: ShadowEngine.Debug.DebugModule.GetName()
+  id: ShadowEngine.Debug.DebugModule.GetName()
+  parent: ShadowEngine.Debug.DebugModule
+  href: ShadowEngine.Debug.DebugModule.yml
+  langs:
+  - cplusplus
+  name: GetName()
+  nameWithType: DebugModule::GetName()
+  fullName: std::string ShadowEngine::Debug::DebugModule::GetName()
+  overload: ShadowEngine.Debug.DebugModule.GetName*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Debug/Debug.h
+    startLine: 25
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Debug/Debug.h
+    startLine: 25
+  namespace: ShadowEngine.Debug
+  syntax:
+    content: 'public: virtual std::string GetName() override'
+    return:
+      type: 9626e5dd
+  overridden: ShadowEngine.ShadowModule.GetName()
+- uid: ShadowEngine.Debug.DebugModule.Init()
+  id: ShadowEngine.Debug.DebugModule.Init()
+  parent: ShadowEngine.Debug.DebugModule
+  href: ShadowEngine.Debug.DebugModule.yml
+  langs:
+  - cplusplus
+  name: Init()
+  nameWithType: DebugModule::Init()
+  fullName: void ShadowEngine::Debug::DebugModule::Init()
+  overload: ShadowEngine.Debug.DebugModule.Init*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Debug/Debug.cpp
+    startLine: 28
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Debug/Debug.h
+    startLine: 20
+  namespace: ShadowEngine.Debug
+  syntax:
+    content: 'public: void Init() override'
+- uid: ShadowEngine.Debug.DebugModule.LateRender()
+  id: ShadowEngine.Debug.DebugModule.LateRender()
+  parent: ShadowEngine.Debug.DebugModule
+  href: ShadowEngine.Debug.DebugModule.yml
+  langs:
+  - cplusplus
+  name: LateRender()
+  nameWithType: DebugModule::LateRender()
+  fullName: void ShadowEngine::Debug::DebugModule::LateRender()
+  overload: ShadowEngine.Debug.DebugModule.LateRender*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Debug/Debug.h
+    startLine: 23
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Debug/Debug.h
+    startLine: 23
+  namespace: ShadowEngine.Debug
+  syntax:
+    content: 'public: virtual void LateRender() override'
+  overridden: ShadowEngine.ShadowModule.LateRender()
+- uid: ShadowEngine.Debug.DebugModule.OnEvent(EventSystem::ShadowEvent &)
+  id: ShadowEvent &)
+  parent: ShadowEngine.Debug.DebugModule
+  href: ShadowEngine.Debug.DebugModule.yml
+  langs:
+  - cplusplus
+  name: OnEvent(EventSystem::ShadowEvent &e)
+  nameWithType: DebugModule::OnEvent(EventSystem::ShadowEvent &e)
+  fullName: void ShadowEngine::Debug::DebugModule::OnEvent(EventSystem::ShadowEvent &e)
+  overload: ShadowEngine.Debug.DebugModule.OnEvent*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Debug/Debug.cpp
+    startLine: 38
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Debug/Debug.h
+    startLine: 27
+  namespace: ShadowEngine.Debug
+  syntax:
+    content: 'public: virtual void OnEvent(EventSystem::ShadowEvent &e) override'
+    parameters:
+    - id: e
+      type: ShadowEngine.EventSystem.ShadowEvent76390d34
+  overridden: ShadowEngine.EventSystem.IShadowEventListener.OnEvent(ShadowEvent &)
+- uid: ShadowEngine.Debug.DebugModule.OnGui()
+  id: ShadowEngine.Debug.DebugModule.OnGui()
+  parent: ShadowEngine.Debug.DebugModule
+  href: ShadowEngine.Debug.DebugModule.yml
+  langs:
+  - cplusplus
+  name: OnGui()
+  nameWithType: DebugModule::OnGui()
+  fullName: void ShadowEngine::Debug::DebugModule::OnGui()
+  overload: ShadowEngine.Debug.DebugModule.OnGui*
+  type: Method
+  source:
+    remote: *o1
+    path: ShadowEngine/src/Debug/Debug.cpp
+    startLine: 64
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Debug/Debug.h
+    startLine: 29
+  namespace: ShadowEngine.Debug
+  syntax:
+    content: 'public: virtual void OnGui() override'
+  overridden: ShadowEngine.DebugGui.IShadowImGui.OnGui()
+- uid: ShadowEngine.Debug.DebugModule.Render()
+  id: ShadowEngine.Debug.DebugModule.Render()
+  parent: ShadowEngine.Debug.DebugModule
+  href: ShadowEngine.Debug.DebugModule.yml
+  langs:
+  - cplusplus
+  name: Render()
+  nameWithType: DebugModule::Render()
+  fullName: void ShadowEngine::Debug::DebugModule::Render()
+  overload: ShadowEngine.Debug.DebugModule.Render*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Debug/Debug.h
+    startLine: 22
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Debug/Debug.h
+    startLine: 22
+  namespace: ShadowEngine.Debug
+  syntax:
+    content: 'public: virtual void Render() override'
+  overridden: ShadowEngine.ShadowModule.Render()
+- uid: ShadowEngine.Debug.DebugModule.Update()
+  id: ShadowEngine.Debug.DebugModule.Update()
+  parent: ShadowEngine.Debug.DebugModule
+  href: ShadowEngine.Debug.DebugModule.yml
+  langs:
+  - cplusplus
+  name: Update()
+  nameWithType: DebugModule::Update()
+  fullName: void ShadowEngine::Debug::DebugModule::Update()
+  overload: ShadowEngine.Debug.DebugModule.Update*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/Debug/Debug.h
+    startLine: 21
+  header:
+    remote: *o0
+    path: ShadowEngine/src/Debug/Debug.h
+    startLine: 21
+  namespace: ShadowEngine.Debug
+  syntax:
+    content: 'public: virtual void Update() override'
+  overridden: ShadowEngine.ShadowModule.Update()
+references:
+- uid: 13ff06c5
+  spec.cplusplus:
+  - name: bool
+    fullName: bool
+- uid: ShadowEngine.Debug.DebugModule.Init*
+  name: Init
+  nameWithType: DebugModule::Init
+  fullName: void ShadowEngine::Debug::DebugModule::Init
+- uid: ShadowEngine.Debug.DebugModule.Update*
+  name: Update
+  nameWithType: DebugModule::Update
+  fullName: void ShadowEngine::Debug::DebugModule::Update
+- uid: ShadowEngine.Debug.DebugModule.Render*
+  name: Render
+  nameWithType: DebugModule::Render
+  fullName: void ShadowEngine::Debug::DebugModule::Render
+- uid: ShadowEngine.Debug.DebugModule.LateRender*
+  name: LateRender
+  nameWithType: DebugModule::LateRender
+  fullName: void ShadowEngine::Debug::DebugModule::LateRender
+- uid: 9626e5dd
+  spec.cplusplus:
+  - name: std::string
+    fullName: std::string
+- uid: ShadowEngine.Debug.DebugModule.GetName*
+  name: GetName
+  nameWithType: DebugModule::GetName
+  fullName: std::string ShadowEngine::Debug::DebugModule::GetName
+- uid: ShadowEngine.EventSystem.ShadowEvent76390d34
+  spec.cplusplus:
+  - uid: ShadowEngine.EventSystem.ShadowEvent
+  - name: " &"
+    fullName: " &"
+- uid: ShadowEngine.Debug.DebugModule.OnEvent*
+  name: OnEvent
+  nameWithType: DebugModule::OnEvent
+  fullName: void ShadowEngine::Debug::DebugModule::OnEvent
+- uid: ShadowEngine.Debug.DebugModule.OnGui*
+  name: OnGui
+  nameWithType: DebugModule::OnGui
+  fullName: void ShadowEngine::Debug::DebugModule::OnGui
+- uid: ShadowEngine.Debug.DebugModule.DebugModule*
+  name: DebugModule
+  nameWithType: DebugModule::DebugModule
+  fullName: ShadowEngine::Debug::DebugModule::DebugModule
+- uid: ShadowEngine.Debug.DebugModule.~DebugModule*
+  name: ~DebugModule
+  nameWithType: DebugModule::~DebugModule
+  fullName: ShadowEngine::Debug::DebugModule::~DebugModule
+- uid: ShadowEngine.SHObject.GenerateId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GenerateId()
+  nameWithType: SHObject::GenerateId()
+  fullName: static uint64_t ShadowEngine::SHObject::GenerateId()
+  type: Method
+  summary: "<p>Generates a new UID for each call. </p>"
+  syntax:
+    content: 'protected: static uint64_t GenerateId() noexcept'
+    return:
+      type: 6d8267d6
+      description: <p>Unique ID </p>
+- uid: ShadowEngine.SHObject.GetType()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetType()
+  nameWithType: SHObject::GetType()
+  fullName: virtual const std::string& ShadowEngine::SHObject::GetType()
+  type: Method
+  summary: "<p>Returns the top level class type name of the object. </p>"
+  syntax:
+    content: 'public: virtual const std::string & GetType() const =0'
+    return:
+      type: 360fc41e
+      description: <p>Class name string </p>
+- uid: ShadowEngine.SHObject.GetTypeId()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: GetTypeId()
+  nameWithType: SHObject::GetTypeId()
+  fullName: virtual const uint64_t ShadowEngine::SHObject::GetTypeId()
+  type: Method
+  summary: "<p>Gets the top level type ID. </p>"
+  syntax:
+    content: 'public: virtual const uint64_t GetTypeId() const =0'
+    return:
+      type: 29dc5929
+      description: <p>UID of the class </p>
+- uid: ShadowEngine.EventSystem.IShadowEventListener.IShadowEventListener()
+  parent: ShadowEngine.EventSystem.IShadowEventListener
+  href: ShadowEngine.EventSystem.IShadowEventListener.yml
+  name: IShadowEventListener()
+  nameWithType: IShadowEventListener::IShadowEventListener()
+  fullName: ShadowEngine::EventSystem::IShadowEventListener::IShadowEventListener()
+  type: Constructor
+  syntax:
+    content: 'public: IShadowEventListener()=default'
+- uid: ShadowEngine.EventSystem.IShadowEventListener.~IShadowEventListener()
+  parent: ShadowEngine.EventSystem.IShadowEventListener
+  href: ShadowEngine.EventSystem.IShadowEventListener.yml
+  name: ~IShadowEventListener()
+  nameWithType: IShadowEventListener::~IShadowEventListener()
+  fullName: ShadowEngine::EventSystem::IShadowEventListener::~IShadowEventListener()
+  type: Constructor
+  syntax:
+    content: 'public: ~IShadowEventListener()=default'
+- uid: ShadowEngine.SHObject.~SHObject()
+  parent: ShadowEngine.SHObject
+  href: ShadowEngine.SHObject.yml
+  name: ~SHObject()
+  nameWithType: SHObject::~SHObject()
+  fullName: virtual ShadowEngine::SHObject::~SHObject()
+  type: Constructor
+  syntax:
+    content: 'public: virtual ~SHObject()=default'
+- uid: ShadowEngine.ShadowModule
+  parent: ShadowEngine
+  href: ShadowEngine.ShadowModule.yml
+  name: ShadowModule
+  nameWithType: ShadowModule
+  fullName: ShadowEngine::ShadowModule
+  type: Class
+  syntax:
+    content: 'public: class ShadowModule'
+- uid: ShadowEngine.EventSystem.IShadowEventListener
+  parent: ShadowEngine.EventSystem
+  href: ShadowEngine.EventSystem.IShadowEventListener.yml
+  name: IShadowEventListener
+  nameWithType: IShadowEventListener
+  fullName: ShadowEngine::EventSystem::IShadowEventListener
+  type: Class
+  syntax:
+    content: 'public: class IShadowEventListener'
+- uid: ShadowEngine.DebugGui.IShadowImGui
+  parent: ShadowEngine.DebugGui
+  href: ShadowEngine.DebugGui.IShadowImGui.yml
+  name: IShadowImGui
+  nameWithType: IShadowImGui
+  fullName: ShadowEngine::DebugGui::IShadowImGui
+  type: Class
+  syntax:
+    content: 'public: class IShadowImGui'
+- uid: ShadowEngine.ShadowModule.Update()
+- uid: ShadowEngine.ShadowModule.Render()
+- uid: ShadowEngine.ShadowModule.LateRender()
+- uid: ShadowEngine.ShadowModule.GetName()
+- uid: ShadowEngine.EventSystem.IShadowEventListener.OnEvent(ShadowEvent &)
+  parent: ShadowEngine.EventSystem.IShadowEventListener
+  href: ShadowEngine.EventSystem.IShadowEventListener.yml
+  name: OnEvent(ShadowEvent &e)
+  nameWithType: IShadowEventListener::OnEvent(ShadowEvent &e)
+  fullName: virtual void ShadowEngine::EventSystem::IShadowEventListener::OnEvent(ShadowEvent &e)
+  type: Method
+  syntax:
+    content: 'public: virtual void OnEvent(ShadowEvent &e)=0'
+    parameters:
+    - id: e
+      type: ShadowEngine.EventSystem.ShadowEvent76390d34
+- uid: ShadowEngine.EventSystem.ShadowEvent
+  parent: ShadowEngine.EventSystem
+  href: ShadowEngine.EventSystem.ShadowEvent.yml
+  name: ShadowEvent
+  nameWithType: ShadowEvent
+  fullName: ShadowEngine::EventSystem::ShadowEvent
+  type: Class
+  syntax:
+    content: 'public: class ShadowEvent'
+- uid: ShadowEngine.DebugGui.IShadowImGui.OnGui()
+  parent: ShadowEngine.DebugGui.IShadowImGui
+  href: ShadowEngine.DebugGui.IShadowImGui.yml
+  name: OnGui()
+  nameWithType: IShadowImGui::OnGui()
+  fullName: virtual void ShadowEngine::DebugGui::IShadowImGui::OnGui()
+  type: Method
+  syntax:
+    content: 'public: virtual void OnGui()=0'

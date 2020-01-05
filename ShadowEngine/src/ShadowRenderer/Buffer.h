@@ -1,8 +1,10 @@
 #pragma once
 
 #include "Log.h"
+#include "Core/Core.h"
 
 namespace ShadowEngine::Rendering {
+
 
 	enum class ShaderDataType
 	{
@@ -30,6 +32,9 @@ namespace ShadowEngine::Rendering {
 		return 0;
 	}
 
+	/// <summary>
+	/// This represents a single filed in a vertex buffer layout
+	/// </summary>
 	struct BufferElement
 	{
 		std::string Name;
@@ -38,7 +43,8 @@ namespace ShadowEngine::Rendering {
 		uint32_t Offset;
 		bool Normalized;
 
-		BufferElement() {}
+		BufferElement() : Name(""), Type(ShaderDataType::Float),Size(0),Offset(0),Normalized(false)
+		{}
 
 		BufferElement(ShaderDataType type, const std::string& name, bool normalized = false)
 			: Name(name), Type(type), Size(ShaderDataTypeSize(type)), Offset(0), Normalized(normalized)
@@ -67,6 +73,15 @@ namespace ShadowEngine::Rendering {
 		}
 	};
 
+	/// <summary>
+	/// This class stores the layout of a Vertex buffer (pos, uv, color, etc..)
+	/// This is used by the graphics api to generate the platform specific description of the vertex buffer.
+	/// Each field in the Layout is stored in a BufferElement. These can be retrived by calling <code>BufferLayout.GetElements()</code>
+	/// 
+	/// 
+	/// The vertex buffers layout can be retrived by calling: <code>VertexBuffer.GetLayout()</code>
+	/// 
+	/// </summary>
 	class BufferLayout
 	{
 	public:
@@ -102,27 +117,41 @@ namespace ShadowEngine::Rendering {
 		uint32_t m_Stride = 0;
 	};
 
+	/// <summary>
+	/// This is the base class for Vertex Buffers
+	/// These are used in a Mesh to store the point data
+	/// 
+	/// These need to be implemented by the actual graphics api (D3D12)
+	/// The render api agnostic parts can use this class to refer to the actual objects.
+	/// </summary>
 	class VertexBuffer
 	{
 	public:
 		virtual ~VertexBuffer() = default;
 
-		virtual void Bind() const = 0;
-		virtual void Unbind() const = 0;
+		//virtual void Bind() const = 0;
+		//virtual void Unbind() const = 0;
 
 		virtual const BufferLayout& GetLayout() const = 0;
 		virtual void SetLayout(const BufferLayout& layout) = 0;
 
-		static VertexBuffer* Create(float* vertices, uint32_t size);
+		static VertexBuffer* Create(void* vertices, uint32_t size);
 	};
 
+	/// <summary>
+	/// This is the base class for Index Buffers
+	/// These are used in a Mesh to store the point triangle data
+	/// 
+	/// These need to be implemented by the actual graphics api (D3D12)
+	/// The render api agnostic parts can use this class to refer to the actual objects.
+	/// </summary>
 	class IndexBuffer
 	{
 	public:
 		virtual ~IndexBuffer() = default;
 
-		virtual void Bind() const = 0;
-		virtual void Unbind() const = 0;
+		//virtual void Bind() const = 0;
+		//virtual void Unbind() const = 0;
 
 		virtual uint32_t GetCount() const = 0;
 

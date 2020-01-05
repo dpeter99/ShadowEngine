@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.Assets" kind="namespace" language="C++">
+    <compoundname>ShadowEngine::Assets</compoundname>
+    <innerclass refid="ShadowEngine.Assets.AssetLoader" prot="public">ShadowEngine::Assets::AssetLoader</innerclass>
+    <innerclass refid="ShadowEngine.Assets.Element" prot="public">ShadowEngine::Assets::Element</innerclass>
+    <innerclass refid="ShadowEngine.Assets.Mesh" prot="public">ShadowEngine::Assets::Mesh</innerclass>
+    <innerclass refid="ShadowEngine.Assets.ShadowAsset" prot="public">ShadowEngine::Assets::ShadowAsset</innerclass>
+    <innerclass refid="ShadowEngine.Assets.Texture" prot="public">ShadowEngine::Assets::Texture</innerclass>
+    <innerclass refid="ShadowEngine.Assets.Texture2D" prot="public">ShadowEngine::Assets::Texture2D</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="ShadowEngine.Assets.AssetLoader::LoadAsset&lt;World::ShadowWorld&gt;(std::string)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist></templateparamlist>
+        <type>
+          <ref refid="ShadowEngine.World.ShadowWorld" kindref="compound">World::ShadowWorld</ref> *</type>
+        <definition>World::ShadowWorld* ShadowEngine::Assets::AssetLoader::LoadAsset&lt;World::ShadowWorld&gt;</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>AssetLoader::LoadAsset&lt;World::ShadowWorld&gt;</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetLoader.cpp" line="146" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetLoader.cpp" bodystart="146" bodyend="187" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.Assets.AssetLoader::LoadAsset&lt;World::MapChunk&gt;(std::string)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist></templateparamlist>
+        <type>
+          <ref refid="ShadowEngine.World.MapChunk" kindref="compound">World::MapChunk</ref> *</type>
+        <definition>World::MapChunk* ShadowEngine::Assets::AssetLoader::LoadAsset&lt;World::MapChunk&gt;</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>AssetLoader::LoadAsset&lt;World::MapChunk&gt;</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowAsset/AssetLoader.cpp" line="190" column="1" bodyfile="ShadowEngine/src/ShadowAsset/AssetLoader.cpp" bodystart="190" bodyend="268" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/ShadowAsset/AssetLoader.cpp" line="143" column="1" />
+  </compounddef>
+</doxygen>

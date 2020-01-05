@@ -1,0 +1,493 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.RendererAPI
+  id: ShadowEngine.Rendering.RendererAPI
+  parent: ShadowEngine.Rendering
+  children:
+  - ShadowEngine.Rendering.RendererAPI.Clear()
+  - ShadowEngine.Rendering.RendererAPI.Draw(const Ref<Assets::Mesh>,const Ref<Assets::Material>,const glm::mat4 &)
+  - ShadowEngine.Rendering.RendererAPI.Draw(const std::shared_ptr<Assets::Mesh> &,const std::shared_ptr<Assets::Material> &,const ConstantBuffer &)
+  - ShadowEngine.Rendering.RendererAPI.EndFrame()
+  - ShadowEngine.Rendering.RendererAPI.GetAPI()
+  - ShadowEngine.Rendering.RendererAPI.Init(ShadowEngine::Ref<GraphicsContext>)
+  - ShadowEngine.Rendering.RendererAPI.RendererAPI::MakeRendererAPI()
+  - ShadowEngine.Rendering.RendererAPI.SetClearColor(const glm::vec4 &)
+  - ShadowEngine.Rendering.RendererAPI.StartFrame(Ref<ConstantBuffer>)
+  href: ShadowEngine.Rendering.RendererAPI.yml
+  langs:
+  - cplusplus
+  name: RendererAPI
+  nameWithType: RendererAPI
+  fullName: ShadowEngine::Rendering::RendererAPI
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 10
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 11
+  namespace: ShadowEngine.Rendering
+  syntax: &o1
+    content: 'public: class RendererAPI'
+  inheritance:
+  - System::Object
+  inheritedMembers:
+  - ShadowEngine.Rendering.RendererAPI.API
+- uid: ShadowEngine.Rendering.RendererAPI.Clear()
+  id: ShadowEngine.Rendering.RendererAPI.Clear()
+  parent: ShadowEngine.Rendering.RendererAPI
+  href: ShadowEngine.Rendering.RendererAPI.yml
+  langs:
+  - cplusplus
+  name: Clear()
+  nameWithType: RendererAPI::Clear()
+  fullName: virtual void ShadowEngine::Rendering::RendererAPI::Clear()
+  overload: ShadowEngine.Rendering.RendererAPI.Clear*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 22
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 22
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual void Clear()=0'
+- uid: ShadowEngine.Rendering.RendererAPI.Draw(const Ref<Assets::Mesh>,const Ref<Assets::Material>,const glm::mat4 &)
+  id: mat4 &)
+  parent: ShadowEngine.Rendering.RendererAPI
+  href: ShadowEngine.Rendering.RendererAPI.yml
+  langs:
+  - cplusplus
+  name: Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4 &transform=glm::mat4(1.0f))
+  nameWithType: RendererAPI::Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4 &transform=glm::mat4(1.0f))
+  fullName: virtual void ShadowEngine::Rendering::RendererAPI::Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4 &transform=glm::mat4(1.0f))
+  overload: ShadowEngine.Rendering.RendererAPI.Draw*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 24
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 24
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual void Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4 &transform=glm::mat4(1.0f))=0'
+    parameters:
+    - id: mesh
+      type: 8253bb38ShadowEngine.Assets.Mesha08ddfce
+    - id: shader
+      type: ed5b8545
+    - id: transform
+      type: 617f6632
+- uid: ShadowEngine.Rendering.RendererAPI.Draw(const std::shared_ptr<Assets::Mesh> &,const std::shared_ptr<Assets::Material> &,const ConstantBuffer &)
+  id: Material> &,const ConstantBuffer &)
+  parent: ShadowEngine.Rendering.RendererAPI
+  href: ShadowEngine.Rendering.RendererAPI.yml
+  langs:
+  - cplusplus
+  name: Draw(const std::shared_ptr<Assets::Mesh> &mesh, const std::shared_ptr<Assets::Material> &shader, const ConstantBuffer &materialData)
+  nameWithType: RendererAPI::Draw(const std::shared_ptr<Assets::Mesh> &mesh, const std::shared_ptr<Assets::Material> &shader, const ConstantBuffer &materialData)
+  fullName: virtual void ShadowEngine::Rendering::RendererAPI::Draw(const std::shared_ptr<Assets::Mesh> &mesh, const std::shared_ptr<Assets::Material> &shader, const ConstantBuffer &materialData)
+  overload: ShadowEngine.Rendering.RendererAPI.Draw*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 25
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 25
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual void Draw(const std::shared_ptr<Assets::Mesh> &mesh, const std::shared_ptr<Assets::Material> &shader, const ConstantBuffer &materialData)=0'
+    parameters:
+    - id: mesh
+      type: 322691f1ShadowEngine.Assets.Mesh1a4c7661
+    - id: shader
+      type: 8b5f0ee3
+    - id: materialData
+      type: 1413e510ShadowEngine.Rendering.ConstantBuffer76390d34
+- uid: ShadowEngine.Rendering.RendererAPI.EndFrame()
+  id: ShadowEngine.Rendering.RendererAPI.EndFrame()
+  parent: ShadowEngine.Rendering.RendererAPI
+  href: ShadowEngine.Rendering.RendererAPI.yml
+  langs:
+  - cplusplus
+  name: EndFrame()
+  nameWithType: RendererAPI::EndFrame()
+  fullName: virtual void ShadowEngine::Rendering::RendererAPI::EndFrame()
+  overload: ShadowEngine.Rendering.RendererAPI.EndFrame*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 35
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 35
+  namespace: ShadowEngine.Rendering
+  summary: "<p>Finalizes the render command recording. </p>"
+  syntax:
+    content: 'public: virtual void EndFrame()=0'
+- uid: ShadowEngine.Rendering.RendererAPI.GetAPI()
+  id: ShadowEngine.Rendering.RendererAPI.GetAPI()
+  parent: ShadowEngine.Rendering.RendererAPI
+  href: ShadowEngine.Rendering.RendererAPI.yml
+  langs:
+  - cplusplus
+  name: GetAPI()
+  nameWithType: RendererAPI::GetAPI()
+  fullName: static API ShadowEngine::Rendering::RendererAPI::GetAPI()
+  overload: ShadowEngine.Rendering.RendererAPI.GetAPI*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 38
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 38
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: static API GetAPI()'
+    return:
+      type: 384297db
+- uid: ShadowEngine.Rendering.RendererAPI.Init(ShadowEngine::Ref<GraphicsContext>)
+  id: Ref<GraphicsContext>)
+  parent: ShadowEngine.Rendering.RendererAPI
+  href: ShadowEngine.Rendering.RendererAPI.yml
+  langs:
+  - cplusplus
+  name: Init(ShadowEngine::Ref<GraphicsContext> ctx)
+  nameWithType: RendererAPI::Init(ShadowEngine::Ref<GraphicsContext> ctx)
+  fullName: virtual void ShadowEngine::Rendering::RendererAPI::Init(ShadowEngine::Ref<GraphicsContext> ctx)
+  overload: ShadowEngine.Rendering.RendererAPI.Init*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 20
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 20
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual void Init(ShadowEngine::Ref<GraphicsContext> ctx)=0'
+    parameters:
+    - id: ctx
+      type: dce8684bShadowEngine.Rendering.GraphicsContexta08ddfce
+- uid: ShadowEngine.Rendering.RendererAPI.RendererAPI::MakeRendererAPI()
+  id: MakeRendererAPI()
+  parent: ShadowEngine.Rendering.RendererAPI
+  href: ShadowEngine.Rendering.RendererAPI.yml
+  langs:
+  - cplusplus
+  name: RendererAPI::MakeRendererAPI()
+  nameWithType: RendererAPI::RendererAPI::MakeRendererAPI()
+  fullName: static RendererAPI* ShadowEngine::Rendering::RendererAPI::RendererAPI::MakeRendererAPI()
+  overload: ShadowEngine.Rendering.RendererAPI.RendererAPI::MakeRendererAPI*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 40
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 40
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: static RendererAPI * RendererAPI::MakeRendererAPI()'
+    return:
+      type: ShadowEngine.Rendering.RendererAPI68bc11b4
+- uid: ShadowEngine.Rendering.RendererAPI.SetClearColor(const glm::vec4 &)
+  id: vec4 &)
+  parent: ShadowEngine.Rendering.RendererAPI
+  href: ShadowEngine.Rendering.RendererAPI.yml
+  langs:
+  - cplusplus
+  name: SetClearColor(const glm::vec4 &color)
+  nameWithType: RendererAPI::SetClearColor(const glm::vec4 &color)
+  fullName: virtual void ShadowEngine::Rendering::RendererAPI::SetClearColor(const glm::vec4 &color)
+  overload: ShadowEngine.Rendering.RendererAPI.SetClearColor*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 21
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 21
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: virtual void SetClearColor(const glm::vec4 &color)=0'
+    parameters:
+    - id: color
+      type: 5f4da5ef
+- uid: ShadowEngine.Rendering.RendererAPI.StartFrame(Ref<ConstantBuffer>)
+  id: ShadowEngine.Rendering.RendererAPI.StartFrame(Ref<ConstantBuffer>)
+  parent: ShadowEngine.Rendering.RendererAPI
+  href: ShadowEngine.Rendering.RendererAPI.yml
+  langs:
+  - cplusplus
+  name: StartFrame(Ref<ConstantBuffer> worldCB)
+  nameWithType: RendererAPI::StartFrame(Ref<ConstantBuffer> worldCB)
+  fullName: virtual void ShadowEngine::Rendering::RendererAPI::StartFrame(Ref<ConstantBuffer> worldCB)
+  overload: ShadowEngine.Rendering.RendererAPI.StartFrame*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 30
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/RendererAPI.h
+    startLine: 30
+  namespace: ShadowEngine.Rendering
+  summary: "<p>Starts recording the draw commands. </p>"
+  syntax:
+    content: 'public: virtual void StartFrame(Ref<ConstantBuffer> worldCB)=0'
+    parameters:
+    - id: worldCB
+      type: 2e1cc081ShadowEngine.Rendering.ConstantBuffera08ddfce
+references:
+- uid: dce8684bShadowEngine.Rendering.GraphicsContexta08ddfce
+  spec.cplusplus:
+  - name: ShadowEngine::Ref<
+    fullName: ShadowEngine::Ref<
+  - uid: ShadowEngine.Rendering.GraphicsContext
+  - name: '>'
+    fullName: '>'
+- uid: ShadowEngine.Rendering.RendererAPI.Init*
+  name: Init
+  nameWithType: RendererAPI::Init
+  fullName: virtual void ShadowEngine::Rendering::RendererAPI::Init
+- uid: 5f4da5ef
+  spec.cplusplus:
+  - name: const glm::vec4 &
+    fullName: const glm::vec4 &
+- uid: ShadowEngine.Rendering.RendererAPI.SetClearColor*
+  name: SetClearColor
+  nameWithType: RendererAPI::SetClearColor
+  fullName: virtual void ShadowEngine::Rendering::RendererAPI::SetClearColor
+- uid: ShadowEngine.Rendering.RendererAPI.Clear*
+  name: Clear
+  nameWithType: RendererAPI::Clear
+  fullName: virtual void ShadowEngine::Rendering::RendererAPI::Clear
+- uid: 8253bb38ShadowEngine.Assets.Mesha08ddfce
+  spec.cplusplus:
+  - name: const Ref<
+    fullName: const Ref<
+  - uid: ShadowEngine.Assets.Mesh
+  - name: '>'
+    fullName: '>'
+- uid: ed5b8545
+  spec.cplusplus:
+  - name: const Ref<Assets::Material>
+    fullName: const Ref<Assets::Material>
+- uid: 617f6632
+  spec.cplusplus:
+  - name: const glm::mat4 &
+    fullName: const glm::mat4 &
+- uid: ShadowEngine.Rendering.RendererAPI.Draw*
+  name: Draw
+  nameWithType: RendererAPI::Draw
+  fullName: virtual void ShadowEngine::Rendering::RendererAPI::Draw
+- uid: 322691f1ShadowEngine.Assets.Mesh1a4c7661
+  spec.cplusplus:
+  - name: const std::shared_ptr<
+    fullName: const std::shared_ptr<
+  - uid: ShadowEngine.Assets.Mesh
+  - name: '> &'
+    fullName: '> &'
+- uid: 8b5f0ee3
+  spec.cplusplus:
+  - name: const std::shared_ptr<Assets::Material> &
+    fullName: const std::shared_ptr<Assets::Material> &
+- uid: 1413e510ShadowEngine.Rendering.ConstantBuffer76390d34
+  spec.cplusplus:
+  - name: 'const '
+    fullName: 'const '
+  - uid: ShadowEngine.Rendering.ConstantBuffer
+  - name: " &"
+    fullName: " &"
+- uid: 2e1cc081ShadowEngine.Rendering.ConstantBuffera08ddfce
+  spec.cplusplus:
+  - name: Ref<
+    fullName: Ref<
+  - uid: ShadowEngine.Rendering.ConstantBuffer
+  - name: '>'
+    fullName: '>'
+- uid: ShadowEngine.Rendering.RendererAPI.StartFrame*
+  name: StartFrame
+  nameWithType: RendererAPI::StartFrame
+  fullName: virtual void ShadowEngine::Rendering::RendererAPI::StartFrame
+- uid: ShadowEngine.Rendering.RendererAPI.EndFrame*
+  name: EndFrame
+  nameWithType: RendererAPI::EndFrame
+  fullName: virtual void ShadowEngine::Rendering::RendererAPI::EndFrame
+- uid: 384297db
+  spec.cplusplus:
+  - name: API
+    fullName: API
+- uid: ShadowEngine.Rendering.RendererAPI.GetAPI*
+  name: GetAPI
+  nameWithType: RendererAPI::GetAPI
+  fullName: static API ShadowEngine::Rendering::RendererAPI::GetAPI
+- uid: ShadowEngine.Rendering.RendererAPI68bc11b4
+  spec.cplusplus:
+  - uid: ShadowEngine.Rendering.RendererAPI
+  - name: " *"
+    fullName: " *"
+- uid: ShadowEngine.Rendering.RendererAPI.RendererAPI::MakeRendererAPI*
+  name: RendererAPI::MakeRendererAPI
+  nameWithType: RendererAPI::RendererAPI::MakeRendererAPI
+  fullName: static RendererAPI* ShadowEngine::Rendering::RendererAPI::RendererAPI::MakeRendererAPI
+- uid: ShadowEngine.Rendering.RendererAPI.API
+- uid: ShadowEngine.Rendering.D3D12.D3D12RendererAPI
+  parent: ShadowEngine.Rendering.D3D12
+  href: ShadowEngine.Rendering.D3D12.D3D12RendererAPI.yml
+  name: D3D12RendererAPI
+  nameWithType: D3D12RendererAPI
+  fullName: ShadowEngine::Rendering::D3D12::D3D12RendererAPI
+  type: Class
+  syntax:
+    content: 'public: class D3D12RendererAPI : public ndererAPI'
+- uid: ShadowEngine.Rendering.D3D12.D3D12RendererAPI.Init(ShadowEngine::Ref<GraphicsContext>)
+  parent: ShadowEngine.Rendering.D3D12.D3D12RendererAPI
+  href: ShadowEngine.Rendering.D3D12.D3D12RendererAPI.yml
+  name: Init(ShadowEngine::Ref<GraphicsContext> ctx)
+  nameWithType: D3D12RendererAPI::Init(ShadowEngine::Ref<GraphicsContext> ctx)
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12RendererAPI::Init(ShadowEngine::Ref<GraphicsContext> ctx)
+  type: Method
+  syntax:
+    content: 'public: virtual void Init(ShadowEngine::Ref<GraphicsContext> ctx) override'
+    parameters:
+    - id: ctx
+      type: dce8684bShadowEngine.Rendering.GraphicsContexta08ddfce
+- uid: ShadowEngine.Rendering.GraphicsContext
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.GraphicsContext.yml
+  name: GraphicsContext
+  nameWithType: GraphicsContext
+  fullName: ShadowEngine::Rendering::GraphicsContext
+  type: Class
+  syntax:
+    content: 'public: class GraphicsContext'
+- uid: ShadowEngine.Rendering.D3D12.D3D12RendererAPI.SetClearColor(const glm::vec4 &)
+  parent: ShadowEngine.Rendering.D3D12.D3D12RendererAPI
+  href: ShadowEngine.Rendering.D3D12.D3D12RendererAPI.yml
+  name: SetClearColor(const glm::vec4 &color)
+  nameWithType: D3D12RendererAPI::SetClearColor(const glm::vec4 &color)
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12RendererAPI::SetClearColor(const glm::vec4 &color)
+  type: Method
+  syntax:
+    content: 'public: virtual void SetClearColor(const glm::vec4 &color) override'
+    parameters:
+    - id: color
+      type: 5f4da5ef
+- uid: ShadowEngine.Rendering.D3D12.D3D12RendererAPI.Clear()
+  parent: ShadowEngine.Rendering.D3D12.D3D12RendererAPI
+  href: ShadowEngine.Rendering.D3D12.D3D12RendererAPI.yml
+  name: Clear()
+  nameWithType: D3D12RendererAPI::Clear()
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12RendererAPI::Clear()
+  type: Method
+  syntax:
+    content: 'public: virtual void Clear() override'
+- uid: ShadowEngine.Rendering.D3D12.D3D12RendererAPI.Draw(const Ref<Assets::Mesh>,const Ref<Assets::Material>,const glm::mat4 &)
+  parent: ShadowEngine.Rendering.D3D12.D3D12RendererAPI
+  href: ShadowEngine.Rendering.D3D12.D3D12RendererAPI.yml
+  name: Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4 &transform=glm::mat4(1.0f))
+  nameWithType: D3D12RendererAPI::Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4 &transform=glm::mat4(1.0f))
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12RendererAPI::Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4 &transform=glm::mat4(1.0f))
+  type: Method
+  syntax:
+    content: 'public: virtual void Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4 &transform=glm::mat4(1.0f)) override'
+    parameters:
+    - id: mesh
+      type: 8253bb38ShadowEngine.Assets.Mesha08ddfce
+    - id: shader
+      type: ed5b8545
+    - id: transform
+      type: 617f6632
+- uid: ShadowEngine.Assets.Mesh
+  parent: ShadowEngine.Assets
+  href: ShadowEngine.Assets.Mesh.yml
+  name: Mesh
+  nameWithType: Mesh
+  fullName: ShadowEngine::Assets::Mesh
+  type: Class
+  syntax:
+    content: 'public: class Mesh : public adowAsset'
+- uid: ShadowEngine.Rendering.D3D12.D3D12RendererAPI.Draw(const std::shared_ptr<Assets::Mesh> &,const std::shared_ptr<Assets::Material> &,const ConstantBuffer &)
+  parent: ShadowEngine.Rendering.D3D12.D3D12RendererAPI
+  href: ShadowEngine.Rendering.D3D12.D3D12RendererAPI.yml
+  name: Draw(const std::shared_ptr<Assets::Mesh> &mesh, const std::shared_ptr<Assets::Material> &shader, const ConstantBuffer &materialData)
+  nameWithType: D3D12RendererAPI::Draw(const std::shared_ptr<Assets::Mesh> &mesh, const std::shared_ptr<Assets::Material> &shader, const ConstantBuffer &materialData)
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12RendererAPI::Draw(const std::shared_ptr<Assets::Mesh> &mesh, const std::shared_ptr<Assets::Material> &shader, const ConstantBuffer &materialData)
+  type: Method
+  syntax:
+    content: 'public: virtual void Draw(const std::shared_ptr<Assets::Mesh> &mesh, const std::shared_ptr<Assets::Material> &shader, const ConstantBuffer &materialData) override'
+    parameters:
+    - id: mesh
+      type: 322691f1ShadowEngine.Assets.Mesh1a4c7661
+    - id: shader
+      type: 8b5f0ee3
+    - id: materialData
+      type: 1413e510ShadowEngine.Rendering.ConstantBuffer76390d34
+- uid: ShadowEngine.Rendering.ConstantBuffer
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.ConstantBuffer.yml
+  name: ConstantBuffer
+  nameWithType: ConstantBuffer
+  fullName: ShadowEngine::Rendering::ConstantBuffer
+  type: Class
+  syntax:
+    content: 'public: class ConstantBuffer'
+- uid: ShadowEngine.Rendering.D3D12.D3D12RendererAPI.StartFrame(Ref<ConstantBuffer>)
+  parent: ShadowEngine.Rendering.D3D12.D3D12RendererAPI
+  href: ShadowEngine.Rendering.D3D12.D3D12RendererAPI.yml
+  name: StartFrame(Ref<ConstantBuffer> worldCB)
+  nameWithType: D3D12RendererAPI::StartFrame(Ref<ConstantBuffer> worldCB)
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12RendererAPI::StartFrame(Ref<ConstantBuffer> worldCB)
+  type: Method
+  summary: "<p>Starts recording the draw commands. </p>"
+  syntax:
+    content: 'public: virtual void StartFrame(Ref<ConstantBuffer> worldCB) override'
+    parameters:
+    - id: worldCB
+      type: 2e1cc081ShadowEngine.Rendering.ConstantBuffera08ddfce
+- uid: ShadowEngine.Rendering.D3D12.D3D12RendererAPI.EndFrame()
+  parent: ShadowEngine.Rendering.D3D12.D3D12RendererAPI
+  href: ShadowEngine.Rendering.D3D12.D3D12RendererAPI.yml
+  name: EndFrame()
+  nameWithType: D3D12RendererAPI::EndFrame()
+  fullName: void ShadowEngine::Rendering::D3D12::D3D12RendererAPI::EndFrame()
+  type: Method
+  summary: "<p>Finalizes the render command recording. </p>"
+  syntax:
+    content: 'public: virtual void EndFrame() override'
+- uid: ShadowEngine.Rendering.RendererAPI
+  parent: ShadowEngine.Rendering
+  href: ShadowEngine.Rendering.RendererAPI.yml
+  name: RendererAPI
+  nameWithType: RendererAPI
+  fullName: ShadowEngine::Rendering::RendererAPI
+  type: Class
+  syntax: *o1

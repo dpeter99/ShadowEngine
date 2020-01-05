@@ -1,0 +1,286 @@
+### YamlMime:ManagedReference
+items:
+- uid: ShadowEngine.Rendering.OrthographicCamera
+  id: ShadowEngine.Rendering.OrthographicCamera
+  parent: ShadowEngine.Rendering
+  children:
+  - ShadowEngine.Rendering.OrthographicCamera.GetPosition()
+  - ShadowEngine.Rendering.OrthographicCamera.GetProjectionMatrix()
+  - ShadowEngine.Rendering.OrthographicCamera.GetRotation()
+  - ShadowEngine.Rendering.OrthographicCamera.GetViewMatrix()
+  - ShadowEngine.Rendering.OrthographicCamera.GetViewProjectionMatrix()
+  - ShadowEngine.Rendering.OrthographicCamera.OrthographicCamera(float,float,float,float)
+  - ShadowEngine.Rendering.OrthographicCamera.SetPosition(const glm::vec3 &)
+  - ShadowEngine.Rendering.OrthographicCamera.SetRotation(float)
+  href: ShadowEngine.Rendering.OrthographicCamera.yml
+  langs:
+  - cplusplus
+  name: OrthographicCamera
+  nameWithType: OrthographicCamera
+  fullName: ShadowEngine::Rendering::OrthographicCamera
+  type: Class
+  source:
+    remote: &o0
+      path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+    startLine: 7
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+    startLine: 8
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: class OrthographicCamera'
+  inheritance:
+  - System::Object
+- uid: ShadowEngine.Rendering.OrthographicCamera.GetPosition()
+  id: ShadowEngine.Rendering.OrthographicCamera.GetPosition()
+  parent: ShadowEngine.Rendering.OrthographicCamera
+  href: ShadowEngine.Rendering.OrthographicCamera.yml
+  langs:
+  - cplusplus
+  name: GetPosition()
+  nameWithType: OrthographicCamera::GetPosition()
+  fullName: const glm::vec3& ShadowEngine::Rendering::OrthographicCamera::GetPosition()
+  overload: ShadowEngine.Rendering.OrthographicCamera.GetPosition*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+    startLine: 12
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+    startLine: 12
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: const glm::vec3 & GetPosition() const'
+    return:
+      type: f4c3cb95
+- uid: ShadowEngine.Rendering.OrthographicCamera.GetProjectionMatrix()
+  id: ShadowEngine.Rendering.OrthographicCamera.GetProjectionMatrix()
+  parent: ShadowEngine.Rendering.OrthographicCamera
+  href: ShadowEngine.Rendering.OrthographicCamera.yml
+  langs:
+  - cplusplus
+  name: GetProjectionMatrix()
+  nameWithType: OrthographicCamera::GetProjectionMatrix()
+  fullName: const glm::mat4& ShadowEngine::Rendering::OrthographicCamera::GetProjectionMatrix()
+  overload: ShadowEngine.Rendering.OrthographicCamera.GetProjectionMatrix*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+    startLine: 18
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+    startLine: 18
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: const glm::mat4 & GetProjectionMatrix() const'
+    return:
+      type: 617f6632
+- uid: ShadowEngine.Rendering.OrthographicCamera.GetRotation()
+  id: ShadowEngine.Rendering.OrthographicCamera.GetRotation()
+  parent: ShadowEngine.Rendering.OrthographicCamera
+  href: ShadowEngine.Rendering.OrthographicCamera.yml
+  langs:
+  - cplusplus
+  name: GetRotation()
+  nameWithType: OrthographicCamera::GetRotation()
+  fullName: float ShadowEngine::Rendering::OrthographicCamera::GetRotation()
+  overload: ShadowEngine.Rendering.OrthographicCamera.GetRotation*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+    startLine: 15
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+    startLine: 15
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: float GetRotation() const'
+    return:
+      type: 64de6a54
+- uid: ShadowEngine.Rendering.OrthographicCamera.GetViewMatrix()
+  id: ShadowEngine.Rendering.OrthographicCamera.GetViewMatrix()
+  parent: ShadowEngine.Rendering.OrthographicCamera
+  href: ShadowEngine.Rendering.OrthographicCamera.yml
+  langs:
+  - cplusplus
+  name: GetViewMatrix()
+  nameWithType: OrthographicCamera::GetViewMatrix()
+  fullName: const glm::mat4& ShadowEngine::Rendering::OrthographicCamera::GetViewMatrix()
+  overload: ShadowEngine.Rendering.OrthographicCamera.GetViewMatrix*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+    startLine: 19
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+    startLine: 19
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: const glm::mat4 & GetViewMatrix() const'
+    return:
+      type: 617f6632
+- uid: ShadowEngine.Rendering.OrthographicCamera.GetViewProjectionMatrix()
+  id: ShadowEngine.Rendering.OrthographicCamera.GetViewProjectionMatrix()
+  parent: ShadowEngine.Rendering.OrthographicCamera
+  href: ShadowEngine.Rendering.OrthographicCamera.yml
+  langs:
+  - cplusplus
+  name: GetViewProjectionMatrix()
+  nameWithType: OrthographicCamera::GetViewProjectionMatrix()
+  fullName: const glm::mat4& ShadowEngine::Rendering::OrthographicCamera::GetViewProjectionMatrix()
+  overload: ShadowEngine.Rendering.OrthographicCamera.GetViewProjectionMatrix*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+    startLine: 20
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+    startLine: 20
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: const glm::mat4 & GetViewProjectionMatrix() const'
+    return:
+      type: 617f6632
+- uid: ShadowEngine.Rendering.OrthographicCamera.OrthographicCamera(float,float,float,float)
+  id: ShadowEngine.Rendering.OrthographicCamera.OrthographicCamera(float,float,float,float)
+  parent: ShadowEngine.Rendering.OrthographicCamera
+  href: ShadowEngine.Rendering.OrthographicCamera.yml
+  langs:
+  - cplusplus
+  name: OrthographicCamera(float left, float right, float bottom, float top)
+  nameWithType: OrthographicCamera::OrthographicCamera(float left, float right, float bottom, float top)
+  fullName: ShadowEngine::Rendering::OrthographicCamera::OrthographicCamera(float left, float right, float bottom, float top)
+  overload: ShadowEngine.Rendering.OrthographicCamera.OrthographicCamera*
+  type: Constructor
+  source:
+    remote:
+      path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.cpp
+      branch: d3d12
+      repo: https://github.com/dpeter99/ShadowEngine
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.cpp
+    startLine: 7
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+    startLine: 10
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: OrthographicCamera(float left, float right, float bottom, float top)'
+    parameters:
+    - id: left
+      type: 64de6a54
+    - id: right
+      type: 64de6a54
+    - id: bottom
+      type: 64de6a54
+    - id: top
+      type: 64de6a54
+- uid: ShadowEngine.Rendering.OrthographicCamera.SetPosition(const glm::vec3 &)
+  id: vec3 &)
+  parent: ShadowEngine.Rendering.OrthographicCamera
+  href: ShadowEngine.Rendering.OrthographicCamera.yml
+  langs:
+  - cplusplus
+  name: SetPosition(const glm::vec3 &position)
+  nameWithType: OrthographicCamera::SetPosition(const glm::vec3 &position)
+  fullName: void ShadowEngine::Rendering::OrthographicCamera::SetPosition(const glm::vec3 &position)
+  overload: ShadowEngine.Rendering.OrthographicCamera.SetPosition*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+    startLine: 13
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+    startLine: 13
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: void SetPosition(const glm::vec3 &position)'
+    parameters:
+    - id: position
+      type: f4c3cb95
+- uid: ShadowEngine.Rendering.OrthographicCamera.SetRotation(float)
+  id: ShadowEngine.Rendering.OrthographicCamera.SetRotation(float)
+  parent: ShadowEngine.Rendering.OrthographicCamera
+  href: ShadowEngine.Rendering.OrthographicCamera.yml
+  langs:
+  - cplusplus
+  name: SetRotation(float rotation)
+  nameWithType: OrthographicCamera::SetRotation(float rotation)
+  fullName: void ShadowEngine::Rendering::OrthographicCamera::SetRotation(float rotation)
+  overload: ShadowEngine.Rendering.OrthographicCamera.SetRotation*
+  type: Method
+  source:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+    startLine: 16
+  header:
+    remote: *o0
+    path: ShadowEngine/src/ShadowRenderer/OrthographicCamera.h
+    startLine: 16
+  namespace: ShadowEngine.Rendering
+  syntax:
+    content: 'public: void SetRotation(float rotation)'
+    parameters:
+    - id: rotation
+      type: 64de6a54
+references:
+- uid: 64de6a54
+  spec.cplusplus:
+  - name: float
+    fullName: float
+- uid: ShadowEngine.Rendering.OrthographicCamera.OrthographicCamera*
+  name: OrthographicCamera
+  nameWithType: OrthographicCamera::OrthographicCamera
+  fullName: ShadowEngine::Rendering::OrthographicCamera::OrthographicCamera
+- uid: f4c3cb95
+  spec.cplusplus:
+  - name: const glm::vec3 &
+    fullName: const glm::vec3 &
+- uid: ShadowEngine.Rendering.OrthographicCamera.GetPosition*
+  name: GetPosition
+  nameWithType: OrthographicCamera::GetPosition
+  fullName: const glm::vec3& ShadowEngine::Rendering::OrthographicCamera::GetPosition
+- uid: ShadowEngine.Rendering.OrthographicCamera.SetPosition*
+  name: SetPosition
+  nameWithType: OrthographicCamera::SetPosition
+  fullName: void ShadowEngine::Rendering::OrthographicCamera::SetPosition
+- uid: ShadowEngine.Rendering.OrthographicCamera.GetRotation*
+  name: GetRotation
+  nameWithType: OrthographicCamera::GetRotation
+  fullName: float ShadowEngine::Rendering::OrthographicCamera::GetRotation
+- uid: ShadowEngine.Rendering.OrthographicCamera.SetRotation*
+  name: SetRotation
+  nameWithType: OrthographicCamera::SetRotation
+  fullName: void ShadowEngine::Rendering::OrthographicCamera::SetRotation
+- uid: 617f6632
+  spec.cplusplus:
+  - name: const glm::mat4 &
+    fullName: const glm::mat4 &
+- uid: ShadowEngine.Rendering.OrthographicCamera.GetProjectionMatrix*
+  name: GetProjectionMatrix
+  nameWithType: OrthographicCamera::GetProjectionMatrix
+  fullName: const glm::mat4& ShadowEngine::Rendering::OrthographicCamera::GetProjectionMatrix
+- uid: ShadowEngine.Rendering.OrthographicCamera.GetViewMatrix*
+  name: GetViewMatrix
+  nameWithType: OrthographicCamera::GetViewMatrix
+  fullName: const glm::mat4& ShadowEngine::Rendering::OrthographicCamera::GetViewMatrix
+- uid: ShadowEngine.Rendering.OrthographicCamera.GetViewProjectionMatrix*
+  name: GetViewProjectionMatrix
+  nameWithType: OrthographicCamera::GetViewProjectionMatrix
+  fullName: const glm::mat4& ShadowEngine::Rendering::OrthographicCamera::GetViewProjectionMatrix

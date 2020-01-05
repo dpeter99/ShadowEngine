@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.EventSystem.ShadowEvent" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::EventSystem::ShadowEvent</compoundname>
+    <basecompoundref refid="ShadowEngine.SHObject" prot="public" virt="non-virtual">ShadowEngine::SHObject</basecompoundref>
+    <derivedcompoundref refid="ShadowEngine.EventSystem.Events.KeyEvent" prot="public" virt="non-virtual">ShadowEngine::EventSystem::Events::KeyEvent</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.EventSystem.Events.MouseButtonEvent" prot="public" virt="non-virtual">ShadowEngine::EventSystem::Events::MouseButtonEvent</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.EventSystem.Events.MouseMovedEvent" prot="public" virt="non-virtual">ShadowEngine::EventSystem::Events::MouseMovedEvent</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.EventSystem.Events.MouseScrolledEvent" prot="public" virt="non-virtual">ShadowEngine::EventSystem::Events::MouseScrolledEvent</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.EventSystem.Events.WindowCloseEvent" prot="public" virt="non-virtual">ShadowEngine::EventSystem::Events::WindowCloseEvent</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.EventSystem.Events.WindowResizeEvent" prot="public" virt="non-virtual">ShadowEngine::EventSystem::Events::WindowResizeEvent</derivedcompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="ShadowEngine.EventSystem.ShadowEvent.Handled" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ShadowEngine::EventSystem::ShadowEvent::Handled</definition>
+        <argsstring></argsstring>
+        <name>Handled</name>
+        <initializer>= false</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/ShadowEvent.h" line="17" column="1" bodyfile="ShadowEngine/src/ShadowEvents/ShadowEvent.h" bodystart="17" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowEngine.EventSystem.ShadowEvent.ToString()" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string ShadowEngine::EventSystem::ShadowEvent::ToString</definition>
+        <argsstring>() const</argsstring>
+        <name>ToString</name>
+        <reimplementedby refid="ShadowEngine.EventSystem.Events.MouseMovedEvent.ToString()">ToString</reimplementedby>
+        <reimplementedby refid="ShadowEngine.EventSystem.Events.WindowResizeEvent.ToString()">ToString</reimplementedby>
+        <reimplementedby refid="ShadowEngine.EventSystem.Events.KeyPressedEvent.ToString()">ToString</reimplementedby>
+        <reimplementedby refid="ShadowEngine.EventSystem.Events.MouseScrolledEvent.ToString()">ToString</reimplementedby>
+        <reimplementedby refid="ShadowEngine.EventSystem.Events.KeyReleasedEvent.ToString()">ToString</reimplementedby>
+        <reimplementedby refid="ShadowEngine.EventSystem.Events.KeyTypedEvent.ToString()">ToString</reimplementedby>
+        <reimplementedby refid="ShadowEngine.EventSystem.Events.MouseButtonPressedEvent.ToString()">ToString</reimplementedby>
+        <reimplementedby refid="ShadowEngine.EventSystem.Events.MouseButtonReleasedEvent.ToString()">ToString</reimplementedby>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/ShadowEvent.h" line="19" column="1" bodyfile="ShadowEngine/src/ShadowEvents/ShadowEvent.h" bodystart="19" bodyend="19" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EventSystem.ShadowEvent.GetSDLEvnet()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SDL_Event *</type>
+        <definition>SDL_Event* ShadowEngine::EventSystem::ShadowEvent::GetSDLEvnet</definition>
+        <argsstring>()</argsstring>
+        <name>GetSDLEvnet</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/ShadowEvent.h" line="21" column="1" bodyfile="ShadowEngine/src/ShadowEvents/ShadowEvent.h" bodystart="21" bodyend="21" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EventSystem.ShadowEvent.ShadowEvent(SDL_Event *)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EventSystem::ShadowEvent::ShadowEvent</definition>
+        <argsstring>(SDL_Event *ev)</argsstring>
+        <name>ShadowEvent</name>
+        <param>
+          <type>SDL_Event *</type>
+          <declname>ev</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/ShadowEvent.h" line="23" column="1" bodyfile="ShadowEngine/src/ShadowEvents/ShadowEvent.h" bodystart="23" bodyend="26" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EventSystem.ShadowEvent.~ShadowEvent()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ShadowEngine::EventSystem::ShadowEvent::~ShadowEvent</definition>
+        <argsstring>()</argsstring>
+        <name>~ShadowEvent</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/ShadowEvent.h" line="28" column="1" bodyfile="ShadowEngine/src/ShadowEvents/ShadowEvent.h" bodystart="28" bodyend="28" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="517">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="521">
+        <label>ShadowEngine::EventSystem::Events::KeyTypedEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.KeyTypedEvent" />
+        <childnode refid="518" relation="public-inheritance"></childnode>
+      </node>
+      <node id="523">
+        <label>ShadowEngine::EventSystem::Events::MouseButtonPressedEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.MouseButtonPressedEvent" />
+        <childnode refid="522" relation="public-inheritance"></childnode>
+      </node>
+      <node id="520">
+        <label>ShadowEngine::EventSystem::Events::KeyReleasedEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.KeyReleasedEvent" />
+        <childnode refid="518" relation="public-inheritance"></childnode>
+      </node>
+      <node id="516">
+        <label>ShadowEngine::EventSystem::ShadowEvent</label>
+        <link refid="ShadowEngine.EventSystem.ShadowEvent" />
+        <childnode refid="517" relation="public-inheritance"></childnode>
+      </node>
+      <node id="524">
+        <label>ShadowEngine::EventSystem::Events::MouseButtonReleasedEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.MouseButtonReleasedEvent" />
+        <childnode refid="522" relation="public-inheritance"></childnode>
+      </node>
+      <node id="525">
+        <label>ShadowEngine::EventSystem::Events::MouseMovedEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.MouseMovedEvent" />
+        <childnode refid="516" relation="public-inheritance"></childnode>
+      </node>
+      <node id="522">
+        <label>ShadowEngine::EventSystem::Events::MouseButtonEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.MouseButtonEvent" />
+        <childnode refid="516" relation="public-inheritance"></childnode>
+      </node>
+      <node id="526">
+        <label>ShadowEngine::EventSystem::Events::MouseScrolledEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.MouseScrolledEvent" />
+        <childnode refid="516" relation="public-inheritance"></childnode>
+      </node>
+      <node id="527">
+        <label>ShadowEngine::EventSystem::Events::WindowCloseEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.WindowCloseEvent" />
+        <childnode refid="516" relation="public-inheritance"></childnode>
+      </node>
+      <node id="528">
+        <label>ShadowEngine::EventSystem::Events::WindowResizeEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.WindowResizeEvent" />
+        <childnode refid="516" relation="public-inheritance"></childnode>
+      </node>
+      <node id="519">
+        <label>ShadowEngine::EventSystem::Events::KeyPressedEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.KeyPressedEvent" />
+        <childnode refid="518" relation="public-inheritance"></childnode>
+      </node>
+      <node id="518">
+        <label>ShadowEngine::EventSystem::Events::KeyEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.KeyEvent" />
+        <childnode refid="516" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="530">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="529">
+        <label>ShadowEngine::EventSystem::ShadowEvent</label>
+        <link refid="ShadowEngine.EventSystem.ShadowEvent" />
+        <childnode refid="530" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowEvents/ShadowEvent.h" line="10" column="1" bodyfile="ShadowEngine/src/ShadowEvents/ShadowEvent.h" bodystart="9" bodyend="29" />
+    <listofallmembers>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::ShadowEvent</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.GetSDLEvnet()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::ShadowEvent</scope>
+        <name>GetSDLEvnet</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::EventSystem::ShadowEvent</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::EventSystem::ShadowEvent</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.Handled" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::ShadowEvent</scope>
+        <name>Handled</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.ShadowEvent(SDL_Event *)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::ShadowEvent</scope>
+        <name>ShadowEvent</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.ToString()" prot="public" virt="virtual">
+        <scope>ShadowEngine::EventSystem::ShadowEvent</scope>
+        <name>ToString</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.~ShadowEvent()" prot="public" virt="virtual">
+        <scope>ShadowEngine::EventSystem::ShadowEvent</scope>
+        <name>~ShadowEvent</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::EventSystem::ShadowEvent</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

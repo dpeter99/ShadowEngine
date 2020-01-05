@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="struct_shadow_engine_1_1_rendering_1_1_vertex" kind="struct" language="C++" prot="public">
+    <compoundname>ShadowEngine::Rendering::Vertex</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_shadow_engine_1_1_rendering_1_1_vertex_1a435874303946d0fcd250e994d1241197" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 ShadowEngine::Rendering::Vertex::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/DataStructs.h" line="10" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/DataStructs.h" bodystart="10" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="struct_shadow_engine_1_1_rendering_1_1_vertex_1ac74f8acedea2f3c9ed1ba6ecbf7a41e5" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 ShadowEngine::Rendering::Vertex::normal</definition>
+        <argsstring></argsstring>
+        <name>normal</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/DataStructs.h" line="11" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/DataStructs.h" bodystart="11" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="struct_shadow_engine_1_1_rendering_1_1_vertex_1a0d69d41f9bd42ff4b66712c63f7e1b70" prot="public" static="no" mutable="no">
+        <type>glm::vec2</type>
+        <definition>glm::vec2 ShadowEngine::Rendering::Vertex::uv</definition>
+        <argsstring></argsstring>
+        <name>uv</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/DataStructs.h" line="12" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/DataStructs.h" bodystart="12" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="struct_shadow_engine_1_1_rendering_1_1_vertex_1a8a691027e264e181e5c55aae796202fd" prot="public" static="no" mutable="no">
+        <type>glm::vec4</type>
+        <definition>glm::vec4 ShadowEngine::Rendering::Vertex::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/DataStructs.h" line="14" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/DataStructs.h" bodystart="14" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="struct_shadow_engine_1_1_rendering_1_1_vertex_1a571498e1a3f3e2c04a057728cd906920" prot="public" static="yes" mutable="no">
+        <type>
+          <ref refid="class_shadow_engine_1_1_rendering_1_1_buffer_layout" kindref="compound">BufferLayout</ref>
+        </type>
+        <definition>BufferLayout ShadowEngine::Rendering::Vertex::input_layout</definition>
+        <argsstring></argsstring>
+        <name>input_layout</name>
+        <initializer>=	{
+		{ ShadowEngine::Rendering::ShaderDataType::Float3, "POSITION" },
+		{ ShadowEngine::Rendering::ShaderDataType::Float3, "NORMAL" },
+		{ ShadowEngine::Rendering::ShaderDataType::Float2, "TEXCOORD" },
+		{ ShadowEngine::Rendering::ShaderDataType::Float4, "COLOR" },
+	}</initializer>
+        <briefdescription>
+          <para>The default layout of the meshes being used. </para>
+        </briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowRenderer/DataStructs.h" line="19" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/DataStructs.h" bodystart="19" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <collaborationgraph>
+      <node id="672">
+        <label>ShadowEngine::Rendering::BufferLayout</label>
+        <link refid="class_shadow_engine_1_1_rendering_1_1_buffer_layout" />
+      </node>
+      <node id="671">
+        <label>ShadowEngine::Rendering::Vertex</label>
+        <link refid="struct_shadow_engine_1_1_rendering_1_1_vertex" />
+        <childnode refid="672" relation="usage">
+          <edgelabel>input_layout</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowRenderer/DataStructs.h" line="9" column="1" bodyfile="ShadowEngine/src/ShadowRenderer/DataStructs.h" bodystart="8" bodyend="20" />
+    <listofallmembers>
+      <member refid="struct_shadow_engine_1_1_rendering_1_1_vertex_1a8a691027e264e181e5c55aae796202fd" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Vertex</scope>
+        <name>color</name>
+      </member>
+      <member refid="struct_shadow_engine_1_1_rendering_1_1_vertex_1a571498e1a3f3e2c04a057728cd906920" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Vertex</scope>
+        <name>input_layout</name>
+      </member>
+      <member refid="struct_shadow_engine_1_1_rendering_1_1_vertex_1ac74f8acedea2f3c9ed1ba6ecbf7a41e5" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Vertex</scope>
+        <name>normal</name>
+      </member>
+      <member refid="struct_shadow_engine_1_1_rendering_1_1_vertex_1a435874303946d0fcd250e994d1241197" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Vertex</scope>
+        <name>pos</name>
+      </member>
+      <member refid="struct_shadow_engine_1_1_rendering_1_1_vertex_1a0d69d41f9bd42ff4b66712c63f7e1b70" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::Rendering::Vertex</scope>
+        <name>uv</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

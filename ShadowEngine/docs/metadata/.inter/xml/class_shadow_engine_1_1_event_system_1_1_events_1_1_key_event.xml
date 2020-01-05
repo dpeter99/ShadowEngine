@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_event" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::EventSystem::Events::KeyEvent</compoundname>
+    <basecompoundref refid="class_shadow_engine_1_1_event_system_1_1_shadow_event" prot="public" virt="non-virtual">ShadowEngine::EventSystem::ShadowEvent</basecompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_pressed_event" prot="public" virt="non-virtual">ShadowEngine::EventSystem::Events::KeyPressedEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_released_event" prot="public" virt="non-virtual">ShadowEngine::EventSystem::Events::KeyReleasedEvent</derivedcompoundref>
+    <derivedcompoundref refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_typed_event" prot="public" virt="non-virtual">ShadowEngine::EventSystem::Events::KeyTypedEvent</derivedcompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_event_1a0c23f7e970de2e56182015834b5517ae" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShadowEngine::EventSystem::Events::KeyEvent::m_KeyCode</definition>
+        <argsstring></argsstring>
+        <name>m_KeyCode</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/Events/KeyEvents.h" line="21" column="1" bodyfile="ShadowEngine/src/ShadowEvents/Events/KeyEvents.h" bodystart="21" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_event_1a122914226181855122fdbf8ed905e2a5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EventSystem::Events::KeyEvent::SHObject_Base</definition>
+        <argsstring>(KeyEvent) public</argsstring>
+        <name>SHObject_Base</name>
+        <param>
+          <type>
+            <ref refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_event" kindref="compound">KeyEvent</ref>
+          </type>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/Events/KeyEvents.h" line="10" column="1" bodyfile="ShadowEngine/src/ShadowEvents/Events/KeyEvents.h" bodystart="10" bodyend="19" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="295">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="298">
+        <label>ShadowEngine::EventSystem::Events::KeyTypedEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_typed_event" />
+        <childnode refid="293" relation="public-inheritance"></childnode>
+      </node>
+      <node id="297">
+        <label>ShadowEngine::EventSystem::Events::KeyReleasedEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_released_event" />
+        <childnode refid="293" relation="public-inheritance"></childnode>
+      </node>
+      <node id="294">
+        <label>ShadowEngine::EventSystem::ShadowEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_shadow_event" />
+        <childnode refid="295" relation="public-inheritance"></childnode>
+      </node>
+      <node id="296">
+        <label>ShadowEngine::EventSystem::Events::KeyPressedEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_pressed_event" />
+        <childnode refid="293" relation="public-inheritance"></childnode>
+      </node>
+      <node id="293">
+        <label>ShadowEngine::EventSystem::Events::KeyEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_event" />
+        <childnode refid="294" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="301">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="class_shadow_engine_1_1_s_h_object" />
+      </node>
+      <node id="300">
+        <label>ShadowEngine::EventSystem::ShadowEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_shadow_event" />
+        <childnode refid="301" relation="public-inheritance"></childnode>
+      </node>
+      <node id="299">
+        <label>ShadowEngine::EventSystem::Events::KeyEvent</label>
+        <link refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_event" />
+        <childnode refid="300" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowEvents/Events/KeyEvents.h" line="9" column="1" bodyfile="ShadowEngine/src/ShadowEvents/Events/KeyEvents.h" bodystart="8" bodyend="22" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a35bf9fdc604caa67e1a2f1b0a9c574f2" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_event_system_1_1_shadow_event_1a73ae565d52ff8151f3eb72aacafe9247" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>GetSDLEvnet</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a230ca5dec944e67f8d57dfc743da7d94" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a69e3d668f6ba55e24257f2f45c46db67" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_event_system_1_1_shadow_event_1ac2f477cc1be71675c64d3dea4e987946" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>Handled</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_event_1a0c23f7e970de2e56182015834b5517ae" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>m_KeyCode</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_event_system_1_1_shadow_event_1a6fba9b9ffdec723fd4f2f23298f04524" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>ShadowEvent</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_event_system_1_1_events_1_1_key_event_1a122914226181855122fdbf8ed905e2a5" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>SHObject_Base</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_event_system_1_1_shadow_event_1a1ae623439af4f8abecedab483ab8bb16" prot="public" virt="virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>ToString</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_event_system_1_1_shadow_event_1aa45ddf1371404093ccefc9b25bdccf35" prot="public" virt="virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>~ShadowEvent</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_s_h_object_1a380b1f13a850d6e74cf9a8d093bb5a13" prot="public" virt="virtual">
+        <scope>ShadowEngine::EventSystem::Events::KeyEvent</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

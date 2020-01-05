@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowMath.Vector2int" kind="struct" language="C++" prot="public">
+    <compoundname>ShadowMath::Vector2int</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="ShadowMath.Vector2int.x" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShadowMath::Vector2int::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2int.h" line="13" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2int.h" bodystart="13" bodyend="-1" />
+      </memberdef>
+      <memberdef kind="variable" id="ShadowMath.Vector2int.y" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShadowMath::Vector2int::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2int.h" line="14" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2int.h" bodystart="14" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="ShadowMath.Vector2int.Vector2int(int,int)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowMath::Vector2int::Vector2int</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>Vector2int</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2int.h" line="16" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2int.h" bodystart="16" bodyend="20" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2int.Vector2int()" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowMath::Vector2int::Vector2int</definition>
+        <argsstring>()</argsstring>
+        <name>Vector2int</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2int.h" line="22" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2int.h" bodystart="22" bodyend="26" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2int.Vector2int(const Vector2int &amp;)" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowMath::Vector2int::Vector2int</definition>
+        <argsstring>(const Vector2int &amp;cpy)</argsstring>
+        <name>Vector2int</name>
+        <param>
+          <type>const <ref refid="ShadowMath.Vector2int" kindref="compound">Vector2int</ref> &amp;</type>
+          <declname>cpy</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2int.h" line="28" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2int.h" bodystart="28" bodyend="32" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2int.operator+(const Vector2int &amp;)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="ShadowMath.Vector2int" kindref="compound">Vector2int</ref>
+        </type>
+        <definition>Vector2int ShadowMath::Vector2int::operator+</definition>
+        <argsstring>(const Vector2int &amp;b)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="ShadowMath.Vector2int" kindref="compound">Vector2int</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2int.h" line="34" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2int.cpp" bodystart="11" bodyend="17" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2int.operator-(const Vector2int &amp;)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="ShadowMath.Vector2int" kindref="compound">Vector2int</ref>
+        </type>
+        <definition>Vector2int ShadowMath::Vector2int::operator-</definition>
+        <argsstring>(const Vector2int &amp;b)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="ShadowMath.Vector2int" kindref="compound">Vector2int</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2int.h" line="36" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2int.cpp" bodystart="19" bodyend="25" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2int.operator *(const Vector2int &amp;)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="ShadowMath.Vector2int" kindref="compound">Vector2int</ref>
+        </type>
+        <definition>Vector2int ShadowMath::Vector2int::operator *</definition>
+        <argsstring>(const Vector2int &amp;b)</argsstring>
+        <name>operator *</name>
+        <param>
+          <type>const <ref refid="ShadowMath.Vector2int" kindref="compound">Vector2int</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2int.h" line="38" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2int.cpp" bodystart="27" bodyend="33" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2int.operator *(const int &amp;)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="ShadowMath.Vector2int" kindref="compound">Vector2int</ref>
+        </type>
+        <definition>Vector2int ShadowMath::Vector2int::operator *</definition>
+        <argsstring>(const int &amp;b)</argsstring>
+        <name>operator *</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2int.h" line="40" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2int.cpp" bodystart="35" bodyend="41" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2int.operator *(const float &amp;)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="ShadowMath.Vector2int" kindref="compound">Vector2int</ref>
+        </type>
+        <definition>Vector2int ShadowMath::Vector2int::operator *</definition>
+        <argsstring>(const float &amp;b)</argsstring>
+        <name>operator *</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2int.h" line="42" column="1" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowMath.Vector2int.operator==(const Vector2int &amp;)" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ShadowMath::Vector2int::operator==</definition>
+        <argsstring>(const Vector2int &amp;b)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="ShadowMath.Vector2int" kindref="compound">Vector2int</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowMath/Vector2int.h" line="44" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2int.cpp" bodystart="43" bodyend="46" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <location file="ShadowEngine/src/ShadowMath/Vector2int.h" line="11" column="1" bodyfile="ShadowEngine/src/ShadowMath/Vector2int.h" bodystart="10" bodyend="45" />
+    <listofallmembers>
+      <member refid="ShadowMath.Vector2int.operator *(const Vector2int &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2int</scope>
+        <name>operator *</name>
+      </member>
+      <member refid="ShadowMath.Vector2int.operator *(const int &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2int</scope>
+        <name>operator *</name>
+      </member>
+      <member refid="ShadowMath.Vector2int.operator *(const float &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2int</scope>
+        <name>operator *</name>
+      </member>
+      <member refid="ShadowMath.Vector2int.operator+(const Vector2int &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2int</scope>
+        <name>operator+</name>
+      </member>
+      <member refid="ShadowMath.Vector2int.operator-(const Vector2int &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2int</scope>
+        <name>operator-</name>
+      </member>
+      <member refid="ShadowMath.Vector2int.operator==(const Vector2int &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2int</scope>
+        <name>operator==</name>
+      </member>
+      <member refid="ShadowMath.Vector2int.Vector2int(int,int)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2int</scope>
+        <name>Vector2int</name>
+      </member>
+      <member refid="ShadowMath.Vector2int.Vector2int()" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2int</scope>
+        <name>Vector2int</name>
+      </member>
+      <member refid="ShadowMath.Vector2int.Vector2int(const Vector2int &amp;)" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2int</scope>
+        <name>Vector2int</name>
+      </member>
+      <member refid="ShadowMath.Vector2int.x" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2int</scope>
+        <name>x</name>
+      </member>
+      <member refid="ShadowMath.Vector2int.y" prot="public" virt="non-virtual">
+        <scope>ShadowMath::Vector2int</scope>
+        <name>y</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

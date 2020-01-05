@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_shadow_engine_1_1_shadow_module_manager" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::ShadowModuleManager</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_module_manager_1a18e3d8e56f7de371de03984fbdc077ed" prot="public" static="yes" mutable="no">
+        <type>
+          <ref refid="class_shadow_engine_1_1_shadow_module_manager" kindref="compound">ShadowModuleManager</ref> *</type>
+        <definition>ShadowEngine::ShadowModuleManager * ShadowEngine::ShadowModuleManager::instance</definition>
+        <argsstring></argsstring>
+        <name>instance</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowModules/ShadowModuleManager.h" line="10" column="1" bodyfile="ShadowEngine/src/ShadowModules/ShadowModuleManager.h" bodystart="10" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_shadow_engine_1_1_shadow_module_manager_1a7f16791bbba0782ed15830e0a2a83969" prot="public" static="no" mutable="no">
+        <type>std::list&lt;ShadowEngine::Scope&lt;<ref refid="class_shadow_engine_1_1_shadow_module" kindref="compound">ShadowModule</ref>&gt;&gt;</type>
+        <definition>std::list&lt;ShadowEngine::Scope&lt;ShadowModule&gt;&gt; ShadowEngine::ShadowModuleManager::modules</definition>
+        <argsstring></argsstring>
+        <name>modules</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowModules/ShadowModuleManager.h" line="12" column="1" bodyfile="ShadowEngine/src/ShadowModules/ShadowModuleManager.h" bodystart="12" bodyend="-1" />
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_module_manager_1a1cc1bd7659764526f4b37df09b9aafa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::ShadowModuleManager::ShadowModuleManager</definition>
+        <argsstring>()</argsstring>
+        <name>ShadowModuleManager</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowModules/ShadowModuleManager.h" line="14" column="1" bodyfile="ShadowEngine/src/ShadowModules/ShadowModuleManager.cpp" bodystart="7" bodyend="14" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_module_manager_1ab15e8aadd4dbec96c534733880b4bb3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::ShadowModuleManager::~ShadowModuleManager</definition>
+        <argsstring>()</argsstring>
+        <name>~ShadowModuleManager</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowModules/ShadowModuleManager.h" line="15" column="1" bodyfile="ShadowEngine/src/ShadowModules/ShadowModuleManager.cpp" bodystart="16" bodyend="18" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_module_manager_1a222ebf1e282a44375b25c71333b2730f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowModuleManager::PushModule</definition>
+        <argsstring>(ShadowModule *module)</argsstring>
+        <name>PushModule</name>
+        <param>
+          <type>
+            <ref refid="class_shadow_engine_1_1_shadow_module" kindref="compound">ShadowModule</ref> *</type>
+          <declname>module</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowModules/ShadowModuleManager.h" line="17" column="1" bodyfile="ShadowEngine/src/ShadowModules/ShadowModuleManager.cpp" bodystart="20" bodyend="23" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_module_manager_1a19ad1139473fc2f1f19cb002a2c357f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>
+          <ref refid="class_shadow_engine_1_1_shadow_module" kindref="compound">ShadowModule</ref> &amp;</type>
+        <definition>ShadowEngine::ShadowModule &amp; ShadowEngine::ShadowModuleManager::GetModule</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>GetModule</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowModules/ShadowModuleManager.h" line="19" column="1" bodyfile="ShadowEngine/src/ShadowModules/ShadowModuleManager.cpp" bodystart="25" bodyend="34" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_module_manager_1ad75e2c5ca2063697d64ad8fca5ba368d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T* ShadowEngine::ShadowModuleManager::GetModuleByType</definition>
+        <argsstring>()</argsstring>
+        <name>GetModuleByType</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowModules/ShadowModuleManager.h" line="22" column="1" bodyfile="ShadowEngine/src/ShadowModules/ShadowModuleManager.h" bodystart="22" bodyend="31" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_module_manager_1acb7330f3f13be1f6cb3b7e36f72fdacb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowModuleManager::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowModules/ShadowModuleManager.h" line="33" column="1" bodyfile="ShadowEngine/src/ShadowModules/ShadowModuleManager.cpp" bodystart="36" bodyend="42" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_module_manager_1ad1ae99e6d299f6f2139a6ab3418dc234" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowModuleManager::Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowModules/ShadowModuleManager.h" line="34" column="1" bodyfile="ShadowEngine/src/ShadowModules/ShadowModuleManager.cpp" bodystart="44" bodyend="50" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_module_manager_1a439303f6e66ebfc47c797565319b7b9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowModuleManager::LateRender</definition>
+        <argsstring>()</argsstring>
+        <name>LateRender</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowModules/ShadowModuleManager.h" line="35" column="1" bodyfile="ShadowEngine/src/ShadowModules/ShadowModuleManager.cpp" bodystart="52" bodyend="58" />
+      </memberdef>
+      <memberdef kind="function" id="class_shadow_engine_1_1_shadow_module_manager_1aad006c3d59516a35e1755c3697f52879" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShadowEngine::ShadowModuleManager::Render</definition>
+        <argsstring>()</argsstring>
+        <name>Render</name>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowModules/ShadowModuleManager.h" line="36" column="1" bodyfile="ShadowEngine/src/ShadowModules/ShadowModuleManager.cpp" bodystart="60" bodyend="66" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <collaborationgraph>
+      <node id="558">
+        <label>ShadowEngine::ShadowModuleManager</label>
+        <link refid="class_shadow_engine_1_1_shadow_module_manager" />
+        <childnode refid="558" relation="usage">
+          <edgelabel>instance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowModules/ShadowModuleManager.h" line="8" column="1" bodyfile="ShadowEngine/src/ShadowModules/ShadowModuleManager.h" bodystart="7" bodyend="37" />
+    <listofallmembers>
+      <member refid="class_shadow_engine_1_1_shadow_module_manager_1a19ad1139473fc2f1f19cb002a2c357f5" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowModuleManager</scope>
+        <name>GetModule</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_module_manager_1ad75e2c5ca2063697d64ad8fca5ba368d" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowModuleManager</scope>
+        <name>GetModuleByType</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_module_manager_1acb7330f3f13be1f6cb3b7e36f72fdacb" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowModuleManager</scope>
+        <name>Init</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_module_manager_1a18e3d8e56f7de371de03984fbdc077ed" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowModuleManager</scope>
+        <name>instance</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_module_manager_1a439303f6e66ebfc47c797565319b7b9f" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowModuleManager</scope>
+        <name>LateRender</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_module_manager_1a7f16791bbba0782ed15830e0a2a83969" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowModuleManager</scope>
+        <name>modules</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_module_manager_1a222ebf1e282a44375b25c71333b2730f" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowModuleManager</scope>
+        <name>PushModule</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_module_manager_1aad006c3d59516a35e1755c3697f52879" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowModuleManager</scope>
+        <name>Render</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_module_manager_1a1cc1bd7659764526f4b37df09b9aafa0" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowModuleManager</scope>
+        <name>ShadowModuleManager</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_module_manager_1ad1ae99e6d299f6f2139a6ab3418dc234" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowModuleManager</scope>
+        <name>Update</name>
+      </member>
+      <member refid="class_shadow_engine_1_1_shadow_module_manager_1ab15e8aadd4dbec96c534733880b4bb3d" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::ShadowModuleManager</scope>
+        <name>~ShadowModuleManager</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

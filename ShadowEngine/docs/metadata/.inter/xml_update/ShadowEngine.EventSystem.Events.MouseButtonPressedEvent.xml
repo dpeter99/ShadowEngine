@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.EventSystem.Events.MouseButtonPressedEvent" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::EventSystem::Events::MouseButtonPressedEvent</compoundname>
+    <basecompoundref refid="ShadowEngine.EventSystem.Events.MouseButtonEvent" prot="public" virt="non-virtual">ShadowEngine::EventSystem::Events::MouseButtonEvent</basecompoundref>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="ShadowEngine.EventSystem.Events.MouseButtonPressedEvent.SHObject_Base(MouseButtonPressedEvent)" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ShadowEngine::EventSystem::Events::MouseButtonPressedEvent::SHObject_Base</definition>
+        <argsstring>(MouseButtonPressedEvent) public</argsstring>
+        <name>SHObject_Base</name>
+        <param>
+          <type>
+            <ref refid="ShadowEngine.EventSystem.Events.MouseButtonPressedEvent" kindref="compound">MouseButtonPressedEvent</ref>
+          </type>
+        </param>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" line="72" column="1" bodyfile="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" bodystart="72" bodyend="78" />
+      </memberdef>
+      <memberdef kind="function" id="ShadowEngine.EventSystem.Events.MouseButtonPressedEvent.ToString()" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string ShadowEngine::EventSystem::Events::MouseButtonPressedEvent::ToString</definition>
+        <argsstring>() const override</argsstring>
+        <name>ToString</name>
+        <reimplements refid="ShadowEngine.EventSystem.ShadowEvent.ToString()">ToString</reimplements>
+        <briefdescription></briefdescription>
+        <detaileddescription></detaileddescription>
+        <inbodydescription></inbodydescription>
+        <location file="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" line="80" column="1" bodyfile="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" bodystart="80" bodyend="85" />
+      </memberdef>
+    </sectiondef>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="404">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="401">
+        <label>ShadowEngine::EventSystem::Events::MouseButtonPressedEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.MouseButtonPressedEvent" />
+        <childnode refid="402" relation="public-inheritance"></childnode>
+      </node>
+      <node id="403">
+        <label>ShadowEngine::EventSystem::ShadowEvent</label>
+        <link refid="ShadowEngine.EventSystem.ShadowEvent" />
+        <childnode refid="404" relation="public-inheritance"></childnode>
+      </node>
+      <node id="402">
+        <label>ShadowEngine::EventSystem::Events::MouseButtonEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.MouseButtonEvent" />
+        <childnode refid="403" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="408">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="405">
+        <label>ShadowEngine::EventSystem::Events::MouseButtonPressedEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.MouseButtonPressedEvent" />
+        <childnode refid="406" relation="public-inheritance"></childnode>
+      </node>
+      <node id="407">
+        <label>ShadowEngine::EventSystem::ShadowEvent</label>
+        <link refid="ShadowEngine.EventSystem.ShadowEvent" />
+        <childnode refid="408" relation="public-inheritance"></childnode>
+      </node>
+      <node id="406">
+        <label>ShadowEngine::EventSystem::Events::MouseButtonEvent</label>
+        <link refid="ShadowEngine.EventSystem.Events.MouseButtonEvent" />
+        <childnode refid="407" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" line="71" column="1" bodyfile="ShadowEngine/src/ShadowEvents/Events/MouseEvents.h" bodystart="70" bodyend="86" />
+    <listofallmembers>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseButtonPressedEvent</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.GetSDLEvnet()" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseButtonPressedEvent</scope>
+        <name>GetSDLEvnet</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseButtonPressedEvent</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseButtonPressedEvent</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.Handled" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseButtonPressedEvent</scope>
+        <name>Handled</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.ShadowEvent(SDL_Event *)" prot="public" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseButtonPressedEvent</scope>
+        <name>ShadowEvent</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.Events.MouseButtonPressedEvent.SHObject_Base(MouseButtonPressedEvent)" prot="private" virt="non-virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseButtonPressedEvent</scope>
+        <name>SHObject_Base</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.Events.MouseButtonPressedEvent.ToString()" prot="private" virt="virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseButtonPressedEvent</scope>
+        <name>ToString</name>
+      </member>
+      <member refid="ShadowEngine.EventSystem.ShadowEvent.~ShadowEvent()" prot="public" virt="virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseButtonPressedEvent</scope>
+        <name>~ShadowEvent</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::EventSystem::Events::MouseButtonPressedEvent</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

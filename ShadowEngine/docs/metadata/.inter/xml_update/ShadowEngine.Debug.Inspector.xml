@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="ShadowEngine.Debug.Inspector" kind="class" language="C++" prot="public">
+    <compoundname>ShadowEngine::Debug::Inspector</compoundname>
+    <basecompoundref refid="ShadowEngine.SHObject" prot="public" virt="non-virtual">ShadowEngine::SHObject</basecompoundref>
+    <derivedcompoundref refid="ShadowEngine.InputSystem.Binding1DInspector" prot="public" virt="non-virtual">ShadowEngine::InputSystem::Binding1DInspector</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.InputSystem.Binding2DInspector" prot="public" virt="non-virtual">ShadowEngine::InputSystem::Binding2DInspector</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.InputSystem.BindingANDInspector" prot="public" virt="non-virtual">ShadowEngine::InputSystem::BindingANDInspector</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.InputSystem.BindingORInspector" prot="public" virt="non-virtual">ShadowEngine::InputSystem::BindingORInspector</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.InputSystem.InputActionInspector" prot="public" virt="non-virtual">ShadowEngine::InputSystem::InputActionInspector</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.InputSystem.KeyboardBindingInspector" prot="public" virt="non-virtual">ShadowEngine::InputSystem::KeyboardBindingInspector</derivedcompoundref>
+    <derivedcompoundref refid="ShadowEngine.InputSystem.ModifierHoldInspector" prot="public" virt="non-virtual">ShadowEngine::InputSystem::ModifierHoldInspector</derivedcompoundref>
+    <briefdescription></briefdescription>
+    <detaileddescription></detaileddescription>
+    <inheritancegraph>
+      <node id="243">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="249">
+        <label>ShadowEngine::InputSystem::KeyboardBindingInspector</label>
+        <link refid="ShadowEngine.InputSystem.KeyboardBindingInspector" />
+        <childnode refid="242" relation="public-inheritance"></childnode>
+      </node>
+      <node id="246">
+        <label>ShadowEngine::InputSystem::BindingANDInspector</label>
+        <link refid="ShadowEngine.InputSystem.BindingANDInspector" />
+        <childnode refid="242" relation="public-inheritance"></childnode>
+      </node>
+      <node id="250">
+        <label>ShadowEngine::InputSystem::ModifierHoldInspector</label>
+        <link refid="ShadowEngine.InputSystem.ModifierHoldInspector" />
+        <childnode refid="242" relation="public-inheritance"></childnode>
+      </node>
+      <node id="247">
+        <label>ShadowEngine::InputSystem::BindingORInspector</label>
+        <link refid="ShadowEngine.InputSystem.BindingORInspector" />
+        <childnode refid="242" relation="public-inheritance"></childnode>
+      </node>
+      <node id="244">
+        <label>ShadowEngine::InputSystem::Binding1DInspector</label>
+        <link refid="ShadowEngine.InputSystem.Binding1DInspector" />
+        <childnode refid="242" relation="public-inheritance"></childnode>
+      </node>
+      <node id="248">
+        <label>ShadowEngine::InputSystem::InputActionInspector</label>
+        <link refid="ShadowEngine.InputSystem.InputActionInspector" />
+        <childnode refid="242" relation="public-inheritance"></childnode>
+      </node>
+      <node id="245">
+        <label>ShadowEngine::InputSystem::Binding2DInspector</label>
+        <link refid="ShadowEngine.InputSystem.Binding2DInspector" />
+        <childnode refid="242" relation="public-inheritance"></childnode>
+      </node>
+      <node id="242">
+        <label>ShadowEngine::Debug::Inspector</label>
+        <link refid="ShadowEngine.Debug.Inspector" />
+        <childnode refid="243" relation="public-inheritance"></childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="252">
+        <label>ShadowEngine::SHObject</label>
+        <link refid="ShadowEngine.SHObject" />
+      </node>
+      <node id="251">
+        <label>ShadowEngine::Debug::Inspector</label>
+        <link refid="ShadowEngine.Debug.Inspector" />
+        <childnode refid="252" relation="public-inheritance"></childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ShadowEngine/src/Inspector/Inspector.h" line="8" column="1" bodyfile="ShadowEngine/src/Inspector/Inspector.h" bodystart="6" bodyend="13" />
+    <listofallmembers>
+      <member refid="ShadowEngine.SHObject.GenerateId()" prot="protected" virt="non-virtual">
+        <scope>ShadowEngine::Debug::Inspector</scope>
+        <name>GenerateId</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetType()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Debug::Inspector</scope>
+        <name>GetType</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.GetTypeId()" prot="public" virt="pure-virtual">
+        <scope>ShadowEngine::Debug::Inspector</scope>
+        <name>GetTypeId</name>
+      </member>
+      <member refid="ShadowEngine.SHObject.~SHObject()" prot="public" virt="virtual">
+        <scope>ShadowEngine::Debug::Inspector</scope>
+        <name>~SHObject</name>
+      </member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
