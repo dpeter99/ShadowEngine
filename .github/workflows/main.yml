@@ -20,5 +20,6 @@ jobs:
       
     - name: Build Docs
       shell: cmd
+      working-directory: docs-source/
       run: docs-source/build-docs.cmd
      
