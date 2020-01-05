@@ -13,6 +13,9 @@ namespace ShadowEngineBuild
 
             Console.WriteLine("Shadow Engine Build System");
 
+            if (String.IsNullOrEmpty(args[0]) || String.IsNullOrEmpty(args[1]))
+                return 1;
+
             BuildEnviroment.SetBuildEnviroment(args[0],args[1]);
             
             Console.WriteLine(BuildEnviroment.ToString());

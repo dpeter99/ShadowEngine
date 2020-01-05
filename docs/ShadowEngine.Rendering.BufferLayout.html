@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BufferLayout
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BufferLayout
+   ">
+    <meta name="generator" content="docfx 2.48.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ShadowEngine.Rendering.BufferLayout">
+  
+  
+  <h1 id="ShadowEngine_Rendering_BufferLayout" data-uid="ShadowEngine.Rendering.BufferLayout" class="text-break">Class BufferLayout
+  </h1>
+  <div class="markdown level0 summary"><p>This class stores the layout of a Vertex buffer (pos, uv, color, etc..) This is used by the graphics api to generate the platform specific description of the vertex buffer. Each field in the Layout is stored in a BufferElement. These can be retrived by calling <code>BufferLayout.GetElements()
+    </code></p><p>The vertex buffers layout can be retrived by calling: </p></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System::Object</span></div>
+    <div class="level1"><span class="xref">BufferLayout</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ShadowEngine.Rendering.html">ShadowEngine::Rendering</a></h6>
+  <h6><strong>Assembly</strong>: .dll</h6>
+  <h5 id="ShadowEngine_Rendering_BufferLayout_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public: class BufferLayout</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="ShadowEngine_Rendering_BufferLayout_BufferLayout_" data-uid="ShadowEngine.Rendering.BufferLayout.BufferLayout*"></a>
+  <h4 id="ShadowEngine_Rendering_BufferLayout_BufferLayout__" data-uid="ShadowEngine.Rendering.BufferLayout.BufferLayout()">BufferLayout()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public: BufferLayout()</code></pre>
+  </div>
+  
+  
+  <a id="ShadowEngine_Rendering_BufferLayout_BufferLayout_" data-uid="ShadowEngine.Rendering.BufferLayout.BufferLayout*"></a>
+  <h4 id="ShadowEngine_Rendering_BufferLayout_BufferLayout_const_std__initializer_list_BufferElement____" data-uid="ShadowEngine.Rendering.BufferLayout.BufferLayout(const std::initializer_list&lt;BufferElement&gt; &amp;)">BufferLayout(const std::initializer_list&lt;BufferElement&gt; &amp;elements)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public: BufferLayout(const std::initializer_list&lt;BufferElement&gt; &amp;elements)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>const std::initializer_list&lt;<a class="xref" href="ShadowEngine.Rendering.BufferElement.html">BufferElement</a>&gt; &amp;</td>
+        <td><span class="parametername">elements</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="ShadowEngine_Rendering_BufferLayout_begin_" data-uid="ShadowEngine.Rendering.BufferLayout.begin*"></a>
+  <h4 id="ShadowEngine_Rendering_BufferLayout_begin__" data-uid="ShadowEngine.Rendering.BufferLayout.begin()">begin()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public: std::vector&lt;BufferElement&gt;::iterator begin()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>std::vector&lt;<a class="xref" href="ShadowEngine.Rendering.BufferElement.html">BufferElement</a>&gt;::iterator</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ShadowEngine_Rendering_BufferLayout_end_" data-uid="ShadowEngine.Rendering.BufferLayout.end*"></a>
+  <h4 id="ShadowEngine_Rendering_BufferLayout_end__" data-uid="ShadowEngine.Rendering.BufferLayout.end()">end()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public: std::vector&lt;BufferElement&gt;::iterator end()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>std::vector&lt;<a class="xref" href="ShadowEngine.Rendering.BufferElement.html">BufferElement</a>&gt;::iterator</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ShadowEngine_Rendering_BufferLayout_GetElements_" data-uid="ShadowEngine.Rendering.BufferLayout.GetElements*"></a>
+  <h4 id="ShadowEngine_Rendering_BufferLayout_GetElements__" data-uid="ShadowEngine.Rendering.BufferLayout.GetElements()">GetElements()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public: const std::vector&lt;BufferElement&gt; &amp; GetElements() const</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>const std::vector&lt;<a class="xref" href="ShadowEngine.Rendering.BufferElement.html">BufferElement</a>&gt; &amp;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ShadowEngine_Rendering_BufferLayout_GetStride_" data-uid="ShadowEngine.Rendering.BufferLayout.GetStride*"></a>
+  <h4 id="ShadowEngine_Rendering_BufferLayout_GetStride__" data-uid="ShadowEngine.Rendering.BufferLayout.GetStride()">GetStride()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public: uint32_t GetStride() const</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>uint32_t</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
