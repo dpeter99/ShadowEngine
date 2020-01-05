@@ -1,4 +1,4 @@
-name: CI
+name: Build Docs
 
 on: 
   push:
@@ -11,13 +11,17 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+      
     - name: Setup Nuget.exe
       uses: warrenbuckley/Setup-Nuget@v1
+      
     - name: Generate Project
       shell: cmd
       run: GenerateProject.bat
+      
     - name: restore nuget
-      run: nuget restore ShadowEngine.sln
+      run: nuget install docfx.console -OutputDirectory packages
+      
     - name: Build Docs
       shell: cmd
       working-directory: ./
