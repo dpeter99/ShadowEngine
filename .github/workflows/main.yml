@@ -14,10 +14,9 @@ jobs:
     - name: Setup Nuget.exe
       uses: warrenbuckley/Setup-Nuget@v1
     - name: Generate Project
+      shell: cmd
       run: GenerateProject.bat
     - name: restore nuget
-      shell: cmd
-      working-directory: ./
       run: nuget restore ShadowEngine.sln
     - name: Build Docs
       shell: cmd
