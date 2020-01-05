@@ -14,6 +14,6 @@ jobs:
     - name: Setup Nuget.exe
       uses: warrenbuckley/Setup-Nuget@v1
     - name: restore nuget
-      run: nuget restore ShadowEngine.sln
+      run: nuget restore ShadowEngine/ShadowEngine.sln
     - name: Build Docs
       run: docs-source/build-docs.cmd
