@@ -16,9 +16,13 @@ dependencies/**/*.zip
 
 packages/
 
+ShadowEngine/docs/html/
+ShadowEngine/src/Shaders/**.h
 
+docs-source/metadata/**
+docs-source/obj/**
 
-ShadowEngine/doc/
+Captures/
 
 ShadowLight/obj/
 

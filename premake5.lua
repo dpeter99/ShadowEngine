@@ -18,12 +18,14 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
-IncludeDir["SDL2"] = "ShadowEngine/dependencies/SDL2/include"
 IncludeDir["Glad"] = "ShadowEngine/dependencies/Glad/include"
 IncludeDir["ImGui"] = "ShadowEngine/dependencies/imgui"
 IncludeDir["glm"] = "ShadowEngine/dependencies/glm"
 IncludeDir["stb_image"] = "ShadowEngine/dependencies/stb_image"
 IncludeDir["spdlog"] = "ShadowEngine/dependencies/spdlog/include"
+IncludeDir["assimp"] = "ShadowEngine/dependencies/assimp/include"
+
+IncludeDir["ShadowEngine"] = "ShadowEngine/src"
 
 
 group "Dependencies"
@@ -31,6 +33,18 @@ group "Dependencies"
 	include "ShadowEngine/dependencies/imgui"
 	
 	include "ShadowEngineBuild/dependencies/TiledSharp"
+
+project "Glm"
+	location "ShadowEngine/dependencies/glm"
+	kind "None"
+	language "C++"
+	cppdialect "C++17"
+
+	files
+    {
+        "ShadowEngine/dependencies/glm/glm/**.hpp",
+		"ShadowEngine/dependencies/glm/glm/**.inl",
+    }
 
 group ""
 
@@ -54,38 +68,70 @@ project "ShadowEngine"
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
 		"%{prj.name}/src/**.cd",
+		"%{prj.name}/src/**.hlsl",
+		"%{prj.name}/src/**.hlsli",
 		"%{prj.name}/dependencies/stb_image/**.h",
 		"%{prj.name}/dependencies/stb_image/**.cpp",
-		"%{prj.name}/dependencies/glm/glm/**.hpp",
-		"%{prj.name}/dependencies/glm/glm/**.inl",
+		"%{prj.name}/dependencies/imgui/examples/imgui_impl_dx12.cpp",
+		"%{prj.name}/dependencies/imgui/examples/imgui_impl_dx12.h"
 	}
 
 	defines
 	{
-		"_CRT_SECURE_NO_WARNINGS"
+		"_CRT_SECURE_NO_WARNINGS",
+		"SH_ENABLE_ASSERTS"
 	}
 
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{IncludeDir.SDL2}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.stb_image}",
-		"%{IncludeDir.spdlog}"
+		"%{IncludeDir.spdlog}",
+		"%{IncludeDir.assimp}"
 	}
 
 	links 
 	{ 
-		"SDL2",
-		"SDL2main",
-		"SDL2test",
 		"Glad",
 		"ImGui",
+		
+		
 		"ShadowEngineBuild",
-		"opengl32.lib"
+		
+		"opengl32.lib",
+		"D3D12.lib",
+		"DXGI.lib",
+		"D3DCompiler.lib"
 	}
+	
+	nuget { 
+		"Assimp:3.0.0",
+		"Assimp.redist:3.0.0",
+		"sdl2.nuget:2.0.10",
+		"sdl2.nuget.redist:2.0.10",
+		"sdl2_image.nuget:2.0.5",
+		"sdl2_image.nuget.redist:2.0.5"
+	}
+
+	local shader_dir = "../bin/" .. outputdir .. "/%{prj.name}/Shaders/"
+	
+	shadermodel "5.0"
+	shaderentry "main"
+	
+	filter "files:**.hlsl"
+		flags "ExcludeFromBuild"
+		shaderobjectfileoutput (shader_dir .. "%{file.basename}.cso")
+		
+	filter "files:**-FS.hlsl"
+		removeflags "ExcludeFromBuild"
+		shadertype "Pixel"
+		
+	filter "files:**-VS.hlsl"
+		removeflags "ExcludeFromBuild"
+		shadertype "Vertex"
 
 	filter "system:windows"
 		systemversion "latest"
@@ -171,6 +217,11 @@ project "Planning"
 	includedirs
 	{
 		"%{prj.name}/src",
+	}
+	
+	links 
+	{ 
+		"ShadowEngine"
 	}
 
 	filter "system:windows"

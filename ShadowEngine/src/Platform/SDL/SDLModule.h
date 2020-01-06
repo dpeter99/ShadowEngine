@@ -1,6 +1,6 @@
 #pragma once
 #include "ShadowModules/ShadowModule.h"
-#include <SDL2/SDL.h>
+#include <SDL.h>
 
 namespace ShadowEngine::SDLPlatform {
 

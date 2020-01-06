@@ -13,10 +13,14 @@
 #include "ShadowTime.h"
 #include "Inspector/Inspector.h"
 #include "Inspector/InspectorSystem.h"
+#include "EntitySystem/EntitySystem.h"
+#include <Core\ShadowApplication.h>
+
+#include "ImGui/IconsFontAwesome5.h"
 
 namespace ShadowEngine::Debug {
 
-	DebugModule::DebugModule()
+	DebugModule::DebugModule() : active(false)
 	{
 	}
 
@@ -34,6 +38,9 @@ namespace ShadowEngine::Debug {
 		//new ShadowInput::ShadowAction<bool>("Test", new ShadowInput::KeyboardBinding("a"));
 
 		active = true;
+
+
+		RegisterEntityInspectors();
 	}
 
 	void DebugModule::OnEvent(EventSystem::ShadowEvent& e)
@@ -62,9 +69,109 @@ namespace ShadowEngine::Debug {
 		ImGui::End();
 	}
 
+	void DebugModule::DebugHierarchy()
+	{
+		static bool shown;
+
+		auto* scenemg = ShadowEngine::ShadowApplication::Get().GetModuleManager().GetModuleByType<EntitySystem::EntitySystem>();
+
+		ImGui::Begin("Hierarchy", &shown, ImGuiWindowFlags_MenuBar);
+
+		auto& scene = scenemg->GetActiveScene();
+
+		if (ImGui::TreeNode((void*)&scene, scene->Type().c_str()))
+		{
+			for each (auto & entity in scene->m_entities)
+			{
+
+				ImGuiTreeNodeFlags node_flags = ImGuiTreeNodeFlags_OpenOnArrow;
+				if (selected_ent == entity)
+					node_flags |= ImGuiTreeNodeFlags_Selected;
+
+				if (ImGui::TreeNodeEx((std::string(ICON_FA_CUBE) + " " + entity->name).c_str(), node_flags))
+				{
+
+
+					ImGui::TreePop();
+				}
+
+				if (ImGui::IsItemClicked()) {
+					selected_ent = entity;
+					selected_inspector = entity;
+				}
+
+			}
+
+			ImGui::TreePop();
+		}
+
+		ImGui::End();
+
+
+
+	}
+
+	template<class T>
+	ImGuiTreeNodeFlags treeSelectableFlags(T a, T b) {
+		ImGuiTreeNodeFlags node_flags = ImGuiTreeNodeFlags_OpenOnArrow;
+		if (a == b)
+			node_flags |= ImGuiTreeNodeFlags_Selected;
+
+		return node_flags;
+	}
+
+	void DebugModule::Inspector() {
+		static bool shown = true;
+
+		ImGui::Begin("Inspector", &shown, ImGuiWindowFlags_None);
+
+		if (selected_ent) {
+
+			std::string title = selected_ent->name;
+			title += " (" + selected_ent->Type() + ")";
+			ImGui::Text(title.c_str(), "");
+
+			ImGui::Separator();
+
+			bool top_open = ImGui::TreeNodeEx(selected_ent->name.c_str(), treeSelectableFlags(selected_ent, selected_inspector));
+			if (ImGui::IsItemClicked())
+				selected_inspector = selected_ent;
+			if (top_open)
+			{
+				for each (auto & entity in selected_ent->internalHierarchy)
+				{
+
+					bool open = ImGui::TreeNodeEx(entity->name.c_str(), treeSelectableFlags(entity, selected_inspector));
+
+					if (ImGui::IsItemClicked())
+						selected_inspector = entity;
+
+					if (open) {
+						ImGui::TreePop();
+					}
+
+				}
+
+				ImGui::TreePop();
+			}
+
+			ImGui::Separator();
+
+			if (selected_inspector) {
+				InspectorSystem::DrawEntityInspector(selected_inspector);
+			}
+		}
+
+		ImGui::End();
+	}
+
+	void DrawDefaultInspector(EntitySystem::rtm_ptr<EntitySystem::Entity> entity) {
+		InspectorSystem::DrawEntityInspector(entity);
+	}
+
 	void DebugModule::OnGui()
 	{
-		//ImGui::ShowDemoWindow();
+		ImGui::ShowDemoWindow();
 
 		ImGui::Begin("Time", &active, ImGuiWindowFlags_MenuBar);
 
@@ -90,6 +197,10 @@ namespace ShadowEngine::Debug {
 		ImGui::End();
 
 		ActionDebug();
+
+		DebugHierarchy();
+
+		Inspector();
 	}
 
 }

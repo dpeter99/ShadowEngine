@@ -1,0 +1,25 @@
+name: Build Docs
+
+on: 
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+      
+    - name: Setup Nuget.exe
+      uses: warrenbuckley/Setup-Nuget@v1
+      
+    - name: restore nuget
+      run: nuget install docfx.console -OutputDirectory packages
+      
+    - name: Build Docs
+      shell: cmd
+      working-directory: docs-source/
+      run: build-docs.cmd
+     

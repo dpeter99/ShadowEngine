@@ -7,7 +7,7 @@
 
 namespace ShadowMath
 {
-	struct Vector2int
+	struct [[deprecated("Use glm instead")]] Vector2int
 	{
 	public:
 		int x;

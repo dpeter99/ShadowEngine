@@ -1,7 +1,7 @@
 #include "shpch.h"
 
 #include "SDLModule.h"
-#include <SDL2/SDL.h>
+#include <SDL.h>
 #include <cstdio>
 #include "glad/glad.h"
 #include <string>
@@ -23,7 +23,7 @@ namespace ShadowEngine::SDLPlatform {
 			//return false;
 		}
 
-		ShadowApplication::Get().SetWindow(new ShadowWindow(1000, 600));
+		ShadowApplication::Get().SetWindow(new ShadowWindow(1000, 700));
 	}
 
 	SDLModule::SDLModule()

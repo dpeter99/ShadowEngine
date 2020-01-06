@@ -1,5 +1,8 @@
 #pragma once
 
+#define GLM_FORCE_LEFT_HANDED
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE
+
 #include <iostream>
 #include <memory>
 #include <utility>
@@ -15,6 +18,8 @@
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
+
+#include <fstream>
 
 #include "Util/Utility.h"
 #include "Log.h"

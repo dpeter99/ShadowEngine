@@ -1,8 +1,8 @@
 #include "shpch.h"
 
 #include "Time.h"
-#include <SDL2/SDL_hints.h>
-#include <SDL2/SDL.h>
+#include <SDL_hints.h>
+#include <SDL.h>
 #include "ShadowTime.h"
 
 Uint64 Time::NOW = SDL_GetPerformanceCounter();

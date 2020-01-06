@@ -34,5 +34,6 @@ namespace ShadowEngine {
 		void Update();
 		void LateRender();
 		void Render();
+		void AfterFrameEnd();
 	};
 }

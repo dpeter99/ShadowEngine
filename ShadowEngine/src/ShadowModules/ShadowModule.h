@@ -17,7 +17,10 @@ namespace ShadowEngine {
 
 		virtual void LateRender() = 0;
 
+		virtual void AfterFrameEnd() {};
+		
 		virtual std::string GetName() = 0;
+		
 
 		ShadowModule();
 		virtual ~ShadowModule();

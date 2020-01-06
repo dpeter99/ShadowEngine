@@ -11,3 +11,6 @@
 [submodule "ShadowEngine/dependencies/spdlog"]
 	path = ShadowEngine/dependencies/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "ShadowEngine/dependencies/assimp"]
+	path = ShadowEngine/dependencies/assimp
+	url = git@github.com:assimp/assimp.git
