@@ -1,37 +1,35 @@
 ﻿using System;
-using Stylet;
-
-using ShadowLight.Pages.Controlls;
-using ShadowLight.Pages.Controlls.Menu;
+using ShadowLight.Controls.AssetBrowser;
+using ShadowLight.Controls.MenuBar;
 using ShadowLight.Model;
+using Stylet;
 
 namespace ShadowLight.Pages
 {
     public class ShellViewModel : Screen
     {
-        ApplicationState app;
+        public Project ActiveProject { get; private set; }
 
-        private AssetBrowserViewModel m_assetBrowser;
-        public AssetBrowserViewModel assetBrowser { 
-            get {
-                if(app.acticeProject == null)
-                {
-                    return null;
-                }
-                return m_assetBrowser;
-            }
-            private set
-            {
+        public MenuBarViewModel MenuBar { get; private set; }
 
-            }
+        public AssetBrowserViewModel AssetBrowser { get; private set; }
+
+        public ShellViewModel()
+        {
+            MenuBar= new MenuBarViewModel();
+
         }
 
-        public MenuBarViewModel menuBar { get; private set; }
-
-        public ShellViewModel(Model.ApplicationState state, MenuBarViewModel barViewModel)
+        public ShellViewModel(MenuBarViewModel menuBar)
         {
-            assetBrowser = new AssetBrowserViewModel(state);
-            menuBar = barViewModel;
+            menuBar.Parent = this;
+            this.MenuBar = menuBar;
+        }
+
+        public void OpenProject(string path)
+        {
+            ActiveProject = new Project(path);
+            AssetBrowser = new AssetBrowserViewModel(ActiveProject);
         }
     }
 }

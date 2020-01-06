@@ -13,31 +13,21 @@ namespace ShadowLight.Model
 {
     public class AssetHierarchy
     {
-        Asset assetroot;
+        public Asset AssetsFolder;
 
         private Project m_project;
 
         public AssetHierarchy(Project project)
         {
             m_project = project;
-            assetroot = new Asset(m_project.folderPath);
             UpdateAssetsList();
         }
 
         public void UpdateAssetsList()
         {
-            RecursiveAssetDiscovery(assetroot);
+            AssetsFolder = new Asset(m_project.folderPath, Asset.Type.Folder);
         }
 
-        public void RecursiveAssetDiscovery(Asset asset)
-        {
-            var folders = Directory.GetDirectories(asset.path);
-            foreach (var item in folders)
-            {
-                Asset c = new Asset(item);
-                RecursiveAssetDiscovery(c);
-                asset.childs.Add(c);
-            }
-        }
+        
     }
 }

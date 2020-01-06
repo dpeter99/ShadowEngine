@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ShadowLight.Pages.Controlls
+namespace ShadowLight.Controls.MenuBar
 {
     /// <summary>
-    /// Interaction logic for AssetBrowser.xaml
+    /// Interaction logic for MenuBar.xaml
     /// </summary>
-    public partial class AssetBrowserView : UserControl
+    public partial class MenuBarView : UserControl
     {
-        public AssetBrowserView()
+        public MenuBarView()
         {
             InitializeComponent();
         }

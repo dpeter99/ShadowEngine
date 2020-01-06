@@ -1,0 +1,9 @@
+ShadowFormat_0_0_1
+Asset:{
+	UID:00001,
+	Type:Project,
+}
+Project:{
+	AssetsFolder:@{.\Resources}
+	Name:TestProject,
+}

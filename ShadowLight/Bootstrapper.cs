@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Reflection;
 using Stylet;
 using StyletIoC;
 using ShadowLight.Pages;
-using ShadowLight.Model;
 
 namespace ShadowLight
 {
@@ -11,12 +11,14 @@ namespace ShadowLight
         protected override void ConfigureIoC(IStyletIoCBuilder builder)
         {
             // Configure the IoC container in here
-            builder.Bind<ApplicationState>().ToInstance(new ApplicationState());
         }
 
         protected override void Configure()
         {
             // Perform any other configuration before the application starts
+            var viewManager = this.Container.Get<ViewManager>();
+            viewManager.NamespaceTransformations.Add("Pages","Controls");
+            viewManager.ViewAssemblies.Add(Assembly.GetAssembly(typeof(ShadowLight.Controls.MenuBar.MenuBarView)));
         }
     }
 }
