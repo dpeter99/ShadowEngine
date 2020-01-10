@@ -75,7 +75,7 @@ namespace Sledge.BspEditor.Providers.ShadowEngine
 
             foreach (var solid in solids.properties.Values)
             {
-                List<Face> faces;
+                List<Face> faces = new List<Face>();
                 int id = int.Parse(solid.properties["ID"].value);
                 Solid s = new Solid(id);
 
@@ -83,18 +83,21 @@ namespace Sledge.BspEditor.Providers.ShadowEngine
                 {
                     if (face.name.StartsWith("Face"))
                     {
+                        var points = face.properties["Points"];
+
                         Face f;
                         
                     }
                 }
 
-                faces.Add()
+                
                 
             }
 
 
             return result;
         }
+
 
 
         /// <summary>
@@ -116,31 +119,31 @@ namespace Sledge.BspEditor.Providers.ShadowEngine
 
         private string FormatVector3(Vector3 c)
         {
-            return "x:" + c.X.ToString("0.000", CultureInfo.InvariantCulture) 
-                 + "y:" + c.Y.ToString("0.000", CultureInfo.InvariantCulture)
-                 + "z:" + c.Z.ToString("0.000", CultureInfo.InvariantCulture);
+            return "x:" + c.X.ToString("0.000", CultureInfo.InvariantCulture) + ","
+                 + "y:" + c.Y.ToString("0.000", CultureInfo.InvariantCulture) + ","
+                 + "z:" + c.Z.ToString("0.000", CultureInfo.InvariantCulture) + ",";
         }
 
         private void WriteFace(StreamWriter sw, Face face, int i)
         {
             // ( -128 64 64 ) ( -64 64 64 ) ( -64 0 64 ) AAATRIGGER [ 1 0 0 0 ] [ 0 -1 0 0 ] 0 1 1
 
-            sw.WriteLine("\t\t\t Side{"+i+"}:{");
-            sw.WriteLine("\t\t\t Points:{");
+            sw.WriteLine("\t\tFace_"+i+":{");
+            sw.WriteLine("\t\t\tPoints:{");
             
 
-            var strings = face.Vertices.Take(4).Select(x => "\t\t\t\t Point:{ " + FormatVector3(x) + ", u:0,v:0}").ToList();
-
-            sw.WriteLine("\t\t\t }");
-            sw.WriteLine("\t\t\t }");
+            var strings = face.Vertices.Take(4).Select(x => "\t\t\t\tPoint:{ " + FormatVector3(x) + "u:0,v:0,}").ToList();
 
             sw.WriteLine(String.Join("\n", strings));
+
+            sw.WriteLine("\t\t\t }");
+            sw.WriteLine("\t\t }");
         }
 
         private void WriteSolid(StreamWriter sw, Solid solid)
         {
             sw.WriteLine("\t\t Solid:{");
-            sw.WriteLine("\t\t ID: "+solid.ID);
+            sw.WriteLine("\t\t ID: "+solid.ID+",");
             int i = 0;
             foreach (var face in solid.Faces)
             {
