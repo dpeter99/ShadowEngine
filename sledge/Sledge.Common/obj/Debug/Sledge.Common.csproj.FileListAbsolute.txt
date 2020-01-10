@@ -1,0 +1,16 @@
+P:\csharp\sledge\sledge\Sledge.Common\bin\Debug\Sledge.Common.dll
+P:\csharp\sledge\sledge\Sledge.Common\bin\Debug\Sledge.Common.pdb
+P:\csharp\sledge\sledge\Sledge.Common\bin\Debug\LogicAndTrick.Oy.dll
+P:\csharp\sledge\sledge\Sledge.Common\bin\Debug\Newtonsoft.Json.dll
+P:\csharp\sledge\sledge\Sledge.Common\obj\Debug\Sledge.Common.csprojAssemblyReference.cache
+P:\csharp\sledge\sledge\Sledge.Common\obj\Debug\Sledge.Common.csproj.CopyComplete
+P:\csharp\sledge\sledge\Sledge.Common\obj\Debug\Sledge.Common.dll
+P:\csharp\sledge\sledge\Sledge.Common\obj\Debug\Sledge.Common.pdb
+P:\ShadowEngine\shadowengine\sledge\Sledge.Common\bin\Debug\Sledge.Common.dll
+P:\ShadowEngine\shadowengine\sledge\Sledge.Common\bin\Debug\Sledge.Common.pdb
+P:\ShadowEngine\shadowengine\sledge\Sledge.Common\bin\Debug\LogicAndTrick.Oy.dll
+P:\ShadowEngine\shadowengine\sledge\Sledge.Common\bin\Debug\Newtonsoft.Json.dll
+P:\ShadowEngine\shadowengine\sledge\Sledge.Common\obj\Debug\Sledge.Common.csprojAssemblyReference.cache
+P:\ShadowEngine\shadowengine\sledge\Sledge.Common\obj\Debug\Sledge.Common.csproj.CopyComplete
+P:\ShadowEngine\shadowengine\sledge\Sledge.Common\obj\Debug\Sledge.Common.dll
+P:\ShadowEngine\shadowengine\sledge\Sledge.Common\obj\Debug\Sledge.Common.pdb

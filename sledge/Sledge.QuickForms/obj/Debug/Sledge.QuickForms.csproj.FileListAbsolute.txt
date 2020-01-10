@@ -1,0 +1,14 @@
+P:\csharp\sledge\sledge\Sledge.QuickForms\bin\Debug\Sledge.QuickForms.dll
+P:\csharp\sledge\sledge\Sledge.QuickForms\bin\Debug\Sledge.QuickForms.pdb
+P:\csharp\sledge\sledge\Sledge.QuickForms\obj\Debug\Sledge.QuickForms.csprojAssemblyReference.cache
+P:\csharp\sledge\sledge\Sledge.QuickForms\obj\Debug\Sledge.QuickForms.QuickForm.resources
+P:\csharp\sledge\sledge\Sledge.QuickForms\obj\Debug\Sledge.QuickForms.csproj.GenerateResource.cache
+P:\csharp\sledge\sledge\Sledge.QuickForms\obj\Debug\Sledge.QuickForms.dll
+P:\csharp\sledge\sledge\Sledge.QuickForms\obj\Debug\Sledge.QuickForms.pdb
+P:\ShadowEngine\shadowengine\sledge\Sledge.QuickForms\bin\Debug\Sledge.QuickForms.dll
+P:\ShadowEngine\shadowengine\sledge\Sledge.QuickForms\bin\Debug\Sledge.QuickForms.pdb
+P:\ShadowEngine\shadowengine\sledge\Sledge.QuickForms\obj\Debug\Sledge.QuickForms.csprojAssemblyReference.cache
+P:\ShadowEngine\shadowengine\sledge\Sledge.QuickForms\obj\Debug\Sledge.QuickForms.QuickForm.resources
+P:\ShadowEngine\shadowengine\sledge\Sledge.QuickForms\obj\Debug\Sledge.QuickForms.csproj.GenerateResource.cache
+P:\ShadowEngine\shadowengine\sledge\Sledge.QuickForms\obj\Debug\Sledge.QuickForms.dll
+P:\ShadowEngine\shadowengine\sledge\Sledge.QuickForms\obj\Debug\Sledge.QuickForms.pdb

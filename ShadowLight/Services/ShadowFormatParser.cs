@@ -9,9 +9,22 @@ namespace ShadowLight.Services
 {
     public static class ShadowFormatParser
     {
-
         public static Element LoadFile(string path)
         {
+            //TODO: check if file exists
+            System.IO.FileStream stream = new FileStream(path, FileMode.Open);
+
+
+            return LoadFile(stream);
+        }
+
+
+        public static Element LoadFile(Stream stream)
+        {
+
+
+            StreamReader reader = new StreamReader(stream);
+
             //The current node that we are building
             var context = new Element();
 
@@ -21,9 +34,6 @@ namespace ShadowLight.Services
             //The new node that will be a child of the context
             var current = new Element();
 
-            //TODO: check if file exists
-            System.IO.FileStream stream = new FileStream(path, FileMode.Open);
-            StreamReader reader = new StreamReader(stream);
 
             var version = ReadFormatHeader(reader);
 

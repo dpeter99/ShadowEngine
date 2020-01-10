@@ -4,6 +4,7 @@
 *.filters
 *.user
 *.zip
+*.cache
 
 \.vs/
 \.idea/
@@ -24,6 +25,7 @@ docs-source/obj/**
 
 Captures/
 
-ShadowLight/obj/
+ShadowLight/obj/**
+ShadowLight/obj/Debug/**
 
 ShadowEngineInterop/obj/

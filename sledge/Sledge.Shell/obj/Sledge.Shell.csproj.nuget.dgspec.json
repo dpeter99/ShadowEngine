@@ -1,0 +1,128 @@
+{
+  "format": 1,
+  "restore": {
+    "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\Sledge.Shell.csproj": {}
+  },
+  "projects": {
+    "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj",
+        "projectName": "Sledge.Common",
+        "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj",
+        "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
+        "outputPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Peter\\AppData\\Roaming\\Cosmos User Kit\\Kernel\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "LogicAndTrick.Oy": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\Sledge.Shell.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\Sledge.Shell.csproj",
+        "projectName": "Sledge.Shell",
+        "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\Sledge.Shell.csproj",
+        "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
+        "outputPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Peter\\AppData\\Roaming\\Cosmos User Kit\\Kernel\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "LogicAndTrick.Oy": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

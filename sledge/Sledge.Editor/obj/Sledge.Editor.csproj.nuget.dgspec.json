@@ -1,0 +1,814 @@
+{
+  "format": 1,
+  "restore": {
+    "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Editor\\Sledge.Editor.csproj": {}
+  },
+  "projects": {
+    "P:\\ShadowEngine\\shadowengine\\ShadowLight\\ShadowLight.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\ShadowEngine\\shadowengine\\ShadowLight\\ShadowLight.csproj",
+        "projectName": "ShadowLight",
+        "projectPath": "P:\\ShadowEngine\\shadowengine\\ShadowLight\\ShadowLight.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Editing\\Sledge.BspEditor.Editing.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Editing\\Sledge.BspEditor.Editing.csproj",
+        "projectName": "Sledge.BspEditor.Editing",
+        "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Editing\\Sledge.BspEditor.Editing.csproj",
+        "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
+        "outputPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Editing\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Peter\\AppData\\Roaming\\Cosmos User Kit\\Kernel\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Rendering\\Sledge.BspEditor.Rendering.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Rendering\\Sledge.BspEditor.Rendering.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor\\Sledge.BspEditor.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor\\Sledge.BspEditor.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.DataStructures\\Sledge.DataStructures.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.DataStructures\\Sledge.DataStructures.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.FileSystem\\Sledge.FileSystem.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.FileSystem\\Sledge.FileSystem.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Providers\\Sledge.Providers.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Providers\\Sledge.Providers.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.QuickForms\\Sledge.QuickForms.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.QuickForms\\Sledge.QuickForms.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Rendering\\Sledge.Rendering.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Rendering\\Sledge.Rendering.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\Sledge.Shell.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\Sledge.Shell.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "LogicAndTrick.Oy": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "System.Numerics.Vectors": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.Reactive": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Rendering\\Sledge.BspEditor.Rendering.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Rendering\\Sledge.BspEditor.Rendering.csproj",
+        "projectName": "Sledge.BspEditor.Rendering",
+        "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Rendering\\Sledge.BspEditor.Rendering.csproj",
+        "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
+        "outputPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Rendering\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Peter\\AppData\\Roaming\\Cosmos User Kit\\Kernel\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor\\Sledge.BspEditor.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor\\Sledge.BspEditor.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.DataStructures\\Sledge.DataStructures.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.DataStructures\\Sledge.DataStructures.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.FileSystem\\Sledge.FileSystem.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.FileSystem\\Sledge.FileSystem.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Providers\\Sledge.Providers.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Providers\\Sledge.Providers.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Rendering\\Sledge.Rendering.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Rendering\\Sledge.Rendering.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\Sledge.Shell.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\Sledge.Shell.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "LogicAndTrick.Oy": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "System.Numerics.Vectors": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "Veldrid": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Tools\\Sledge.BspEditor.Tools.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Tools\\Sledge.BspEditor.Tools.csproj",
+        "projectName": "Sledge.BspEditor.Tools",
+        "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Tools\\Sledge.BspEditor.Tools.csproj",
+        "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
+        "outputPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Tools\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Peter\\AppData\\Roaming\\Cosmos User Kit\\Kernel\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Editing\\Sledge.BspEditor.Editing.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Editing\\Sledge.BspEditor.Editing.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Rendering\\Sledge.BspEditor.Rendering.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Rendering\\Sledge.BspEditor.Rendering.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor\\Sledge.BspEditor.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor\\Sledge.BspEditor.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.DataStructures\\Sledge.DataStructures.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.DataStructures\\Sledge.DataStructures.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Providers\\Sledge.Providers.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Providers\\Sledge.Providers.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Rendering\\Sledge.Rendering.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Rendering\\Sledge.Rendering.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\Sledge.Shell.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\Sledge.Shell.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "LogicAndTrick.Oy": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Poly2Tri": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "System.Numerics.Vectors": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.Reactive": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor\\Sledge.BspEditor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor\\Sledge.BspEditor.csproj",
+        "projectName": "Sledge.BspEditor",
+        "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor\\Sledge.BspEditor.csproj",
+        "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
+        "outputPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Peter\\AppData\\Roaming\\Cosmos User Kit\\Kernel\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "P:\\ShadowEngine\\shadowengine\\ShadowLight\\ShadowLight.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\ShadowLight\\ShadowLight.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.DataStructures\\Sledge.DataStructures.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.DataStructures\\Sledge.DataStructures.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.FileSystem\\Sledge.FileSystem.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.FileSystem\\Sledge.FileSystem.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Providers\\Sledge.Providers.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Providers\\Sledge.Providers.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.QuickForms\\Sledge.QuickForms.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.QuickForms\\Sledge.QuickForms.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\Sledge.Shell.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\Sledge.Shell.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "LogicAndTrick.Oy": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            },
+            "System.Numerics.Vectors": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj",
+        "projectName": "Sledge.Common",
+        "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj",
+        "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
+        "outputPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Peter\\AppData\\Roaming\\Cosmos User Kit\\Kernel\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "LogicAndTrick.Oy": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.DataStructures\\Sledge.DataStructures.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.DataStructures\\Sledge.DataStructures.csproj",
+        "projectName": "Sledge.DataStructures",
+        "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.DataStructures\\Sledge.DataStructures.csproj",
+        "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
+        "outputPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.DataStructures\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Peter\\AppData\\Roaming\\Cosmos User Kit\\Kernel\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "System.Numerics.Vectors": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Editor\\Sledge.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Editor\\Sledge.Editor.csproj",
+        "projectName": "Sledge.Editor",
+        "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Editor\\Sledge.Editor.csproj",
+        "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
+        "outputPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Editor\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Peter\\AppData\\Roaming\\Cosmos User Kit\\Kernel\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Editing\\Sledge.BspEditor.Editing.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Editing\\Sledge.BspEditor.Editing.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Rendering\\Sledge.BspEditor.Rendering.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Rendering\\Sledge.BspEditor.Rendering.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Tools\\Sledge.BspEditor.Tools.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor.Tools\\Sledge.BspEditor.Tools.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor\\Sledge.BspEditor.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.BspEditor\\Sledge.BspEditor.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\Sledge.Shell.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\Sledge.Shell.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "LogicAndTrick.Oy": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.FileSystem\\Sledge.FileSystem.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.FileSystem\\Sledge.FileSystem.csproj",
+        "projectName": "Sledge.FileSystem",
+        "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.FileSystem\\Sledge.FileSystem.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Packages\\Sledge.Packages.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Packages\\Sledge.Packages.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Packages\\Sledge.Packages.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Packages\\Sledge.Packages.csproj",
+        "projectName": "Sledge.Packages",
+        "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Packages\\Sledge.Packages.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Providers\\Sledge.Providers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Providers\\Sledge.Providers.csproj",
+        "projectName": "Sledge.Providers",
+        "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Providers\\Sledge.Providers.csproj",
+        "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
+        "outputPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Providers\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Peter\\AppData\\Roaming\\Cosmos User Kit\\Kernel\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.DataStructures\\Sledge.DataStructures.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.DataStructures\\Sledge.DataStructures.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.FileSystem\\Sledge.FileSystem.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.FileSystem\\Sledge.FileSystem.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Packages\\Sledge.Packages.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Packages\\Sledge.Packages.csproj"
+              },
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Rendering\\Sledge.Rendering.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Rendering\\Sledge.Rendering.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "System.Numerics.Vectors": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.QuickForms\\Sledge.QuickForms.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.QuickForms\\Sledge.QuickForms.csproj",
+        "projectName": "Sledge.QuickForms",
+        "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.QuickForms\\Sledge.QuickForms.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Rendering\\Sledge.Rendering.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Rendering\\Sledge.Rendering.csproj",
+        "projectName": "Sledge.Rendering",
+        "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Rendering\\Sledge.Rendering.csproj",
+        "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
+        "outputPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Rendering\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Peter\\AppData\\Roaming\\Cosmos User Kit\\Kernel\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "ImGui.NET": {
+              "target": "Package",
+              "version": "[1.65.0-beta3, )"
+            },
+            "System.Diagnostics.DiagnosticSource": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.Numerics.Vectors": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "Veldrid": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\Sledge.Shell.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\Sledge.Shell.csproj",
+        "projectName": "Sledge.Shell",
+        "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\Sledge.Shell.csproj",
+        "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
+        "outputPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Shell\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Peter\\AppData\\Roaming\\Cosmos User Kit\\Kernel\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj": {
+                "projectPath": "P:\\ShadowEngine\\shadowengine\\sledge\\Sledge.Common\\Sledge.Common.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "LogicAndTrick.Oy": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.2, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

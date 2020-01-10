@@ -46,6 +46,10 @@ project "Glm"
 		"ShadowEngine/dependencies/glm/glm/**.inl",
     }
 
+group "Sledge"
+	include "sledge"
+
+
 group ""
 
 project "ShadowEngine"
