@@ -35,5 +35,9 @@ jobs:
       run: ..\packages\docfx.console.2.48.0\tools\docfx.exe docfx_CLI.json
 
     - name: GitHub Pages Deploy
-      uses: maxheld83/ghpages@v0.2.1
+      shell: cmd
+      run: ./.github/actions/publish-to-ghpages/publish.cmd
+      env:
+        FOLDER_TO_PUSH: ./ghpages
+        PUSH_TO_BRANCH: gh-pages
      
