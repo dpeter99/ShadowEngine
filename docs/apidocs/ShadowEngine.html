@@ -86,7 +86,8 @@
       <h4><a class="xref" href="ShadowEngine.ShadowModuleManager.html">ShadowModuleManager</a></h4>
       <section></section>
       <h4><a class="xref" href="ShadowEngine.SHObject.html">SHObject</a></h4>
-      <section><p>This is the base class for every class in the Engine that uses runtime reflection. </p></section>
+      <section><p>This is the base class for every class in the Engine that uses runtime reflection. </p><p>Currently it provides a runtime TypeID and TypeName witch can be accesed as static and as class memebers. The ID is a int type number witch is generated incramently, on the first call to get a type.</p>
+<p>Each class that inherits from this or it&#39;s parent inheris form it must implement the SHObject::GetType and SHObject::GetTypeId methodes and make it&#39;s own static methodes. To make it easier a standard implementation of these can be used with the SHObject_Base() macro witch implements all of these functions. It uses the typeid().name of the class. </p></section>
 </article>
           </div>
           
@@ -95,10 +96,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/dpeter99/ShadowEngine/new/e10917e5fdb98fc09f53879887c783a835afa9aa/apiSpec/new?filename=ShadowEngine.md&amp;value=---%0Auid%3A%20ShadowEngine%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/dpeter99/ShadowEngine/new/66dcb05edd3942afcb2e57250bf1fbdd1e0c3f5f/apiSpec/new?filename=ShadowEngine.md&amp;value=---%0Auid%3A%20ShadowEngine%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dpeter99/ShadowEngine/blob/e10917e5fdb98fc09f53879887c783a835afa9aa/ShadowEngine/src/Core/Core.h/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dpeter99/ShadowEngine/blob/66dcb05edd3942afcb2e57250bf1fbdd1e0c3f5f/ShadowEngine/src/Core/Core.h/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -73,7 +73,8 @@
   
   <h1 id="ShadowEngine_SHObject" data-uid="ShadowEngine.SHObject" class="text-break">Class SHObject
   </h1>
-  <div class="markdown level0 summary"><p>This is the base class for every class in the Engine that uses runtime reflection. </p></div>
+  <div class="markdown level0 summary"><p>This is the base class for every class in the Engine that uses runtime reflection. </p><p>Currently it provides a runtime TypeID and TypeName witch can be accesed as static and as class memebers. The ID is a int type number witch is generated incramently, on the first call to get a type.</p>
+<p>Each class that inherits from this or it&#39;s parent inheris form it must implement the SHObject::GetType and SHObject::GetTypeId methodes and make it&#39;s own static methodes. To make it easier a standard implementation of these can be used with the SHObject_Base() macro witch implements all of these functions. It uses the typeid().name of the class. </p></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -90,10 +91,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/e10917e5fdb98fc09f53879887c783a835afa9aa/apiSpec/new?filename=ShadowEngine_SHObject__SHObject__.md&amp;value=---%0Auid%3A%20ShadowEngine.SHObject.~SHObject()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/66dcb05edd3942afcb2e57250bf1fbdd1e0c3f5f/apiSpec/new?filename=ShadowEngine_SHObject__SHObject__.md&amp;value=---%0Auid%3A%20ShadowEngine.SHObject.~SHObject()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/e10917e5fdb98fc09f53879887c783a835afa9aa/ShadowEngine/src/Core/SHObject.h/#L34">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/66dcb05edd3942afcb2e57250bf1fbdd1e0c3f5f/ShadowEngine/src/Core/SHObject.h/#L43">View Source</a>
   </span>
   <a id="ShadowEngine_SHObject__SHObject_" data-uid="ShadowEngine.SHObject.~SHObject*"></a>
   <h4 id="ShadowEngine_SHObject__SHObject__" data-uid="ShadowEngine.SHObject.~SHObject()">~SHObject()</h4>
@@ -107,10 +108,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/e10917e5fdb98fc09f53879887c783a835afa9aa/apiSpec/new?filename=ShadowEngine_SHObject_GenerateId__.md&amp;value=---%0Auid%3A%20ShadowEngine.SHObject.GenerateId()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/66dcb05edd3942afcb2e57250bf1fbdd1e0c3f5f/apiSpec/new?filename=ShadowEngine_SHObject_GenerateId__.md&amp;value=---%0Auid%3A%20ShadowEngine.SHObject.GenerateId()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/e10917e5fdb98fc09f53879887c783a835afa9aa/ShadowEngine/src/Core/SHObject.h/#L16">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/66dcb05edd3942afcb2e57250bf1fbdd1e0c3f5f/ShadowEngine/src/Core/SHObject.h/#L25">View Source</a>
   </span>
   <a id="ShadowEngine_SHObject_GenerateId_" data-uid="ShadowEngine.SHObject.GenerateId*"></a>
   <h4 id="ShadowEngine_SHObject_GenerateId__" data-uid="ShadowEngine.SHObject.GenerateId()">GenerateId()</h4>
@@ -137,10 +138,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/e10917e5fdb98fc09f53879887c783a835afa9aa/apiSpec/new?filename=ShadowEngine_SHObject_GetType__.md&amp;value=---%0Auid%3A%20ShadowEngine.SHObject.GetType()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/66dcb05edd3942afcb2e57250bf1fbdd1e0c3f5f/apiSpec/new?filename=ShadowEngine_SHObject_GetType__.md&amp;value=---%0Auid%3A%20ShadowEngine.SHObject.GetType()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/e10917e5fdb98fc09f53879887c783a835afa9aa/ShadowEngine/src/Core/SHObject.h/#L27">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/66dcb05edd3942afcb2e57250bf1fbdd1e0c3f5f/ShadowEngine/src/Core/SHObject.h/#L36">View Source</a>
   </span>
   <a id="ShadowEngine_SHObject_GetType_" data-uid="ShadowEngine.SHObject.GetType*"></a>
   <h4 id="ShadowEngine_SHObject_GetType__" data-uid="ShadowEngine.SHObject.GetType()">GetType()</h4>
@@ -167,10 +168,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/e10917e5fdb98fc09f53879887c783a835afa9aa/apiSpec/new?filename=ShadowEngine_SHObject_GetTypeId__.md&amp;value=---%0Auid%3A%20ShadowEngine.SHObject.GetTypeId()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/66dcb05edd3942afcb2e57250bf1fbdd1e0c3f5f/apiSpec/new?filename=ShadowEngine_SHObject_GetTypeId__.md&amp;value=---%0Auid%3A%20ShadowEngine.SHObject.GetTypeId()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/e10917e5fdb98fc09f53879887c783a835afa9aa/ShadowEngine/src/Core/SHObject.h/#L32">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/66dcb05edd3942afcb2e57250bf1fbdd1e0c3f5f/ShadowEngine/src/Core/SHObject.h/#L41">View Source</a>
   </span>
   <a id="ShadowEngine_SHObject_GetTypeId_" data-uid="ShadowEngine.SHObject.GetTypeId*"></a>
   <h4 id="ShadowEngine_SHObject_GetTypeId__" data-uid="ShadowEngine.SHObject.GetTypeId()">GetTypeId()</h4>
@@ -203,10 +204,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/dpeter99/ShadowEngine/new/e10917e5fdb98fc09f53879887c783a835afa9aa/apiSpec/new?filename=ShadowEngine_SHObject.md&amp;value=---%0Auid%3A%20ShadowEngine.SHObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/dpeter99/ShadowEngine/new/66dcb05edd3942afcb2e57250bf1fbdd1e0c3f5f/apiSpec/new?filename=ShadowEngine_SHObject.md&amp;value=---%0Auid%3A%20ShadowEngine.SHObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dpeter99/ShadowEngine/blob/e10917e5fdb98fc09f53879887c783a835afa9aa/ShadowEngine/src/Core/SHObject.h/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dpeter99/ShadowEngine/blob/66dcb05edd3942afcb2e57250bf1fbdd1e0c3f5f/ShadowEngine/src/Core/SHObject.h/#L18" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
