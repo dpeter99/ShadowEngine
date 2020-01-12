@@ -8,9 +8,11 @@ dir
 git config --global user.email "dpeter99@gmail.com"
 git config --global user.name "Doc gen"
 
+echo Git init
 git init
+echo git add remote
 git remote add origin "https://x-access-token:%GITHUB_TOKEN%@github.com/%GITHUB_REPOSITORY%"
+echo list remotes
 git remote -v
-git pull HEAD:%PUSH_TO_BRANCH%
-
-dir
+echo pull
+git pull origin HEAD:%PUSH_TO_BRANCH%
