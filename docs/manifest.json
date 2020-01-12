@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/AssetManager.html",
-          "hash": "dBFcxHKxwC4KSuHKm2CbZg=="
+          "hash": "CX4SMkcA6pO+EvYwiJIyUw=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/Callback.html",
-          "hash": "C+Ld1holC1joI1j4vE5dcg=="
+          "hash": "BtKOkdeh2/sWi+bo6vnnrg=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/Camera.html",
-          "hash": "05Fs4tU5+oov4keXopOaoA=="
+          "hash": "YIAneVr4knnHsTa1K4kdhg=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/CameraInspector.html",
-          "hash": "QleIQf//FPUYBXRM2Cb/UA=="
+          "hash": "dz8yKXR/wDQLYSwTiYvIIQ=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/DirectionalLight.html",
-          "hash": "MwqRsfNfYke6QjFLmTt0xQ=="
+          "hash": "0eV7XK7vAtOa+8tN8kFVjA=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/DirectionalLightInspector.html",
-          "hash": "wMr9GBFrUh+dVRj9bw2X5w=="
+          "hash": "tN4nxcmDO8kdVK875RGAbg=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/EntityContainer.MemoryChunk.html",
-          "hash": "7LDNN9mq4cGJZRhWk1mrdg=="
+          "hash": "ZocZ5xRFIXZ7AMA6/koPyA=="
         }
       },
       "is_incremental": false,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/EntityContainer.iterator.html",
-          "hash": "FHWEqaNPm3O89R8p1TBYJg=="
+          "hash": "1oyyumfQaZqpIpjn/OtSTA=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/EntityContainer.html",
-          "hash": "ad6w1DBQ7GR5Af52EKqKQA=="
+          "hash": "AV8Px5fq3gze2UfU7JlN7w=="
         }
       },
       "is_incremental": false,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/FirstPersonCamera.html",
-          "hash": "gB/OH/YYSO9hnfPONyqrvw=="
+          "hash": "serxjc4BwUXVgvFiXHWOOA=="
         }
       },
       "is_incremental": false,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/FirstPersonCameraInspector.html",
-          "hash": "6Gs0J8Ys3zvjtNsA0E+Qag=="
+          "hash": "toRkaOKOsXqZIcZLI8Adsg=="
         }
       },
       "is_incremental": false,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/IEntityContainer.html",
-          "hash": "wFuDgnnpatSKGMNJQHK1xA=="
+          "hash": "wZNgaFnsQjwT5oZxt6wmkQ=="
         }
       },
       "is_incremental": false,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/MeshRenderer.html",
-          "hash": "/vXil3Wk7Okmg609w67lkA=="
+          "hash": "pJmq6aMmdrcispg2E0KDuA=="
         }
       },
       "is_incremental": false,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/MeshRendererInspector.html",
-          "hash": "/5GUjSAyy4ugA+HPPQ+36A=="
+          "hash": "MI37OCvj7So3dwBsOO8sEg=="
         }
       },
       "is_incremental": false,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/Player.html",
-          "hash": "E6os0oq1UFAOqNR+VNvcYw=="
+          "hash": "UWO+E6VdyXclBPzoylFI7g=="
         }
       },
       "is_incremental": false,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/PointLight.html",
-          "hash": "j6RTXsuT/iRP6zX9N5ifWA=="
+          "hash": "5u/qGTHQreRDFwAFMeyx3Q=="
         }
       },
       "is_incremental": false,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/PointLightInspector.html",
-          "hash": "aTK2YoFWl4VcruhMxIRAlw=="
+          "hash": "eMcgXXnQADT0Xtl1OyQoqA=="
         }
       },
       "is_incremental": false,
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.AssetLoader.html",
-          "hash": "VAsdHI3WNkKCvaVcc60ajA=="
+          "hash": "Mun1kNq1KMoPnkKUz3xwYA=="
         }
       },
       "is_incremental": false,
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.Element.html",
-          "hash": "Ci2hrTWHd3qanl24UWjpHw=="
+          "hash": "fucuSpwqOiwvOpncZKLFYw=="
         }
       },
       "is_incremental": false,
@@ -297,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.Material.html",
-          "hash": "nQHCFkE6XofA7na31gpzcQ=="
+          "hash": "Mfk8McdmaJTX3Mt15Lzm5w=="
         }
       },
       "is_incremental": false,
@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.MaterialImpl.html",
-          "hash": "KRewQePBg4/Mon16S9XZfg=="
+          "hash": "SO+S3WtLa3yLAPqn1AY/5w=="
         }
       },
       "is_incremental": false,
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.Mesh.html",
-          "hash": "g5EdBvF/X5dQHP4SrlxU7Q=="
+          "hash": "imQ/fUoPltMEkxBX39g0Aw=="
         }
       },
       "is_incremental": false,
@@ -333,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.ShadowAsset.html",
-          "hash": "kdyxaxz7kVWyVf6L79p7ow=="
+          "hash": "ofcMXm7UCe4801eQAbBjJg=="
         }
       },
       "is_incremental": false,
@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.Texture.html",
-          "hash": "+dyvfdsHlu1WMsIpk6lDLQ=="
+          "hash": "f9Ygg75fWUzuiNLC/6+FKQ=="
         }
       },
       "is_incremental": false,
@@ -357,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.Texture2D.html",
-          "hash": "RJ67oUWZ3fRxpChmPVzQXw=="
+          "hash": "FvtwsCqr+udxzZ8p3nAloA=="
         }
       },
       "is_incremental": false,
@@ -369,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.Texture2DImpl.html",
-          "hash": "KuyzBVpHy4RcdN9w1J4Lew=="
+          "hash": "blsf8LKGdcvklh+zVLyL2A=="
         }
       },
       "is_incremental": false,
@@ -381,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.TextureCubeMap.html",
-          "hash": "cqFH2hTe73kzhD9QcW++Ig=="
+          "hash": "rvKSKtTAqoacZpRNvaew8Q=="
         }
       },
       "is_incremental": false,
@@ -393,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.TextureCubeMapImpl.html",
-          "hash": "D/ETOkxGK3hvKxE9lKe4JQ=="
+          "hash": "gzbd9nhtkSyR9cyc2WE8hA=="
         }
       },
       "is_incremental": false,
@@ -405,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.TextureImpl.html",
-          "hash": "HlRy4VO29S0sRlR7xDZ6eg=="
+          "hash": "TdZzDuiCSc7k74vKLuctyA=="
         }
       },
       "is_incremental": false,
@@ -417,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.TriangleIndices.html",
-          "hash": "CMNUwaIqL+BvC0UWahlahQ=="
+          "hash": "jAHOL5r6jh5IhqVcnCvXsQ=="
         }
       },
       "is_incremental": false,
@@ -429,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.html",
-          "hash": "+8RpNkup7in4rHOF6TRV5g=="
+          "hash": "KLv77L6qEc0Ho3jLzi6FNA=="
         }
       },
       "is_incremental": false,
@@ -441,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Debug.DebugModule.html",
-          "hash": "+lQ4iHMPRsudAuqEFAcQtQ=="
+          "hash": "sjfOkzASabsFcsjVYaLo4g=="
         }
       },
       "is_incremental": false,
@@ -453,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Debug.EntityInspector.html",
-          "hash": "NsEMjd2qJ2Y6T7FjDPKEVw=="
+          "hash": "Y8INqfxKcXerDQ0eqvVAUA=="
         }
       },
       "is_incremental": false,
@@ -465,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Debug.Inspector.html",
-          "hash": "F0jM4XLPmZ4AE7pxj/tJRA=="
+          "hash": "FTNJsRwYISpLkrvKTFtsTQ=="
         }
       },
       "is_incremental": false,
@@ -477,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Debug.InspectorSystem.html",
-          "hash": "z1UNzyJy5IXU7OIbG8Plag=="
+          "hash": "sEE3exUxooj06Rg6EMiG+w=="
         }
       },
       "is_incremental": false,
@@ -489,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Debug.html",
-          "hash": "whMEk4SwI/batkOpioHCiw=="
+          "hash": "gpKR/uZWrl85HZZ+06yCiQ=="
         }
       },
       "is_incremental": false,
@@ -501,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.DebugGui.IShadowImGui.html",
-          "hash": "XwfrPYb897n/SwWll6vEkQ=="
+          "hash": "kU04DfXRhAFQD1wdabb4Uw=="
         }
       },
       "is_incremental": false,
@@ -513,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.DebugGui.ImGuiModule.html",
-          "hash": "Q4dxkfB6UFXaABTMoezAbQ=="
+          "hash": "6hP/CTSiHkSNCCrFN8Ma/Q=="
         }
       },
       "is_incremental": false,
@@ -525,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.DebugGui.html",
-          "hash": "2GZkuE/+QyCANm/GsKnSsw=="
+          "hash": "OgDn73yplo8NM/hgcteBwQ=="
         }
       },
       "is_incremental": false,
@@ -537,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EntitySystem.Entity.html",
-          "hash": "4ftLmdXwXeRWukOt79+wGA=="
+          "hash": "TGi6BdUJD7nF4YjNW5o40Q=="
         }
       },
       "is_incremental": false,
@@ -549,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EntitySystem.EntityManager.html",
-          "hash": "9fV5Efbi4VIab4Y5xyxHmA=="
+          "hash": "nlZG+V7R0W+M29gRXVglAA=="
         }
       },
       "is_incremental": false,
@@ -561,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EntitySystem.EntityRegistry.html",
-          "hash": "30dZ02i5AgvZhw9f+fwtYQ=="
+          "hash": "T1hGsKlOpTv54Harut/EAw=="
         }
       },
       "is_incremental": false,
@@ -573,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EntitySystem.EntitySystem.html",
-          "hash": "uRMMaEsyPmwce6qQ5VHfTw=="
+          "hash": "F4D0Gp4vJn60jVorfjjXXw=="
         }
       },
       "is_incremental": false,
@@ -585,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EntitySystem.Scene.html",
-          "hash": "5H/E2z1Ke6qbKqCqESFEqA=="
+          "hash": "shjib8G6kSxnOmO5fwwD+Q=="
         }
       },
       "is_incremental": false,
@@ -597,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EntitySystem.SceneEntity.html",
-          "hash": "/urVZGyvoT92i4eFLYVzfA=="
+          "hash": "3yLd9sur22Ytx7AuBGLEdA=="
         }
       },
       "is_incremental": false,
@@ -609,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EntitySystem.SystemCallbacks.html",
-          "hash": "xGk12kPz6XaN2COd4VCEkg=="
+          "hash": "1nGp48L5O8pjov+aLK22wQ=="
         }
       },
       "is_incremental": false,
@@ -621,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EntitySystem.rtm_ptr.html",
-          "hash": "xG6qdqLidK0a2ZEpvozcDg=="
+          "hash": "XdCQhnUk+Zy555f2kglXXw=="
         }
       },
       "is_incremental": false,
@@ -633,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EntitySystem.html",
-          "hash": "tiW3IY+zqcdI1AjYZrnDBQ=="
+          "hash": "5gn9SJ7d48CfrpWZ0z4bfw=="
         }
       },
       "is_incremental": false,
@@ -645,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.Events.KeyEvent.html",
-          "hash": "Ok39DRfnzvFrWJl9wTmGSA=="
+          "hash": "Vl4jKxlvqwEmmlqi/oeKOA=="
         }
       },
       "is_incremental": false,
@@ -657,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.Events.KeyPressedEvent.html",
-          "hash": "Ra3gDBOrZnV3fUAKG4kUpA=="
+          "hash": "e8pVzsvD8ymNAkZ4yEImtA=="
         }
       },
       "is_incremental": false,
@@ -669,7 +669,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.Events.KeyReleasedEvent.html",
-          "hash": "V2YrpaRxghEoD06aLaevog=="
+          "hash": "KQ4SO7zxfHSRo80P/4RHzg=="
         }
       },
       "is_incremental": false,
@@ -681,7 +681,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.Events.KeyTypedEvent.html",
-          "hash": "z0nGqDaX+LRStiteUJPR9g=="
+          "hash": "RhATh99QquH8bxSfcRFoQw=="
         }
       },
       "is_incremental": false,
@@ -693,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.Events.MouseButtonEvent.html",
-          "hash": "sKSRiQivaUR2bNKpUw0qUw=="
+          "hash": "k7sjn1bo32TtDTHuY9ESwA=="
         }
       },
       "is_incremental": false,
@@ -705,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.Events.MouseButtonPressedEvent.html",
-          "hash": "xQsM11tklEyyiQ0UWgvGWg=="
+          "hash": "5/OFq1jqv6uiXgLMlajnSg=="
         }
       },
       "is_incremental": false,
@@ -717,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.Events.MouseButtonReleasedEvent.html",
-          "hash": "dhv1z3tJytMJ5LrEzEwWHg=="
+          "hash": "EArdoHrLmfqCHI7QPYk9cQ=="
         }
       },
       "is_incremental": false,
@@ -729,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.Events.MouseMovedEvent.html",
-          "hash": "wJDaYwBFLBevJz8Bfe77TA=="
+          "hash": "BaYwZVlonxkAekTIUhlCcg=="
         }
       },
       "is_incremental": false,
@@ -741,7 +741,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.Events.MouseScrolledEvent.html",
-          "hash": "mMLeofYqHTqdVV6VFRPCsQ=="
+          "hash": "8iQCSi9lxe5aEACBWJ7MxQ=="
         }
       },
       "is_incremental": false,
@@ -753,7 +753,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.Events.WindowCloseEvent.html",
-          "hash": "KUlUpSPuDW/yMxQT50InTA=="
+          "hash": "E2PhEY66Grj2szUvgWSFJw=="
         }
       },
       "is_incremental": false,
@@ -765,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.Events.WindowResizeEvent.html",
-          "hash": "2uHrZT76K7PCQ37Tm9WhUg=="
+          "hash": "ps6F5I9rzB+CF642wF5liQ=="
         }
       },
       "is_incremental": false,
@@ -777,7 +777,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.Events.html",
-          "hash": "gFcDh2A/TgYdnzbPaEAKmQ=="
+          "hash": "R00MH7y3wE2nyczaI3+fQg=="
         }
       },
       "is_incremental": false,
@@ -789,7 +789,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.IShadowEventListener.html",
-          "hash": "FWvhg9ZPE+eWZsonXBiz0g=="
+          "hash": "3s+2miWlDJrAN8CesDXYuA=="
         }
       },
       "is_incremental": false,
@@ -801,7 +801,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.IShadowEventSource.html",
-          "hash": "3NaNa8sG/sUMKuIzk96zQA=="
+          "hash": "4ap+AQ0cpfMmtIiDk+GakA=="
         }
       },
       "is_incremental": false,
@@ -813,7 +813,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.ShadowEvent.html",
-          "hash": "Rwqu8okeFxQLeRmpT9zxFw=="
+          "hash": "s5AjdJGvNl4DDlBceC//6A=="
         }
       },
       "is_incremental": false,
@@ -825,7 +825,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.ShadowEventManager.html",
-          "hash": "oMa9jQ5jmmGx2nyNRsZHrQ=="
+          "hash": "u8G4bj7QXF21rzKVsM9apg=="
         }
       },
       "is_incremental": false,
@@ -837,7 +837,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.html",
-          "hash": "FTkWLngU5XtE5M0cd92kMg=="
+          "hash": "vmWHxOo6zvDNyZI/l3L8hQ=="
         }
       },
       "is_incremental": false,
@@ -849,7 +849,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.Binding1D.html",
-          "hash": "k4qHx6nc0KoSOuHPzGJmnA=="
+          "hash": "hV+DmNyrfUYGFW5m4chauQ=="
         }
       },
       "is_incremental": false,
@@ -861,7 +861,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.Binding1DInspector.html",
-          "hash": "9E3bl0/jGSowY6/QeBLSxA=="
+          "hash": "mZCWiIertnCqEpSYUsU9Kw=="
         }
       },
       "is_incremental": false,
@@ -873,7 +873,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.Binding2D.html",
-          "hash": "5wk3H/IIod1uwbXk8j4lkw=="
+          "hash": "/nC3oKWEdxVQpeIkkkBDew=="
         }
       },
       "is_incremental": false,
@@ -885,7 +885,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.Binding2DInspector.html",
-          "hash": "xt88jAXwaIqhDJZIpHwdYQ=="
+          "hash": "kdnkTj6yeCEKadxLYK/OsQ=="
         }
       },
       "is_incremental": false,
@@ -897,7 +897,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.BindingAND.html",
-          "hash": "k3f3KYXw07UIWNSJaB+vNQ=="
+          "hash": "kPayJ3mw+T+ZsLdhtJ/uBw=="
         }
       },
       "is_incremental": false,
@@ -909,7 +909,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.BindingANDInspector.html",
-          "hash": "wJe1uuBhlUqSb+iQG4NPZA=="
+          "hash": "MhQtFJZxe0P/jlnAseF2PQ=="
         }
       },
       "is_incremental": false,
@@ -921,7 +921,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.BindingContext.html",
-          "hash": "0KdSBqMM9kyo2kCUSf22gQ=="
+          "hash": "T/moySg99G+6e/1wXgWf6g=="
         }
       },
       "is_incremental": false,
@@ -933,7 +933,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.BindingOR.html",
-          "hash": "M0YS6ydGetnm4sYDY7IUYQ=="
+          "hash": "9WpDI4+REmJwkuFj7Kb+2g=="
         }
       },
       "is_incremental": false,
@@ -945,7 +945,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.BindingORInspector.html",
-          "hash": "dMzbuynXSCLkM+u9lOJ3JA=="
+          "hash": "USEaZsg6/NXl72Pma2JuUg=="
         }
       },
       "is_incremental": false,
@@ -957,7 +957,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.IInputBinding.html",
-          "hash": "MtuDy1yJ59Ezk4tf90B/Yg=="
+          "hash": "vUmZnuz/SgkYQ32X043ItQ=="
         }
       },
       "is_incremental": false,
@@ -969,7 +969,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.IShadowAction.html",
-          "hash": "3k4CBMDkQiSG5OGP9t/vWw=="
+          "hash": "3WA0d/QW4RrWoXU5m9ao+A=="
         }
       },
       "is_incremental": false,
@@ -981,7 +981,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.InputActionInspector.html",
-          "hash": "UtFgimNDzBKG/30jBzl18g=="
+          "hash": "CMRcFjm7JZDTn9p4r9UfiQ=="
         }
       },
       "is_incremental": false,
@@ -993,7 +993,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.InputBinding.html",
-          "hash": "N2n4C4VWPv102+ezfmGCyw=="
+          "hash": "cRbRIePB1IR+eASszqWYxQ=="
         }
       },
       "is_incremental": false,
@@ -1005,7 +1005,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.InputMapBinding.html",
-          "hash": "POW/PQK3RKYOPkNxia+rWA=="
+          "hash": "o5MHDgPW5h/1JATRpRhQ7A=="
         }
       },
       "is_incremental": false,
@@ -1017,7 +1017,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.InputModifier.html",
-          "hash": "mRkuSif/ECUucEfnRScIhw=="
+          "hash": "OeWzgZOFejaAibHYOxv+nA=="
         }
       },
       "is_incremental": false,
@@ -1029,7 +1029,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.KeyboardBinding.html",
-          "hash": "TM7Qgbpbr4+pqqGsfpUwWA=="
+          "hash": "npqzrkkR/BpN95oaFtVieA=="
         }
       },
       "is_incremental": false,
@@ -1041,7 +1041,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.KeyboardBindingInspector.html",
-          "hash": "7bRVC6v47Uf+A0SvBzsmYg=="
+          "hash": "g9MKXCr9JRCY8eAWCPGfVg=="
         }
       },
       "is_incremental": false,
@@ -1053,7 +1053,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.ModifierContext.html",
-          "hash": "SlB2L7LoQmlat6e+1xh9lA=="
+          "hash": "p7sLMBEB2bzDL5CfTZ9z1A=="
         }
       },
       "is_incremental": false,
@@ -1065,7 +1065,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.ModifierHold.html",
-          "hash": "jbrBG2L1SkmRgGA4pUkQcw=="
+          "hash": "XKpFOmF9ZijCc6/zo480Eg=="
         }
       },
       "is_incremental": false,
@@ -1077,7 +1077,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.ModifierHoldInspector.html",
-          "hash": "QOqM5ezgfs32tjX4yDPgqg=="
+          "hash": "yfcgyPxkGKIofFcL4KyDCg=="
         }
       },
       "is_incremental": false,
@@ -1089,7 +1089,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.ModifierRepeat.html",
-          "hash": "T2W3C5JW8Z+eet9vGrgBUg=="
+          "hash": "oynKFQ+parJwE4AowIXHyA=="
         }
       },
       "is_incremental": false,
@@ -1101,7 +1101,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.MouseButtonBinding.html",
-          "hash": "gbTkRBZqpLRMUq6e/5MhLA=="
+          "hash": "D0Ju9YMhiNRXf+S5n4f49Q=="
         }
       },
       "is_incremental": false,
@@ -1113,7 +1113,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.MousePositionBinding.html",
-          "hash": "jyo2vT4RKThfZa5IcssPEA=="
+          "hash": "gAetguzkoER76HoocIPbew=="
         }
       },
       "is_incremental": false,
@@ -1125,7 +1125,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.ShadowAction.html",
-          "hash": "OAl6O3mEyyIdUkNZJM8Gzg=="
+          "hash": "4e6rznHTJf8ovMUP42VuGQ=="
         }
       },
       "is_incremental": false,
@@ -1137,7 +1137,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.ShadowActionSystem.html",
-          "hash": "0XplG+sn77iDx2nOiblptQ=="
+          "hash": "0KInklRFAunUUod/4bIKQw=="
         }
       },
       "is_incremental": false,
@@ -1149,7 +1149,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.html",
-          "hash": "wIzy9K5LEzouy9F8v3KxQQ=="
+          "hash": "PysFTMhQJ+XDBm7ycF84tg=="
         }
       },
       "is_incremental": false,
@@ -1161,7 +1161,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Log.html",
-          "hash": "IWxAVeiYX0b8nY8y4MSE8g=="
+          "hash": "9/o5Ts/un7NuDgltO5QHVw=="
         }
       },
       "is_incremental": false,
@@ -1173,7 +1173,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.BufferElement.html",
-          "hash": "znlHlypwZ8Q660d+OGPdWg=="
+          "hash": "KfajJ0b4Y0n2rl7E6urn8g=="
         }
       },
       "is_incremental": false,
@@ -1185,7 +1185,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.BufferLayout.html",
-          "hash": "wchMn+cMlKZeMKX8kkU50A=="
+          "hash": "HUjLm0Kmie/Y+3wBvOETyw=="
         }
       },
       "is_incremental": false,
@@ -1197,7 +1197,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.CommandList.html",
-          "hash": "0BuNdpkjPr97hS162ka6eQ=="
+          "hash": "y1RkRjcXi7beweMJ5RcLVw=="
         }
       },
       "is_incremental": false,
@@ -1209,7 +1209,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.CommandQueue.html",
-          "hash": "8NBNhvjRH0FC+zbu0Ci8rQ=="
+          "hash": "L/K05tpbz198zccvSioP/Q=="
         }
       },
       "is_incremental": false,
@@ -1221,7 +1221,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.ConstantBuffer.html",
-          "hash": "IDKphp0uAWN+nKiVPxYBcQ=="
+          "hash": "d47ZGjR9BjeV0wLTleGSYA=="
         }
       },
       "is_incremental": false,
@@ -1233,7 +1233,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.ConstantBufferImpl.html",
-          "hash": "iOM5fo02jrq+/TXHIUdaGg=="
+          "hash": "dKWUqhkt1fO3rtrZNzhKcg=="
         }
       },
       "is_incremental": false,
@@ -1245,7 +1245,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet.html",
-          "hash": "MDpcwRXTq5NxgA4+0aEGsA=="
+          "hash": "0ugzMn+3CS7TpUGCG9kLdA=="
         }
       },
       "is_incremental": false,
@@ -1257,7 +1257,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.ConstantBuffer_Typed.html",
-          "hash": "jkijlKE6OQn1R3M1vKVB2w=="
+          "hash": "3bu1bp91UDdD+wI/25WEjQ=="
         }
       },
       "is_incremental": false,
@@ -1269,7 +1269,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12CommandList.html",
-          "hash": "4atwDM1Gbh/kmPHTbkjsKA=="
+          "hash": "lQkUl8T6wemACWrCbqkzxA=="
         }
       },
       "is_incremental": false,
@@ -1281,7 +1281,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12CommandQueue.html",
-          "hash": "12FD5rKaq6Cu7YmNAaQtKg=="
+          "hash": "SkPhIHvpbbySbi3/EzhgSA=="
         }
       },
       "is_incremental": false,
@@ -1293,7 +1293,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.html",
-          "hash": "5vvqAPWefOqrB+YRWJ/VyQ=="
+          "hash": "n0fDCFt7nNIE0MVo0Qzr5g=="
         }
       },
       "is_incremental": false,
@@ -1305,7 +1305,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12Context.html",
-          "hash": "Bci4QJ11o1nQQHO3odOsIQ=="
+          "hash": "0GApRuOnrb6f0Q0bXbOKbg=="
         }
       },
       "is_incremental": false,
@@ -1317,7 +1317,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.html",
-          "hash": "Nc2EPalxyk1BqurLpm8+Aw=="
+          "hash": "sbxSiagFLo6rw7BeD5v4LA=="
         }
       },
       "is_incremental": false,
@@ -1329,7 +1329,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12DescriptorHeap.html",
-          "hash": "0GUFKJ2+OiYESl53I2F2/A=="
+          "hash": "P/tHbTqzJel7+8BkQ4QS0Q=="
         }
       },
       "is_incremental": false,
@@ -1341,7 +1341,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12Fence.html",
-          "hash": "442N2qkmk/dPFvr+FSQNCg=="
+          "hash": "Xwz09nbtf1ylJo9KULjRpA=="
         }
       },
       "is_incremental": false,
@@ -1353,7 +1353,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12IUploadable.html",
-          "hash": "xeqSzyzsH0XzQsefLnpGPQ=="
+          "hash": "jmkKsWEFX9FWf7E6K+czmQ=="
         }
       },
       "is_incremental": false,
@@ -1365,7 +1365,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12IndexBuffer.html",
-          "hash": "YF0MTYmFlEZbQgWb/zsS1g=="
+          "hash": "7fKZVBo+yZmnfz30tipcGg=="
         }
       },
       "is_incremental": false,
@@ -1377,7 +1377,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12MaterialImpl.html",
-          "hash": "z3hMRaVNFaFhNughlQufPA=="
+          "hash": "r30qfTRpHTOG20ECx++XWQ=="
         }
       },
       "is_incremental": false,
@@ -1389,7 +1389,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12RendererAPI.html",
-          "hash": "yo7YtxoZqigNgvLg0vjrfA=="
+          "hash": "g7RqjfePrgLpBoR17U2izA=="
         }
       },
       "is_incremental": false,
@@ -1401,7 +1401,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12Shader.html",
-          "hash": "4xhBEXafRbUe/mmgYKa56Q=="
+          "hash": "fUbbIuJCDmlGl4Przegecg=="
         }
       },
       "is_incremental": false,
@@ -1413,7 +1413,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12SwapChain.html",
-          "hash": "D4AgaaEcW0D3GC5ju1Mq5A=="
+          "hash": "SzBM5aQO/5ecHRSBvxj6iA=="
         }
       },
       "is_incremental": false,
@@ -1425,7 +1425,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12Texture2D.html",
-          "hash": "gHXJWnOgazL2Xb/DOyszyg=="
+          "hash": "yQZRq6yGGUHYJnL8lu3eVQ=="
         }
       },
       "is_incremental": false,
@@ -1437,7 +1437,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12TextureCubeMap.html",
-          "hash": "8jDCOgQB/r0czpJ8QBuiAQ=="
+          "hash": "D5eakAtLR+nACcynycdImg=="
         }
       },
       "is_incremental": false,
@@ -1449,7 +1449,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12UploadManagger.html",
-          "hash": "Q4aKX2vTx1WHn+NrHe15mw=="
+          "hash": "TIQmodFOuRU6wIVMvRK/Ng=="
         }
       },
       "is_incremental": false,
@@ -1461,7 +1461,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.html",
-          "hash": "kLX2QAD16TuLam8ISA5m9A=="
+          "hash": "iU6Of3nOAtLcDZYa+JbJng=="
         }
       },
       "is_incremental": false,
@@ -1473,7 +1473,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.DescriptorAllocation.html",
-          "hash": "Fwb5kR1zZY3YUsbEB5BIIw=="
+          "hash": "vvj6lkeplSifjgDKflq37g=="
         }
       },
       "is_incremental": false,
@@ -1485,7 +1485,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.HResultTester.html",
-          "hash": "QrWwPmMJpkPty5nJrjeVgw=="
+          "hash": "yxSY/6GAOyTminTNbEyghg=="
         }
       },
       "is_incremental": false,
@@ -1497,7 +1497,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.UploadQueue.html",
-          "hash": "bhjmoxENS1lSPernKKFIYg=="
+          "hash": "UDw9YiRblfVj6VvvH3+vLw=="
         }
       },
       "is_incremental": false,
@@ -1509,7 +1509,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.html",
-          "hash": "ltYKFNzXqz9pe39ZRbxwlw=="
+          "hash": "A5H7J6p6YSv6R0F4uDEVlg=="
         }
       },
       "is_incremental": false,
@@ -1521,7 +1521,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.GraphicsContext.html",
-          "hash": "QtQCF662Rv5shgWhkzSDfw=="
+          "hash": "r+oDMImJj7PzAk/p6Zy+4A=="
         }
       },
       "is_incremental": false,
@@ -1533,7 +1533,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.IShaderProperty.html",
-          "hash": "M84IOJfsO8+QHqACTH14ew=="
+          "hash": "4QQzoL1vbijgwHDTHVwfrA=="
         }
       },
       "is_incremental": false,
@@ -1545,7 +1545,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.IndexBuffer.html",
-          "hash": "SdpM5bCqX7IdFwh7qLKljg=="
+          "hash": "Q1M2wxJaOTJtGqNxu+vBgA=="
         }
       },
       "is_incremental": false,
@@ -1557,7 +1557,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.LightData.html",
-          "hash": "FYxxICwJlee6Kn87fzu7Uw=="
+          "hash": "s1AGouPBXjtuXF1JQtquuw=="
         }
       },
       "is_incremental": false,
@@ -1569,7 +1569,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.LightNode.html",
-          "hash": "hSKsuVYba2anJCi3kyTMMg=="
+          "hash": "pgQP1DKjBThfXvM2jk+fTw=="
         }
       },
       "is_incremental": false,
@@ -1581,7 +1581,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.ModelData.html",
-          "hash": "o/g8cyVxUsL7QWviHjqseg=="
+          "hash": "eS3Ilvek3VZT+jGe4i26bQ=="
         }
       },
       "is_incremental": false,
@@ -1593,7 +1593,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.OrthographicCamera.html",
-          "hash": "1BebPSh9pFjNTa4Px/XzEA=="
+          "hash": "QmHxtzjI4l8f70xK8wN7ow=="
         }
       },
       "is_incremental": false,
@@ -1605,7 +1605,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.RenderNode.html",
-          "hash": "PPIjcBCMDxNSstTPT0PXpw=="
+          "hash": "1ChM2NpO2Sh3l31Hy0wN6Q=="
         }
       },
       "is_incremental": false,
@@ -1617,7 +1617,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.RenderScene.html",
-          "hash": "ngREDrpWaD11V3KtAUvt5A=="
+          "hash": "/HR1W3+dFPUBJ7sKYZgG1Q=="
         }
       },
       "is_incremental": false,
@@ -1629,7 +1629,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.Renderer.html",
-          "hash": "yfozFPcSXDzf5TyHFxBdig=="
+          "hash": "TYA5KckackCSzTD3P+cRlQ=="
         }
       },
       "is_incremental": false,
@@ -1641,7 +1641,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.RendererAPI.html",
-          "hash": "R9OzQyPw8lXZU8n+OLnAxg=="
+          "hash": "B++2p5QC6h3CZLUaNGHZsQ=="
         }
       },
       "is_incremental": false,
@@ -1653,7 +1653,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.Shader.html",
-          "hash": "F8CJpVPCrYsXYREQNX/Yng=="
+          "hash": "RzPlZrp/nTcsMfBVtVJX9Q=="
         }
       },
       "is_incremental": false,
@@ -1665,7 +1665,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.ShaderProperty.html",
-          "hash": "XUUNhbx7ENML8bsdf5R5pQ=="
+          "hash": "TFnrnBnZLlzxOWMY12I83Q=="
         }
       },
       "is_incremental": false,
@@ -1677,7 +1677,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.ShaderPropertySheet.html",
-          "hash": "svrdFV0DplVSQabA8Ci5UQ=="
+          "hash": "gcQST7Ant2QbkrxYW5PFjw=="
         }
       },
       "is_incremental": false,
@@ -1689,7 +1689,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.ShaderRefProperty.html",
-          "hash": "KGTsviGUhdQaHqtQXfx0bg=="
+          "hash": "vKN3OXkoVSt5uIyLgckJKg=="
         }
       },
       "is_incremental": false,
@@ -1701,7 +1701,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.Vertex.html",
-          "hash": "0167wFqJ3nZTra76N5sMeA=="
+          "hash": "KZ4RirxfcoKjocfXvhXzew=="
         }
       },
       "is_incremental": false,
@@ -1713,7 +1713,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.VertexBuffer.html",
-          "hash": "/Z/ESXOxWaqgjX9AuRIbnA=="
+          "hash": "OMT9eePWaHopg6+hNOCRdA=="
         }
       },
       "is_incremental": false,
@@ -1725,7 +1725,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.WorldData.html",
-          "hash": "lxI4oNEEw2GktPpDsEGwKg=="
+          "hash": "l4CdD9E6cntFuTYaypl2nQ=="
         }
       },
       "is_incremental": false,
@@ -1737,7 +1737,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.html",
-          "hash": "RPdcSq0C4CzafYuScGTVNw=="
+          "hash": "95iUuVYyEpgWYco2VXNpyQ=="
         }
       },
       "is_incremental": false,
@@ -1749,7 +1749,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.SDLPlatform.SDLEventSource.html",
-          "hash": "cKxA0FZsp4Z1oT9tO6ISGw=="
+          "hash": "5URQt/7+lvInKiSIogXZSQ=="
         }
       },
       "is_incremental": false,
@@ -1761,7 +1761,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.SDLPlatform.SDLModule.html",
-          "hash": "HFry1GVG42GRMFlB3eFY6w=="
+          "hash": "vMCKQRscZCfbxP6Z1slRMw=="
         }
       },
       "is_incremental": false,
@@ -1773,7 +1773,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.SDLPlatform.html",
-          "hash": "xQTbixP+P929BfUD2C1JHQ=="
+          "hash": "DBAvk73w9Lsiy6ehqPyUYw=="
         }
       },
       "is_incremental": false,
@@ -1785,7 +1785,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.SHObject.html",
-          "hash": "WbWzQtx7k9Hyef0p4uhBFg=="
+          "hash": "NMSM0I4d4n8XOtBkdkVeIA=="
         }
       },
       "is_incremental": false,
@@ -1797,7 +1797,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.ShadowApplication.html",
-          "hash": "DjWL/4pwuysqZV5Z1LpPSw=="
+          "hash": "+LcRbNeMq7IUWzg2+JzETQ=="
         }
       },
       "is_incremental": false,
@@ -1809,7 +1809,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.ShadowEntity.Transform.html",
-          "hash": "dMrEOzEneKp2091+VQGtCQ=="
+          "hash": "iEn9agVVJirepwLjhSbZXw=="
         }
       },
       "is_incremental": false,
@@ -1821,7 +1821,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.ShadowEntity.html",
-          "hash": "dC4702qMkj1A1Vl+cN0yQg=="
+          "hash": "Qk78USlv/SSEzFjR8++Pww=="
         }
       },
       "is_incremental": false,
@@ -1833,7 +1833,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.ShadowModule.html",
-          "hash": "k7OgOjF4GDs2vRwuj9nlYw=="
+          "hash": "CvegfhEayFm/8/EM6gSxRA=="
         }
       },
       "is_incremental": false,
@@ -1845,7 +1845,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.ShadowModuleManager.html",
-          "hash": "30B/cZvB5LV03+bzk8gSpg=="
+          "hash": "A9hp/UzvyweXQeIv4PcylA=="
         }
       },
       "is_incremental": false,
@@ -1857,7 +1857,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.World.LevelMap.html",
-          "hash": "orJiT1iloFwZR679dcGtQQ=="
+          "hash": "7WZAdh8DTNxaSx9z4eyZBg=="
         }
       },
       "is_incremental": false,
@@ -1869,7 +1869,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.World.MapChunk.html",
-          "hash": "S7zEdVKHf+ZcNVHv2ihsKw=="
+          "hash": "C0cp/96bTXiHz1wvTo6rxw=="
         }
       },
       "is_incremental": false,
@@ -1881,7 +1881,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.World.ShadowMapLayer.html",
-          "hash": "VZoGzUQlQcCyLgaHeusEKA=="
+          "hash": "Zxq6NJ067eDea9Bca+qsKw=="
         }
       },
       "is_incremental": false,
@@ -1893,7 +1893,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.World.ShadowMapRenderer.html",
-          "hash": "t8MpHsa96fyGP9DGwmRqOQ=="
+          "hash": "clt3FrioNFJcg9+awnJFTw=="
         }
       },
       "is_incremental": false,
@@ -1905,7 +1905,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.World.ShadowWorld.html",
-          "hash": "NBhhOhVYRkjVqy6hkfaWTw=="
+          "hash": "ufCxaKR7PL5i55c7gGKuqQ=="
         }
       },
       "is_incremental": false,
@@ -1917,7 +1917,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.World.html",
-          "hash": "310Qaci+oRx6pUdcbQVddw=="
+          "hash": "q36uDOmJFYjUCo9XTkAp+Q=="
         }
       },
       "is_incremental": false,
@@ -1929,7 +1929,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.html",
-          "hash": "unlLVVDrJYtevI87rgoBbA=="
+          "hash": "AFwPxEvvG+SNzUFyRLLi/Q=="
         }
       },
       "is_incremental": false,
@@ -1941,7 +1941,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowMath.Vector2float.html",
-          "hash": "ZsqUNWho5kjbOy1nmXwzYg=="
+          "hash": "/PmXnfZ5Qk5/X0ZBbFRCfA=="
         }
       },
       "is_incremental": false,
@@ -1953,7 +1953,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowMath.Vector2int.html",
-          "hash": "yjioJxGVQt+PYaCkDNxqKg=="
+          "hash": "uoNr0NE1/skGm1oRwn4ymA=="
         }
       },
       "is_incremental": false,
@@ -1965,7 +1965,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowMath.html",
-          "hash": "oUEGbvPXTkpZ40VjRX0mFQ=="
+          "hash": "4OIAmGnRqtIkeoL7pMQHJA=="
         }
       },
       "is_incremental": false,
@@ -1977,7 +1977,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowWindow.html",
-          "hash": "Pj6SjDxQnSvKyR2UPwnpuw=="
+          "hash": "9PpXKmlcW24Dzy/ol49Dzw=="
         }
       },
       "is_incremental": false,
@@ -1989,7 +1989,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/SkySphere.html",
-          "hash": "ENhtb/nvfW0/ToKsPYqS+Q=="
+          "hash": "xbAdXanPgMvj002sz+Ec9w=="
         }
       },
       "is_incremental": false,
@@ -2001,7 +2001,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/TestRenderer.html",
-          "hash": "vj0D3umoVgShsSv2wTDt/g=="
+          "hash": "ojyHhoXvGxact1oXIBqlyw=="
         }
       },
       "is_incremental": false,
@@ -2013,7 +2013,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/TestScene.html",
-          "hash": "NDeGndfvnHvn3GP7ZR1HRQ=="
+          "hash": "eHeAV3dlkQsXnzoXC0BR/A=="
         }
       },
       "is_incremental": false,
@@ -2025,7 +2025,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/Time.html",
-          "hash": "RgeAlJocl1Lq16lo2x3N+w=="
+          "hash": "HaFQ6xIgsUd1r9Ac79MJzw=="
         }
       },
       "is_incremental": false,
