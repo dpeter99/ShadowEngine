@@ -1,5 +1,7 @@
+echo Building Documentation
+echo %cd%
 cd ${FOLDER_TO_PUSH}
-
+echo %cd%
 
 git init
 git remote add origin "https://x-access-token:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY"
