@@ -36,6 +36,7 @@ jobs:
 
     - name: GitHub Pages Deploy
       shell: cmd
+      working-directory: ../
       run: ./.github/actions/publish-to-ghpages/publish.cmd
       env:
         FOLDER_TO_PUSH: ./ghpages
