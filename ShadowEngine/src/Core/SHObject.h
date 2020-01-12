@@ -20,7 +20,7 @@ namespace ShadowEngine {
 	protected:
 		/**
 		 * \brief Generates a new UID for each call
-		 * \return Unique ID
+		 * \return the next Unique ID that was just generated
 		 */
 		static uint64_t GenerateId() noexcept
 		{
@@ -31,7 +31,7 @@ namespace ShadowEngine {
 	public:
 		/**
 		 * \brief Returns the top level class type name of the object
-		 * \return Class name string
+		 * \return The class Class name as a string
 		 */
 		virtual const std::string& GetType() const = 0;
 		/**
