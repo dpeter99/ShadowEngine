@@ -1,0 +1,2108 @@
+{
+  "homepages": [],
+  "source_base_path": "d:/a/ShadowEngine/ShadowEngine/docs-source",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ShadowEngine/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "ShadowEngine/index.html",
+          "hash": "7+1Ij78t9EJJofYeTBNZow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ShadowEngine/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "ShadowEngine/intro.html",
+          "hash": "JQ9zZfMm1hyG7V7AIr2NFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "ShadowEngine/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ShadowEngine/toc.html",
+          "hash": "H5frWk4fYGIWHpFNp3BdfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "apidocs/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/index.html",
+          "hash": "lD92BTlGxdjyKcdGd7OmGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "K6iHkb0otrFWu52HmKP69Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/AssetManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/AssetManager.html",
+          "hash": "qoU9rqMDkyDnU699ffybMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Callback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/Callback.html",
+          "hash": "zdKj7i9pmpR7iKAP509U6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Camera.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/Camera.html",
+          "hash": "zcZCnYvQlkVttHrPWGMDBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/CameraInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/CameraInspector.html",
+          "hash": "gxUPTWyWndntzllNA38QXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/DirectionalLight.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/DirectionalLight.html",
+          "hash": "gqEhRIzyT2m9T0omZCn4ig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/DirectionalLightInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/DirectionalLightInspector.html",
+          "hash": "HaC+eM1+iu+X6ZijtRwYUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/EntityContainer.MemoryChunk.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/EntityContainer.MemoryChunk.html",
+          "hash": "IUpBtF3c8DZkr2w97KFR3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/EntityContainer.iterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/EntityContainer.iterator.html",
+          "hash": "EmDdgKf1nQ/CWwXPAXnbYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/EntityContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/EntityContainer.html",
+          "hash": "K423dTuMTZt5asPBxENzsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/FirstPersonCamera.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/FirstPersonCamera.html",
+          "hash": "LXhov5ZFGbyy5FOoZNwEVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/FirstPersonCameraInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/FirstPersonCameraInspector.html",
+          "hash": "nLCe9YV1xmjkbuv+7/JJoA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/IEntityContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/IEntityContainer.html",
+          "hash": "vtzpC0dulnNJ4I4luHkjrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/MeshRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/MeshRenderer.html",
+          "hash": "D53054HYNC8nO9nhYLZCTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/MeshRendererInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/MeshRendererInspector.html",
+          "hash": "pyiVUum7oxATcPAKd65Esg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/Player.html",
+          "hash": "ehsE2yb+A3qBWi5Y/1/QRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/PointLight.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/PointLight.html",
+          "hash": "z0tuIum9LWo8NktVuHEoRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/PointLightInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/PointLightInspector.html",
+          "hash": "qW+kOLbcez1Ser9sojEWLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Assets.AssetLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Assets.AssetLoader.html",
+          "hash": "Y9gMCO2KpPIq6b19QHUY+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Assets.Element.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Assets.Element.html",
+          "hash": "nM591PJqUFeVFJtZ8QmTDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Assets.Material.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Assets.Material.html",
+          "hash": "Sf5p7Ef+SUWySGrJ0prc3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Assets.MaterialImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Assets.MaterialImpl.html",
+          "hash": "HjlJnbxQqRb8Fhzvj96e0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Assets.Mesh.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Assets.Mesh.html",
+          "hash": "jzK9OxVvoO0rS9WZ9rP2zg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Assets.ShadowAsset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Assets.ShadowAsset.html",
+          "hash": "irhRg5k/ovyluiTmvL1i8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Assets.Texture.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Assets.Texture.html",
+          "hash": "D5Hrcf3lkkPyhCWctnMcJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Assets.Texture2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Assets.Texture2D.html",
+          "hash": "de9I/DvuMMa5z42z+Hrr1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Assets.Texture2DImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Assets.Texture2DImpl.html",
+          "hash": "2aWCUPhiavqUREB64raWHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Assets.TextureCubeMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Assets.TextureCubeMap.html",
+          "hash": "4FDdGK9ueF1lgeGi+oGZdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Assets.TextureCubeMapImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Assets.TextureCubeMapImpl.html",
+          "hash": "vxcgMUy4WA8Rq+Ivtpc1QA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Assets.TextureImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Assets.TextureImpl.html",
+          "hash": "M3eaYhvBV7xhyIrzvHC0oQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Assets.TriangleIndices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Assets.TriangleIndices.html",
+          "hash": "jyKGiRCf0EtvFYggzTk5tA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Assets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Assets.html",
+          "hash": "8uDZXi/rSp+1gnX4J9+22g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Debug.DebugModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Debug.DebugModule.html",
+          "hash": "h46V55DmuNps0HZR80612A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Debug.EntityInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Debug.EntityInspector.html",
+          "hash": "a/KnPVtz4PLSMr9HE1HpJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Debug.Inspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Debug.Inspector.html",
+          "hash": "KvaT0FRMDJBJaTr8LbSapQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Debug.InspectorSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Debug.InspectorSystem.html",
+          "hash": "yno7J243BQhOWqnYhKCmRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Debug.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Debug.html",
+          "hash": "6FuUwOoSG3V7Dq/FscgmQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.DebugGui.IShadowImGui.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.DebugGui.IShadowImGui.html",
+          "hash": "4RLb/qI7obqRfzRP5Gc7ZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.DebugGui.ImGuiModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.DebugGui.ImGuiModule.html",
+          "hash": "T5r2TT7wwUqmOhkaIQWphA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.DebugGui.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.DebugGui.html",
+          "hash": "P+jt3c/8xq5qG+6s2rgDqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EntitySystem.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EntitySystem.Entity.html",
+          "hash": "azleHhK5YqQGNx6KWzG6hg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EntitySystem.EntityManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EntitySystem.EntityManager.html",
+          "hash": "YWB77iYBcYGqXIQB9KV2lw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EntitySystem.EntityRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EntitySystem.EntityRegistry.html",
+          "hash": "zPsMV8VvqMEL6+M591XSAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EntitySystem.EntitySystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EntitySystem.EntitySystem.html",
+          "hash": "S56oh3lr/TZi+h5bkeBvog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EntitySystem.Scene.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EntitySystem.Scene.html",
+          "hash": "2XE8UJhxSX6HHoMoOMkuYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EntitySystem.SceneEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EntitySystem.SceneEntity.html",
+          "hash": "hnjTqJ1LM180cTipMW/Rdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EntitySystem.SystemCallbacks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EntitySystem.SystemCallbacks.html",
+          "hash": "ryPZn84XDK+gLYN6nmxa5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EntitySystem.rtm_ptr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EntitySystem.rtm_ptr.html",
+          "hash": "ADpgGmI02qoFkCPA99hEsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EntitySystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EntitySystem.html",
+          "hash": "aRrmhkAfWqQvfTCHIn2fZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EventSystem.Events.KeyEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EventSystem.Events.KeyEvent.html",
+          "hash": "64Zy6Khxyqd2PVEUY5jMwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EventSystem.Events.KeyPressedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EventSystem.Events.KeyPressedEvent.html",
+          "hash": "Ua/vqMrH+pJNyeo1PsjuCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EventSystem.Events.KeyReleasedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EventSystem.Events.KeyReleasedEvent.html",
+          "hash": "mp9A9l2PHX34+hGZ8YJS4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EventSystem.Events.KeyTypedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EventSystem.Events.KeyTypedEvent.html",
+          "hash": "DBBKcf1JIiHV5QgM8BFoUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EventSystem.Events.MouseButtonEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EventSystem.Events.MouseButtonEvent.html",
+          "hash": "dzrvh8yK22r0s0XeFefkVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EventSystem.Events.MouseButtonPressedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EventSystem.Events.MouseButtonPressedEvent.html",
+          "hash": "p7LgkJba07nn8piJMECGlA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EventSystem.Events.MouseButtonReleasedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EventSystem.Events.MouseButtonReleasedEvent.html",
+          "hash": "BaeWAotrtkS4N+Lb+jHvXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EventSystem.Events.MouseMovedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EventSystem.Events.MouseMovedEvent.html",
+          "hash": "AkDlvutWSl0MvCUFhN9E2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EventSystem.Events.MouseScrolledEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EventSystem.Events.MouseScrolledEvent.html",
+          "hash": "8gbshULNqWTPfQ9UUnjmCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EventSystem.Events.WindowCloseEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EventSystem.Events.WindowCloseEvent.html",
+          "hash": "lZenZ1wr9Xu9WVYsvn4TVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EventSystem.Events.WindowResizeEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EventSystem.Events.WindowResizeEvent.html",
+          "hash": "jtKziFo1APkWoYJHvoRCkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EventSystem.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EventSystem.Events.html",
+          "hash": "dpPhTlb9+ql0t3sBg4IuIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EventSystem.IShadowEventListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EventSystem.IShadowEventListener.html",
+          "hash": "tWE2ObWnEVEPT6PvrF6k1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EventSystem.IShadowEventSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EventSystem.IShadowEventSource.html",
+          "hash": "q16ZS7Fj+CoQC1tqS8mUwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EventSystem.ShadowEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EventSystem.ShadowEvent.html",
+          "hash": "rjwmI815kJcbtY4E20AhNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EventSystem.ShadowEventManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EventSystem.ShadowEventManager.html",
+          "hash": "4iP0kEWKCx8yqP/If/dRbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.EventSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EventSystem.html",
+          "hash": "8RkwsUUJHUVdMgAKVj9/6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.Binding1D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.Binding1D.html",
+          "hash": "ecsU24coAWzurewJGFk//w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.Binding1DInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.Binding1DInspector.html",
+          "hash": "rdH12CkNBLJ9XF4KCqDc7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.Binding2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.Binding2D.html",
+          "hash": "HLC7QZNVgBrMaMn4hNV2Lg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.Binding2DInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.Binding2DInspector.html",
+          "hash": "eRXFytHPKndEtHkmBeZ3bw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.BindingAND.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.BindingAND.html",
+          "hash": "e2xAcoLSpqSQ58YeTOjB3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.BindingANDInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.BindingANDInspector.html",
+          "hash": "n02nZLy8BBrkhNX7Qs3CXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.BindingContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.BindingContext.html",
+          "hash": "izUlg3FXBoZgQyanPHm7KQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.BindingOR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.BindingOR.html",
+          "hash": "yknW8sG6nw3cvwIWivjVSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.BindingORInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.BindingORInspector.html",
+          "hash": "SrWw2AjF9NflJdO7D2UP1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.IInputBinding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.IInputBinding.html",
+          "hash": "JYVp40fCY7tOaJ64UWMH8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.IShadowAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.IShadowAction.html",
+          "hash": "bPwQEZS6D3eXyFmaKTGFoA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.InputActionInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.InputActionInspector.html",
+          "hash": "q0hP+pv7G5CI15qVsCrh+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.InputBinding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.InputBinding.html",
+          "hash": "gUAACkyd0fwr717Ig7eOKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.InputMapBinding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.InputMapBinding.html",
+          "hash": "t3sIUUfMBXb+K1cEKhFONg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.InputModifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.InputModifier.html",
+          "hash": "RDoLQCkoqUOXJCaBRB4+FA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.KeyboardBinding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.KeyboardBinding.html",
+          "hash": "zU8Nh1uVFhxwVsnc+xgVlQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.KeyboardBindingInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.KeyboardBindingInspector.html",
+          "hash": "Aums9CVSdFCBpHY3clZ01A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.ModifierContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.ModifierContext.html",
+          "hash": "Pv63YaorqLPsZw9xTdvbnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.ModifierHold.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.ModifierHold.html",
+          "hash": "VI7Tff281wWNsofT/RI4cQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.ModifierHoldInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.ModifierHoldInspector.html",
+          "hash": "ciXcuRir77Nnh1olPHDKPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.ModifierRepeat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.ModifierRepeat.html",
+          "hash": "UVk0+YB6gLEe/fbda+3J+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.MouseButtonBinding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.MouseButtonBinding.html",
+          "hash": "EtAVxm7BEIYoPlKfE/CeWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.MousePositionBinding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.MousePositionBinding.html",
+          "hash": "zHQ9qMCc2WNZmK2AoqrgtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.ShadowAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.ShadowAction.html",
+          "hash": "soMOlvD2csrBawGKS852pA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.ShadowActionSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.ShadowActionSystem.html",
+          "hash": "Ex4+kTMt1ivyzJi8/Q90hA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.InputSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.InputSystem.html",
+          "hash": "PmzGmYvy+F5FvoSQjKAQSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Log.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Log.html",
+          "hash": "rltC1YctouudVV881qV0Xw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.BufferElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.BufferElement.html",
+          "hash": "LSLCxk1a+cpLG63in/YfZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.BufferLayout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.BufferLayout.html",
+          "hash": "SEpgjFDnn8fG3EIriawtYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.CommandList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.CommandList.html",
+          "hash": "16fMxfgvl4QsYd+qZeBHuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.CommandQueue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.CommandQueue.html",
+          "hash": "W//wL7yhA/JVra1fb68LIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.ConstantBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.ConstantBuffer.html",
+          "hash": "0ICAage0OtvMlqonLkcrKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.ConstantBufferImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.ConstantBufferImpl.html",
+          "hash": "kbk2JuIvM+8rHpySoX41nA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet.html",
+          "hash": "caEy3NCb90PZyjkmJnpbqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.ConstantBuffer_Typed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.ConstantBuffer_Typed.html",
+          "hash": "kBYp1sZ3kyv9JjorR6Z+dg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.D3D12CommandList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12CommandList.html",
+          "hash": "TdzV9m/dU0JqU36BXy4LjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.D3D12CommandQueue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12CommandQueue.html",
+          "hash": "rMPA0b2cAN0FRVRazUhhpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.html",
+          "hash": "zSnHXU4mi4RxeTO4YBHeyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.D3D12Context.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12Context.html",
+          "hash": "F/2PapnbnRu8r2grzlOgVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.html",
+          "hash": "s9ybh+7rr8I1cgWk2Gkrjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.D3D12DescriptorHeap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12DescriptorHeap.html",
+          "hash": "7x2cNkjxvheD8aVXalrHsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.D3D12Fence.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12Fence.html",
+          "hash": "th0AoUxynZjwj/St/mTsUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.D3D12IUploadable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12IUploadable.html",
+          "hash": "oubeBAg9ny6SjrRKarVOqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.D3D12IndexBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12IndexBuffer.html",
+          "hash": "mkHIeTqqh8iAmEIkTA8alw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.D3D12MaterialImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12MaterialImpl.html",
+          "hash": "vCxoUAnDxPGJ1SM9u28Zow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.D3D12RendererAPI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12RendererAPI.html",
+          "hash": "+LxlpOBGBlBJji6WL43FAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.D3D12Shader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12Shader.html",
+          "hash": "OTxjyMVpjSGvXt9NHQhVsQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.D3D12SwapChain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12SwapChain.html",
+          "hash": "JNbM7gDs2rxRzR1oimm8jQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.D3D12Texture2D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12Texture2D.html",
+          "hash": "RKXSa0kO9q38oRMTo48rqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.D3D12TextureCubeMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12TextureCubeMap.html",
+          "hash": "xDPSUtDB8sy2SyAEScLJaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.D3D12UploadManagger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12UploadManagger.html",
+          "hash": "dsGzvPVpfwTYjw1hUIn5FA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.html",
+          "hash": "eXcL7xnT6NTDPsfSHdT1cQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.DescriptorAllocation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.DescriptorAllocation.html",
+          "hash": "Q5TYqi+/rRHRGh19SWy8Mw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.HResultTester.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.HResultTester.html",
+          "hash": "lCNrAiU/OURr1TRuxH1SCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.UploadQueue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.UploadQueue.html",
+          "hash": "81Q2PtU0dq1AGjHF2Go5qg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.D3D12.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.html",
+          "hash": "k9zT9u+iMkwgrKUHfsFEcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.GraphicsContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.GraphicsContext.html",
+          "hash": "gyYgFxwZ91XPCWRgE4hmRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.IShaderProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.IShaderProperty.html",
+          "hash": "FZQwN5h1wLdlNRPDtX6zLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.IndexBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.IndexBuffer.html",
+          "hash": "I2evp/a4Lcrj8ZjWErVcag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.LightData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.LightData.html",
+          "hash": "OzwRiTYKRPi0tnjKvDtetg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.LightNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.LightNode.html",
+          "hash": "uBKbI29+mt7nkBAUV6rmag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.ModelData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.ModelData.html",
+          "hash": "A7hKtXhiihiq5WtWCMZ+5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.OrthographicCamera.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.OrthographicCamera.html",
+          "hash": "Kf4RDIRGXQBKYyRr9Acw8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.RenderNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.RenderNode.html",
+          "hash": "KoqPq0NsWnvZcWd1gauAOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.RenderScene.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.RenderScene.html",
+          "hash": "YrPJ70Ike+6PHKbXQrjNTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.Renderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.Renderer.html",
+          "hash": "nt5mbbfIiv7PHYhJRRBiUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.RendererAPI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.RendererAPI.html",
+          "hash": "6Sq6Ne433/0ebjcn7wcsyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.Shader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.Shader.html",
+          "hash": "22jLO4OpnHCR5qBBROu5TQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.ShaderProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.ShaderProperty.html",
+          "hash": "h0Sgnj+F1kpav/hpyXhd+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.ShaderPropertySheet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.ShaderPropertySheet.html",
+          "hash": "h6wI1HecaObC2YIUT/p+cQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.ShaderRefProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.ShaderRefProperty.html",
+          "hash": "1vgHuADdr4btjJlwiQpP9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.Vertex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.Vertex.html",
+          "hash": "Bo6GQNBl6N4FsFAN4xgYPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.VertexBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.VertexBuffer.html",
+          "hash": "ZDXB/MK3LFcIQX2CNsjfrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.WorldData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.WorldData.html",
+          "hash": "Tr3NeZo5SaMI+wI9ljDbIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.Rendering.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Rendering.html",
+          "hash": "2sRr/LIa74XhyPiGOvwReQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.SDLPlatform.SDLEventSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.SDLPlatform.SDLEventSource.html",
+          "hash": "JyJhCsTvKDJTyOdUtCV6Gw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.SDLPlatform.SDLModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.SDLPlatform.SDLModule.html",
+          "hash": "C4MS5zH+ueZfHYY22TUFNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.SDLPlatform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.SDLPlatform.html",
+          "hash": "VoXUUSIKzuhrbATBiGMjOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.SHObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.SHObject.html",
+          "hash": "be83eeeFGMDOSlC0rGf85g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.ShadowApplication.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.ShadowApplication.html",
+          "hash": "VCOi0u7Zn9TAk6iLyYEpmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.ShadowEntity.Transform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.ShadowEntity.Transform.html",
+          "hash": "uuKXF+PXxJQ1pI0ntBtonw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.ShadowEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.ShadowEntity.html",
+          "hash": "dSvAKVP7+htIdJw8JC7tsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.ShadowModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.ShadowModule.html",
+          "hash": "tCv8G7n9jeGkVjUXF0HDqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.ShadowModuleManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.ShadowModuleManager.html",
+          "hash": "G2P7iDjcvNM6DI79udALMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.World.LevelMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.World.LevelMap.html",
+          "hash": "oRaLWsKbQd7GIOjQClwnYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.World.MapChunk.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.World.MapChunk.html",
+          "hash": "i+VjPFggtMRvX1+dGbkwOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.World.ShadowMapLayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.World.ShadowMapLayer.html",
+          "hash": "bo5xlMItyebf3pM7aiiUqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.World.ShadowMapRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.World.ShadowMapRenderer.html",
+          "hash": "WwB705r6sKlpYDdSfySwyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.World.ShadowWorld.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.World.ShadowWorld.html",
+          "hash": "DST3hcLUVpYDwhXSawRSfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.World.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.World.html",
+          "hash": "O/7eFHq+jyFt9LWEeb0cHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.html",
+          "hash": "JlafOrVz+5Bx7RXWIC7wiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowMath.Vector2float.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowMath.Vector2float.html",
+          "hash": "/xbUPsQECOMXVk/pcQuCpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowMath.Vector2int.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowMath.Vector2int.html",
+          "hash": "/GOAKdARUvUxsj9HhTLRNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowMath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowMath.html",
+          "hash": "IE+RzTRVCNOKMu/82BSBSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/ShadowWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowWindow.html",
+          "hash": "BafIA0XvP0YlgBDMoybWxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/SkySphere.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/SkySphere.html",
+          "hash": "pYzVBjmvAZZX5RKhrZaUZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/TestRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/TestRenderer.html",
+          "hash": "BhqEc8YpTjnC39PyRsattw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/TestScene.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/TestScene.html",
+          "hash": "ZYyIyuy0S+YjQjz3A8Sn2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Time.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/Time.html",
+          "hash": "5SkAbLEiFOO6A8luKw7wag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "metadata/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/toc.html",
+          "hash": "hzJvisVuhGbIxO/mgmkPiw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "K3W9IsAlna9xJ5MKKlkdoA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 4,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 164,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

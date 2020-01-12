@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace ShadowEngine::Rendering::D3D12
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace ShadowEngine::Rendering::D3D12
+   ">
+    <meta name="generator" content="docfx 2.48.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ShadowEngine.Rendering.D3D12">
+  
+  <h1 id="ShadowEngine_Rendering_D3D12" data-uid="ShadowEngine.Rendering.D3D12" class="text-break">Namespace ShadowEngine::Rendering::D3D12
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12CommandList.html">D3D12CommandList</a></h4>
+      <section><p>A list of commands Used to record graphics/compute commands and than submit them at once. </p></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12CommandQueue.html">D3D12CommandQueue</a></h4>
+      <section></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.html">D3D12ConstantBuffer</a></h4>
+      <section></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12Context.html">D3D12Context</a></h4>
+      <section></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.html">D3D12DepthBuffer</a></h4>
+      <section></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12DescriptorHeap.html">D3D12DescriptorHeap</a></h4>
+      <section></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12Fence.html">D3D12Fence</a></h4>
+      <section></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12IndexBuffer.html">D3D12IndexBuffer</a></h4>
+      <section><p>Index Buffer holding an index array in a Dx12 way This hold the index buffer and the buffer view for it as well. </p></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12IUploadable.html">D3D12IUploadable</a></h4>
+      <section></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12MaterialImpl.html">D3D12MaterialImpl</a></h4>
+      <section></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12RendererAPI.html">D3D12RendererAPI</a></h4>
+      <section></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12Shader.html">D3D12Shader</a></h4>
+      <section><p>Represents the shader byte code that can be used to draw. </p><p>D3D12Shader is the type ShadowEngine uses to represent byte code that has been compiled form HLSL to be used in the Dx12 renderer. Users should not handle D3D12Shader&#39;s by itself, but the ShadowEngine::Rendering::Shader class and it&#39;s Create function to make sure the shader class is made for the right render API. Sample Usage:</p>
+<p>var shader = ShadowEngine::Rendering::Shader::CreateFromCompiled(&quot;Shaders/Default-VS.cso&quot;, &quot;Shaders/Default-FS.cso&quot;); </p></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12SwapChain.html">D3D12SwapChain</a></h4>
+      <section><p>Dx12 Swap Chain Used for swapping the render and present render targets. </p></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12Texture2D.html">D3D12Texture2D</a></h4>
+      <section></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12TextureCubeMap.html">D3D12TextureCubeMap</a></h4>
+      <section></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12UploadManagger.html">D3D12UploadManagger</a></h4>
+      <section></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.html">D3D12VertexBuffer</a></h4>
+      <section><p>Vertex Buffer holding vertices in a Dx12 way This hold the vertex buffer and the buffer view for it as well. </p></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.HResultTester.html">HResultTester</a></h4>
+      <section></section>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.UploadQueue.html">UploadQueue</a></h4>
+      <section></section>
+    <h3 id="structs">Structs
+  </h3>
+      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.DescriptorAllocation.html">DescriptorAllocation</a></h4>
+      <section></section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dpeter99/ShadowEngine/new/26d318cbc8a235353de1a02eb97e01859d8547c9/apiSpec/new?filename=ShadowEngine_Rendering_D3D12.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dpeter99/ShadowEngine/blob/26d318cbc8a235353de1a02eb97e01859d8547c9/ShadowEngine/src/Platform/D3D12/Common.h/#L26" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
