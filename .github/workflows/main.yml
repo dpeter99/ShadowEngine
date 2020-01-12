@@ -41,4 +41,5 @@ jobs:
       env:
         FOLDER_TO_PUSH: ghpages
         PUSH_TO_BRANCH: gh-pages
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
      
