@@ -5,6 +5,15 @@ namespace ShadowEngine {
 
 	/**
 	 * \brief This is the base class for every class in the Engine that uses runtime reflection.
+
+	 * Currently it provides a runtime TypeID and TypeName witch can be accesed as static and as class memebers.
+	 * The ID is a int type number witch is generated incramently, on the first call to get a type.
+
+	 * Each class that inherits from this or it's parent inheris form it must implement the
+		SHObject::GetType and SHObject::GetTypeId methodes and make it's own static methodes.
+		To make it easier a standard implementation of these can be used with the SHObject_Base() macro
+		witch implements all of these functions. It uses the typeid().name of the class.
+
 	 */
 	class SHObject
 	{
