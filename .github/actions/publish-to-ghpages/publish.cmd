@@ -1,7 +1,10 @@
 echo Building Documentation
 echo %cd%
 cd ..
+echo %cd%
+dir
 cd ${FOLDER_TO_PUSH}
+dir
 echo %cd%
 
 git init
