@@ -13,6 +13,13 @@ jobs:
     steps:
     - uses: actions/checkout@v1
       
+    - name: GitHub Pages Repo checkout
+      shell: cmd
+      run: ./.github/actions/publish-to-ghpages/setup.cmd
+      env:
+        FOLDER_TO_PUSH: ./ghpages
+        PUSH_TO_BRANCH: gh-pages      
+      
     - name: Setup Nuget.exe
       uses: warrenbuckley/Setup-Nuget@v1
       
