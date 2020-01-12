@@ -5,6 +5,8 @@ cd %FOLDER_TO_PUSH%
 echo %cd%
 dir
 
+echo ####GIT COMMANDS ####
+
 git config --global user.email "dpeter99@gmail.com"
 git config --global user.name "Doc gen"
 
@@ -15,4 +17,4 @@ git remote add origin "https://x-access-token:%GITHUB_TOKEN%@github.com/%GITHUB_
 echo list remotes
 git remote -v
 echo pull
-git pull origin HEAD:%PUSH_TO_BRANCH%
+git pull origin %PUSH_TO_BRANCH%
