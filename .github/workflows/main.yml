@@ -4,6 +4,7 @@ on:
   push:
     branches: 
       - master
+      - cli-dev
 
 jobs:
   build:
@@ -38,6 +39,6 @@ jobs:
       shell: cmd
       run: ./.github/actions/publish-to-ghpages/publish.cmd
       env:
-        FOLDER_TO_PUSH: ./ghpages
+        FOLDER_TO_PUSH: ghpages
         PUSH_TO_BRANCH: gh-pages
      
