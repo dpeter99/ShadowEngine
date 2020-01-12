@@ -1,5 +1,6 @@
 echo Building Documentation
 echo %cd%
+cd ..
 cd ${FOLDER_TO_PUSH}
 echo %cd%
 
