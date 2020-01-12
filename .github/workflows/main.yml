@@ -17,8 +17,9 @@ jobs:
       shell: cmd
       run: ./.github/actions/publish-to-ghpages/setup.cmd
       env:
-        FOLDER_TO_PUSH: ./ghpages
-        PUSH_TO_BRANCH: gh-pages      
+        FOLDER_TO_PUSH: ghpages
+        PUSH_TO_BRANCH: gh-pages
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
     - name: Setup Nuget.exe
       uses: warrenbuckley/Setup-Nuget@v1
