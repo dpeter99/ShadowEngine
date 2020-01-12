@@ -4,6 +4,7 @@ on:
   push:
     branches: 
       - master
+      - cli-dev
 
 jobs:
   build:
@@ -12,14 +13,41 @@ jobs:
     steps:
     - uses: actions/checkout@v1
       
+    - name: GitHub Pages Repo checkout
+      shell: cmd
+      run: ./.github/actions/publish-to-ghpages/setup.cmd
+      env:
+        FOLDER_TO_PUSH: ghpages
+        PUSH_TO_BRANCH: gh-pages
+        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+      
     - name: Setup Nuget.exe
       uses: warrenbuckley/Setup-Nuget@v1
       
+    - name: Cache nuget packages
+      uses: actions/cache@v1
+      with:
+        path: ./packages
+        key: ${{ runner.os }}-nuget-packages
+
     - name: restore nuget
       run: nuget install docfx.console -OutputDirectory packages
       
-    - name: Build Docs
+    - name: Extract the cpp metadata
       shell: cmd
       working-directory: docs-source/
-      run: build-docs.cmd
+      run: ..\dependencies\code2yaml\code2yaml.exe code2yaml.json
+
+    - name: Build the docs
+      shell: cmd
+      working-directory: docs-source/
+      run: ..\packages\docfx.console.2.48.0\tools\docfx.exe docfx_CLI.json
+
+    - name: GitHub Pages Deploy
+      shell: cmd
+      run: ./.github/actions/publish-to-ghpages/publish.cmd
+      env:
+        FOLDER_TO_PUSH: ghpages
+        PUSH_TO_BRANCH: gh-pages
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
      
