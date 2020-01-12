@@ -1,5 +1,6 @@
 echo Setting up docs repo docs
 cd ..
+mkdir %FOLDER_TO_PUSH%
 cd %FOLDER_TO_PUSH%
 echo %cd%
 dir
