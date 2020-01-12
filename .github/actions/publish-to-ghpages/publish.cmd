@@ -3,6 +3,7 @@ echo %cd%
 cd ..
 echo %cd%
 dir
+echo ${FOLDER_TO_PUSH}
 cd ${FOLDER_TO_PUSH}
 dir
 echo %cd%
