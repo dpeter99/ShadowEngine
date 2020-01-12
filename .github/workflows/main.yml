@@ -15,11 +15,25 @@ jobs:
     - name: Setup Nuget.exe
       uses: warrenbuckley/Setup-Nuget@v1
       
+    - name: Cache nuget packages
+      uses: actions/cache@v1
+      with:
+        path: ./packages
+        key: ${{ runner.os }}-nuget-packages
+
     - name: restore nuget
       run: nuget install docfx.console -OutputDirectory packages
       
-    - name: Build Docs
+    - name: Extract the cpp metadata
       shell: cmd
       working-directory: docs-source/
-      run: build-docs.cmd
+      run: ..\dependencies\code2yaml\code2yaml.exe code2yaml.json
+
+    - name: Build the docs
+      shell: cmd
+      working-directory: docs-source/
+      run: ..\packages\docfx.console.2.48.0\tools\docfx.exe docfx_CLI.json
+
+    - name: GitHub Pages Deploy
+      uses: maxheld83/ghpages@v0.2.1
      
