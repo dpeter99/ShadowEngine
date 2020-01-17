@@ -50,13 +50,13 @@ namespace ShadowLight.Services
                     //The stuff in the buffer is a parameter name
                     if (!readingString)
                     {
-                        Console.Write("Name: " + buffer);
+                        DebugWrite("Name: " + buffer+"\n");
                         current.name = buffer;
                         buffer = "";
                     }
                     else
                     {
-                        buffer += (char)c;
+                        buffer += (char) c;
                     }
                 }
                 else if (c == '{')
@@ -78,7 +78,7 @@ namespace ShadowLight.Services
                     {
                         // End of a property
                         //The content of the buffer is the value
-                        Console.WriteLine("Value: " + buffer);
+                        Console.WriteLine(" Value: " + buffer);
                         current.value = buffer;
                         current.parent = context;
                         current.isBlock = false;
@@ -90,7 +90,7 @@ namespace ShadowLight.Services
                     }
                     else
                     {
-                        buffer += (char)c;
+                        buffer += (char) c;
                     }
                 }
                 else if (c == '}')
@@ -124,9 +124,9 @@ namespace ShadowLight.Services
                 }
                 else
                 {
-                    if (!Char.IsWhiteSpace((char)c)||readingString)
+                    if (!Char.IsWhiteSpace((char) c) || readingString)
                     {
-                        buffer += (char)c;
+                        buffer += (char) c;
                     }
                 }
 
@@ -149,9 +149,20 @@ namespace ShadowLight.Services
 
             return (0, 0, 0);
         }
-        
 
-        public class Element
+        private static int indent_count = 0;
+        static void DebugWrite(string text)
+        {
+            string indent = "";
+            for (int i = 0; i < indent_count; i++)
+            {
+                indent += "\t";
+            }
+
+            Console.WriteLine(indent + text);
+        }
+
+    public class Element
         {
             public Element parent;
 

@@ -12,6 +12,8 @@ using Sledge.BspEditor.Primitives;
 using Sledge.BspEditor.Primitives.MapObjectData;
 using Sledge.BspEditor.Primitives.MapObjects;
 using Sledge.Common.Shell.Documents;
+using Sledge.DataStructures.Geometric;
+using Plane = System.Numerics.Plane;
 
 namespace Sledge.BspEditor.Providers.ShadowEngine
 {
@@ -56,6 +58,16 @@ namespace Sledge.BspEditor.Providers.ShadowEngine
             return null;
         }
 
+        private Vector3 LoadPoint(ShadowLight.Services.ShadowFormatParser.Element element)
+        {
+            Vector3 res = new Vector3();
+            res.X = float.Parse(element.properties["x"].value);
+            res.Y = float.Parse(element.properties["y"].value);
+            res.Z = float.Parse(element.properties["z"].value);
+
+            return res;
+        }
+
         private BspFileLoadResult LoadWorld(Stream stream, IEnvironment environment)
         {
             var top = ShadowLight.Services.ShadowFormatParser.LoadFile(stream);
@@ -64,12 +76,6 @@ namespace Sledge.BspEditor.Providers.ShadowEngine
 
             BspFileLoadResult result = new BspFileLoadResult();
 
-            if (scene.properties["Type"].value == "3D")
-            {
-
-            }
-
-            
 
             var solids = scene.properties["Solids"];
 
@@ -85,15 +91,25 @@ namespace Sledge.BspEditor.Providers.ShadowEngine
                     {
                         var points = face.properties["Points"];
 
-                        Face f;
-                        
+                        var f = new Face(0)
+                        {
+                            Plane = new Sledge.DataStructures.Geometric.Plane(
+                                LoadPoint(points.properties.Values.ToList()[0]),
+                                LoadPoint(points.properties.Values.ToList()[1]),
+                                LoadPoint(points.properties.Values.ToList()[2])
+                            )
+                        };
+
+                        faces.Add(f);
                     }
                 }
 
-                
+                s.Data.AddRange( faces);
                 
             }
 
+
+            
 
             return result;
         }
@@ -130,9 +146,9 @@ namespace Sledge.BspEditor.Providers.ShadowEngine
 
             sw.WriteLine("\t\tFace_"+i+":{");
             sw.WriteLine("\t\t\tPoints:{");
-            
 
-            var strings = face.Vertices.Take(4).Select(x => "\t\t\t\tPoint:{ " + FormatVector3(x) + "u:0,v:0,}").ToList();
+            int j = 0;
+            var strings = face.Vertices.Take(4).Select(x => "\t\t\t\tPoint_"+(j++)+":{ " + FormatVector3(x) + "u:0,v:0,}").ToList();
 
             sw.WriteLine(String.Join("\n", strings));
 
