@@ -1,6 +1,0 @@
-{
-  "input_paths": [ "../src" ],
-  "output_path": "./metadata",
-  "exclude_paths": [ "./azure-sdk-for-java/azure-samples" ],
-  "language": "cplusplus"
-}

@@ -1,0 +1,43 @@
+{
+  "metadata": [
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "/**.yml",
+          "toc.yml"
+        ],
+        "src": "metadata",
+        "dest": "./apidocs"
+      },
+      {
+        "files": [
+
+          "ShadowEngine/**.md",
+          "ShadowEngine/toc.yml",
+          "apidocs/**.md",
+          "toc.yml",
+          "**.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ],
+        "version": "0.1"
+      }
+    ],
+    "dest": "../docs",
+    "template": [
+      "default"
+    ],
+    "disableGitFeatures": true
+  }
+}

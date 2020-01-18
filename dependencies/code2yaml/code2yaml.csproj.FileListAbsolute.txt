@@ -1,0 +1,12 @@
+C:\Users\dpete\Documents\programing\_Other\code2yaml-azuredocs\code2yaml-azuredocs\target\Release\code2yaml\net462\tools\doxygen.exe
+C:\Users\dpete\Documents\programing\_Other\code2yaml-azuredocs\code2yaml-azuredocs\target\Release\code2yaml\net462\tools\libclang.dll
+C:\Users\dpete\Documents\programing\_Other\code2yaml-azuredocs\code2yaml-azuredocs\target\Release\code2yaml\net462\code2yaml.exe.config
+C:\Users\dpete\Documents\programing\_Other\code2yaml-azuredocs\code2yaml-azuredocs\target\Release\code2yaml\net462\code2yaml.exe
+C:\Users\dpete\Documents\programing\_Other\code2yaml-azuredocs\code2yaml-azuredocs\target\Release\code2yaml\net462\code2yaml.pdb
+C:\Users\dpete\Documents\programing\_Other\code2yaml-azuredocs\code2yaml-azuredocs\src\code2yaml\obj\Release\net462\code2yaml.csprojAssemblyReference.cache
+C:\Users\dpete\Documents\programing\_Other\code2yaml-azuredocs\code2yaml-azuredocs\src\code2yaml\obj\Release\net462\code2yaml.exe.config
+C:\Users\dpete\Documents\programing\_Other\code2yaml-azuredocs\code2yaml-azuredocs\src\code2yaml\obj\Release\net462\code2yaml.AssemblyInfoInputs.cache
+C:\Users\dpete\Documents\programing\_Other\code2yaml-azuredocs\code2yaml-azuredocs\src\code2yaml\obj\Release\net462\code2yaml.AssemblyInfo.cs
+C:\Users\dpete\Documents\programing\_Other\code2yaml-azuredocs\code2yaml-azuredocs\src\code2yaml\obj\Release\net462\code2yaml.csproj.CopyComplete
+C:\Users\dpete\Documents\programing\_Other\code2yaml-azuredocs\code2yaml-azuredocs\src\code2yaml\obj\Release\net462\code2yaml.exe
+C:\Users\dpete\Documents\programing\_Other\code2yaml-azuredocs\code2yaml-azuredocs\src\code2yaml\obj\Release\net462\code2yaml.pdb
