@@ -1,5 +1,5 @@
 #pragma once
-#include "D3D12CommandList.h"
+#include "CommandList.h"
 #include "D3D12CommandQueue.h"
 #include "D3D12IUploadable.h"
 #include "D3D12Fence.h"
@@ -10,7 +10,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/**
 		 * \brief The command list used for recording render commands for the graphisc command queue
 		 */
-		Ref<D3D12::D3D12CommandList> command_list;
+		Ref<D3D12::CommandList> command_list;
 
 		
 		unsigned long long fenceValue;

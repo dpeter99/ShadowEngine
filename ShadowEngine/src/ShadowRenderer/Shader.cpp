@@ -3,7 +3,7 @@
 
 #include "Renderer.h"
 //#include "Platform/OpenGL/OpenGLShader.h"
-#include "Platform/D3D12/D3D12Shader.h"
+#include "Platform/D3D12/Shader/DX12Shader.h"
 
 namespace ShadowEngine::Rendering {
 	
@@ -29,7 +29,7 @@ namespace ShadowEngine::Rendering {
 		switch (Renderer::GetAPI())
 		{
 		case RendererAPI::API::None:    SH_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-		case RendererAPI::API::D3D12:  return new D3D12::D3D12Shader(VSfilePath, PSfilePath);
+		case RendererAPI::API::D3D12:  return new D3D12::DX12Shader(VSfilePath, PSfilePath);
 		}
 
 		SH_CORE_ASSERT(false, "Unknown RendererAPI!");

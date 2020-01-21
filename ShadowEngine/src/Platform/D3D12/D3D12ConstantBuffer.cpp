@@ -1,26 +1,26 @@
 #include "shpch.h"
 #include "D3D12ConstantBuffer.h"
-#include "D3D12RendererAPI.h"
+#include "DX12RendererAPI.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
-	D3D12ConstantBuffer::D3D12ConstantBuffer(size_t size, std::wstring debug_name):
-		mappedPtr{nullptr},
-		constantBuffer{nullptr},
-		debug_name( debug_name)
+	DX12ConstantBuffer::DX12ConstantBuffer(size_t size, std::wstring debug_name):
+		Buffer(debug_name),
+		m_SizeInBytes(0),
+		mappedPtr{nullptr}
 	{
 		actual_size = (size + 255) & ~255;
 		CreateResources(actual_size);
 	}
 
-	D3D12ConstantBuffer::~D3D12ConstantBuffer()
+	DX12ConstantBuffer::~DX12ConstantBuffer()
 	{
 		ReleaseResources();
 	}
 
-	void D3D12ConstantBuffer::CreateResources(size_t size)
+	void DX12ConstantBuffer::CreateResources(size_t size)
 	{
 		DX_API("Failed to create constant buffer resource")
-			D3D12RendererAPI::device->CreateCommittedResource(
+			DX12RendererAPI::device->CreateCommittedResource(
 				&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_UPLOAD),
 				D3D12_HEAP_FLAG_NONE,
 				&CD3DX12_RESOURCE_DESC::Buffer(size),
@@ -39,12 +39,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 		constantBuffer->SetName(wss.str().c_str());
 	}
 
-	D3D12_GPU_VIRTUAL_ADDRESS D3D12ConstantBuffer::GetGPUVirtualAddress() const
+	D3D12_GPU_VIRTUAL_ADDRESS DX12ConstantBuffer::GetGPUVirtualAddress() const
 	{
 		return constantBuffer->GetGPUVirtualAddress();
 	}
 
-	void D3D12ConstantBuffer::ReleaseResources()
+	void DX12ConstantBuffer::ReleaseResources()
 	{
 		if (constantBuffer != nullptr)
 		{
@@ -54,7 +54,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		mappedPtr = nullptr;
 	}
 
-	void D3D12ConstantBuffer::Upload(void* data, size_t size)
+	void DX12ConstantBuffer::Upload(void* data, size_t size)
 	{
 		memcpy(mappedPtr, data, size);
 	}

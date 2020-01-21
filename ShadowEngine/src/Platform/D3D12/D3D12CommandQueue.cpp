@@ -1,8 +1,8 @@
 #include "shpch.h"
 #include "D3D12CommandQueue.h"
 #include "Common.h"
-#include "D3D12RendererAPI.h"
-#include "D3D12CommandList.h"
+#include "DX12RendererAPI.h"
+#include "CommandList.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
@@ -15,10 +15,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 		commandQueueDesc.NodeMask = 0;
 
 		DX_API("Failed to create command queue")
-		D3D12RendererAPI::device->CreateCommandQueue(&commandQueueDesc, IID_PPV_ARGS(commandQueue.GetAddressOf()));
+		DX12RendererAPI::device->CreateCommandQueue(&commandQueueDesc, IID_PPV_ARGS(commandQueue.GetAddressOf()));
 	}
 
-	void D3D12CommandQueue::Execute(Ref<D3D12CommandList> commandList)
+	void D3D12CommandQueue::Execute(Ref<CommandList> commandList)
 	{
 		// Execute
 		ID3D12CommandList* cLists[] = { commandList->GetCommandList().Get() };

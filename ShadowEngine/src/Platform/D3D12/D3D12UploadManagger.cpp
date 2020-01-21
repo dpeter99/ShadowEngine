@@ -1,7 +1,7 @@
 #include "shpch.h"
 
 #include "D3D12UploadManagger.h"
-#include <Platform\D3D12\D3D12RendererAPI.h>
+#include "DX12RendererAPI.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 	D3D12UploadManagger::D3D12UploadManagger()
@@ -56,7 +56,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	UploadQueue::UploadQueue()
 	{
-		command_list = std::make_shared<D3D12CommandList>(D3D12_COMMAND_LIST_TYPE_COPY);
+		command_list = std::make_shared<CommandList>(D3D12_COMMAND_LIST_TYPE_COPY);
 
 		fenceValue = -1;
 

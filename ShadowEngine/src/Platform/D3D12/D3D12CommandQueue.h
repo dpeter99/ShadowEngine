@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Common.h"
-#include "D3D12CommandList.h"
+#include "CommandList.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 	class D3D12Fence;
@@ -28,7 +28,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		 * \brief Executes a list of commands
 		 * \param commandList the list of commands ot execute
 		 */
-		void Execute(Ref<D3D12CommandList> commandList);
+		void Execute(Ref<CommandList> commandList);
 
 		void Signal(Ref<D3D12Fence> fence, uint64_t Value);
 	};

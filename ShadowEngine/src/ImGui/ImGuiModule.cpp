@@ -7,7 +7,8 @@
 
 #include "ShadowRenderer/RendererAPI.h"
 
-#include "Platform/D3D12/D3D12RendererAPI.h"
+#include "Platform/D3D12/DX12RendererAPI.h"
+#include "Platform/D3D12/Common.h"
 
 #include "imgui.h"
 #include "examples/imgui_impl_sdl.h"
@@ -25,6 +26,8 @@ namespace ShadowEngine::DebugGui {
 
 	static ImFont* _fontRegular = nullptr;
 	static ImFont* _fontSolid = nullptr;
+
+	Microsoft::WRL::ComPtr< ID3D12DescriptorHeap> heap;
 
 	void LoadFontAwesome()
 	{
@@ -86,23 +89,27 @@ namespace ShadowEngine::DebugGui {
 
 
 
-		ImGui_ImplSDL2_InitForOpenGL(ShadowEngine::ShadowApplication::Get().GetWindow().winPtr, SDLPlatform::SDLModule::GetInstance().GetGlContext());
 		
-
+		
+		
+		heap = nullptr;
 		switch (Rendering::RendererAPI::GetAPI())
 		{
 		case Rendering::RendererAPI::API::OpenGL:
+			ImGui_ImplSDL2_InitForOpenGL(ShadowEngine::ShadowApplication::Get().GetWindow().winPtr, SDLPlatform::SDLModule::GetInstance().GetGlContext());
 			ImGui_ImplOpenGL3_Init("#version 410");
 			break;
 		case Rendering::RendererAPI::API::D3D12:
+			ImGui_ImplSDL2_InitForD3D(ShadowEngine::ShadowApplication::Get().GetWindow().winPtr);
 
-			auto desc = Rendering::D3D12::D3D12RendererAPI::Instance->descriptorHeap_SRV_CBV->Allocate(1);
-			ImGui_ImplDX12_Init(Rendering::D3D12::D3D12RendererAPI::Instance->device.Get(),
+			heap = Rendering::D3D12::DX12RendererAPI::Get().CreateDescriptorHeap(1, D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV);
+
+			ImGui_ImplDX12_Init(Rendering::D3D12::DX12RendererAPI::Instance->device.Get(),
 								1,
 								DXGI_FORMAT_R8G8B8A8_UNORM,
-								Rendering::D3D12::D3D12RendererAPI::Instance->descriptorHeap_SRV_CBV->Get().Get(),
-								desc.CPU_TableStart,
-								desc.GPU_TableStart);
+								heap.Get(),
+								heap.Get()->GetCPUDescriptorHandleForHeapStart(),
+								heap.Get()->GetGPUDescriptorHandleForHeapStart());
 			break;
 		default:
 			break;
@@ -147,7 +154,7 @@ namespace ShadowEngine::DebugGui {
 			if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
 			{
 				ImGui::UpdatePlatformWindows();
-				ImGui::RenderPlatformWindowsDefault(NULL, (void*)(Rendering::D3D12::D3D12RendererAPI::Instance->command_list->GetCommandList().Get()));
+				ImGui::RenderPlatformWindowsDefault(NULL, (void*)(Rendering::D3D12::DX12RendererAPI::Instance->command_list->GetCommandList().Get()));
 			}
 		}
 	}
@@ -171,7 +178,7 @@ namespace ShadowEngine::DebugGui {
 			ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 			break;
 		case Rendering::RendererAPI::API::D3D12:
-			ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(),Rendering::D3D12::D3D12RendererAPI::Instance->command_list->GetCommandList().Get());
+			ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(),Rendering::D3D12::DX12RendererAPI::Instance->command_list->GetCommandList().Get());
 			break;
 		default:
 			break;

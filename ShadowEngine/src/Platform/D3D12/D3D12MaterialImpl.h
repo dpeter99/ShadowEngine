@@ -3,7 +3,7 @@
 #include "Common.h"
 #include "D3D12DescriptorHeap.h"
 #include "ShadowRenderer/ConstantBuffer.h"
-#include "D3D12RendererAPI.h"
+#include "DX12RendererAPI.h"
 #include "D3D12ConstantBuffer.h"
 #include "ShadowAsset/Assets/Textures/Texture.h"
 
@@ -32,7 +32,7 @@ namespace  ShadowEngine::Rendering::D3D12 {
 	public:
 		D3D12MaterialImpl(Ref<ShaderPropertySheet> propertySheet);
 
-		void BindMaterialData(Ref<D3D12CommandList> commandList);
+		void BindMaterialData(Ref<CommandList> commandList);
 
 		void Upload() override;
 		void CreateTextureResourceView(size_t i, ShaderRefProperty<Assets::Texture>* prop);

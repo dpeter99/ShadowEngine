@@ -2,7 +2,7 @@
 #include "Common.h"
 
 namespace  ShadowEngine::Rendering::D3D12 {
-
+	/*
 	struct DescriptorAllocation
 	{
 		CD3DX12_CPU_DESCRIPTOR_HANDLE CPU_TableStart;
@@ -46,5 +46,5 @@ namespace  ShadowEngine::Rendering::D3D12 {
 		
 		void Reset();
 	};
-
+	*/
 }

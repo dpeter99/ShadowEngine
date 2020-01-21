@@ -1,6 +1,6 @@
 #include "shpch.h"
 #include "D3D12Texture2D.h"
-#include "Platform/D3D12/D3D12RendererAPI.h"
+#include "Platform/D3D12/DX12RendererAPI.h"
 
 ShadowEngine::Rendering::D3D12::D3D12Texture2D::D3D12Texture2D(std::string path)
 {
@@ -28,7 +28,7 @@ ShadowEngine::Rendering::D3D12::D3D12Texture2D::D3D12Texture2D(std::string path)
 	//com_ptr<ID3D12Resource> uploadResource;
 
 	DX_API("failed to create committed resource for texture file")
-		D3D12RendererAPI::device->CreateCommittedResource(
+		DX12RendererAPI::device->CreateCommittedResource(
 			&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT),
 			D3D12_HEAP_FLAG_NONE,
 			&resourceDesc,
@@ -39,10 +39,10 @@ ShadowEngine::Rendering::D3D12::D3D12Texture2D::D3D12Texture2D(std::string path)
 	resource->SetName(s2ws("Texture2D Commited resource").c_str());
 	
 	UINT64 copyableSize;
-	D3D12RendererAPI::device->GetCopyableFootprints(&resourceDesc, 0, 1, 0, nullptr, nullptr, nullptr, &copyableSize);
+	DX12RendererAPI::device->GetCopyableFootprints(&resourceDesc, 0, 1, 0, nullptr, nullptr, nullptr, &copyableSize);
 
 	DX_API("failed to create committed resource for texture file (upload buffer)")
-		D3D12RendererAPI::device->CreateCommittedResource(
+		DX12RendererAPI::device->CreateCommittedResource(
 			&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_UPLOAD),
 			D3D12_HEAP_FLAG_NONE,
 			&CD3DX12_RESOURCE_DESC::Buffer(copyableSize),
@@ -78,7 +78,7 @@ DXGI_FORMAT ShadowEngine::Rendering::D3D12::D3D12Texture2D::GetDXGIFormat()
 	return format;
 }
 
-void ShadowEngine::Rendering::D3D12::D3D12Texture2D::RecordTransfer(Ref<D3D12::D3D12CommandList> commandList)
+void ShadowEngine::Rendering::D3D12::D3D12Texture2D::RecordTransfer(Ref<D3D12::CommandList> commandList)
 {
 	CD3DX12_TEXTURE_COPY_LOCATION dst{ resource.Get(), 0 };
 	D3D12_PLACED_SUBRESOURCE_FOOTPRINT psf;
@@ -100,5 +100,5 @@ void ShadowEngine::Rendering::D3D12::D3D12Texture2D::FinishedUploading()
 
 void ShadowEngine::Rendering::D3D12::D3D12Texture2D::Upload()
 {
-	D3D12::D3D12RendererAPI::Instance->UploadResource(this->shared_from_this());
+	D3D12::DX12RendererAPI::Instance->UploadResource(this->shared_from_this());
 }

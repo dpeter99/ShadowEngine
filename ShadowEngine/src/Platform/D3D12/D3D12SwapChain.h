@@ -1,7 +1,7 @@
 #pragma once
 #include "Platform/D3D12/Common.h"
 #include "D3D12CommandQueue.h"
-#include "D3D12DescriptorHeap.h"
+#include "Descriptors/DescriptorAllocation.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
@@ -25,18 +25,19 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/**
 		 * \brief DescriptorHeap for Render targets views
 		 */
-		Ref<D3D12DescriptorHeap> rtvDescriptorHeap;
+		//Ref<D3D12DescriptorHeap> rtvDescriptorHeap;
 		
 		/**
 		 * \brief Size of the Render Target Views
 		 */
-		unsigned int rtvDescriptorHandleIncrementSize;
+		//unsigned int rtvDescriptorHandleIncrementSize;
 		
 		/**
 		 * \brief The start of the descriptor array
 		 */
-		D3D12_CPU_DESCRIPTOR_HANDLE rtvHandle;
+		//D3D12_CPU_DESCRIPTOR_HANDLE rtvHandle;
 
+		DescriptorAllocation rtvDescriptors;
 		
 		/**
 		 * \brief List of render targets

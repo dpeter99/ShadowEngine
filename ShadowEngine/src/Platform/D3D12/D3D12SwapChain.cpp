@@ -1,7 +1,8 @@
 #include "shpch.h"
 #include "D3D12SwapChain.h"
-#include "Platform/D3D12/D3D12RendererAPI.h"
+#include "DX12RendererAPI.h"
 #include "Platform/D3D12/D3D12CommandQueue.h"
+#include "Descriptors/DescriptorAllocation.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
@@ -32,9 +33,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		com_ptr<IDXGISwapChain1> tempSwapChain;
 
 		DX_API("Failed to create swap chain for HWND")
-			D3D12::D3D12RendererAPI::ctx->dxgiFactory->CreateSwapChainForHwnd(
+			D3D12::DX12RendererAPI::ctx->dxgiFactory->CreateSwapChainForHwnd(
 				commandQueue->GetInternalPtr().Get(),
-				(HWND)D3D12::D3D12RendererAPI::ctx->hwnd,
+				(HWND)D3D12::DX12RendererAPI::ctx->hwnd,
 				&swapChainDesc,
 				&swapChainFullscreenDesc,
 				NULL,
@@ -57,10 +58,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 		swapChain->GetDesc(&scDesc);		
 
 		// Create Render Target View Descriptor Heap, like a RenderTargetView** on the GPU. A set of pointers.
-		rtvDescriptorHeap = std::make_unique<D3D12DescriptorHeap>(D3D12_DESCRIPTOR_HEAP_FLAG_NONE, D3D12_DESCRIPTOR_HEAP_TYPE_RTV, backBufferDepth);
+		//rtvDescriptorHeap = std::make_unique<D3D12DescriptorHeap>(D3D12_DESCRIPTOR_HEAP_FLAG_NONE, D3D12_DESCRIPTOR_HEAP_TYPE_RTV, backBufferDepth);
 		
-		rtvHandle = rtvDescriptorHeap->GetCPUDescriptorHandleForHeapStart();
-		rtvDescriptorHandleIncrementSize = D3D12RendererAPI::device->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV);
+		//rtvHandle = rtvDescriptorHeap->GetCPUDescriptorHandleForHeapStart();
+		//rtvDescriptorHandleIncrementSize = DX12RendererAPI::device->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV);
+
+		rtvDescriptors = DX12RendererAPI::Get().AllocateDescriptors(D3D12_DESCRIPTOR_HEAP_TYPE_RTV, backBufferDepth);
+		
 
 		// Create Render Target Views
 
@@ -73,11 +77,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 				swapChain->GetBuffer(i, IID_PPV_ARGS(renderTargets[i].GetAddressOf()));
 
 			//offset the pointer
-			CD3DX12_CPU_DESCRIPTOR_HANDLE cpuHandle{ rtvHandle };
-			cpuHandle.Offset(i * rtvDescriptorHandleIncrementSize);
+			//CD3DX12_CPU_DESCRIPTOR_HANDLE cpuHandle{ rtvHandle };
+			//cpuHandle.Offset(i * rtvDescriptorHandleIncrementSize);
+
+			auto descriptorHandle = rtvDescriptors.GetDescriptorHandle(i);
 
 			//Create the view
-			D3D12RendererAPI::device->CreateRenderTargetView(renderTargets[i].Get(), nullptr, cpuHandle);
+			DX12RendererAPI::device->CreateRenderTargetView(renderTargets[i].Get(), nullptr, descriptorHandle);
 		}
 
 		//Assign the current render target texture index
@@ -86,9 +92,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	CD3DX12_CPU_DESCRIPTOR_HANDLE D3D12SwapChain::GetCurrentRenderTargetDescriptor() const
 	{
-		CD3DX12_CPU_DESCRIPTOR_HANDLE r_handle(rtvDescriptorHeap->GetCPUDescriptorHandleForHeapStart(), frameIndex, rtvDescriptorHandleIncrementSize);
-		
-		return r_handle;
+		return CD3DX12_CPU_DESCRIPTOR_HANDLE( rtvDescriptors.GetDescriptorHandle(this->frameIndex));
 	}
 
 	void D3D12SwapChain::ReleaseSwapChainResources()
@@ -98,7 +102,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 			i.Reset();
 		}
 		renderTargets.clear();
-		rtvDescriptorHeap->Reset();
+		
+		//rtvDescriptorHeap->Reset();
 	}
 
 	void D3D12SwapChain::Resize(int width, int height)

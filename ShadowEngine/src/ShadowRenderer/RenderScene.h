@@ -1,10 +1,10 @@
 #pragma once
 
-
+#include "Core/Core.h"
 #include "ShadowRenderer/ConstantBuffer.h"
 #include "ShadowAsset/Assets/Textures/TextureCubeMap.h"
 #include "DataStructs.h"
-#include <EntitySystem\Entities\Camera.h>
+#include "EntitySystem\Entities\Camera.h"
 
 namespace ShadowEngine::Rendering
 {

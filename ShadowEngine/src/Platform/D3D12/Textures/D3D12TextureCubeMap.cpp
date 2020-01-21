@@ -1,7 +1,7 @@
 #include "shpch.h"
 
 #include "D3D12TextureCubeMap.h"
-#include "Platform/D3D12/D3D12RendererAPI.h"
+#include "Platform/D3D12/DX12RendererAPI.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
@@ -60,7 +60,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		SDL_FreeSurface(img_temp_converted);
 
 		UINT64 copyableSize;
-		D3D12RendererAPI::device->GetCopyableFootprints(&resourceDesc, 0, 6, 0, nullptr, nullptr, nullptr, &copyableSize);
+		DX12RendererAPI::device->GetCopyableFootprints(&resourceDesc, 0, 6, 0, nullptr, nullptr, nullptr, &copyableSize);
 
 		//Load in the images
 		for (size_t i = 0; i < 6; i++)
@@ -76,7 +76,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 			com_ptr<ID3D12Resource> cpuRes;
 
 			DX_API("failed to create committed resource for texture file (upload buffer)")
-				D3D12RendererAPI::device->CreateCommittedResource(
+				DX12RendererAPI::device->CreateCommittedResource(
 					&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_UPLOAD),
 					D3D12_HEAP_FLAG_NONE,
 					&CD3DX12_RESOURCE_DESC::Buffer(copyableSize),
@@ -102,7 +102,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 
 		DX_API("failed to create committed resource for texture file")
-			D3D12RendererAPI::device->CreateCommittedResource(
+			DX12RendererAPI::device->CreateCommittedResource(
 				&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT),
 				D3D12_HEAP_FLAG_NONE,
 				&resourceDesc,
@@ -116,7 +116,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		ready = false;
 	}
 
-	void D3D12TextureCubeMap::RecordTransfer(Ref<D3D12CommandList> commandList)
+	void D3D12TextureCubeMap::RecordTransfer(Ref<CommandList> commandList)
 	{
 		for (UINT i = 0; i < 6; i++)
 		{
@@ -143,7 +143,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	void D3D12TextureCubeMap::Upload()
 	{
-		D3D12RendererAPI::Instance->UploadResource(this->shared_from_this());
+		DX12RendererAPI::Instance->UploadResource(this->shared_from_this());
 	}
 
 	com_ptr<ID3D12Resource> D3D12TextureCubeMap::GetResource()

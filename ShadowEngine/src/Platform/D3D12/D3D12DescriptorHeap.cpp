@@ -1,9 +1,9 @@
 #include "shpch.h"
 #include "D3D12DescriptorHeap.h"
-#include "D3D12RendererAPI.h"
+#include "DX12RendererAPI.h"
 
 namespace  ShadowEngine::Rendering::D3D12 {
-
+	/*
 	D3D12DescriptorHeap::D3D12DescriptorHeap(D3D12_DESCRIPTOR_HEAP_FLAGS flags, D3D12_DESCRIPTOR_HEAP_TYPE type, UINT count)
 	{
 		D3D12_DESCRIPTOR_HEAP_DESC rtvHeapDesc;
@@ -13,12 +13,12 @@ namespace  ShadowEngine::Rendering::D3D12 {
 		rtvHeapDesc.NodeMask = 0;
 
 		DX_API("Failed to create render target view descriptor heap")
-			D3D12RendererAPI::device->CreateDescriptorHeap(&rtvHeapDesc, IID_PPV_ARGS(_descriptorHeap.GetAddressOf()));
+			DX12RendererAPI::device->CreateDescriptorHeap(&rtvHeapDesc, IID_PPV_ARGS(_descriptorHeap.GetAddressOf()));
 
 		CPU_next_free = _descriptorHeap->GetCPUDescriptorHandleForHeapStart();
 		GPU_next_free = _descriptorHeap->GetGPUDescriptorHandleForHeapStart();
 		
-		inc_size = D3D12RendererAPI::device->GetDescriptorHandleIncrementSize(type);
+		inc_size = DX12RendererAPI::device->GetDescriptorHandleIncrementSize(type);
 	}
 
 	D3D12DescriptorHeap::~D3D12DescriptorHeap()
@@ -49,4 +49,5 @@ namespace  ShadowEngine::Rendering::D3D12 {
 	{
 		_descriptorHeap.Reset();
 	}
+	*/
 }

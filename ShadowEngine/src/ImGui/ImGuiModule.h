@@ -13,6 +13,7 @@ namespace ShadowEngine::DebugGui {
 
 		std::list<IShadowImGui*> guiCalls;
 
+
 	public:
 
 		void Init() override;

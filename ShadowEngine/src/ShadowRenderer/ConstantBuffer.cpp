@@ -12,7 +12,7 @@ namespace ShadowEngine::Rendering {
 		{
 		case RendererAPI::API::None: SH_CORE_ASSERT(false, "RendererAPI::None is currently not supported!");
 			return nullptr;
-		case RendererAPI::API::D3D12: return (ConstantBufferImpl*) new ShadowEngine::Rendering::D3D12::D3D12ConstantBuffer(size, debug_name);
+		case RendererAPI::API::D3D12: return (ConstantBufferImpl*) new ShadowEngine::Rendering::D3D12::DX12ConstantBuffer(size, debug_name);
 		}
 
 		SH_CORE_ASSERT(false, "Unknown RendererAPI!");

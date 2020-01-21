@@ -1,8 +1,6 @@
 #include "shpch.h"
 #include "Renderer.h"
 #include "EntitySystem/Entities/Camera.h"
-//#include "Platform/OpenGL/OpenGLShader.h"
-//#include "Platform/OpenGL/OpenGLRendererAPI.h"
 #include "Core/ShadowApplication.h"
 #include "CommandList.h"
 
@@ -21,8 +19,6 @@ namespace ShadowEngine::Rendering {
 			instance = this;
 		}
 
-
-
 		s_RendererAPI = RendererAPI::MakeRendererAPI();
 
 		s_RendererAPI->Init(ShadowApplication::Get().GetWindow().context);
@@ -35,12 +31,13 @@ namespace ShadowEngine::Rendering {
 		s_RendererAPI->StartResourceUpload();
 	}
 
+	
 	void Renderer::Render()
 	{
 		RenderNodes();
 	}
 
-	
+	//TODO: Assign camera somewhere else
 	void Renderer::BeginScene(Camera* camera)
 	{
 		assert(camera != nullptr);
@@ -53,10 +50,6 @@ namespace ShadowEngine::Rendering {
 		
 		s_RendererAPI->SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 		s_RendererAPI->Clear();
-		
-		
-		
-
 	}
 
 	void Renderer::EndScene()
@@ -75,7 +68,7 @@ namespace ShadowEngine::Rendering {
 		}
 	}
 
-	void Renderer::Submit(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4& transform)
+	void Renderer::Submit (const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4& transform)
 	{
 		//instance->s_RendererAPI->Draw(mesh, shader, transform);
 		

@@ -1,6 +1,6 @@
 #include "shpch.h"
 #include "D3D12DepthBuffer.h"
-#include "D3D12RendererAPI.h"
+#include "DX12RendererAPI.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
@@ -14,8 +14,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		dsHeapDesc.Type = D3D12_DESCRIPTOR_HEAP_TYPE_DSV;
 		dsHeapDesc.Flags = D3D12_DESCRIPTOR_HEAP_FLAG_NONE;
 
+		//TODO: This should be a managged call
 		DX_API("Failed to create depth stencil descriptor heap")
-			D3D12RendererAPI::device->CreateDescriptorHeap(&dsHeapDesc, IID_PPV_ARGS(this->descriptorHeap.GetAddressOf()));
+			DX12RendererAPI::device->CreateDescriptorHeap(&dsHeapDesc, IID_PPV_ARGS(this->descriptorHeap.GetAddressOf()));
 
 
 		
@@ -25,7 +26,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		depthOptimizedClearValue.DepthStencil.Stencil = 0;
 		
 		DX_API("Failed to create Depth Stencil buffer")
-			D3D12RendererAPI::device->CreateCommittedResource(
+			DX12RendererAPI::device->CreateCommittedResource(
 				&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT),
 				D3D12_HEAP_FLAG_NONE,
 				&CD3DX12_RESOURCE_DESC::Tex2D(depthFormat, scissorRect.right, scissorRect.bottom, 1, 0, 1, 0, D3D12_RESOURCE_FLAG_ALLOW_DEPTH_STENCIL),
@@ -40,7 +41,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		depthStencilDesc.ViewDimension = D3D12_DSV_DIMENSION_TEXTURE2D;
 		depthStencilDesc.Flags = D3D12_DSV_FLAG_NONE;
 
-		D3D12RendererAPI::device->CreateDepthStencilView(depthStencilBuffer.Get(), &depthStencilDesc, descriptorHeap->GetCPUDescriptorHandleForHeapStart());
+		DX12RendererAPI::device->CreateDepthStencilView(depthStencilBuffer.Get(), &depthStencilDesc, descriptorHeap->GetCPUDescriptorHandleForHeapStart());
 	}
 
 	CD3DX12_CPU_DESCRIPTOR_HANDLE D3D12DepthBuffer::GetDescriptorHandle()

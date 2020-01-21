@@ -11,19 +11,19 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//Constant Buffer object
 
 		this->shaderData = std::make_shared<Rendering::ConstantBuffer_ShaderPropertySheet>(propertySheet);
-		D3D12ConstantBuffer* dx12_buffer = ((D3D12ConstantBuffer*)shaderData->GetImpl().get());
+		DX12ConstantBuffer* dx12_buffer = ((DX12ConstantBuffer*)shaderData->GetImpl().get());
 		shaderData->Upload();
 
 
 		//Descriptor Table
-		table = D3D12RendererAPI::Instance->descriptorHeap_SRV_CBV->Allocate(1 + propertySheet->GetTextureCount());
+		table = DX12RendererAPI::Get().AllocateDescriptors(D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV,1 + propertySheet->GetTextureCount());
 
 		//Constant Buffer descriptor
 
 		D3D12_CONSTANT_BUFFER_VIEW_DESC cbvDesc = {};
 		cbvDesc.BufferLocation = dx12_buffer->GetGPUVirtualAddress();
 		cbvDesc.SizeInBytes = dx12_buffer->GetSize(); // CB size is required to be 256-byte aligned.
-		D3D12RendererAPI::device->CreateConstantBufferView(&cbvDesc, table.CPU_TableStart);
+		DX12RendererAPI::device->CreateConstantBufferView(&cbvDesc, table.GetDescriptorHandle(0));
 
 		//Textures Descriptor
 
@@ -37,9 +37,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	}
 
-	void D3D12MaterialImpl::BindMaterialData(Ref<D3D12CommandList> commandList)
+	void D3D12MaterialImpl::BindMaterialData(Ref<CommandList> commandList)
 	{
 		commandList->BindDescriptorTableBuffer(table.GPU_TableStart, 2);
+
+		commandList->
 	}
 
 	void D3D12MaterialImpl::Upload()
@@ -65,10 +67,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 				srvDesc.Shader4ComponentMapping = D3D12_DEFAULT_SHADER_4_COMPONENT_MAPPING;
 
 				srvDesc.Texture2D.MipLevels = 1;
-				D3D12RendererAPI::device->CreateShaderResourceView(a->GetResource().Get(), &srvDesc,
-					table[i + 1].CPU_TableStart);
+
+				DX12RendererAPI::device->CreateShaderResourceView(a->GetResource().Get(), &srvDesc,
+					table.GetDescriptorHandle(1+i));
 			}
-			if (type == Assets::TextureCubeMap::TypeId())
+			else if (type == Assets::TextureCubeMap::TypeId())
 			{
 				auto a = std::dynamic_pointer_cast<D3D12::D3D12TextureCubeMap>(prop->GetPropertyDataTyped().getImpl());
 
@@ -78,8 +81,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 				srvDesc.TextureCube.MipLevels = 1;
 				srvDesc.Texture2D.MipLevels = 1;
 
-				D3D12RendererAPI::device->CreateShaderResourceView(a->GetResource().Get(), &srvDesc,
-					table[i + 1].CPU_TableStart);
+				DX12RendererAPI::device->CreateShaderResourceView(a->GetResource().Get(), &srvDesc,
+					table.GetDescriptorHandle(1 + i));
 			}
 		}
 

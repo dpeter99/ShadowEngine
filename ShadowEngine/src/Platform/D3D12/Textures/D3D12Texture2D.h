@@ -6,7 +6,7 @@
 #include "SDL.h"
 #include "SDL_image.h"
 #include "ShadowAsset/Assets/Textures/Texture.h"
-#include "Platform/D3D12/D3D12CommandList.h"
+#include "../CommandList.h"
 #include "Platform/D3D12/D3D12IUploadable.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
@@ -30,7 +30,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		DXGI_FORMAT GetDXGIFormat();
 
 		// Inherited via D3D12IUploadable
-		virtual void RecordTransfer(Ref<D3D12::D3D12CommandList> cmd) override;
+		virtual void RecordTransfer(Ref<D3D12::CommandList> cmd) override;
 
 
 		virtual void Upload() override;

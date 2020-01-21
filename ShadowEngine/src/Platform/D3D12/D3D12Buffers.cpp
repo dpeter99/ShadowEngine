@@ -1,7 +1,7 @@
 #include "shpch.h"
 #include "D3D12Buffers.h"
 #include "Common.h"
-#include "D3D12RendererAPI.h"
+#include "DX12RendererAPI.h"
 #include "ShadowRenderer/DataStructs.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
@@ -19,7 +19,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 		//Allocate the needed memory
 		DX_API("Failed to create vertex buffer (IndexedGeometry)")
-			ShadowEngine::Rendering::D3D12::D3D12RendererAPI::device->CreateCommittedResource(
+			ShadowEngine::Rendering::D3D12::DX12RendererAPI::device->CreateCommittedResource(
 				&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_UPLOAD),
 				D3D12_HEAP_FLAG_NONE,
 				&CD3DX12_RESOURCE_DESC::Buffer(size),
@@ -64,7 +64,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		static int id = 0;
 		
 		DX_API("Failed to create index buffer (IndexedGeometry")
-		D3D12RendererAPI::device->CreateCommittedResource(
+		DX12RendererAPI::device->CreateCommittedResource(
 				&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_UPLOAD),
 				D3D12_HEAP_FLAG_NONE,
 				&CD3DX12_RESOURCE_DESC::Buffer(size),
