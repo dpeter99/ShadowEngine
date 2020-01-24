@@ -144,7 +144,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		if (numDescriptorsToCommit > 0)
 		{
 			auto device = DX12RendererAPI::Get().device;
-			auto d3d12GraphicsCommandList = commandList.GetCommandList.Get();
+			auto d3d12GraphicsCommandList = commandList.GetCommandList().Get();
 			assert(d3d12GraphicsCommandList != nullptr);
 
 			if (!m_CurrentDescriptorHeap || m_NumFreeHandles < numDescriptorsToCommit)

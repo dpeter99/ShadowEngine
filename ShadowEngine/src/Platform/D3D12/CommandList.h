@@ -8,24 +8,64 @@
 #include "ShadowRenderer/ConstantBuffer.h"
 #include "D3D12DescriptorHeap.h"
 #include <Platform\D3D12\Descriptors\DynamicDescriptorHeap.h>
+#include "Buffers/Buffer.h"
+#include "Resource/ResourceStateTracker.h"
+#include "Buffers/UploadBuffer.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
+	class Texture;
 	class D3D12SwapChain;
 
-	/**
-	 * \brief A list of commands
-	 * Used to record graphics/compute commands and than submit them at once
-	 */
+	/// <summary>
+	///  Wrapper for the ID3D12GraphicsCommandList class
+	/// </summary>
+	/// Contains and manages a ``ID3D12CommandAllocator`` and ``ID3D12GraphicsCommandList``.
+	/// It is used for recording commands and than submitting them to a <see cref="CommandQueue"/>.
 	class CommandList
 	{
+		/// <summary>
+		/// The command allocator that we are allocating out of
+		/// </summary>
+		/// The command allocator is responsible for allocating the memory for the CommandLists
 		com_ptr<ID3D12CommandAllocator> commandAllocator;
-		com_ptr<ID3D12GraphicsCommandList> commandList;
+		
+		/// <summary>
+		/// The encapsulated CommandList
+		/// </summary>
+		/// This is the DX12 class that we are making the calls to
+		com_ptr<ID3D12GraphicsCommandList> m_commandList;
 
+		
+		/// <summary>
+		/// The last set render target for this queue
+		/// </summary>
 		D3D12_CPU_DESCRIPTOR_HANDLE renderTarget;
+		/// <summary>
+		/// The last set depth buffer for this queue
+		/// </summary>
 		D3D12_CPU_DESCRIPTOR_HANDLE depthBuffer;
 
 		bool isBeingRecorded;
 
+		/// <summary>
+		/// Resource state tracker is used by the command list to track (per command list)
+		/// the current state of a resource. The resource state tracker also tracks the
+		/// global state of a resource (with it's static methodes) in order to minimize resource state transitions.
+		/// </summary>
+		std::unique_ptr<ResourceStateTracker> m_ResourceStateTracker;
+
+		using TrackedObjects = std::vector < Microsoft::WRL::ComPtr<ID3D12Object> >;
+		
+		/// <summary>
+		/// A list of "in-flight" object to make sure they are not deleted before the command list finishes
+		/// </summary>
+		/// Objects that are being tracked by a command list that is "in-flight" on 
+		///	the command-queue and cannot be deleted. To ensure objects are not deleted
+		///	until the command list is finished executing, a reference to the object
+		///	is stored. The referenced objects are released when the command list is 
+		/// reset.
+		TrackedObjects m_TrackedObjects;
+		
 		/// <summary>
 		/// The dynamic descriptor heap allows for descriptors to be staged before
 		/// being committed to the command list. Dynamic descriptors need to be
@@ -34,10 +74,15 @@ namespace ShadowEngine::Rendering::D3D12 {
 		std::unique_ptr<DynamicDescriptorHeap> m_DynamicDescriptorHeap[D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES];
 
 		/// <summary>
-		/// Keep track of the currently bound descriptor heaps. Only change descriptor
-		/// heaps if they are different than the currently bound descriptor heaps.
+		/// The currently bound descriptor heaps. Only bind new one if it is not currently bound
 		/// </summary>
+		/// Keeps track of the currently bound descriptor heaps. Only change descriptor
+		/// heaps if they are different than the currently bound descriptor heaps.
 		ID3D12DescriptorHeap* m_DescriptorHeaps[D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES];
+
+		// Resource created in an upload heap. Useful for drawing of dynamic geometry
+		// or for uploading constant buffer data that changes every draw call.
+		std::unique_ptr<UploadBuffer> m_UploadBuffer;
 	public:
 		CommandList(D3D12_COMMAND_LIST_TYPE type = D3D12_COMMAND_LIST_TYPE_DIRECT);
 
@@ -45,15 +90,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// Returns the underlying command list.
 		/// </summary>
 		/// <returns>The underlying command list.</returns>
-		com_ptr<ID3D12GraphicsCommandList> GetCommandList() { return commandList; }
+		com_ptr<ID3D12GraphicsCommandList> GetCommandList() { return m_commandList; }
 
-
-		/**
-		 * \brief Binds a new shader to the command list to use
-		 * \param shader The shader to be used
-		 *
-		 */
-		void UseShader(const Ref<DX12Shader>& shader);
 
 		/**
 		 * \brief Resets the Command List
@@ -63,16 +101,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		void StartRecording();
 
+		
+#pragma region View_port_and_scissor
+		
 		void SetViewports(D3D12_VIEWPORT viewPort);
 
 		void SetScissorRects(D3D12_RECT scissorRect);
-
-		/// <summary>
-		/// Adds a new resource barrier to the command list
-		/// </summary>
-		/// <param name="barrier">The barrier to use</param>
-		/// Used to wait for a resource transition to happen (eg. rendertarget is available)
-		void ResourceBarrier(D3D12_RESOURCE_BARRIER* barrier);
 
 		/// <summary>
 		///  Sets the render targets used in this command list
@@ -87,12 +121,71 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		void ClearDepthStencilView(float depth, uint8_t stencil);
 
+#pragma endregion
+
+		
+		/// <summary>
+		/// Adds a new resource barrier to the command list
+		/// </summary>
+		/// <param name="barrier">The barrier to use</param>
+		/// Used to wait for a resource transition to happen (eg. render target is available)
+		void ResourceBarrier(D3D12_RESOURCE_BARRIER* barrier);
+
+		void TransitionBarrier(com_ptr<ID3D12Resource> resource, D3D12_RESOURCE_STATES stateAfter, UINT subresource, bool flushBarriers);
+
+		void TransitionBarrier(const Resource& resource, D3D12_RESOURCE_STATES stateAfter, UINT subresource = D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES, bool flushBarriers = false);
+
+
+
+		/// <summary>
+		/// Uploads the given data to the specified buffer.
+		/// </summary>
+		/// <param name="buffer">The buffer to upload the data to</param>
+		/// <param name="numElements">Number of elements that the data has</param>
+		/// <param name="elementSize">The size of a single element that the data has</param>
+		/// <param name="bufferData">Pointer to the memory location of the data</param>
+		/// <param name="flags">Flags to use</param>
+		///
+		///	<example>
+		///	A example usage of this is uploading a single data
+		///	<code>		
+		///	Data* data = new Data;
+		///	UploadToBuffer(buffer, 1, sizeof(Type), data, D3D12_RESOURCE_FLAG_NONE)
+		///	</code>
+		///	</example>
+		/// 
+		void UploadToBuffer(Buffer& buffer, size_t numElements, size_t elementSize, const void* bufferData,
+		                D3D12_RESOURCE_FLAGS flags);
+
+
+		/**
+		* Copy subresource data to a texture.
+		*/
+		void CopyTextureSubresource(Texture& destination, uint32_t firstSubresource, uint32_t numSubresources, D3D12_SUBRESOURCE_DATA* subresourceData);
+		
+		
 		void DrawMesh(const std::shared_ptr<Assets::Mesh>& mesh);
 
-		void BindConstantBuffer(const Ref<ConstantBuffer>& buffer, int materialSlotIndex);
-		void BindConstantBuffer(const ConstantBuffer& buffer, int registerIndex);
-		void BindDescriptorTableBuffer(const CD3DX12_GPU_DESCRIPTOR_HANDLE& handle, int registerIndex);
+		void BindConstantBuffer [[deprecated]]  (const Ref<ConstantBuffer>& buffer, int materialSlotIndex);
+		void BindConstantBuffer [[deprecated]]  (const ConstantBuffer& buffer, int registerIndex);
+		void BindDescriptorTableBuffer [[deprecated]] (const CD3DX12_GPU_DESCRIPTOR_HANDLE& handle, int registerIndex);
 
+		/**
+		* Set a dynamic constant buffer data to an inline descriptor in the root
+		* signature.
+		*/
+		void SetGraphicsDynamicConstantBuffer(uint32_t rootParameterIndex, size_t sizeInBytes, const void* bufferData);
+		template<typename T>
+		void SetGraphicsDynamicConstantBuffer(uint32_t rootParameterIndex, const T& data)
+		{
+			SetGraphicsDynamicConstantBuffer(rootParameterIndex, sizeof(T), &data);
+		}
+
+		
+		
+		void FlushResourceBarriers();
+		void TrackResource(Microsoft::WRL::ComPtr<ID3D12Object> object);
+		void TrackResource(const Resource& res);
 		void CopyTextureRegion(CD3DX12_TEXTURE_COPY_LOCATION* from, CD3DX12_TEXTURE_COPY_LOCATION* to);
 
 		void SetDescriptorHeaps [[deprecated]] (int count, ID3D12DescriptorHeap* const* descriptorHeaps);
@@ -112,10 +205,46 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// Adds the bind calls for all the currently set descriptor heaps
 		void BindDescriptorHeaps();
 
-		void SetShaderResourceView(uint32_t rootParameterIndex, uint32_t descriptorOffset, const Resource& resource, D3D12_RESOURCE_STATES stateAfter, UINT firstSubresource, UINT numSubresources, const D3D12_SHADER_RESOURCE_VIEW_DESC* srv);
 
-		void SetShaderConstandBufferDescriptor(uint32_t rootParameterIndex, uint32_t descriptorOffset, UINT firstSubresource, UINT numSubresources, const D3D12_GPU_DESCRIPTOR_HANDLE descriptor);
+		/**
+		 * \brief Binds a new shader to the command list to use
+		 * \param shader The shader to be used
+		 *
+		 */
+		void UseShader(const Ref<DX12Shader>& shader);
 
+		/// <summary>
+		/// Sets a resource as the SRV in the specified place
+		/// </summary>
+		/// <param name="rootParameterIndex">The index of the descriptor table to set this in</param>
+		/// <param name="descriptorOffset">The index in the descriptor table to place the view</param>
+		/// <param name="resource">The resource to bind</param>
+		/// <param name="stateAfter">The state that we want this to be in</param>
+		/// <param name="firstSubresource">The first subresources index</param>
+		/// <param name="numSubresources"Number of subresources this has></param>
+		/// <param name="srv">The SRV desc to use. If nullptr than the default one will be used</param>
+		void SetShaderResourceView(
+			uint32_t rootParameterIndex,
+			uint32_t descriptorOffset,
+			const Resource& resource,
+			D3D12_RESOURCE_STATES stateAfter = D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE |
+			D3D12_RESOURCE_STATE_NON_PIXEL_SHADER_RESOURCE,
+			UINT firstSubresource = 0,
+			UINT numSubresources = D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES,
+			const D3D12_SHADER_RESOURCE_VIEW_DESC* srv = nullptr
+		);
+
+		
+		void CommandList::SetShaderConstandBufferView(
+			uint32_t rootParameterIndex,
+			uint32_t descriptorOffset,
+			const Buffer& resource,
+			UINT firstSubresource = 0,
+			UINT numSubresources = D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES,
+			const D3D12_CONSTANT_BUFFER_VIEW_DESC* cbv = nullptr);
+
+		
+		
 		void Close();
 
 		bool IsRecording();

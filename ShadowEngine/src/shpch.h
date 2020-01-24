@@ -31,3 +31,4 @@
 
 #include <wrl.h>
 #include <mutex>
+#include <functional>

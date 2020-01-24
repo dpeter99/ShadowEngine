@@ -103,8 +103,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 		// select your adapter here, NULL = system default
 		// Using the first adapter for now
 
-		
-
 		//IUnknown* selectedAdapter = (adapters.size() > 0) ? adapters[0].Get() : NULL;
 
 		com_ptr<ID3D12Debug> debug_controller;
@@ -160,7 +158,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 
 
-		upload_managger = std::make_shared<D3D12UploadManagger>();
+		upload_managger = std::make_shared<UploadManagger>();
 
 		
 		
@@ -226,9 +224,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		command_list->ClearDepthStencilView(1.0f,0);
 
 		//Assign the descriptor heaps
-		std::vector<Ref<D3D12DescriptorHeap>> heaps;
-		heaps.push_back(descriptorHeap_SRV_CBV);
-		command_list->SetDescriptorHeaps(heaps);
+		//std::vector<Ref<D3D12DescriptorHeap>> heaps;
+		//heaps.push_back(descriptorHeap_SRV_CBV);
+		//command_list->SetDescriptorHeaps(heaps);
 		
 		worldData=worldCB;
 
@@ -266,6 +264,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 		upload_managger->Upload(resource);
 	}
 
+	void DX12RendererAPI::UploadResource(D3D12IUploadable* resource)
+	{
+		upload_managger->Upload(Ref<D3D12IUploadable>(resource));
+	}
+	
 	void DX12RendererAPI::StartResourceUpload()
 	{
 		upload_managger->StartUpload();

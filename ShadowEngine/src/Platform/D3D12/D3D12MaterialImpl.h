@@ -15,12 +15,20 @@ namespace  ShadowEngine::Rendering::D3D12 {
 	//This should hold the:
 	//Constant buffers
 	//The textures
+	
 	class D3D12MaterialImpl : public Assets::MaterialImpl
 	{
+		/// <summary>
+		/// The property sheet containing all of the data for this material
+		/// </summary>
 		Ref<ShaderPropertySheet> propertySheet;
 
-
+		/// <summary>
+		/// The constant buffer that has the non texture data for this material
+		/// </summary>
 		Ref<Rendering::ConstantBuffer> shaderData;
+
+		DX12ConstantBuffer* dx12_buffer;
 
 		//std::vector<Ref<D3D12Texture2D>> textures;
 		

@@ -48,6 +48,15 @@ namespace ShadowEngine::Rendering::D3D12 {
 		 */
 		virtual void CreateViews(size_t numElements, size_t elementSize) = 0;
 
+        /**
+		 * Get the SRV for a resource.
+		 *
+		 * @param srvDesc The description of the SRV to return. The default is nullptr
+		 * which returns the default SRV for the resource (the SRV that is created when no
+		 * description is provided.
+		 */
+        virtual D3D12_CPU_DESCRIPTOR_HANDLE GetConstantBufferView(const D3D12_CONSTANT_BUFFER_VIEW_DESC* srvDesc = nullptr) const = 0;
+		
 	protected:
 
 	private:

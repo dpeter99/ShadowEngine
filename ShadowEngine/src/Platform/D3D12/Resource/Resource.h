@@ -35,17 +35,23 @@
 #include <wrl.h>
 
 #include <string>
+#include "Platform/D3D12/D3D12IUploadable.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
 	/// <summary>
 	/// Represents a Buffer
 	/// </summary>
-	class Resource
+	///
+	/// Represents any resource in a committed resource heap on the GPU
+	/// We inherit from this for:
+	///  - ConstantBuffers
+	///  - Textures
+	class Resource : public D3D12IUploadable
 	{
 	protected:
 		/// <summary>
-		/// The actual underlying D3D12 resource.
+		/// The actual underlying D3D12 resource on the GPU side
 		/// </summary>
 		Microsoft::WRL::ComPtr<ID3D12Resource> m_d3d12Resource;
 
@@ -53,17 +59,27 @@ namespace ShadowEngine::Rendering::D3D12 {
 		std::unique_ptr<D3D12_CLEAR_VALUE> m_d3d12ClearValue;
 		std::wstring m_ResourceName;
 
-	private:
-		// Check the format support and populate the m_FormatSupport structure.
-		void CheckFeatureSupport();
+		size_t m_bufferSize;
 
 	public:
+		
 		explicit Resource(const std::wstring& name = L"");
 
+		/// <summary>
+		/// Creates a GPU side resource with the given parameters
+		/// </summary>
+		/// <param name="resourceDesc">The descriptor to use for the creating of the resource</param>
+		/// <param name="clearValue">The clear value to use for the resource</param>
+		/// <param name="name">The debug name to assign for this resource</param>
 		explicit Resource(const D3D12_RESOURCE_DESC& resourceDesc,
 			const D3D12_CLEAR_VALUE* clearValue = nullptr,
 			const std::wstring& name = L"");
 
+		/// <summary>
+		/// Assumes ownership of the given resource
+		/// </summary>
+		/// <param name="resource">The resource to encapsulate</param>
+		/// <param name="name">The debug name to assign to this resource</param>
 		explicit Resource(Microsoft::WRL::ComPtr<ID3D12Resource> resource, const std::wstring& name = L"");
 
 		Resource(const Resource& copy);
@@ -75,6 +91,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 		virtual ~Resource();
 
 		/// <summary>
+		/// Creates the underlying ID3D12Resource and assigns it to this instance
+		/// </summary>
+		/// <param name="resourceDesc">The descriptor to use for the creating of the resource</param>
+		/// <param name="name">The debug name to assign for this resource</param>
+		void SetupResource(const D3D12_RESOURCE_DESC& resourceDesc, const std::wstring& name);
+		
+		/// <summary>
 		/// Check to see if the underlying resource is valid.
 		/// </summary>
 		/// <returns>Returns true if the resource is valid</returns>
@@ -83,8 +106,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 			return (m_d3d12Resource != nullptr);
 		}
 
-		// Get access to the underlying D3D12 resource
-		Microsoft::WRL::ComPtr<ID3D12Resource> GetD3D12Resource() const
+		/// <summary>
+		/// Get access to the underlying D3D12 resource
+		/// </summary>
+		/// <returns>Returns with the ComPtr of the underlying ID3D12Resource instance</returns>
+		com_ptr<ID3D12Resource> GetD3D12Resource() const
 		{
 			return m_d3d12Resource;
 		}
@@ -140,6 +166,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 		bool CheckFormatSupport(D3D12_FORMAT_SUPPORT1 formatSupport) const;
 		bool CheckFormatSupport(D3D12_FORMAT_SUPPORT2 formatSupport) const;
 
-	};
+
+	private:
+		// Check the format support and populate the m_FormatSupport structure.
+		void CheckFeatureSupport();
+};
 
 }

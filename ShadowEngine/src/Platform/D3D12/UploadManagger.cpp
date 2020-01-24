@@ -1,10 +1,10 @@
 #include "shpch.h"
 
-#include "D3D12UploadManagger.h"
+#include "UploadManagger.h"
 #include "DX12RendererAPI.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
-	D3D12UploadManagger::D3D12UploadManagger()
+	UploadManagger::UploadManagger()
 	{
 		command_queue = std::make_shared<D3D12CommandQueue>(D3D12_COMMAND_LIST_TYPE_COPY);
 
@@ -15,12 +15,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		index = 0;
 	}
-	void D3D12UploadManagger::Upload(Ref<D3D12IUploadable> data)
+	void UploadManagger::Upload(Ref<D3D12IUploadable> data)
 	{
 		active->Upload(data);
 	}
 
-	void D3D12UploadManagger::StartUpload()
+	void UploadManagger::StartUpload()
 	{
 		if (active->dirty) {
 			index++;
@@ -43,7 +43,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		}
 	}
 
-	void D3D12UploadManagger::CheckForFnishedUploads()
+	void UploadManagger::CheckForFnishedUploads()
 	{
 		unsigned long long i = fence->GetCompletedValue();
 
@@ -67,7 +67,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	void UploadQueue::Upload(Ref<D3D12IUploadable> data)
 	{
-		stuff.push_back(data);
+		m_resourcesToUpload.push_back(data);
 
 		if(!command_list->IsRecording())
 		command_list->Reset();
@@ -90,7 +90,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 		if (fv >= fenceValue) {
 			//Upload finished
-			for each (auto& item in stuff)
+			for each (auto& item in m_resourcesToUpload)
 			{
 				item->FinishedUploading();
 			}

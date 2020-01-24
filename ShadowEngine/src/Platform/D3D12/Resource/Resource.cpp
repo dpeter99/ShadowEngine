@@ -1,5 +1,6 @@
 #include "shpch.h"
 
+#include "Core/Core.h"
 #include "Resource.h"
 
 #include "../DX12RendererAPI.h"
@@ -12,6 +13,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		, m_FormatSupport({})
 	{}
 
+
+
+
 	Resource::Resource(const D3D12_RESOURCE_DESC& resourceDesc, const D3D12_CLEAR_VALUE* clearValue, const std::wstring& name)
 	{
 		if (clearValue)
@@ -19,22 +23,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 			m_d3d12ClearValue = std::make_unique<D3D12_CLEAR_VALUE>(*clearValue);
 		}
 
-		auto device = DX12RendererAPI::Get().device;
-
-		DX_API("Failled to create commited resource")
-			(device->CreateCommittedResource(
-			&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT),
-			D3D12_HEAP_FLAG_NONE,
-			&resourceDesc,
-			D3D12_RESOURCE_STATE_COMMON,
-			m_d3d12ClearValue.get(),
-			IID_PPV_ARGS(&m_d3d12Resource)
-		));
-
-		ResourceStateTracker::AddGlobalResourceState(m_d3d12Resource.Get(), D3D12_RESOURCE_STATE_COMMON);
-
-		CheckFeatureSupport();
-		SetName(name);
+		SetupResource(resourceDesc, name);
 	}
 
 	Resource::Resource(Microsoft::WRL::ComPtr<ID3D12Resource> resource, const std::wstring& name)
@@ -95,6 +84,27 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 	}
 
+	void Resource::SetupResource(const D3D12_RESOURCE_DESC& resourceDesc, const std::wstring& name)
+	{
+		auto device = DX12RendererAPI::Get().device;
+
+		DX_API("Failled to create commited resource")
+			(device->CreateCommittedResource(
+				&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT),
+				D3D12_HEAP_FLAG_NONE,
+				&resourceDesc,
+				D3D12_RESOURCE_STATE_COMMON,
+				m_d3d12ClearValue.get(),
+				IID_PPV_ARGS(&m_d3d12Resource)
+			));
+
+		ResourceStateTracker::AddGlobalResourceState(m_d3d12Resource.Get(), D3D12_RESOURCE_STATE_COMMON);
+
+		CheckFeatureSupport();
+		SetName(name);
+	}
+
+	
 	void Resource::SetD3D12Resource(Microsoft::WRL::ComPtr<ID3D12Resource> d3d12Resource, const D3D12_CLEAR_VALUE* clearValue)
 	{
 		m_d3d12Resource = d3d12Resource;
@@ -142,10 +152,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 		if (m_d3d12Resource)
 		{
 			auto desc = m_d3d12Resource->GetDesc();
-			auto device = Application::Get().GetDevice();
+			auto device = DX12RendererAPI::Get().device;
 
 			m_FormatSupport.Format = desc.Format;
-			ThrowIfFailed(device->CheckFeatureSupport(
+			DX_API("Failled to get feature support")
+			(device->CheckFeatureSupport(
 				D3D12_FEATURE_FORMAT_SUPPORT,
 				&m_FormatSupport,
 				sizeof(D3D12_FEATURE_DATA_FORMAT_SUPPORT)));
@@ -155,5 +166,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 			m_FormatSupport = {};
 		}
 	}
+
+	
 
 }

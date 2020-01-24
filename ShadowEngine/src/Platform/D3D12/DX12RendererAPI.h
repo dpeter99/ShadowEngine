@@ -10,7 +10,7 @@
 #include "ShadowAsset/Assets/Mesh.h"
 #include "ShadowRenderer/Shader.h"
 #include "ShadowAsset/Assets/Material.h"
-#include "D3D12UploadManagger.h"
+#include "UploadManagger.h"
 #include <Platform\D3D12\Descriptors\DescriptorAllocation.h>
 #include <Platform\D3D12\Descriptors\DescriptorAllocator.h>
 
@@ -54,8 +54,26 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//TODO: Make this a array
 		Ref<D3D12::CommandList> command_list;
 
-		Ref<D3D12UploadManagger> upload_managger;
+		/// <summary>
+		/// The upload manager, it handles the uploads of resources
+		/// </summary>
+		/// This should be used trough the following methodes:
+		///  - <see cref="UploadResource"/>
+		/// The <see cref="StartResourceUpload"/> should only be called by the system
+		Ref<UploadManagger> upload_managger;
 
+		/// <summary>
+		/// The descriptor heap allocators.
+		/// </summary>
+		/// This is a array of descriptor heap allocators that are responsible for managing the descriptors
+		/// of each type
+		///  - ``D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV``
+		///  - ``D3D12_DESCRIPTOR_HEAP_TYPE_SAMPLER``
+		///  - ``D3D12_DESCRIPTOR_HEAP_TYPE_RTV``
+		///	 - ``D3D12_DESCRIPTOR_HEAP_TYPE_DSV``
+		///
+		///	 Currently ``D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES`` is 4
+		std::unique_ptr<DescriptorAllocator> m_DescriptorAllocators[D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES];
 
 		/// <summary>
 		/// The Swapchain of the render targets
@@ -81,7 +99,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		//Ref<D3D12DescriptorHeap> descriptorHeap_SRV_CBV;
 
-		std::unique_ptr<DescriptorAllocator> m_DescriptorAllocators[D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES];
+		
 		
 		Ref<ConstantBuffer> worldData;
 
@@ -131,12 +149,14 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 		void UploadResource(Ref<D3D12IUploadable> resource);
 
-		virtual void StartResourceUpload();
+		void UploadResource(D3D12IUploadable* resource);
+
+		void StartResourceUpload() override;
 
 		
 		UINT GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE type) const;
 
-		DescriptorAllocation AllocateDescriptors(D3D12_DESCRIPTOR_HEAP_TYPE type, uint32_t numDescriptors);
+		DescriptorAllocation AllocateDescriptors(D3D12_DESCRIPTOR_HEAP_TYPE type, uint32_t numDescriptors = 1);
 
 		void ReleaseStaleDescriptors(uint64_t finishedFrame);
 

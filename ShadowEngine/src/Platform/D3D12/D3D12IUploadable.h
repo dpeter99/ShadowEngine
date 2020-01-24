@@ -1,9 +1,9 @@
 #pragma once
 
-#include "CommandList.h"
-
 namespace ShadowEngine::Rendering::D3D12 {
 
+	class CommandList;
+	
 	class D3D12IUploadable {
 
 	public:

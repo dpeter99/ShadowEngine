@@ -8,25 +8,28 @@
 #include "ShadowAsset/Assets/Textures/Texture.h"
 #include "../CommandList.h"
 #include "Platform/D3D12/D3D12IUploadable.h"
+#include "Texture.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
 	
-	class D3D12Texture2D : public D3D12IUploadable, public Assets::Texture2DImpl, public std::enable_shared_from_this< D3D12Texture2D>
+	class D3D12Texture2D : public Texture, public Assets::Texture2DImpl
 	{
-		com_ptr<ID3D12Resource> resource;
-		com_ptr<ID3D12Resource> uploadResource;
+		//com_ptr<ID3D12Resource> resource;
+		//com_ptr<ID3D12Resource> uploadResource;
 		D3D12_RESOURCE_DESC resourceDesc;
 
 		DXGI_FORMAT format;
 		int bitsPerPixel;
 
+		SDL_Surface* img;
+		
 		bool ready;
 	public:
 			
 		D3D12Texture2D(std::string path);
 
-		com_ptr<ID3D12Resource> GetResource();
+		//com_ptr<ID3D12Resource> GetResource();
 		DXGI_FORMAT GetDXGIFormat();
 
 		// Inherited via D3D12IUploadable
@@ -36,8 +39,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 		virtual void Upload() override;
 		
 		virtual void FinishedUploading() override;
-
-
 
 	};
 

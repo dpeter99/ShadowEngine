@@ -1,7 +1,7 @@
 #pragma once
 #include "ShadowRenderer/Shader.h"
 
-#include "Common.h"
+#include "../Common.h"
 
 namespace ShadowEngine {
 	namespace Rendering {
@@ -11,20 +11,10 @@ namespace ShadowEngine {
 
 namespace ShadowEngine::Rendering::D3D12 {
 
-	/**
-	 * DX12Shader is the type ShadowEngine uses to represent byte code that has been compiled form HLSL to be used in
-	 * the Dx12 renderer. Users should not handle DX12Shader's by itself,
-	 * but the ShadowEngine::Rendering::Shader class and it's Create function to make sure the shader class is made for the right render API.
-	 * Sample Usage:
-	 *
-	 *     var shader = ShadowEngine::Rendering::Shader::CreateFromCompiled("Shaders/Default-VS.cso", "Shaders/Default-FS.cso");
-	 *
-	 * \brief 
-	 *
-	 */
 	/// <summary>
 	/// Represents the shader byte code that can be used to draw.
 	/// </summary>
+	///
 	/// 
 	/// DX12Shader is the type ShadowEngine uses to represent byte code that has been compiled form HLSL to be used in
 	/// the Dx12 renderer. Users should not handle DX12Shader's by itself,
