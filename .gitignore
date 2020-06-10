@@ -22,6 +22,8 @@ ShadowEngine/src/Shaders/**.h
 docs-source/metadata/**
 docs-source/obj/**
 
-docs/**/**
+docs/output/**
+docs/obj/**
+docs/metadata/**
 
 Captures/

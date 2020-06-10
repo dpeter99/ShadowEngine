@@ -9,6 +9,11 @@ public:
 	virtual void DestroyObject(void* object) = 0;
 };
 
+/// <summary>
+/// Entity container is a memory managger for a single type of Entity
+/// This creates <see cref="EntityContainer::MemoryChunk"/>s that contain a block of memory for ``MAX_OBJECTS_IN_CHUNK`` number of entities, when it gets full it creates a new MemoryChunk.
+/// 
+/// </summary>
 template<class Type>
 class EntityContainer : public IEntityContainer {
 

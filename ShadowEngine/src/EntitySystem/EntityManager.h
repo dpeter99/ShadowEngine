@@ -22,6 +22,10 @@ namespace ShadowEngine::EntitySystem {
 	class EntityManager {
 
 	public:
+		
+		/**
+		 * \brief Singleton instance
+		 */
 		static EntityManager* Instance;
 
 	private:
@@ -43,12 +47,13 @@ namespace ShadowEngine::EntitySystem {
 		 * It is a fast lookup, but it is not unique.
 		 * If a Entity is freed up it's index will be given out to another Entity of the same type
 		 *
-		 * To use the table simply acces the element at the index of the Entity.
+		 * To use the table simply access the element at the index of the Entity.
 		 *
 		 * \brief Quick access Look Up Table of active Entities
 		 *
 		 */
 		EntityLookupTable	m_EntityLUT;
+		
 		//Extra number of spaces to allocate in the LUT
 		const int ENTITY_LUT_GROW = 2048;
 		int LUTNextFree = 0;
