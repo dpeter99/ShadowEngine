@@ -8,7 +8,7 @@
           "/**.yml",
           "toc.yml"
         ],
-        "src": "metadata",
+        "src": "obj/metadata",
         "dest": "./apidocs"
       },
       {
