@@ -11,15 +11,7 @@ jobs:
     runs-on: windows-latest
     
     steps:
-    - uses: actions/checkout@v1
-      
-    - name: GitHub Pages Repo checkout
-      shell: cmd
-      run: ./.github/actions/publish-to-ghpages/setup.cmd
-      env:
-        FOLDER_TO_PUSH: ghpages
-        PUSH_TO_BRANCH: gh-pages
-        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+    - uses: actions/checkout@v2
       
     - name: Setup Nuget.exe
       uses: warrenbuckley/Setup-Nuget@v1
@@ -35,19 +27,17 @@ jobs:
       
     - name: Extract the cpp metadata
       shell: cmd
-      working-directory: docs-source/
+      working-directory: docs/
       run: ..\dependencies\code2yaml\code2yaml.exe code2yaml.json
 
     - name: Build the docs
       shell: cmd
-      working-directory: docs-source/
-      run: ..\packages\docfx.console.2.48.0\tools\docfx.exe docfx_CLI.json
+      working-directory: docs/
+      run: ..\dependencies\docfx\docfx-2.54\docfx.exe
 
-    - name: GitHub Pages Deploy
-      shell: cmd
-      run: ./.github/actions/publish-to-ghpages/publish.cmd
-      env:
-        FOLDER_TO_PUSH: ghpages
-        PUSH_TO_BRANCH: gh-pages
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs/output
      
