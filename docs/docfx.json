@@ -36,7 +36,8 @@
     ],
     "dest": "output",
     "template": [
-      "default"
+      "default",
+      "templates/docfx-tmpl/src"
     ],
     "disableGitFeatures": true
   }
