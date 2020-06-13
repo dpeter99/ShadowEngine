@@ -69,50 +69,78 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="ShadowEngine.EntitySystem">
-  
-  <h1 id="ShadowEngine_EntitySystem" data-uid="ShadowEngine.EntitySystem" class="text-break">Namespace ShadowEngine::EntitySystem
+  <h1 id="ShadowEngine_EntitySystem" data-uid="ShadowEngine.EntitySystem">Namespace ShadowEngine::EntitySystem
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="ShadowEngine.EntitySystem.Entity.html">Entity</a></h4>
-      <section><p>Base Entity in the scene </p><p>This is the base entity used in the game world. This should never be instantiated only the derived classes A entity has a parent and internal, external hierarchy. The parent is the Entity that this is under. This effects the position of this Entity.</p>
-<p>The internal hierarchy is used for Entities that are considered as part of this Entity these would be like components in Unity or UE4 This base Entity does not have a position so it acts like a Component in other engines. If you want to have a position you have to use <a class="xref" href="ShadowEngine.EntitySystem.SceneEntity.html">SceneEntity</a> The base Entity does however does have a Entity::GetTransform that returns the position of the first parent&#39;s position that is <a class="xref" href="ShadowEngine.EntitySystem.SceneEntity.html">SceneEntity</a></p></section>
-      <h4><a class="xref" href="ShadowEngine.EntitySystem.EntityManager.html">EntityManager</a></h4>
-      <section><p>Manages the memory and IDs of Entities. </p></section>
-      <h4><a class="xref" href="ShadowEngine.EntitySystem.EntityRegistry.html">EntityRegistry</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.EntitySystem.EntitySystem.html">EntitySystem</a></h4>
-      <section><p>The module that manages all the Entities and Scenes </p></section>
-      <h4><a class="xref" href="ShadowEngine.EntitySystem.rtm_ptr.html">rtm_ptr</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.EntitySystem.Scene.html">Scene</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.EntitySystem.SceneEntity.html">SceneEntity</a></h4>
-      <section><p>Entitys that have a world positon </p></section>
+    <table>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.EntitySystem.Entity.html">Entity</a></p>
+          <p><p>Base Entity in the scene </p><p>This is the base entity used in the game world. This should never be instantiated only the derived classes A entity has a parent and internal, external hierarchy. The parent is the Entity that this is under. This effects the position of this Entity.</p>
+<p>The internal hierarchy is used for Entities that are considered as part of this Entity these would be like components in Unity or UE4 This base Entity does not have a position so it acts like a Component in other engines. If you want to have a position you have to use <a class="xref" href="ShadowEngine.EntitySystem.SceneEntity.html">SceneEntity</a> The base Entity does however does have a Entity::GetTransform that returns the position of the first parent&#39;s position that is <a class="xref" href="ShadowEngine.EntitySystem.SceneEntity.html">SceneEntity</a></p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.EntitySystem.EntityManager.html">EntityManager</a></p>
+          <p><p>Manages the memory and IDs of Entities. </p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.EntitySystem.EntityRegistry.html">EntityRegistry</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.EntitySystem.EntitySystem.html">EntitySystem</a></p>
+          <p><p>The module that manages all the Entities and Scenes </p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.EntitySystem.rtm_ptr.html">rtm_ptr</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.EntitySystem.Scene.html">Scene</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.EntitySystem.SceneEntity.html">SceneEntity</a></p>
+          <p><p>Entitys that have a world positon </p></p>
+        </td>
+      </tr>
+    </table>
     <h3 id="structs">Structs
   </h3>
-      <h4><a class="xref" href="ShadowEngine.EntitySystem.SystemCallbacks.html">SystemCallbacks</a></h4>
-      <section></section>
+    <table>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.EntitySystem.SystemCallbacks.html">SystemCallbacks</a></p>
+          <p>
+        </td>
+      </tr>
+    </table>
 </article>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/DefaultEntities.cpp/#L14" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/DefaultEntities.cpp/#L14" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
           </div>

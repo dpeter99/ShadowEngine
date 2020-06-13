@@ -69,86 +69,186 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="ShadowEngine.Rendering">
-  
-  <h1 id="ShadowEngine_Rendering" data-uid="ShadowEngine.Rendering" class="text-break">Namespace ShadowEngine::Rendering
+  <h1 id="ShadowEngine_Rendering" data-uid="ShadowEngine.Rendering">Namespace ShadowEngine::Rendering
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="ShadowEngine.Rendering.BufferLayout.html">BufferLayout</a></h4>
-      <section><p>This class stores the layout of a Vertex buffer (pos, uv, color, etc..) This is used by the graphics api to generate the platform specific description of the vertex buffer. Each field in the Layout is stored in a BufferElement. These can be retrived by calling <code>BufferLayout.GetElements()
-    </code></p><p>The vertex buffers layout can be retrived by calling: </p></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.CommandList.html">CommandList</a></h4>
-      <section><p>A list of commands to be submitted to a CommandQueue. </p></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.CommandQueue.html">CommandQueue</a></h4>
-      <section><p>The execution queue witch can execute a Command List. </p></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.ConstantBuffer.html">ConstantBuffer</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet.html">ConstantBuffer_ShaderPropertySheet</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.ConstantBuffer_Typed.html">ConstantBuffer_Typed</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.ConstantBufferImpl.html">ConstantBufferImpl</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.GraphicsContext.html">GraphicsContext</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.IndexBuffer.html">IndexBuffer</a></h4>
-      <section><p>This is the base class for Index Buffers These are used in a Mesh to store the point triangle data </p><p>These need to be implemented by the actual graphics api (D3D12) The render api agnostic parts can use this class to refer to the actual objects.</p></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.IShaderProperty.html">IShaderProperty</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.LightNode.html">LightNode</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.OrthographicCamera.html">OrthographicCamera</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.Renderer.html">Renderer</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.RendererAPI.html">RendererAPI</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.RenderNode.html">RenderNode</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.RenderScene.html">RenderScene</a></h4>
-      <section><p>Represents the scene that we are going to render. Constins all of the Render Nodes corrsponding to each mesh we are given Contains all the Light Nodes for each light that we need to use </p></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.Shader.html">Shader</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.ShaderProperty.html">ShaderProperty</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.ShaderPropertySheet.html">ShaderPropertySheet</a></h4>
-      <section><p>Variables in a shader. </p><p>ShaderPropertySheet Contains the variables defined by a shader. This contains the actual values and the layout of the parameters </p></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.ShaderRefProperty.html">ShaderRefProperty</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.VertexBuffer.html">VertexBuffer</a></h4>
-      <section><p>This is the base class for Vertex Buffers These are used in a Mesh to store the point data </p><p>These need to be implemented by the actual graphics api (D3D12) The render api agnostic parts can use this class to refer to the actual objects.</p></section>
+    <table>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.BufferLayout.html">BufferLayout</a></p>
+          <p><p>This class stores the layout of a Vertex buffer (pos, uv, color, etc..) This is used by the graphics api to generate the platform specific description of the vertex buffer. Each field in the Layout is stored in a BufferElement. These can be retrived by calling <code>BufferLayout.GetElements()
+    </code></p><p>The vertex buffers layout can be retrived by calling: </p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.CommandList.html">CommandList</a></p>
+          <p><p>A list of commands to be submitted to a CommandQueue. </p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.CommandQueue.html">CommandQueue</a></p>
+          <p><p>The execution queue witch can execute a Command List. </p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.ConstantBuffer.html">ConstantBuffer</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.ConstantBuffer_ShaderPropertySheet.html">ConstantBuffer_ShaderPropertySheet</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.ConstantBuffer_Typed.html">ConstantBuffer_Typed</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.ConstantBufferImpl.html">ConstantBufferImpl</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.GraphicsContext.html">GraphicsContext</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.IndexBuffer.html">IndexBuffer</a></p>
+          <p><p>This is the base class for Index Buffers These are used in a Mesh to store the point triangle data </p><p>These need to be implemented by the actual graphics api (D3D12) The render api agnostic parts can use this class to refer to the actual objects.</p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.IShaderProperty.html">IShaderProperty</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.LightNode.html">LightNode</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.OrthographicCamera.html">OrthographicCamera</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.Renderer.html">Renderer</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.RendererAPI.html">RendererAPI</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.RenderNode.html">RenderNode</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.RenderScene.html">RenderScene</a></p>
+          <p><p>Represents the scene that we are going to render. Constins all of the Render Nodes corrsponding to each mesh we are given Contains all the Light Nodes for each light that we need to use </p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.Shader.html">Shader</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.ShaderProperty.html">ShaderProperty</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.ShaderPropertySheet.html">ShaderPropertySheet</a></p>
+          <p><p>Variables in a shader. </p><p>ShaderPropertySheet Contains the variables defined by a shader. This contains the actual values and the layout of the parameters </p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.ShaderRefProperty.html">ShaderRefProperty</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.VertexBuffer.html">VertexBuffer</a></p>
+          <p><p>This is the base class for Vertex Buffers These are used in a Mesh to store the point data </p><p>These need to be implemented by the actual graphics api (D3D12) The render api agnostic parts can use this class to refer to the actual objects.</p></p>
+        </td>
+      </tr>
+    </table>
     <h3 id="structs">Structs
   </h3>
-      <h4><a class="xref" href="ShadowEngine.Rendering.BufferElement.html">BufferElement</a></h4>
-      <section><p>This represents a single filed in a vertex buffer layout </p></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.LightData.html">LightData</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.ModelData.html">ModelData</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.Vertex.html">Vertex</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.WorldData.html">WorldData</a></h4>
-      <section></section>
+    <table>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.BufferElement.html">BufferElement</a></p>
+          <p><p>This represents a single filed in a vertex buffer layout </p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.LightData.html">LightData</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.ModelData.html">ModelData</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.Vertex.html">Vertex</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.WorldData.html">WorldData</a></p>
+          <p>
+        </td>
+      </tr>
+    </table>
 </article>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/Common.h/#L26" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/Common.h/#L26" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
           </div>

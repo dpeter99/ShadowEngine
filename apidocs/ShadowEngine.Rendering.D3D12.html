@@ -69,74 +69,150 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="ShadowEngine.Rendering.D3D12">
-  
-  <h1 id="ShadowEngine_Rendering_D3D12" data-uid="ShadowEngine.Rendering.D3D12" class="text-break">Namespace ShadowEngine::Rendering::D3D12
+  <h1 id="ShadowEngine_Rendering_D3D12" data-uid="ShadowEngine.Rendering.D3D12">Namespace ShadowEngine::Rendering::D3D12
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12CommandList.html">D3D12CommandList</a></h4>
-      <section><p>A list of commands Used to record graphics/compute commands and than submit them at once. </p></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12CommandQueue.html">D3D12CommandQueue</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.html">D3D12ConstantBuffer</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12Context.html">D3D12Context</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.html">D3D12DepthBuffer</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12DescriptorHeap.html">D3D12DescriptorHeap</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12Fence.html">D3D12Fence</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12IndexBuffer.html">D3D12IndexBuffer</a></h4>
-      <section><p>Index Buffer holding an index array in a Dx12 way This hold the index buffer and the buffer view for it as well. </p></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12IUploadable.html">D3D12IUploadable</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12MaterialImpl.html">D3D12MaterialImpl</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12RendererAPI.html">D3D12RendererAPI</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12Shader.html">D3D12Shader</a></h4>
-      <section><p>Represents the shader byte code that can be used to draw. </p><p>D3D12Shader is the type ShadowEngine uses to represent byte code that has been compiled form HLSL to be used in the Dx12 renderer. Users should not handle D3D12Shader&#39;s by itself, but the ShadowEngine::Rendering::Shader class and it&#39;s Create function to make sure the shader class is made for the right render API. Sample Usage:</p>
-<p>var shader = ShadowEngine::Rendering::Shader::CreateFromCompiled(&quot;Shaders/Default-VS.cso&quot;, &quot;Shaders/Default-FS.cso&quot;); </p></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12SwapChain.html">D3D12SwapChain</a></h4>
-      <section><p>Dx12 Swap Chain Used for swapping the render and present render targets. </p></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12Texture2D.html">D3D12Texture2D</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12TextureCubeMap.html">D3D12TextureCubeMap</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12UploadManagger.html">D3D12UploadManagger</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.html">D3D12VertexBuffer</a></h4>
-      <section><p>Vertex Buffer holding vertices in a Dx12 way This hold the vertex buffer and the buffer view for it as well. </p></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.HResultTester.html">HResultTester</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.UploadQueue.html">UploadQueue</a></h4>
-      <section></section>
+    <table>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12CommandList.html">D3D12CommandList</a></p>
+          <p><p>A list of commands Used to record graphics/compute commands and than submit them at once. </p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12CommandQueue.html">D3D12CommandQueue</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12ConstantBuffer.html">D3D12ConstantBuffer</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12Context.html">D3D12Context</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12DepthBuffer.html">D3D12DepthBuffer</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12DescriptorHeap.html">D3D12DescriptorHeap</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12Fence.html">D3D12Fence</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12IndexBuffer.html">D3D12IndexBuffer</a></p>
+          <p><p>Index Buffer holding an index array in a Dx12 way This hold the index buffer and the buffer view for it as well. </p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12IUploadable.html">D3D12IUploadable</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12MaterialImpl.html">D3D12MaterialImpl</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12RendererAPI.html">D3D12RendererAPI</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12Shader.html">D3D12Shader</a></p>
+          <p><p>Represents the shader byte code that can be used to draw. </p><p>D3D12Shader is the type ShadowEngine uses to represent byte code that has been compiled form HLSL to be used in the Dx12 renderer. Users should not handle D3D12Shader&#39;s by itself, but the ShadowEngine::Rendering::Shader class and it&#39;s Create function to make sure the shader class is made for the right render API. Sample Usage:</p>
+<p>var shader = ShadowEngine::Rendering::Shader::CreateFromCompiled(&quot;Shaders/Default-VS.cso&quot;, &quot;Shaders/Default-FS.cso&quot;); </p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12SwapChain.html">D3D12SwapChain</a></p>
+          <p><p>Dx12 Swap Chain Used for swapping the render and present render targets. </p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12Texture2D.html">D3D12Texture2D</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12TextureCubeMap.html">D3D12TextureCubeMap</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12UploadManagger.html">D3D12UploadManagger</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.D3D12VertexBuffer.html">D3D12VertexBuffer</a></p>
+          <p><p>Vertex Buffer holding vertices in a Dx12 way This hold the vertex buffer and the buffer view for it as well. </p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.HResultTester.html">HResultTester</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.UploadQueue.html">UploadQueue</a></p>
+          <p>
+        </td>
+      </tr>
+    </table>
     <h3 id="structs">Structs
   </h3>
-      <h4><a class="xref" href="ShadowEngine.Rendering.D3D12.DescriptorAllocation.html">DescriptorAllocation</a></h4>
-      <section></section>
+    <table>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.Rendering.D3D12.DescriptorAllocation.html">DescriptorAllocation</a></p>
+          <p>
+        </td>
+      </tr>
+    </table>
 </article>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/Common.h/#L26" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/Common.h/#L26" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
           </div>

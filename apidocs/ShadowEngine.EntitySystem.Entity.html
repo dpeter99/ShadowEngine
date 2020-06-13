@@ -69,19 +69,20 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="ShadowEngine.EntitySystem.Entity">
-  
-  
-  <h1 id="ShadowEngine_EntitySystem_Entity" data-uid="ShadowEngine.EntitySystem.Entity" class="text-break">Class Entity
+  <h1 id="ShadowEngine_EntitySystem_Entity" data-uid="ShadowEngine.EntitySystem.Entity">Class Entity
   </h1>
   <div class="markdown level0 summary"><p>Base Entity in the scene </p><p>This is the base entity used in the game world. This should never be instantiated only the derived classes A entity has a parent and internal, external hierarchy. The parent is the Entity that this is under. This effects the position of this Entity.</p>
 <p>The internal hierarchy is used for Entities that are considered as part of this Entity these would be like components in Unity or UE4 This base Entity does not have a position so it acts like a Component in other engines. If you want to have a position you have to use <a class="xref" href="ShadowEngine.EntitySystem.SceneEntity.html">SceneEntity</a> The base Entity does however does have a Entity::GetTransform that returns the position of the first parent&#39;s position that is <a class="xref" href="ShadowEngine.EntitySystem.SceneEntity.html">SceneEntity</a></p></div>
   <div class="markdown level0 conceptual"></div>
+  
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System::Object</span></div>
     <div class="level1"><a class="xref" href="ShadowEngine.SHObject.html">SHObject</a></div>
     <div class="level2"><span class="xref">Entity</span></div>
   </div>
+  
+  
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -100,696 +101,992 @@
       <a class="xref" href="ShadowEngine.SHObject.html#ShadowEngine_SHObject__SHObject__">SHObject::~SHObject()</a>
     </div>
   </div>
+  
   <h6><strong>Namespace</strong>: <a class="xref" href="ShadowEngine.EntitySystem.html">ShadowEngine::EntitySystem</a></h6>
   <h6><strong>Assembly</strong>: .dll</h6>
+  
   <h5 id="ShadowEngine_EntitySystem_Entity_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: class Entity : public HObject</code></pre>
   </div>
+  
+  
+  
+  
+  
   <h3 id="constructors">Constructors
   </h3>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity__Entity__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.~Entity()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity__Entity__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.~Entity()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L159">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L159" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity__Entity_" data-uid="ShadowEngine.EntitySystem.Entity.~Entity*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity__Entity__" data-uid="ShadowEngine.EntitySystem.Entity.~Entity()">~Entity()</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity__Entity__" data-uid="ShadowEngine.EntitySystem.Entity.~Entity()"><a href="#collapsible-ShadowEngine_EntitySystem_Entity__Entity__" class="expander" data-toggle="collapse">~Entity()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity__Entity__" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: virtual ~Entity()</code></pre>
   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_Entity__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.Entity()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_Entity__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.Entity()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.cpp/#L38">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.cpp/#L38" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_Entity_" data-uid="ShadowEngine.EntitySystem.Entity.Entity*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_Entity__" data-uid="ShadowEngine.EntitySystem.Entity.Entity()">Entity()</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_Entity__" data-uid="ShadowEngine.EntitySystem.Entity.Entity()"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_Entity__" class="expander" data-toggle="collapse">Entity()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_Entity__" class="collapse in">
   <div class="markdown level1 summary"><p>Empty default constructor </p></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: Entity()</code></pre>
   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_Entity_Scene___.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.Entity(Scene%20*)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_Entity_Scene___.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.Entity(Scene%20*)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.cpp/#L43">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.cpp/#L43" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_Entity_" data-uid="ShadowEngine.EntitySystem.Entity.Entity*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_Entity_Scene___" data-uid="ShadowEngine.EntitySystem.Entity.Entity(Scene *)">Entity(Scene *scene)</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_Entity_Scene___" data-uid="ShadowEngine.EntitySystem.Entity.Entity(Scene *)"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_Entity_Scene___" class="expander" data-toggle="collapse">Entity(Scene *scene)</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_Entity_Scene___" class="collapse in">
   <div class="markdown level1 summary"><p>Constructor defining the scene it is located in </p></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: Entity(Scene *scene)</code></pre>
   </div>
+  
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ShadowEngine.EntitySystem.Scene.html">Scene</a> *</td>
-        <td><span class="parametername">scene</span></td>
-        <td><p>The scene that this entity is in</p></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="ShadowEngine.EntitySystem.Scene.html">Scene</a> *</span>
+        <span class="parametername">scene</span>
+        <p><p>The scene that this entity is in</p></p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
   <h3 id="methods">Methods
   </h3>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_AddChildEntity_ARGS_______.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.AddChildEntity(ARGS%20%26%26...)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_AddChildEntity_ARGS_______.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.AddChildEntity(ARGS%20%26%26...)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L222">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L222" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_AddChildEntity_" data-uid="ShadowEngine.EntitySystem.Entity.AddChildEntity*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_AddChildEntity_ARGS_______" data-uid="ShadowEngine.EntitySystem.Entity.AddChildEntity(ARGS &amp;&amp;...)">AddChildEntity(ARGS &amp;&amp;... args)</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_AddChildEntity_ARGS_______" data-uid="ShadowEngine.EntitySystem.Entity.AddChildEntity(ARGS &amp;&amp;...)"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_AddChildEntity_ARGS_______" class="expander" data-toggle="collapse">AddChildEntity(ARGS &amp;&amp;... args)</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_AddChildEntity_ARGS_______" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: rtm_ptr&lt;T&gt; AddChildEntity(ARGS &amp;&amp;... args)</code></pre>
   </div>
+  
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>ARGS &amp;&amp;...</td>
-        <td><span class="parametername">args</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right">ARGS &amp;&amp;...</span>
+        <span class="parametername">args</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ShadowEngine.EntitySystem.rtm_ptr.html">rtm_ptr</a>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="ShadowEngine.EntitySystem.rtm_ptr.html">rtm_ptr</a>&lt;T&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">class T</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">class ...</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="parametername">class T</span>
+        <p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="parametername">class ...</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_AddInternalChildEntity_ARGS_______.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.AddInternalChildEntity(ARGS%20%26%26...)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_AddInternalChildEntity_ARGS_______.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.AddInternalChildEntity(ARGS%20%26%26...)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L232">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L232" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_AddInternalChildEntity_" data-uid="ShadowEngine.EntitySystem.Entity.AddInternalChildEntity*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_AddInternalChildEntity_ARGS_______" data-uid="ShadowEngine.EntitySystem.Entity.AddInternalChildEntity(ARGS &amp;&amp;...)">AddInternalChildEntity(ARGS &amp;&amp;... args)</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_AddInternalChildEntity_ARGS_______" data-uid="ShadowEngine.EntitySystem.Entity.AddInternalChildEntity(ARGS &amp;&amp;...)"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_AddInternalChildEntity_ARGS_______" class="expander" data-toggle="collapse">AddInternalChildEntity(ARGS &amp;&amp;... args)</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_AddInternalChildEntity_ARGS_______" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: rtm_ptr&lt;T&gt; AddInternalChildEntity(ARGS &amp;&amp;... args)</code></pre>
   </div>
+  
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>ARGS &amp;&amp;...</td>
-        <td><span class="parametername">args</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right">ARGS &amp;&amp;...</span>
+        <span class="parametername">args</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ShadowEngine.EntitySystem.rtm_ptr.html">rtm_ptr</a>&lt;T&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="ShadowEngine.EntitySystem.rtm_ptr.html">rtm_ptr</a>&lt;T&gt;
+        <p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">class T</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">class ...</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="parametername">class T</span>
+        <p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="parametername">class ...</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_Build__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.Build()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_Build__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.Build()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L168">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L168" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_Build_" data-uid="ShadowEngine.EntitySystem.Entity.Build*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_Build__" data-uid="ShadowEngine.EntitySystem.Entity.Build()">Build()</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_Build__" data-uid="ShadowEngine.EntitySystem.Entity.Build()"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_Build__" class="expander" data-toggle="collapse">Build()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_Build__" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: virtual void Build()</code></pre>
   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_Create_Scene___.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.Create(Scene%20*)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_Create_Scene___.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.Create(Scene%20*)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.cpp/#L48">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.cpp/#L48" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_Create_" data-uid="ShadowEngine.EntitySystem.Entity.Create*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_Create_Scene___" data-uid="ShadowEngine.EntitySystem.Entity.Create(Scene *)">Create(Scene *scene)</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_Create_Scene___" data-uid="ShadowEngine.EntitySystem.Entity.Create(Scene *)"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_Create_Scene___" class="expander" data-toggle="collapse">Create(Scene *scene)</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_Create_Scene___" class="collapse in">
   <div class="markdown level1 summary"><p>Creates a new Entity </p></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: virtual Entity * Create(Scene *scene)</code></pre>
   </div>
+  
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ShadowEngine.EntitySystem.Scene.html">Scene</a> *</td>
-        <td><span class="parametername">scene</span></td>
-        <td><p>The scene that this entity is in</p></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="ShadowEngine.EntitySystem.Scene.html">Scene</a> *</span>
+        <span class="parametername">scene</span>
+        <p><p>The scene that this entity is in</p></p>
+      </td>
+    </tr>
   </table>
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ShadowEngine.EntitySystem.Entity.html">Entity</a> *</td>
-        <td><p>Pointer to the Entity created</p></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="ShadowEngine.EntitySystem.Entity.html">Entity</a> *
+        <p><p>Pointer to the Entity created</p></p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_GetFlags__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.GetFlags()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_GetFlags__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.GetFlags()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.cpp/#L12">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.cpp/#L12" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_GetFlags_" data-uid="ShadowEngine.EntitySystem.Entity.GetFlags*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_GetFlags__" data-uid="ShadowEngine.EntitySystem.Entity.GetFlags()">GetFlags()</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_GetFlags__" data-uid="ShadowEngine.EntitySystem.Entity.GetFlags()"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_GetFlags__" class="expander" data-toggle="collapse">GetFlags()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_GetFlags__" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: virtual EntityFlags GetFlags()</code></pre>
   </div>
+  
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>EntityFlags</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        EntityFlags
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_GetTransform__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.GetTransform()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_GetTransform__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.GetTransform()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.cpp/#L17">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.cpp/#L17" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_GetTransform_" data-uid="ShadowEngine.EntitySystem.Entity.GetTransform*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_GetTransform__" data-uid="ShadowEngine.EntitySystem.Entity.GetTransform()">GetTransform()</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_GetTransform__" data-uid="ShadowEngine.EntitySystem.Entity.GetTransform()"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_GetTransform__" class="expander" data-toggle="collapse">GetTransform()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_GetTransform__" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: virtual ShadowEntity::Transform * GetTransform()</code></pre>
   </div>
+  
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ShadowEngine.ShadowEntity.Transform.html">Transform</a> *</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <a class="xref" href="ShadowEngine.ShadowEntity.Transform.html">Transform</a> *
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_Init__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.Init()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_Init__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.Init()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L174">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L174" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_Init_" data-uid="ShadowEngine.EntitySystem.Entity.Init*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_Init__" data-uid="ShadowEngine.EntitySystem.Entity.Init()">Init()</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_Init__" data-uid="ShadowEngine.EntitySystem.Entity.Init()"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_Init__" class="expander" data-toggle="collapse">Init()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_Init__" class="collapse in">
   <div class="markdown level1 summary"><p>Called when the Entity needs to be initialised. </p><p>Called when the Entity needs to be initialised. Should be used as a constructor</p></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: virtual void Init()</code></pre>
   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_InitEntities_EntityManager___.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.InitEntities(EntityManager%20*)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_InitEntities_EntityManager___.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.InitEntities(EntityManager%20*)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L259">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L259" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_InitEntities_" data-uid="ShadowEngine.EntitySystem.Entity.InitEntities*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_InitEntities_EntityManager___" data-uid="ShadowEngine.EntitySystem.Entity.InitEntities(EntityManager *)">InitEntities(EntityManager *mgr)</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_InitEntities_EntityManager___" data-uid="ShadowEngine.EntitySystem.Entity.InitEntities(EntityManager *)"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_InitEntities_EntityManager___" class="expander" data-toggle="collapse">InitEntities(EntityManager *mgr)</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_InitEntities_EntityManager___" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: static void InitEntities(EntityManager *mgr)</code></pre>
   </div>
+  
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ShadowEngine.EntitySystem.EntityManager.html">EntityManager</a> *</td>
-        <td><span class="parametername">mgr</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="ShadowEngine.EntitySystem.EntityManager.html">EntityManager</a> *</span>
+        <span class="parametername">mgr</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">class T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="parametername">class T</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_LateRender__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.LateRender()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_LateRender__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.LateRender()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L193">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L193" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_LateRender_" data-uid="ShadowEngine.EntitySystem.Entity.LateRender*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_LateRender__" data-uid="ShadowEngine.EntitySystem.Entity.LateRender()">LateRender()</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_LateRender__" data-uid="ShadowEngine.EntitySystem.Entity.LateRender()"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_LateRender__" class="expander" data-toggle="collapse">LateRender()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_LateRender__" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: virtual void LateRender()</code></pre>
   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_LateUpdate__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.LateUpdate()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_LateUpdate__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.LateUpdate()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L189">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L189" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_LateUpdate_" data-uid="ShadowEngine.EntitySystem.Entity.LateUpdate*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_LateUpdate__" data-uid="ShadowEngine.EntitySystem.Entity.LateUpdate()">LateUpdate()</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_LateUpdate__" data-uid="ShadowEngine.EntitySystem.Entity.LateUpdate()"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_LateUpdate__" class="expander" data-toggle="collapse">LateUpdate()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_LateUpdate__" class="collapse in">
   <div class="markdown level1 summary"><p>Called every Tick after the first is finished </p></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: virtual void LateUpdate()</code></pre>
   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_ParentTransformUpdated__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.ParentTransformUpdated()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_ParentTransformUpdated__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.ParentTransformUpdated()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L202">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L202" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_ParentTransformUpdated_" data-uid="ShadowEngine.EntitySystem.Entity.ParentTransformUpdated*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_ParentTransformUpdated__" data-uid="ShadowEngine.EntitySystem.Entity.ParentTransformUpdated()">ParentTransformUpdated()</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_ParentTransformUpdated__" data-uid="ShadowEngine.EntitySystem.Entity.ParentTransformUpdated()"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_ParentTransformUpdated__" class="expander" data-toggle="collapse">ParentTransformUpdated()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_ParentTransformUpdated__" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: virtual void ParentTransformUpdated()</code></pre>
   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_RegisterDefaultUpdate_EntityManager___.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.RegisterDefaultUpdate(EntityManager%20%26)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_RegisterDefaultUpdate_EntityManager___.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.RegisterDefaultUpdate(EntityManager%20%26)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L272">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L272" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_RegisterDefaultUpdate_" data-uid="ShadowEngine.EntitySystem.Entity.RegisterDefaultUpdate*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_RegisterDefaultUpdate_EntityManager___" data-uid="ShadowEngine.EntitySystem.Entity.RegisterDefaultUpdate(EntityManager &amp;)">RegisterDefaultUpdate(EntityManager &amp;mgr)</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_RegisterDefaultUpdate_EntityManager___" data-uid="ShadowEngine.EntitySystem.Entity.RegisterDefaultUpdate(EntityManager &amp;)"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_RegisterDefaultUpdate_EntityManager___" class="expander" data-toggle="collapse">RegisterDefaultUpdate(EntityManager &amp;mgr)</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_RegisterDefaultUpdate_EntityManager___" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: static void RegisterDefaultUpdate(EntityManager &amp;mgr)</code></pre>
   </div>
+  
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ShadowEngine.EntitySystem.EntityManager.html">EntityManager</a> &amp;</td>
-        <td><span class="parametername">mgr</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="ShadowEngine.EntitySystem.EntityManager.html">EntityManager</a> &amp;</span>
+        <span class="parametername">mgr</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">class T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="parametername">class T</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_Render__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.Render()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_Render__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.Render()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L191">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L191" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_Render_" data-uid="ShadowEngine.EntitySystem.Entity.Render*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_Render__" data-uid="ShadowEngine.EntitySystem.Entity.Render()">Render()</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_Render__" data-uid="ShadowEngine.EntitySystem.Entity.Render()"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_Render__" class="expander" data-toggle="collapse">Render()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_Render__" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: virtual void Render()</code></pre>
   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_SetParent_rtm_ptr_Entity__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.SetParent(rtm_ptr%3CEntity%3E)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_SetParent_rtm_ptr_Entity__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.SetParent(rtm_ptr%3CEntity%3E)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.cpp/#L33">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.cpp/#L33" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_SetParent_" data-uid="ShadowEngine.EntitySystem.Entity.SetParent*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_SetParent_rtm_ptr_Entity__" data-uid="ShadowEngine.EntitySystem.Entity.SetParent(rtm_ptr&lt;Entity&gt;)">SetParent(rtm_ptr&lt;Entity&gt; e)</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_SetParent_rtm_ptr_Entity__" data-uid="ShadowEngine.EntitySystem.Entity.SetParent(rtm_ptr&lt;Entity&gt;)"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_SetParent_rtm_ptr_Entity__" class="expander" data-toggle="collapse">SetParent(rtm_ptr&lt;Entity&gt; e)</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_SetParent_rtm_ptr_Entity__" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: virtual void SetParent(rtm_ptr&lt;Entity&gt; e)</code></pre>
   </div>
+  
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ShadowEngine.EntitySystem.rtm_ptr.html">rtm_ptr</a>&lt;<a class="xref" href="ShadowEngine.EntitySystem.Entity.html">Entity</a>&gt;</td>
-        <td><span class="parametername">e</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="ShadowEngine.EntitySystem.rtm_ptr.html">rtm_ptr</a>&lt;<a class="xref" href="ShadowEngine.EntitySystem.Entity.html">Entity</a>&gt;</span>
+        <span class="parametername">e</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_SetScene_Scene___.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.SetScene(Scene%20*)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_SetScene_Scene___.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.SetScene(Scene%20*)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.cpp/#L28">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.cpp/#L28" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_SetScene_" data-uid="ShadowEngine.EntitySystem.Entity.SetScene*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_SetScene_Scene___" data-uid="ShadowEngine.EntitySystem.Entity.SetScene(Scene *)">SetScene(Scene *se)</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_SetScene_Scene___" data-uid="ShadowEngine.EntitySystem.Entity.SetScene(Scene *)"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_SetScene_Scene___" class="expander" data-toggle="collapse">SetScene(Scene *se)</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_SetScene_Scene___" class="collapse in">
   <div class="markdown level1 summary"><p>Sets the scene this Entity is in </p></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: void SetScene(Scene *se)</code></pre>
   </div>
+  
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ShadowEngine.EntitySystem.Scene.html">Scene</a> *</td>
-        <td><span class="parametername">se</span></td>
-        <td><p>The scene this entity belongs to</p></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="ShadowEngine.EntitySystem.Scene.html">Scene</a> *</span>
+        <span class="parametername">se</span>
+        <p><p>The scene this entity belongs to</p></p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_Start__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.Start()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_Start__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.Start()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L179">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L179" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_Start_" data-uid="ShadowEngine.EntitySystem.Entity.Start*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_Start__" data-uid="ShadowEngine.EntitySystem.Entity.Start()">Start()</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_Start__" data-uid="ShadowEngine.EntitySystem.Entity.Start()"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_Start__" class="expander" data-toggle="collapse">Start()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_Start__" class="collapse in">
   <div class="markdown level1 summary"><p>Called when the world starts or before the Entity get&#39;s it&#39;s first tick </p></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: virtual void Start()</code></pre>
   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_TransformChanged__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.TransformChanged()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_TransformChanged__.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.TransformChanged()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L208">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L208" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_TransformChanged_" data-uid="ShadowEngine.EntitySystem.Entity.TransformChanged*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_TransformChanged__" data-uid="ShadowEngine.EntitySystem.Entity.TransformChanged()">TransformChanged()</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_TransformChanged__" data-uid="ShadowEngine.EntitySystem.Entity.TransformChanged()"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_TransformChanged__" class="expander" data-toggle="collapse">TransformChanged()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_TransformChanged__" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: virtual void TransformChanged()</code></pre>
   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_Update_float_.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.Update(float)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_Update_float_.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.Update(float)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L184">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L184" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_Update_" data-uid="ShadowEngine.EntitySystem.Entity.Update*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_Update_float_" data-uid="ShadowEngine.EntitySystem.Entity.Update(float)">Update(float dt)</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_Update_float_" data-uid="ShadowEngine.EntitySystem.Entity.Update(float)"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_Update_float_" class="expander" data-toggle="collapse">Update(float dt)</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_Update_float_" class="collapse in">
   <div class="markdown level1 summary"><p>Called every tick </p></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: virtual void Update(float dt)</code></pre>
   </div>
+  
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>float</td>
-        <td><span class="parametername">dt</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right">float</span>
+        <span class="parametername">dt</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_UpdateEntities_EntityManager___float_.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.UpdateEntities(EntityManager%20*%2Cfloat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity_UpdateEntities_EntityManager___float_.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity.UpdateEntities(EntityManager%20*%2Cfloat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L246">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L246" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_EntitySystem_Entity_UpdateEntities_" data-uid="ShadowEngine.EntitySystem.Entity.UpdateEntities*"></a>
-  <h4 id="ShadowEngine_EntitySystem_Entity_UpdateEntities_EntityManager___float_" data-uid="ShadowEngine.EntitySystem.Entity.UpdateEntities(EntityManager *,float)">UpdateEntities(EntityManager *mgr, float dt)</h4>
+  
+  <h4 id="ShadowEngine_EntitySystem_Entity_UpdateEntities_EntityManager___float_" data-uid="ShadowEngine.EntitySystem.Entity.UpdateEntities(EntityManager *,float)"><a href="#collapsible-ShadowEngine_EntitySystem_Entity_UpdateEntities_EntityManager___float_" class="expander" data-toggle="collapse">UpdateEntities(EntityManager *mgr, float dt)</a></h4>
+  
+  <div id="collapsible-ShadowEngine_EntitySystem_Entity_UpdateEntities_EntityManager___float_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: static void UpdateEntities(EntityManager *mgr, float dt)</code></pre>
   </div>
+  
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ShadowEngine.EntitySystem.EntityManager.html">EntityManager</a> *</td>
-        <td><span class="parametername">mgr</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>float</td>
-        <td><span class="parametername">dt</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right"><a class="xref" href="ShadowEngine.EntitySystem.EntityManager.html">EntityManager</a> *</span>
+        <span class="parametername">mgr</span>
+        <p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="pull-right">float</span>
+        <span class="parametername">dt</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
   <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">class T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="parametername">class T</span>
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
+  
 </article>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L94" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_EntitySystem_Entity.md&amp;value=---%0Auid%3A%20ShadowEngine.EntitySystem.Entity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/EntitySystem/Entity.h/#L94" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
           </div>

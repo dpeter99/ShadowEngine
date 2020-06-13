@@ -69,19 +69,20 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader">
-  
-  
-  <h1 id="ShadowEngine_Rendering_D3D12_D3D12Shader" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader" class="text-break">Class D3D12Shader
+  <h1 id="ShadowEngine_Rendering_D3D12_D3D12Shader" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader">Class D3D12Shader
   </h1>
   <div class="markdown level0 summary"><p>Represents the shader byte code that can be used to draw. </p><p>D3D12Shader is the type ShadowEngine uses to represent byte code that has been compiled form HLSL to be used in the Dx12 renderer. Users should not handle D3D12Shader&#39;s by itself, but the ShadowEngine::Rendering::Shader class and it&#39;s Create function to make sure the shader class is made for the right render API. Sample Usage:</p>
 <p>var shader = ShadowEngine::Rendering::Shader::CreateFromCompiled(&quot;Shaders/Default-VS.cso&quot;, &quot;Shaders/Default-FS.cso&quot;); </p></div>
   <div class="markdown level0 conceptual"></div>
+  
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System::Object</span></div>
     <div class="level1"><a class="xref" href="ShadowEngine.Rendering.Shader.html">Shader</a></div>
     <div class="level2"><span class="xref">D3D12Shader</span></div>
   </div>
+  
+  
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
@@ -100,211 +101,323 @@
       <a class="xref" href="ShadowEngine.Rendering.Shader.html#ShadowEngine_Rendering_Shader__Shader__">Shader::~Shader()</a>
     </div>
   </div>
+  
   <h6><strong>Namespace</strong>: <a class="xref" href="ShadowEngine.Rendering.D3D12.html">ShadowEngine::Rendering::D3D12</a></h6>
   <h6><strong>Assembly</strong>: .dll</h6>
+  
   <h5 id="ShadowEngine_Rendering_D3D12_D3D12Shader_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: class D3D12Shader : public ader</code></pre>
   </div>
+  
+  
+  
+  
+  
   <h3 id="constructors">Constructors
   </h3>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12_D3D12Shader__D3D12Shader__.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12.D3D12Shader.~D3D12Shader()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12_D3D12Shader__D3D12Shader__.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12.D3D12Shader.~D3D12Shader()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp/#L534">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp/#L534" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_Rendering_D3D12_D3D12Shader__D3D12Shader_" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.~D3D12Shader*"></a>
-  <h4 id="ShadowEngine_Rendering_D3D12_D3D12Shader__D3D12Shader__" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.~D3D12Shader()">~D3D12Shader()</h4>
+  
+  <h4 id="ShadowEngine_Rendering_D3D12_D3D12Shader__D3D12Shader__" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.~D3D12Shader()"><a href="#collapsible-ShadowEngine_Rendering_D3D12_D3D12Shader__D3D12Shader__" class="expander" data-toggle="collapse">~D3D12Shader()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_Rendering_D3D12_D3D12Shader__D3D12Shader__" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: virtual ~D3D12Shader()</code></pre>
   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12_D3D12Shader_D3D12Shader_const_std__string___const_std__string___.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12.D3D12Shader.D3D12Shader(const%20std%3A%3Astring%20%26%2Cconst%20std%3A%3Astring%20%26)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12_D3D12Shader_D3D12Shader_const_std__string___const_std__string___.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12.D3D12Shader.D3D12Shader(const%20std%3A%3Astring%20%26%2Cconst%20std%3A%3Astring%20%26)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp/#L479">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp/#L479" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_Rendering_D3D12_D3D12Shader_D3D12Shader_" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.D3D12Shader*"></a>
-  <h4 id="ShadowEngine_Rendering_D3D12_D3D12Shader_D3D12Shader_const_std__string___const_std__string___" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.D3D12Shader(const std::string &amp;,const std::string &amp;)">D3D12Shader(const std::string &amp;VSfilePath, const std::string &amp;PSfilePath)</h4>
+  
+  <h4 id="ShadowEngine_Rendering_D3D12_D3D12Shader_D3D12Shader_const_std__string___const_std__string___" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.D3D12Shader(const std::string &amp;,const std::string &amp;)"><a href="#collapsible-ShadowEngine_Rendering_D3D12_D3D12Shader_D3D12Shader_const_std__string___const_std__string___" class="expander" data-toggle="collapse">D3D12Shader(const std::string &amp;VSfilePath, const std::string &amp;PSfilePath)</a></h4>
+  
+  <div id="collapsible-ShadowEngine_Rendering_D3D12_D3D12Shader_D3D12Shader_const_std__string___const_std__string___" class="collapse in">
   <div class="markdown level1 summary"><p>Constructor for D3D12 Shaders. </p></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: D3D12Shader(const std::string &amp;VSfilePath, const std::string &amp;PSfilePath)</code></pre>
   </div>
+  
   <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>const std::string &amp;</td>
-        <td><span class="parametername">VSfilePath</span></td>
-        <td><p>File path to the Compiled HLSL Vertex shader </p></td>
-      </tr>
-      <tr>
-        <td>const std::string &amp;</td>
-        <td><span class="parametername">PSfilePath</span></td>
-        <td><p>File path to the Compiled HLSL Fragment shader </p></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        <span class="pull-right">const std::string &amp;</span>
+        <span class="parametername">VSfilePath</span>
+        <p><p>File path to the Compiled HLSL Vertex shader </p></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="pull-right">const std::string &amp;</span>
+        <span class="parametername">PSfilePath</span>
+        <p><p>File path to the Compiled HLSL Fragment shader </p></p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
   <h3 id="methods">Methods
   </h3>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12_D3D12Shader_Bind__.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12.D3D12Shader.Bind()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12_D3D12Shader_Bind__.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12.D3D12Shader.Bind()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp/#L554">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp/#L554" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_Rendering_D3D12_D3D12Shader_Bind_" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.Bind*"></a>
-  <h4 id="ShadowEngine_Rendering_D3D12_D3D12Shader_Bind__" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.Bind()">Bind()</h4>
+  
+  <h4 id="ShadowEngine_Rendering_D3D12_D3D12Shader_Bind__" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.Bind()"><a href="#collapsible-ShadowEngine_Rendering_D3D12_D3D12Shader_Bind__" class="expander" data-toggle="collapse">Bind()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_Rendering_D3D12_D3D12Shader_Bind__" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: virtual void Bind() const</code></pre>
   </div>
+  
+  
+  
+  
+  
+  
+  
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ShadowEngine.Rendering.Shader.html#ShadowEngine_Rendering_Shader_Bind__">Shader::Bind()</a></div>
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12_D3D12Shader_GetMaterialSlotIndex__.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12.D3D12Shader.GetMaterialSlotIndex()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12_D3D12Shader_GetMaterialSlotIndex__.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12.D3D12Shader.GetMaterialSlotIndex()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp/#L549">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp/#L549" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_Rendering_D3D12_D3D12Shader_GetMaterialSlotIndex_" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.GetMaterialSlotIndex*"></a>
-  <h4 id="ShadowEngine_Rendering_D3D12_D3D12Shader_GetMaterialSlotIndex__" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.GetMaterialSlotIndex()">GetMaterialSlotIndex()</h4>
+  
+  <h4 id="ShadowEngine_Rendering_D3D12_D3D12Shader_GetMaterialSlotIndex__" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.GetMaterialSlotIndex()"><a href="#collapsible-ShadowEngine_Rendering_D3D12_D3D12Shader_GetMaterialSlotIndex__" class="expander" data-toggle="collapse">GetMaterialSlotIndex()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_Rendering_D3D12_D3D12Shader_GetMaterialSlotIndex__" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: int GetMaterialSlotIndex()</code></pre>
   </div>
+  
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>int</td>
-        <td></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        int
+        <p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12_D3D12Shader_GetPipelineState__.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12.D3D12Shader.GetPipelineState()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12_D3D12Shader_GetPipelineState__.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12.D3D12Shader.GetPipelineState()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp/#L539">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp/#L539" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_Rendering_D3D12_D3D12Shader_GetPipelineState_" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.GetPipelineState*"></a>
-  <h4 id="ShadowEngine_Rendering_D3D12_D3D12Shader_GetPipelineState__" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.GetPipelineState()">GetPipelineState()</h4>
+  
+  <h4 id="ShadowEngine_Rendering_D3D12_D3D12Shader_GetPipelineState__" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.GetPipelineState()"><a href="#collapsible-ShadowEngine_Rendering_D3D12_D3D12Shader_GetPipelineState__" class="expander" data-toggle="collapse">GetPipelineState()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_Rendering_D3D12_D3D12Shader_GetPipelineState__" class="collapse in">
   <div class="markdown level1 summary"><p>Returns the pipeline state. </p><p>Used to get the pipe line state object for the represented shader code. Returns the default Dx12 ID3D12PipelineState object</p>
 <p></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: com_ptr&lt;ID3D12PipelineState&gt; GetPipelineState()</code></pre>
   </div>
+  
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>com_ptr&lt;ID3D12PipelineState&gt;</td>
-        <td><p>The com pointer of the root signature </p></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        com_ptr&lt;ID3D12PipelineState&gt;
+        <p><p>The com pointer of the root signature </p></p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12_D3D12Shader_GetRootSignature__.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12.D3D12Shader.GetRootSignature()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12_D3D12Shader_GetRootSignature__.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12.D3D12Shader.GetRootSignature()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp/#L544">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp/#L544" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_Rendering_D3D12_D3D12Shader_GetRootSignature_" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.GetRootSignature*"></a>
-  <h4 id="ShadowEngine_Rendering_D3D12_D3D12Shader_GetRootSignature__" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.GetRootSignature()">GetRootSignature()</h4>
+  
+  <h4 id="ShadowEngine_Rendering_D3D12_D3D12Shader_GetRootSignature__" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.GetRootSignature()"><a href="#collapsible-ShadowEngine_Rendering_D3D12_D3D12Shader_GetRootSignature__" class="expander" data-toggle="collapse">GetRootSignature()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_Rendering_D3D12_D3D12Shader_GetRootSignature__" class="collapse in">
   <div class="markdown level1 summary"><p>Returns the Root signature. </p><p>Used to get the root signature of the represented shader code. Returns the default Dx12 ID3D12RootSignature object</p>
 <p></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: com_ptr&lt;ID3D12RootSignature&gt; GetRootSignature()</code></pre>
   </div>
+  
+  
   <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>com_ptr&lt;ID3D12RootSignature&gt;</td>
-        <td><p>The com pointer of the root signature </p></td>
-      </tr>
-    </tbody>
+  <table>
+    <tr>
+      <td>
+        com_ptr&lt;ID3D12RootSignature&gt;
+        <p><p>The com pointer of the root signature </p></p>
+      </td>
+    </tr>
   </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
   <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12_D3D12Shader_Unbind__.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12.D3D12Shader.Unbind()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12_D3D12Shader_Unbind__.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12.D3D12Shader.Unbind()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp/#L559">View Source</a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/D3D12Shader.cpp/#L559" title="View Source"><i class="fa fa-code"></i></a>
   </span>
+  
   <a id="ShadowEngine_Rendering_D3D12_D3D12Shader_Unbind_" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.Unbind*"></a>
-  <h4 id="ShadowEngine_Rendering_D3D12_D3D12Shader_Unbind__" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.Unbind()">Unbind()</h4>
+  
+  <h4 id="ShadowEngine_Rendering_D3D12_D3D12Shader_Unbind__" data-uid="ShadowEngine.Rendering.D3D12.D3D12Shader.Unbind()"><a href="#collapsible-ShadowEngine_Rendering_D3D12_D3D12Shader_Unbind__" class="expander" data-toggle="collapse">Unbind()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_Rendering_D3D12_D3D12Shader_Unbind__" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public: virtual void Unbind() const</code></pre>
   </div>
+  
+  
+  
+  
+  
+  
+  
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="ShadowEngine.Rendering.Shader.html#ShadowEngine_Rendering_Shader_Unbind__">Shader::Unbind()</a></div>
+  
+  
+  
+  
+  
+  </div>
+  
+  
 </article>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12_D3D12Shader.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12.D3D12Shader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/D3D12Shader.h/#L25" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Rendering_D3D12_D3D12Shader.md&amp;value=---%0Auid%3A%20ShadowEngine.Rendering.D3D12.D3D12Shader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Platform/D3D12/D3D12Shader.h/#L25" class="contribution-link">View Source</a>
-                  </li>
-                </ul>
-              </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
           </div>
