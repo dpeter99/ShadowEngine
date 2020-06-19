@@ -281,210 +281,6 @@ references:
   isSpec: "True"
   fullName: void DirectionalLightInspector::Draw
   nameWithType: DirectionalLightInspector::Draw
-- uid: EntityContainer
-  name: EntityContainer
-  href: apidocs/EntityContainer.html
-  fullName: EntityContainer
-  nameWithType: EntityContainer
-- uid: EntityContainer.begin()
-  name: begin()
-  href: apidocs/EntityContainer.html#EntityContainer_begin__
-  fullName: iterator EntityContainer<Type>::begin()
-  nameWithType: EntityContainer::begin()
-- uid: EntityContainer.begin*
-  name: begin
-  href: apidocs/EntityContainer.html#EntityContainer_begin_
-  isSpec: "True"
-  fullName: iterator EntityContainer<Type>::begin
-  nameWithType: EntityContainer::begin
-- uid: EntityContainer.CreateObject()
-  name: CreateObject()
-  href: apidocs/EntityContainer.html#EntityContainer_CreateObject__
-  fullName: void* EntityContainer<Type>::CreateObject()
-  nameWithType: EntityContainer::CreateObject()
-- uid: EntityContainer.CreateObject*
-  name: CreateObject
-  href: apidocs/EntityContainer.html#EntityContainer_CreateObject_
-  isSpec: "True"
-  fullName: void* EntityContainer<Type>::CreateObject
-  nameWithType: EntityContainer::CreateObject
-- uid: EntityContainer.DestroyObject(void *)
-  name: DestroyObject(void *object)
-  href: apidocs/EntityContainer.html#EntityContainer_DestroyObject_void___
-  fullName: void EntityContainer<Type>::DestroyObject(void *object)
-  nameWithType: EntityContainer::DestroyObject(void *object)
-- uid: EntityContainer.DestroyObject*
-  name: DestroyObject
-  href: apidocs/EntityContainer.html#EntityContainer_DestroyObject_
-  isSpec: "True"
-  fullName: void EntityContainer<Type>::DestroyObject
-  nameWithType: EntityContainer::DestroyObject
-- uid: EntityContainer.end()
-  name: end()
-  href: apidocs/EntityContainer.html#EntityContainer_end__
-  fullName: iterator EntityContainer<Type>::end()
-  nameWithType: EntityContainer::end()
-- uid: EntityContainer.end*
-  name: end
-  href: apidocs/EntityContainer.html#EntityContainer_end_
-  isSpec: "True"
-  fullName: iterator EntityContainer<Type>::end
-  nameWithType: EntityContainer::end
-- uid: EntityContainer.EntityContainer()
-  name: EntityContainer()
-  href: apidocs/EntityContainer.html#EntityContainer_EntityContainer__
-  fullName: EntityContainer<Type>::EntityContainer()
-  nameWithType: EntityContainer::EntityContainer()
-- uid: EntityContainer.EntityContainer*
-  name: EntityContainer
-  href: apidocs/EntityContainer.html#EntityContainer_EntityContainer_
-  isSpec: "True"
-  fullName: EntityContainer<Type>::EntityContainer
-  nameWithType: EntityContainer::EntityContainer
-- uid: EntityContainer.iterator
-  name: iterator
-  href: apidocs/EntityContainer.iterator.html#EntityContainer_iterator
-  fullName: EntityContainer::iterator
-  nameWithType: iterator
-- uid: EntityContainer.iterator.iterator(typename MemoryChunks::iterator,typename MemoryChunks::iterator)
-  name: iterator(typename MemoryChunks::iterator begin, typename MemoryChunks::iterator end)
-  href: apidocs/EntityContainer.iterator.html#EntityContainer_iterator_iterator_typename_MemoryChunks__iterator_typename_MemoryChunks__iterator_
-  fullName: EntityContainer<Type>::iterator::iterator(typename MemoryChunks::iterator begin, typename MemoryChunks::iterator end)
-  nameWithType: iterator::iterator(typename MemoryChunks::iterator begin, typename MemoryChunks::iterator end)
-- uid: EntityContainer.iterator.iterator*
-  name: iterator
-  href: apidocs/EntityContainer.iterator.html#EntityContainer_iterator_iterator_
-  isSpec: "True"
-  fullName: EntityContainer<Type>::iterator::iterator
-  nameWithType: iterator::iterator
-- uid: EntityContainer.iterator.operator!=(typename iterator &)
-  name: operator!=(typename iterator &other)
-  href: apidocs/EntityContainer.iterator.html#EntityContainer_iterator_operator___typename_iterator___
-  fullName: bool EntityContainer<Type>::iterator::operator!=(typename iterator &other)
-  nameWithType: iterator::operator!=(typename iterator &other)
-- uid: EntityContainer.iterator.operator!=*
-  name: operator!=
-  href: apidocs/EntityContainer.iterator.html#EntityContainer_iterator_operator___
-  isSpec: "True"
-  fullName: bool EntityContainer<Type>::iterator::operator!=
-  nameWithType: iterator::operator!=
-- uid: EntityContainer.iterator.operator*()
-  name: operator*()
-  href: apidocs/EntityContainer.iterator.html#EntityContainer_iterator_operator___
-  fullName: Type& EntityContainer<Type>::iterator::operator*()
-  nameWithType: iterator::operator*()
-- uid: EntityContainer.iterator.operator**
-  name: operator*
-  href: apidocs/EntityContainer.iterator.html#EntityContainer_iterator_operator__
-  isSpec: "True"
-  fullName: Type& EntityContainer<Type>::iterator::operator*
-  nameWithType: iterator::operator*
-- uid: EntityContainer.iterator.operator++()
-  name: operator++()
-  href: apidocs/EntityContainer.iterator.html#EntityContainer_iterator_operator____
-  fullName: iterator& EntityContainer<Type>::iterator::operator++()
-  nameWithType: iterator::operator++()
-- uid: EntityContainer.iterator.operator++*
-  name: operator++
-  href: apidocs/EntityContainer.iterator.html#EntityContainer_iterator_operator___
-  isSpec: "True"
-  fullName: iterator& EntityContainer<Type>::iterator::operator++
-  nameWithType: iterator::operator++
-- uid: EntityContainer.iterator.operator==(typename iterator &)
-  name: operator==(typename iterator &other)
-  href: apidocs/EntityContainer.iterator.html#EntityContainer_iterator_operator___typename_iterator___
-  fullName: bool EntityContainer<Type>::iterator::operator==(typename iterator &other)
-  nameWithType: iterator::operator==(typename iterator &other)
-- uid: EntityContainer.iterator.operator==*
-  name: operator==
-  href: apidocs/EntityContainer.iterator.html#EntityContainer_iterator_operator___
-  isSpec: "True"
-  fullName: bool EntityContainer<Type>::iterator::operator==
-  nameWithType: iterator::operator==
-- uid: EntityContainer.iterator.operator->()
-  name: operator->()
-  href: apidocs/EntityContainer.iterator.html#EntityContainer_iterator_operator____
-  fullName: Type* EntityContainer<Type>::iterator::operator->()
-  nameWithType: iterator::operator->()
-- uid: EntityContainer.iterator.operator->*
-  name: operator->
-  href: apidocs/EntityContainer.iterator.html#EntityContainer_iterator_operator___
-  isSpec: "True"
-  fullName: Type* EntityContainer<Type>::iterator::operator->
-  nameWithType: iterator::operator->
-- uid: EntityContainer.m_Chunks
-  name: m_Chunks
-  href: apidocs/EntityContainer.html#EntityContainer_m_Chunks
-  fullName: MemoryChunks EntityContainer<Type>::m_Chunks
-  nameWithType: EntityContainer::m_Chunks
-- uid: EntityContainer.MemoryChunk
-  name: MemoryChunk
-  href: apidocs/EntityContainer.MemoryChunk.html#EntityContainer_MemoryChunk
-  fullName: EntityContainer::MemoryChunk
-  nameWithType: MemoryChunk
-- uid: EntityContainer.MemoryChunk.allocate()
-  name: allocate()
-  href: apidocs/EntityContainer.MemoryChunk.html#EntityContainer_MemoryChunk_allocate__
-  fullName: Type* EntityContainer<Type>::MemoryChunk::allocate()
-  nameWithType: MemoryChunk::allocate()
-- uid: EntityContainer.MemoryChunk.allocate*
-  name: allocate
-  href: apidocs/EntityContainer.MemoryChunk.html#EntityContainer_MemoryChunk_allocate_
-  isSpec: "True"
-  fullName: Type* EntityContainer<Type>::MemoryChunk::allocate
-  nameWithType: MemoryChunk::allocate
-- uid: EntityContainer.MemoryChunk.chunkEnd
-  name: chunkEnd
-  href: apidocs/EntityContainer.MemoryChunk.html#EntityContainer_MemoryChunk_chunkEnd
-  fullName: Element* EntityContainer<Type>::MemoryChunk::chunkEnd
-  nameWithType: MemoryChunk::chunkEnd
-- uid: EntityContainer.MemoryChunk.chunkStart
-  name: chunkStart
-  href: apidocs/EntityContainer.MemoryChunk.html#EntityContainer_MemoryChunk_chunkStart
-  fullName: Element* EntityContainer<Type>::MemoryChunk::chunkStart
-  nameWithType: MemoryChunk::chunkStart
-- uid: EntityContainer.MemoryChunk.count
-  name: count
-  href: apidocs/EntityContainer.MemoryChunk.html#EntityContainer_MemoryChunk_count
-  fullName: int EntityContainer<Type>::MemoryChunk::count
-  nameWithType: MemoryChunk::count
-- uid: EntityContainer.MemoryChunk.free(void *)
-  name: free(void *ptr)
-  href: apidocs/EntityContainer.MemoryChunk.html#EntityContainer_MemoryChunk_free_void___
-  fullName: void EntityContainer<Type>::MemoryChunk::free(void *ptr)
-  nameWithType: MemoryChunk::free(void *ptr)
-- uid: EntityContainer.MemoryChunk.free*
-  name: free
-  href: apidocs/EntityContainer.MemoryChunk.html#EntityContainer_MemoryChunk_free_
-  isSpec: "True"
-  fullName: void EntityContainer<Type>::MemoryChunk::free
-  nameWithType: MemoryChunk::free
-- uid: EntityContainer.MemoryChunk.FreeFlag
-  name: FreeFlag
-  href: apidocs/EntityContainer.MemoryChunk.html#EntityContainer_MemoryChunk_FreeFlag
-  fullName: const bool EntityContainer<Type>::MemoryChunk::FreeFlag
-  nameWithType: MemoryChunk::FreeFlag
-- uid: EntityContainer.MemoryChunk.MemoryChunk()
-  name: MemoryChunk()
-  href: apidocs/EntityContainer.MemoryChunk.html#EntityContainer_MemoryChunk_MemoryChunk__
-  fullName: EntityContainer<Type>::MemoryChunk::MemoryChunk()
-  nameWithType: MemoryChunk::MemoryChunk()
-- uid: EntityContainer.MemoryChunk.MemoryChunk*
-  name: MemoryChunk
-  href: apidocs/EntityContainer.MemoryChunk.html#EntityContainer_MemoryChunk_MemoryChunk_
-  isSpec: "True"
-  fullName: EntityContainer<Type>::MemoryChunk::MemoryChunk
-  nameWithType: MemoryChunk::MemoryChunk
-- uid: EntityContainer.MemoryChunk.metadata
-  name: metadata
-  href: apidocs/EntityContainer.MemoryChunk.html#EntityContainer_MemoryChunk_metadata
-  fullName: bool EntityContainer<Type>::MemoryChunk::metadata[MAX_OBJECTS_IN_CHUNK]
-  nameWithType: MemoryChunk::metadata
-- uid: EntityContainer.MemoryChunk.nextFree
-  name: nextFree
-  href: apidocs/EntityContainer.MemoryChunk.html#EntityContainer_MemoryChunk_nextFree
-  fullName: Element* EntityContainer<Type>::MemoryChunk::nextFree
-  nameWithType: MemoryChunk::nextFree
 - uid: FirstPersonCamera
   name: FirstPersonCamera
   href: apidocs/FirstPersonCamera.html
@@ -544,33 +340,6 @@ references:
   isSpec: "True"
   fullName: void FirstPersonCameraInspector::Draw
   nameWithType: FirstPersonCameraInspector::Draw
-- uid: IEntityContainer
-  name: IEntityContainer
-  href: apidocs/IEntityContainer.html
-  fullName: IEntityContainer
-  nameWithType: IEntityContainer
-- uid: IEntityContainer.CreateObject()
-  name: CreateObject()
-  href: apidocs/IEntityContainer.html#IEntityContainer_CreateObject__
-  fullName: virtual void* IEntityContainer::CreateObject()
-  nameWithType: IEntityContainer::CreateObject()
-- uid: IEntityContainer.CreateObject*
-  name: CreateObject
-  href: apidocs/IEntityContainer.html#IEntityContainer_CreateObject_
-  isSpec: "True"
-  fullName: virtual void* IEntityContainer::CreateObject
-  nameWithType: IEntityContainer::CreateObject
-- uid: IEntityContainer.DestroyObject(void *)
-  name: DestroyObject(void *object)
-  href: apidocs/IEntityContainer.html#IEntityContainer_DestroyObject_void___
-  fullName: virtual void IEntityContainer::DestroyObject(void *object)
-  nameWithType: IEntityContainer::DestroyObject(void *object)
-- uid: IEntityContainer.DestroyObject*
-  name: DestroyObject
-  href: apidocs/IEntityContainer.html#IEntityContainer_DestroyObject_
-  isSpec: "True"
-  fullName: virtual void IEntityContainer::DestroyObject
-  nameWithType: IEntityContainer::DestroyObject
 - uid: MeshRenderer
   name: MeshRenderer
   href: apidocs/MeshRenderer.html
@@ -1824,6 +1593,210 @@ references:
   isSpec: "True"
   fullName: static void ShadowEngine::EntitySystem::Entity::UpdateEntities
   nameWithType: Entity::UpdateEntities
+- uid: ShadowEngine.EntitySystem.EntityContainer
+  name: EntityContainer
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.html
+  fullName: ShadowEngine::EntitySystem::EntityContainer
+  nameWithType: EntityContainer
+- uid: ShadowEngine.EntitySystem.EntityContainer.begin()
+  name: begin()
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.html#ShadowEngine_EntitySystem_EntityContainer_begin__
+  fullName: iterator ShadowEngine::EntitySystem::EntityContainer<Type>::begin()
+  nameWithType: EntityContainer::begin()
+- uid: ShadowEngine.EntitySystem.EntityContainer.begin*
+  name: begin
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.html#ShadowEngine_EntitySystem_EntityContainer_begin_
+  isSpec: "True"
+  fullName: iterator ShadowEngine::EntitySystem::EntityContainer<Type>::begin
+  nameWithType: EntityContainer::begin
+- uid: ShadowEngine.EntitySystem.EntityContainer.CreateObject()
+  name: CreateObject()
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.html#ShadowEngine_EntitySystem_EntityContainer_CreateObject__
+  fullName: void* ShadowEngine::EntitySystem::EntityContainer<Type>::CreateObject()
+  nameWithType: EntityContainer::CreateObject()
+- uid: ShadowEngine.EntitySystem.EntityContainer.CreateObject*
+  name: CreateObject
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.html#ShadowEngine_EntitySystem_EntityContainer_CreateObject_
+  isSpec: "True"
+  fullName: void* ShadowEngine::EntitySystem::EntityContainer<Type>::CreateObject
+  nameWithType: EntityContainer::CreateObject
+- uid: ShadowEngine.EntitySystem.EntityContainer.DestroyObject(void *)
+  name: DestroyObject(void *object)
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.html#ShadowEngine_EntitySystem_EntityContainer_DestroyObject_void___
+  fullName: void ShadowEngine::EntitySystem::EntityContainer<Type>::DestroyObject(void *object)
+  nameWithType: EntityContainer::DestroyObject(void *object)
+- uid: ShadowEngine.EntitySystem.EntityContainer.DestroyObject*
+  name: DestroyObject
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.html#ShadowEngine_EntitySystem_EntityContainer_DestroyObject_
+  isSpec: "True"
+  fullName: void ShadowEngine::EntitySystem::EntityContainer<Type>::DestroyObject
+  nameWithType: EntityContainer::DestroyObject
+- uid: ShadowEngine.EntitySystem.EntityContainer.end()
+  name: end()
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.html#ShadowEngine_EntitySystem_EntityContainer_end__
+  fullName: iterator ShadowEngine::EntitySystem::EntityContainer<Type>::end()
+  nameWithType: EntityContainer::end()
+- uid: ShadowEngine.EntitySystem.EntityContainer.end*
+  name: end
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.html#ShadowEngine_EntitySystem_EntityContainer_end_
+  isSpec: "True"
+  fullName: iterator ShadowEngine::EntitySystem::EntityContainer<Type>::end
+  nameWithType: EntityContainer::end
+- uid: ShadowEngine.EntitySystem.EntityContainer.EntityContainer()
+  name: EntityContainer()
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.html#ShadowEngine_EntitySystem_EntityContainer_EntityContainer__
+  fullName: ShadowEngine::EntitySystem::EntityContainer<Type>::EntityContainer()
+  nameWithType: EntityContainer::EntityContainer()
+- uid: ShadowEngine.EntitySystem.EntityContainer.EntityContainer*
+  name: EntityContainer
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.html#ShadowEngine_EntitySystem_EntityContainer_EntityContainer_
+  isSpec: "True"
+  fullName: ShadowEngine::EntitySystem::EntityContainer<Type>::EntityContainer
+  nameWithType: EntityContainer::EntityContainer
+- uid: ShadowEngine.EntitySystem.EntityContainer.iterator
+  name: EntityContainer::iterator
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.iterator.html
+  fullName: ShadowEngine::EntitySystem::EntityContainer::iterator
+  nameWithType: EntityContainer::iterator
+- uid: ShadowEngine.EntitySystem.EntityContainer.iterator.iterator(typename MemoryChunks::iterator,typename MemoryChunks::iterator)
+  name: iterator(typename MemoryChunks::iterator begin, typename MemoryChunks::iterator end)
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.iterator.html#ShadowEngine_EntitySystem_EntityContainer_iterator_iterator_typename_MemoryChunks__iterator_typename_MemoryChunks__iterator_
+  fullName: ShadowEngine::EntitySystem::EntityContainer<Type>::iterator::iterator(typename MemoryChunks::iterator begin, typename MemoryChunks::iterator end)
+  nameWithType: EntityContainer::iterator::iterator(typename MemoryChunks::iterator begin, typename MemoryChunks::iterator end)
+- uid: ShadowEngine.EntitySystem.EntityContainer.iterator.iterator*
+  name: iterator
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.iterator.html#ShadowEngine_EntitySystem_EntityContainer_iterator_iterator_
+  isSpec: "True"
+  fullName: ShadowEngine::EntitySystem::EntityContainer<Type>::iterator::iterator
+  nameWithType: EntityContainer::iterator::iterator
+- uid: ShadowEngine.EntitySystem.EntityContainer.iterator.operator!=(typename iterator &)
+  name: operator!=(typename iterator &other)
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.iterator.html#ShadowEngine_EntitySystem_EntityContainer_iterator_operator___typename_iterator___
+  fullName: bool ShadowEngine::EntitySystem::EntityContainer<Type>::iterator::operator!=(typename iterator &other)
+  nameWithType: EntityContainer::iterator::operator!=(typename iterator &other)
+- uid: ShadowEngine.EntitySystem.EntityContainer.iterator.operator!=*
+  name: operator!=
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.iterator.html#ShadowEngine_EntitySystem_EntityContainer_iterator_operator___
+  isSpec: "True"
+  fullName: bool ShadowEngine::EntitySystem::EntityContainer<Type>::iterator::operator!=
+  nameWithType: EntityContainer::iterator::operator!=
+- uid: ShadowEngine.EntitySystem.EntityContainer.iterator.operator*()
+  name: operator*()
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.iterator.html#ShadowEngine_EntitySystem_EntityContainer_iterator_operator___
+  fullName: Type& ShadowEngine::EntitySystem::EntityContainer<Type>::iterator::operator*()
+  nameWithType: EntityContainer::iterator::operator*()
+- uid: ShadowEngine.EntitySystem.EntityContainer.iterator.operator**
+  name: operator*
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.iterator.html#ShadowEngine_EntitySystem_EntityContainer_iterator_operator__
+  isSpec: "True"
+  fullName: Type& ShadowEngine::EntitySystem::EntityContainer<Type>::iterator::operator*
+  nameWithType: EntityContainer::iterator::operator*
+- uid: ShadowEngine.EntitySystem.EntityContainer.iterator.operator++()
+  name: operator++()
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.iterator.html#ShadowEngine_EntitySystem_EntityContainer_iterator_operator____
+  fullName: iterator& ShadowEngine::EntitySystem::EntityContainer<Type>::iterator::operator++()
+  nameWithType: EntityContainer::iterator::operator++()
+- uid: ShadowEngine.EntitySystem.EntityContainer.iterator.operator++*
+  name: operator++
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.iterator.html#ShadowEngine_EntitySystem_EntityContainer_iterator_operator___
+  isSpec: "True"
+  fullName: iterator& ShadowEngine::EntitySystem::EntityContainer<Type>::iterator::operator++
+  nameWithType: EntityContainer::iterator::operator++
+- uid: ShadowEngine.EntitySystem.EntityContainer.iterator.operator==(typename iterator &)
+  name: operator==(typename iterator &other)
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.iterator.html#ShadowEngine_EntitySystem_EntityContainer_iterator_operator___typename_iterator___
+  fullName: bool ShadowEngine::EntitySystem::EntityContainer<Type>::iterator::operator==(typename iterator &other)
+  nameWithType: EntityContainer::iterator::operator==(typename iterator &other)
+- uid: ShadowEngine.EntitySystem.EntityContainer.iterator.operator==*
+  name: operator==
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.iterator.html#ShadowEngine_EntitySystem_EntityContainer_iterator_operator___
+  isSpec: "True"
+  fullName: bool ShadowEngine::EntitySystem::EntityContainer<Type>::iterator::operator==
+  nameWithType: EntityContainer::iterator::operator==
+- uid: ShadowEngine.EntitySystem.EntityContainer.iterator.operator->()
+  name: operator->()
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.iterator.html#ShadowEngine_EntitySystem_EntityContainer_iterator_operator____
+  fullName: Type* ShadowEngine::EntitySystem::EntityContainer<Type>::iterator::operator->()
+  nameWithType: EntityContainer::iterator::operator->()
+- uid: ShadowEngine.EntitySystem.EntityContainer.iterator.operator->*
+  name: operator->
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.iterator.html#ShadowEngine_EntitySystem_EntityContainer_iterator_operator___
+  isSpec: "True"
+  fullName: Type* ShadowEngine::EntitySystem::EntityContainer<Type>::iterator::operator->
+  nameWithType: EntityContainer::iterator::operator->
+- uid: ShadowEngine.EntitySystem.EntityContainer.m_Chunks
+  name: m_Chunks
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.html#ShadowEngine_EntitySystem_EntityContainer_m_Chunks
+  fullName: MemoryChunks ShadowEngine::EntitySystem::EntityContainer<Type>::m_Chunks
+  nameWithType: EntityContainer::m_Chunks
+- uid: ShadowEngine.EntitySystem.EntityContainer.MemoryChunk
+  name: EntityContainer::MemoryChunk
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.html
+  fullName: ShadowEngine::EntitySystem::EntityContainer::MemoryChunk
+  nameWithType: EntityContainer::MemoryChunk
+- uid: ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.allocate()
+  name: allocate()
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.html#ShadowEngine_EntitySystem_EntityContainer_MemoryChunk_allocate__
+  fullName: Type* ShadowEngine::EntitySystem::EntityContainer<Type>::MemoryChunk::allocate()
+  nameWithType: EntityContainer::MemoryChunk::allocate()
+- uid: ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.allocate*
+  name: allocate
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.html#ShadowEngine_EntitySystem_EntityContainer_MemoryChunk_allocate_
+  isSpec: "True"
+  fullName: Type* ShadowEngine::EntitySystem::EntityContainer<Type>::MemoryChunk::allocate
+  nameWithType: EntityContainer::MemoryChunk::allocate
+- uid: ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.chunkEnd
+  name: chunkEnd
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.html#ShadowEngine_EntitySystem_EntityContainer_MemoryChunk_chunkEnd
+  fullName: Element* ShadowEngine::EntitySystem::EntityContainer<Type>::MemoryChunk::chunkEnd
+  nameWithType: EntityContainer::MemoryChunk::chunkEnd
+- uid: ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.chunkStart
+  name: chunkStart
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.html#ShadowEngine_EntitySystem_EntityContainer_MemoryChunk_chunkStart
+  fullName: Element* ShadowEngine::EntitySystem::EntityContainer<Type>::MemoryChunk::chunkStart
+  nameWithType: EntityContainer::MemoryChunk::chunkStart
+- uid: ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.count
+  name: count
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.html#ShadowEngine_EntitySystem_EntityContainer_MemoryChunk_count
+  fullName: int ShadowEngine::EntitySystem::EntityContainer<Type>::MemoryChunk::count
+  nameWithType: EntityContainer::MemoryChunk::count
+- uid: ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.free(void *)
+  name: free(void *ptr)
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.html#ShadowEngine_EntitySystem_EntityContainer_MemoryChunk_free_void___
+  fullName: void ShadowEngine::EntitySystem::EntityContainer<Type>::MemoryChunk::free(void *ptr)
+  nameWithType: EntityContainer::MemoryChunk::free(void *ptr)
+- uid: ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.free*
+  name: free
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.html#ShadowEngine_EntitySystem_EntityContainer_MemoryChunk_free_
+  isSpec: "True"
+  fullName: void ShadowEngine::EntitySystem::EntityContainer<Type>::MemoryChunk::free
+  nameWithType: EntityContainer::MemoryChunk::free
+- uid: ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.FreeFlag
+  name: FreeFlag
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.html#ShadowEngine_EntitySystem_EntityContainer_MemoryChunk_FreeFlag
+  fullName: const bool ShadowEngine::EntitySystem::EntityContainer<Type>::MemoryChunk::FreeFlag
+  nameWithType: EntityContainer::MemoryChunk::FreeFlag
+- uid: ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.MemoryChunk()
+  name: MemoryChunk()
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.html#ShadowEngine_EntitySystem_EntityContainer_MemoryChunk_MemoryChunk__
+  fullName: ShadowEngine::EntitySystem::EntityContainer<Type>::MemoryChunk::MemoryChunk()
+  nameWithType: EntityContainer::MemoryChunk::MemoryChunk()
+- uid: ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.MemoryChunk*
+  name: MemoryChunk
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.html#ShadowEngine_EntitySystem_EntityContainer_MemoryChunk_MemoryChunk_
+  isSpec: "True"
+  fullName: ShadowEngine::EntitySystem::EntityContainer<Type>::MemoryChunk::MemoryChunk
+  nameWithType: EntityContainer::MemoryChunk::MemoryChunk
+- uid: ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.metadata
+  name: metadata
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.html#ShadowEngine_EntitySystem_EntityContainer_MemoryChunk_metadata
+  fullName: bool ShadowEngine::EntitySystem::EntityContainer<Type>::MemoryChunk::metadata[MAX_OBJECTS_IN_CHUNK]
+  nameWithType: EntityContainer::MemoryChunk::metadata
+- uid: ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.nextFree
+  name: nextFree
+  href: apidocs/ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.html#ShadowEngine_EntitySystem_EntityContainer_MemoryChunk_nextFree
+  fullName: Element* ShadowEngine::EntitySystem::EntityContainer<Type>::MemoryChunk::nextFree
+  nameWithType: EntityContainer::MemoryChunk::nextFree
 - uid: ShadowEngine.EntitySystem.EntityManager
   name: EntityManager
   href: apidocs/ShadowEngine.EntitySystem.EntityManager.html
@@ -2116,6 +2089,33 @@ references:
   isSpec: "True"
   fullName: void ShadowEngine::EntitySystem::EntitySystem::Update
   nameWithType: EntitySystem::Update
+- uid: ShadowEngine.EntitySystem.IEntityContainer
+  name: IEntityContainer
+  href: apidocs/ShadowEngine.EntitySystem.IEntityContainer.html
+  fullName: ShadowEngine::EntitySystem::IEntityContainer
+  nameWithType: IEntityContainer
+- uid: ShadowEngine.EntitySystem.IEntityContainer.CreateObject()
+  name: CreateObject()
+  href: apidocs/ShadowEngine.EntitySystem.IEntityContainer.html#ShadowEngine_EntitySystem_IEntityContainer_CreateObject__
+  fullName: virtual void* ShadowEngine::EntitySystem::IEntityContainer::CreateObject()
+  nameWithType: IEntityContainer::CreateObject()
+- uid: ShadowEngine.EntitySystem.IEntityContainer.CreateObject*
+  name: CreateObject
+  href: apidocs/ShadowEngine.EntitySystem.IEntityContainer.html#ShadowEngine_EntitySystem_IEntityContainer_CreateObject_
+  isSpec: "True"
+  fullName: virtual void* ShadowEngine::EntitySystem::IEntityContainer::CreateObject
+  nameWithType: IEntityContainer::CreateObject
+- uid: ShadowEngine.EntitySystem.IEntityContainer.DestroyObject(void *)
+  name: DestroyObject(void *object)
+  href: apidocs/ShadowEngine.EntitySystem.IEntityContainer.html#ShadowEngine_EntitySystem_IEntityContainer_DestroyObject_void___
+  fullName: virtual void ShadowEngine::EntitySystem::IEntityContainer::DestroyObject(void *object)
+  nameWithType: IEntityContainer::DestroyObject(void *object)
+- uid: ShadowEngine.EntitySystem.IEntityContainer.DestroyObject*
+  name: DestroyObject
+  href: apidocs/ShadowEngine.EntitySystem.IEntityContainer.html#ShadowEngine_EntitySystem_IEntityContainer_DestroyObject_
+  isSpec: "True"
+  fullName: virtual void ShadowEngine::EntitySystem::IEntityContainer::DestroyObject
+  nameWithType: IEntityContainer::DestroyObject
 - uid: ShadowEngine.EntitySystem.operator<<(std::ostream &,const Entity &)
   name: operator<<(std::ostream &os, const Entity &dt)
   href: apidocs/ShadowEngine.EntitySystem.html

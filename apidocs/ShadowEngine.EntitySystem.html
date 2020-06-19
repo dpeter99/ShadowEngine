@@ -86,6 +86,24 @@
       </tr>
       <tr>
         <td>
+          <p><a class="xref" href="ShadowEngine.EntitySystem.EntityContainer.html">EntityContainer</a></p>
+          <p><p>Entity container is a memory manager for a single type of Entity This creates <a class="xref" href="ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.html">EntityContainer::MemoryChunk</a>s that contain a block of memory for <code>MAX_OBJECTS_IN_CHUNK</code> number of entities, when it gets full it creates a new MemoryChunk. These are created by the <a class="xref" href="ShadowEngine.EntitySystem.EntityManager.html">EntityManager</a> for each entity type that gets registered. </p></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.EntitySystem.EntityContainer.iterator.html">EntityContainer::iterator</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a class="xref" href="ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.html">EntityContainer::MemoryChunk</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
           <p><a class="xref" href="ShadowEngine.EntitySystem.EntityManager.html">EntityManager</a></p>
           <p><p>Manages the memory and IDs of Entities. </p></p>
         </td>
@@ -104,6 +122,12 @@
       </tr>
       <tr>
         <td>
+          <p><a class="xref" href="ShadowEngine.EntitySystem.IEntityContainer.html">IEntityContainer</a></p>
+          <p>
+        </td>
+      </tr>
+      <tr>
+        <td>
           <p><a class="xref" href="ShadowEngine.EntitySystem.rtm_ptr.html">rtm_ptr</a></p>
           <p>
         </td>
@@ -111,13 +135,13 @@
       <tr>
         <td>
           <p><a class="xref" href="ShadowEngine.EntitySystem.Scene.html">Scene</a></p>
-          <p>
+          <p><p>Represents a scene, that is composed of Entities. </p></p>
         </td>
       </tr>
       <tr>
         <td>
           <p><a class="xref" href="ShadowEngine.EntitySystem.SceneEntity.html">SceneEntity</a></p>
-          <p><p>Entitys that have a world positon </p></p>
+          <p><p>Entity that has a position. </p><p>Inherit from this class if your Entity needs to have it&#39;s own position. This position can be relative to the parent. </p></p>
         </td>
       </tr>
     </table>

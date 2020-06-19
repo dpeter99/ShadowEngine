@@ -137,42 +137,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/metadata/EntityContainer.MemoryChunk.yml",
-      "output": {
-        ".html": {
-          "relative_path": "apidocs/EntityContainer.MemoryChunk.html",
-          "hash": "Yuz2lyysgjzg9l38PUVfPg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/metadata/EntityContainer.iterator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "apidocs/EntityContainer.iterator.html",
-          "hash": "FjVeljYRXx8vv88Khrw+EA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/metadata/EntityContainer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "apidocs/EntityContainer.html",
-          "hash": "OPKWKJNYFLzxy/3nL6enUQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "obj/metadata/FirstPersonCamera.yml",
       "output": {
         ".html": {
@@ -190,18 +154,6 @@
         ".html": {
           "relative_path": "apidocs/FirstPersonCameraInspector.html",
           "hash": "u3rN7V9npEU8P+0dx3YFjw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/metadata/IEntityContainer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "apidocs/IEntityContainer.html",
-          "hash": "WB+tfOZ+knlOWXhUIDzGGA=="
         }
       },
       "is_incremental": false,
@@ -545,11 +497,47 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/metadata/ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EntitySystem.EntityContainer.MemoryChunk.html",
+          "hash": "VbL9cpPE9eBdN1Namxx7dA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/metadata/ShadowEngine.EntitySystem.EntityContainer.iterator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EntitySystem.EntityContainer.iterator.html",
+          "hash": "mVTivDEcaYMtqXk3NMspAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/metadata/ShadowEngine.EntitySystem.EntityContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EntitySystem.EntityContainer.html",
+          "hash": "Had5hnhACgHTYYASLsqwhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/metadata/ShadowEngine.EntitySystem.EntityManager.yml",
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EntitySystem.EntityManager.html",
-          "hash": "2pg5QxuXrqgeQqVllmbVtA=="
+          "hash": "oUa8EXfkaC2MgZF/+ypsgA=="
         }
       },
       "is_incremental": false,
@@ -581,11 +569,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/metadata/ShadowEngine.EntitySystem.IEntityContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.EntitySystem.IEntityContainer.html",
+          "hash": "WK0CYUWDGDpz20fYN1k1Eg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/metadata/ShadowEngine.EntitySystem.Scene.yml",
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EntitySystem.Scene.html",
-          "hash": "zPLYh23CipOSXVUxNpgULw=="
+          "hash": "EwbUzsad33sec6kFXrkeNA=="
         }
       },
       "is_incremental": false,
@@ -597,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EntitySystem.SceneEntity.html",
-          "hash": "V0EiQ0/yp3ez4ecZ9657IA=="
+          "hash": "hqiK49u/iP5Q5uO5d73t4Q=="
         }
       },
       "is_incremental": false,
@@ -633,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EntitySystem.html",
-          "hash": "PF0Um/UBbjLNUcdRFcTDGw=="
+          "hash": "wOQ1sUmyyMtAbpYB7pbyGA=="
         }
       },
       "is_incremental": false,
@@ -1797,7 +1797,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.ShadowApplication.html",
-          "hash": "aHAg+KIiD48v2zDY5py4xw=="
+          "hash": "vsEtYnLkVLrbdz9T2uePzQ=="
         }
       },
       "is_incremental": false,
@@ -1929,7 +1929,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.html",
-          "hash": "7sGv26l8EJ3zcNbHN4HkHg=="
+          "hash": "dBPu54jSZLNC5zOF6zyCjg=="
         }
       },
       "is_incremental": false,
@@ -2037,7 +2037,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/toc.html",
-          "hash": "hzJvisVuhGbIxO/mgmkPiw=="
+          "hash": "URDFYd1aEahXoxtVaX63bA=="
         }
       },
       "is_incremental": false,
