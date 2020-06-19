@@ -1,6 +1,6 @@
 #include "shpch.h"
 #include "SkySphere.h"
-#include "EntitySystem/ShadowScene.h"
+#include "EntitySystem/Scene.h"
 #include "ShadowAsset/Assets/Textures/TextureCubeMap.h"
 #include "Camera.h"
 

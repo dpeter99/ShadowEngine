@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ShadowModules/ShadowModule.h"
-#include "ShadowScene.h"
+#include "Scene.h"
 
 //Holds the reference to the active scene
 

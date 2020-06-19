@@ -2,5 +2,6 @@
   "input_paths": [ "../ShadowEngine/src" ],
   "output_path": "../docs/obj/metadata",
   "exclude_paths": [ "./azure-sdk-for-java/azure-samples" ],
-  "language": "cplusplus"
+  "language": "cplusplus",
+  "generate_private":  "true"
 }

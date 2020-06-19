@@ -6,15 +6,16 @@
 #include "Entity.h"
 #include "ShadowMath/Transform.h"
 #include "EntitySystem\EntityBase.h"
-#include "EntitySystem\ShadowScene.h"
+#include "EntitySystem\Scene.h"
 
 #define BIND_EVENT_FN(x, ...) std::bind(&x, this, __VA_ARGS__)
 
 namespace ShadowEngine::EntitySystem {
 
 	/// <summary>
-	/// Entitys that have a world positon
+	/// Entity that has a position.
 	/// </summary>
+	///	Inherit from this class if your Entity needs to have it's own position. This position can be relative to the parent.
 	class SceneEntity :
 		public Entity
 	{
