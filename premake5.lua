@@ -50,7 +50,7 @@ group ""
 
 project "ShadowEngine"
 	location "ShadowEngine"
-	kind "ConsoleApp"
+	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
 	staticruntime "on"
@@ -166,23 +166,54 @@ project "ShadowEngine"
 
 project "DemoGame"
 	location "DemoGame"
-	kind "Utility"
+	kind "ConsoleApp"
+	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	files{
-		"%{prj.name}/Resources/**"
+		"%{prj.name}/Resources/**",
+		"%{prj.name}/src/**"
 	}
 
 	links{
-		"ShadowEngineBuild"
+		--"ShadowEngineBuild",
+		"ShadowEngine"
+	}
+
+	includedirs{
+		"ShadowEngine/src",
+		"ShadowEngine/dependencies",
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.spdlog}",
 	}
 
 	prebuildcommands{
-		"%{wks.location}bin/"..outputdir.."/ShadowEngineBuild/ShadowEngineBuild.exe A %{prj.location}/Resources ",
+		--"%{wks.location}bin/"..outputdir.."/ShadowEngineBuild/ShadowEngineBuild.exe A %{prj.location}/Resources ",
 		--"echo %{prj.location}"
 	}
+
+	filter "system:windows"
+		systemversion "latest"
+		
+	filter "configurations:Debug"
+		defines "HZ_DEBUG"
+		runtime "Debug"
+		symbols "on"
+
+	filter "configurations:Release"
+		defines "HZ_RELEASE"
+		runtime "Release"
+		optimize "on"
+
+	filter "configurations:Dist"
+		defines "HZ_DIST"
+		runtime "Release"
+		optimize "on"
+
 
 externalproject "ShadowEngineBuild"
    location "ShadowEngineBuild"
