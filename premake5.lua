@@ -121,6 +121,9 @@ project "ShadowEngine"
 	shadermodel "5.0"
 	shaderentry "main"
 	
+	filter "files:ShadowEngine/dependencies/**.cpp"
+		flags "NoPCH"
+
 	filter "files:**.hlsl"
 		flags "ExcludeFromBuild"
 		shaderobjectfileoutput (shader_dir .. "%{file.basename}.cso")
@@ -145,8 +148,8 @@ project "ShadowEngine"
 		}
 
 		postbuildcommands{
-			"{COPY} %{prj.location}/dependencies/SDL2/lib/VC/%{cfg.architecture}/SDL2.dll \"%{cfg.buildtarget.directory}\"",
-			"{COPY} %{wks.location}/DemoGame/Resources \"%{cfg.buildtarget.directory}/Resources\""
+			--"{COPY} %{prj.location}/dependencies/SDL2/lib/VC/%{cfg.architecture}/SDL2.dll \"%{cfg.buildtarget.directory}\"",
+			--"{COPY} %{wks.location}/DemoGame/Resources \"%{cfg.buildtarget.directory}/Resources\""
 		}
 
 	filter "configurations:Debug"
@@ -174,12 +177,15 @@ project "DemoGame"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	debugdir ("bin/" .. outputdir .. "/%{prj.name}")
+
 	files{
 		"%{prj.name}/Resources/**",
 		"%{prj.name}/src/**"
 	}
 
-	links{
+	links
+	{
 		--"ShadowEngineBuild",
 		"ShadowEngine"
 	}
@@ -194,6 +200,18 @@ project "DemoGame"
 	prebuildcommands{
 		--"%{wks.location}bin/"..outputdir.."/ShadowEngineBuild/ShadowEngineBuild.exe A %{prj.location}/Resources ",
 		--"echo %{prj.location}"
+		--"{COPY} %{prj.location}/dependencies/SDL2/lib/VC/%{cfg.architecture}/SDL2.dll \"%{cfg.buildtarget.directory}\"",
+		"{COPY} %{wks.location}/DemoGame/Resources \"%{cfg.buildtarget.directory}/Resources\"",
+		"{COPY} %{cfg.buildtarget.directory}/../ShadowEngine/Shaders \"%{cfg.buildtarget.directory}/Shaders\""
+	}
+
+	nuget { 
+		"Assimp:3.0.0",
+		"Assimp.redist:3.0.0",
+		"sdl2.nuget:2.0.10",
+		"sdl2.nuget.redist:2.0.10",
+		"sdl2_image.nuget:2.0.5",
+		"sdl2_image.nuget.redist:2.0.5"
 	}
 
 	filter "system:windows"

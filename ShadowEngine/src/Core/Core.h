@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 
 
 #define BIT(x) (1 << x)
@@ -22,4 +23,9 @@ namespace ShadowEngine {
 	template<typename T>
 	using Ref = std::shared_ptr<T>;
 
+
+	typedef void (*SetupFunction)();
+	
 }
+
+extern ShadowEngine::SetupFunction _setupFunc;

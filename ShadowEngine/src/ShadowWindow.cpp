@@ -1,6 +1,8 @@
 #include "shpch.h"
 
 #include "ShadowWindow.h"
+
+#include "Log.h"
 #include "ShadowRenderer/GraphicsContext.h"
 
 
