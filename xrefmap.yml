@@ -7868,7 +7868,7 @@ references:
 - uid: ShadowEngine.ShadowModuleManager.modules
   name: modules
   href: apidocs/ShadowEngine.ShadowModuleManager.html#ShadowEngine_ShadowModuleManager_modules
-  fullName: std::list<ShadowEngine::Scope<ShadowModule>> ShadowEngine::ShadowModuleManager::modules
+  fullName: std::list<Scope<ShadowModule>> ShadowEngine::ShadowModuleManager::modules
   nameWithType: ShadowModuleManager::modules
 - uid: ShadowEngine.ShadowModuleManager.PushModule(ShadowModule *)
   name: PushModule(ShadowModule *module)
