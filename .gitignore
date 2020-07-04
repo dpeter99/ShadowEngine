@@ -23,3 +23,5 @@ docs/output/**
 docs/obj/**
 
 Captures/
+
+DemoGame/packages.config

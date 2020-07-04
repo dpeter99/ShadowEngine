@@ -3,6 +3,7 @@
 #include "Core/Core.h"
 
 #include "ShadowModules/ShadowModule.h"
+#include <ShadowModules/ShadowModule.h>
 
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"

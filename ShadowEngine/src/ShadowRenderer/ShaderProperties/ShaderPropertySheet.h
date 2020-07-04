@@ -1,6 +1,7 @@
 #pragma once
 #include <glm/glm.hpp>
 #include "Core/Core.h"
+#include "Core/SHObject.h"
 
 
 namespace ShadowEngine::Rendering {
