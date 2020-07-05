@@ -1,0 +1,1843 @@
+﻿Root
+{
+    "ID" "1"
+    "IsSelected" "False"
+    "ParentID" ""
+    PointEntityGameDataBoundingBoxProvider
+    {
+    }
+    VisgroupHidden
+    {
+        "IsHidden" "False"
+    }
+    Solid
+    {
+        "ID" "2"
+        "IsSelected" "False"
+        "ParentID" "1"
+        ObjectColor
+        {
+            "Color" "0 185 236"
+        }
+        Face
+        {
+            "ID" "1"
+            Plane
+            {
+                "Normal" "0 -1 0"
+                "DistanceFromOrigin" "256.000031"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "1 0 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "0"
+                "YScale" "1"
+                "YShift" "0"
+            }
+            Vertex
+            {
+                "Position" "-512 -256 16"
+            }
+            Vertex
+            {
+                "Position" "384 -256 16"
+            }
+            Vertex
+            {
+                "Position" "384 -256 0"
+            }
+            Vertex
+            {
+                "Position" "-512 -256 0"
+            }
+        }
+        Face
+        {
+            "ID" "2"
+            Plane
+            {
+                "Normal" "0 1 0"
+                "DistanceFromOrigin" "384"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "-1 0 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "0"
+                "YScale" "1"
+                "YShift" "0"
+            }
+            Vertex
+            {
+                "Position" "384 384 16"
+            }
+            Vertex
+            {
+                "Position" "-512 384 16"
+            }
+            Vertex
+            {
+                "Position" "-512 384 0"
+            }
+            Vertex
+            {
+                "Position" "384 384 0"
+            }
+        }
+        Face
+        {
+            "ID" "3"
+            Plane
+            {
+                "Normal" "-1 0 0"
+                "DistanceFromOrigin" "512"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "0 -1 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "0"
+                "YScale" "1"
+                "YShift" "0"
+            }
+            Vertex
+            {
+                "Position" "-512 384 16"
+            }
+            Vertex
+            {
+                "Position" "-512 -256 16"
+            }
+            Vertex
+            {
+                "Position" "-512 -256 0"
+            }
+            Vertex
+            {
+                "Position" "-512 384 0"
+            }
+        }
+        Face
+        {
+            "ID" "4"
+            Plane
+            {
+                "Normal" "1 0 0"
+                "DistanceFromOrigin" "384.000031"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "0 1 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "0"
+                "YScale" "1"
+                "YShift" "0"
+            }
+            Vertex
+            {
+                "Position" "384 -256 16"
+            }
+            Vertex
+            {
+                "Position" "384 384 16"
+            }
+            Vertex
+            {
+                "Position" "384 384 0"
+            }
+            Vertex
+            {
+                "Position" "384 -256 0"
+            }
+        }
+        Face
+        {
+            "ID" "5"
+            Plane
+            {
+                "Normal" "0 0 1"
+                "DistanceFromOrigin" "16"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "1 0 0"
+                "VAxis" "0 -1 0"
+                "XScale" "1"
+                "XShift" "0"
+                "YScale" "1"
+                "YShift" "0"
+            }
+            Vertex
+            {
+                "Position" "-512 384 16"
+            }
+            Vertex
+            {
+                "Position" "384 384 16"
+            }
+            Vertex
+            {
+                "Position" "384 -256 16"
+            }
+            Vertex
+            {
+                "Position" "-512 -256 16"
+            }
+        }
+        Face
+        {
+            "ID" "6"
+            Plane
+            {
+                "Normal" "0 0 -1"
+                "DistanceFromOrigin" "0"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "-1 0 0"
+                "VAxis" "0 -1 0"
+                "XScale" "1"
+                "XShift" "0"
+                "YScale" "1"
+                "YShift" "0"
+            }
+            Vertex
+            {
+                "Position" "-512 -256 0"
+            }
+            Vertex
+            {
+                "Position" "384 -256 0"
+            }
+            Vertex
+            {
+                "Position" "384 384 0"
+            }
+            Vertex
+            {
+                "Position" "-512 384 0"
+            }
+        }
+    }
+    Solid
+    {
+        "ID" "3"
+        "IsSelected" "False"
+        "ParentID" "1"
+        ObjectColor
+        {
+            "Color" "0 231 233"
+        }
+        Face
+        {
+            "ID" "7"
+            Plane
+            {
+                "Normal" "0 -1 0"
+                "DistanceFromOrigin" "256"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "1 0 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "0"
+                "YScale" "1"
+                "YShift" "0"
+            }
+            Vertex
+            {
+                "Position" "-128 -256 240"
+            }
+            Vertex
+            {
+                "Position" "384 -256 240"
+            }
+            Vertex
+            {
+                "Position" "384 -256 16"
+            }
+            Vertex
+            {
+                "Position" "-128 -256 16"
+            }
+        }
+        Face
+        {
+            "ID" "8"
+            Plane
+            {
+                "Normal" "0 1 0"
+                "DistanceFromOrigin" "-224"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "-1 0 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "0"
+                "YScale" "1"
+                "YShift" "0"
+            }
+            Vertex
+            {
+                "Position" "384 -224 240"
+            }
+            Vertex
+            {
+                "Position" "-128 -224 240"
+            }
+            Vertex
+            {
+                "Position" "-128 -224 16"
+            }
+            Vertex
+            {
+                "Position" "384 -224 16"
+            }
+        }
+        Face
+        {
+            "ID" "9"
+            Plane
+            {
+                "Normal" "-1 0 0"
+                "DistanceFromOrigin" "128"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "0 -1 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "0"
+                "YScale" "1"
+                "YShift" "0"
+            }
+            Vertex
+            {
+                "Position" "-128 -224 240"
+            }
+            Vertex
+            {
+                "Position" "-128 -256 240"
+            }
+            Vertex
+            {
+                "Position" "-128 -256 16"
+            }
+            Vertex
+            {
+                "Position" "-128 -224 16"
+            }
+        }
+        Face
+        {
+            "ID" "10"
+            Plane
+            {
+                "Normal" "1 0 0"
+                "DistanceFromOrigin" "384"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "0 1 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "0"
+                "YScale" "1"
+                "YShift" "0"
+            }
+            Vertex
+            {
+                "Position" "384 -256 240"
+            }
+            Vertex
+            {
+                "Position" "384 -224 240"
+            }
+            Vertex
+            {
+                "Position" "384 -224 16"
+            }
+            Vertex
+            {
+                "Position" "384 -256 16"
+            }
+        }
+        Face
+        {
+            "ID" "11"
+            Plane
+            {
+                "Normal" "0 0 1"
+                "DistanceFromOrigin" "240"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "1 0 0"
+                "VAxis" "0 -1 0"
+                "XScale" "1"
+                "XShift" "0"
+                "YScale" "1"
+                "YShift" "0"
+            }
+            Vertex
+            {
+                "Position" "-128 -224 240"
+            }
+            Vertex
+            {
+                "Position" "384 -224 240"
+            }
+            Vertex
+            {
+                "Position" "384 -256 240"
+            }
+            Vertex
+            {
+                "Position" "-128 -256 240"
+            }
+        }
+        Face
+        {
+            "ID" "12"
+            Plane
+            {
+                "Normal" "0 0 -1"
+                "DistanceFromOrigin" "-16"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "-1 0 0"
+                "VAxis" "0 -1 0"
+                "XScale" "1"
+                "XShift" "0"
+                "YScale" "1"
+                "YShift" "0"
+            }
+            Vertex
+            {
+                "Position" "-128 -256 16"
+            }
+            Vertex
+            {
+                "Position" "384 -256 16"
+            }
+            Vertex
+            {
+                "Position" "384 -224 16"
+            }
+            Vertex
+            {
+                "Position" "-128 -224 16"
+            }
+        }
+    }
+    Solid
+    {
+        "ID" "4"
+        "IsSelected" "False"
+        "ParentID" "1"
+        ObjectColor
+        {
+            "Color" "0 231 233"
+        }
+        Face
+        {
+            "ID" "13"
+            Plane
+            {
+                "Normal" "0 -1 0"
+                "DistanceFromOrigin" "-352"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "1 0 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "16"
+                "YScale" "1"
+                "YShift" "-48"
+            }
+            Vertex
+            {
+                "Position" "-128 352 240"
+            }
+            Vertex
+            {
+                "Position" "384 352 240"
+            }
+            Vertex
+            {
+                "Position" "384 352 16"
+            }
+            Vertex
+            {
+                "Position" "-128 352 16"
+            }
+        }
+        Face
+        {
+            "ID" "14"
+            Plane
+            {
+                "Normal" "0 1 0"
+                "DistanceFromOrigin" "384"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "-1 0 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "-16"
+                "YScale" "1"
+                "YShift" "-48"
+            }
+            Vertex
+            {
+                "Position" "384 384 240"
+            }
+            Vertex
+            {
+                "Position" "-128 384 240"
+            }
+            Vertex
+            {
+                "Position" "-128 384 16"
+            }
+            Vertex
+            {
+                "Position" "384 384 16"
+            }
+        }
+        Face
+        {
+            "ID" "15"
+            Plane
+            {
+                "Normal" "-1 0 0"
+                "DistanceFromOrigin" "128"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "0 -1 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "544"
+                "YScale" "1"
+                "YShift" "-48"
+            }
+            Vertex
+            {
+                "Position" "-128 384 240"
+            }
+            Vertex
+            {
+                "Position" "-128 352 240"
+            }
+            Vertex
+            {
+                "Position" "-128 352 16"
+            }
+            Vertex
+            {
+                "Position" "-128 384 16"
+            }
+        }
+        Face
+        {
+            "ID" "16"
+            Plane
+            {
+                "Normal" "1 0 0"
+                "DistanceFromOrigin" "384"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "0 1 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "-544"
+                "YScale" "1"
+                "YShift" "-48"
+            }
+            Vertex
+            {
+                "Position" "384 352 240"
+            }
+            Vertex
+            {
+                "Position" "384 384 240"
+            }
+            Vertex
+            {
+                "Position" "384 384 16"
+            }
+            Vertex
+            {
+                "Position" "384 352 16"
+            }
+        }
+        Face
+        {
+            "ID" "17"
+            Plane
+            {
+                "Normal" "0 0 1"
+                "DistanceFromOrigin" "240"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "1 0 0"
+                "VAxis" "0 -1 0"
+                "XScale" "1"
+                "XShift" "16"
+                "YScale" "1"
+                "YShift" "544"
+            }
+            Vertex
+            {
+                "Position" "-128 384 240"
+            }
+            Vertex
+            {
+                "Position" "384 384 240"
+            }
+            Vertex
+            {
+                "Position" "384 352 240"
+            }
+            Vertex
+            {
+                "Position" "-128 352 240"
+            }
+        }
+        Face
+        {
+            "ID" "18"
+            Plane
+            {
+                "Normal" "0 0 -1"
+                "DistanceFromOrigin" "-16"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "-1 0 0"
+                "VAxis" "0 -1 0"
+                "XScale" "1"
+                "XShift" "-16"
+                "YScale" "1"
+                "YShift" "544"
+            }
+            Vertex
+            {
+                "Position" "-128 352 16"
+            }
+            Vertex
+            {
+                "Position" "384 352 16"
+            }
+            Vertex
+            {
+                "Position" "384 384 16"
+            }
+            Vertex
+            {
+                "Position" "-128 384 16"
+            }
+        }
+    }
+    Solid
+    {
+        "ID" "5"
+        "IsSelected" "False"
+        "ParentID" "1"
+        ObjectColor
+        {
+            "Color" "0 231 233"
+        }
+        Face
+        {
+            "ID" "19"
+            Plane
+            {
+                "Normal" "0 -1 0"
+                "DistanceFromOrigin" "223.999969"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "1 0 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "-32"
+                "YScale" "1"
+                "YShift" "-32"
+            }
+            Vertex
+            {
+                "Position" "352 -224 240"
+            }
+            Vertex
+            {
+                "Position" "384 -224 240"
+            }
+            Vertex
+            {
+                "Position" "384 -224 16"
+            }
+            Vertex
+            {
+                "Position" "352 -224 16"
+            }
+        }
+        Face
+        {
+            "ID" "20"
+            Plane
+            {
+                "Normal" "0 1 0"
+                "DistanceFromOrigin" "352"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "-1 0 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "32"
+                "YScale" "1"
+                "YShift" "-32"
+            }
+            Vertex
+            {
+                "Position" "384 352 240"
+            }
+            Vertex
+            {
+                "Position" "352 352 240"
+            }
+            Vertex
+            {
+                "Position" "352 352 16"
+            }
+            Vertex
+            {
+                "Position" "384 352 16"
+            }
+        }
+        Face
+        {
+            "ID" "21"
+            Plane
+            {
+                "Normal" "-1 0 0"
+                "DistanceFromOrigin" "-352"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "0 -1 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "224"
+                "YScale" "1"
+                "YShift" "-32"
+            }
+            Vertex
+            {
+                "Position" "352 352 240"
+            }
+            Vertex
+            {
+                "Position" "352 -224 240"
+            }
+            Vertex
+            {
+                "Position" "352 -224 16"
+            }
+            Vertex
+            {
+                "Position" "352 352 16"
+            }
+        }
+        Face
+        {
+            "ID" "22"
+            Plane
+            {
+                "Normal" "1 0 0"
+                "DistanceFromOrigin" "384"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "0 1 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "-224"
+                "YScale" "1"
+                "YShift" "-32"
+            }
+            Vertex
+            {
+                "Position" "384 -224 240"
+            }
+            Vertex
+            {
+                "Position" "384 352 240"
+            }
+            Vertex
+            {
+                "Position" "384 352 16"
+            }
+            Vertex
+            {
+                "Position" "384 -224 16"
+            }
+        }
+        Face
+        {
+            "ID" "23"
+            Plane
+            {
+                "Normal" "0 0 1"
+                "DistanceFromOrigin" "240"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "1 0 0"
+                "VAxis" "0 -1 0"
+                "XScale" "1"
+                "XShift" "-32"
+                "YScale" "1"
+                "YShift" "224"
+            }
+            Vertex
+            {
+                "Position" "352 352 240"
+            }
+            Vertex
+            {
+                "Position" "384 352 240"
+            }
+            Vertex
+            {
+                "Position" "384 -224 240"
+            }
+            Vertex
+            {
+                "Position" "352 -224 240"
+            }
+        }
+        Face
+        {
+            "ID" "24"
+            Plane
+            {
+                "Normal" "0 0 -1"
+                "DistanceFromOrigin" "-16"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "-1 0 0"
+                "VAxis" "0 -1 0"
+                "XScale" "1"
+                "XShift" "32"
+                "YScale" "1"
+                "YShift" "224"
+            }
+            Vertex
+            {
+                "Position" "352 -224 16"
+            }
+            Vertex
+            {
+                "Position" "384 -224 16"
+            }
+            Vertex
+            {
+                "Position" "384 352 16"
+            }
+            Vertex
+            {
+                "Position" "352 352 16"
+            }
+        }
+    }
+    Solid
+    {
+        "ID" "8"
+        "IsSelected" "False"
+        "ParentID" "1"
+        Face
+        {
+            "ID" "37"
+            Plane
+            {
+                "Normal" "0 1 0"
+                "DistanceFromOrigin" "-176"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "-1 0 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "480"
+                "YScale" "1"
+                "YShift" "-64"
+            }
+            Vertex
+            {
+                "Position" "-128 -176 240"
+            }
+            Vertex
+            {
+                "Position" "-128 -176 16"
+            }
+            Vertex
+            {
+                "Position" "-96 -176 16"
+            }
+            Vertex
+            {
+                "Position" "-96 -176 240"
+            }
+        }
+        Face
+        {
+            "ID" "38"
+            Plane
+            {
+                "Normal" "0 -1 0"
+                "DistanceFromOrigin" "224"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "1 0 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "480"
+                "YScale" "1"
+                "YShift" "-64"
+            }
+            Vertex
+            {
+                "Position" "-96 -224 240"
+            }
+            Vertex
+            {
+                "Position" "-96 -224 16"
+            }
+            Vertex
+            {
+                "Position" "-128 -224 16"
+            }
+            Vertex
+            {
+                "Position" "-128 -224 240"
+            }
+        }
+        Face
+        {
+            "ID" "39"
+            Plane
+            {
+                "Normal" "-1 0 0"
+                "DistanceFromOrigin" "128"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "0 -1 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "160"
+                "YScale" "1"
+                "YShift" "-64"
+            }
+            Vertex
+            {
+                "Position" "-128 -224 240"
+            }
+            Vertex
+            {
+                "Position" "-128 -224 16"
+            }
+            Vertex
+            {
+                "Position" "-128 -176 16"
+            }
+            Vertex
+            {
+                "Position" "-128 -176 240"
+            }
+        }
+        Face
+        {
+            "ID" "40"
+            Plane
+            {
+                "Normal" "1 0 0"
+                "DistanceFromOrigin" "-96"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "0 1 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "-160"
+                "YScale" "1"
+                "YShift" "-64"
+            }
+            Vertex
+            {
+                "Position" "-96 -176 240"
+            }
+            Vertex
+            {
+                "Position" "-96 -176 16"
+            }
+            Vertex
+            {
+                "Position" "-96 -224 16"
+            }
+            Vertex
+            {
+                "Position" "-96 -224 240"
+            }
+        }
+        Face
+        {
+            "ID" "41"
+            Plane
+            {
+                "Normal" "0 0 1"
+                "DistanceFromOrigin" "240"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "1 0 0"
+                "VAxis" "0 -1 0"
+                "XScale" "1"
+                "XShift" "480"
+                "YScale" "1"
+                "YShift" "160"
+            }
+            Vertex
+            {
+                "Position" "-128 -176 240"
+            }
+            Vertex
+            {
+                "Position" "-96 -176 240"
+            }
+            Vertex
+            {
+                "Position" "-96 -224 240"
+            }
+            Vertex
+            {
+                "Position" "-128 -224 240"
+            }
+        }
+        Face
+        {
+            "ID" "42"
+            Plane
+            {
+                "Normal" "0 0 -1"
+                "DistanceFromOrigin" "-16"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "-1 0 0"
+                "VAxis" "0 -1 0"
+                "XScale" "1"
+                "XShift" "-480"
+                "YScale" "1"
+                "YShift" "160"
+            }
+            Vertex
+            {
+                "Position" "-96 -176 16"
+            }
+            Vertex
+            {
+                "Position" "-128 -176 16"
+            }
+            Vertex
+            {
+                "Position" "-128 -224 16"
+            }
+            Vertex
+            {
+                "Position" "-96 -224 16"
+            }
+        }
+        ObjectColor
+        {
+            "Color" "0 231 233"
+        }
+    }
+    Solid
+    {
+        "ID" "10"
+        "IsSelected" "False"
+        "ParentID" "1"
+        Face
+        {
+            "ID" "49"
+            Plane
+            {
+                "Normal" "0 -1 0"
+                "DistanceFromOrigin" "0"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "1 0 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "480"
+                "YScale" "1"
+                "YShift" "-64"
+            }
+            Vertex
+            {
+                "Position" "-96 0 240"
+            }
+            Vertex
+            {
+                "Position" "-96 0 16"
+            }
+            Vertex
+            {
+                "Position" "-128 0 16"
+            }
+            Vertex
+            {
+                "Position" "-128 0 240"
+            }
+        }
+        Face
+        {
+            "ID" "50"
+            Plane
+            {
+                "Normal" "0 1 0"
+                "DistanceFromOrigin" "352"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "-1 0 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "-480"
+                "YScale" "1"
+                "YShift" "-64"
+            }
+            Vertex
+            {
+                "Position" "-128 352 240"
+            }
+            Vertex
+            {
+                "Position" "-128 352 16"
+            }
+            Vertex
+            {
+                "Position" "-96 352 16"
+            }
+            Vertex
+            {
+                "Position" "-96 352 240"
+            }
+        }
+        Face
+        {
+            "ID" "51"
+            Plane
+            {
+                "Normal" "-1 0 0"
+                "DistanceFromOrigin" "128"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "0 -1 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "160"
+                "YScale" "1"
+                "YShift" "-64"
+            }
+            Vertex
+            {
+                "Position" "-128 0 240"
+            }
+            Vertex
+            {
+                "Position" "-128 0 16"
+            }
+            Vertex
+            {
+                "Position" "-128 352 16"
+            }
+            Vertex
+            {
+                "Position" "-128 352 240"
+            }
+        }
+        Face
+        {
+            "ID" "52"
+            Plane
+            {
+                "Normal" "1 0 0"
+                "DistanceFromOrigin" "-96"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "0 1 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "-160"
+                "YScale" "1"
+                "YShift" "-64"
+            }
+            Vertex
+            {
+                "Position" "-96 352 240"
+            }
+            Vertex
+            {
+                "Position" "-96 352 16"
+            }
+            Vertex
+            {
+                "Position" "-96 0 16"
+            }
+            Vertex
+            {
+                "Position" "-96 0 240"
+            }
+        }
+        Face
+        {
+            "ID" "53"
+            Plane
+            {
+                "Normal" "0 0 1"
+                "DistanceFromOrigin" "240"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "1 0 0"
+                "VAxis" "0 -1 0"
+                "XScale" "1"
+                "XShift" "480"
+                "YScale" "1"
+                "YShift" "160"
+            }
+            Vertex
+            {
+                "Position" "-128 352 240"
+            }
+            Vertex
+            {
+                "Position" "-96 352 240"
+            }
+            Vertex
+            {
+                "Position" "-96 0 240"
+            }
+            Vertex
+            {
+                "Position" "-128 0 240"
+            }
+        }
+        Face
+        {
+            "ID" "54"
+            Plane
+            {
+                "Normal" "0 0 -1"
+                "DistanceFromOrigin" "-16"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "-1 0 0"
+                "VAxis" "0 -1 0"
+                "XScale" "1"
+                "XShift" "-480"
+                "YScale" "1"
+                "YShift" "160"
+            }
+            Vertex
+            {
+                "Position" "-96 352 16"
+            }
+            Vertex
+            {
+                "Position" "-128 352 16"
+            }
+            Vertex
+            {
+                "Position" "-128 0 16"
+            }
+            Vertex
+            {
+                "Position" "-96 0 16"
+            }
+        }
+        ObjectColor
+        {
+            "Color" "0 231 233"
+        }
+    }
+    Solid
+    {
+        "ID" "12"
+        "IsSelected" "False"
+        "ParentID" "1"
+        Face
+        {
+            "ID" "61"
+            Plane
+            {
+                "Normal" "0 0 -1"
+                "DistanceFromOrigin" "-208"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "-1 0 0"
+                "VAxis" "0 -1 0"
+                "XScale" "1"
+                "XShift" "480"
+                "YScale" "1"
+                "YShift" "-64"
+            }
+            Vertex
+            {
+                "Position" "-96 0 208"
+            }
+            Vertex
+            {
+                "Position" "-128 0 208"
+            }
+            Vertex
+            {
+                "Position" "-128 -176 208"
+            }
+            Vertex
+            {
+                "Position" "-96 -176 208"
+            }
+        }
+        Face
+        {
+            "ID" "62"
+            Plane
+            {
+                "Normal" "0 1 0"
+                "DistanceFromOrigin" "0"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "-1 0 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "480"
+                "YScale" "1"
+                "YShift" "-64"
+            }
+            Vertex
+            {
+                "Position" "-128 0 240"
+            }
+            Vertex
+            {
+                "Position" "-128 0 208"
+            }
+            Vertex
+            {
+                "Position" "-96 0 208"
+            }
+            Vertex
+            {
+                "Position" "-96 0 240"
+            }
+        }
+        Face
+        {
+            "ID" "63"
+            Plane
+            {
+                "Normal" "0 -1 0"
+                "DistanceFromOrigin" "176"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "1 0 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "480"
+                "YScale" "1"
+                "YShift" "-64"
+            }
+            Vertex
+            {
+                "Position" "-96 -176 240"
+            }
+            Vertex
+            {
+                "Position" "-96 -176 208"
+            }
+            Vertex
+            {
+                "Position" "-128 -176 208"
+            }
+            Vertex
+            {
+                "Position" "-128 -176 240"
+            }
+        }
+        Face
+        {
+            "ID" "64"
+            Plane
+            {
+                "Normal" "-1 0 0"
+                "DistanceFromOrigin" "128"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "0 -1 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "160"
+                "YScale" "1"
+                "YShift" "-64"
+            }
+            Vertex
+            {
+                "Position" "-128 -176 240"
+            }
+            Vertex
+            {
+                "Position" "-128 -176 208"
+            }
+            Vertex
+            {
+                "Position" "-128 0 208"
+            }
+            Vertex
+            {
+                "Position" "-128 0 240"
+            }
+        }
+        Face
+        {
+            "ID" "65"
+            Plane
+            {
+                "Normal" "1 0 0"
+                "DistanceFromOrigin" "-96"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "0 1 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "-160"
+                "YScale" "1"
+                "YShift" "-64"
+            }
+            Vertex
+            {
+                "Position" "-96 0 240"
+            }
+            Vertex
+            {
+                "Position" "-96 0 208"
+            }
+            Vertex
+            {
+                "Position" "-96 -176 208"
+            }
+            Vertex
+            {
+                "Position" "-96 -176 240"
+            }
+        }
+        Face
+        {
+            "ID" "66"
+            Plane
+            {
+                "Normal" "0 0 1"
+                "DistanceFromOrigin" "240"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "1 0 0"
+                "VAxis" "0 -1 0"
+                "XScale" "1"
+                "XShift" "480"
+                "YScale" "1"
+                "YShift" "160"
+            }
+            Vertex
+            {
+                "Position" "-128 0 240"
+            }
+            Vertex
+            {
+                "Position" "-96 0 240"
+            }
+            Vertex
+            {
+                "Position" "-96 -176 240"
+            }
+            Vertex
+            {
+                "Position" "-128 -176 240"
+            }
+        }
+        ObjectColor
+        {
+            "Color" "0 231 233"
+        }
+    }
+    Solid
+    {
+        "ID" "14"
+        "IsSelected" "False"
+        "ParentID" "1"
+        ObjectColor
+        {
+            "Color" "0 185 236"
+        }
+        Face
+        {
+            "ID" "73"
+            Plane
+            {
+                "Normal" "0 -1 0"
+                "DistanceFromOrigin" "256"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "1 0 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "-32"
+                "YScale" "1"
+                "YShift" "224"
+            }
+            Vertex
+            {
+                "Position" "-128 -256 256"
+            }
+            Vertex
+            {
+                "Position" "384 -256 256"
+            }
+            Vertex
+            {
+                "Position" "384 -256 240"
+            }
+            Vertex
+            {
+                "Position" "-128 -256 240"
+            }
+        }
+        Face
+        {
+            "ID" "74"
+            Plane
+            {
+                "Normal" "0 1 0"
+                "DistanceFromOrigin" "384"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "-1 0 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "32"
+                "YScale" "1"
+                "YShift" "224"
+            }
+            Vertex
+            {
+                "Position" "384 384 256"
+            }
+            Vertex
+            {
+                "Position" "-128 384 256"
+            }
+            Vertex
+            {
+                "Position" "-128 384 240"
+            }
+            Vertex
+            {
+                "Position" "384 384 240"
+            }
+        }
+        Face
+        {
+            "ID" "75"
+            Plane
+            {
+                "Normal" "-1 0 0"
+                "DistanceFromOrigin" "127.999969"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "0 -1 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "32"
+                "YScale" "1"
+                "YShift" "224"
+            }
+            Vertex
+            {
+                "Position" "-128 384 256"
+            }
+            Vertex
+            {
+                "Position" "-128 -256 256"
+            }
+            Vertex
+            {
+                "Position" "-128 -256 240"
+            }
+            Vertex
+            {
+                "Position" "-128 384 240"
+            }
+        }
+        Face
+        {
+            "ID" "76"
+            Plane
+            {
+                "Normal" "1 0 0"
+                "DistanceFromOrigin" "384"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "0 1 0"
+                "VAxis" "0 0 -1"
+                "XScale" "1"
+                "XShift" "-32"
+                "YScale" "1"
+                "YShift" "224"
+            }
+            Vertex
+            {
+                "Position" "384 -256 256"
+            }
+            Vertex
+            {
+                "Position" "384 384 256"
+            }
+            Vertex
+            {
+                "Position" "384 384 240"
+            }
+            Vertex
+            {
+                "Position" "384 -256 240"
+            }
+        }
+        Face
+        {
+            "ID" "77"
+            Plane
+            {
+                "Normal" "0 0 1"
+                "DistanceFromOrigin" "256"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "1 0 0"
+                "VAxis" "0 -1 0"
+                "XScale" "1"
+                "XShift" "-32"
+                "YScale" "1"
+                "YShift" "32"
+            }
+            Vertex
+            {
+                "Position" "-128 384 256"
+            }
+            Vertex
+            {
+                "Position" "384 384 256"
+            }
+            Vertex
+            {
+                "Position" "384 -256 256"
+            }
+            Vertex
+            {
+                "Position" "-128 -256 256"
+            }
+        }
+        Face
+        {
+            "ID" "78"
+            Plane
+            {
+                "Normal" "0 0 -1"
+                "DistanceFromOrigin" "-240"
+            }
+            Texture
+            {
+                "Name" "aaatrigger"
+                "Rotation" "0"
+                "UAxis" "-1 0 0"
+                "VAxis" "0 -1 0"
+                "XScale" "1"
+                "XShift" "32"
+                "YScale" "1"
+                "YShift" "32"
+            }
+            Vertex
+            {
+                "Position" "-128 -256 240"
+            }
+            Vertex
+            {
+                "Position" "384 -256 240"
+            }
+            Vertex
+            {
+                "Position" "384 384 240"
+            }
+            Vertex
+            {
+                "Position" "-128 384 240"
+            }
+        }
+    }
+}
+Grid
+{
+    "SnapToGrid" "True"
+}
+Selection
+{
+    "SelectedObjects" ""
+}
+ActiveTexture
+{
+    "Name" ""
+}
+FaceSelection
+{
+    "SelectedFaces" ""
+}
+Camera
+{
+    "EyePosition" "-490.4115 448.2166 436.5856"
+    "LookPosition" "-476.9762 438.9529 425.0247"
+    "IsActive" "True"
+}

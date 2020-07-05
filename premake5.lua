@@ -233,6 +233,73 @@ project "DemoGame"
 		optimize "on"
 
 
+project "ShadowLight"
+	location "ShadowLight"
+	kind "ConsoleApp"
+	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
+
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	debugdir ("bin/" .. outputdir .. "/%{prj.name}")
+
+	files{
+		"%{prj.name}/Resources/**",
+		"%{prj.name}/src/**"
+	}
+
+	links
+	{
+		--"ShadowEngineBuild",
+		"ShadowEngine"
+	}
+
+	includedirs{
+		"ShadowEngine/src",
+		"ShadowEngine/dependencies",
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.spdlog}",
+	}
+
+	prebuildcommands{
+		--"%{wks.location}bin/"..outputdir.."/ShadowEngineBuild/ShadowEngineBuild.exe A %{prj.location}/Resources ",
+		--"echo %{prj.location}"
+		--"{COPY} %{prj.location}/dependencies/SDL2/lib/VC/%{cfg.architecture}/SDL2.dll \"%{cfg.buildtarget.directory}\"",
+		"{COPY} %{wks.location}/ShadowLight/Resources \"%{cfg.buildtarget.directory}/Resources\"",
+		"{COPY} %{cfg.buildtarget.directory}/../ShadowEngine/Shaders \"%{cfg.buildtarget.directory}/Shaders\""
+	}
+
+	nuget { 
+		"Assimp:3.0.0",
+		"Assimp.redist:3.0.0",
+		"sdl2.nuget:2.0.10",
+		"sdl2.nuget.redist:2.0.10",
+		"sdl2_image.nuget:2.0.5",
+		"sdl2_image.nuget.redist:2.0.5"
+	}
+
+	filter "system:windows"
+		systemversion "latest"
+		
+	filter "configurations:Debug"
+		defines "HZ_DEBUG"
+		runtime "Debug"
+		symbols "on"
+
+	filter "configurations:Release"
+		defines "HZ_RELEASE"
+		runtime "Release"
+		optimize "on"
+
+	filter "configurations:Dist"
+		defines "HZ_DIST"
+		runtime "Release"
+		optimize "on"
+
+
+
 externalproject "ShadowEngineBuild"
    location "ShadowEngineBuild"
    uuid "D11098AF-3D27-9645-869E-2167F2F366CD"
