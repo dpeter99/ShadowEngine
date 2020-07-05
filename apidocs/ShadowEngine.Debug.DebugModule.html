@@ -239,7 +239,7 @@
     <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Debug_DebugModule_GetName__.md&amp;value=---%0Auid%3A%20ShadowEngine.Debug.DebugModule.GetName()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Debug/Debug.h/#L37" title="View Source"><i class="fa fa-code"></i></a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Debug/Debug.h/#L38" title="View Source"><i class="fa fa-code"></i></a>
   </span>
   
   <a id="ShadowEngine_Debug_DebugModule_GetName_" data-uid="ShadowEngine.Debug.DebugModule.GetName*"></a>
@@ -247,7 +247,7 @@
   <h4 id="ShadowEngine_Debug_DebugModule_GetName__" data-uid="ShadowEngine.Debug.DebugModule.GetName()"><a href="#collapsible-ShadowEngine_Debug_DebugModule_GetName__" class="expander" data-toggle="collapse">GetName()</a></h4>
   
   <div id="collapsible-ShadowEngine_Debug_DebugModule_GetName__" class="collapse in">
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the name of the module </p></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   
@@ -292,12 +292,12 @@
   <h4 id="ShadowEngine_Debug_DebugModule_Init__" data-uid="ShadowEngine.Debug.DebugModule.Init()"><a href="#collapsible-ShadowEngine_Debug_DebugModule_Init__" class="expander" data-toggle="collapse">Init()</a></h4>
   
   <div id="collapsible-ShadowEngine_Debug_DebugModule_Init__" class="collapse in">
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Pre Init is called when the module is added to the engine </p><p>Init is called after all the modules are added</p></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public: void Init() override</code></pre>
+    <pre><code class="lang-csharp hljs">public: virtual void Init() override</code></pre>
   </div>
   
   
@@ -306,6 +306,8 @@
   
   
   
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">ShadowEngine.ShadowModule.Init()</span></div>
   
   
   
@@ -318,7 +320,7 @@
     <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Debug_DebugModule_LateRender__.md&amp;value=---%0Auid%3A%20ShadowEngine.Debug.DebugModule.LateRender()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Debug/Debug.h/#L35" title="View Source"><i class="fa fa-code"></i></a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Debug/Debug.h/#L36" title="View Source"><i class="fa fa-code"></i></a>
   </span>
   
   <a id="ShadowEngine_Debug_DebugModule_LateRender_" data-uid="ShadowEngine.Debug.DebugModule.LateRender*"></a>
@@ -433,10 +435,44 @@
   
   <span class="small pull-right mobile-hide">
     <span class="divider"> </span>
+    <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Debug_DebugModule_PreInit__.md&amp;value=---%0Auid%3A%20ShadowEngine.Debug.DebugModule.PreInit()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Debug/Debug.h/#L32" title="View Source"><i class="fa fa-code"></i></a>
+  </span>
+  
+  <a id="ShadowEngine_Debug_DebugModule_PreInit_" data-uid="ShadowEngine.Debug.DebugModule.PreInit*"></a>
+  
+  <h4 id="ShadowEngine_Debug_DebugModule_PreInit__" data-uid="ShadowEngine.Debug.DebugModule.PreInit()"><a href="#collapsible-ShadowEngine_Debug_DebugModule_PreInit__" class="expander" data-toggle="collapse">PreInit()</a></h4>
+  
+  <div id="collapsible-ShadowEngine_Debug_DebugModule_PreInit__" class="collapse in">
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public: void PreInit() override</code></pre>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
+  <span class="small pull-right mobile-hide">
+    <span class="divider"> </span>
     <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Debug_DebugModule_Render__.md&amp;value=---%0Auid%3A%20ShadowEngine.Debug.DebugModule.Render()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Debug/Debug.h/#L34" title="View Source"><i class="fa fa-code"></i></a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Debug/Debug.h/#L35" title="View Source"><i class="fa fa-code"></i></a>
   </span>
   
   <a id="ShadowEngine_Debug_DebugModule_Render_" data-uid="ShadowEngine.Debug.DebugModule.Render*"></a>
@@ -472,7 +508,7 @@
     <a href="https://github.com/dpeter99/ShadowEngine/new/master/apiSpec/new?filename=ShadowEngine_Debug_DebugModule_Update__.md&amp;value=---%0Auid%3A%20ShadowEngine.Debug.DebugModule.Update()%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Improve this Doc"><i class="fa fa-pencil"></i></a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Debug/Debug.h/#L33" title="View Source"><i class="fa fa-code"></i></a>
+    <a href="https://github.com/dpeter99/ShadowEngine/blob/master/ShadowEngine/src/Debug/Debug.h/#L34" title="View Source"><i class="fa fa-code"></i></a>
   </span>
   
   <a id="ShadowEngine_Debug_DebugModule_Update_" data-uid="ShadowEngine.Debug.DebugModule.Update*"></a>
@@ -480,7 +516,7 @@
   <h4 id="ShadowEngine_Debug_DebugModule_Update__" data-uid="ShadowEngine.Debug.DebugModule.Update()"><a href="#collapsible-ShadowEngine_Debug_DebugModule_Update__" class="expander" data-toggle="collapse">Update()</a></h4>
   
   <div id="collapsible-ShadowEngine_Debug_DebugModule_Update__" class="collapse in">
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>update is called each frame </p></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   

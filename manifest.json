@@ -393,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Debug.DebugModule.html",
-          "hash": "cLTpURVUIEQW8YDOQXoJHA=="
+          "hash": "tfOO611HZ7j/y0rOdSmlRg=="
         }
       },
       "is_incremental": false,
@@ -465,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.DebugGui.ImGuiModule.html",
-          "hash": "vjf9kuRiqqFIRcGe3Dx9Gg=="
+          "hash": "fkbjTlSH9fx4POzJJn4gEA=="
         }
       },
       "is_incremental": false,
@@ -561,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EntitySystem.EntitySystem.html",
-          "hash": "i7ZyEQXb49nnn2FZJW/NRA=="
+          "hash": "7K/JiB3S4/1U2L5cc2zg9Q=="
         }
       },
       "is_incremental": false,
@@ -825,7 +825,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.ShadowEventManager.html",
-          "hash": "8LUQo7d6vabEwdCcrU5C+g=="
+          "hash": "d218viwDn1rEPZ3qjTEeOQ=="
         }
       },
       "is_incremental": false,
@@ -838,6 +838,18 @@
         ".html": {
           "relative_path": "apidocs/ShadowEngine.EventSystem.html",
           "hash": "5dWtovWvfL6FMrGjU3HbVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/metadata/ShadowEngine.IGame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.IGame.html",
+          "hash": "Zg6LUh0v/DSFlb8k9StswQ=="
         }
       },
       "is_incremental": false,
@@ -1137,7 +1149,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.InputSystem.ShadowActionSystem.html",
-          "hash": "cgZpd9GMjspVAkw1U7Es2g=="
+          "hash": "jEdpejcyqwvkuZKWU0tInQ=="
         }
       },
       "is_incremental": false,
@@ -1401,7 +1413,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12Shader.html",
-          "hash": "yGteYszgS7+CQUi6NLQ6kw=="
+          "hash": "7gaesIlT/vrNVF4mepcj1g=="
         }
       },
       "is_incremental": false,
@@ -1629,7 +1641,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.Renderer.html",
-          "hash": "rxniNpmJ6fY9ttZz/rw+cA=="
+          "hash": "MJ1ZiuTMdAmTdBf3lK1WNA=="
         }
       },
       "is_incremental": false,
@@ -1761,7 +1773,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.SDLPlatform.SDLModule.html",
-          "hash": "+wtIz9sjSvhW0/eR14KVuQ=="
+          "hash": "We21MSSrfFBJrsXd5rTjEA=="
         }
       },
       "is_incremental": false,
@@ -1797,7 +1809,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.ShadowApplication.html",
-          "hash": "vsEtYnLkVLrbdz9T2uePzQ=="
+          "hash": "OnV1mQwcCxCTRl1HDVziQA=="
         }
       },
       "is_incremental": false,
@@ -1833,7 +1845,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.ShadowModule.html",
-          "hash": "eQKMuTOgr4vgXtaH6eEkPQ=="
+          "hash": "Aqfe3Me7cIIIFjdydh4jpA=="
         }
       },
       "is_incremental": false,
@@ -1845,7 +1857,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.ShadowModuleManager.html",
-          "hash": "sNrTtfGlZZFmTCGPonTG3A=="
+          "hash": "dLRJOLm3egjVLKflBQdsbg=="
         }
       },
       "is_incremental": false,
@@ -1929,7 +1941,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.html",
-          "hash": "sIFVG0lw25OmZD1qvYsEtA=="
+          "hash": "7Q93KFHsKi2KniBKEnLQ1Q=="
         }
       },
       "is_incremental": false,
@@ -2037,7 +2049,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/toc.html",
-          "hash": "URDFYd1aEahXoxtVaX63bA=="
+          "hash": "cpx2T6Vx7INruxnBxhDZWw=="
         }
       },
       "is_incremental": false,
@@ -2181,7 +2193,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 164,
+          "total_file_count": 165,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

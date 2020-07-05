@@ -1064,6 +1064,17 @@ references:
   isSpec: "True"
   fullName: void ShadowEngine::Debug::DebugModule::OnGui
   nameWithType: DebugModule::OnGui
+- uid: ShadowEngine.Debug.DebugModule.PreInit()
+  name: PreInit()
+  href: apidocs/ShadowEngine.Debug.DebugModule.html#ShadowEngine_Debug_DebugModule_PreInit__
+  fullName: void ShadowEngine::Debug::DebugModule::PreInit()
+  nameWithType: DebugModule::PreInit()
+- uid: ShadowEngine.Debug.DebugModule.PreInit*
+  name: PreInit
+  href: apidocs/ShadowEngine.Debug.DebugModule.html#ShadowEngine_Debug_DebugModule_PreInit_
+  isSpec: "True"
+  fullName: void ShadowEngine::Debug::DebugModule::PreInit
+  nameWithType: DebugModule::PreInit
 - uid: ShadowEngine.Debug.DebugModule.Render()
   name: Render()
   href: apidocs/ShadowEngine.Debug.DebugModule.html#ShadowEngine_Debug_DebugModule_Render__
@@ -1287,6 +1298,17 @@ references:
   isSpec: "True"
   fullName: void ShadowEngine::DebugGui::ImGuiModule::OtherWindows
   nameWithType: ImGuiModule::OtherWindows
+- uid: ShadowEngine.DebugGui.ImGuiModule.PreInit()
+  name: PreInit()
+  href: apidocs/ShadowEngine.DebugGui.ImGuiModule.html#ShadowEngine_DebugGui_ImGuiModule_PreInit__
+  fullName: void ShadowEngine::DebugGui::ImGuiModule::PreInit()
+  nameWithType: ImGuiModule::PreInit()
+- uid: ShadowEngine.DebugGui.ImGuiModule.PreInit*
+  name: PreInit
+  href: apidocs/ShadowEngine.DebugGui.ImGuiModule.html#ShadowEngine_DebugGui_ImGuiModule_PreInit_
+  isSpec: "True"
+  fullName: void ShadowEngine::DebugGui::ImGuiModule::PreInit
+  nameWithType: ImGuiModule::PreInit
 - uid: ShadowEngine.DebugGui.ImGuiModule.Render()
   name: Render()
   href: apidocs/ShadowEngine.DebugGui.ImGuiModule.html#ShadowEngine_DebugGui_ImGuiModule_Render__
@@ -2067,6 +2089,17 @@ references:
   isSpec: "True"
   fullName: void ShadowEngine::EntitySystem::EntitySystem::LoadScene
   nameWithType: EntitySystem::LoadScene
+- uid: ShadowEngine.EntitySystem.EntitySystem.PreInit()
+  name: PreInit()
+  href: apidocs/ShadowEngine.EntitySystem.EntitySystem.html#ShadowEngine_EntitySystem_EntitySystem_PreInit__
+  fullName: void ShadowEngine::EntitySystem::EntitySystem::PreInit()
+  nameWithType: EntitySystem::PreInit()
+- uid: ShadowEngine.EntitySystem.EntitySystem.PreInit*
+  name: PreInit
+  href: apidocs/ShadowEngine.EntitySystem.EntitySystem.html#ShadowEngine_EntitySystem_EntitySystem_PreInit_
+  isSpec: "True"
+  fullName: void ShadowEngine::EntitySystem::EntitySystem::PreInit
+  nameWithType: EntitySystem::PreInit
 - uid: ShadowEngine.EntitySystem.EntitySystem.Render()
   name: Render()
   href: apidocs/ShadowEngine.EntitySystem.EntitySystem.html#ShadowEngine_EntitySystem_EntitySystem_Render__
@@ -2723,6 +2756,17 @@ references:
   isSpec: "True"
   fullName: static void ShadowEngine::EventSystem::ShadowEventManager::PollEvents
   nameWithType: ShadowEventManager::PollEvents
+- uid: ShadowEngine.EventSystem.ShadowEventManager.PreInit()
+  name: PreInit()
+  href: apidocs/ShadowEngine.EventSystem.ShadowEventManager.html#ShadowEngine_EventSystem_ShadowEventManager_PreInit__
+  fullName: void ShadowEngine::EventSystem::ShadowEventManager::PreInit()
+  nameWithType: ShadowEventManager::PreInit()
+- uid: ShadowEngine.EventSystem.ShadowEventManager.PreInit*
+  name: PreInit
+  href: apidocs/ShadowEngine.EventSystem.ShadowEventManager.html#ShadowEngine_EventSystem_ShadowEventManager_PreInit_
+  isSpec: "True"
+  fullName: void ShadowEngine::EventSystem::ShadowEventManager::PreInit
+  nameWithType: ShadowEventManager::PreInit
 - uid: ShadowEngine.EventSystem.ShadowEventManager.ProcessEvents()
   name: ProcessEvents()
   href: apidocs/ShadowEngine.EventSystem.ShadowEventManager.html#ShadowEngine_EventSystem_ShadowEventManager_ProcessEvents__
@@ -2778,6 +2822,44 @@ references:
   isSpec: "True"
   fullName: void ShadowEngine::EventSystem::ShadowEventManager::Update
   nameWithType: ShadowEventManager::Update
+- uid: ShadowEngine.IGame
+  name: IGame
+  href: apidocs/ShadowEngine.IGame.html
+  fullName: ShadowEngine::IGame
+  nameWithType: IGame
+- uid: ShadowEngine.IGame.Init()
+  name: Init()
+  href: apidocs/ShadowEngine.IGame.html#ShadowEngine_IGame_Init__
+  fullName: virtual void ShadowEngine::IGame::Init()
+  nameWithType: IGame::Init()
+- uid: ShadowEngine.IGame.Init*
+  name: Init
+  href: apidocs/ShadowEngine.IGame.html#ShadowEngine_IGame_Init_
+  isSpec: "True"
+  fullName: virtual void ShadowEngine::IGame::Init
+  nameWithType: IGame::Init
+- uid: ShadowEngine.IGame.Start()
+  name: Start()
+  href: apidocs/ShadowEngine.IGame.html#ShadowEngine_IGame_Start__
+  fullName: virtual void ShadowEngine::IGame::Start()
+  nameWithType: IGame::Start()
+- uid: ShadowEngine.IGame.Start*
+  name: Start
+  href: apidocs/ShadowEngine.IGame.html#ShadowEngine_IGame_Start_
+  isSpec: "True"
+  fullName: virtual void ShadowEngine::IGame::Start
+  nameWithType: IGame::Start
+- uid: ShadowEngine.IGame.Stop()
+  name: Stop()
+  href: apidocs/ShadowEngine.IGame.html#ShadowEngine_IGame_Stop__
+  fullName: virtual void ShadowEngine::IGame::Stop()
+  nameWithType: IGame::Stop()
+- uid: ShadowEngine.IGame.Stop*
+  name: Stop
+  href: apidocs/ShadowEngine.IGame.html#ShadowEngine_IGame_Stop_
+  isSpec: "True"
+  fullName: virtual void ShadowEngine::IGame::Stop
+  nameWithType: IGame::Stop
 - uid: ShadowEngine.InputSystem
   name: ShadowEngine::InputSystem
   href: apidocs/ShadowEngine.InputSystem.html
@@ -3919,6 +4001,17 @@ references:
   isSpec: "True"
   fullName: void ShadowEngine::InputSystem::ShadowActionSystem::OnEvent
   nameWithType: ShadowActionSystem::OnEvent
+- uid: ShadowEngine.InputSystem.ShadowActionSystem.PreInit()
+  name: PreInit()
+  href: apidocs/ShadowEngine.InputSystem.ShadowActionSystem.html#ShadowEngine_InputSystem_ShadowActionSystem_PreInit__
+  fullName: void ShadowEngine::InputSystem::ShadowActionSystem::PreInit()
+  nameWithType: ShadowActionSystem::PreInit()
+- uid: ShadowEngine.InputSystem.ShadowActionSystem.PreInit*
+  name: PreInit
+  href: apidocs/ShadowEngine.InputSystem.ShadowActionSystem.html#ShadowEngine_InputSystem_ShadowActionSystem_PreInit_
+  isSpec: "True"
+  fullName: void ShadowEngine::InputSystem::ShadowActionSystem::PreInit
+  nameWithType: ShadowActionSystem::PreInit
 - uid: ShadowEngine.InputSystem.ShadowActionSystem.RegisterInspectors()
   name: RegisterInspectors()
   href: apidocs/ShadowEngine.InputSystem.ShadowActionSystem.html#ShadowEngine_InputSystem_ShadowActionSystem_RegisterInspectors__
@@ -6423,6 +6516,17 @@ references:
   isSpec: "True"
   fullName: void ShadowEngine::Rendering::Renderer::LateRender
   nameWithType: Renderer::LateRender
+- uid: ShadowEngine.Rendering.Renderer.PreInit()
+  name: PreInit()
+  href: apidocs/ShadowEngine.Rendering.Renderer.html#ShadowEngine_Rendering_Renderer_PreInit__
+  fullName: void ShadowEngine::Rendering::Renderer::PreInit()
+  nameWithType: Renderer::PreInit()
+- uid: ShadowEngine.Rendering.Renderer.PreInit*
+  name: PreInit
+  href: apidocs/ShadowEngine.Rendering.Renderer.html#ShadowEngine_Rendering_Renderer_PreInit_
+  isSpec: "True"
+  fullName: void ShadowEngine::Rendering::Renderer::PreInit
+  nameWithType: Renderer::PreInit
 - uid: ShadowEngine.Rendering.Renderer.Render()
   name: Render()
   href: apidocs/ShadowEngine.Rendering.Renderer.html#ShadowEngine_Rendering_Renderer_Render__
@@ -7452,6 +7556,17 @@ references:
   isSpec: "True"
   fullName: void ShadowEngine::SDLPlatform::SDLModule::LateRender
   nameWithType: SDLModule::LateRender
+- uid: ShadowEngine.SDLPlatform.SDLModule.PreInit()
+  name: PreInit()
+  href: apidocs/ShadowEngine.SDLPlatform.SDLModule.html#ShadowEngine_SDLPlatform_SDLModule_PreInit__
+  fullName: void ShadowEngine::SDLPlatform::SDLModule::PreInit()
+  nameWithType: SDLModule::PreInit()
+- uid: ShadowEngine.SDLPlatform.SDLModule.PreInit*
+  name: PreInit
+  href: apidocs/ShadowEngine.SDLPlatform.SDLModule.html#ShadowEngine_SDLPlatform_SDLModule_PreInit_
+  isSpec: "True"
+  fullName: void ShadowEngine::SDLPlatform::SDLModule::PreInit
+  nameWithType: SDLModule::PreInit
 - uid: ShadowEngine.SDLPlatform.SDLModule.Render()
   name: Render()
   href: apidocs/ShadowEngine.SDLPlatform.SDLModule.html#ShadowEngine_SDLPlatform_SDLModule_Render__
