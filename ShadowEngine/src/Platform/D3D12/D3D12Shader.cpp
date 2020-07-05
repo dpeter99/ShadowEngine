@@ -305,6 +305,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 			}
 
 			//Debug
+#ifdef DX12_DEBUG
 			{
 
 				std::cout << "Binding: Name:" << binding_desc.Name << std::endl;
@@ -339,20 +340,23 @@ namespace ShadowEngine::Rendering::D3D12 {
 				std::wcout << "\t Material Data: " << (matdata ? "OK" : "NOP") << std::endl;
 
 			}
-
+#endif
 		}
+
 
 		//Extract the rood signature
 		const D3D12_ROOT_SIGNATURE_DESC& rootSignatureDesc = *(rsDeserializer->GetRootSignatureDesc());
 
+#ifdef DX12_DEBUG
 		std::cout << "RootSig: " << std::endl;
-
+#endif
 
 		for (size_t i = 0; i < rootSignatureDesc.NumParameters; i++)
 		{
 			D3D12_ROOT_PARAMETER param = rootSignatureDesc.pParameters[i];
 
 			//Debug info
+#ifdef DX12_DEBUG
 			{
 				std::string type = "Unknown";
 
@@ -377,12 +381,16 @@ namespace ShadowEngine::Rendering::D3D12 {
 					break;
 				}
 
-				std::cout << "\tParameter: Type: " << type << std::endl;
-			}
 
+				std::cout << "\tParameter: Type: " << type << std::endl;
+
+			}
+#endif
+			
 			if (param.ParameterType == D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE) {
 
 				//Debug Info
+#ifdef DX12_DEBUG
 				{
 					std::cout << "\t\t Number of descriptors: " << param.DescriptorTable.NumDescriptorRanges << std::endl;
 					for (size_t i = 0; i < param.DescriptorTable.NumDescriptorRanges; i++)
@@ -417,6 +425,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 						}
 					}
 				}
+#endif
 
 				for (size_t j = 0; j < param.DescriptorTable.NumDescriptorRanges; j++)
 				{
@@ -430,7 +439,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 							range.BaseShaderRegister + range.NumDescriptors >= matBinding.BindPoint &&
 							range.RegisterSpace == matBinding.Space)
 						{
-							SH_CORE_ERROR("Found");
+							//SH_CORE_INFO("Found");
 							if (descriptorTableParameterIndex == -1) {
 								descriptorTableParameterIndex = i;
 							}
@@ -445,10 +454,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 			else if (param.ParameterType == D3D12_ROOT_PARAMETER_TYPE_CBV) {
 
 				//Debug info
+#ifdef DX12_DEBUG
 				{
 					std::cout << "\t\t Register Space: " << param.Descriptor.RegisterSpace << std::endl;
 					std::cout << "\t\t Shader Register: " << param.Descriptor.ShaderRegister << std::endl;
 				}
+#endif
 
 				for each (auto & matBinding in parameters)
 				{
@@ -465,9 +476,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 			}
 		}
 
-		std::cout << properties.ToString();
-
-		std::cout << "asd";
+		//std::cout << properties.ToString();
 
 	}
 

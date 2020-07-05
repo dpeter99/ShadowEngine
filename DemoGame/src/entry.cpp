@@ -1,10 +1,10 @@
-#include "DemoGame.h"
-
 #include <Core/Core.h>
 
-void entryPoint()
+#include "TestGame.h"
+
+ShadowEngine::IGame* entryPoint()
 {
-	
+	return new TestGame();
 }
 
 ShadowEngine::SetupFunction _setupFunc = entryPoint;

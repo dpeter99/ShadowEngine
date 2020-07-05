@@ -30,6 +30,7 @@ namespace ShadowEngine::EntitySystem {
 
 		std::string GetName() override { return "EntitySystem"; };
 
+		void PreInit() override {};
 		void Init() override;
 		void Update() override;
 

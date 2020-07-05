@@ -16,6 +16,7 @@
 #endif
 
 namespace ShadowEngine {
+	class IGame;
 
 	template<typename T>
 	using Scope = std::unique_ptr<T>;
@@ -24,7 +25,7 @@ namespace ShadowEngine {
 	using Ref = std::shared_ptr<T>;
 
 
-	typedef void (*SetupFunction)();
+	typedef IGame* (*SetupFunction)();
 	
 }
 

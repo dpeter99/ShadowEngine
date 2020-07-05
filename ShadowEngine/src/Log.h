@@ -15,6 +15,7 @@ namespace ShadowEngine {
 		SHObject_Base(Log)
 
 	public:
+		void PreInit() override;
 		void Init() override;
 		void Update() override {};
 		void LateRender() override {};
@@ -23,6 +24,7 @@ namespace ShadowEngine {
 
 		inline static std::shared_ptr<spdlog::logger>& GetCoreLogger() { return s_CoreLogger; }
 		inline static std::shared_ptr<spdlog::logger>& GetClientLogger() { return s_ClientLogger; }
+		
 	private:
 		static std::shared_ptr<spdlog::logger> s_CoreLogger;
 		static std::shared_ptr<spdlog::logger> s_ClientLogger;

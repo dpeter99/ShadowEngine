@@ -1,6 +1,8 @@
 #include "shpch.h"
 
 #include "ShadowApplication.h"
+
+#include "IGame.h"
 #include "ShadowModules/ShadowModuleManager.h"
 #include "ShadowMap/ShadowWorld.h"
 #include "ShadowAsset/AssetManager.h"
@@ -24,9 +26,13 @@ namespace ShadowEngine {
 
 	ShadowApplication* ShadowApplication::instance = nullptr;
 
+	IGame* game;
+	
 	ShadowApplication::ShadowApplication() : window_(nullptr)
 	{
 		instance = this;
+
+		game = _setupFunc();
 	}
 
 
@@ -45,9 +51,11 @@ namespace ShadowEngine {
 		moduleManager.PushModule(new Debug::DebugModule());
 		moduleManager.PushModule(new EntitySystem::EntitySystem());
 
+		game->Init();
+		
 		moduleManager.Init();
 
-
+		
 
 	}
 
