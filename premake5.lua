@@ -98,13 +98,15 @@ project "ShadowEngine"
 		"Glad",
 		"ImGui",
 		
-		
-		"ShadowEngineBuild",
-		
 		"opengl32.lib",
 		"D3D12.lib",
 		"DXGI.lib",
 		"D3DCompiler.lib"
+	}
+	
+	dependson 
+	{
+		"ShadowEngineBuild"
 	}
 	
 	nuget { 
