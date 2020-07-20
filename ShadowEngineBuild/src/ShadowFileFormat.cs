@@ -30,6 +30,7 @@ namespace ShadowEngineBuild
 
         public void AddProperty(ShadowFileElement element)
         {
+            this.isBlock = true; //TODO: I think this is correct but i didn't touch this code in a long while :/
             this.properties.Add(element.name,element);
         }
 

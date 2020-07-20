@@ -1,16 +1,15 @@
 #pragma once
 
+#include "ShadowModules/ShadowModule.h"
 #include "Core/Core.h"
 
-#include "ShadowModules/ShadowModule.h"
-#include <ShadowModules/ShadowModule.h>
 
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
 
 namespace ShadowEngine {
 
-	class Log : public ShadowEngine::ShadowModule
+	class Log : public ShadowModule
 	{
 		SHObject_Base(Log)
 

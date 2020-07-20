@@ -42,14 +42,16 @@ namespace ShadowEngine {
 
 	void ShadowApplication::Init()
 	{
-		moduleManager.PushModule(new ShadowEngine::Log());
+		moduleManager.PushModule(new Log());
 		moduleManager.PushModule(new EventSystem::ShadowEventManager());
 		moduleManager.PushModule(new SDLPlatform::SDLModule());
-		moduleManager.PushModule(new ShadowEngine::Rendering::Renderer());
+		moduleManager.PushModule(new Rendering::Renderer());
 		moduleManager.PushModule(new DebugGui::ImGuiModule());
 		moduleManager.PushModule(new InputSystem::ShadowActionSystem());
-		moduleManager.PushModule(new Debug::DebugModule());
+		//moduleManager.PushModule(new Debug::DebugModule());
 		moduleManager.PushModule(new EntitySystem::EntitySystem());
+
+		moduleManager.PushModule(new AssetManager());
 
 		game->Init();
 		

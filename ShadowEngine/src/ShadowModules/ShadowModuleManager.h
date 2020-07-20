@@ -30,7 +30,7 @@ namespace ShadowEngine {
 					return dynamic_cast<T*>(module.get());
 			}
 			SH_ASSERT(false, "Can't find the module");
-			//return NULL;
+			return nullptr;
 		}
 
 		void Init();

@@ -1,0 +1,14 @@
+Assets:{
+	0:Textures\cube_maps\ame_ash\ashcanyon_bk.tga,
+	1:Textures\cube_maps\ame_ash\ashcanyon_dn.tga,
+	2:Textures\cube_maps\ame_ash\ashcanyon_ft.tga,
+	3:Textures\cube_maps\ame_ash\ashcanyon_lf.tga,
+	4:Textures\cube_maps\ame_ash\ashcanyon_rt.tga,
+	5:Textures\cube_maps\ame_ash\ashcanyon_up.tga,
+	6:Textures\cube_maps\mp_cc\cc_bk.tga,
+	7:Textures\cube_maps\mp_cc\cc_dn.tga,
+	8:Textures\cube_maps\mp_cc\cc_ft.tga,
+	9:Textures\cube_maps\mp_cc\cc_lf.tga,
+	10:Textures\cube_maps\mp_cc\cc_rt.tga,
+	11:Textures\cube_maps\mp_cc\cc_up.tga,
+}

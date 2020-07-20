@@ -21,6 +21,7 @@
 
 #include <fstream>
 
+#include "Core/SHObject.h"
 #include "Util/Utility.h"
 #include "Log.h"
 #include "Core/Core.h"

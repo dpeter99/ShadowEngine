@@ -1,40 +1,38 @@
 #include "shpch.h"
+#include "EditorModule.h"
 
-#include "Debug.h"
-#include "ShadowEvents/ShadowEventManager.h"
+
+
+#include "Debug/Debug.h"
 #include "ImGui/ImGuiModule.h"
 #include "imgui.h"
-#include "ShadowModules/ShadowModuleManager.h"
-#include "ShadowInput/ShadowAction.h"
-#include "ShadowInput/Bindings/KeyboardBinding.h"
-#include "ShadowInput/Modifiers/ModifierHold.h"
-#include "Util/Utility.h"
-#include "ShadowInput/Bindings/Binding1D.h"
 #include "ShadowTime.h"
-#include "Inspector/Inspector.h"
-#include "Inspector/InspectorSystem.h"
-#include "EntitySystem/EntitySystem.h"
-#include <Core\ShadowApplication.h>
-
+#include "AssetsWindow/AssetsWindow.h"
+#include "Core/ShadowApplication.h"
 #include "ImGui/IconsFontAwesome5.h"
+#include "Inspector/InspectorSystem.h"
+#include "ShadowEvents/ShadowEventManager.h"
 #include "ShadowInput/ShadowActionSystem.h"
 
-namespace ShadowEngine::Debug {
+namespace ShadowLight::Editor {
 
-	DebugModule::DebugModule() : active(false)
+	EditorModule::EditorModule() : active(false)
 	{
 	}
 
-	DebugModule::~DebugModule()
+	EditorModule::~EditorModule()
 	{
 	}
 
-
-
-	void DebugModule::Init()
+	void EditorModule::PreInit()
 	{
-		EventSystem::ShadowEventManager::AddNewEventListener(this);
-		DebugGui::ImGuiModule::AddGUICall(this);
+		windows.push_back(new AssetsWindow());
+	}
+
+	void EditorModule::Init()
+	{
+		ShadowEngine::EventSystem::ShadowEventManager::AddNewEventListener(this);
+		ShadowEngine::DebugGui::ImGuiModule::AddGUICall(this);
 
 		//new ShadowInput::ShadowAction<bool>("Test", new ShadowInput::KeyboardBinding("a"));
 
@@ -44,22 +42,21 @@ namespace ShadowEngine::Debug {
 		RegisterEntityInspectors();
 	}
 
-	void DebugModule::OnEvent(EventSystem::ShadowEvent& e)
+	void EditorModule::OnEvent(ShadowEngine::EventSystem::ShadowEvent& e)
 	{
 		//std::cout << e.ToString() << std::endl;
 	}
 
-	void DebugModule::ActionDebug()
+	void EditorModule::ActionDebug()
 	{
-		auto evMan = InputSystem::ShadowActionSystem::_instance;
+		auto evMan = ShadowEngine::InputSystem::ShadowActionSystem::_instance;
 
 		ImGui::Begin("Actions", &active, ImGuiWindowFlags_MenuBar);
 
-		for (InputSystem::IShadowAction* element : evMan->actions)
+		for (ShadowEngine::InputSystem::IShadowAction* element : evMan->actions)
 		{
 			if (ImGui::TreeNode(element, element->GetName().c_str())) {
-
-				InspectorSystem::InspectorSystem::Draw(*element);
+				ShadowEngine::Debug::InspectorSystem::InspectorSystem::Draw(*element);
 
 				ImGui::TreePop();
 			}
@@ -70,11 +67,11 @@ namespace ShadowEngine::Debug {
 		ImGui::End();
 	}
 
-	void DebugModule::DebugHierarchy()
+	void EditorModule::DebugHierarchy()
 	{
 		static bool shown;
 
-		auto* scenemg = ShadowEngine::ShadowApplication::Get().GetModuleManager().GetModuleByType<EntitySystem::EntitySystem>();
+		auto* scenemg = ShadowEngine::ShadowApplication::Get().GetModuleManager().GetModuleByType<ShadowEngine::EntitySystem::EntitySystem>();
 
 		ImGui::Begin("Hierarchy", &shown, ImGuiWindowFlags_MenuBar);
 
@@ -112,6 +109,7 @@ namespace ShadowEngine::Debug {
 
 	}
 
+
 	template<class T>
 	ImGuiTreeNodeFlags treeSelectableFlags(T a, T b) {
 		ImGuiTreeNodeFlags node_flags = ImGuiTreeNodeFlags_OpenOnArrow;
@@ -121,7 +119,7 @@ namespace ShadowEngine::Debug {
 		return node_flags;
 	}
 
-	void DebugModule::Inspector() {
+	void EditorModule::Inspector() {
 		static bool shown = true;
 
 		ImGui::Begin("Inspector", &shown, ImGuiWindowFlags_None);
@@ -159,18 +157,18 @@ namespace ShadowEngine::Debug {
 			ImGui::Separator();
 
 			if (selected_inspector) {
-				InspectorSystem::DrawEntityInspector(selected_inspector);
+				ShadowEngine::Debug::InspectorSystem::DrawEntityInspector(selected_inspector);
 			}
 		}
 
 		ImGui::End();
 	}
 
-	void DrawDefaultInspector(EntitySystem::rtm_ptr<EntitySystem::Entity> entity) {
-		InspectorSystem::DrawEntityInspector(entity);
+	void DrawDefaultInspector(ShadowEngine::EntitySystem::rtm_ptr<ShadowEngine::EntitySystem::Entity> entity) {
+		ShadowEngine::Debug::InspectorSystem::DrawEntityInspector(entity);
 	}
 
-	void DebugModule::OnGui()
+	void EditorModule::OnGui()
 	{
 		ImGui::ShowDemoWindow();
 
@@ -202,6 +200,11 @@ namespace ShadowEngine::Debug {
 		DebugHierarchy();
 
 		Inspector();
-	}
 
+		for each (Editor::EditorWindow* window in windows)
+		{
+			window->Draw();
+		}
+	}
+	
 }

@@ -3,6 +3,7 @@
 #include "AssetManager.h"
 #include "AssetLoader.h"
 
+#include "ShadowFileFormat/SFFParser.h"
 
 AssetManager* AssetManager::instance = nullptr;
 
@@ -14,6 +15,23 @@ AssetManager::AssetManager()
 
 AssetManager::~AssetManager()
 {
+}
+
+void AssetManager::Init()
+{
+	SH_CORE_INFO("Trying to load Resources/pack.spf");
+	SFFElement* root = ShadowEngine::SFF::SFFParser::ReadFromFile("./Resources/pack.spf");
+	if(root == nullptr)
+	{
+		SH_CORE_CRITICAL("Coudn't load pack file.");
+		return;
+	}
+	
+	for each (auto& var in root->properties)
+	{
+		this->knownAssets.emplace(std::stoi(var.first),var.second->value);
+	}
+	
 }
 
 bool AssetManager::CheckLoaded(std::string path, ShadowEngine::Assets::ShadowAsset** asset = nullptr)

@@ -1,5 +1,9 @@
-﻿using System;
+﻿using ShadowEngineBuild.src;
+
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using TiledSharp;
 
 
@@ -22,6 +26,11 @@ namespace ShadowEngineBuild
 
 
             ShadowMapConverter.ConvertMaps();
+
+            BuildSystem system = new BuildSystem();
+            system.Init();
+            system.Start();
+
 
 
 #if DEBUG
