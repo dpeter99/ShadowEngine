@@ -1,6 +1,6 @@
 *.sln
 *.vcxproj
-*.csproj
+##*.csproj
 *.filters
 *.user
 *.zip
@@ -25,3 +25,5 @@ docs/obj/**
 Captures/
 
 DemoGame/packages.config
+
+ShadowEngineBuild/obj/
