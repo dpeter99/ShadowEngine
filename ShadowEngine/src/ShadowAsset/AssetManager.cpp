@@ -27,7 +27,8 @@ void AssetManager::Init()
 		return;
 	}
 	
-	for each (auto& var in root->properties)
+	auto* assets = root->GetChildByName("Assets");
+	for each (auto& var in assets->children)
 	{
 		this->knownAssets.emplace(std::stoi(var.first),var.second->value);
 	}

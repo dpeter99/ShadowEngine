@@ -8,9 +8,21 @@
 
     <BaseIntermediateOutputPath>..\bin-int\</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)-windows-$(Platform)\ShadowEngineBuild</IntermediateOutputPath>
+
+    <BaseOutputPath>..\bin\</BaseOutputPath>
+    
+    
     
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Platform)' == 'x64'">
+    <OutputSubDir>$(Configuration)-windows-x86_64</OutputSubDir>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OutputPath>$(BaseOutputPath)$(OutputSubDir)\ShadowEngineBuild</OutputPath>
+  </PropertyGroup>
+  
   <ItemGroup>
     <Compile Remove="dependencies\**" />
     <EmbeddedResource Remove="dependencies\**" />

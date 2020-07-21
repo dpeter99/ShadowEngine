@@ -42,7 +42,7 @@ namespace ShadowEngineBuild
         public static void WriteFile(ShadowFileElement root, string path)
         {
             StreamWriter writer = new StreamWriter(path);
-
+            writer.WriteLine("ShadowFileFormat_1_0_0");
 
             int depth = 0;
             WriteElement(writer,root,ref depth);

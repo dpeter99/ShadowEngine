@@ -2,7 +2,7 @@
   "profiles": {
     "ShadowEngineBuild": {
       "commandName": "Project",
-      "commandLineArgs": "P:\\ShadowEngine\\shadowengine\\ShadowEngine P:\\ShadowEngine\\shadowengine\\ShadowLight\\Resources"
+      "commandLineArgs": "$(SolutionDir)\\ShadowEngine $(SolutionDir)\\ShadowLight\\Resources"
     }
   }
 }

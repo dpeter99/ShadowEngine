@@ -1,10 +1,18 @@
 #include "shpch.h"
 #include "SFFParser.h"
 
+
 namespace ShadowEngine::SFF {
 
 	SFFElement* SFFParser::ReadFromStream(std::istream& stream)
 	{
+		auto version = ReadVersionFromHeader(stream);
+		if (version.invalid) {
+			SH_CORE_WARN("Shadow File is invalid");
+			return nullptr;
+		}
+
+
 		//The current node that we are building
 		auto* context = new SFFElement;
 
@@ -13,6 +21,8 @@ namespace ShadowEngine::SFF {
 
 		//The new node that will be a child of the context
 		auto* current = new SFFElement;
+
+
 
 
 		std::string buffer;
@@ -33,7 +43,7 @@ namespace ShadowEngine::SFF {
 				//Start of a new block
 				current->isBlock = true;
 				current->parent = context;
-				context->properties[current->name] = current;
+				context->children[current->name] = current;
 				context = current;
 
 				current = new SFFElement;
@@ -48,7 +58,7 @@ namespace ShadowEngine::SFF {
 				current->isBlock = false;
 				buffer = "";
 
-				context->properties[current->name] = current;
+				context->children[current->name] = current;
 
 				current = new SFFElement();
 			}
@@ -70,6 +80,24 @@ namespace ShadowEngine::SFF {
 
 		return base;
 	}
+
+	SFFVersion SFFParser::ReadVersionFromHeader(std::istream& stream) {
+		std::string line;
+		std::getline(stream, line);
+		auto parts = explode(line, '_');
+		if (parts[0] != "ShadowFileFormat") {
+			return SFFVersion(-1,-1,-1);
+		}
+		else {
+			int mayor = std::stoi(parts[1]);
+			int minor = std::stoi(parts[2]);
+			int patch = std::stoi(parts[3]);
+			return SFFVersion(mayor, minor, patch);
+		}
+		
+	}
+
+
 
 	SFFElement* SFFParser::ReadFromFile(std::string path)
 	{

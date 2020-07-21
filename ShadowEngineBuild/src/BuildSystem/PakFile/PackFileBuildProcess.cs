@@ -16,6 +16,11 @@ namespace ShadowEngineBuild.src
         public PackFileBuildProcess()
         {
             extensions.Add(".tga");
+            extensions.Add(".jpg");
+            extensions.Add(".png");
+
+            extensions.Add(".obj");
+            extensions.Add(".fbx");
         }
 
         public void FinishSteps()
