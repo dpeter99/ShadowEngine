@@ -27,3 +27,5 @@ Captures/
 DemoGame/packages.config
 
 ShadowEngineBuild/obj/
+sledge/**/*.csproj
+ShadowEngineInterop/**/*.csproj

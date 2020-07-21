@@ -14,8 +14,11 @@ namespace ShadowEngineBuild
         static int Main(string[] args)
         {
             //Debugger.Launch();
-
-            Console.WriteLine("Shadow Engine Build System");
+            Console.WriteLine("########################################################################");
+            Console.WriteLine("########################################################################");
+            Console.WriteLine("##############       Shadow Engine Build System      ###################");
+            Console.WriteLine("########################################################################");
+            Console.WriteLine("########################################################################");
 
             if (String.IsNullOrEmpty(args[0]) || String.IsNullOrEmpty(args[1]))
                 return 1;
