@@ -6,9 +6,13 @@
 #include <map>
 #include "AssetLoader.h"
 
+typedef unsigned long UUID;
+
 struct AssetInfo
 {
-	
+	UUID id;
+	bool loaded;
+	ShadowEngine::Assets::ShadowAsset* asset;
 };
 
 //Responsible for loading and unloading assets at runtime
