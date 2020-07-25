@@ -9,7 +9,7 @@ namespace ShadowLight::Editor {
 	{
 		bool active = true;
 
-		AssetManager* assetManager = nullptr;
+		ShadowEngine::Assets::AssetManager* assetManager = nullptr;
 	public:
 		void Draw() override;
 	};

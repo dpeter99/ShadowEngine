@@ -5,19 +5,35 @@
 
 #include "ShadowFileFormat/SFFParser.h"
 
-AssetManager* AssetManager::instance = nullptr;
 
-AssetManager::AssetManager()
+
+bool ShadowEngine::Assets::AssetInfo::operator==(const std::vector<std::string>& search_tags) const
+{
+	const std::vector<std::string>& asset_tags = tags;
+	return std::all_of(search_tags.begin(), search_tags.end(),
+
+	                   [&asset_tags](const std::string& tag)
+	                   {
+		                   return std::any_of(asset_tags.begin(), asset_tags.end(), tag);
+	                   });
+}
+
+
+
+
+ShadowEngine::Assets::AssetManager* ShadowEngine::Assets::AssetManager::instance = nullptr;
+
+ShadowEngine::Assets::AssetManager::AssetManager()
 {
 	instance = this;
 }
 
 
-AssetManager::~AssetManager()
+ShadowEngine::Assets::AssetManager::~AssetManager()
 {
 }
 
-void AssetManager::Init()
+void ShadowEngine::Assets::AssetManager::Init()
 {
 	SH_CORE_INFO("Trying to load Resources/pack.spf");
 	SFFElement* root = ShadowEngine::SFF::SFFParser::ReadFromFile("./Resources/pack.spf");
@@ -35,7 +51,7 @@ void AssetManager::Init()
 	
 }
 
-bool AssetManager::CheckLoaded(std::string path, ShadowEngine::Assets::ShadowAsset** asset = nullptr)
+bool ShadowEngine::Assets::AssetManager::CheckLoaded(std::string path, ShadowEngine::Assets::ShadowAsset** asset = nullptr)
 {
 	for (auto item : this->loadedAssets)
 	{
@@ -50,11 +66,11 @@ bool AssetManager::CheckLoaded(std::string path, ShadowEngine::Assets::ShadowAss
 	return false;
 }
 
-void AssetManager::UnloadAsset(std::string)
+void ShadowEngine::Assets::AssetManager::UnloadAsset(std::string)
 {
 }
 
-void AssetManager::UnloadAsset(ShadowEngine::Assets::ShadowAsset* asset)
+void ShadowEngine::Assets::AssetManager::UnloadAsset(ShadowEngine::Assets::ShadowAsset* asset)
 {
 	auto v = this->loadedAssets.find(asset->runtimeAssetID);
 	this->loadedAssets.erase(v);

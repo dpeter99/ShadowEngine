@@ -12,14 +12,14 @@ namespace ShadowLight::Editor {
 	{
 		if (assetManager == nullptr) {
 			auto* mm = ShadowEngine::ShadowModuleManager::instance;
-			assetManager = mm->GetModuleByType<AssetManager>();
+			assetManager = mm->GetModuleByType<ShadowEngine::Assets::AssetManager>();
 		}
 		
 		ImGui::Begin("Assets", &active, ImGuiWindowFlags_None);
 
-		for each (auto var in assetManager->knownAssets)
+		for each (auto& var in assetManager->knownAssets)
 		{
-			ImGui::Text(var.second.c_str());
+			ImGui::Text(var.getName().c_str());
 		}
 
 		ImGui::End();

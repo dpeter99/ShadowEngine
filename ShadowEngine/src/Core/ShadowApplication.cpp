@@ -51,7 +51,7 @@ namespace ShadowEngine {
 		//moduleManager.PushModule(new Debug::DebugModule());
 		moduleManager.PushModule(new EntitySystem::EntitySystem());
 
-		moduleManager.PushModule(new AssetManager());
+		moduleManager.PushModule(new Assets::AssetManager());
 
 		game->Init();
 		
