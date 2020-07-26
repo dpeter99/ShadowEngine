@@ -10,12 +10,11 @@
 bool ShadowEngine::Assets::AssetInfo::operator==(const std::vector<std::string>& search_tags) const
 {
 	const std::vector<std::string>& asset_tags = tags;
-	return std::all_of(search_tags.begin(), search_tags.end(),
-
-	                   [&asset_tags](const std::string& tag)
-	                   {
-		                   return std::any_of(asset_tags.begin(), asset_tags.end(), tag);
-	                   });
+	auto pred = [&asset_tags](const std::string& tag)
+	{
+		return std::any_of(asset_tags.begin(), asset_tags.end(), [&tag](std::string t) {return t == tag; });
+	};
+	return std::all_of(search_tags.begin(), search_tags.end(),pred);
 }
 
 
@@ -28,10 +27,10 @@ ShadowEngine::Assets::AssetManager::AssetManager()
 	instance = this;
 }
 
-
 ShadowEngine::Assets::AssetManager::~AssetManager()
 {
 }
+
 
 void ShadowEngine::Assets::AssetManager::Init()
 {
@@ -46,7 +45,9 @@ void ShadowEngine::Assets::AssetManager::Init()
 	auto* assets = root->GetChildByName("Assets");
 	for each (auto& var in assets->children)
 	{
-		this->knownAssets.emplace(std::stoi(var.first),var.second->value);
+		AssetInfo info(std::stoi(var.first), var.second->value);
+		
+		this->knownAssets.emplace(info);
 	}
 	
 }

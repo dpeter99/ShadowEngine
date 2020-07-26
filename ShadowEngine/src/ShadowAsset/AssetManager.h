@@ -29,9 +29,28 @@ namespace ShadowEngine::Assets {
 		ShadowAsset* asset;
 
 	public:
+		AssetInfo(UUID uuid, std::string name)
+		{
+			this->uuid = uuid;
+			this->name = name;
+
+			loaded = false;
+			asset = nullptr;
+		}
+		
 		const std::string& getName() const
 		{
 			return name;
+		}
+
+		const UUID& getUUID() const
+		{
+			return uuid;
+		}
+
+		const bool getLoaded() const
+		{
+			return loaded;
 		}
 		
 		bool operator==(const std::string& name) const
@@ -67,20 +86,10 @@ namespace ShadowEngine::Assets {
 
 	};
 
-	struct test {
-		bool bin_pred(AssetInfo& a, AssetInfo& b)
+	struct asset_info_comparator {
+		bool operator() (const AssetInfo& a, const AssetInfo& b) const
 		{
-
-		}
-
-		bool comp(AssetInfo& a, AssetInfo& b)
-		{
-			
-		}
-
-		bool equiv(AssetInfo& a, AssetInfo& b)
-		{
-			
+			return a.getUUID() < b.getUUID();
 		}
 	};
 	
@@ -101,11 +110,11 @@ namespace ShadowEngine::Assets {
 			return instance;
 		}
 
-		std::set<AssetInfo, test> knownAssets;
+		std::set<AssetInfo, asset_info_comparator> knownAssets;
 
 		//A map where the loaded assets are stored
 		//Maps the id to the ShadowAsset
-		std::map<int, ShadowEngine::Assets::ShadowAsset*> loadedAssets;
+		[[DEPRECATED]]std::map<int, ShadowEngine::Assets::ShadowAsset*> loadedAssets;
 
 		int nextID = 0;
 
