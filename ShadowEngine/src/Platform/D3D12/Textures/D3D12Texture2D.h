@@ -8,6 +8,7 @@
 #include "ShadowAsset/Assets/Textures/Texture.h"
 #include "Platform/D3D12/D3D12CommandList.h"
 #include "Platform/D3D12/D3D12IUploadable.h"
+#include "ShadowAsset/Assets/Textures/Texture2D.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
