@@ -1,92 +1,6 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: AssetManager
-  name: AssetManager
-  href: apidocs/AssetManager.html
-  fullName: AssetManager
-  nameWithType: AssetManager
-- uid: AssetManager.~AssetManager()
-  name: ~AssetManager()
-  href: apidocs/AssetManager.html#AssetManager__AssetManager__
-  fullName: AssetManager::~AssetManager()
-  nameWithType: AssetManager::~AssetManager()
-- uid: AssetManager.~AssetManager*
-  name: ~AssetManager
-  href: apidocs/AssetManager.html#AssetManager__AssetManager_
-  isSpec: "True"
-  fullName: AssetManager::~AssetManager
-  nameWithType: AssetManager::~AssetManager
-- uid: AssetManager.AssetManager()
-  name: AssetManager()
-  href: apidocs/AssetManager.html#AssetManager_AssetManager__
-  fullName: AssetManager::AssetManager()
-  nameWithType: AssetManager::AssetManager()
-- uid: AssetManager.AssetManager*
-  name: AssetManager
-  href: apidocs/AssetManager.html#AssetManager_AssetManager_
-  isSpec: "True"
-  fullName: AssetManager::AssetManager
-  nameWithType: AssetManager::AssetManager
-- uid: AssetManager.CheckLoaded(std::string,ShadowEngine::Assets::ShadowAsset **)
-  name: CheckLoaded(std::string path, ShadowEngine::Assets::ShadowAsset **asset)
-  href: apidocs/AssetManager.html#AssetManager_CheckLoaded_std__string_ShadowEngine__Assets__ShadowAsset____
-  fullName: bool AssetManager::CheckLoaded(std::string path, ShadowEngine::Assets::ShadowAsset **asset)
-  nameWithType: AssetManager::CheckLoaded(std::string path, ShadowEngine::Assets::ShadowAsset **asset)
-- uid: AssetManager.CheckLoaded*
-  name: CheckLoaded
-  href: apidocs/AssetManager.html#AssetManager_CheckLoaded_
-  isSpec: "True"
-  fullName: bool AssetManager::CheckLoaded
-  nameWithType: AssetManager::CheckLoaded
-- uid: AssetManager.GetAsset(std::string)
-  name: GetAsset(std::string path)
-  href: apidocs/AssetManager.html#AssetManager_GetAsset_std__string_
-  fullName: static T* AssetManager::GetAsset(std::string path)
-  nameWithType: AssetManager::GetAsset(std::string path)
-- uid: AssetManager.GetAsset*
-  name: GetAsset
-  href: apidocs/AssetManager.html#AssetManager_GetAsset_
-  isSpec: "True"
-  fullName: static T* AssetManager::GetAsset
-  nameWithType: AssetManager::GetAsset
-- uid: AssetManager.getInstance()
-  name: getInstance()
-  href: apidocs/AssetManager.html#AssetManager_getInstance__
-  fullName: static AssetManager* AssetManager::getInstance()
-  nameWithType: AssetManager::getInstance()
-- uid: AssetManager.getInstance*
-  name: getInstance
-  href: apidocs/AssetManager.html#AssetManager_getInstance_
-  isSpec: "True"
-  fullName: static AssetManager* AssetManager::getInstance
-  nameWithType: AssetManager::getInstance
-- uid: AssetManager.loadedAssets
-  name: loadedAssets
-  href: apidocs/AssetManager.html#AssetManager_loadedAssets
-  fullName: std::map<int, ShadowEngine::Assets::ShadowAsset*> AssetManager::loadedAssets
-  nameWithType: AssetManager::loadedAssets
-- uid: AssetManager.nextID
-  name: nextID
-  href: apidocs/AssetManager.html#AssetManager_nextID
-  fullName: int AssetManager::nextID
-  nameWithType: AssetManager::nextID
-- uid: AssetManager.UnloadAsset(ShadowEngine::Assets::ShadowAsset *)
-  name: UnloadAsset(ShadowEngine::Assets::ShadowAsset *asset)
-  href: apidocs/AssetManager.html#AssetManager_UnloadAsset_ShadowEngine__Assets__ShadowAsset___
-  fullName: void AssetManager::UnloadAsset(ShadowEngine::Assets::ShadowAsset *asset)
-  nameWithType: AssetManager::UnloadAsset(ShadowEngine::Assets::ShadowAsset *asset)
-- uid: AssetManager.UnloadAsset(std::string)
-  name: UnloadAsset(std::string)
-  href: apidocs/AssetManager.html#AssetManager_UnloadAsset_std__string_
-  fullName: void AssetManager::UnloadAsset(std::string)
-  nameWithType: AssetManager::UnloadAsset(std::string)
-- uid: AssetManager.UnloadAsset*
-  name: UnloadAsset
-  href: apidocs/AssetManager.html#AssetManager_UnloadAsset_
-  isSpec: "True"
-  fullName: void AssetManager::UnloadAsset
-  nameWithType: AssetManager::UnloadAsset
 - uid: Callback
   name: Callback
   href: apidocs/Callback.html
@@ -577,6 +491,132 @@ references:
   isSpec: "True"
   fullName: void PointLightInspector::Draw
   nameWithType: PointLightInspector::Draw
+- uid: SFFElement
+  name: SFFElement
+  href: apidocs/SFFElement.html
+  fullName: SFFElement
+  nameWithType: SFFElement
+- uid: SFFElement.~SFFElement()
+  name: ~SFFElement()
+  href: apidocs/SFFElement.html#SFFElement__SFFElement__
+  fullName: SFFElement::~SFFElement()
+  nameWithType: SFFElement::~SFFElement()
+- uid: SFFElement.~SFFElement*
+  name: ~SFFElement
+  href: apidocs/SFFElement.html#SFFElement__SFFElement_
+  isSpec: "True"
+  fullName: SFFElement::~SFFElement
+  nameWithType: SFFElement::~SFFElement
+- uid: SFFElement.children
+  name: children
+  href: apidocs/SFFElement.html#SFFElement_children
+  fullName: std::map<std::string, SFFElement*> SFFElement::children
+  nameWithType: SFFElement::children
+- uid: SFFElement.GetChildByIndex(int)
+  name: GetChildByIndex(int i)
+  href: apidocs/SFFElement.html#SFFElement_GetChildByIndex_int_
+  fullName: SFFElement * SFFElement::GetChildByIndex(int i)
+  nameWithType: SFFElement::GetChildByIndex(int i)
+- uid: SFFElement.GetChildByIndex*
+  name: GetChildByIndex
+  href: apidocs/SFFElement.html#SFFElement_GetChildByIndex_
+  isSpec: "True"
+  fullName: SFFElement * SFFElement::GetChildByIndex
+  nameWithType: SFFElement::GetChildByIndex
+- uid: SFFElement.GetChildByName(std::string)
+  name: GetChildByName(std::string name)
+  href: apidocs/SFFElement.html#SFFElement_GetChildByName_std__string_
+  fullName: SFFElement * SFFElement::GetChildByName(std::string name)
+  nameWithType: SFFElement::GetChildByName(std::string name)
+- uid: SFFElement.GetChildByName*
+  name: GetChildByName
+  href: apidocs/SFFElement.html#SFFElement_GetChildByName_
+  isSpec: "True"
+  fullName: SFFElement * SFFElement::GetChildByName
+  nameWithType: SFFElement::GetChildByName
+- uid: SFFElement.GetFirstChild()
+  name: GetFirstChild()
+  href: apidocs/SFFElement.html#SFFElement_GetFirstChild__
+  fullName: SFFElement * SFFElement::GetFirstChild()
+  nameWithType: SFFElement::GetFirstChild()
+- uid: SFFElement.GetFirstChild*
+  name: GetFirstChild
+  href: apidocs/SFFElement.html#SFFElement_GetFirstChild_
+  isSpec: "True"
+  fullName: SFFElement * SFFElement::GetFirstChild
+  nameWithType: SFFElement::GetFirstChild
+- uid: SFFElement.GetStringProperty(std::string)
+  name: GetStringProperty(std::string name)
+  href: apidocs/SFFElement.html#SFFElement_GetStringProperty_std__string_
+  fullName: std::string SFFElement::GetStringProperty(std::string name)
+  nameWithType: SFFElement::GetStringProperty(std::string name)
+- uid: SFFElement.GetStringProperty*
+  name: GetStringProperty
+  href: apidocs/SFFElement.html#SFFElement_GetStringProperty_
+  isSpec: "True"
+  fullName: std::string SFFElement::GetStringProperty
+  nameWithType: SFFElement::GetStringProperty
+- uid: SFFElement.isBlock
+  name: isBlock
+  href: apidocs/SFFElement.html#SFFElement_isBlock
+  fullName: bool SFFElement::isBlock
+  nameWithType: SFFElement::isBlock
+- uid: SFFElement.name
+  name: name
+  href: apidocs/SFFElement.html#SFFElement_name
+  fullName: std::string SFFElement::name
+  nameWithType: SFFElement::name
+- uid: SFFElement.parent
+  name: parent
+  href: apidocs/SFFElement.html#SFFElement_parent
+  fullName: SFFElement* SFFElement::parent
+  nameWithType: SFFElement::parent
+- uid: SFFElement.properties_old
+  name: properties_old
+  href: apidocs/SFFElement.html#SFFElement_properties_old
+  fullName: std::list<SFFElement*> SFFElement::properties_old
+  nameWithType: SFFElement::properties_old
+- uid: SFFElement.value
+  name: value
+  href: apidocs/SFFElement.html#SFFElement_value
+  fullName: std::string SFFElement::value
+  nameWithType: SFFElement::value
+- uid: SFFVersion
+  name: SFFVersion
+  href: apidocs/SFFVersion.html
+  fullName: SFFVersion
+  nameWithType: SFFVersion
+- uid: SFFVersion.invalid
+  name: invalid
+  href: apidocs/SFFVersion.html#SFFVersion_invalid
+  fullName: bool SFFVersion::invalid
+  nameWithType: SFFVersion::invalid
+- uid: SFFVersion.mayor
+  name: mayor
+  href: apidocs/SFFVersion.html#SFFVersion_mayor
+  fullName: int SFFVersion::mayor
+  nameWithType: SFFVersion::mayor
+- uid: SFFVersion.minor
+  name: minor
+  href: apidocs/SFFVersion.html#SFFVersion_minor
+  fullName: int SFFVersion::minor
+  nameWithType: SFFVersion::minor
+- uid: SFFVersion.patch
+  name: patch
+  href: apidocs/SFFVersion.html#SFFVersion_patch
+  fullName: int SFFVersion::patch
+  nameWithType: SFFVersion::patch
+- uid: SFFVersion.SFFVersion(int,int,int)
+  name: SFFVersion(int ma, int mi, int pa)
+  href: apidocs/SFFVersion.html#SFFVersion_SFFVersion_int_int_int_
+  fullName: SFFVersion::SFFVersion(int ma, int mi, int pa)
+  nameWithType: SFFVersion::SFFVersion(int ma, int mi, int pa)
+- uid: SFFVersion.SFFVersion*
+  name: SFFVersion
+  href: apidocs/SFFVersion.html#SFFVersion_SFFVersion_
+  isSpec: "True"
+  fullName: SFFVersion::SFFVersion
+  nameWithType: SFFVersion::SFFVersion
 - uid: ShadowEngine
   name: ShadowEngine
   href: apidocs/ShadowEngine.html
@@ -587,6 +627,124 @@ references:
   href: apidocs/ShadowEngine.Assets.html
   fullName: ShadowEngine::Assets
   nameWithType: ShadowEngine::Assets
+- uid: ShadowEngine.Assets.asset_info_comparator
+  name: asset_info_comparator
+  href: apidocs/ShadowEngine.Assets.asset_info_comparator.html
+  fullName: ShadowEngine::Assets::asset_info_comparator
+  nameWithType: asset_info_comparator
+- uid: ShadowEngine.Assets.asset_info_comparator.operator()(const AssetInfo &,const AssetInfo &)
+  name: operator()(const AssetInfo &a, const AssetInfo &b)
+  href: apidocs/ShadowEngine.Assets.asset_info_comparator.html#ShadowEngine_Assets_asset_info_comparator_operator___const_AssetInfo___const_AssetInfo___
+  fullName: bool ShadowEngine::Assets::asset_info_comparator::operator()(const AssetInfo &a, const AssetInfo &b)
+  nameWithType: asset_info_comparator::operator()(const AssetInfo &a, const AssetInfo &b)
+- uid: ShadowEngine.Assets.asset_info_comparator.operator*
+  name: operator
+  href: apidocs/ShadowEngine.Assets.asset_info_comparator.html#ShadowEngine_Assets_asset_info_comparator_operator_
+  isSpec: "True"
+  fullName: bool ShadowEngine::Assets::asset_info_comparator::operator
+  nameWithType: asset_info_comparator::operator
+- uid: ShadowEngine.Assets.AssetInfo
+  name: AssetInfo
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html
+  fullName: ShadowEngine::Assets::AssetInfo
+  nameWithType: AssetInfo
+- uid: ShadowEngine.Assets.AssetInfo.AssetInfo(UUID,std::string)
+  name: AssetInfo(UUID uuid, std::string name)
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_AssetInfo_UUID_std__string_
+  fullName: ShadowEngine::Assets::AssetInfo::AssetInfo(UUID uuid, std::string name)
+  nameWithType: AssetInfo::AssetInfo(UUID uuid, std::string name)
+- uid: ShadowEngine.Assets.AssetInfo.AssetInfo*
+  name: AssetInfo
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_AssetInfo_
+  isSpec: "True"
+  fullName: ShadowEngine::Assets::AssetInfo::AssetInfo
+  nameWithType: AssetInfo::AssetInfo
+- uid: ShadowEngine.Assets.AssetInfo.getLoaded()
+  name: getLoaded()
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_getLoaded__
+  fullName: const bool ShadowEngine::Assets::AssetInfo::getLoaded()
+  nameWithType: AssetInfo::getLoaded()
+- uid: ShadowEngine.Assets.AssetInfo.getLoaded*
+  name: getLoaded
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_getLoaded_
+  isSpec: "True"
+  fullName: const bool ShadowEngine::Assets::AssetInfo::getLoaded
+  nameWithType: AssetInfo::getLoaded
+- uid: ShadowEngine.Assets.AssetInfo.getName()
+  name: getName()
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_getName__
+  fullName: const std::string& ShadowEngine::Assets::AssetInfo::getName()
+  nameWithType: AssetInfo::getName()
+- uid: ShadowEngine.Assets.AssetInfo.getName*
+  name: getName
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_getName_
+  isSpec: "True"
+  fullName: const std::string& ShadowEngine::Assets::AssetInfo::getName
+  nameWithType: AssetInfo::getName
+- uid: ShadowEngine.Assets.AssetInfo.getUUID()
+  name: getUUID()
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_getUUID__
+  fullName: const UUID& ShadowEngine::Assets::AssetInfo::getUUID()
+  nameWithType: AssetInfo::getUUID()
+- uid: ShadowEngine.Assets.AssetInfo.getUUID*
+  name: getUUID
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_getUUID_
+  isSpec: "True"
+  fullName: const UUID& ShadowEngine::Assets::AssetInfo::getUUID
+  nameWithType: AssetInfo::getUUID
+- uid: ShadowEngine.Assets.AssetInfo.HasTag(const std::string &)
+  name: HasTag(const std::string &tag)
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_HasTag_const_std__string___
+  fullName: bool ShadowEngine::Assets::AssetInfo::HasTag(const std::string &tag)
+  nameWithType: AssetInfo::HasTag(const std::string &tag)
+- uid: ShadowEngine.Assets.AssetInfo.HasTag*
+  name: HasTag
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_HasTag_
+  isSpec: "True"
+  fullName: bool ShadowEngine::Assets::AssetInfo::HasTag
+  nameWithType: AssetInfo::HasTag
+- uid: ShadowEngine.Assets.AssetInfo.operator!=(const std::string &)
+  name: operator!=(const std::string &name)
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_operator___const_std__string___
+  fullName: bool ShadowEngine::Assets::AssetInfo::operator!=(const std::string &name)
+  nameWithType: AssetInfo::operator!=(const std::string &name)
+- uid: ShadowEngine.Assets.AssetInfo.operator!=(const std::vector<std::string> &)
+  name: operator!=(const std::vector<std::string> &search_tags)
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_operator___const_std__vector_std__string____
+  fullName: bool ShadowEngine::Assets::AssetInfo::operator!=(const std::vector<std::string> &search_tags)
+  nameWithType: AssetInfo::operator!=(const std::vector<std::string> &search_tags)
+- uid: ShadowEngine.Assets.AssetInfo.operator!=(UUID)
+  name: operator!=(UUID uuid)
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_operator___UUID_
+  fullName: bool ShadowEngine::Assets::AssetInfo::operator!=(UUID uuid)
+  nameWithType: AssetInfo::operator!=(UUID uuid)
+- uid: ShadowEngine.Assets.AssetInfo.operator!=*
+  name: operator!=
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_operator___
+  isSpec: "True"
+  fullName: bool ShadowEngine::Assets::AssetInfo::operator!=
+  nameWithType: AssetInfo::operator!=
+- uid: ShadowEngine.Assets.AssetInfo.operator==(const std::string &)
+  name: operator==(const std::string &name)
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_operator___const_std__string___
+  fullName: bool ShadowEngine::Assets::AssetInfo::operator==(const std::string &name)
+  nameWithType: AssetInfo::operator==(const std::string &name)
+- uid: ShadowEngine.Assets.AssetInfo.operator==(const std::vector<std::string> &)
+  name: operator==(const std::vector<std::string> &search_tags)
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_operator___const_std__vector_std__string____
+  fullName: bool ShadowEngine::Assets::AssetInfo::operator==(const std::vector<std::string> &search_tags)
+  nameWithType: AssetInfo::operator==(const std::vector<std::string> &search_tags)
+- uid: ShadowEngine.Assets.AssetInfo.operator==(UUID)
+  name: operator==(UUID uuid)
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_operator___UUID_
+  fullName: bool ShadowEngine::Assets::AssetInfo::operator==(UUID uuid)
+  nameWithType: AssetInfo::operator==(UUID uuid)
+- uid: ShadowEngine.Assets.AssetInfo.operator==*
+  name: operator==
+  href: apidocs/ShadowEngine.Assets.AssetInfo.html#ShadowEngine_Assets_AssetInfo_operator___
+  isSpec: "True"
+  fullName: bool ShadowEngine::Assets::AssetInfo::operator==
+  nameWithType: AssetInfo::operator==
 - uid: ShadowEngine.Assets.AssetLoader
   name: AssetLoader
   href: apidocs/ShadowEngine.Assets.AssetLoader.html
@@ -647,6 +805,174 @@ references:
   isSpec: "True"
   fullName: World::ShadowWorld* ShadowEngine::Assets::AssetLoader::LoadAsset<World::ShadowWorld>
   nameWithType: ShadowEngine::Assets::AssetLoader::LoadAsset<World::ShadowWorld>
+- uid: ShadowEngine.Assets.AssetManager
+  name: AssetManager
+  href: apidocs/ShadowEngine.Assets.AssetManager.html
+  fullName: ShadowEngine::Assets::AssetManager
+  nameWithType: AssetManager
+- uid: ShadowEngine.Assets.AssetManager.~AssetManager()
+  name: ~AssetManager()
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager__AssetManager__
+  fullName: ShadowEngine::Assets::AssetManager::~AssetManager()
+  nameWithType: AssetManager::~AssetManager()
+- uid: ShadowEngine.Assets.AssetManager.~AssetManager*
+  name: ~AssetManager
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager__AssetManager_
+  isSpec: "True"
+  fullName: ShadowEngine::Assets::AssetManager::~AssetManager
+  nameWithType: AssetManager::~AssetManager
+- uid: ShadowEngine.Assets.AssetManager.AssetManager()
+  name: AssetManager()
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_AssetManager__
+  fullName: ShadowEngine::Assets::AssetManager::AssetManager()
+  nameWithType: AssetManager::AssetManager()
+- uid: ShadowEngine.Assets.AssetManager.AssetManager*
+  name: AssetManager
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_AssetManager_
+  isSpec: "True"
+  fullName: ShadowEngine::Assets::AssetManager::AssetManager
+  nameWithType: AssetManager::AssetManager
+- uid: ShadowEngine.Assets.AssetManager.CheckLoaded(std::string,ShadowEngine::Assets::ShadowAsset **)
+  name: CheckLoaded(std::string path, ShadowEngine::Assets::ShadowAsset **asset)
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_CheckLoaded_std__string_ShadowEngine__Assets__ShadowAsset____
+  fullName: bool ShadowEngine::Assets::AssetManager::CheckLoaded(std::string path, ShadowEngine::Assets::ShadowAsset **asset)
+  nameWithType: AssetManager::CheckLoaded(std::string path, ShadowEngine::Assets::ShadowAsset **asset)
+- uid: ShadowEngine.Assets.AssetManager.CheckLoaded*
+  name: CheckLoaded
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_CheckLoaded_
+  isSpec: "True"
+  fullName: bool ShadowEngine::Assets::AssetManager::CheckLoaded
+  nameWithType: AssetManager::CheckLoaded
+- uid: ShadowEngine.Assets.AssetManager.GetAsset(const std::string &)
+  name: GetAsset(const std::string &path)
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_GetAsset_const_std__string___
+  fullName: T* ShadowEngine::Assets::AssetManager::GetAsset(const std::string &path)
+  nameWithType: AssetManager::GetAsset(const std::string &path)
+- uid: ShadowEngine.Assets.AssetManager.GetAsset*
+  name: GetAsset
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_GetAsset_
+  isSpec: "True"
+  fullName: T* ShadowEngine::Assets::AssetManager::GetAsset
+  nameWithType: AssetManager::GetAsset
+- uid: ShadowEngine.Assets.AssetManager.GetAsset_OLD(std::string)
+  name: GetAsset_OLD(std::string path)
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_GetAsset_OLD_std__string_
+  fullName: static T* ShadowEngine::Assets::AssetManager::GetAsset_OLD(std::string path)
+  nameWithType: AssetManager::GetAsset_OLD(std::string path)
+- uid: ShadowEngine.Assets.AssetManager.GetAsset_OLD*
+  name: GetAsset_OLD
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_GetAsset_OLD_
+  isSpec: "True"
+  fullName: static T* ShadowEngine::Assets::AssetManager::GetAsset_OLD
+  nameWithType: AssetManager::GetAsset_OLD
+- uid: ShadowEngine.Assets.AssetManager.getInstance()
+  name: getInstance()
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_getInstance__
+  fullName: static AssetManager* ShadowEngine::Assets::AssetManager::getInstance()
+  nameWithType: AssetManager::getInstance()
+- uid: ShadowEngine.Assets.AssetManager.getInstance*
+  name: getInstance
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_getInstance_
+  isSpec: "True"
+  fullName: static AssetManager* ShadowEngine::Assets::AssetManager::getInstance
+  nameWithType: AssetManager::getInstance
+- uid: ShadowEngine.Assets.AssetManager.GetName()
+  name: GetName()
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_GetName__
+  fullName: std::string ShadowEngine::Assets::AssetManager::GetName()
+  nameWithType: AssetManager::GetName()
+- uid: ShadowEngine.Assets.AssetManager.GetName*
+  name: GetName
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_GetName_
+  isSpec: "True"
+  fullName: std::string ShadowEngine::Assets::AssetManager::GetName
+  nameWithType: AssetManager::GetName
+- uid: ShadowEngine.Assets.AssetManager.Init()
+  name: Init()
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_Init__
+  fullName: void ShadowEngine::Assets::AssetManager::Init()
+  nameWithType: AssetManager::Init()
+- uid: ShadowEngine.Assets.AssetManager.Init*
+  name: Init
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_Init_
+  isSpec: "True"
+  fullName: void ShadowEngine::Assets::AssetManager::Init
+  nameWithType: AssetManager::Init
+- uid: ShadowEngine.Assets.AssetManager.knownAssets
+  name: knownAssets
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_knownAssets
+  fullName: std::set<AssetInfo, asset_info_comparator> ShadowEngine::Assets::AssetManager::knownAssets
+  nameWithType: AssetManager::knownAssets
+- uid: ShadowEngine.Assets.AssetManager.LateRender()
+  name: LateRender()
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_LateRender__
+  fullName: void ShadowEngine::Assets::AssetManager::LateRender()
+  nameWithType: AssetManager::LateRender()
+- uid: ShadowEngine.Assets.AssetManager.LateRender*
+  name: LateRender
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_LateRender_
+  isSpec: "True"
+  fullName: void ShadowEngine::Assets::AssetManager::LateRender
+  nameWithType: AssetManager::LateRender
+- uid: ShadowEngine.Assets.AssetManager.loadedAssets
+  name: loadedAssets
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_loadedAssets
+  fullName: std::map<int, ShadowEngine::Assets::ShadowAsset*> ShadowEngine::Assets::AssetManager::loadedAssets
+  nameWithType: AssetManager::loadedAssets
+- uid: ShadowEngine.Assets.AssetManager.nextID
+  name: nextID
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_nextID
+  fullName: int ShadowEngine::Assets::AssetManager::nextID
+  nameWithType: AssetManager::nextID
+- uid: ShadowEngine.Assets.AssetManager.PreInit()
+  name: PreInit()
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_PreInit__
+  fullName: void ShadowEngine::Assets::AssetManager::PreInit()
+  nameWithType: AssetManager::PreInit()
+- uid: ShadowEngine.Assets.AssetManager.PreInit*
+  name: PreInit
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_PreInit_
+  isSpec: "True"
+  fullName: void ShadowEngine::Assets::AssetManager::PreInit
+  nameWithType: AssetManager::PreInit
+- uid: ShadowEngine.Assets.AssetManager.Render()
+  name: Render()
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_Render__
+  fullName: void ShadowEngine::Assets::AssetManager::Render()
+  nameWithType: AssetManager::Render()
+- uid: ShadowEngine.Assets.AssetManager.Render*
+  name: Render
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_Render_
+  isSpec: "True"
+  fullName: void ShadowEngine::Assets::AssetManager::Render
+  nameWithType: AssetManager::Render
+- uid: ShadowEngine.Assets.AssetManager.UnloadAsset(ShadowEngine::Assets::ShadowAsset *)
+  name: UnloadAsset(ShadowEngine::Assets::ShadowAsset *asset)
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_UnloadAsset_ShadowEngine__Assets__ShadowAsset___
+  fullName: void ShadowEngine::Assets::AssetManager::UnloadAsset(ShadowEngine::Assets::ShadowAsset *asset)
+  nameWithType: AssetManager::UnloadAsset(ShadowEngine::Assets::ShadowAsset *asset)
+- uid: ShadowEngine.Assets.AssetManager.UnloadAsset(std::string)
+  name: UnloadAsset(std::string)
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_UnloadAsset_std__string_
+  fullName: void ShadowEngine::Assets::AssetManager::UnloadAsset(std::string)
+  nameWithType: AssetManager::UnloadAsset(std::string)
+- uid: ShadowEngine.Assets.AssetManager.UnloadAsset*
+  name: UnloadAsset
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_UnloadAsset_
+  isSpec: "True"
+  fullName: void ShadowEngine::Assets::AssetManager::UnloadAsset
+  nameWithType: AssetManager::UnloadAsset
+- uid: ShadowEngine.Assets.AssetManager.Update()
+  name: Update()
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_Update__
+  fullName: void ShadowEngine::Assets::AssetManager::Update()
+  nameWithType: AssetManager::Update()
+- uid: ShadowEngine.Assets.AssetManager.Update*
+  name: Update
+  href: apidocs/ShadowEngine.Assets.AssetManager.html#ShadowEngine_Assets_AssetManager_Update_
+  isSpec: "True"
+  fullName: void ShadowEngine::Assets::AssetManager::Update
+  nameWithType: AssetManager::Update
 - uid: ShadowEngine.Assets.Element
   name: Element
   href: apidocs/ShadowEngine.Assets.Element.html
@@ -7600,6 +7926,49 @@ references:
   isSpec: "True"
   fullName: void ShadowEngine::SDLPlatform::SDLModule::Update
   nameWithType: SDLModule::Update
+- uid: ShadowEngine.SFF
+  name: ShadowEngine::SFF
+  href: apidocs/ShadowEngine.SFF.html
+  fullName: ShadowEngine::SFF
+  nameWithType: ShadowEngine::SFF
+- uid: ShadowEngine.SFF.SFFParser
+  name: SFFParser
+  href: apidocs/ShadowEngine.SFF.SFFParser.html
+  fullName: ShadowEngine::SFF::SFFParser
+  nameWithType: SFFParser
+- uid: ShadowEngine.SFF.SFFParser.ReadFromFile(std::string)
+  name: ReadFromFile(std::string path)
+  href: apidocs/ShadowEngine.SFF.SFFParser.html#ShadowEngine_SFF_SFFParser_ReadFromFile_std__string_
+  fullName: SFFElement * ShadowEngine::SFF::SFFParser::ReadFromFile(std::string path)
+  nameWithType: SFFParser::ReadFromFile(std::string path)
+- uid: ShadowEngine.SFF.SFFParser.ReadFromFile*
+  name: ReadFromFile
+  href: apidocs/ShadowEngine.SFF.SFFParser.html#ShadowEngine_SFF_SFFParser_ReadFromFile_
+  isSpec: "True"
+  fullName: SFFElement * ShadowEngine::SFF::SFFParser::ReadFromFile
+  nameWithType: SFFParser::ReadFromFile
+- uid: ShadowEngine.SFF.SFFParser.ReadFromStream(std::istream &)
+  name: ReadFromStream(std::istream &stream)
+  href: apidocs/ShadowEngine.SFF.SFFParser.html#ShadowEngine_SFF_SFFParser_ReadFromStream_std__istream___
+  fullName: SFFElement * ShadowEngine::SFF::SFFParser::ReadFromStream(std::istream &stream)
+  nameWithType: SFFParser::ReadFromStream(std::istream &stream)
+- uid: ShadowEngine.SFF.SFFParser.ReadFromStream*
+  name: ReadFromStream
+  href: apidocs/ShadowEngine.SFF.SFFParser.html#ShadowEngine_SFF_SFFParser_ReadFromStream_
+  isSpec: "True"
+  fullName: SFFElement * ShadowEngine::SFF::SFFParser::ReadFromStream
+  nameWithType: SFFParser::ReadFromStream
+- uid: ShadowEngine.SFF.SFFParser.ReadVersionFromHeader(std::istream &)
+  name: ReadVersionFromHeader(std::istream &stream)
+  href: apidocs/ShadowEngine.SFF.SFFParser.html#ShadowEngine_SFF_SFFParser_ReadVersionFromHeader_std__istream___
+  fullName: SFFVersion ShadowEngine::SFF::SFFParser::ReadVersionFromHeader(std::istream &stream)
+  nameWithType: SFFParser::ReadVersionFromHeader(std::istream &stream)
+- uid: ShadowEngine.SFF.SFFParser.ReadVersionFromHeader*
+  name: ReadVersionFromHeader
+  href: apidocs/ShadowEngine.SFF.SFFParser.html#ShadowEngine_SFF_SFFParser_ReadVersionFromHeader_
+  isSpec: "True"
+  fullName: SFFVersion ShadowEngine::SFF::SFFParser::ReadVersionFromHeader
+  nameWithType: SFFParser::ReadVersionFromHeader
 - uid: ShadowEngine.ShadowApplication
   name: ShadowApplication
   href: apidocs/ShadowEngine.ShadowApplication.html

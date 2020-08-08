@@ -17,6 +17,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "ShadowEngine/devlog/2_apps_and_cleaning.md",
+      "output": {
+        ".html": {
+          "relative_path": "ShadowEngine/devlog/2_apps_and_cleaning.html",
+          "hash": "YlrMoEiHwt8w77YXshxAqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "ShadowEngine/index.md",
       "output": {
         ".html": {
@@ -58,18 +70,6 @@
         ".html": {
           "relative_path": "index.html",
           "hash": "pIhDKd8Ek42I5u3Es5jgPA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/metadata/AssetManager.yml",
-      "output": {
-        ".html": {
-          "relative_path": "apidocs/AssetManager.html",
-          "hash": "zccy6qFy7HmmMcapzapDRA=="
         }
       },
       "is_incremental": false,
@@ -221,11 +221,59 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/metadata/SFFElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/SFFElement.html",
+          "hash": "K5dPlCLYJfaZPKeOYcZlyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/metadata/SFFVersion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/SFFVersion.html",
+          "hash": "eA739jIZu3De4VdOJ4NYcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/metadata/ShadowEngine.Assets.AssetInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Assets.AssetInfo.html",
+          "hash": "EhdbMHIf4C+cOJsTtB5vyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/metadata/ShadowEngine.Assets.AssetLoader.yml",
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.AssetLoader.html",
           "hash": "aV9dHi8xsIFj2zdnCCnsKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/metadata/ShadowEngine.Assets.AssetManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Assets.AssetManager.html",
+          "hash": "46vhOab0Yf3UIujNy3ZhFg=="
         }
       },
       "is_incremental": false,
@@ -297,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.Texture.html",
-          "hash": "+ER9MuGBNtrHm8U+XDnysA=="
+          "hash": "zerDDnssA+XeRiC6Oz5aBw=="
         }
       },
       "is_incremental": false,
@@ -309,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.Texture2D.html",
-          "hash": "h8xZhcqKOdxg91lLgdPA0w=="
+          "hash": "D1lZ2z6YvHV3pbSORTsLKQ=="
         }
       },
       "is_incremental": false,
@@ -321,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.Texture2DImpl.html",
-          "hash": "ZhpaU80MWj5b3gYLnWeaKA=="
+          "hash": "gq7RSXwpu6Ri7YniAYHf3g=="
         }
       },
       "is_incremental": false,
@@ -377,11 +425,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/metadata/ShadowEngine.Assets.asset_info_comparator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.Assets.asset_info_comparator.html",
+          "hash": "Jdo6wZsL1CqxWyZiuiFEgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/metadata/ShadowEngine.Assets.yml",
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Assets.html",
-          "hash": "1VrT5RVgBnULCZf2BKeKpg=="
+          "hash": "RmonEZM3nS6QYgtaXcPkwA=="
         }
       },
       "is_incremental": false,
@@ -393,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Debug.DebugModule.html",
-          "hash": "tfOO611HZ7j/y0rOdSmlRg=="
+          "hash": "dtg5cW7FJ2t/GbYTma4doQ=="
         }
       },
       "is_incremental": false,
@@ -441,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Debug.html",
-          "hash": "Z+O414KI1CZz9tTiAU7QAA=="
+          "hash": "qPcOifou3Ghin+vDHRbY9A=="
         }
       },
       "is_incremental": false,
@@ -1173,7 +1233,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Log.html",
-          "hash": "A1SjUNT428Te0wzg3+uPkA=="
+          "hash": "fHrcJ5egyoJT8RDcA69RjA=="
         }
       },
       "is_incremental": false,
@@ -1413,7 +1473,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12Shader.html",
-          "hash": "7gaesIlT/vrNVF4mepcj1g=="
+          "hash": "1Ka0iGBD10cSznjCeHuKig=="
         }
       },
       "is_incremental": false,
@@ -1437,7 +1497,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.Rendering.D3D12.D3D12Texture2D.html",
-          "hash": "g6RXY8i2HmrmrU2Zm9gpgQ=="
+          "hash": "TUkBcM4syBcOJSB+9kmW/Q=="
         }
       },
       "is_incremental": false,
@@ -1793,11 +1853,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/metadata/ShadowEngine.SFF.SFFParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.SFF.SFFParser.html",
+          "hash": "QaIfbaNRC3WFuby3Sx8CVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/metadata/ShadowEngine.SFF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "apidocs/ShadowEngine.SFF.html",
+          "hash": "k68ueJqRwj88RbVH8L9HmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/metadata/ShadowEngine.SHObject.yml",
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.SHObject.html",
-          "hash": "b7kl9rud5yeqY5YAd54y9w=="
+          "hash": "P25IWTkpbTjWA2M5mvwegw=="
         }
       },
       "is_incremental": false,
@@ -1809,7 +1893,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/ShadowEngine.ShadowApplication.html",
-          "hash": "OnV1mQwcCxCTRl1HDVziQA=="
+          "hash": "fC5djkeJDwU0gnaVOYIcfQ=="
         }
       },
       "is_incremental": false,
@@ -2049,7 +2133,7 @@
       "output": {
         ".html": {
           "relative_path": "apidocs/toc.html",
-          "hash": "cpx2T6Vx7INruxnBxhDZWw=="
+          "hash": "4rWrYQJ/VlNCgjNYBrqS2A=="
         }
       },
       "is_incremental": false,
@@ -2187,13 +2271,13 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 12,
+          "total_file_count": 13,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 165,
+          "total_file_count": 171,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
