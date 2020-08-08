@@ -1,6 +1,8 @@
 #pragma once
 #include <SDL.h>
 
+
+#include "Core/Core.h"
 #include "ShadowRenderer/GraphicsContext.h"
 
 class ShadowWindow

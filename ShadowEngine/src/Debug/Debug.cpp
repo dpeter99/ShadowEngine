@@ -17,6 +17,7 @@
 #include <Core\ShadowApplication.h>
 
 #include "ImGui/IconsFontAwesome5.h"
+#include "ShadowInput/ShadowActionSystem.h"
 
 namespace ShadowEngine::Debug {
 

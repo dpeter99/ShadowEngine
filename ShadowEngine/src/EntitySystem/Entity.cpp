@@ -3,7 +3,7 @@
 #include <iostream>
 #include "Entity.h"
 #include "EntityRegistry.h"
-#include "ShadowScene.h"
+#include "Scene.h"
 
 
 namespace ShadowEngine::EntitySystem

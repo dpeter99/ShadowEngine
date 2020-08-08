@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ShadowEngineBuild": {
+      "commandName": "Project",
+      "commandLineArgs": "$(SolutionDir)\\ShadowEngine $(SolutionDir)\\ShadowLight\\Resources"
+    }
+  }
+}

@@ -81,7 +81,7 @@ namespace ShadowEngine::Assets {
 
 			auto property = properties->GetTexture<T>(name);
 			if (property == nullptr) {
-				SH_CORE_WARN("No property named: %s", name);
+				SH_CORE_WARN("No property named: '{0}' in shader: '{1}'", name, "....");
 				return;
 			}
 			property->SetValue(value);

@@ -29,6 +29,7 @@ namespace ShadowEngine::Debug {
 
 		bool active;
 
+		void PreInit() override {};
 		void Init() override;
 		void Update() override {};
 		void Render() override {};

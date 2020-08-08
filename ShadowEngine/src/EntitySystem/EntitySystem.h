@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ShadowModules/ShadowModule.h"
-#include "ShadowScene.h"
+#include "Scene.h"
 
 //Holds the reference to the active scene
 
@@ -30,6 +30,7 @@ namespace ShadowEngine::EntitySystem {
 
 		std::string GetName() override { return "EntitySystem"; };
 
+		void PreInit() override {};
 		void Init() override;
 		void Update() override;
 

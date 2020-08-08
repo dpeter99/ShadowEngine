@@ -32,6 +32,7 @@ namespace ShadowEngine::InputSystem
 
 		void OnEvent(EventSystem::ShadowEvent& e) override;
 
+		void PreInit() override {};
 		void Init() override;
 		void Update() override;
 		void Render() override {};

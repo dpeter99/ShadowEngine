@@ -9,6 +9,8 @@
 #include <EntitySystem\Entities\DirectionalLight.h>
 #include <EntitySystem\Entities\PointLight.h>
 
+#include "ShadowAsset/Assets/Textures/Texture2D.h"
+
 void TestScene::Init()
 {
 	//auto c = AddEntity<Camera>();

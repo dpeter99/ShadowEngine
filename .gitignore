@@ -1,6 +1,6 @@
 *.sln
 *.vcxproj
-*.csproj
+##*.csproj
 *.filters
 *.user
 *.zip
@@ -24,10 +24,14 @@ dependencies/**/*.zip
 
 packages/
 
-ShadowEngine/docs/html/
 ShadowEngine/src/Shaders/**.h
 
 
 
-
 Captures/
+
+DemoGame/packages.config
+
+ShadowEngineBuild/obj/
+sledge/**/*.csproj
+ShadowEngineInterop/**/*.csproj

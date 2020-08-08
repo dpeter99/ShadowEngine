@@ -32,7 +32,11 @@ group "Dependencies"
 	include "ShadowEngine/dependencies/Glad"
 	include "ShadowEngine/dependencies/imgui"
 	
-	include "ShadowEngineBuild/dependencies/TiledSharp"
+	externalproject "TiledSharp"
+	   location "ShadowEngineBuild/dependencies/TiledSharp/TiledSharp"
+	   uuid "75220C4A-61DA-4D97-CAE1-26F3B6B8E887"
+	   kind "SharedLib"
+	   language "C#"
 
 project "Glm"
 	location "ShadowEngine/dependencies/glm"
@@ -50,7 +54,7 @@ group ""
 
 project "ShadowEngine"
 	location "ShadowEngine"
-	kind "ConsoleApp"
+	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
 	staticruntime "on"
@@ -98,13 +102,15 @@ project "ShadowEngine"
 		"Glad",
 		"ImGui",
 		
-		
-		"ShadowEngineBuild",
-		
 		"opengl32.lib",
 		"D3D12.lib",
 		"DXGI.lib",
 		"D3DCompiler.lib"
+	}
+	
+	dependson 
+	{
+		"ShadowEngineBuild"
 	}
 	
 	nuget { 
@@ -121,6 +127,9 @@ project "ShadowEngine"
 	shadermodel "5.0"
 	shaderentry "main"
 	
+	filter "files:ShadowEngine/dependencies/**.cpp"
+		flags "NoPCH"
+
 	filter "files:**.hlsl"
 		flags "ExcludeFromBuild"
 		shaderobjectfileoutput (shader_dir .. "%{file.basename}.cso")
@@ -145,8 +154,8 @@ project "ShadowEngine"
 		}
 
 		postbuildcommands{
-			"{COPY} %{prj.location}/dependencies/SDL2/lib/VC/%{cfg.architecture}/SDL2.dll \"%{cfg.buildtarget.directory}\"",
-			"{COPY} %{wks.location}/DemoGame/Resources \"%{cfg.buildtarget.directory}/Resources\""
+			--"{COPY} %{prj.location}/dependencies/SDL2/lib/VC/%{cfg.architecture}/SDL2.dll \"%{cfg.buildtarget.directory}\"",
+			--"{COPY} %{wks.location}/DemoGame/Resources \"%{cfg.buildtarget.directory}/Resources\""
 		}
 
 	filter "configurations:Debug"
@@ -166,27 +175,142 @@ project "ShadowEngine"
 
 project "DemoGame"
 	location "DemoGame"
-	kind "Utility"
+	kind "ConsoleApp"
+	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	debugdir ("bin/" .. outputdir .. "/%{prj.name}")
+
 	files{
-		"%{prj.name}/Resources/**"
+		"%{prj.name}/Resources/**",
+		"%{prj.name}/src/**"
 	}
 
-	links{
-		"ShadowEngineBuild"
+	links
+	{
+		--"ShadowEngineBuild",
+		"ShadowEngine"
+	}
+
+	includedirs{
+		"ShadowEngine/src",
+		"ShadowEngine/dependencies",
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.spdlog}",
 	}
 
 	prebuildcommands{
 		"%{wks.location}bin/"..outputdir.."/ShadowEngineBuild/ShadowEngineBuild.exe A %{prj.location}/Resources ",
 		--"echo %{prj.location}"
+		--"{COPY} %{prj.location}/dependencies/SDL2/lib/VC/%{cfg.architecture}/SDL2.dll \"%{cfg.buildtarget.directory}\"",
+		"{COPY} %{wks.location}/DemoGame/Resources \"%{cfg.buildtarget.directory}/Resources\"",
+		"{COPY} %{cfg.buildtarget.directory}/../ShadowEngine/Shaders \"%{cfg.buildtarget.directory}/Shaders\""
 	}
+
+	nuget { 
+		"Assimp:3.0.0",
+		"Assimp.redist:3.0.0",
+		"sdl2.nuget:2.0.10",
+		"sdl2.nuget.redist:2.0.10",
+		"sdl2_image.nuget:2.0.5",
+		"sdl2_image.nuget.redist:2.0.5"
+	}
+
+	filter "system:windows"
+		systemversion "latest"
+		
+	filter "configurations:Debug"
+		defines "HZ_DEBUG"
+		runtime "Debug"
+		symbols "on"
+
+	filter "configurations:Release"
+		defines "HZ_RELEASE"
+		runtime "Release"
+		optimize "on"
+
+	filter "configurations:Dist"
+		defines "HZ_DIST"
+		runtime "Release"
+		optimize "on"
+
+
+project "ShadowLight"
+	location "ShadowLight"
+	kind "ConsoleApp"
+	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
+
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	debugdir ("bin/" .. outputdir .. "/%{prj.name}")
+
+	files{
+		"%{prj.name}/Resources/**",
+		"%{prj.name}/src/**"
+	}
+
+	links
+	{
+		"ImGui",
+		--"ShadowEngineBuild",
+		"ShadowEngine"
+	}
+
+	includedirs{
+		"ShadowEngine/src",
+		"ShadowEngine/dependencies",
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.spdlog}",
+		"%{IncludeDir.ImGui}"
+	}
+
+	prebuildcommands{
+		"%{wks.location}bin/"..outputdir.."/ShadowEngineBuild/netcoreapp3.1/ShadowEngineBuild.exe A %{prj.location}/Resources ",
+		--"echo %{prj.location}"
+		--"{COPY} %{prj.location}/dependencies/SDL2/lib/VC/%{cfg.architecture}/SDL2.dll \"%{cfg.buildtarget.directory}\"",
+		"{COPY} %{wks.location}/ShadowLight/Resources \"%{cfg.buildtarget.directory}/Resources\"",
+		"{COPY} %{cfg.buildtarget.directory}/../ShadowEngine/Shaders \"%{cfg.buildtarget.directory}/Shaders\""
+	}
+
+	nuget { 
+		"Assimp:3.0.0",
+		"Assimp.redist:3.0.0",
+		"sdl2.nuget:2.0.10",
+		"sdl2.nuget.redist:2.0.10",
+		"sdl2_image.nuget:2.0.5",
+		"sdl2_image.nuget.redist:2.0.5"
+	}
+
+	filter "system:windows"
+		systemversion "latest"
+		
+	filter "configurations:Debug"
+		defines "HZ_DEBUG"
+		runtime "Debug"
+		symbols "on"
+
+	filter "configurations:Release"
+		defines "HZ_RELEASE"
+		runtime "Release"
+		optimize "on"
+
+	filter "configurations:Dist"
+		defines "HZ_DIST"
+		runtime "Release"
+		optimize "on"
+
+
 
 externalproject "ShadowEngineBuild"
    location "ShadowEngineBuild"
-   uuid "D11098AF-3D27-9645-869E-2167F2F366CD"
+   uuid "9A19103F-16F7-4668-BE54-9A1E7A4F7556"
    kind "ConsoleApp"
    language "C#"
 

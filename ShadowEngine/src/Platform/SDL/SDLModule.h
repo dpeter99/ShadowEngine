@@ -16,6 +16,7 @@ namespace ShadowEngine::SDLPlatform {
 
 		static SDLModule& GetInstance() { return *instance; };
 
+		void PreInit() override{};
 		void Init() override;
 
 		void Update() override {};
@@ -28,5 +29,6 @@ namespace ShadowEngine::SDLPlatform {
 
 		SDLModule();
 		~SDLModule();
+		
 	};
 }

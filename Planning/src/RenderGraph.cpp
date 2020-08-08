@@ -370,7 +370,7 @@ public:
 };
 
 
-void main()
+void main_asd()
 {
 	GraphicsPipelineBuider builder;
 

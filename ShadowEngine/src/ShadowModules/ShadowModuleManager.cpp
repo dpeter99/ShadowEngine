@@ -20,6 +20,7 @@ ShadowEngine::ShadowModuleManager::~ShadowModuleManager()
 void ShadowEngine::ShadowModuleManager::PushModule(ShadowModule* module)
 {
 	modules.emplace_back(module);
+	module->PreInit();
 }
 
 ShadowEngine::ShadowModule& ShadowEngine::ShadowModuleManager::GetModule(std::string name)

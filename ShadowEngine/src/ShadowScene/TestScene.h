@@ -1,5 +1,5 @@
 #pragma once
-#include "EntitySystem/ShadowScene.h"
+#include "EntitySystem/Scene.h"
 
 class TestScene : public ShadowEngine::EntitySystem::Scene
 {

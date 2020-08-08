@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 
 
 #define BIT(x) (1 << x)
@@ -31,6 +32,7 @@
 
 
 namespace ShadowEngine {
+	class IGame;
 
 	template<typename T>
 	using Scope = std::unique_ptr<T>;
@@ -38,4 +40,9 @@ namespace ShadowEngine {
 	template<typename T>
 	using Ref = std::shared_ptr<T>;
 
+
+	typedef IGame* (*SetupFunction)();
+	
 }
+
+extern ShadowEngine::SetupFunction _setupFunc;

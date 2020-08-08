@@ -1,6 +1,9 @@
 #pragma once
 #include <list>
+
+#include "Log.h"
 #include "ShadowModule.h"
+#include "Core/Core.h"
 
 
 namespace ShadowEngine {
@@ -9,7 +12,7 @@ namespace ShadowEngine {
 	public:
 		static ShadowModuleManager* instance;
 
-		std::list<ShadowEngine::Scope<ShadowModule>> modules;
+		std::list<Scope<ShadowModule>> modules;
 
 		ShadowModuleManager();
 		~ShadowModuleManager();
@@ -27,7 +30,7 @@ namespace ShadowEngine {
 					return dynamic_cast<T*>(module.get());
 			}
 			SH_ASSERT(false, "Can't find the module");
-			//return NULL;
+			return nullptr;
 		}
 
 		void Init();

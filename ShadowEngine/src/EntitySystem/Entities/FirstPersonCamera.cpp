@@ -10,7 +10,7 @@
 
 #include "EntitySystem/EntityManager.h"
 
-#include "EntitySystem/ShadowScene.h"
+#include "EntitySystem/Scene.h"
 
 #include <iostream>
 

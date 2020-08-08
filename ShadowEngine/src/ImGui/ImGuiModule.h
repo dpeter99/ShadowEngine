@@ -16,6 +16,7 @@ namespace ShadowEngine::DebugGui {
 
 	public:
 
+		void PreInit() override {};
 		void Init() override;
 		void Update() override {};
 		void Render() override {};

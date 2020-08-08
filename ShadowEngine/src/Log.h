@@ -1,19 +1,20 @@
 #pragma once
 
+#include "ShadowModules/ShadowModule.h"
 #include "Core/Core.h"
 
-#include "ShadowModules/ShadowModule.h"
 
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
 
 namespace ShadowEngine {
 
-	class Log : public ShadowEngine::ShadowModule
+	class Log : public ShadowModule
 	{
 		SHObject_Base(Log)
 
 	public:
+		void PreInit() override;
 		void Init() override;
 		void Update() override {};
 		void LateRender() override {};
@@ -22,6 +23,7 @@ namespace ShadowEngine {
 
 		inline static std::shared_ptr<spdlog::logger>& GetCoreLogger() { return s_CoreLogger; }
 		inline static std::shared_ptr<spdlog::logger>& GetClientLogger() { return s_ClientLogger; }
+		
 	private:
 		static std::shared_ptr<spdlog::logger> s_CoreLogger;
 		static std::shared_ptr<spdlog::logger> s_ClientLogger;

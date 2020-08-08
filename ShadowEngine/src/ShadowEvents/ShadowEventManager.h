@@ -31,6 +31,7 @@ namespace ShadowEngine::EventSystem {
 		ShadowEventManager();
 		~ShadowEventManager();
 
+		void PreInit() override{};
 		void Init() override;
 
 		void Update() override {};
@@ -53,7 +54,9 @@ namespace ShadowEngine::EventSystem {
 		static void AddNewEventListener(IShadowEventListener* shadowEventListener)
 		{
 			instance->AddNewEventListener_(shadowEventListener);
-		};
+		}
+
+		;
 	};
 
 }

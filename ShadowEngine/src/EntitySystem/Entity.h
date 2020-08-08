@@ -81,7 +81,13 @@ namespace ShadowEngine::EntitySystem
 		HAS_LATE_TICK = 1 << 1
 	};
 
-	/// This is the base entity used in the game world. This should never be instanciated only the derived classes
+	/// This is the base entity used in the game world. This should never be instantiated only the derived classes
+	/// A entity has a parent and internal, external hierarchy. The parent is the Entity that this is under. This effects the position of this Entity.
+	///
+	/// The internal hierarchy is used for Entities that are considered as part of this Entity these would be like components in Unity or UE4
+	/// This base Entity does not have a position so it acts like a Component in other engines. If you want to have a position you have to use <see cref="SceneEntity"/>
+	/// The base Entity does however does have a <see cref="Entity::GetTransform"/> that returns the position of the first parent's position that is <see cref="SceneEntity"/>
+	/// 
 	/// <summary>
 	/// Base Entity in the scene
 	/// </summary>
@@ -91,7 +97,7 @@ namespace ShadowEngine::EntitySystem
 
 	public:
 		/// <summary>
-		/// This is the Globaly unique ID of this Entity
+		/// This is the Globally unique ID of this Entity
 		/// </summary>
 		/// This ID will be only assigned to this Entity instance
 		/// It can be used to look up entities, but it is not recommended as it is a slow process
@@ -117,17 +123,25 @@ namespace ShadowEngine::EntitySystem
 
 		
 		/// <summary>
-		/// The scene this Enity is assigned to
+		/// The scene this Entity is assigned to
 		/// </summary>
 		Scene* scene;
 
-		/**
-		 * \brief the internal hierarchy of this Entity
-		*/
+		/// <summary>
+		/// The internal hierarchy of this Entity
+		/// </summary>
 		std::vector<rtm_ptr<Entity>> internalHierarchy;
 
+		/// <summary>
+		/// This is the external hierarchy of this Entity
+		/// </summary>
 		std::vector<rtm_ptr<Entity>> hierarchy;
 
+		/// <summary>
+		/// The parent entity
+		/// </summary>
+		///
+		/// This can be null when the Entity is the top one in the hierarchy
 		rtm_ptr<Entity> parent;
 
 	public:

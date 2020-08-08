@@ -45,6 +45,7 @@ namespace ShadowEngine::Rendering {
 		//Singleton Instance
 		static Renderer* instance;
 
+		void PreInit() override {};
 		void Init() override;
 		void Update() override;
 		void Render() override;
