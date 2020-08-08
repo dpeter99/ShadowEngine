@@ -1,5 +1,9 @@
-﻿using System;
+﻿using ShadowEngineBuild.src;
+
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using TiledSharp;
 
 
@@ -10,8 +14,11 @@ namespace ShadowEngineBuild
         static int Main(string[] args)
         {
             //Debugger.Launch();
-
-            Console.WriteLine("Shadow Engine Build System");
+            Console.WriteLine("########################################################################");
+            Console.WriteLine("########################################################################");
+            Console.WriteLine("##############       Shadow Engine Build System      ###################");
+            Console.WriteLine("########################################################################");
+            Console.WriteLine("########################################################################");
 
             if (String.IsNullOrEmpty(args[0]) || String.IsNullOrEmpty(args[1]))
                 return 1;
@@ -22,6 +29,11 @@ namespace ShadowEngineBuild
 
 
             ShadowMapConverter.ConvertMaps();
+
+            BuildSystem system = new BuildSystem();
+            system.Init();
+            system.Start();
+
 
 
 #if DEBUG

@@ -1,5 +1,6 @@
 #pragma once
-#include  "shpch.h"
+#include <string>
+#include <typeinfo>
 
 namespace ShadowEngine {
 

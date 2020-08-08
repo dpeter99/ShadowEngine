@@ -41,9 +41,9 @@ namespace ShadowEngine::Assets {
 		if (scene == nullptr)
 			std::cout << importer.GetErrorString();
 
-		SH_ASSERT(scene != nullptr, "Failed to load obj file: '%s'. Assimp error message: '%s'", path.c_str(), importer.GetErrorString());
+		SH_ASSERT(scene != nullptr, "Failed to load obj file: '{0}'. Assimp error message: '{1}'", path.c_str(), importer.GetErrorString());
 
-		ASSERT(scene->HasMeshes(), "Obj file: '%s' does not contain a mesh.", path.c_str());
+		ASSERT(scene->HasMeshes(), "Obj file: '{0}' does not contain a mesh.", path.c_str());
 
 		// for this example we only load the first mesh
 		const aiMesh* mesh = scene->mMeshes[0];

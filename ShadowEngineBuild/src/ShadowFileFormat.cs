@@ -30,6 +30,7 @@ namespace ShadowEngineBuild
 
         public void AddProperty(ShadowFileElement element)
         {
+            this.isBlock = true; //TODO: I think this is correct but i didn't touch this code in a long while :/
             this.properties.Add(element.name,element);
         }
 
@@ -41,7 +42,7 @@ namespace ShadowEngineBuild
         public static void WriteFile(ShadowFileElement root, string path)
         {
             StreamWriter writer = new StreamWriter(path);
-
+            writer.WriteLine("ShadowFileFormat_1_0_0");
 
             int depth = 0;
             WriteElement(writer,root,ref depth);

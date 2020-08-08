@@ -10,12 +10,7 @@ namespace ShadowEngine::Assets {
 		virtual void Upload() = 0;
 	};
 
-	class Texture2DImpl : public TextureImpl {
-	public:
-		static Ref<Texture2DImpl> Create(std::string path);
 
-
-	};
 
 	class Texture : public ShadowAsset
 	{
@@ -36,16 +31,5 @@ namespace ShadowEngine::Assets {
 		void Upload() { impl->Upload(); };
 	};
 
-	class Texture2D : public Texture
-	{
-		SHObject_Base(Texture2D)
 
-	protected:
-
-
-	public:
-		Texture2D(std::string path);
-		Texture2D();
-
-	};
 }

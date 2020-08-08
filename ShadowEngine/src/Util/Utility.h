@@ -35,3 +35,19 @@ inline std::wstring s2ws(const std::string& str)
 	MultiByteToWideChar(CP_UTF8, 0, &str[0], (int)str.size(), &wstrTo[0], size_needed);
 	return wstrTo;
 }
+
+
+inline const std::vector<std::string> explode(const std::string& s, const char& c)
+{
+	std::string buff{ "" };
+	std::vector<std::string> v;
+
+	for (auto n : s)
+	{
+		if (n != c) buff += n; else
+			if (n == c && buff != "") { v.push_back(buff); buff = ""; }
+	}
+	if (buff != "") v.push_back(buff);
+
+	return v;
+}

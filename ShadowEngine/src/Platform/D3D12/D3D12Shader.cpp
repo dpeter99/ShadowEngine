@@ -4,6 +4,7 @@
 #include "D3D12RendererAPI.h"
 #include "ShadowRenderer/DataStructs.h"
 #include "ShadowAsset/Assets/Textures/Texture.h"
+#include "ShadowAsset/Assets/Textures/Texture2D.h"
 #include "ShadowAsset/Assets/Textures/TextureCubeMap.h"
 
 namespace ShadowEngine::Rendering::D3D12 {

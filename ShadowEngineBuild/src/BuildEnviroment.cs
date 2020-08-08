@@ -28,5 +28,9 @@ namespace ShadowEngineBuild
             return baseContentPath + "/Worlds/";
         }
 
+        public static string GetResourceFolder()
+        {
+            return baseContentPath;
+        }
     }
 }

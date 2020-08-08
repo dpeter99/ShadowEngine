@@ -3,20 +3,56 @@
 #include "AssetManager.h"
 #include "AssetLoader.h"
 
+#include "ShadowFileFormat/SFFParser.h"
 
-AssetManager* AssetManager::instance = nullptr;
 
-AssetManager::AssetManager()
+
+bool ShadowEngine::Assets::AssetInfo::operator==(const std::vector<std::string>& search_tags) const
+{
+	const std::vector<std::string>& asset_tags = tags;
+	auto pred = [&asset_tags](const std::string& tag)
+	{
+		return std::any_of(asset_tags.begin(), asset_tags.end(), [&tag](std::string t) {return t == tag; });
+	};
+	return std::all_of(search_tags.begin(), search_tags.end(),pred);
+}
+
+
+
+
+ShadowEngine::Assets::AssetManager* ShadowEngine::Assets::AssetManager::instance = nullptr;
+
+ShadowEngine::Assets::AssetManager::AssetManager()
 {
 	instance = this;
 }
 
-
-AssetManager::~AssetManager()
+ShadowEngine::Assets::AssetManager::~AssetManager()
 {
 }
 
-bool AssetManager::CheckLoaded(std::string path, ShadowEngine::Assets::ShadowAsset** asset = nullptr)
+
+void ShadowEngine::Assets::AssetManager::Init()
+{
+	SH_CORE_INFO("Trying to load Resources/pack.spf");
+	SFFElement* root = ShadowEngine::SFF::SFFParser::ReadFromFile("./Resources/pack.spf");
+	if(root == nullptr)
+	{
+		SH_CORE_CRITICAL("Coudn't load pack file.");
+		return;
+	}
+	
+	auto* assets = root->GetChildByName("Assets");
+	for each (auto& var in assets->children)
+	{
+		AssetInfo info(std::stoi(var.first), var.second->value);
+		
+		this->knownAssets.emplace(info);
+	}
+	
+}
+
+bool ShadowEngine::Assets::AssetManager::CheckLoaded(std::string path, ShadowEngine::Assets::ShadowAsset** asset = nullptr)
 {
 	for (auto item : this->loadedAssets)
 	{
@@ -31,11 +67,11 @@ bool AssetManager::CheckLoaded(std::string path, ShadowEngine::Assets::ShadowAss
 	return false;
 }
 
-void AssetManager::UnloadAsset(std::string)
+void ShadowEngine::Assets::AssetManager::UnloadAsset(std::string)
 {
 }
 
-void AssetManager::UnloadAsset(ShadowEngine::Assets::ShadowAsset* asset)
+void ShadowEngine::Assets::AssetManager::UnloadAsset(ShadowEngine::Assets::ShadowAsset* asset)
 {
 	auto v = this->loadedAssets.find(asset->runtimeAssetID);
 	this->loadedAssets.erase(v);
@@ -45,7 +81,7 @@ void AssetManager::UnloadAsset(ShadowEngine::Assets::ShadowAsset* asset)
 /*
 
 template<class T>
-static T* AssetManager::GetAsset(std::string path)
+static T* AssetManager::GetAsset_OLD(std::string path)
 {
 	ShadowAsset* f;
 

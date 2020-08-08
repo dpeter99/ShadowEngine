@@ -1,0 +1,9 @@
+ShadowFileFormat_1_0_0
+CubeMap:{
+	up:ashcanyon_up.tga,
+	down:ashcanyon_dn.tga,
+	front:ashcanyon_ft.tga,
+	back:ashcanyon_bk.tga,
+	left:ashcanyon_lf.tga,
+	right:ashcanyon_rt.tga,
+}

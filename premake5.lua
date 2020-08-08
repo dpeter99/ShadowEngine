@@ -32,7 +32,11 @@ group "Dependencies"
 	include "ShadowEngine/dependencies/Glad"
 	include "ShadowEngine/dependencies/imgui"
 	
-	include "ShadowEngineBuild/dependencies/TiledSharp"
+	externalproject "TiledSharp"
+	   location "ShadowEngineBuild/dependencies/TiledSharp/TiledSharp"
+	   uuid "75220C4A-61DA-4D97-CAE1-26F3B6B8E887"
+	   kind "SharedLib"
+	   language "C#"
 
 project "Glm"
 	location "ShadowEngine/dependencies/glm"
@@ -98,13 +102,15 @@ project "ShadowEngine"
 		"Glad",
 		"ImGui",
 		
-		
-		"ShadowEngineBuild",
-		
 		"opengl32.lib",
 		"D3D12.lib",
 		"DXGI.lib",
 		"D3DCompiler.lib"
+	}
+	
+	dependson 
+	{
+		"ShadowEngineBuild"
 	}
 	
 	nuget { 
@@ -198,7 +204,7 @@ project "DemoGame"
 	}
 
 	prebuildcommands{
-		--"%{wks.location}bin/"..outputdir.."/ShadowEngineBuild/ShadowEngineBuild.exe A %{prj.location}/Resources ",
+		"%{wks.location}bin/"..outputdir.."/ShadowEngineBuild/ShadowEngineBuild.exe A %{prj.location}/Resources ",
 		--"echo %{prj.location}"
 		--"{COPY} %{prj.location}/dependencies/SDL2/lib/VC/%{cfg.architecture}/SDL2.dll \"%{cfg.buildtarget.directory}\"",
 		"{COPY} %{wks.location}/DemoGame/Resources \"%{cfg.buildtarget.directory}/Resources\"",
@@ -252,6 +258,7 @@ project "ShadowLight"
 
 	links
 	{
+		"ImGui",
 		--"ShadowEngineBuild",
 		"ShadowEngine"
 	}
@@ -261,10 +268,11 @@ project "ShadowLight"
 		"ShadowEngine/dependencies",
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.spdlog}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	prebuildcommands{
-		--"%{wks.location}bin/"..outputdir.."/ShadowEngineBuild/ShadowEngineBuild.exe A %{prj.location}/Resources ",
+		"%{wks.location}bin/"..outputdir.."/ShadowEngineBuild/netcoreapp3.1/ShadowEngineBuild.exe A %{prj.location}/Resources ",
 		--"echo %{prj.location}"
 		--"{COPY} %{prj.location}/dependencies/SDL2/lib/VC/%{cfg.architecture}/SDL2.dll \"%{cfg.buildtarget.directory}\"",
 		"{COPY} %{wks.location}/ShadowLight/Resources \"%{cfg.buildtarget.directory}/Resources\"",
@@ -302,7 +310,7 @@ project "ShadowLight"
 
 externalproject "ShadowEngineBuild"
    location "ShadowEngineBuild"
-   uuid "D11098AF-3D27-9645-869E-2167F2F366CD"
+   uuid "9A19103F-16F7-4668-BE54-9A1E7A4F7556"
    kind "ConsoleApp"
    language "C#"
 

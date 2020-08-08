@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <Platforms>AnyCPU;x64</Platforms>
+
+    <BaseIntermediateOutputPath>..\bin-int\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)-windows-$(Platform)\ShadowEngineBuild</IntermediateOutputPath>
+
+    <BaseOutputPath>..\bin\</BaseOutputPath>
+    
+    
+    
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Platform)' == 'x64'">
+    <OutputSubDir>$(Configuration)-windows-x86_64</OutputSubDir>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OutputPath>$(BaseOutputPath)$(OutputSubDir)\ShadowEngineBuild</OutputPath>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Compile Remove="dependencies\**" />
+    <EmbeddedResource Remove="dependencies\**" />
+    <None Remove="dependencies\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="dependencies\TiledSharp\TiledSharp\TiledSharp.csproj" />
+  </ItemGroup>
+
+  
+</Project>

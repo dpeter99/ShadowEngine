@@ -42,14 +42,16 @@ namespace ShadowEngine {
 
 	void ShadowApplication::Init()
 	{
-		moduleManager.PushModule(new ShadowEngine::Log());
+		moduleManager.PushModule(new Log());
 		moduleManager.PushModule(new EventSystem::ShadowEventManager());
 		moduleManager.PushModule(new SDLPlatform::SDLModule());
-		moduleManager.PushModule(new ShadowEngine::Rendering::Renderer());
+		moduleManager.PushModule(new Rendering::Renderer());
 		moduleManager.PushModule(new DebugGui::ImGuiModule());
 		moduleManager.PushModule(new InputSystem::ShadowActionSystem());
-		moduleManager.PushModule(new Debug::DebugModule());
+		//moduleManager.PushModule(new Debug::DebugModule());
 		moduleManager.PushModule(new EntitySystem::EntitySystem());
+
+		moduleManager.PushModule(new Assets::AssetManager());
 
 		game->Init();
 		
@@ -61,7 +63,7 @@ namespace ShadowEngine {
 
 	void ShadowApplication::Start()
 	{
-		//ShadowWorld* w = AssetManager::GetAsset<ShadowWorld>("Resources/Worlds/Default/overworld.txt");
+		//ShadowWorld* w = AssetManager::GetAsset_OLD<ShadowWorld>("Resources/Worlds/Default/overworld.txt");
 		//w->SetActiveMap("default");
 		//w->Update(ShadowMath::Vector2float(0, 0));
 		//ShadowMapRenderer::RenderMap(*map);

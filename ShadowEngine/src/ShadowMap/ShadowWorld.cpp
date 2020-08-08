@@ -105,7 +105,7 @@ namespace ShadowEngine::World {
 	void LevelMap::LoadChunk(const ShadowMath::Vector2int& id)
 	{
 		std::string mapName = GenerateMapName(id);
-		auto c = AssetManager::GetAsset<MapChunk>(mapName);
+		auto c = Assets::AssetManager::GetAsset_OLD<MapChunk>(mapName);
 		if (c == nullptr)
 			return;
 

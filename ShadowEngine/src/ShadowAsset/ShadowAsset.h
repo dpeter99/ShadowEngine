@@ -22,6 +22,6 @@ namespace ShadowEngine::Assets {
 		 */
 		std::string path;
 
-		static void Load(ShadowEngine::Assets::Element& root) {};
+		void Load(ShadowEngine::Assets::Element& root) {};
 	};
 }
