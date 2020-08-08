@@ -63,7 +63,7 @@ namespace ShadowEngine {
 
 	void ShadowApplication::Start()
 	{
-		//ShadowWorld* w = AssetManager::GetAsset<ShadowWorld>("Resources/Worlds/Default/overworld.txt");
+		//ShadowWorld* w = AssetManager::GetAsset_OLD<ShadowWorld>("Resources/Worlds/Default/overworld.txt");
 		//w->SetActiveMap("default");
 		//w->Update(ShadowMath::Vector2float(0, 0));
 		//ShadowMapRenderer::RenderMap(*map);

@@ -81,7 +81,7 @@ void ShadowEngine::Assets::AssetManager::UnloadAsset(ShadowEngine::Assets::Shado
 /*
 
 template<class T>
-static T* AssetManager::GetAsset(std::string path)
+static T* AssetManager::GetAsset_OLD(std::string path)
 {
 	ShadowAsset* f;
 

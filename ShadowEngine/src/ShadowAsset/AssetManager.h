@@ -12,6 +12,7 @@
 #include <cinttypes>
 #include <functional>
 #include <set>
+//#include <concepts>
 
 
 namespace ShadowEngine::Assets {
@@ -114,7 +115,8 @@ namespace ShadowEngine::Assets {
 
 		//A map where the loaded assets are stored
 		//Maps the id to the ShadowAsset
-		[[DEPRECATED]]std::map<int, ShadowEngine::Assets::ShadowAsset*> loadedAssets;
+		[[deprecated("Use knownAssets")]]
+		std::map<int, ShadowEngine::Assets::ShadowAsset*> loadedAssets;
 
 		int nextID = 0;
 
@@ -139,7 +141,7 @@ namespace ShadowEngine::Assets {
 		//Makes sure it will be cleaned up when the game exits
 		//This sets up the ShadowAsset base class
 		template <class T>
-		static T* GetAsset(std::string path)
+		static T* GetAsset_OLD(std::string path)
 		{
 			ShadowEngine::Assets::ShadowAsset* f;
 
@@ -158,10 +160,26 @@ namespace ShadowEngine::Assets {
 			instance->nextID++;
 			return w;
 		}
+		
+		/*
+		template<class T>
+		concept asset = requires{ std::derived_from<ShadowAsset, T> };
+		*/
 
+		template <class T>
+		T* GetAsset(const std::string& path)
+		{
+			auto& info = std::find_if(knownAssets.begin(), knownAssets.end(), [&path](AssetInfo& asset) {return asset.getName() == path; });
 
+			if (info == knownAssets.end())
+			{
+				SH_CORE_WARN("Unknown asset: '{0}'", path);
+			}
 
+			T* asset = new T();
 
+			return asset;
+		}
 
 	};
 
