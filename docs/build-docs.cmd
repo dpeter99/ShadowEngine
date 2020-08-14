@@ -6,4 +6,6 @@ echo %cd%
 
 ..\dependencies\docfx\docfx-2.54\docfx.exe
 
-..\dependencies\docfx\docfx-2.54\docfx.exe serve
+cd output
+
+..\..\dependencies\docfx\docfx-2.54\docfx.exe serve

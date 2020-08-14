@@ -1,10 +1,10 @@
 #include "shpch.h"
 #include "CommandList.h"
 #include "RendererAPI.h"
-#include "Platform/D3D12/D3D12CommandList.h"
+//#include "Platform/D3D12/D3D12CommandList.h"
 
 namespace ShadowEngine::Rendering {
-
+	/*
 	std::shared_ptr<CommandList> CommandList::Create()
 	{
 		switch (RendererAPI::GetAPI())
@@ -16,4 +16,5 @@ namespace ShadowEngine::Rendering {
 		SH_CORE_ASSERT(false, "Unknown RendererAPI!");
 		return nullptr;
 	}
+	*/
 }

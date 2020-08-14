@@ -28,12 +28,14 @@ namespace ShadowEngine::Rendering {
 		
 		virtual Ref<ConstantBufferImpl> GetImpl() const { return impl; };
 
+		/*
 		template <class T>
-		T* As[[depricated]]()
+		[[deprecated]]
+		T* As()
 		{
 			return data;
 		}
-
+		*/
 
 
 		virtual void Set(void* d) = 0;

@@ -8,13 +8,20 @@
 
 namespace ShadowEngine::Rendering
 {
-
+	
+	/// <summary>
+	/// The types of lights that can be int he scene
+	/// </summary>
 	enum class LightType {
 		Directional,
 		Point,
 		Spot
 	};
 
+
+	/// <summary>
+	/// All the data needed to render a light
+	/// </summary>
 	class LightNode {
 	public:
 		
@@ -36,6 +43,9 @@ namespace ShadowEngine::Rendering
 		}
 	};
 
+	/// <summary>
+	/// All the data needed to render a mesh
+	/// </summary>
 	class RenderNode
 	{
 		ConstantBuffer_Typed<ModelData> modelDataCB;
@@ -54,12 +64,12 @@ namespace ShadowEngine::Rendering
 		void UpdateTransform(glm::mat4x4 trans);
 	};
 	
-
-	///
-	///Represents the scene that we are going to render.
-	///Constins all of the Render Nodes corrsponding to each mesh we are given
-	///Contains all the Light Nodes for each light that we need to use
-	///
+	
+	/// <summary>
+	/// Represents the scene that we are going to render.
+	/// Contains all of the Render Nodes corresponding to each mesh we are given
+	/// Contains all the Light Nodes for each light that we need to use
+	/// </summary>
 	class RenderScene
 	{
 		using RenderNodeList = std::vector<Ref<RenderNode>>;

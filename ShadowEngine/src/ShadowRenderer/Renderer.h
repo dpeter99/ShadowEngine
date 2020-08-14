@@ -17,7 +17,7 @@ class Camera;
 namespace ShadowEngine::Rendering {
 	
 	/// <summary>
-	/// This is the platform agnostic renderer managger
+	/// This is the platform agnostic renderer manager
 	/// </summary>
 	/// It is used to issue draw calls and build command lists
 	/// 
@@ -29,13 +29,14 @@ namespace ShadowEngine::Rendering {
 		/// <summary>
 		/// The underlying renderer api that executes the calls.
 		/// </summary>
-		/// It currently is a DX12RendererAPI instance
+		/// It currently is a DX12RendererAPI instance, as that is the only render backend that is somewhat working
+		/// Later this might be any rendering backend
 		RendererAPI* s_RendererAPI = nullptr;
 
 		/// <summary>
 		/// The Render Scene that represents and holds the data for all items that need to be known for rendering
-		/// It holds the: Mesh-Transform-Material combinaations lights and the camera
-		/// It is set up with changesin the core update loop and uploaded in the render phase.
+		/// It holds the: Mesh-Transform-Material combinations lights and the camera
+		/// It is set up with changes in the core update loop and uploaded in the render phase.
 		/// </summary>
 		RenderScene* scene = nullptr;
 		
@@ -59,7 +60,7 @@ namespace ShadowEngine::Rendering {
 		/// Sets up the render API
 		/// Sets up the RenderScene for the new frame
 		/// 
-		/// It gets a Camera Entity pointer witch is used to 
+		/// It needs a Camera Entity pointer witch is the camera that renders the scene
 		/// </summary>
 		/// <paramref name="camera">The camera that the scene will be rendered from</paramref>
 		void BeginScene(Camera* camera);
@@ -82,6 +83,7 @@ namespace ShadowEngine::Rendering {
 		/// <param name="mesh">the mesh to be drawn</param>
 		/// <param name="shader">the shader to use</param>
 		/// <param name="transform">the transform to be applied to the mesh</param>
+		[[deprecated]]
 		static void  Submit  (const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4& transform = glm::mat4(1.0f));
 
 		/// <summary>
@@ -90,14 +92,14 @@ namespace ShadowEngine::Rendering {
 		/// <param name="mesh">The mesh to be rendered</param>
 		/// <param name="material">The material the render node will have</param>
 		/// <param name="transform">The transform compared to the world origin</param>
-		/// <returns></returns>
+		/// <returns>A reference to the created Node witch can be used for updates</returns>
 		static Ref<RenderNode> AddRenderNode(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> material, const glm::mat4& transform = glm::mat4(1.0f));
 
 
 		/// <summary>
 		/// Adds a light node to the RenderScene
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>A reference to the created Node witch can be used for updates</returns>
 		static Ref<LightNode> AddLightNode();
 		
 

@@ -5,6 +5,7 @@ namespace ShadowEngine::Rendering {
 	/**
 	 * \brief A list of commands to be submitted to a CommandQueue
 	 */
+	/*
 	class CommandList
 	{
 	public:
@@ -15,5 +16,6 @@ namespace ShadowEngine::Rendering {
 	public:
 		static Ref<CommandList> Create();
 	};
+	*/
 
 }

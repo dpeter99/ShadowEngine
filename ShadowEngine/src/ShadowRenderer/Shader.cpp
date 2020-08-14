@@ -2,12 +2,11 @@
 #include "Shader.h"
 
 #include "Renderer.h"
-//#include "Platform/OpenGL/OpenGLShader.h"
 #include "Platform/D3D12/Shader/DX12Shader.h"
 
 namespace ShadowEngine::Rendering {
 	
-	ShaderPropertySheet* Shader::GetPropertiesCopy()
+	ShaderPropertySheet* Shader::GetPropertiesCopy() const
 	{
 		return new ShaderPropertySheet(properties);
 	}
@@ -18,21 +17,17 @@ namespace ShadowEngine::Rendering {
 		{
 			case RendererAPI::API::None:    SH_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
 			//case RendererAPI::API::OpenGL:  return new OpenGL::OpenGLShader(vertexSrc, fragmentSrc);
+			default: SH_CORE_CRITICAL("Unknown RendererAPI: {0} !", Renderer::GetAPI()); return nullptr;
 		}
-
-		SH_CORE_ASSERT(false, "Unknown RendererAPI!");
-		return nullptr;
 	}
 
 	Shader* Shader::CreateFromCompiled(const std::string& VSfilePath, const std::string& PSfilePath)
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::API::None:    SH_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-		case RendererAPI::API::D3D12:  return new D3D12::DX12Shader(VSfilePath, PSfilePath);
+			case RendererAPI::API::None:    SH_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
+			case RendererAPI::API::D3D12:  return new D3D12::DX12Shader(VSfilePath, PSfilePath);
+			default: SH_CORE_CRITICAL("Unknown RendererAPI: {0} !", Renderer::GetAPI()); return nullptr;
 		}
-
-		SH_CORE_ASSERT(false, "Unknown RendererAPI!");
-		return nullptr;
 	}
 }

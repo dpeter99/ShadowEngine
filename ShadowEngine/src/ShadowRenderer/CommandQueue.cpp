@@ -5,6 +5,7 @@
 
 namespace ShadowEngine::Rendering {
 
+	/*
 	std::shared_ptr<CommandQueue> CommandQueue::Create()
 	{
 		switch (RendererAPI::GetAPI())
@@ -16,4 +17,5 @@ namespace ShadowEngine::Rendering {
 		SH_CORE_ASSERT(false, "Unknown RendererAPI!");
 		return nullptr;
 	}
+	*/
 }

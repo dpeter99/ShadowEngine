@@ -5,14 +5,20 @@
 
 namespace ShadowEngine::Rendering {
 
+	/// <summary>
+	/// Represents a shared in the engine
+	/// </summary>
 	class Shader
 	{
 	protected:
+		/// <summary>
+		/// This contains the list of properties that this shader has. This contains the default values for those peoperties
+		/// </summary>
 		ShaderPropertySheet properties;
 	public:
 		virtual ~Shader() = default;
 
-		ShaderPropertySheet* GetPropertiesCopy();
+		ShaderPropertySheet* GetPropertiesCopy() const;
 		
 		virtual void Bind() const = 0;
 		virtual void Unbind() const = 0;

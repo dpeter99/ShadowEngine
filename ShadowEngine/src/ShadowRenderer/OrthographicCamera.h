@@ -3,7 +3,7 @@
 #include <glm/glm.hpp>
 
 namespace ShadowEngine::Rendering {
-
+	/*
 	DECLSPEC_DEPRECATED
 	class OrthographicCamera
 	{
@@ -29,5 +29,5 @@ namespace ShadowEngine::Rendering {
 		glm::vec3 m_Position = { 0.0f, 0.0f, 0.0f };
 		float m_Rotation = 0.0f;
 	};
-
+	*/
 }

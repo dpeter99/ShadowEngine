@@ -6,6 +6,7 @@ namespace ShadowEngine::Rendering {
 	/**
 	 * \brief The execution queue witch can execute a Command List
 	 */
+	/*
 	class CommandQueue
 	{
 	public:
@@ -15,5 +16,5 @@ namespace ShadowEngine::Rendering {
 		
 		static Ref<CommandQueue> Create();
 	};
-
+	*/
 }

@@ -32,10 +32,7 @@ namespace ShadowEngine::Rendering {
 	}
 
 	
-	void Renderer::Render()
-	{
-		RenderNodes();
-	}
+
 
 	//TODO: Assign camera somewhere else
 	void Renderer::BeginScene(Camera* camera)
@@ -52,6 +49,11 @@ namespace ShadowEngine::Rendering {
 		s_RendererAPI->Clear();
 	}
 
+	void Renderer::Render()
+	{
+		RenderNodes();
+	}
+	
 	void Renderer::EndScene()
 	{
 		s_RendererAPI->EndFrame();
@@ -71,7 +73,6 @@ namespace ShadowEngine::Rendering {
 	void Renderer::Submit (const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> shader, const glm::mat4& transform)
 	{
 		//instance->s_RendererAPI->Draw(mesh, shader, transform);
-		
 	}
 
 	Ref<RenderNode> Renderer::AddRenderNode(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> material,
