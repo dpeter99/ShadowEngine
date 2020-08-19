@@ -13,15 +13,16 @@ namespace ShadowEngine::Assets {
 		SHObject_Base(ShadowAsset)
 		
 	public:
-		/**
-		 * \brief ID of this instance
-		 */
+		/// <summary>
+		/// ID of this instance
+		/// </summary>
 		int runtimeAssetID;
-		/**
-		 * \brief Path it was loaded from
-		 */
+		
+		/// <summary>
+		/// Path it was loaded from
+		/// </summary>
 		std::string path;
 
-		void Load(ShadowEngine::Assets::Element& root) {};
+		virtual void Load(ShadowEngine::Assets::Element& root) = 0;
 	};
 }

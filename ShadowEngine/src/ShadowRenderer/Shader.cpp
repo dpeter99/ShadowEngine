@@ -30,4 +30,9 @@ namespace ShadowEngine::Rendering {
 			default: SH_CORE_CRITICAL("Unknown RendererAPI: {0} !", Renderer::GetAPI()); return nullptr;
 		}
 	}
+
+	void Shader::Load(ShadowEngine::Assets::Element& root)
+	{
+
+	}
 }

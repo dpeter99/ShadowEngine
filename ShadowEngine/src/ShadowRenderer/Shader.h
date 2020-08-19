@@ -8,7 +8,8 @@ namespace ShadowEngine::Rendering {
 	/// <summary>
 	/// Represents a shared in the engine
 	/// </summary>
-	class Shader
+	/// TODO: Make shaders assets
+	class Shader : public ShadowEngine::Assets::ShadowAsset
 	{
 	protected:
 		/// <summary>
@@ -25,6 +26,9 @@ namespace ShadowEngine::Rendering {
 
 		static Shader* Create(const std::string& vertexSrc, const std::string& fragmentSrc);
 		static Shader* CreateFromCompiled(const std::string& VSfilePath, const std::string& PSfilePath);
+
+		// Inherited via ShadowAsset
+		virtual void Load(ShadowEngine::Assets::Element& root) override;
 	};
 
 }
