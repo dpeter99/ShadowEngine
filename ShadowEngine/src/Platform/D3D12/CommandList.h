@@ -1,5 +1,5 @@
 #pragma once
-#include "ShadowRenderer/CommandList.h"
+//#include "ShadowRenderer/CommandList.h"
 #include "Common.h"
 #include "D3D12DepthBuffer.h"
 #include "ShadowRenderer/Shader.h"

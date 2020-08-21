@@ -2,7 +2,7 @@
 #include "Core/Core.h"
 #include "ShadowRenderer/Shader.h"
 //#include "ShadowRenderer/VertexArray.h"
-#include "ShadowRenderer/OrthographicCamera.h"
+//#include "ShadowRenderer/OrthographicCamera.h"
 #include "glm/glm.hpp"
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
