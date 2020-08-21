@@ -8,7 +8,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	
 	class CommandAllocatorPool
 	{
-		using AllocatorList = std::list<CommandAllocator>;
+		using AllocatorList = std::list<Ref<CommandAllocator>>;
 		using AllocatorRefList = std::list<CommandAllocator&>;
 		
 		std::map<int, AllocatorList> allocators;
@@ -32,7 +32,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 		void CheckFinished(int frame);
 
 	private:
-		CommandAllocator CreateNewCommandAllocator(D3D12_COMMAND_LIST_TYPE type) const;
+
+		/// <summary>
+		/// Creates a new command allocator.
+		/// </summary>
+		/// <param name="type">The type of the new command allocator</param>
+		/// <returns></returns>
+		Ref<CommandAllocator> CreateNewCommandAllocator(D3D12_COMMAND_LIST_TYPE type) const;
 	};
 
 }

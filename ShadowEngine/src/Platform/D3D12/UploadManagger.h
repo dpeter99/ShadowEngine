@@ -8,7 +8,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	class UploadQueue {
 		/**
-		 * \brief The command list used for recording render commands for the graphisc command queue
+		 * \brief The command list used for recording render commands for the graphics command queue
 		 */
 		Ref<D3D12::CommandList> command_list;
 

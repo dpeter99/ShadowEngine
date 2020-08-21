@@ -8,6 +8,7 @@
 
 namespace ShadowEngine::Assets {
 
+	/*
 	class Element
 	{
 	public:
@@ -26,7 +27,7 @@ namespace ShadowEngine::Assets {
 
 		~Element();
 	};
-
+	*/
 	class AssetLoader
 	{
 		static Element* LoadFile(std::string name);

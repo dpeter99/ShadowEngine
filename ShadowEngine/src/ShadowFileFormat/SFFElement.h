@@ -4,28 +4,34 @@
 #include <list>
 #include <string>
 
-class SFFElement
-{
-public:
-	SFFElement* parent;
+namespace ShadowEngine::SFF {
 
-	std::string name;
+	class SFFElement
+	{
+	public:
+		SFFElement* parent;
 
-	bool isBlock;
+		std::string name;
 
-	std::string value;
-	typedef std::map<std::string, SFFElement*> ChildrenMap;
+		bool isBlock;
 
-	std::list<SFFElement*> properties_old;
-	std::map<std::string, SFFElement*> children;
+		std::string value;
+		typedef std::map<std::string, SFFElement*> ChildrenMap;
 
-	std::string GetStringProperty(std::string name);
+		std::list<SFFElement*> properties_old;
+		std::map<std::string, SFFElement*> children;
 
-	SFFElement* GetFirstChild();
+		std::string GetStringProperty(std::string name);
 
-	SFFElement* GetChildByIndex(int i);
-	SFFElement* GetChildByName(std::string name);
+		//TODO make this return a ref not a pointer
+		SFFElement* GetFirstChild();
 
-	~SFFElement();
-	
-};
+		//TODO make this return a ref not a pointer
+		SFFElement* GetChildByIndex(int i);
+		//TODO make this return a ref not a pointer
+		SFFElement* GetChildByName(std::string name);
+
+		~SFFElement();
+
+	};
+}

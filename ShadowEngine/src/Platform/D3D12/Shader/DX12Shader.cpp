@@ -27,11 +27,100 @@ namespace ShadowEngine::Rendering::D3D12 {
 		return DXGI_FORMAT_UNKNOWN;
 	}
 
-	/**
-	 * \brief Loads a HLSL shader code from a compiled cso file
-	 * \param VSfilePath Path to the code file (.cso)
-	 * \return Com pointer to the code blob
-	 */
+
+	DX12Shader::DX12Shader(const std::string& VSfilePath, const std::string& PSfilePath)
+	{
+		LoadShader(VSfilePath, PSfilePath);
+	}
+
+	DX12Shader::~DX12Shader()
+	{
+		//TODO: Some cleanup should happen here I think
+	}
+
+	com_ptr<ID3D12PipelineState> DX12Shader::GetPipelineState()
+	{
+		return pipelineState;
+	}
+
+	com_ptr<ID3D12RootSignature> DX12Shader::GetRootSignature()
+	{
+		return rootSig;
+	}
+
+	int DX12Shader::GetMaterialSlotIndex()
+	{
+		return materialDataIndex;
+	}
+
+	
+	void DX12Shader::Bind() const
+	{
+		SH_CORE_CRITICAL("This call is not used and should not be called How did we get here?");
+	}
+
+	void DX12Shader::Unbind() const
+	{
+		SH_CORE_CRITICAL("This call is not used and should not be called How did we get here?");
+	}
+
+	
+	void DX12Shader::LoadShader(const std::string& VSFilePath, const std::string& PSFilePath, bool compiled)
+	{
+		//Load in the default values for now
+		blendState = CD3DX12_BLEND_DESC(D3D12_DEFAULT);
+		rasterizerState = CD3DX12_RASTERIZER_DESC(D3D12_DEFAULT);
+		rasterizerState.CullMode = D3D12_CULL_MODE_NONE;
+
+		depthStencilState = CD3DX12_DEPTH_STENCIL_DESC(D3D12_DEFAULT);
+		depthStencilState.DepthEnable = TRUE;
+		depthStencilState.DepthFunc = D3D12_COMPARISON_FUNC_LESS_EQUAL;
+		depthStencilState.StencilEnable = FALSE;
+		dsvFormat = DXGI_FORMAT_D32_FLOAT;
+
+
+		//Load Up the shader codes
+		VertexShaderByteCode = LoadCso(VSFilePath);
+		FragmentShaderByteCode = LoadCso(PSFilePath);
+
+		//Load Root signature
+		DX_API("Failed to create root signature")
+			DX12RendererAPI::device->CreateRootSignature(0, VertexShaderByteCode->GetBufferPointer(),
+				VertexShaderByteCode->GetBufferSize(), IID_PPV_ARGS(rootSig.GetAddressOf()));
+
+
+		//Create the Pipeline State Descriptor
+		ZeroMemory(&gpsoDesc, sizeof(D3D12_GRAPHICS_PIPELINE_STATE_DESC));
+		CreatePipelineDescriptor(gpsoDesc);
+
+
+		DX_API("Failed to reflect vertex shader")
+			D3DReflect(gpsoDesc.VS.pShaderBytecode, gpsoDesc.VS.BytecodeLength, IID_PPV_ARGS(vsReflection.GetAddressOf()));
+
+		DX_API("Failed to reflect pixel shader")
+			D3DReflect(gpsoDesc.PS.pShaderBytecode, gpsoDesc.PS.BytecodeLength, IID_PPV_ARGS(psReflection.GetAddressOf()));
+
+		if (gpsoDesc.GS.pShaderBytecode != nullptr) {
+			DX_API("Failed to reflect geometry shader")
+				D3DReflect(gpsoDesc.GS.pShaderBytecode, gpsoDesc.GS.BytecodeLength, IID_PPV_ARGS(gsReflection.GetAddressOf()));
+		}
+
+		DX_API("Failed to deserialize root signature")
+			D3D12CreateRootSignatureDeserializer(gpsoDesc.VS.pShaderBytecode, gpsoDesc.VS.BytecodeLength, IID_PPV_ARGS(rsDeserializer.GetAddressOf()));
+
+		//Create the pipeline state object from the descriptor
+		com_ptr<ID3D12PipelineState> pso{ nullptr };
+
+		DX_API("PSOManager: Failed to create GPSO")
+			DX12RendererAPI::device->CreateGraphicsPipelineState(&gpsoDesc, IID_PPV_ARGS(pso.GetAddressOf()));
+
+		pipelineState = pso;
+
+		Props();
+		//ExtractProperties();
+	}
+
+
 	com_ptr<ID3DBlob> DX12Shader::LoadCso(const std::string& VSfilePath)
 	{
 		std::ifstream file{ VSfilePath, std::ios::binary | std::ios::ate };
@@ -55,10 +144,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		}
 	}
 
-	/**
-	 * \brief Populates a Pipeline state Descriptor for this shader
-	 * \param psoDesc The Pipeline State Descriptor to populate
-	 */
+
 	void DX12Shader::CreatePipelineDescriptor(D3D12_GRAPHICS_PIPELINE_STATE_DESC& psoDesc) const
 	{
 		psoDesc.NumRenderTargets = 1;
@@ -83,11 +169,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		psoDesc.SampleMask = UINT_MAX;
 	}
 
-	/**
-	 * \brief Creates a Input Layout descriptor form BufferLayout
-	 * \param layout The buffer layout to be converted
-	 * \return The Input Layout
-	 */
+	
 	D3D12_INPUT_LAYOUT_DESC DX12Shader::CreateInputDescriptor(BufferLayout& layout)
 	{
 		D3D12_INPUT_LAYOUT_DESC layout_desc;
@@ -387,7 +469,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 			}
 #endif
-			
+
 			if (param.ParameterType == D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE) {
 
 				//Debug Info
@@ -480,96 +562,5 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//std::cout << properties.ToString();
 
 	}
-
-	/**
-	 * \brief Constructor for D3D12 Shaders.
-	 * \param VSfilePath File path to the Compiled HLSL Vertex shader
-	 * \param PSfilePath File path to the Compiled HLSL Fragment shader
-	 */
-	DX12Shader::DX12Shader(const std::string& VSfilePath, const std::string& PSfilePath)
-	{
-		//Load in the default values for now
-		blendState = CD3DX12_BLEND_DESC(D3D12_DEFAULT);
-		rasterizerState = CD3DX12_RASTERIZER_DESC(D3D12_DEFAULT);
-		rasterizerState.CullMode = D3D12_CULL_MODE_NONE;
-		
-		depthStencilState = CD3DX12_DEPTH_STENCIL_DESC(D3D12_DEFAULT);
-		depthStencilState.DepthEnable = TRUE;
-		depthStencilState.DepthFunc = D3D12_COMPARISON_FUNC_LESS_EQUAL;
-		depthStencilState.StencilEnable = FALSE;
-		dsvFormat = DXGI_FORMAT_D32_FLOAT;
-
-
-		//Load Up the shader codes
-		VertexShaderByteCode = LoadCso(VSfilePath);
-		FragmentShaderByteCode = LoadCso(PSfilePath);
-
-		//Load Root signature
-		DX_API("Failed to create root signature")
-			DX12RendererAPI::device->CreateRootSignature(0, VertexShaderByteCode->GetBufferPointer(),
-				VertexShaderByteCode->GetBufferSize(), IID_PPV_ARGS(rootSig.GetAddressOf()));
-
-
-		//Create the Pipeline State Descriptor
-		ZeroMemory(&gpsoDesc, sizeof(D3D12_GRAPHICS_PIPELINE_STATE_DESC));
-		CreatePipelineDescriptor(gpsoDesc);
-
-
-		DX_API("Failed to reflect vertex shader")
-			D3DReflect(gpsoDesc.VS.pShaderBytecode, gpsoDesc.VS.BytecodeLength, IID_PPV_ARGS(vsReflection.GetAddressOf()));
-
-		DX_API("Failed to reflect pixel shader")
-			D3DReflect(gpsoDesc.PS.pShaderBytecode, gpsoDesc.PS.BytecodeLength, IID_PPV_ARGS(psReflection.GetAddressOf()));
-
-		if (gpsoDesc.GS.pShaderBytecode != nullptr) {
-			DX_API("Failed to reflect geometry shader")
-				D3DReflect(gpsoDesc.GS.pShaderBytecode, gpsoDesc.GS.BytecodeLength, IID_PPV_ARGS(gsReflection.GetAddressOf()));
-		}
-
-		DX_API("Failed to deserialize root signature")
-			D3D12CreateRootSignatureDeserializer(gpsoDesc.VS.pShaderBytecode, gpsoDesc.VS.BytecodeLength, IID_PPV_ARGS(rsDeserializer.GetAddressOf()));
-
-		//Create the pipeline state object from the descriptor
-		com_ptr<ID3D12PipelineState> pso{ nullptr };
-
-		DX_API("PSOManager: Failed to create GPSO")
-			DX12RendererAPI::device->CreateGraphicsPipelineState(&gpsoDesc, IID_PPV_ARGS(pso.GetAddressOf()));
-
-		pipelineState = pso;
-
-		Props();
-		//ExtractProperties();
-	}
-
-	DX12Shader::~DX12Shader()
-	{
-
-	}
-
-	com_ptr<ID3D12PipelineState> DX12Shader::GetPipelineState()
-	{
-		return pipelineState;
-	}
-
-	com_ptr<ID3D12RootSignature> DX12Shader::GetRootSignature()
-	{
-		return rootSig;
-	}
-
-	int DX12Shader::GetMaterialSlotIndex()
-	{
-		return materialDataIndex;
-	}
-
-	void DX12Shader::Bind() const
-	{
-
-	}
-
-	void DX12Shader::Unbind() const
-	{
-
-	}
-
 
 }

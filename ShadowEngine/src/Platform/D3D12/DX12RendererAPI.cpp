@@ -17,11 +17,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 	
 	DX12RendererAPI* DX12RendererAPI::Instance{ nullptr };
 	
-	/**
-	 * \brief Loads the GPU adapters
-	 * \param dxgiFactory DXGI factory instance
-	 * \param adapters Returns the Vector of adapters
-	 */
+	/// <summary>
+	/// Loads the GPU adapters
+	/// </summary>
+	/// <param name="dxgiFactory">DXGI factory instance</param>
+	/// <param name="adapters">Returns the Vector of adapters</param>
 	void GetAdapters(IDXGIFactory6* dxgiFactory, std::vector<com_ptr<IDXGIAdapter1>>& adapters) {
 		HRESULT adapterQueryResult;
 		unsigned int adapterId = 0;
@@ -50,11 +50,14 @@ namespace ShadowEngine::Rendering::D3D12 {
 	}
 
 	IDXGIAdapter1* FindDevice(IDXGIFactory6* dxgiFactory) {
-		IDXGIAdapter1* adapter; // adapters are the graphics card (this includes the embedded graphics on the motherboard)
+		// adapters are the graphics cards (this includes the embedded graphics on the motherboard)
+		IDXGIAdapter1* adapter; 
 
-		int adapterIndex = 0; // we'll start looking for directx 12  compatible graphics devices starting at index 0
+		// we'll start looking for directx 12  compatible graphics devices starting at index 0
+		int adapterIndex = 0; 
 
-		bool adapterFound = false; // set this to true when a good one was found
+		// set this to true when a good one was found
+		bool adapterFound = false; 
 
 		// find first hardware gpu that supports d3d 12
 		while (dxgiFactory->EnumAdapters1(adapterIndex, &adapter) != DXGI_ERROR_NOT_FOUND)
@@ -65,12 +68,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 			if (desc.Flags & DXGI_ADAPTER_FLAG_SOFTWARE)
 			{
 				// we dont want a software device
-				adapterIndex++; // add this line here. Its not currently in the downloadable project
+				adapterIndex++;
 				continue;
 			}
 
 			// we want a device that is compatible with direct3d 12 (feature level 11 or higher)
 			HRESULT hr;
+			//TODO: Also check for largest memory
 			hr = D3D12CreateDevice(adapter, D3D_FEATURE_LEVEL_12_1, _uuidof(ID3D12Device), nullptr);
 			if (SUCCEEDED(hr))
 			{
@@ -99,10 +103,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//Load in the GPU adapters
 		//std::vector<com_ptr<IDXGIAdapter1>> adapters;
 		//GetAdapters(ctx->dxgiFactory.Get(), adapters);	
-
 		// select your adapter here, NULL = system default
 		// Using the first adapter for now
-
 		//IUnknown* selectedAdapter = (adapters.size() > 0) ? adapters[0].Get() : NULL;
 
 		com_ptr<ID3D12Debug> debug_controller;
@@ -151,6 +153,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		//descriptorHeap_SRV_CBV = std::make_shared<D3D12DescriptorHeap>(D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE, D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV,500);
 		// Create descriptor allocators
+		// TODO: This should happen before the swap chain
 		for (int i = 0; i < D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES; ++i)
 		{
 			m_DescriptorAllocators[i] = std::make_unique<DescriptorAllocator>(static_cast<D3D12_DESCRIPTOR_HEAP_TYPE>(i));
@@ -166,23 +169,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	void DX12RendererAPI::SetClearColor(const glm::vec4& color)
 	{
-
+		SH_CORE_CRITICAL("This call is not used and should not be called How did we get here?");
 	}
 
 	void DX12RendererAPI::Clear()
 	{
-		
+		SH_CORE_CRITICAL("This call is not used and should not be called How did we get here?");
 	}
-	
-	/*
-	void DX12RendererAPI::Draw(const Ref<Assets::Mesh> mesh, const Ref<Assets::Material> material, const glm::mat4& transform)
-	{		
-		Ref<DX12Shader> dx12_shader = std::dynamic_pointer_cast<D3D12::DX12Shader>(material->GetShader());
-		command_list->UseShader(dx12_shader);
-		command_list->BindConstantBuffer(material->GetBuffer(), dx12_shader->GetMaterialSlotIndex());
-		command_list->DrawMesh(mesh);
-	}
-	*/
 
 	void DX12RendererAPI::Draw(const std::shared_ptr<Assets::Mesh>& mesh, const std::shared_ptr<Assets::Material>& material, const ConstantBuffer& meshData)
 	{

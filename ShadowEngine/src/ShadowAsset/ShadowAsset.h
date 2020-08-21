@@ -1,6 +1,8 @@
 #pragma once
-#include "Core/Core.h"
 #include <string>
+
+#include "Core/Core.h"
+#include "ShadowFileFormat/SFFElement.h"
 
 
 
@@ -23,6 +25,6 @@ namespace ShadowEngine::Assets {
 		/// </summary>
 		std::string path;
 
-		virtual void Load(ShadowEngine::Assets::Element& root) = 0;
+		virtual void Load(SFF::SFFElement& root) = 0;
 	};
 }

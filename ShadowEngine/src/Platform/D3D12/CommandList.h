@@ -17,7 +17,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	class D3D12SwapChain;
 
 	/// <summary>
-	///  Wrapper for the ID3D12GraphicsCommandList class
+	/// Wrapper for the ID3D12GraphicsCommandList class
 	/// </summary>
 	/// Contains and manages a ``ID3D12CommandAllocator`` and ``ID3D12GraphicsCommandList``.
 	/// It is used for recording commands and than submitting them to a <see cref="CommandQueue"/>.
@@ -127,8 +127,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// <summary>
 		/// Adds a new resource barrier to the command list
 		/// </summary>
-		/// <param name="barrier">The barrier to use</param>
 		/// Used to wait for a resource transition to happen (eg. render target is available)
+		/// 
+		/// <param name="barrier">The barrier to use</param>
 		void ResourceBarrier(D3D12_RESOURCE_BARRIER* barrier);
 
 		void TransitionBarrier(com_ptr<ID3D12Resource> resource, D3D12_RESOURCE_STATES stateAfter, UINT subresource, bool flushBarriers);

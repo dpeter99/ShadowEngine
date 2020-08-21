@@ -3,6 +3,7 @@
 
 #include "Renderer.h"
 #include "Platform/D3D12/Shader/DX12Shader.h"
+#include "ShadowFileFormat/SFFElement.h"
 
 namespace ShadowEngine::Rendering {
 	
@@ -31,8 +32,17 @@ namespace ShadowEngine::Rendering {
 		}
 	}
 
-	void Shader::Load(ShadowEngine::Assets::Element& root)
+	void Shader::Load(SFF::SFFElement& root)
 	{
+		
+		auto* shader_root = root.GetChildByName("Shader");
 
+		SH_CORE_ASSERT(shader_root == nullptr, "Bad metadata file for {0} shader");
+		
+		auto vertexShader = shader_root->GetStringProperty("VertexShader");
+		auto fragmentShader = shader_root->GetStringProperty("VertexShader");
+
+		this->LoadShader(vertexShader, fragmentShader);
+		
 	}
 }

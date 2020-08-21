@@ -47,10 +47,28 @@ namespace ShadowEngine::Rendering::D3D12 {
 		int materialDataIndex;
 		
 	private:
+
+		/// <summary>
+		/// Loads a HLSL shader code from a compiled cso file
+		/// </summary>
+		/// <param name="VSfilePath">Path to the code file (.cso)</param>
+		/// <returns>Com pointer to the code blob</returns>
 		static com_ptr<ID3DBlob> DX12Shader::LoadCso(const std::string& VSfilePath);
+
+		/// <summary>
+		/// Populates a Pipeline state Descriptor for this shader
+		/// </summary>
+		/// <param name="psoDesc">The Pipeline State Descriptor to populate</param>
 		void CreatePipelineDescriptor(D3D12_GRAPHICS_PIPELINE_STATE_DESC& psoDesc) const;
+
+		/// <summary>
+		/// Creates an Input Layout descriptor form BufferLayout
+		/// </summary>
+		/// <param name="layout">The buffer layout to be converted</param>
+		/// <returns>The Input Layout</returns>
 		static D3D12_INPUT_LAYOUT_DESC CreateInputDescriptor(BufferLayout& layout);
-		void ExtractProperties();
+		
+		void ExtractProperties [[deprecated]] ();
 
 		void ExtractCBProps(D3D12_SHADER_INPUT_BIND_DESC binding);
 
@@ -58,6 +76,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 
 	public:
+
+		/// <summary>
+		/// Constructor for D3D12 Shader.
+		/// </summary>
+		/// <param name="VSfilePath">File path to the Compiled HLSL Vertex shader</param>
+		/// <param name="PSfilePath">File path to the Compiled HLSL Fragment shader</param>
 		DX12Shader(const std::string& VSfilePath, const std::string& PSfilePath);
 		virtual ~DX12Shader();
 
@@ -83,7 +107,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 		virtual void Bind() const;
 		virtual void Unbind() const;
-		
+
+		void LoadShader(const std::string& VSFilePath, const std::string& PSFilePath, bool compiled = true) override;
 	};
 
 }

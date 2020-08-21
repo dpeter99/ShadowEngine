@@ -21,7 +21,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	/// </summary>
 	/// 
 	/// This is the rendering backend for DX12
-	/// It implements the RenderingAPI interface and is the entripoint for the renderer
+	/// It implements the RenderingAPI interface and is the entry point for the renderer
 	class DX12RendererAPI : public RendererAPI
 	{
 	public:		
@@ -48,10 +48,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 		Ref<D3D12::D3D12CommandQueue> command_queue;
 		
 		/// <summary>
-		/// The command list used for recording render commands for the graphisc command queue
+		/// The command list used for recording render commands for the graphics command queue
 		/// </summary>
 		/// This is the command list that is being written into while recording
-		//TODO: Make this a array
+		/// TODO: Make this an array
 		Ref<D3D12::CommandList> command_list;
 
 		/// <summary>

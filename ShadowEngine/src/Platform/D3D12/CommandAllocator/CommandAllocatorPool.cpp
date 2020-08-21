@@ -21,9 +21,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 		}
 		else
 		{
-			this->allocators.emplace(CreateNewCommandAllocator(type));
+			auto alloc = CreateNewCommandAllocator(type);
+			alloc->MarkUsed(frame);
 			
-			
+			this->allocators.emplace(alloc);
+			this->in_flight.emplace(alloc);
 		}
 	}
 
@@ -45,13 +47,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 	}
 
 
-	CommandAllocator CommandAllocatorPool::CreateNewCommandAllocator(D3D12_COMMAND_LIST_TYPE type) const
+	Ref<CommandAllocator> CommandAllocatorPool::CreateNewCommandAllocator(D3D12_COMMAND_LIST_TYPE type) const
 	{
 		com_ptr<ID3D12CommandAllocator> commandAllocator;
 		
 		DX_API("Failed to create command allocator")
 			DX12RendererAPI::device->CreateCommandAllocator(type, IID_PPV_ARGS(commandAllocator.GetAddressOf()));
 
-		return CommandAllocator(commandAllocator);
+		return std::make_shared<CommandAllocator>(commandAllocator);
 	}
 }

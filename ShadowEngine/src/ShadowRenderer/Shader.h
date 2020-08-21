@@ -2,6 +2,7 @@
 
 #include <string>
 #include "ShaderProperties/ShaderPropertySheet.h"
+#include "ShadowAsset/ShadowAsset.h"
 
 namespace ShadowEngine::Rendering {
 
@@ -27,8 +28,10 @@ namespace ShadowEngine::Rendering {
 		static Shader* Create(const std::string& vertexSrc, const std::string& fragmentSrc);
 		static Shader* CreateFromCompiled(const std::string& VSfilePath, const std::string& PSfilePath);
 
+		virtual void LoadShader(const std::string& VSFilePath, const std::string& PSFilePath, bool compiled = true) = 0;
+		
 		// Inherited via ShadowAsset
-		virtual void Load(ShadowEngine::Assets::Element& root) override;
+		void Load(SFF::SFFElement& root) override;
 	};
 
 }

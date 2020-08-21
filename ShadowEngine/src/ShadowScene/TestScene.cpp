@@ -20,7 +20,7 @@ void TestScene::Init()
 	auto sky = AddEntity<SkySphere>();
 	sky->name = "Sky";
 	
-	auto fps = AddEntity< FirstPersonCamera>();
+	auto fps = AddEntity<FirstPersonCamera>();
 	fps->name = "Fps Camera";
 	
 	auto env_map = std::make_shared<ShadowEngine::Assets::TextureCubeMap>("./Resources/Textures/cube_maps/ame_ash/ashcanyon.tga");
