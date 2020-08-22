@@ -39,7 +39,14 @@ namespace ShadowEngine::Rendering {
 		/// It is set up with changes in the core update loop and uploaded in the render phase.
 		/// </summary>
 		RenderScene* scene = nullptr;
-		
+
+		/// <summary>
+		/// The index of the current frame
+		/// </summary>
+		///
+		/// This is the index of the currently recorded frame.
+		/// This frame might be drawn immediately or later depending on the renderer backend.
+		uint64_t frame_index;
 	public:
 		Renderer();
 

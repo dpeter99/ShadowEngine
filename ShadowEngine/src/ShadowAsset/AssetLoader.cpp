@@ -139,7 +139,7 @@ ShadowWorld* AssetLoader::LoadWorld(std::string name) {
     return world;
 }
 */
-
+/*
 namespace ShadowEngine::Assets {
 
 	template <>
@@ -370,3 +370,5 @@ namespace ShadowEngine::Assets {
 	}
 
 }
+
+*/

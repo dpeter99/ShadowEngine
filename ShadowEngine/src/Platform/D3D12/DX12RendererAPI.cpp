@@ -138,6 +138,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//Create dx12 render resources
 		
 		command_queue = std::make_shared<D3D12::D3D12CommandQueue>();
+
+		command_allocaotr_pool = std::make_shared<D3D12::CommandAllocatorPool>();
+		
 		command_list = std::make_shared<D3D12::CommandList>();
 		
 		swap_chain = std::make_shared<D3D12::D3D12SwapChain>(command_queue,ctx->window->Width, ctx->window->Height);
@@ -190,10 +193,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 		command_list->DrawMesh(mesh);
 	}
 
-	void DX12RendererAPI::StartFrame(Ref<ConstantBuffer> worldCB)
+	void DX12RendererAPI::StartFrame(Ref<ConstantBuffer> worldCB, uint64_t frame)
 	{
+		frame_index = frame;
+		
 		//Reset the command list
-		command_list->Reset();
+		command_list->Reset(frame_index);
 
 		//Set render area
 		command_list->SetViewports(viewPort);

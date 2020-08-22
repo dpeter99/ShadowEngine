@@ -2,7 +2,6 @@
 #include "Renderer.h"
 #include "EntitySystem/Entities/Camera.h"
 #include "Core/ShadowApplication.h"
-#include "CommandList.h"
 
 namespace ShadowEngine::Rendering {
 
@@ -38,12 +37,15 @@ namespace ShadowEngine::Rendering {
 	void Renderer::BeginScene(Camera* camera)
 	{
 		assert(camera != nullptr);
+
+		
+		frame_index++;
 		
 		scene->SetCamera(camera);
 
 		scene->PrepareWorldData();
 
-		s_RendererAPI->StartFrame(scene->GetWorldData());
+		s_RendererAPI->StartFrame(scene->GetWorldData(), frame_index);
 		
 		s_RendererAPI->SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 		s_RendererAPI->Clear();

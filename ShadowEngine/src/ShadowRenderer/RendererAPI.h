@@ -63,7 +63,10 @@ namespace ShadowEngine::Rendering {
 		/// Marks the start of a render frame. <see cref="Draw">Draw calls</see> will be only called after this.
 		/// </summary>
 		/// <param name="worldCB">The world data in a Constant buffer</param>
-		virtual  void StartFrame(Ref<ConstantBuffer> worldCB) = 0;
+		/// <param name="frame_index">The index of the frame that is bing started</param>
+		///
+		/// The frame index should never decrease, as it is used for command queue fences.
+		virtual  void StartFrame(Ref<ConstantBuffer> worldCB, uint64_t frame_index) = 0;
 		
 
 		/// <summary>

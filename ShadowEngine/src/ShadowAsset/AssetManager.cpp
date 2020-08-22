@@ -35,7 +35,7 @@ ShadowEngine::Assets::AssetManager::~AssetManager()
 void ShadowEngine::Assets::AssetManager::Init()
 {
 	SH_CORE_INFO("Trying to load Resources/pack.spf");
-	SFFElement* root = ShadowEngine::SFF::SFFParser::ReadFromFile("./Resources/pack.spf");
+	SFF::SFFElement* root = ShadowEngine::SFF::SFFParser::ReadFromFile("./Resources/pack.spf");
 	if(root == nullptr)
 	{
 		SH_CORE_CRITICAL("Coudn't load pack file.");

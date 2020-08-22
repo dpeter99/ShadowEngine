@@ -78,7 +78,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		std::size_t hash = 0;
 		if (cbvDesc)
 		{
-			hash = std::hash<D3D12_CONSTANT_BUFFER_VIEW_DESC>{}(*cbvDesc);
+			//TODO FIX this
+			//hash = std::hash<D3D12_CONSTANT_BUFFER_VIEW_DESC>(*cbvDesc);
 		}
 
 		std::lock_guard<std::mutex> lock(m_ConstantBufferViewsMutex);

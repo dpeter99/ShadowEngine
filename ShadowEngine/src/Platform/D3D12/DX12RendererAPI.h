@@ -41,19 +41,25 @@ namespace ShadowEngine::Rendering::D3D12 {
 		static DX12RendererAPI* Instance;
 
 	public:
+		
 		/// <summary>
 		/// The Graphics command queue
 		/// </summary>
 		/// All graphics commands are submitted to this queue, and it runs them in order of submission
 		Ref<D3D12::D3D12CommandQueue> command_queue;
+
+
+		Ref<CommandAllocatorPool> command_allocaotr_pool;
 		
 		/// <summary>
 		/// The command list used for recording render commands for the graphics command queue
 		/// </summary>
-		/// This is the command list that is being written into while recording
-		/// TODO: Make this an array
+		/// This is the command list that is being written into while recording.
+		/// This is always the current frame's list, it is reset at the end of the recording and assigned a new allocator
 		Ref<D3D12::CommandList> command_list;
 
+		uint64_t frame_index;
+		
 		/// <summary>
 		/// The upload manager, it handles the uploads of resources
 		/// </summary>
@@ -118,7 +124,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// </summary>
 		/// <param name="worldCB">The constant buffer containing the world data</param>
 		/// The World data contains the camera position and matrix, the lights and other parameters that are the same for the whole scene
-		void StartFrame(Ref<ConstantBuffer> worldCB) override;
+		void StartFrame(Ref<ConstantBuffer> worldCB, uint64_t frame) override;
 
 		/// <summary>
 		/// This ends the recording of the frame. It subbmits it and queues the swapchain swap

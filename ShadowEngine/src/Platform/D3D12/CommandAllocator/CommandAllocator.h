@@ -17,9 +17,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		CommandAllocator(com_ptr<ID3D12CommandAllocator> commandAllocator);
 
+		com_ptr<ID3D12CommandAllocator> const Allocator() const { return m_commandAllocator; }
+		
 		void MarkUsed(int frame);
 		D3D12_COMMAND_LIST_TYPE GetType();
 		bool CheckFinished(int frame);
+
+		
 
 	};
 

@@ -49,12 +49,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 		for (size_t i = 0; i < propertySheet->GetTextureCount(); i++)
 		{
 			auto* prop = propertySheet->GetTexture<Assets::Texture>(i);
-			auto texture = prop->GetPropertyDataTyped();
+			//TODO: FIX this
+			//auto texture = prop->GetPropertyDataTyped();
 
-			auto a = std::dynamic_pointer_cast<D3D12::Texture>(texture.getImpl());
+			//auto a = std::dynamic_pointer_cast<D3D12::Texture>(texture.getImpl());
 
-			//CreateTextureResourceView(i, prop);
-			commandList->SetShaderResourceView(this->rootSigIndex, i+1, *a);
+			///CreateTextureResourceView(i, prop);
+			//commandList->SetShaderResourceView(this->rootSigIndex, i+1, *a);
 		}
 		
 		

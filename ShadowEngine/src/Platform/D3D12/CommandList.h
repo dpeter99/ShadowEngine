@@ -12,6 +12,8 @@
 #include "Resource/ResourceStateTracker.h"
 #include "Buffers/UploadBuffer.h"
 
+#include "CommandAllocator/CommandAllocatorPool.h"
+
 namespace ShadowEngine::Rendering::D3D12 {
 	class Texture;
 	class D3D12SwapChain;
@@ -23,11 +25,14 @@ namespace ShadowEngine::Rendering::D3D12 {
 	/// It is used for recording commands and than submitting them to a <see cref="CommandQueue"/>.
 	class CommandList
 	{
+		D3D12_COMMAND_LIST_TYPE type;
+		
 		/// <summary>
 		/// The command allocator that we are allocating out of
 		/// </summary>
 		/// The command allocator is responsible for allocating the memory for the CommandLists
-		com_ptr<ID3D12CommandAllocator> commandAllocator;
+		//com_ptr<ID3D12CommandAllocator> commandAllocator;
+		Ref<CommandAllocator> commandAllocator;
 		
 		/// <summary>
 		/// The encapsulated CommandList
@@ -50,7 +55,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// <summary>
 		/// Resource state tracker is used by the command list to track (per command list)
 		/// the current state of a resource. The resource state tracker also tracks the
-		/// global state of a resource (with it's static methodes) in order to minimize resource state transitions.
+		/// global state of a resource (with it's static methods) in order to minimize resource state transitions.
 		/// </summary>
 		std::unique_ptr<ResourceStateTracker> m_ResourceStateTracker;
 
@@ -93,11 +98,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 		com_ptr<ID3D12GraphicsCommandList> GetCommandList() { return m_commandList; }
 
 
-		/**
-		 * \brief Resets the Command List
-		 * Should only be used when we are sure it is not in use
-		 */
-		void Reset();
+		/// <summary>
+		/// Resets the Command List
+		/// </summary>
+		/// <param name="frame">The frame that we are starting</param>
+		///
+		/// When this is called an new allocator is requested form the pool with the frame
+		void Reset(uint64_t frame);
 
 		void StartRecording();
 
