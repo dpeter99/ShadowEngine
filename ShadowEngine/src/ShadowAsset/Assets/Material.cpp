@@ -61,4 +61,7 @@ namespace  ShadowEngine::Assets {
 		
 	}
 
+	void Material::Load(SFF::SFFElement& root)
+	{
+	}
 }

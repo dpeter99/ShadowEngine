@@ -87,12 +87,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 		}
 
 		//Assign the current render target texture index
-		frameIndex = swapChain->GetCurrentBackBufferIndex();
+		currentBackBufferIndex = swapChain->GetCurrentBackBufferIndex();
 	}
 
 	CD3DX12_CPU_DESCRIPTOR_HANDLE D3D12SwapChain::GetCurrentRenderTargetDescriptor() const
 	{
-		return CD3DX12_CPU_DESCRIPTOR_HANDLE( rtvDescriptors.GetDescriptorHandle(this->frameIndex));
+		return CD3DX12_CPU_DESCRIPTOR_HANDLE( rtvDescriptors.GetDescriptorHandle(this->currentBackBufferIndex));
 	}
 
 	void D3D12SwapChain::ReleaseSwapChainResources()
@@ -124,8 +124,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		return swapChain->GetCurrentBackBufferIndex();
 	}
 
-	void D3D12SwapChain::UpdateCurrentBackBufferIndex()
+	void D3D12SwapChain::FindNextBackBufferIndex()
 	{
-		frameIndex = swapChain->GetCurrentBackBufferIndex();
+		currentBackBufferIndex = swapChain->GetCurrentBackBufferIndex();
 	}
 }

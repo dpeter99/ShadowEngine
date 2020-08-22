@@ -28,7 +28,8 @@ namespace ShadowEngine::Assets {
 
 		virtual Ref<TextureImpl> getImpl() { return impl; };
 
-		void Upload() { impl->Upload(); };
+		void Upload() { impl->Upload(); }
+		void Load(SFF::SFFElement& root) override;;
 	};
 
 

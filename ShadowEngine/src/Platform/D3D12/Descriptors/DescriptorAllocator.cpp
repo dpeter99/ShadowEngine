@@ -57,7 +57,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		// No available heap could satisfy the requested number of descriptors.
 		if (allocation.IsNull())
 		{
-			m_NumDescriptorsPerHeap = max(m_NumDescriptorsPerHeap, numDescriptors);
+			m_NumDescriptorsPerHeap = std::max(m_NumDescriptorsPerHeap, numDescriptors);
 			auto newPage = CreateAllocatorPage();
 
 			allocation = newPage->Allocate(numDescriptors);

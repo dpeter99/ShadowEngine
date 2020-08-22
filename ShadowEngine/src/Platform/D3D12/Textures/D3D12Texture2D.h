@@ -40,6 +40,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 		virtual void FinishedUploading() override;
 
+		D3D12_CPU_DESCRIPTOR_HANDLE
+		GetShaderResourceView(const D3D12_SHADER_RESOURCE_VIEW_DESC* srvDesc) const override;
+		D3D12_CPU_DESCRIPTOR_HANDLE
+		GetUnorderedAccessView(const D3D12_UNORDERED_ACCESS_VIEW_DESC* uavDesc) const override;
 	};
 
 }

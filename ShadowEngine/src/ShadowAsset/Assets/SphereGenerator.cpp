@@ -169,4 +169,8 @@ namespace ShadowEngine::Assets {
 		return std::make_shared<Mesh>(vertices.data(), vertices.size(),
 			indices.data(), indices.size());
 	}
+
+	void Mesh::Load(SFF::SFFElement& root)
+	{
+	}
 }

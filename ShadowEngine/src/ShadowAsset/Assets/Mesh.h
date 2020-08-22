@@ -28,5 +28,6 @@ namespace ShadowEngine::Assets {
 
 		static Ref<Mesh> CreateSphere(int LatLines, int LongLines);
 		static Ref<Mesh> CreateInverseSphere(int LatLines, int LongLines);
+		void Load(SFF::SFFElement& root) override;
 	};
 }

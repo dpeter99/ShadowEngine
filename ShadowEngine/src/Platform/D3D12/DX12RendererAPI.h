@@ -99,9 +99,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//Fence stuff
 		//TODO: abstract these
 		Ref<D3D12::D3D12Fence> fence;
-		HANDLE fenceEvent;
-		unsigned long long fenceValue;
-		//unsigned int frameIndex;
+		//HANDLE fenceEvent;
+		//unsigned long long fenceValue;
+		//unsigned int currentBackBufferIndex;
 
 		//Ref<D3D12DescriptorHeap> descriptorHeap_SRV_CBV;
 

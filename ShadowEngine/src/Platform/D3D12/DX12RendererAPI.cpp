@@ -147,12 +147,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		depth_buffer = std::make_shared<D3D12::D3D12DepthBuffer>(scissorRect);
 		
 		fence = std::make_unique<D3D12::D3D12Fence>();
-		fenceValue = 0;
+		//fenceValue = 0;
 
-		fenceEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
-		if (fenceEvent == NULL) {
-			DX_API("Failed to create windows event") HRESULT_FROM_WIN32(GetLastError());
-		}		
+		
 
 		//descriptorHeap_SRV_CBV = std::make_shared<D3D12DescriptorHeap>(D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE, D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV,500);
 		// Create descriptor allocators
@@ -252,9 +249,18 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 		swap_chain->Present(1, 0);
 
+		//Signal the end of the frame
+		command_queue->Signal(fence, frame_index);
+		//Save out the frame id to the swap chain
+		swap_chain->SetCurrentRenderTargetFenceValue(frame_index);
+		
 		StartResourceUpload();
 
-		WaitForPreviousFrame();
+		swap_chain->FindNextBackBufferIndex();
+
+		fence->WaitForValue(swap_chain->GetCurrentRenderTargetFenceValue());
+		
+		//WaitForPreviousFrame();
 	}
 
 	void DX12RendererAPI::UploadResource(Ref<D3D12IUploadable> resource)
@@ -305,6 +311,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		return descriptorHeap;
 	}
 
+	/*
 	void DX12RendererAPI::WaitForPreviousFrame() {
 		const UINT64 fv = fenceValue;
 		
@@ -318,7 +325,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 			WaitForSingleObject(fenceEvent, INFINITE);
 		}
 
-		swap_chain->UpdateCurrentBackBufferIndex();
+		swap_chain->FindNextBackBufferIndex();
 	}
-
+	*/
 }

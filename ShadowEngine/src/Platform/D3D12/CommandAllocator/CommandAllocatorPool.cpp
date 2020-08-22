@@ -7,12 +7,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 	
 	Ref<CommandAllocator> CommandAllocatorPool::GetFreeCommandAllocator(D3D12_COMMAND_LIST_TYPE type, int frame)
 	{
-		auto& freeAllocators = free[type];
+		auto& freeAllocators = free_list[type];
 		
 		if(!freeAllocators.empty())
 		{
-			auto allocator = freeAllocators.front();
-			freeAllocators.pop_front();
+			auto allocator = freeAllocators.back();
+			freeAllocators.pop_back();
 
 			allocator->MarkUsed(frame);
 			in_flight.emplace(allocator);
@@ -33,16 +33,33 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	void CommandAllocatorPool::CheckFinished(int frame)
 	{
-		for each (auto& list in this->in_flight)
+		for (auto& item : this->in_flight)
 		{
-			for each (auto& allocator in list.second)
+			AllocatorList& allocator_list = item.second;
+			
+			for (auto& allocator : allocator_list)
 			{
 				if(allocator->CheckFinished(frame))
 				{
-					list.second.remove(allocator);
-					free[list.first].push_back(allocator);
+					//allocator_list->remove(allocator);
+					allocator_list.erase(std::find(allocator_list.begin(), allocator_list.end(), allocator));
+					free_list[item.first].push_back(allocator);
 				}
 			}
+			/*
+			AllocatorList::iterator i = allocator_list.begin();
+			while (i != allocator_list.end())
+			{
+				auto& allocator = *i;
+				if (allocator->CheckFinished(frame))
+				{
+					AllocatorList::iterator prev = i++;
+					allocator_list.erase(prev);
+					free[item.first].push_back(allocator);
+				}
+				
+			}
+			*/
 		}
 	}
 

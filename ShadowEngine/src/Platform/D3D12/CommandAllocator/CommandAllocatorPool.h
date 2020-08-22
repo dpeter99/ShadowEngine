@@ -10,10 +10,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 	/// </summary>
 	class CommandAllocatorPool
 	{
-		using AllocatorList = std::list<Ref<CommandAllocator>>;
+		using AllocatorList = std::vector<Ref<CommandAllocator>>;
 		
 		std::map<int, AllocatorList> allocators;
-		std::map<int, AllocatorList> free;
+		std::map<int, AllocatorList> free_list;
 		std::map<int, AllocatorList> in_flight;
 
 	public:

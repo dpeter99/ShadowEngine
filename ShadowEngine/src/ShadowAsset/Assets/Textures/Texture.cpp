@@ -9,7 +9,11 @@ namespace ShadowEngine::Assets {
 	Texture::Texture(std::string path)
 	{
 	}
-	
+
+	void Texture::Load(SFF::SFFElement& root)
+	{
+	}
+
 	Ref<Texture2DImpl> ShadowEngine::Assets::Texture2DImpl::Create(std::string path)
 	{
 		switch (ShadowEngine::Rendering::Renderer::GetAPI())

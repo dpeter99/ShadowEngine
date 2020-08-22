@@ -18,7 +18,7 @@ namespace ShadowEngine::Rendering {
 		{
 			case RendererAPI::API::None:    SH_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
 			//case RendererAPI::API::OpenGL:  return new OpenGL::OpenGLShader(vertexSrc, fragmentSrc);
-			default: SH_CORE_CRITICAL("Unknown RendererAPI: {0} !", Renderer::GetAPI()); return nullptr;
+			default: SH_CORE_CRITICAL("Unknown RendererAPI: {0} !", (int)Renderer::GetAPI()); return nullptr;
 		}
 	}
 
@@ -28,7 +28,7 @@ namespace ShadowEngine::Rendering {
 		{
 			case RendererAPI::API::None:    SH_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
 			case RendererAPI::API::D3D12:  return new D3D12::DX12Shader(VSfilePath, PSfilePath);
-			default: SH_CORE_CRITICAL("Unknown RendererAPI: {0} !", Renderer::GetAPI()); return nullptr;
+			default: SH_CORE_CRITICAL("Unknown RendererAPI: {0} !", (int)Renderer::GetAPI()); return nullptr;
 		}
 	}
 

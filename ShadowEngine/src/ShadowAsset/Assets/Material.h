@@ -98,5 +98,6 @@ namespace ShadowEngine::Assets {
 		
 		Material(const Ref<Rendering::Shader>& shader);
 
+		void Load(SFF::SFFElement& root) override;
 	};
 }

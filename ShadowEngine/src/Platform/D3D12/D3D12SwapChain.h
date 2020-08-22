@@ -54,7 +54,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// </summary>
 		///
 		/// This is the index of the active render target in the frames 
-		unsigned int frameIndex;
+		unsigned int currentBackBufferIndex;
+
+		uint64_t g_FrameFenceValues[2] = {};
 
 	public:
 		D3D12SwapChain(Ref<D3D12CommandQueue> commandQueue, int width, int height);
@@ -74,9 +76,30 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		com_ptr<ID3D12Resource> GetCurrentRenderTarget()
 		{
-			return renderTargets[frameIndex];
+			return renderTargets[currentBackBufferIndex];
 		}
 
+
+		void SetCurrentRenderTargetFenceValue(uint64_t fence)
+		{
+			SetRenderTargetFenceValue(currentBackBufferIndex, fence);
+		}
+		
+		void SetRenderTargetFenceValue(int RT, uint64_t fence)
+		{
+			g_FrameFenceValues[RT] = fence;
+		}
+		
+		uint64_t GetCurrentRenderTargetFenceValue()
+		{
+			return g_FrameFenceValues[currentBackBufferIndex];
+		}
+		
+		uint64_t GetRenderTargetFenceValue(int RT)
+		{
+			return g_FrameFenceValues[RT];
+		}
+		
 		/// <summary>
 		/// Returns a new Descriptor handle to the active render target
 		/// </summary>
@@ -94,14 +117,14 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// Returns the active Render Target index
 		/// </summary>
 		/// <returns>The index of the current render target</returns>
-		int GetCurrentBackBufferIndex();
+		int GetCurrentBackBufferIndex[[deprecated]]();
 
 		/// <summary>
 		/// Updates the Current render target index
 		/// </summary>
 		///
 		/// Call this after you changed the active render target
-		void UpdateCurrentBackBufferIndex();
+		void FindNextBackBufferIndex();
 	};
 
 }

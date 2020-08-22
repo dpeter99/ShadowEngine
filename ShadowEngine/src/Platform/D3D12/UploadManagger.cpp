@@ -69,9 +69,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 		m_resourcesToUpload.push_back(data);
 
-		if(!command_list->IsRecording())
-		command_list->Reset();
-
+		if (!command_list->IsRecording())
+		{
+			//TODO: this is wrong get a normal fence value
+			command_list->Reset(-1);
+		}
+		
 		data->RecordTransfer(this->command_list);
 
 		dirty = true;

@@ -30,6 +30,15 @@
 #define _128MB _MB(128)
 #define _256MB _MB(256)
 
+// The min/max macros conflict with like-named member functions.
+// Only use std::min and std::max defined in <algorithm>.
+#if defined(min)
+#undef min
+#endif
+
+#if defined(max)
+#undef max
+#endif
 
 namespace ShadowEngine {
 	class IGame;
