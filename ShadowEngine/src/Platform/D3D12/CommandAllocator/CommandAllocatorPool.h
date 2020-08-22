@@ -5,15 +5,16 @@
 
 namespace ShadowEngine::Rendering::D3D12 {
 
-	
+	/// <summary>
+	/// Provides pooling for the command allocators.
+	/// </summary>
 	class CommandAllocatorPool
 	{
 		using AllocatorList = std::list<Ref<CommandAllocator>>;
-		using AllocatorRefList = std::list<CommandAllocator&>;
 		
 		std::map<int, AllocatorList> allocators;
-		std::map<int, AllocatorRefList> free;
-		std::map<int, AllocatorRefList> in_flight;
+		std::map<int, AllocatorList> free;
+		std::map<int, AllocatorList> in_flight;
 
 	public:
 
@@ -27,8 +28,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// <returns>A command allocator to use</returns>
 		/// 
 		/// This finds a free command allocator or creates a new one. The Command allocator will be freed when the specified frame is finished
-		CommandAllocator& GetFreeCommandAllocator(D3D12_COMMAND_LIST_TYPE type, int frame);
-		
+		Ref<CommandAllocator> GetFreeCommandAllocator(D3D12_COMMAND_LIST_TYPE type, int frame);
+
+
+		/// <summary>
+		/// Checks if any of the in flight allocators can be freed
+		/// </summary>
+		/// <param name="frame">The frame that finished</param>
 		void CheckFinished(int frame);
 
 	private:

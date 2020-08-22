@@ -5,7 +5,7 @@
 
 namespace ShadowEngine::Rendering::D3D12 {
 	
-	CommandAllocator& CommandAllocatorPool::GetFreeCommandAllocator(D3D12_COMMAND_LIST_TYPE type, int frame)
+	Ref<CommandAllocator> CommandAllocatorPool::GetFreeCommandAllocator(D3D12_COMMAND_LIST_TYPE type, int frame)
 	{
 		auto& freeAllocators = free[type];
 		
@@ -14,7 +14,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 			auto allocator = freeAllocators.front();
 			freeAllocators.pop_front();
 
-			allocator.MarkUsed(frame);
+			allocator->MarkUsed(frame);
 			in_flight.emplace(allocator);
 			
 			return allocator;
@@ -37,7 +37,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		{
 			for each (auto& allocator in list.second)
 			{
-				if(allocator.CheckFinished(frame))
+				if(allocator->CheckFinished(frame))
 				{
 					list.second.remove(allocator);
 					free[list.first].push_back(allocator);
