@@ -168,7 +168,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		com_ptr<ID3D12DescriptorHeap> CreateDescriptorHeap(UINT numDescriptors, D3D12_DESCRIPTOR_HEAP_TYPE type);
 
-		void WaitForPreviousFrame();
+		//void WaitForPreviousFrame();
 		
 	};
 }

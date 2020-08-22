@@ -1,4 +1,5 @@
 #include "shpch.h"
+
 #include "CommandList.h"
 #include "DX12RendererAPI.h"
 #include "D3D12Shader.h"

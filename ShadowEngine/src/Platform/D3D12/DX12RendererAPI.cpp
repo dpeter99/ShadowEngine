@@ -283,12 +283,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 		return device->GetDescriptorHandleIncrementSize(type);
 	}
 
-	inline DescriptorAllocation DX12RendererAPI::AllocateDescriptors(D3D12_DESCRIPTOR_HEAP_TYPE type, uint32_t numDescriptors)
+	DescriptorAllocation DX12RendererAPI::AllocateDescriptors(D3D12_DESCRIPTOR_HEAP_TYPE type, uint32_t numDescriptors)
 	{
 		return m_DescriptorAllocators[type]->Allocate(numDescriptors);
 	}
 
-	inline void DX12RendererAPI::ReleaseStaleDescriptors(uint64_t finishedFrame)
+	void DX12RendererAPI::ReleaseStaleDescriptors(uint64_t finishedFrame)
 	{
 		for (int i = 0; i < D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES; ++i)
 		{

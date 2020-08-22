@@ -69,6 +69,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 		shaderData->Upload();
 	}
+	void D3D12MaterialImpl::CreateTextureResourceView(size_t i, ShaderRefProperty<Assets::Texture>* prop)
+	{
+	}
 	/*
 	void D3D12MaterialImpl::CreateTextureResourceView(size_t i, ShaderRefProperty<Assets::Texture>* prop)
 	{

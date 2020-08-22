@@ -105,6 +105,26 @@ namespace ShadowEngine::Rendering::D3D12 {
 		return srv;
 	}
 
+	void DX12ConstantBuffer::FinishedUploading()
+	{
+	}
+
+	D3D12_CPU_DESCRIPTOR_HANDLE DX12ConstantBuffer::GetShaderResourceView(
+		const D3D12_SHADER_RESOURCE_VIEW_DESC* srvDesc) const
+	{
+		return D3D12_CPU_DESCRIPTOR_HANDLE();
+	}
+
+	D3D12_CPU_DESCRIPTOR_HANDLE DX12ConstantBuffer::GetUnorderedAccessView(
+		const D3D12_UNORDERED_ACCESS_VIEW_DESC* uavDesc) const
+	{
+		return D3D12_CPU_DESCRIPTOR_HANDLE();
+	}
+
+	void DX12ConstantBuffer::CreateViews(size_t numElements, size_t elementSize)
+	{
+	}
+
 	void DX12ConstantBuffer::Upload(void* data, size_t size)
 	{
 		//memcpy(mappedPtr, data, size);

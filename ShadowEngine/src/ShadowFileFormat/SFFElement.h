@@ -18,7 +18,7 @@ namespace ShadowEngine::SFF {
 		std::string value;
 		typedef std::map<std::string, SFFElement*> ChildrenMap;
 
-		std::list<SFFElement*> properties_old;
+		//std::list<SFFElement*> properties_old;
 		std::map<std::string, SFFElement*> children;
 
 		std::string GetStringProperty(std::string name);

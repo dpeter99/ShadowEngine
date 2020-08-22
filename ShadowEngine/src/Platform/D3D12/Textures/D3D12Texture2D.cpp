@@ -58,6 +58,16 @@ void ShadowEngine::Rendering::D3D12::D3D12Texture2D::FinishedUploading()
 	ready = true;
 }
 
+D3D12_CPU_DESCRIPTOR_HANDLE ShadowEngine::Rendering::D3D12::D3D12Texture2D::GetShaderResourceView(const D3D12_SHADER_RESOURCE_VIEW_DESC* srvDesc) const
+{
+	return D3D12_CPU_DESCRIPTOR_HANDLE();
+}
+
+D3D12_CPU_DESCRIPTOR_HANDLE ShadowEngine::Rendering::D3D12::D3D12Texture2D::GetUnorderedAccessView(const D3D12_UNORDERED_ACCESS_VIEW_DESC* uavDesc) const
+{
+	return D3D12_CPU_DESCRIPTOR_HANDLE();
+}
+
 void ShadowEngine::Rendering::D3D12::D3D12Texture2D::Upload()
 {
 	D3D12::DX12RendererAPI::Instance->UploadResource(this);

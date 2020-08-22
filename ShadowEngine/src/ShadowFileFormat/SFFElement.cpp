@@ -2,7 +2,20 @@
 #include "SFFElement.h"
 
 namespace ShadowEngine::SFF {
-
+    std::string SFFElement::GetStringProperty(std::string name)
+    {
+        std::string res;
+        auto a = this->children.find(name);
+        if (a != this->children.end())
+        {
+            res = a->second->value;
+        }
+        else
+        {
+            res = "";
+        }
+        return res;
+    }
     SFFElement* SFFElement::GetFirstChild()
     {
         return children.size() > 0 ? children[0] : nullptr;

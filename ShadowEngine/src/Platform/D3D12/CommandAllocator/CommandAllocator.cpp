@@ -19,4 +19,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		return this->type;
 	}
 
+	bool CommandAllocator::CheckFinished(int frame)
+	{
+		return frame >= freeFrame;
+	}
+
 }
