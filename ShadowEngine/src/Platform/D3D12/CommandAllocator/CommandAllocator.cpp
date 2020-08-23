@@ -3,7 +3,9 @@
 
 namespace ShadowEngine::Rendering::D3D12 {
 
-	CommandAllocator::CommandAllocator(com_ptr<ID3D12CommandAllocator> commandAllocator) : m_commandAllocator(commandAllocator)
+	CommandAllocator::CommandAllocator(com_ptr<ID3D12CommandAllocator> commandAllocator, D3D12_COMMAND_LIST_TYPE type) :
+	m_commandAllocator(commandAllocator), type(type)
+	
 	{
 
 	}

@@ -46,7 +46,7 @@ namespace ShadowEngine::Rendering {
 		///
 		/// This is the index of the currently recorded frame.
 		/// This frame might be drawn immediately or later depending on the renderer backend.
-		uint64_t frame_index;
+		uint64_t frame_index = 0;
 	public:
 		Renderer();
 

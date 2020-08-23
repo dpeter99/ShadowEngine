@@ -23,6 +23,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		m_commandList->Close();
 
 		isBeingRecorded = false;
+
+		
 	}
 
 
@@ -268,7 +270,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		for (uint32_t i = 0; i < D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES; ++i)
 		{
 			ID3D12DescriptorHeap* descriptorHeap = m_DescriptorHeaps[i];
-			if (descriptorHeap)
+			if (descriptorHeap != nullptr)
 			{
 				descriptorHeaps[numDescriptorHeaps++] = descriptorHeap;
 			}

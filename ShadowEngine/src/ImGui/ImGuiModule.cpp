@@ -27,7 +27,7 @@ namespace ShadowEngine::DebugGui {
 	static ImFont* _fontRegular = nullptr;
 	static ImFont* _fontSolid = nullptr;
 
-	Microsoft::WRL::ComPtr< ID3D12DescriptorHeap> heap;
+	
 
 	void LoadFontAwesome()
 	{
@@ -87,11 +87,6 @@ namespace ShadowEngine::DebugGui {
 		io.KeyMap[ImGuiKey_Y] = SDL_SCANCODE_Y;
 		io.KeyMap[ImGuiKey_Z] = SDL_SCANCODE_Z;
 
-
-
-		
-		
-		
 		heap = nullptr;
 		switch (Rendering::RendererAPI::GetAPI())
 		{
@@ -103,7 +98,7 @@ namespace ShadowEngine::DebugGui {
 			ImGui_ImplSDL2_InitForD3D(ShadowEngine::ShadowApplication::Get().GetWindow().winPtr);
 
 			heap = Rendering::D3D12::DX12RendererAPI::Get().CreateDescriptorHeap(1, D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV);
-
+			
 			ImGui_ImplDX12_Init(Rendering::D3D12::DX12RendererAPI::Instance->device.Get(),
 								1,
 								DXGI_FORMAT_R8G8B8A8_UNORM,
@@ -178,6 +173,11 @@ namespace ShadowEngine::DebugGui {
 			ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 			break;
 		case Rendering::RendererAPI::API::D3D12:
+
+			
+			Rendering::D3D12::DX12RendererAPI::Instance->command_list->SetDescriptorHeap(D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV, GetHeap().Get());
+			
+			
 			ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(),Rendering::D3D12::DX12RendererAPI::Instance->command_list->GetCommandList().Get());
 			break;
 		default:
@@ -198,61 +198,6 @@ namespace ShadowEngine::DebugGui {
 			e.Handled = true;
 		}
 
-		//bool used = ImGui_ImplSDL2_ProcessEvent(e.GetSDLEvnet());
-		/*
-		if (used) {
-			e.Handled = true;
-		}
-		*/
-		/*
-		ImGuiIO& io = ImGui::GetIO();
-
-		ShadowEventSystem::KeyPressedEvent* pressed;
-		ShadowEventSystem::KeyReleasedEvent* released;
-
-		ShadowEventSystem::MouseButtonPressedEvent* buttonPressed;
-		ShadowEventSystem::MouseButtonReleasedEvent* buttonReleased;
-		ShadowEventSystem::MouseMovedEvent* moved;
-
-		ShadowEventSystem::WindowResizeEvent* resize;
-
-		if(e.GetType() == ShadowEventSystem::KeyPressedEvent::Type())
-		{
-			ShadowEventSystem::KeyPressedEvent* _event = dynamic_cast<ShadowEventSystem::KeyPressedEvent*>(&e);
-			{
-				int key = _event->GetKeyCode(); io.KeysDown[key] = true;
-				return;
-			}
-		}
-		if (is<ShadowEventSystem::KeyReleasedEvent>(e, &released))
-		{
-			int key = released->GetKeyCode();
-			io.KeysDown[key] = false;
-		}
-		else if (is<ShadowEventSystem::MouseButtonPressedEvent>(e, &buttonPressed))
-		{
-			int key = buttonPressed->GetMouseButton();
-			if (key == SDL_BUTTON_LEFT) io.MouseDown[0] = true;
-			if (key == SDL_BUTTON_RIGHT) io.MouseDown[1] = true;
-			if (key == SDL_BUTTON_MIDDLE) io.MouseDown[2] = true;
-		}
-		else if (is<ShadowEventSystem::MouseButtonReleasedEvent>(e, &buttonReleased))
-		{
-			int key = buttonReleased->GetMouseButton();
-
-			if (key == SDL_BUTTON_LEFT) io.MouseDown[0] = false;
-			if (key == SDL_BUTTON_RIGHT) io.MouseDown[1] = false;
-			if (key == SDL_BUTTON_MIDDLE) io.MouseDown[2] = false;
-		}
-		else if (is<ShadowEventSystem::MouseMovedEvent>(e, &moved))
-		{
-			io.MousePos = ImVec2(moved->GetX(), moved->GetY());
-		}
-		else if(is(e, &resize))
-		{
-
-		}
-		*/
 	}
 
 

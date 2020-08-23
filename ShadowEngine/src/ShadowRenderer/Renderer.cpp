@@ -36,19 +36,20 @@ namespace ShadowEngine::Rendering {
 	//TODO: Assign camera somewhere else
 	void Renderer::BeginScene(Camera* camera)
 	{
-		assert(camera != nullptr);
+		//assert(camera != nullptr);
 
 		
 		frame_index++;
 		
 		scene->SetCamera(camera);
 
-		scene->PrepareWorldData();
+		//scene->PrepareWorldData();
 
+		s_RendererAPI->SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
+		
 		s_RendererAPI->StartFrame(scene->GetWorldData(), frame_index);
 		
-		s_RendererAPI->SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
-		s_RendererAPI->Clear();
+		//s_RendererAPI->Clear();
 	}
 
 	void Renderer::Render()
@@ -68,7 +69,7 @@ namespace ShadowEngine::Rendering {
 		for (auto& node : *instance->scene)
 		{
 			ConstantBuffer& cb = node->GetCB();
-			s_RendererAPI->Draw(node->GetMesh(), node->GetMaterial(),cb);
+			//s_RendererAPI->Draw(node->GetMesh(), node->GetMaterial(),cb);
 		}
 	}
 

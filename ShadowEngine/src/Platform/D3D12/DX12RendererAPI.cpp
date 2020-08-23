@@ -8,6 +8,7 @@
 #include "ShadowAsset/Assets/Mesh.h"
 #include "D3D12Shader.h"
 #include "D3D12MaterialImpl.h"
+#include "Core/ShadowApplication.h"
 #include "ImGui/ImGuiModule.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
@@ -136,6 +137,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 		scissorRect.bottom = ctx->window->Height;
 		
 		//Create dx12 render resources
+
+		// Create descriptor allocators
+		for (int i = 0; i < D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES; ++i)
+		{
+			m_DescriptorAllocators[i] = std::make_unique<DescriptorAllocator>(static_cast<D3D12_DESCRIPTOR_HEAP_TYPE>(i));
+		}
 		
 		command_queue = std::make_shared<D3D12::D3D12CommandQueue>();
 
@@ -152,12 +159,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 
 		//descriptorHeap_SRV_CBV = std::make_shared<D3D12DescriptorHeap>(D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE, D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV,500);
-		// Create descriptor allocators
-		// TODO: This should happen before the swap chain
-		for (int i = 0; i < D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES; ++i)
-		{
-			m_DescriptorAllocators[i] = std::make_unique<DescriptorAllocator>(static_cast<D3D12_DESCRIPTOR_HEAP_TYPE>(i));
-		}
+
 
 
 
@@ -169,12 +171,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	void DX12RendererAPI::SetClearColor(const glm::vec4& color)
 	{
-		SH_CORE_CRITICAL("This call is not used and should not be called How did we get here?");
+		clearColor = color;
 	}
 
 	void DX12RendererAPI::Clear()
 	{
-		SH_CORE_CRITICAL("This call is not used and should not be called How did we get here?");
+		SH_CORE_CRITICAL("This call is not used and should not be called How did we get here? {0}", __FILE__);
 	}
 
 	void DX12RendererAPI::Draw(const std::shared_ptr<Assets::Mesh>& mesh, const std::shared_ptr<Assets::Material>& material, const ConstantBuffer& meshData)
@@ -193,6 +195,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	void DX12RendererAPI::StartFrame(Ref<ConstantBuffer> worldCB, uint64_t frame)
 	{
 		frame_index = frame;
+		command_allocaotr_pool->CheckFinished(frame_index);
 		
 		//Reset the command list
 		command_list->Reset(frame_index);
@@ -201,7 +204,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		command_list->SetViewports(viewPort);
 		command_list->SetScissorRects(scissorRect);
 
-		//Vait for the rendertarget to transition
+		//Wait for the render target to transition
 		auto entry_barrier = CD3DX12_RESOURCE_BARRIER::Transition(
 			swap_chain->GetCurrentRenderTarget().Get(),
 			D3D12_RESOURCE_STATE_PRESENT,
@@ -219,13 +222,17 @@ namespace ShadowEngine::Rendering::D3D12 {
 		command_list->ClearDepthStencilView(1.0f,0);
 
 		//Assign the descriptor heaps
-		//std::vector<Ref<D3D12DescriptorHeap>> heaps;
-		//heaps.push_back(descriptorHeap_SRV_CBV);
-		//command_list->SetDescriptorHeaps(heaps);
+		//std::vector<com_ptr<ID3D12DescriptorHeap>> heaps;
+
+
+		
+		
+		
 		
 		worldData=worldCB;
 
 		upload_managger->CheckForFnishedUploads();
+
 
 
 		DebugGui::ImGuiModule::StartFrame();
@@ -301,7 +308,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		D3D12_DESCRIPTOR_HEAP_DESC desc = {};
 		desc.Type = type;
 		desc.NumDescriptors = numDescriptors;
-		desc.Flags = D3D12_DESCRIPTOR_HEAP_FLAG_NONE;
+		desc.Flags = D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE;
 		desc.NodeMask = 0;
 
 		Microsoft::WRL::ComPtr<ID3D12DescriptorHeap> descriptorHeap;
@@ -310,22 +317,4 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		return descriptorHeap;
 	}
-
-	/*
-	void DX12RendererAPI::WaitForPreviousFrame() {
-		const UINT64 fv = fenceValue;
-		
-		command_queue->Signal(fence, fv);
-
-		fenceValue++;
-
-		if (fence->GetCompletedValue() < fv) {
-			
-				fence->SetEventOnCompletion(fv, fenceEvent);
-			WaitForSingleObject(fenceEvent, INFINITE);
-		}
-
-		swap_chain->FindNextBackBufferIndex();
-	}
-	*/
 }

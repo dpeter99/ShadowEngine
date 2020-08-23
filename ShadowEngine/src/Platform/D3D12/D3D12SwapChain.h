@@ -24,7 +24,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// <summary>
 		/// The number of render targets
 		/// </summary>
-		unsigned int backBufferDepth = 2;
+		unsigned int backBufferDepth = 3;
 		
 		
 		/**
@@ -56,7 +56,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// This is the index of the active render target in the frames 
 		unsigned int currentBackBufferIndex;
 
-		uint64_t g_FrameFenceValues[2] = {};
+		uint64_t g_FrameFenceValues[3] = {};
 
 	public:
 		D3D12SwapChain(Ref<D3D12CommandQueue> commandQueue, int width, int height);

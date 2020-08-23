@@ -83,7 +83,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// </summary>
 		/// Keeps track of the currently bound descriptor heaps. Only change descriptor
 		/// heaps if they are different than the currently bound descriptor heaps.
-		ID3D12DescriptorHeap* m_DescriptorHeaps[D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES];
+		ID3D12DescriptorHeap* m_DescriptorHeaps[D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES] = {};
 
 		// Resource created in an upload heap. Useful for drawing of dynamic geometry
 		// or for uploading constant buffer data that changes every draw call.

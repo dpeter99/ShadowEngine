@@ -26,6 +26,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 			
 			this->allocators[type].push_back(alloc);
 			this->in_flight[type].push_back(alloc);
+
+			return alloc;
 		}
 	}
 
@@ -71,6 +73,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 		DX_API("Failed to create command allocator")
 			DX12RendererAPI::device->CreateCommandAllocator(type, IID_PPV_ARGS(commandAllocator.GetAddressOf()));
 
-		return std::make_shared<CommandAllocator>(commandAllocator);
+		return std::make_shared<CommandAllocator>(commandAllocator, type);
 	}
 }

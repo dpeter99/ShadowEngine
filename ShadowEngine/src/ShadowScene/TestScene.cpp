@@ -16,12 +16,17 @@ void TestScene::Init()
 	//auto c = AddEntity<Camera>();
 	//c->SetCameraType(CameraType::Perspective);
 	//c->transform.SetPosition({ 0,0.0f,-10.0f });
-
+	//
+	
+	//auto fps = AddEntity<FirstPersonCamera>();
+	//fps->name = "Fps Camera";
+	
+	/*
+	
 	auto sky = AddEntity<SkySphere>();
 	sky->name = "Sky";
 	
-	auto fps = AddEntity<FirstPersonCamera>();
-	fps->name = "Fps Camera";
+
 	
 	auto env_map = std::make_shared<ShadowEngine::Assets::TextureCubeMap>("./Resources/Textures/cube_maps/ame_ash/ashcanyon.tga");
 	env_map->Upload();
@@ -62,6 +67,7 @@ void TestScene::Init()
 	light->range = 2;
 	light->attenuation = { 0.0f, 0.2f, 0.0f };
 
+	*/
 
 	//Scene::Init();
 }

@@ -79,8 +79,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 		// Free the descriptor back to the heap it came from.
 		void Free();
 
-		// The base descriptor.
+		// The position of the first descriptor on the CPU side.
 		D3D12_CPU_DESCRIPTOR_HANDLE m_Descriptor;
+
+
+		
 		// The number of descriptors in this allocation.
 		uint32_t m_NumHandles;
 		// The offset to the next descriptor.

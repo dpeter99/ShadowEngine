@@ -109,6 +109,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 		Ref<ConstantBuffer> worldData;
 
+		glm::vec4 clearColor;
+
 	public:
 
 		static DX12RendererAPI& Get() { return *Instance; }
