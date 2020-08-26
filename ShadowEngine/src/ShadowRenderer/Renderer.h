@@ -4,7 +4,7 @@
 
 #include "RendererAPI.h"
 
-#include "Shader.h"
+//#include "Shader.h"
 #include "ShadowAsset/Assets/Mesh.h"
 
 #include "ShadowRenderer/DataStructs.h"
@@ -116,6 +116,7 @@ namespace ShadowEngine::Rendering {
 		/// <returns></returns>
 		inline static RendererAPI::API GetAPI() { return RendererAPI::GetAPI(); }
 
+		Rendering::RendererAPI* GetRendererAPI() { return s_RendererAPI; }
 	};
 
 

@@ -195,7 +195,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	void DX12RendererAPI::StartFrame(Ref<ConstantBuffer> worldCB, uint64_t frame)
 	{
 		frame_index = frame;
-		command_allocaotr_pool->CheckFinished(frame_index);
+		
 		
 		//Reset the command list
 		command_list->Reset(frame_index);
@@ -266,6 +266,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		swap_chain->FindNextBackBufferIndex();
 
 		fence->WaitForValue(swap_chain->GetCurrentRenderTargetFenceValue());
+
+		command_allocaotr_pool->CheckFinished(swap_chain->GetCurrentRenderTargetFenceValue());
 		
 		//WaitForPreviousFrame();
 	}

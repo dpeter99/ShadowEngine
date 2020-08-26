@@ -11,6 +11,7 @@
 #include "Core/ShadowApplication.h"
 #include "ImGui/IconsFontAwesome5.h"
 #include "Inspector/InspectorSystem.h"
+#include "RendererInfo/RendererInfo.h"
 #include "ShadowEvents/ShadowEventManager.h"
 #include "ShadowInput/ShadowActionSystem.h"
 
@@ -27,6 +28,7 @@ namespace ShadowLight::Editor {
 	void EditorModule::PreInit()
 	{
 		windows.push_back(new AssetsWindow());
+		windows.push_back(new RendererInfo());
 	}
 
 	void EditorModule::Init()

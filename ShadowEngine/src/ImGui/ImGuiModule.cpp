@@ -100,7 +100,7 @@ namespace ShadowEngine::DebugGui {
 			heap = Rendering::D3D12::DX12RendererAPI::Get().CreateDescriptorHeap(1, D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV);
 			
 			ImGui_ImplDX12_Init(Rendering::D3D12::DX12RendererAPI::Instance->device.Get(),
-								1,
+								3,
 								DXGI_FORMAT_R8G8B8A8_UNORM,
 								heap.Get(),
 								heap.Get()->GetCPUDescriptorHandleForHeapStart(),
@@ -173,12 +173,15 @@ namespace ShadowEngine::DebugGui {
 			ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 			break;
 		case Rendering::RendererAPI::API::D3D12:
+		{
 
-			
-			Rendering::D3D12::DX12RendererAPI::Instance->command_list->SetDescriptorHeap(D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV, GetHeap().Get());
-			
-			
-			ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(),Rendering::D3D12::DX12RendererAPI::Instance->command_list->GetCommandList().Get());
+			//Rendering::D3D12::DX12RendererAPI::Instance->command_list->SetDescriptorHeap(D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV, GetHeap().Get());
+			auto command_list = Rendering::D3D12::DX12RendererAPI::Instance->command_list->GetCommandList();
+			auto descriptor_heap = GetHeap().Get();
+			command_list->SetDescriptorHeaps(1, &descriptor_heap);
+
+			ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(), Rendering::D3D12::DX12RendererAPI::Instance->command_list->GetCommandList().Get());
+		}
 			break;
 		default:
 			break;

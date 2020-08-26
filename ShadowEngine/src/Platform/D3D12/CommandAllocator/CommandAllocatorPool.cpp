@@ -41,6 +41,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 			
 				for (auto& allocator : allocator_list)
 				{
+					if (allocator.get() != nullptr)
+						continue;
 					if(allocator->CheckFinished(frame))
 					{
 						//allocator_list->remove(allocator);

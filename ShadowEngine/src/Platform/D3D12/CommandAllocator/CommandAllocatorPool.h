@@ -37,6 +37,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// <param name="frame">The frame that finished</param>
 		void CheckFinished(int frame);
 
+		std::map<int, AllocatorList>& GetAllAllocaotrs() { return allocators; }
+		
 	private:
 
 		/// <summary>
