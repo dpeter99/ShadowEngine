@@ -10,7 +10,7 @@ namespace ShadowEngine::Assets {
 	{
 	}
 
-	void Texture::Load(SFF::SFFElement& root)
+	Texture::Texture()
 	{
 	}
 

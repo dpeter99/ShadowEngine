@@ -1,10 +1,10 @@
-#pragma once
+/*#pragma once
 
 #include <list>
 #include <map>
 
 #include "ShadowMapChunk.h"
-#include "ShadowAsset/ShadowAsset.h"
+#include "Assets/ShadowAsset.h"
 
 namespace ShadowEngine::World {
 
@@ -86,3 +86,4 @@ namespace ShadowEngine::World {
 	};
 
 }
+*/

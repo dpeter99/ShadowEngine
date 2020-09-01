@@ -2,7 +2,7 @@
 
 #include "Core/Core.h"
 #include "ShadowRenderer/ConstantBuffer.h"
-#include "ShadowAsset/Assets/Textures/TextureCubeMap.h"
+#include "Assets/Assets/Textures/TextureCubeMap.h"
 #include "DataStructs.h"
 #include "EntitySystem\Entities\Camera.h"
 

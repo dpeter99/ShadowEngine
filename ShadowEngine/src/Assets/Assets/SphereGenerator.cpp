@@ -170,7 +170,7 @@ namespace ShadowEngine::Assets {
 			indices.data(), indices.size());
 	}
 
-	void Mesh::Load(SFF::SFFElement& root)
+	void Mesh::Load(SFF::SFFElement& root, FileSystem::Path path)
 	{
 	}
 }

@@ -4,8 +4,8 @@
 
 #include "GraphicsContext.h"
 #include "Shader.h"
-#include "ShadowAsset/Assets/Mesh.h"
-#include "ShadowAsset/Assets/Material.h"
+#include "Assets/Assets/Mesh.h"
+#include "Assets/Assets/Material.h"
 
 namespace ShadowEngine::Rendering {
 

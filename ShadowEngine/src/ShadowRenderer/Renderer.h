@@ -5,7 +5,7 @@
 #include "RendererAPI.h"
 
 //#include "Shader.h"
-#include "ShadowAsset/Assets/Mesh.h"
+#include "Assets/Assets/Mesh.h"
 
 #include "ShadowRenderer/DataStructs.h"
 #include "RenderScene.h"

@@ -32,7 +32,7 @@ namespace ShadowEngine::Rendering {
 		}
 	}
 
-	void Shader::Load(SFF::SFFElement& root)
+	void Shader::Load(SFF::SFFElement& root, Assets::FileSystem::Path path)
 	{
 		
 		auto* shader_root = root.GetChildByName("Shader");

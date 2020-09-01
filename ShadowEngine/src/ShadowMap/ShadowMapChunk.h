@@ -1,3 +1,5 @@
+
+/*
 #pragma once
 #include "Core/Core.h"
 
@@ -6,7 +8,7 @@
 #include "ShadowMath/Vector2int.h"
 
 #include "ShadowMath/Vector2int.h"
-#include "ShadowAsset/ShadowAsset.h"
+#include "Assets/ShadowAsset.h"
 #include "EntitySystem/Entity.h"
 
 namespace ShadowEngine::World {
@@ -60,3 +62,4 @@ namespace ShadowEngine::World {
 	};
 
 }
+*/

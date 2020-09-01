@@ -1,5 +1,6 @@
-#include "shpch.h"
 
+#include "shpch.h"
+/*
 #include "ShadowWorld.h"
 
 
@@ -130,3 +131,4 @@ namespace ShadowEngine::World {
 	}
 
 }
+*/

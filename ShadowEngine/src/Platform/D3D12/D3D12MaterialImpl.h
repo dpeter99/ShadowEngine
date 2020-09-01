@@ -5,7 +5,7 @@
 #include "ShadowRenderer/ConstantBuffer.h"
 #include "DX12RendererAPI.h"
 #include "D3D12ConstantBuffer.h"
-#include "ShadowAsset/Assets/Textures/Texture.h"
+#include "Assets/Assets/Textures/Texture.h"
 
 //#include "ShadowRenderer/MaterialImpl.h"
 

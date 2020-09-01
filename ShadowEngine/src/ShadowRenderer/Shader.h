@@ -2,7 +2,7 @@
 
 #include <string>
 #include "ShaderProperties/ShaderPropertySheet.h"
-#include "ShadowAsset/ShadowAsset.h"
+#include "Assets/ShadowAsset.h"
 
 namespace ShadowEngine::Rendering {
 
@@ -31,7 +31,7 @@ namespace ShadowEngine::Rendering {
 		virtual void LoadShader(const std::string& VSFilePath, const std::string& PSFilePath, bool compiled = true) = 0;
 		
 		// Inherited via ShadowAsset
-		void Load(SFF::SFFElement& root) override;
+		void Load(SFF::SFFElement& root, Assets::FileSystem::Path path) override;
 	};
 
 }

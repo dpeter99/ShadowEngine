@@ -1,7 +1,7 @@
 #pragma once
 #include "Core/Core.h"
 #include "Core/SHObject.h"
-#include "ShadowAsset/ShadowAsset.h"
+#include "Assets/ShadowAsset.h"
 
 #include "ShadowRenderer/Buffer.h"
 
@@ -28,6 +28,7 @@ namespace ShadowEngine::Assets {
 
 		static Ref<Mesh> CreateSphere(int LatLines, int LongLines);
 		static Ref<Mesh> CreateInverseSphere(int LatLines, int LongLines);
-		void Load(SFF::SFFElement& root) override;
+
+		void Load(SFF::SFFElement& root, Assets::FileSystem::Path path) override;
 	};
 }

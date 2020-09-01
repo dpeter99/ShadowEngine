@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ShadowModules/ShadowModule.h"
-#include "Core/Core.h"
+//#include "Core/Core.h"
 
 
 #include "spdlog/spdlog.h"

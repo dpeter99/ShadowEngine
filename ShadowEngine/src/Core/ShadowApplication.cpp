@@ -5,7 +5,7 @@
 #include "IGame.h"
 #include "ShadowModules/ShadowModuleManager.h"
 #include "ShadowMap/ShadowWorld.h"
-#include "ShadowAsset/AssetManager.h"
+#include "Assets/AssetManager.h"
 #include "ShadowMap/ShadowMapRenderer.h"
 #include "ShadowEvents/ShadowEventManager.h"
 #include "Platform/SDL/SDLModule.h"

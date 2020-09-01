@@ -1,7 +1,7 @@
 #include "shpch.h"
 #include "SkySphere.h"
 #include "EntitySystem/Scene.h"
-#include "ShadowAsset/Assets/Textures/TextureCubeMap.h"
+#include "Assets/Assets/Textures/TextureCubeMap.h"
 #include "Camera.h"
 
 void SkySphere::Build()

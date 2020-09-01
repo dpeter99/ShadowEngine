@@ -3,30 +3,37 @@
 #include <EntitySystem\Entities\Camera.h>
 #include "EntitySystem/Entities/MeshRenderer.h"
 #include "EntitySystem/Entities/FirstPersonCamera.h"
-#include "ShadowAsset/Assets/Textures/Texture.h"
-#include "ShadowAsset/Assets/Textures/TextureCubeMap.h"
+#include "Assets/Assets/Textures/Texture.h"
+#include "Assets/Assets/Textures/TextureCubeMap.h"
 #include "EntitySystem/Entities/SkySphere.h"
 #include <EntitySystem\Entities\DirectionalLight.h>
 #include <EntitySystem\Entities\PointLight.h>
 
-#include "ShadowAsset/Assets/Textures/Texture2D.h"
+#include "Assets/Assets/Textures/Texture2D.h"
+
+#include "Assets/AssetManager.h"
+
 
 void TestScene::Init()
 {
 	//auto c = AddEntity<Camera>();
 	//c->SetCameraType(CameraType::Perspective);
 	//c->transform.SetPosition({ 0,0.0f,-10.0f });
-	//
 	
-	//auto fps = AddEntity<FirstPersonCamera>();
-	//fps->name = "Fps Camera";
 	
+	auto fps = AddEntity<FirstPersonCamera>();
+	fps->name = "Fps Camera";
+	
+
+	auto assetManager = ShadowEngine::Assets::AssetManager::getInstance();
+	auto env_map = assetManager->GetAsset<ShadowEngine::Assets::TextureCubeMap>({ "demo:/Textures/cube_maps/ame_ash/ame_ash" });
+
 	/*
 	
 	auto sky = AddEntity<SkySphere>();
 	sky->name = "Sky";
 	
-
+	/*
 	
 	auto env_map = std::make_shared<ShadowEngine::Assets::TextureCubeMap>("./Resources/Textures/cube_maps/ame_ash/ashcanyon.tga");
 	env_map->Upload();

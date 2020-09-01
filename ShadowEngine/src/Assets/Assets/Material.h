@@ -1,7 +1,7 @@
 #pragma once
 #include "Core/Core.h"
 #include "Core/SHObject.h"
-#include "ShadowAsset/ShadowAsset.h"
+#include "Assets/ShadowAsset.h"
 
 #include "ShadowRenderer/Buffer.h"
 #include "ShadowRenderer/Shader.h"
@@ -98,6 +98,6 @@ namespace ShadowEngine::Assets {
 		
 		Material(const Ref<Rendering::Shader>& shader);
 
-		void Load(SFF::SFFElement& root) override;
+		void Load(SFF::SFFElement& root, FileSystem::Path path) override;
 	};
 }

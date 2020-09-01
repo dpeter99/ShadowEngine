@@ -5,10 +5,10 @@
 
 #include "SDL.h"
 #include "SDL_image.h"
-#include "ShadowAsset/Assets/Textures/Texture.h"
+#include "Assets/Assets/Textures/Texture.h"
 #include "../CommandList.h"
 #include "Platform/D3D12/D3D12IUploadable.h"
-#include "ShadowAsset/Assets/Textures/TextureCubeMap.h"
+#include "Assets/Assets/Textures/TextureCubeMap.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 

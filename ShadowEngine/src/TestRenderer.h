@@ -8,8 +8,8 @@
 #include <glm/gtc/type_ptr.hpp>
 #include "EntitySystem/Entities/Camera.h"
 #include <ShadowRenderer\Shader.h>
-#include "ShadowAsset/Assets/Mesh.h"
-#include "ShadowAsset/Assets/Material.h"
+#include "Assets/Assets/Mesh.h"
+#include "Assets/Assets/Material.h"
 #include "ShadowRenderer/RenderScene.h"
 
 class TestRenderer

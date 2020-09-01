@@ -1,7 +1,7 @@
 #include "shpch.h"
 #include "D3D12MaterialImpl.h"
 #include "Textures/D3D12Texture2D.h"
-#include "ShadowAsset/Assets/Textures/TextureCubeMap.h"
+#include "Assets/Assets/Textures/TextureCubeMap.h"
 #include "Textures/D3D12TextureCubeMap.h"
 #include "Textures/Texture.h"
 

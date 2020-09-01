@@ -17,14 +17,33 @@ namespace ShadowEngine::Assets {
 		public Texture
 	{
 		SHObject_Base(TextureCubeMap)
-		
+	private:
+		std::string up_texture;
+		std::string down_texture;
+		std::string front_texture;
+		std::string back_texture;
+		std::string left_texture;
+		std::string right_texture;
+
+
 	public:
 		explicit TextureCubeMap(const std::string& path);
+		TextureCubeMap();
 
 		Ref<TextureImpl> getImpl() override { return impl; }
 		~TextureCubeMap() override {};
 
 		
+
+		// Inherited via Texture
+		virtual void Load(SFF::SFFElement& root, Assets::FileSystem::Path path) override;
+
+		virtual uint32_t GetWidth() const override;
+
+		virtual uint32_t GetHeight() const override;
+
+		virtual uint32_t GetZ() const override;
+
 	};
 
 

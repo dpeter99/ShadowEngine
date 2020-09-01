@@ -23,5 +23,31 @@ namespace ShadowEngine::Assets {
 		impl = TextureCubeMapImpl::Create(path);
 	}
 
+	TextureCubeMap::TextureCubeMap()
+	{
+
+	}
+
+	void TextureCubeMap::Load(SFF::SFFElement& root, FileSystem::Path path)
+	{
+		auto* cubemap_root = root.GetChildByName("Shader");
+		up_texture = path.GetFullPath() + cubemap_root->GetStringProperty("up");
+	}
+
+	uint32_t TextureCubeMap::GetWidth() const
+	{
+		return uint32_t();
+	}
+
+	uint32_t TextureCubeMap::GetHeight() const
+	{
+		return uint32_t();
+	}
+
+	uint32_t TextureCubeMap::GetZ() const
+	{
+		return uint32_t();
+	}
+
 	
 }

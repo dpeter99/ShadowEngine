@@ -105,7 +105,8 @@ project "ShadowEngine"
 		"opengl32.lib",
 		"D3D12.lib",
 		"DXGI.lib",
-		"D3DCompiler.lib"
+		"D3DCompiler.lib",
+		"dxguid.lib"
 	}
 	
 	dependson 

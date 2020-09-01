@@ -1,7 +1,7 @@
 #pragma once
 #include "EntitySystem/SceneEntity.h"
-#include "ShadowAsset/Assets/Mesh.h"
-#include "ShadowAsset/Assets/Material.h"
+#include "Assets/Assets/Mesh.h"
+#include "Assets/Assets/Material.h"
 #include "ShadowRenderer/RenderScene.h"
 #include <Inspector\EntityInspector.h>
 #include <EntitySystem\Entities\Internal\Inspectors\DefaultInspectors.h>

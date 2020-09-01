@@ -12,6 +12,7 @@
 #include <vector>
 
 #include <string>
+#include <sstream>
 
 
 #include <dxgi1_5.h>

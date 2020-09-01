@@ -7,13 +7,20 @@ namespace ShadowEngine::Rendering::D3D12 {
 	m_commandAllocator(commandAllocator), type(type)
 	
 	{
-
+		static int nextID = 0;
+		id = nextID++;
 	}
 
 	void CommandAllocator::MarkUsed(int frame)
 	{
 		this->free = false;
 		this->freeFrame = frame;
+	}
+
+	void CommandAllocator::SetFree()
+	{
+		this->freeFrame = -1;
+		this->free = true;
 	}
 
 	D3D12_COMMAND_LIST_TYPE CommandAllocator::GetType()

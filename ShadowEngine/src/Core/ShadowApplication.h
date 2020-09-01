@@ -1,6 +1,6 @@
 #pragma once
 #include "ShadowModules/ShadowModuleManager.h"
-#include "ShadowAsset/AssetManager.h"
+#include "Assets/AssetManager.h"
 #include "ShadowWindow.h"
 
 namespace ShadowEngine {

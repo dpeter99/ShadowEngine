@@ -1,7 +1,7 @@
 #pragma once
 #include "../EditorWindow.h"
 
-#include "ShadowAsset/AssetManager.h"
+#include "Assets/AssetManager.h"
 
 namespace ShadowLight::Editor {
 

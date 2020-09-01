@@ -2,10 +2,13 @@
 
 #include <memory>
 
+#include "Log.h"
 
 #define BIT(x) (1 << x)
 
 #ifdef SH_ENABLE_ASSERTS
+
+	//Breaks if the test fails
 	#define SH_ASSERT(x, ...) { if(!(x)) { SH_ERROR(__VA_ARGS__); __debugbreak(); } }
 	
 	#define SH_CORE_ASSERT(x, ...) { if(!(x)) { SH_CORE_ERROR(__VA_ARGS__); __debugbreak(); } }

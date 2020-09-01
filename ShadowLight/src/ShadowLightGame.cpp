@@ -5,6 +5,7 @@
 
 #include "Editor/EditorModule.h"
 
+#include "Assets/AssetManager.h"
 
 
 ShadowEngine::IGame* entryPoint()
@@ -15,6 +16,7 @@ ShadowEngine::IGame* entryPoint()
 ShadowEngine::SetupFunction _setupFunc = entryPoint;
 
 namespace ShadowLight {
+
 	ShadowLightGame::ShadowLightGame()
 	{
 		app = &ShadowEngine::ShadowApplication::Get();
@@ -27,6 +29,9 @@ namespace ShadowLight {
 		
 		auto& mm = app->GetModuleManager();
 		mm.PushModule(new Editor::EditorModule());
+
+		auto assets = mm.GetModuleByType<ShadowEngine::Assets::AssetManager>();
+		assets->AddAssetPack("Demo Game Assets", "demo", "/demo/");
 	}
 
 	void ShadowLightGame::Start()

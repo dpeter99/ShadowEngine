@@ -1,4 +1,7 @@
 ShadowFileFormat_1_0_0
+Asset:{
+	Name:ashcanyon
+}
 CubeMap:{
 	up:ashcanyon_up.tga,
 	down:ashcanyon_dn.tga,

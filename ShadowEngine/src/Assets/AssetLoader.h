@@ -30,12 +30,12 @@ namespace ShadowEngine::Assets {
 	*/
 	class AssetLoader
 	{
-		static Element* LoadFile(std::string name);
+		//static Element* LoadFile(std::string name);
 
 	public:
-		static World::MapChunk* LoadMap(std::string name);
+		//static World::MapChunk* LoadMap(std::string name);
 
-		static World::ShadowWorld* LoadWorld(std::string name);
+		//static World::ShadowWorld* LoadWorld(std::string name);
 
 		template <class T>
 		static T* LoadAsset(std::string name);

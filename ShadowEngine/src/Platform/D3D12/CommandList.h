@@ -4,7 +4,7 @@
 #include "D3D12DepthBuffer.h"
 #include "ShadowRenderer/Shader.h"
 #include "Shader/DX12Shader.h"
-#include "ShadowAsset/Assets/Mesh.h"
+#include "Assets/Assets/Mesh.h"
 #include "ShadowRenderer/ConstantBuffer.h"
 #include "D3D12DescriptorHeap.h"
 #include <Platform\D3D12\Descriptors\DynamicDescriptorHeap.h>

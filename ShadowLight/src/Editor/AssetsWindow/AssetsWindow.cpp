@@ -3,7 +3,7 @@
 #include "AssetsWindow.h"
 
 
-#include "ShadowAsset/AssetManager.h"
+#include "Assets/AssetManager.h"
 #include "ShadowModules/ShadowModuleManager.h"
 
 #include "ImGui/IconsFontAwesome5.h"
@@ -21,7 +21,9 @@ namespace ShadowLight::Editor {
 
 		for each (auto& var in assetManager->knownAssets)
 		{
-			std::string text = std::string(var.getLoaded() ? ICON_FA_CHECK : ICON_FA_TIMES) + " " + var.getName();
+			std::string text = std::string(var.getLoaded() ? ICON_FA_CHECK : ICON_FA_TIMES);
+			text += " ";
+			text += var.getPath();
 			ImGui::Text(text.c_str());
 		}
 

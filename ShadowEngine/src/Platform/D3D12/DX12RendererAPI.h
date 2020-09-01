@@ -7,9 +7,9 @@
 #include "D3D12SwapChain.h"
 #include "D3D12Fence.h"
 #include "CommandList.h"
-#include "ShadowAsset/Assets/Mesh.h"
+#include "Assets/Assets/Mesh.h"
 #include "ShadowRenderer/Shader.h"
-#include "ShadowAsset/Assets/Material.h"
+#include "Assets/Assets/Material.h"
 #include "UploadManagger.h"
 #include <Platform\D3D12\Descriptors\DescriptorAllocation.h>
 #include <Platform\D3D12\Descriptors\DescriptorAllocator.h>

@@ -3,7 +3,7 @@
 //
 
 #include "shpch.h"
-
+/*
 #include "ShadowMapChunk.h"
 
 namespace ShadowEngine::World {
@@ -24,3 +24,4 @@ namespace ShadowEngine::World {
 	}
 
 }
+*/

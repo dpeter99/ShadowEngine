@@ -1,3 +1,4 @@
+/*
 #pragma once
 
 #include "ShadowMapChunk.h"
@@ -12,3 +13,4 @@ namespace ShadowEngine::World {
 	};
 
 }
+*/

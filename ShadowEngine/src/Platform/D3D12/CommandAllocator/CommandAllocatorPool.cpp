@@ -31,23 +31,22 @@ namespace ShadowEngine::Rendering::D3D12 {
 		}
 	}
 
-
-
 	void CommandAllocatorPool::CheckFinished(int frame)
 	{
 		for (auto& item : in_flight)
 		{
-			AllocatorList& allocator_list = item.second;
+			AllocatorList& flight_allocators = item.second;
 			
-				for (auto& allocator : allocator_list)
+				for (auto allocator : flight_allocators)
 				{
-					if (allocator.get() != nullptr)
+					if (allocator.get() == nullptr)
 						continue;
 					if(allocator->CheckFinished(frame))
 					{
 						//allocator_list->remove(allocator);
-						allocator_list.erase(std::find(allocator_list.begin(), allocator_list.end(), allocator));
+						flight_allocators.erase(std::find(flight_allocators.begin(), flight_allocators.end(), allocator));
 						free_list[item.first].push_back(allocator);
+						allocator->SetFree();
 					}
 				}
 			/*

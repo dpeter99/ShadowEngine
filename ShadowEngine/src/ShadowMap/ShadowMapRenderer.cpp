@@ -1,8 +1,9 @@
 //
 // Created by dpete on 3/1/2019.
 //
-#include "shpch.h"
 
+#include "shpch.h"
+/*
 #include <iostream>
 #include "ShadowMapRenderer.h"
 #include "ShadowMapChunk.h"
@@ -29,3 +30,4 @@ namespace ShadowEngine::World {
 	}
 
 }
+*/

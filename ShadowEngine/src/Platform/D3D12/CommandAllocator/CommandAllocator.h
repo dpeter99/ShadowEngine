@@ -17,7 +17,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		int freeFrame = -1;
 		D3D12_COMMAND_LIST_TYPE type;
 
-
+		int id;
 	public:
 
 		/// <summary>
@@ -39,6 +39,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// <param name="frame">The frame that this allocator can be reused after</param>
 		void MarkUsed(int frame);
 
+		void SetFree();
+
 		/// <summary>
 		/// Returns the type of the allocator.
 		/// </summary>
@@ -54,7 +56,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// If the frame parameter is bigger than the frame this allocator was used in it returns true.
 		bool CheckFinished(int frame);
 
-		
+		int GetID() { return id; }
 
 	};
 

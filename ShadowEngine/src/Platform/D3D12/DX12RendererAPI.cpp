@@ -5,7 +5,7 @@
 #include "DX12RendererAPI.h"
 #include "D3D12Context.h"
 #include "D3D12CommandQueue.h"
-#include "ShadowAsset/Assets/Mesh.h"
+#include "Assets/Assets/Mesh.h"
 #include "D3D12Shader.h"
 #include "D3D12MaterialImpl.h"
 #include "Core/ShadowApplication.h"
@@ -224,10 +224,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//Assign the descriptor heaps
 		//std::vector<com_ptr<ID3D12DescriptorHeap>> heaps;
 
-
-		
-		
-		
 		
 		worldData=worldCB;
 

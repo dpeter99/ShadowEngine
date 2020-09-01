@@ -18,6 +18,8 @@ namespace ShadowEngine::Rendering {
 			instance = this;
 		}
 
+		frame_index = 0;
+
 		s_RendererAPI = RendererAPI::MakeRendererAPI();
 
 		s_RendererAPI->Init(ShadowApplication::Get().GetWindow().context);
