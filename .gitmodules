@@ -4,7 +4,7 @@
 
 [submodule "ShadowEngine/dependencies/imgui"]
 	path = ShadowEngine/dependencies/imgui
-	url = https://github.com/ocornut/imgui
+	url = https://github.com/dpeter99/imgui
 [submodule "ShadowEngine/dependencies/glm"]
 	path = ShadowEngine/dependencies/glm
 	url = https://github.com/g-truc/glm

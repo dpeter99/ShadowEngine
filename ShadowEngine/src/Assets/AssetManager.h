@@ -224,13 +224,7 @@ namespace ShadowEngine::Assets {
 			assetPacks.push_back(pack_poiner);
 		}
 
-		Ref<FileSystem::AssetPack> GetAssetPack(std::string id) {
-			auto pack = std::find_if(assetPacks.begin(), assetPacks.end(), [id](Ref<FileSystem::AssetPack>& item) {return id == item->GetID(); });
-			if (pack == assetPacks.end()) {
-				SH_CORE_ERROR("Can't find pack '{0}'", id);
-			}
-			return *pack;
-		}
+		Ref<FileSystem::AssetPack> GetAssetPack(std::string id);
 
 		//###################################
 		//Assets
