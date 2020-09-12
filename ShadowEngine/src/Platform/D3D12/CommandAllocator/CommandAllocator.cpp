@@ -11,10 +11,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 		id = nextID++;
 	}
 
-	void CommandAllocator::MarkUsed(int frame)
+	void CommandAllocator::MarkUsed(int frame, Ref<D3D12CommandQueue> queue)
 	{
 		this->free = false;
 		this->freeFrame = frame;
+		this->freeCommandQueue = queue
 	}
 
 	void CommandAllocator::SetFree()
@@ -28,9 +29,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 		return this->type;
 	}
 
-	bool CommandAllocator::CheckFinished(int frame)
+	bool CommandAllocator::CheckFinished(int frame, Ref<D3D12CommandQueue> queue)
 	{
-		return frame >= freeFrame;
+
+		return frame >= freeFrame && queue == freeCommandQueue;
 	}
 
 }

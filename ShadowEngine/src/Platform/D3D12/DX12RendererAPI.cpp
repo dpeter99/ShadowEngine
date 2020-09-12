@@ -100,13 +100,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 		Instance = this;
 		
 		this->ctx = std::dynamic_pointer_cast<D3D12Context>(_ctx);
-		
-		//Load in the GPU adapters
-		//std::vector<com_ptr<IDXGIAdapter1>> adapters;
-		//GetAdapters(ctx->dxgiFactory.Get(), adapters);	
-		// select your adapter here, NULL = system default
-		// Using the first adapter for now
-		//IUnknown* selectedAdapter = (adapters.size() > 0) ? adapters[0].Get() : NULL;
 
 		com_ptr<ID3D12Debug> debug_controller;
 		D3D12GetDebugInterface(IID_PPV_ARGS(&debug_controller));
@@ -154,19 +147,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 		depth_buffer = std::make_shared<D3D12::D3D12DepthBuffer>(scissorRect);
 		
 		fence = std::make_unique<D3D12::D3D12Fence>();
-		//fenceValue = 0;
-
 		
-
-		//descriptorHeap_SRV_CBV = std::make_shared<D3D12DescriptorHeap>(D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE, D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV,500);
-
-
-
 
 		upload_managger = std::make_shared<UploadManagger>();
 
-		
-		
 	}
 
 	void DX12RendererAPI::SetClearColor(const glm::vec4& color)
@@ -194,7 +178,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	void DX12RendererAPI::StartFrame(Ref<ConstantBuffer> worldCB, uint64_t frame)
 	{
-		frame_index = frame;
+		frame_index = command_queue->GetNextSignalValue();
 		
 		
 		//Reset the command list
@@ -217,8 +201,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		//Clear the render target
 		//TODO: this is done on the renderer already
-		const float clearColor[] = { 0.0f, 0.2f, 0.4f, 1.0f };
-		command_list->ClearRenderTargetView(clearColor);
+		//const float clearColor[] = { 0.0f, 0.2f, 0.4f, 1.0f };
+		command_list->ClearRenderTargetView((float*)&clearColor);
 		command_list->ClearDepthStencilView(1.0f,0);
 
 		//Assign the descriptor heaps
@@ -253,7 +237,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		swap_chain->Present(1, 0);
 
 		//Signal the end of the frame
-		command_queue->Signal(fence, frame_index);
+		frame_index = command_queue->Signal();
 		//Save out the frame id to the swap chain
 		swap_chain->SetCurrentRenderTargetFenceValue(frame_index);
 		
@@ -261,11 +245,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		swap_chain->FindNextBackBufferIndex();
 
-		fence->WaitForValue(swap_chain->GetCurrentRenderTargetFenceValue());
+		//fence->WaitForValue(swap_chain->GetCurrentRenderTargetFenceValue());
+		command_queue->WaitForFenceValue(swap_chain->GetCurrentRenderTargetFenceValue());
 
-		command_allocaotr_pool->CheckFinished(swap_chain->GetCurrentRenderTargetFenceValue());
-		
-		//WaitForPreviousFrame();
+		command_allocaotr_pool->CheckFinished(swap_chain->GetCurrentRenderTargetFenceValue(), command_queue);
+
 	}
 
 	void DX12RendererAPI::UploadResource(Ref<D3D12IUploadable> resource)

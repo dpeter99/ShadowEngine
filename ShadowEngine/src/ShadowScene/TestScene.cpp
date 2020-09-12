@@ -26,7 +26,7 @@ void TestScene::Init()
 	
 
 	auto assetManager = ShadowEngine::Assets::AssetManager::getInstance();
-	auto env_map = assetManager->GetAsset<ShadowEngine::Assets::TextureCubeMap>({ "demo:/Textures/cube_maps/ame_ash/ame_ash" });
+	auto env_map = assetManager->GetAsset<ShadowEngine::Assets::TextureCubeMap>({ "demo:/Textures/cube_maps/ame_ash/ashcanyon.sff" });
 
 	/*
 	

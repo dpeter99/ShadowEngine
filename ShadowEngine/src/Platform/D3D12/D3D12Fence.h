@@ -25,7 +25,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// <summary>
 		/// The current value of the fence
 		/// </summary>
-		uint64_t fenceValue;
+		//uint64_t fenceValue;
+
 	public:
 		D3D12Fence();
 		

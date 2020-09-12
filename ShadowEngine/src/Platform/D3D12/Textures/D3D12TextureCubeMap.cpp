@@ -36,9 +36,16 @@ namespace ShadowEngine::Rendering::D3D12 {
 		return path;
 	}
 
-	D3D12TextureCubeMap::D3D12TextureCubeMap(std::string path)
+	D3D12TextureCubeMap::D3D12TextureCubeMap(Assets::TextureCubeMap* asset) : TextureCubeMapImpl(asset)
 	{
-		std::string temp = GetCubemapFileName(path,0);
+		
+	}
+
+	void D3D12TextureCubeMap::Load()
+	{
+
+		//std::string temp = GetCubemapFileName(path, 0);
+		std::string temp = asset->GetTexturePath(0);
 		auto img_temp = IMG_Load(temp.c_str());
 		auto img_temp_converted = SDL_ConvertSurfaceFormat(img_temp, SDL_PIXELFORMAT_RGBA32, 0);
 
@@ -65,9 +72,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//Load in the images
 		for (size_t i = 0; i < 6; i++)
 		{
-			
 
-			auto img_temp = IMG_Load(GetCubemapFileName(path,i).c_str());
+			auto img_temp = IMG_Load(asset->GetTexturePath(i).c_str());
 			auto img = SDL_ConvertSurfaceFormat(img_temp, SDL_PIXELFORMAT_RGBA32, 0);
 
 			format = SDLFormatToGXGI(*img->format);
@@ -95,6 +101,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 			memcpy(mappedPtr, img->pixels, img->pitch * img->h);
 
+
 			cpuRes->Unmap(0, nullptr);
 
 			uploadResource.push_back(cpuRes);
@@ -114,6 +121,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 
 		ready = false;
+
 	}
 
 	void D3D12TextureCubeMap::RecordTransfer(Ref<CommandList> commandList)

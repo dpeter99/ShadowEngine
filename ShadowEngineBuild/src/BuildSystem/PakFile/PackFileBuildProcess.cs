@@ -35,7 +35,7 @@ namespace ShadowEngineBuild.src
 
                 var file_tag = new ShadowFileElement();
                 file_tag.name = i.ToString();
-                file_tag.value = relative_file;
+                file_tag.value = relative_file.Replace('\\','/');
                 root.AddProperty(file_tag);
                 i++;
             }

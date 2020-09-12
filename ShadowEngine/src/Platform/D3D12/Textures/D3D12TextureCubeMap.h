@@ -25,8 +25,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		bool ready;
 	public:
 
-		D3D12TextureCubeMap(std::string path);
+		D3D12TextureCubeMap(Assets::TextureCubeMap* asset);
 
+		void Load() override;
 
 		com_ptr<ID3D12Resource> GetResource();
 		DXGI_FORMAT GetDXGIFormat();

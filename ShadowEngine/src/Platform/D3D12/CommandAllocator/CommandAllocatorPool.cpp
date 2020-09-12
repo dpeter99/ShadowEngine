@@ -31,7 +31,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		}
 	}
 
-	void CommandAllocatorPool::CheckFinished(int frame)
+	void CommandAllocatorPool::CheckFinished(int frame, Ref<D3D12CommandQueue> queue)
 	{
 		for (auto& item : in_flight)
 		{
@@ -41,7 +41,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 				{
 					if (allocator.get() == nullptr)
 						continue;
-					if(allocator->CheckFinished(frame))
+					if(allocator->CheckFinished(frame, queue))
 					{
 						//allocator_list->remove(allocator);
 						flight_allocators.erase(std::find(flight_allocators.begin(), flight_allocators.end(), allocator));

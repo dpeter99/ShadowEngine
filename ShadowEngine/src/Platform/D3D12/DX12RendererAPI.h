@@ -96,16 +96,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		float aspectRatio;
 		
-		//Fence stuff
-		//TODO: abstract these
-		Ref<D3D12::D3D12Fence> fence;
-		//HANDLE fenceEvent;
-		//unsigned long long fenceValue;
-		//unsigned int currentBackBufferIndex;
-
-		//Ref<D3D12DescriptorHeap> descriptorHeap_SRV_CBV;
-
 		
+		Ref<D3D12::D3D12Fence> fence;		
 		
 		Ref<ConstantBuffer> worldData;
 
@@ -169,8 +161,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 		void ReleaseStaleDescriptors(uint64_t finishedFrame);
 
 		com_ptr<ID3D12DescriptorHeap> CreateDescriptorHeap(UINT numDescriptors, D3D12_DESCRIPTOR_HEAP_TYPE type);
-
-		//void WaitForPreviousFrame();
 		
 	};
 }

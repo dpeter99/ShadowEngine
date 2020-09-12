@@ -21,9 +21,11 @@ namespace ShadowLight::Editor {
 
 		for each (auto& var in assetManager->knownAssets)
 		{
-			std::string text = std::string(var.getLoaded() ? ICON_FA_CHECK : ICON_FA_TIMES);
+			auto info = var.second;
+
+			std::string text = std::string(info->getLoaded() ? ICON_FA_CHECK : ICON_FA_TIMES);
 			text += " ";
-			text += var.getPath();
+			text += info->getPath();
 			ImGui::Text(text.c_str());
 		}
 

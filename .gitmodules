@@ -19,4 +19,4 @@
 	url = git@github.com:dpeter99/docfx-tmpl.git
 [submodule "docs/templates/darkfx"]
 	path = docs/templates/darkfx
-	url = git@github.com:steffen-wilke/darkfx.git
+	url = https://github.com/steffen-wilke/darkfx.git

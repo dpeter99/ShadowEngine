@@ -5,12 +5,20 @@
 
 namespace ShadowEngine::Assets {
 
+	class TextureCubeMap;
 
 	class TextureCubeMapImpl : public TextureImpl {
 	public:
-		static Ref<TextureCubeMapImpl> Create(std::string path);
+		static Ref<TextureCubeMapImpl> Create(TextureCubeMap* asset);
 
+		TextureCubeMap* asset;
 
+		TextureCubeMapImpl(TextureCubeMap* asset)
+		{
+			this->asset = asset;
+		}
+
+		virtual void Load() = 0;
 	};
 	
 	class TextureCubeMap :
@@ -33,7 +41,7 @@ namespace ShadowEngine::Assets {
 		Ref<TextureImpl> getImpl() override { return impl; }
 		~TextureCubeMap() override {};
 
-		
+		std::string GetTexturePath(int i);
 
 		// Inherited via Texture
 		virtual void Load(SFF::SFFElement& root, Assets::FileSystem::Path path) override;

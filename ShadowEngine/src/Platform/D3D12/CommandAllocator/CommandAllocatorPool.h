@@ -35,7 +35,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// Checks if any of the in flight allocators can be freed
 		/// </summary>
 		/// <param name="frame">The frame that finished</param>
-		void CheckFinished(int frame);
+		void CheckFinished(int frame, Ref<D3D12CommandQueue> queue);
 
 		std::map<int, AllocatorList>& GetAllAllocaotrs() { return allocators; }
 		

@@ -86,37 +86,16 @@ namespace ShadowEngine::Assets {
 		const ShadowAsset* getAsset() const;
 
 
-		void SetLoaded(ShadowAsset* asset) {
-			if (asset != nullptr) {
-				this->asset = asset;
-				this->loaded = true;
-			}
-			else {
-				this->asset = nullptr;
-				this->loaded = false;
-			}
-		}
+		void SetLoaded(ShadowAsset* asset);
 
 
-		bool operator==(const FileSystem::Path& name) const
-		{
-			return this->path == name;
-		}
+		bool operator==(const FileSystem::Path& name) const;
 
-		bool operator!=(const std::string& name) const
-		{
-			return !(*this == name);
-		}
+		bool operator!=(const std::string& name) const;
 
-		bool operator==(UUID uuid) const
-		{
-			return this->uuid == uuid;
-		}
+		bool operator==(UUID uuid) const;
 
-		bool operator!=(UUID uuid) const
-		{
-			return !(*this == uuid);
-		}
+		bool operator!=(UUID uuid) const;
 
 		/// <summary>
 		/// Operator for comparing with serach tags
@@ -125,14 +104,9 @@ namespace ShadowEngine::Assets {
 		/// <returns></returns>
 		bool operator==(const std::vector<std::string>& search_tags) const;
 
-		bool operator!=(const std::vector<std::string>& search_tags) const {
-			return !(*this == search_tags);
-		}
+		bool operator!=(const std::vector<std::string>& search_tags) const;
 
-		bool HasTag(const std::string& tag) const
-		{
-			return std::find(tags.begin(), tags.end(), tag) != tags.end();
-		}
+		bool HasTag(const std::string& tag) const;
 
 	};
 
@@ -165,8 +139,10 @@ namespace ShadowEngine::Assets {
 			return instance;
 		}
 
-		typedef std::set<AssetInfo, asset_info_comparator> AssetInfoList;
+		typedef std::unordered_map<UUID, Ref<AssetInfo>> AssetInfoList;
 		AssetInfoList knownAssets;
+
+		std::unordered_map<int, AssetInfo> teszt;
 
 		std::vector<Ref<FileSystem::AssetPack>> assetPacks;
 
@@ -195,13 +171,9 @@ namespace ShadowEngine::Assets {
 		/// Sets the base directory for asset lookups
 		/// </summary>
 		/// <param name="path"></param>
-		void SetRootPath(const std::string& path) {
-			root_path = path;
-		}
+		void SetRootPath(const std::string& path);
 
-		const std::string& GetRootPath() const {
-			return root_path;
-		}
+		const std::string& GetRootPath() const;
 
 		//###################################
 		//Asset Packs
@@ -213,16 +185,7 @@ namespace ShadowEngine::Assets {
 		/// <param name="name"></param>
 		/// <param name="id"></param>
 		/// <param name="path"></param>
-		void AddAssetPack(std::string name, std::string id, std::string path) {
-			if (loaded) {
-				SH_CORE_ERROR("Asset Pack can only be added on statup");
-				return;
-			}
-
-			//TODO: Check if the pack is already present
-			Ref<FileSystem::AssetPack> pack_poiner = std::make_shared<FileSystem::AssetPack>(name, id, path);
-			assetPacks.push_back(pack_poiner);
-		}
+		void AddAssetPack(std::string name, std::string id, std::string path);
 
 		Ref<FileSystem::AssetPack> GetAssetPack(std::string id);
 
@@ -240,6 +203,7 @@ namespace ShadowEngine::Assets {
 		//Gets the needed asset based on it's path
 		//Makes sure it will be cleaned up when the game exits
 		//This sets up the ShadowAsset base class
+		/*
 		template <class T>
 		static T* GetAsset_OLD(std::string path)
 		{
@@ -260,7 +224,7 @@ namespace ShadowEngine::Assets {
 			instance->nextID++;
 			return w;
 		}
-
+		*/
 		/*
 		template<class T>
 		concept asset = requires{ std::derived_from<ShadowAsset, T> };
@@ -275,13 +239,15 @@ namespace ShadowEngine::Assets {
 		template <class T>
 		T* GetAsset(const FileSystem::Path path)
 		{
-			AssetInfoList::iterator& info = std::find_if(knownAssets.begin(), knownAssets.end(), [&path](AssetInfo& asset) {return asset.getPath() == path; });
+			AssetInfoList::iterator& pair = std::find_if(knownAssets.begin(), knownAssets.end(), [&path](AssetInfoList::value_type& asset) {return asset.second->getPath() == path; });
+			
 
-			if (info == knownAssets.end())
+			if (pair == knownAssets.end())
 			{
 				SH_CORE_WARN("Unknown asset: '{0}'", (std::string)path);
 				return nullptr;
 			}
+			auto info = pair->second;
 
 			if (info->getLoaded()) {
 				return (T*)info->getAsset();

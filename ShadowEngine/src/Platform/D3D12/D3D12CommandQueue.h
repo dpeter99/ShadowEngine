@@ -8,11 +8,20 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	class D3D12CommandQueue
 	{
-		
-		/**
-		 * \brief The actual Dx12 command queue
-		 */
+		/// <summary>
+		/// The actual Dx12 command queue
+		/// </summary>
 		com_ptr<ID3D12CommandQueue> commandQueue{ nullptr };
+
+		/// <summary>
+		/// The fence for this command queue
+		/// </summary>
+		D3D12Fence fence;
+
+		/// <summary>
+		/// The value that was last used on this command queue
+		/// </summary>
+		uint64_t fence_value = 0;
 
 	public:
 		D3D12CommandQueue(D3D12_COMMAND_LIST_TYPE type = D3D12_COMMAND_LIST_TYPE_DIRECT);
@@ -30,6 +39,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 		 */
 		void Execute(Ref<CommandList> commandList);
 
-		void Signal(Ref<D3D12Fence> fence, uint64_t Value);
+		uint64_t Signal();
+
+		uint64_t GetNextSignalValue();
+
+		void WaitForFenceValue(uint64_t value);
 	};
 }

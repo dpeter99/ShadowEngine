@@ -25,8 +25,21 @@ namespace ShadowEngine::Rendering::D3D12 {
 		commandQueue->ExecuteCommandLists(_countof(cLists), cLists);
 	}
 	
-	void D3D12CommandQueue::Signal(Ref<D3D12Fence> fence, uint64_t Value)
+	uint64_t D3D12CommandQueue::Signal()
 	{
-		commandQueue->Signal(fence->GetFencePointer().Get(), Value);
+		uint64_t fenceValue = fence_value;
+		fence_value += 1;
+		commandQueue->Signal(fence.GetFencePointer().Get(), fenceValue);
+		return fenceValue;
+	}
+
+	uint64_t D3D12CommandQueue::GetNextSignalValue()
+	{
+		return fence_value + 1;
+	}
+
+	void D3D12CommandQueue::WaitForFenceValue(uint64_t value)
+	{
+		fence.WaitForValue(value);
 	}
 }
