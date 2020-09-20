@@ -55,7 +55,7 @@ namespace ShadowEngine::DebugGui {
 		ImGui::StyleColorsDark();
 
 		LoadFontAwesome();
-
+		
 		ImGuiIO& io = ImGui::GetIO();
 		io.BackendFlags |= ImGuiBackendFlags_HasMouseCursors;
 		io.BackendFlags |= ImGuiBackendFlags_HasSetMousePos;

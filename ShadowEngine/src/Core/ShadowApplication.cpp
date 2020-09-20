@@ -28,10 +28,23 @@ namespace ShadowEngine {
 
 	IGame* game;
 	
-	ShadowApplication::ShadowApplication() : window_(nullptr)
+	ShadowApplication::ShadowApplication(int argc, char* argv[]) : window_(nullptr)
 	{
 		instance = this;
 
+		if(argc > 1)
+		{
+			for (size_t i = 0; i < argc; i++)
+			{
+				std::string param(argv[i]);
+				if(param == "-no-gui")
+				{
+					this->no_gui = true;
+				}
+			}
+		}
+			
+		
 		game = _setupFunc();
 	}
 
@@ -46,7 +59,10 @@ namespace ShadowEngine {
 		moduleManager.PushModule(new EventSystem::ShadowEventManager());
 		moduleManager.PushModule(new SDLPlatform::SDLModule());
 		moduleManager.PushModule(new Rendering::Renderer());
+
+		if(!no_gui)
 		moduleManager.PushModule(new DebugGui::ImGuiModule());
+		
 		moduleManager.PushModule(new InputSystem::ShadowActionSystem());
 		//moduleManager.PushModule(new Debug::DebugModule());
 		moduleManager.PushModule(new EntitySystem::EntitySystem());

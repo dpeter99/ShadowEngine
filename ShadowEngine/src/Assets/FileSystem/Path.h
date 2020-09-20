@@ -39,6 +39,8 @@ namespace ShadowEngine::Assets::FileSystem {
 
 		std::string GetFullPath() const;
 
+		std::string GetFullFolderPath() const;
+		
 		std::string GetPath() const;
 
 		bool operator==(const Path& other) const {

@@ -26,6 +26,6 @@ namespace ShadowEngine::Assets {
 		/// </summary>
 		std::string path;
 
-		virtual void Load(SFF::SFFElement& root, FileSystem::Path path) = 0;
+		virtual void Load(SFF::SFFElement& root, FileSystem::Path path);
 	};
 }

@@ -90,7 +90,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 					nullptr,
 					IID_PPV_ARGS(cpuRes.GetAddressOf()));
 
-			cpuRes->SetName(s2ws("Texture2D upload resource resource").c_str());
+			cpuRes->SetName(s2ws("Texture2D upload resource resource for: " + asset->path).c_str());
 
 
 			CD3DX12_RANGE readRange{ 0,0 };
@@ -117,7 +117,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 				nullptr,
 				IID_PPV_ARGS(resource.GetAddressOf()));
 
-		resource->SetName(s2ws("Texture2D Committed resource").c_str());
+		resource->SetName(s2ws("Cubemap: " + asset->path).c_str());
 
 
 		ready = false;
@@ -147,6 +147,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 	void D3D12TextureCubeMap::FinishedUploading()
 	{
 		ready = true;
+
+		for each (auto var in uploadResource)
+		{
+			//TODO: This should free up the cpu side resources
+			var.Reset();
+		}
 	}
 
 	void D3D12TextureCubeMap::Upload()

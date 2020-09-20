@@ -2,5 +2,7 @@
   href: index.md
 - name: Devlogs
   href: devlog/toc.yml
-- name: Docs
-  href: documentation/Assets/toc.yml
+#- name: Assets
+#  href: documentation/Assets/toc.yml
+- name: Renderer
+  href: documentation/Renderer/toc.yml

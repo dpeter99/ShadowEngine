@@ -11,17 +11,25 @@ namespace ShadowEngine::Rendering::D3D12 {
 		id = nextID++;
 	}
 
+	void CommandAllocator::SetName(std::wstring name)
+	{
+		this->m_commandAllocator->SetName(name.c_str());
+	}
+
 	void CommandAllocator::MarkUsed(int frame, Ref<D3D12CommandQueue> queue)
 	{
 		this->free = false;
 		this->freeFrame = frame;
-		this->freeCommandQueue = queue
+		this->freeCommandQueue = queue;
 	}
 
 	void CommandAllocator::SetFree()
 	{
 		this->freeFrame = -1;
 		this->free = true;
+
+		this->m_commandAllocator->Reset();
+		this->m_UploadBuffer->Reset();
 	}
 
 	D3D12_COMMAND_LIST_TYPE CommandAllocator::GetType()

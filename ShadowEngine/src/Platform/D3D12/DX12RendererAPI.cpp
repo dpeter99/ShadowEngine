@@ -138,15 +138,15 @@ namespace ShadowEngine::Rendering::D3D12 {
 		}
 		
 		command_queue = std::make_shared<D3D12::D3D12CommandQueue>();
+		command_queue->SetName(L"Main graphics queue");
 
-		command_allocaotr_pool = std::make_shared<D3D12::CommandAllocatorPool>();
+		command_allocator_pool = std::make_shared<D3D12::CommandAllocatorPool>();
 		
 		command_list = std::make_shared<D3D12::CommandList>();
+		command_list->SetName(L"Main graphics list");
 		
 		swap_chain = std::make_shared<D3D12::D3D12SwapChain>(command_queue,ctx->window->Width, ctx->window->Height);
 		depth_buffer = std::make_shared<D3D12::D3D12DepthBuffer>(scissorRect);
-		
-		fence = std::make_unique<D3D12::D3D12Fence>();
 		
 
 		upload_managger = std::make_shared<UploadManagger>();
@@ -176,13 +176,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 		command_list->DrawMesh(mesh);
 	}
 
+	
 	void DX12RendererAPI::StartFrame(Ref<ConstantBuffer> worldCB, uint64_t frame)
 	{
 		frame_index = command_queue->GetNextSignalValue();
 		
-		
 		//Reset the command list
-		command_list->Reset(frame_index);
+		command_list->Reset(frame_index, command_queue);
 
 		//Set render area
 		command_list->SetViewports(viewPort);
@@ -200,8 +200,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 		command_list->SetRenderTargets(swap_chain, depth_buffer);
 
 		//Clear the render target
-		//TODO: this is done on the renderer already
-		//const float clearColor[] = { 0.0f, 0.2f, 0.4f, 1.0f };
 		command_list->ClearRenderTargetView((float*)&clearColor);
 		command_list->ClearDepthStencilView(1.0f,0);
 
@@ -214,7 +212,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		upload_managger->CheckForFnishedUploads();
 
 
-
+		if(ShadowApplication::Get().GetModuleManager().GetModuleByType< DebugGui::ImGuiModule>() != nullptr)
 		DebugGui::ImGuiModule::StartFrame();
 	}
 
@@ -232,6 +230,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//TODO:move this to submitting code
 		command_queue->Execute(command_list);
 
+		if (ShadowApplication::Get().GetModuleManager().GetModuleByType< DebugGui::ImGuiModule>() != nullptr)
 		DebugGui::ImGuiModule::OtherWindows();
 		
 		swap_chain->Present(1, 0);
@@ -239,7 +238,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//Signal the end of the frame
 		frame_index = command_queue->Signal();
 		//Save out the frame id to the swap chain
-		swap_chain->SetCurrentRenderTargetFenceValue(frame_index);
+		swap_chain->SetCurrentRenderTargetFenceValue(frame_index);		
 		
 		StartResourceUpload();
 
@@ -248,10 +247,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//fence->WaitForValue(swap_chain->GetCurrentRenderTargetFenceValue());
 		command_queue->WaitForFenceValue(swap_chain->GetCurrentRenderTargetFenceValue());
 
-		command_allocaotr_pool->CheckFinished(swap_chain->GetCurrentRenderTargetFenceValue(), command_queue);
+		command_allocator_pool->CheckFinished(swap_chain->GetCurrentRenderTargetFenceValue(), command_queue);
 
 	}
 
+	
 	void DX12RendererAPI::UploadResource(Ref<D3D12IUploadable> resource)
 	{
 		upload_managger->Upload(resource);
@@ -264,14 +264,16 @@ namespace ShadowEngine::Rendering::D3D12 {
 	
 	void DX12RendererAPI::StartResourceUpload()
 	{
-		upload_managger->StartUpload();
+		upload_managger->SubmitUploads();
 	}
 
+	
 	UINT DX12RendererAPI::GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE type) const
 	{
 		return device->GetDescriptorHandleIncrementSize(type);
 	}
 
+	
 	DescriptorAllocation DX12RendererAPI::AllocateDescriptors(D3D12_DESCRIPTOR_HEAP_TYPE type, uint32_t numDescriptors)
 	{
 		return m_DescriptorAllocators[type]->Allocate(numDescriptors);
@@ -285,6 +287,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		}
 	}
 
+	
 	com_ptr<ID3D12DescriptorHeap> DX12RendererAPI::CreateDescriptorHeap(UINT numDescriptors, D3D12_DESCRIPTOR_HEAP_TYPE type)
 	{
 		D3D12_DESCRIPTOR_HEAP_DESC desc = {};

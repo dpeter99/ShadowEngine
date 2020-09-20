@@ -15,26 +15,32 @@ namespace ShadowEngine::Rendering::D3D12 {
 		DX_API("Failed to create command allocator")
 			DX12RendererAPI::device->CreateCommandAllocator(type, IID_PPV_ARGS(commandAllocator.GetAddressOf()));
 		*/
-		commandAllocator = DX12RendererAPI::Get().command_allocaotr_pool->GetFreeCommandAllocator(type, -1);
+		commandAllocator = DX12RendererAPI::Get().command_allocator_pool->GetFreeCommandAllocator(type, 0, nullptr);
 		
 		DX_API("Failed to greate graphics command list")
 			DX12RendererAPI::device->CreateCommandList(0, type, commandAllocator->Allocator().Get(), nullptr, IID_PPV_ARGS(m_commandList.GetAddressOf()));
 
 		m_commandList->Close();
 
+		DX12RendererAPI::Get().command_allocator_pool->CheckFinished(0, nullptr);
+		
 		isBeingRecorded = false;
 
 		
 	}
 
+	void CommandList::SetName(std::wstring name)
+	{
+		m_commandList->SetName(name.c_str());
+	}
 
 
-	void CommandList::Reset(uint64_t frame)
+	void CommandList::Reset(uint64_t frame, Ref<D3D12CommandQueue> queue)
 	{
 		//if (isBeingRecorded)
 			isBeingRecorded = true;
 		
-		commandAllocator = DX12RendererAPI::Get().command_allocaotr_pool->GetFreeCommandAllocator(type, frame);
+		commandAllocator = DX12RendererAPI::Get().command_allocator_pool->GetFreeCommandAllocator(type, frame, queue);
 		m_commandList->Reset(commandAllocator->Allocator().Get(), nullptr);
 	}
 

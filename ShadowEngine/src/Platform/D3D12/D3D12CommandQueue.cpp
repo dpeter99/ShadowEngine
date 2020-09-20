@@ -18,6 +18,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 		DX12RendererAPI::device->CreateCommandQueue(&commandQueueDesc, IID_PPV_ARGS(commandQueue.GetAddressOf()));
 	}
 
+	void D3D12CommandQueue::SetName(std::wstring name)
+	{
+		commandQueue->SetName(name.c_str());
+		fence.GetFencePointer()->SetName((name + L"_Fence").c_str());
+	}
+
 	void D3D12CommandQueue::Execute(Ref<CommandList> commandList)
 	{
 		// Execute
@@ -41,5 +47,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 	void D3D12CommandQueue::WaitForFenceValue(uint64_t value)
 	{
 		fence.WaitForValue(value);
+	}
+
+	uint64_t D3D12CommandQueue::GetCompletedValue()
+	{
+		return fence.GetCompletedValue();
 	}
 }

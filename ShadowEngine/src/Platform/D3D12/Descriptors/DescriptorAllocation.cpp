@@ -61,7 +61,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		if (!IsNull() && m_Page)
 		{
 			//TODO: this might not be the correct fence value
-			m_Page->Free(std::move(*this), D3D12::DX12RendererAPI::Instance->fence->GetCompletedValue());
+			m_Page->Free(std::move(*this), D3D12::DX12RendererAPI::Instance->command_queue->GetCompletedValue());
 
 			m_Descriptor.ptr = 0;
 			m_NumHandles = 0;

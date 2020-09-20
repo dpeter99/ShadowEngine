@@ -28,7 +28,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// <returns>A command allocator to use</returns>
 		/// 
 		/// This finds a free command allocator or creates a new one. The Command allocator will be freed when the specified frame is finished
-		Ref<CommandAllocator> GetFreeCommandAllocator(D3D12_COMMAND_LIST_TYPE type, int frame);
+		Ref<CommandAllocator> GetFreeCommandAllocator(D3D12_COMMAND_LIST_TYPE type, int frame = -1, Ref<D3D12CommandQueue> queue = nullptr);
 
 
 		/// <summary>

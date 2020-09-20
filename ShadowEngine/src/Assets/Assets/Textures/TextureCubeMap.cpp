@@ -18,6 +18,11 @@ namespace ShadowEngine::Assets {
 		return nullptr;
 	}
 
+	TextureCubeMap::TextureCubeMap(const std::string& path) : Texture()
+	{
+		impl = TextureCubeMapImpl::Create(this);
+	}
+
 	TextureCubeMap::TextureCubeMap() : Texture()
 	{
 		impl = TextureCubeMapImpl::Create(this);
@@ -49,14 +54,17 @@ namespace ShadowEngine::Assets {
 
 	void TextureCubeMap::Load(SFF::SFFElement& root, FileSystem::Path path)
 	{
+		ShadowAsset::Load(root, path);
+		
 		auto* cubemap_root = root.GetChildByName("CubeMap");
-		up_texture = path.GetFullPath() + cubemap_root->GetStringProperty("up");
-		down_texture = path.GetFullPath() + cubemap_root->GetStringProperty("down");
-		front_texture = path.GetFullPath() + cubemap_root->GetStringProperty("front");
-		back_texture = path.GetFullPath() + cubemap_root->GetStringProperty("back");
-		left_texture = path.GetFullPath() + cubemap_root->GetStringProperty("left");
-		right_texture = path.GetFullPath() + cubemap_root->GetStringProperty("right");
+		up_texture = path.GetFullFolderPath() + cubemap_root->GetStringProperty("up");
+		down_texture = path.GetFullFolderPath() + cubemap_root->GetStringProperty("down");
+		front_texture = path.GetFullFolderPath() + cubemap_root->GetStringProperty("front");
+		back_texture = path.GetFullFolderPath() + cubemap_root->GetStringProperty("back");
+		left_texture = path.GetFullFolderPath() + cubemap_root->GetStringProperty("left");
+		right_texture = path.GetFullFolderPath() + cubemap_root->GetStringProperty("right");
 
+		impl->Load();
 	}
 
 	uint32_t TextureCubeMap::GetWidth() const

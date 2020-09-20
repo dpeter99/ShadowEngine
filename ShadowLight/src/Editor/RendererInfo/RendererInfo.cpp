@@ -41,7 +41,7 @@ namespace ShadowLight::Editor {
 
 		if(ImGui::TreeNode("Command Allocators"))
 		{
-			auto pool = d3d12Renderer->command_allocaotr_pool;
+			auto pool = d3d12Renderer->command_allocator_pool;
 			for(auto& list : pool->GetAllAllocaotrs())
 			{
 				for(auto& allocator : list.second)

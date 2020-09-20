@@ -49,7 +49,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		Ref<D3D12::D3D12CommandQueue> command_queue;
 
 
-		Ref<CommandAllocatorPool> command_allocaotr_pool;
+		Ref<CommandAllocatorPool> command_allocator_pool;
 		
 		/// <summary>
 		/// The command list used for recording render commands for the graphics command queue
@@ -97,7 +97,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		float aspectRatio;
 		
 		
-		Ref<D3D12::D3D12Fence> fence;		
+		//Ref<D3D12::D3D12Fence> fence;		
 		
 		Ref<ConstantBuffer> worldData;
 
@@ -160,6 +160,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		void ReleaseStaleDescriptors(uint64_t finishedFrame);
 
+		/// <summary>
+		/// Used for manually creating descriptor heaps.
+		/// </summary>
+		/// <param name="numDescriptors">The number of descriptors to allocate</param>
+		/// <param name="type">The type of heap to allocate</param>
+		/// <returns></returns>
 		com_ptr<ID3D12DescriptorHeap> CreateDescriptorHeap(UINT numDescriptors, D3D12_DESCRIPTOR_HEAP_TYPE type);
 		
 	};

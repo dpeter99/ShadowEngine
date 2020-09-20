@@ -31,7 +31,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// The command allocator that we are allocating out of
 		/// </summary>
 		/// The command allocator is responsible for allocating the memory for the CommandLists
-		//com_ptr<ID3D12CommandAllocator> commandAllocator;
 		Ref<CommandAllocator> commandAllocator;
 		
 		/// <summary>
@@ -45,6 +44,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// The last set render target for this queue
 		/// </summary>
 		D3D12_CPU_DESCRIPTOR_HANDLE renderTarget;
+		
 		/// <summary>
 		/// The last set depth buffer for this queue
 		/// </summary>
@@ -89,8 +89,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 		// or for uploading constant buffer data that changes every draw call.
 		std::unique_ptr<UploadBuffer> m_UploadBuffer;
 	public:
+		
 		CommandList(D3D12_COMMAND_LIST_TYPE type = D3D12_COMMAND_LIST_TYPE_DIRECT);
 
+		void SetName(std::wstring name);
+
+		
 		/// <summary>
 		/// Returns the underlying command list.
 		/// </summary>
@@ -104,10 +108,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// <param name="frame">The frame that we are starting</param>
 		///
 		/// When this is called an new allocator is requested form the pool with the frame
-		void Reset(uint64_t frame);
+		void Reset(uint64_t frame, Ref<D3D12CommandQueue> queue);
 
 		void StartRecording();
 
+		//#################################################
+		// Graphics Commands
+		//#################################################
 		
 #pragma region View_port_and_scissor
 		
@@ -115,6 +122,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		void SetScissorRects(D3D12_RECT scissorRect);
 
+#pragma endregion
+
+#pragma region Render Target
+		
 		/// <summary>
 		///  Sets the render targets used in this command list
 		/// </summary>
@@ -139,11 +150,29 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// <param name="barrier">The barrier to use</param>
 		void ResourceBarrier(D3D12_RESOURCE_BARRIER* barrier);
 
-		void TransitionBarrier(com_ptr<ID3D12Resource> resource, D3D12_RESOURCE_STATES stateAfter, UINT subresource, bool flushBarriers);
+		/// <summary>
+		/// (V2) Transition a resource to a particular state.
+		/// </summary>
+		/// <param name="resource">The resource to transition.</param>
+		/// <param name="stateAfter">The state to transition the resource to. The before state is resolved by the resource state tracker.</param>
+		/// <param name="subresource">The subresource to transition. By default, this is D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES which indicates that all subresources are transitioned to the same state.</param>
+		/// <param name="flushBarriers">Force flush any barriers. Resource barriers need to be flushed before a command (draw, dispatch, or copy) that expects the resource to be in a particular state can run.</param>
+		void TransitionBarrier(com_ptr<ID3D12Resource> resource, D3D12_RESOURCE_STATES stateAfter, UINT subresource = D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES, bool flushBarriers = false);
 
+		/// <summary>
+		/// (V2) Transition a resource to a particular state.
+		/// </summary>
+		/// <param name="resource">The resource to transition.</param>
+		/// <param name="stateAfter">The state to transition the resource to. The before state is resolved by the resource state tracker.</param>
+		/// <param name="subresource">The subresource to transition. By default, this is D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES which indicates that all subresources are transitioned to the same state.</param>
+		/// <param name="flushBarriers">Force flush any barriers. Resource barriers need to be flushed before a command (draw, dispatch, or copy) that expects the resource to be in a particular state can run.</param>
 		void TransitionBarrier(const Resource& resource, D3D12_RESOURCE_STATES stateAfter, UINT subresource = D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES, bool flushBarriers = false);
 
-
+		/// <summary>
+		/// Flush any barriers that have been pushed to the command list.
+		/// </summary>
+		void FlushResourceBarriers();
+		
 
 		/// <summary>
 		/// Uploads the given data to the specified buffer.
@@ -191,7 +220,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		
 		
-		void FlushResourceBarriers();
+
 		void TrackResource(Microsoft::WRL::ComPtr<ID3D12Object> object);
 		void TrackResource(const Resource& res);
 		void CopyTextureRegion(CD3DX12_TEXTURE_COPY_LOCATION* from, CD3DX12_TEXTURE_COPY_LOCATION* to);

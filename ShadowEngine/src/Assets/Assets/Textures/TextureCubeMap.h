@@ -18,7 +18,6 @@ namespace ShadowEngine::Assets {
 			this->asset = asset;
 		}
 
-		virtual void Load() = 0;
 	};
 	
 	class TextureCubeMap :

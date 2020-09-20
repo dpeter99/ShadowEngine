@@ -34,7 +34,8 @@ namespace ShadowLight::Editor {
 	void EditorModule::Init()
 	{
 		ShadowEngine::EventSystem::ShadowEventManager::AddNewEventListener(this);
-		ShadowEngine::DebugGui::ImGuiModule::AddGUICall(this);
+		if(ShadowEngine::ShadowApplication::Get().GetModuleManager().GetModuleByType<ShadowEngine::DebugGui::ImGuiModule>() != nullptr)
+			ShadowEngine::DebugGui::ImGuiModule::AddGUICall(this);
 
 		//new ShadowInput::ShadowAction<bool>("Test", new ShadowInput::KeyboardBinding("a"));
 

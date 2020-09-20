@@ -68,6 +68,10 @@ D3D12_CPU_DESCRIPTOR_HANDLE ShadowEngine::Rendering::D3D12::D3D12Texture2D::GetU
 	return D3D12_CPU_DESCRIPTOR_HANDLE();
 }
 
+void ShadowEngine::Rendering::D3D12::D3D12Texture2D::Load()
+{
+}
+
 void ShadowEngine::Rendering::D3D12::D3D12Texture2D::Upload()
 {
 	D3D12::DX12RendererAPI::Instance->UploadResource(this);

@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
 
 	
 
-	ShadowEngine::ShadowApplication app;
+	ShadowEngine::ShadowApplication app(argc, argv);
 	app.Init();
 	app.Start();
 

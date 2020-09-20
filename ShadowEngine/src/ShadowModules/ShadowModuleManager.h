@@ -29,7 +29,7 @@ namespace ShadowEngine {
 				if (module->GetTypeId() == T::TypeId())
 					return dynamic_cast<T*>(module.get());
 			}
-			SH_CORE_ERROR("Can't find the module {0}", T::Type());
+			//SH_CORE_ERROR("Can't find the module {0}", T::Type());
 			return nullptr;
 		}
 

@@ -25,6 +25,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		UploadQueue();
 
+		void Open(uint64_t index, Ref<D3D12CommandQueue> queue);
+		
 		void Upload(Ref<D3D12IUploadable> data);
 
 		void Execute(Ref<D3D12CommandQueue> queue, unsigned long long index);
@@ -38,21 +40,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 	///
 	/// This has a upload command queue and submits uploads to <see cref="UploadQueue"/>s.
 	/// To upload something call <see cref="Upload"/> with a <see cref="D3D12IUploadable"/> type like <see cref="Resource"/>
-	/// To submit the uploads to the command queue call <see cref="StartUpload"/>.
+	/// To submit the uploads to the command queue call <see cref="SubmitUploads"/>.
 	class UploadManagger {
 
-		/**
-		* \brief The Upload command queue
-		*/
 		/// <summary>
 		/// The Upload command queue this manages
 		/// </summary>
 		Ref<D3D12::D3D12CommandQueue> command_queue;
-
-		/// <summary>
-		/// The fence that gets triggered when a batch of uploads finishes
-		/// </summary>
-		Ref<D3D12::D3D12Fence> fence;
 
 		/// <summary>
 		/// A reused list of upload queues. They store the command lists
@@ -77,7 +71,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// <summary>
 		/// Starts the upload queue if it has anything to upload. Finds the new queue if needed
 		/// </summary>
-		void StartUpload();
+		void SubmitUploads();
 
 		/// <summary>
 		/// Checks the queue if any has finished yet

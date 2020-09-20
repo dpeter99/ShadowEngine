@@ -2,9 +2,10 @@
 
 #include "Common.h"
 #include "CommandList.h"
+#include "D3D12Fence.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
-	class D3D12Fence;
+	//class D3D12Fence;
 
 	class D3D12CommandQueue
 	{
@@ -26,6 +27,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 	public:
 		D3D12CommandQueue(D3D12_COMMAND_LIST_TYPE type = D3D12_COMMAND_LIST_TYPE_DIRECT);
 
+		void SetName(std::wstring name);
+
+		
 		/**
 		 * \brief Return the internal Dx12 pointer
 		 * \return com_ptr of the command queue
@@ -44,5 +48,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		uint64_t GetNextSignalValue();
 
 		void WaitForFenceValue(uint64_t value);
+
+		uint64_t GetCompletedValue();
 	};
 }

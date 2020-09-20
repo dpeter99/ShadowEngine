@@ -4,14 +4,20 @@
 #include "DX12RendererAPI.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
+
+	//####################################
+	//      UploadManagger
+	//####################################
+	
 	UploadManagger::UploadManagger()
 	{
 		command_queue = std::make_shared<D3D12CommandQueue>(D3D12_COMMAND_LIST_TYPE_COPY);
 
-		fence = std::make_unique<D3D12::D3D12Fence>();
-
+		command_queue->SetName(L"UploadManager_Queue");
+		
 		uploadQueues.push_back(std::make_shared<UploadQueue>());
 		active = uploadQueues[0];
+		active->Open(command_queue->GetNextSignalValue(), command_queue);
 
 		index = 0;
 	}
@@ -20,12 +26,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 		active->Upload(data);
 	}
 
-	void UploadManagger::StartUpload()
+	void UploadManagger::SubmitUploads()
 	{
 		if (active->dirty) {
-			index++;
+			index = command_queue->GetNextSignalValue();
 			active->Execute(command_queue, index);
-			command_queue->Signal(fence, index);
+			index = command_queue->Signal();
 
 			Ref<UploadQueue> new_active;
 			for (size_t i = 0; i < uploadQueues.size(); i++)
@@ -40,12 +46,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 				new_active = uploadQueues[uploadQueues.size()-1];
 			}
 			active = new_active;
+			active->Open(command_queue->GetNextSignalValue(), command_queue);
 		}
 	}
 
 	void UploadManagger::CheckForFnishedUploads()
 	{
-		unsigned long long i = fence->GetCompletedValue();
+		unsigned long long i = command_queue->GetCompletedValue();
 
 		for each (auto& e in uploadQueues)
 		{
@@ -54,9 +61,22 @@ namespace ShadowEngine::Rendering::D3D12 {
 		}
 	}
 
+	//####################################
+	//      UploadQueue
+	//####################################
+
+	std::wstring MakeName()
+	{
+		static int id = 0;
+		std::wstring name = L"UploadQueue_";
+		name += std::to_wstring(id++);
+		return name;
+	}
+	
 	UploadQueue::UploadQueue()
 	{
 		command_list = std::make_shared<CommandList>(D3D12_COMMAND_LIST_TYPE_COPY);
+		command_list->SetName(MakeName());
 
 		fenceValue = -1;
 
@@ -65,15 +85,17 @@ namespace ShadowEngine::Rendering::D3D12 {
 		finished = true;
 	}
 
+	void UploadQueue::Open(uint64_t index, Ref<D3D12CommandQueue> queue)
+	{
+		if (!command_list->IsRecording())
+		{
+			command_list->Reset(index,queue);
+		}
+	}
+	
 	void UploadQueue::Upload(Ref<D3D12IUploadable> data)
 	{
 		m_resourcesToUpload.push_back(data);
-
-		if (!command_list->IsRecording())
-		{
-			//TODO: this is wrong get a normal fence value
-			command_list->Reset(-1);
-		}
 		
 		data->RecordTransfer(this->command_list);
 

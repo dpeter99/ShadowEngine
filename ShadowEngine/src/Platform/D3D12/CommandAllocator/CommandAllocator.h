@@ -1,10 +1,14 @@
 #pragma once
 
 #include "../Common.h"
-#include <Platform\D3D12\D3D12CommandQueue.h>
+#include "Platform/D3D12/Buffers/UploadBuffer.h"
+
+//#include <Platform\D3D12\D3D12CommandQueue.h>
 
 namespace ShadowEngine::Rendering::D3D12 {
 
+	class D3D12CommandQueue;
+	
 	/// <summary>
 	/// Command allocators represent the render commands on the GPU side
 	/// </summary>
@@ -23,6 +27,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		D3D12_COMMAND_LIST_TYPE type;
 
 		int id;
+
+		Ref<UploadBuffer> m_UploadBuffer;
 	public:
 
 		/// <summary>
@@ -32,6 +38,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// <param name="type">The tpe of allocator that we are holding</param>
 		CommandAllocator(com_ptr<ID3D12CommandAllocator> commandAllocator, D3D12_COMMAND_LIST_TYPE type);
 
+		void SetName(std::wstring name);
+		
 		/// <summary>
 		/// Returns the underlying allocator
 		/// </summary>

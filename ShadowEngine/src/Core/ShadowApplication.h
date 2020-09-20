@@ -34,11 +34,13 @@ namespace ShadowEngine {
 		/// If set to false the main loop will stop and continue with the shutdown.
 		bool running = true;
 
+		bool no_gui = false;
+		
 	public:
 		/// <summary>
 		/// Default constructor
 		/// </summary>
-		ShadowApplication();
+		ShadowApplication(int argc, char* argv[]);
 		virtual ~ShadowApplication();
 
 		/// <summary>

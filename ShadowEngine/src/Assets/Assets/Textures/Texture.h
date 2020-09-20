@@ -11,6 +11,9 @@ namespace ShadowEngine::Assets {
 	class TextureImpl {
 	public:
 		virtual void Upload() = 0;
+
+
+		virtual void Load() = 0;
 	};
 
 

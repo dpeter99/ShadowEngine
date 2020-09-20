@@ -12,6 +12,14 @@ namespace ShadowEngine::Assets::FileSystem {
 		return final_path;
 	}
 
+	std::string Path::GetFullFolderPath() const
+	{
+		std::string final_path = AssetManager::getInstance()->GetRootPath();
+		final_path += AssetManager::getInstance()->GetAssetPack(this->pack)->GetPath();
+		final_path += this->path.parent_path().generic_string() + "/";
+		return final_path;
+	}
+
 	inline std::string Path::GetPath() const {
 		return pack + ":" + path.generic_string();
 	}
