@@ -132,14 +132,24 @@ namespace ShadowEngine::Rendering {
 	/// </summary>
 	class VertexBuffer
 	{
+	protected:
+		size_t size;
+
+		ShadowEngine::Rendering::BufferLayout m_Layout;
+		
 	public:
+		VertexBuffer(size_t s): size(s)
+		{
+
+		}
+		
 		virtual ~VertexBuffer() = default;
 
 		//virtual void Bind() const = 0;
 		//virtual void Unbind() const = 0;
 
-		virtual const BufferLayout& GetLayout() const = 0;
-		virtual void SetLayout(const BufferLayout& layout) = 0;
+		virtual const BufferLayout& GetLayout() const { return m_Layout; }
+		virtual void SetLayout(const BufferLayout& layout) { m_Layout = layout; }
 
 		static VertexBuffer* Create(void* vertices, uint32_t size);
 	};

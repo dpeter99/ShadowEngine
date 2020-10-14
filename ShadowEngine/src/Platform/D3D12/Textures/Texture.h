@@ -5,6 +5,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	class Texture : public Resource
 	{
+	protected:
+		DXGI_FORMAT format;
 
+	public:
+		DXGI_FORMAT GetDXGIFormat()
+		{
+			return format;
+		};
 	};
 }

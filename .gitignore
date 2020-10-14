@@ -15,9 +15,6 @@ bin/
 docs-source/metadata/**
 docs-source/obj/**
 
-docs/
-docs/**/**
-
 
 !/dependencies/**
 dependencies/**/*.zip
@@ -35,3 +32,7 @@ DemoGame/packages.config
 ShadowEngineBuild/obj/
 sledge/**/*.csproj
 ShadowEngineInterop/**/*.csproj
+
+docs/obj/
+
+docs/output/

@@ -22,7 +22,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	/// </summary>
 	///
 	/// Represents any resource in a committed resource heap on the GPU
-	/// We inherit from this in:
+	/// The following classes are inherited from this:
 	///  - ConstantBuffers
 	///  - Textures
 	class Resource : public D3D12IUploadable
@@ -40,7 +40,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 		size_t m_bufferSize;
 
 	public:
-		
+
+		/// <summary>
+		/// Creates an empty Resource
+		/// </summary>
+		/// <param name="name">The Debug name used for this resource</param>
 		explicit Resource(const std::wstring& name = L"");
 
 		/// <summary>
@@ -61,7 +65,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		explicit Resource(Microsoft::WRL::ComPtr<ID3D12Resource> resource, const std::wstring& name = L"");
 
 		Resource(const Resource& copy);
-		Resource(Resource&& copy);
+		Resource(Resource&& copy) noexcept;
 			
 		Resource& operator=(const Resource& other);
 		Resource& operator=(Resource&& other) noexcept;

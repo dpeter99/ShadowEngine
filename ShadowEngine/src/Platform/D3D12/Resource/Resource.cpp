@@ -9,12 +9,12 @@
 namespace ShadowEngine::Rendering::D3D12 {
 
 	Resource::Resource(const std::wstring& name)
-		: m_ResourceName(name)
-		, m_FormatSupport({})
-	{}
-
-
-
+		: m_FormatSupport({})
+		, m_ResourceName(name)
+		, m_bufferSize(0)
+	{
+		
+	}
 
 	Resource::Resource(const D3D12_RESOURCE_DESC& resourceDesc, const D3D12_CLEAR_VALUE* clearValue, const std::wstring& name)
 	{
@@ -39,15 +39,20 @@ namespace ShadowEngine::Rendering::D3D12 {
 		, m_FormatSupport(copy.m_FormatSupport)
 		, m_ResourceName(copy.m_ResourceName)
 		, m_d3d12ClearValue(std::make_unique<D3D12_CLEAR_VALUE>(*copy.m_d3d12ClearValue))
-	{}
+	{
+		
+	}
 
-	Resource::Resource(Resource&& copy)
+	Resource::Resource(Resource&& copy) noexcept
 		: m_d3d12Resource(std::move(copy.m_d3d12Resource))
 		, m_FormatSupport(copy.m_FormatSupport)
 		, m_ResourceName(std::move(copy.m_ResourceName))
 		, m_d3d12ClearValue(std::move(copy.m_d3d12ClearValue))
-	{}
+	{
+		
+	}
 
+	
 	Resource& Resource::operator=(const Resource& other)
 	{
 		if (this != &other)
@@ -84,6 +89,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 	}
 
+	
 	void Resource::SetupResource(const D3D12_RESOURCE_DESC& resourceDesc, const std::wstring& name)
 	{
 		auto device = DX12RendererAPI::Get().device;
@@ -104,7 +110,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		SetName(name);
 	}
 
-	
+
 	void Resource::SetD3D12Resource(Microsoft::WRL::ComPtr<ID3D12Resource> d3d12Resource, const D3D12_CLEAR_VALUE* clearValue)
 	{
 		m_d3d12Resource = d3d12Resource;
@@ -156,10 +162,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 			m_FormatSupport.Format = desc.Format;
 			DX_API("Failled to get feature support")
-			(device->CheckFeatureSupport(
-				D3D12_FEATURE_FORMAT_SUPPORT,
-				&m_FormatSupport,
-				sizeof(D3D12_FEATURE_DATA_FORMAT_SUPPORT)));
+				(device->CheckFeatureSupport(
+					D3D12_FEATURE_FORMAT_SUPPORT,
+					&m_FormatSupport,
+					sizeof(D3D12_FEATURE_DATA_FORMAT_SUPPORT)));
 		}
 		else
 		{
@@ -167,6 +173,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 		}
 	}
 
-	
+
 
 }

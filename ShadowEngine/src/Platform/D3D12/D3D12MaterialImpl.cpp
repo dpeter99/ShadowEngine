@@ -115,12 +115,14 @@ namespace ShadowEngine::Rendering::D3D12 {
 	void D3D12MaterialImpl::UploadTextures()
 	{
 		//TODO: This will not work once we have more than one command list and back buffering of commands
-
+		//TODO: This doesn't work with the new Textures
+		
 		for (size_t i = 0; i < propertySheet->GetTextureCount(); i++)
 		{
 			auto* prop = propertySheet->GetTexture<Assets::Texture>(i);
 
 			CreateTextureResourceView(i, prop);
 		}
+		
 	}
 }

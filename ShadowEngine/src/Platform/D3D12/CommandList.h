@@ -23,6 +23,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 	/// </summary>
 	/// Contains and manages a ``ID3D12CommandAllocator`` and ``ID3D12GraphicsCommandList``.
 	/// It is used for recording commands and than submitting them to a <see cref="CommandQueue"/>.
+	///
+	/// The Command List tracks used resources in it's internal ``m_TrackedObjects`` list witch get's freed up when the list is reset.
 	class CommandList
 	{
 		D3D12_COMMAND_LIST_TYPE type;
@@ -39,6 +41,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// This is the DX12 class that we are making the calls to
 		com_ptr<ID3D12GraphicsCommandList> m_commandList;
 
+		bool isBeingRecorded;
+		
 		
 		/// <summary>
 		/// The last set render target for this queue
@@ -50,26 +54,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// </summary>
 		D3D12_CPU_DESCRIPTOR_HANDLE depthBuffer;
 
-		bool isBeingRecorded;
-
-		/// <summary>
-		/// Resource state tracker is used by the command list to track (per command list)
-		/// the current state of a resource. The resource state tracker also tracks the
-		/// global state of a resource (with it's static methods) in order to minimize resource state transitions.
-		/// </summary>
-		std::unique_ptr<ResourceStateTracker> m_ResourceStateTracker;
-
-		using TrackedObjects = std::vector < Microsoft::WRL::ComPtr<ID3D12Object> >;
-		
-		/// <summary>
-		/// A list of "in-flight" object to make sure they are not deleted before the command list finishes
-		/// </summary>
-		/// Objects that are being tracked by a command list that is "in-flight" on 
-		///	the command-queue and cannot be deleted. To ensure objects are not deleted
-		///	until the command list is finished executing, a reference to the object
-		///	is stored. The referenced objects are released when the command list is 
-		/// reset.
-		TrackedObjects m_TrackedObjects;
+		//###########################
+		//Descriptor Heaps
+		//###########################
 		
 		/// <summary>
 		/// The dynamic descriptor heap allows for descriptors to be staged before
@@ -85,9 +72,26 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// heaps if they are different than the currently bound descriptor heaps.
 		ID3D12DescriptorHeap* m_DescriptorHeaps[D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES] = {};
 
+
+		
 		// Resource created in an upload heap. Useful for drawing of dynamic geometry
 		// or for uploading constant buffer data that changes every draw call.
-		std::unique_ptr<UploadBuffer> m_UploadBuffer;
+		// Located in allocator now
+		//std::unique_ptr<UploadBuffer> m_UploadBuffer;
+
+	private:
+		/// <summary>
+		/// Adds a resource to the internal resources list
+		/// </summary>
+		/// <param name="object">The resource to be added</param>
+		void TrackResource(Microsoft::WRL::ComPtr<ID3D12Object> object);
+
+		/// <summary>
+		/// Adds a resource to the internal resources list
+		/// </summary>
+		/// <param name="object">The resource to be added</param>
+		void TrackResource(const Resource& res);
+		
 	public:
 		
 		CommandList(D3D12_COMMAND_LIST_TYPE type = D3D12_COMMAND_LIST_TYPE_DIRECT);
@@ -131,9 +135,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// </summary>
 		/// <param name="swapchain">The swap chain to get the render target form</param>
 		/// <param name="depthBuffer">The depth buffer to use</param>
-		void SetRenderTargets(
-			Ref<D3D12SwapChain> swapchain,
-			Ref<D3D12DepthBuffer> depthBuffer);
+		void SetRenderTargets(Ref<D3D12SwapChain> swapchain, Ref<D3D12DepthBuffer> depthBuffer);
 
 		void ClearRenderTargetView(const float* color);
 
@@ -174,6 +176,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		void FlushResourceBarriers();
 		
 
+		
 		/// <summary>
 		/// Uploads the given data to the specified buffer.
 		/// </summary>
@@ -190,7 +193,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 		///	UploadToBuffer(buffer, 1, sizeof(Type), data, D3D12_RESOURCE_FLAG_NONE)
 		///	</code>
 		///	</example>
-		/// 
 		void UploadToBuffer(Buffer& buffer, size_t numElements, size_t elementSize, const void* bufferData,
 		                D3D12_RESOURCE_FLAGS flags);
 
@@ -221,8 +223,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 		
 
-		void TrackResource(Microsoft::WRL::ComPtr<ID3D12Object> object);
-		void TrackResource(const Resource& res);
+		
+	public:
 		void CopyTextureRegion(CD3DX12_TEXTURE_COPY_LOCATION* from, CD3DX12_TEXTURE_COPY_LOCATION* to);
 
 		void SetDescriptorHeaps [[deprecated]] (int count, ID3D12DescriptorHeap* const* descriptorHeaps);

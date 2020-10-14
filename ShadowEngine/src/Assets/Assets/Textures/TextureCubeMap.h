@@ -7,12 +7,24 @@ namespace ShadowEngine::Assets {
 
 	class TextureCubeMap;
 
+	/// <summary>
+	/// This is the actual Renderer side implementation of the cube map.
+	/// It has a reference to the actual asset it represents.
+	/// </summary>
 	class TextureCubeMapImpl : public TextureImpl {
 	public:
+		
 		static Ref<TextureCubeMapImpl> Create(TextureCubeMap* asset);
 
+		/// <summary>
+		/// The asset that this represents.
+		/// </summary>
 		TextureCubeMap* asset;
 
+		/// <summary>
+		/// Constructor for the Cube Map Texture Implementation
+		/// </summary>
+		/// <param name="asset"></param>
 		TextureCubeMapImpl(TextureCubeMap* asset)
 		{
 			this->asset = asset;
@@ -20,8 +32,7 @@ namespace ShadowEngine::Assets {
 
 	};
 	
-	class TextureCubeMap :
-		public Texture
+	class TextureCubeMap : public Texture
 	{
 		SHObject_Base(TextureCubeMap)
 	private:
@@ -37,7 +48,7 @@ namespace ShadowEngine::Assets {
 		explicit TextureCubeMap(const std::string& path);
 		TextureCubeMap();
 
-		Ref<TextureImpl> getImpl() override { return impl; }
+		//Ref<TextureImpl> getImpl() override { return impl; }
 		~TextureCubeMap() override {};
 
 		std::string GetTexturePath(int i);

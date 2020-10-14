@@ -45,16 +45,21 @@ namespace ShadowEngine::Rendering::D3D12
 
 		void operator<<(HRESULT hr) {
 			if (FAILED(hr)) {
-				std::ostringstream oss;
-				oss << File << "(" << Line << "): " << Message;
+				//std::ostringstream oss;
+				//oss << File << "(" << Line << "): " << Message;
 
-				MessageBoxA(NULL, oss.str().c_str(), "Error!", MB_ICONSTOP | MB_OK);
+				//MessageBoxA(NULL, oss.str().c_str(), "Error!", MB_ICONSTOP | MB_OK);
+                SH_CORE_CRITICAL(Message);
 				__debugbreak();
 				//exit(-1);
 			}
 		}
 	};
+
+    
 	
+	//#define DX_API(msg) HResultTester(msg, __FILE__, __LINE__) <<
+
 	#define DX_API(msg) HResultTester(msg, __FILE__, __LINE__) <<
 
 	#define OUTPUT_BUFFER_SIZE 1024

@@ -2,30 +2,11 @@
 #include "D3D12Texture2D.h"
 #include "Platform/D3D12/DX12RendererAPI.h"
 
-ShadowEngine::Rendering::D3D12::D3D12Texture2D::D3D12Texture2D(std::string path)
+ShadowEngine::Rendering::D3D12::D3D12Texture2D::D3D12Texture2D(Assets::Texture2D* asset): Texture2DImpl(asset)
 {
-	auto img_temp = IMG_Load(path.c_str());
-	auto img = SDL_ConvertSurfaceFormat(img_temp, SDL_PIXELFORMAT_RGBA32, 0);
-
-	format = SDLFormatToGXGI(*img->format);
-	bitsPerPixel = img->format->BitsPerPixel;
-
-	D3D12_RESOURCE_DESC resourceDesc;
-	ZeroMemory(&resourceDesc, sizeof(D3D12_RESOURCE_DESC));
-	resourceDesc.DepthOrArraySize = 1;
-	resourceDesc.Height = (unsigned int)img->h;
-	resourceDesc.Width = (unsigned int)img->w;
-	resourceDesc.Format = SDLFormatToGXGI(*img->format);
-	resourceDesc.MipLevels = 1;
-	resourceDesc.Dimension = D3D12_RESOURCE_DIMENSION_TEXTURE2D;
-	resourceDesc.Alignment = 0;
-	resourceDesc.SampleDesc.Count = 1;
-	resourceDesc.SampleDesc.Quality = 0;
-	resourceDesc.Layout = D3D12_TEXTURE_LAYOUT_UNKNOWN;
-	resourceDesc.Flags = D3D12_RESOURCE_FLAG_NONE;
-
-	this->SetupResource(resourceDesc, s2ws(path));
-
+	/*
+	
+	*/
 	ready = false;
 
 
@@ -38,10 +19,12 @@ ShadowEngine::Rendering::D3D12::com_ptr<ID3D12Resource> ShadowEngine::Rendering:
 }
 */
 
+/*
 DXGI_FORMAT ShadowEngine::Rendering::D3D12::D3D12Texture2D::GetDXGIFormat()
 {
 	return format;
 }
+*/
 
 void ShadowEngine::Rendering::D3D12::D3D12Texture2D::RecordTransfer(Ref<D3D12::CommandList> commandList)
 {
@@ -70,6 +53,31 @@ D3D12_CPU_DESCRIPTOR_HANDLE ShadowEngine::Rendering::D3D12::D3D12Texture2D::GetU
 
 void ShadowEngine::Rendering::D3D12::D3D12Texture2D::Load()
 {
+	//Get the texture path from the asset
+	//USe SDL to load in the texture, and convert it to the correct format
+	const std::string temp = asset->GetTexturePath();
+	auto img_temp = IMG_Load(temp.c_str());
+	img = SDL_ConvertSurfaceFormat(img_temp, SDL_PIXELFORMAT_RGBA32, 0);
+
+	format = SDLFormatToGXGI(*img->format);
+	bitsPerPixel = img->format->BitsPerPixel;
+
+	//resourceDesc;
+	ZeroMemory(&resourceDesc, sizeof(D3D12_RESOURCE_DESC));
+	resourceDesc.DepthOrArraySize = 1;
+	resourceDesc.Height = (unsigned int)img->h;
+	resourceDesc.Width = (unsigned int)img->w;
+	resourceDesc.Format = SDLFormatToGXGI(*img->format);
+	resourceDesc.MipLevels = 1;
+	resourceDesc.Dimension = D3D12_RESOURCE_DIMENSION_TEXTURE2D;
+	resourceDesc.Alignment = 0;
+	resourceDesc.SampleDesc.Count = 1;
+	resourceDesc.SampleDesc.Quality = 0;
+	resourceDesc.Layout = D3D12_TEXTURE_LAYOUT_UNKNOWN;
+	resourceDesc.Flags = D3D12_RESOURCE_FLAG_NONE;
+
+	this->SetupResource(resourceDesc, s2ws("Texture: " + asset->path));
+	
 }
 
 void ShadowEngine::Rendering::D3D12::D3D12Texture2D::Upload()

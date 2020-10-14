@@ -45,10 +45,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 
 		//std::string temp = GetCubemapFileName(path, 0);
-		std::string temp = asset->GetTexturePath(0);
-		auto img_temp = IMG_Load(temp.c_str());
-		auto img_temp_converted = SDL_ConvertSurfaceFormat(img_temp, SDL_PIXELFORMAT_RGBA32, 0);
+		const std::string temp = asset->GetTexturePath(0);
+		auto* img_temp = IMG_Load(temp.c_str());
+		auto* img_temp_converted = SDL_ConvertSurfaceFormat(img_temp, SDL_PIXELFORMAT_RGBA32, 0);
 
+		format = SDLFormatToGXGI(*img_temp->format);
+		bitsPerPixel = img_temp->format->BitsPerPixel;
+		
 		//D3D12_RESOURCE_DESC for the GPU resource;
 		ZeroMemory(&resourceDesc, sizeof(D3D12_RESOURCE_DESC));
 		resourceDesc.DepthOrArraySize = 6;
@@ -72,12 +75,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//Load in the images
 		for (size_t i = 0; i < 6; i++)
 		{
-
-			auto img_temp = IMG_Load(asset->GetTexturePath(i).c_str());
-			auto img = SDL_ConvertSurfaceFormat(img_temp, SDL_PIXELFORMAT_RGBA32, 0);
-
-			format = SDLFormatToGXGI(*img->format);
-			bitsPerPixel = img->format->BitsPerPixel;
+			img_temp = IMG_Load(asset->GetTexturePath(i).c_str());
+			img_temp_converted = SDL_ConvertSurfaceFormat(img_temp, SDL_PIXELFORMAT_RGBA32, 0);
+			/*
+			format = SDLFormatToGXGI(*img_temp_converted->format);
+			bitsPerPixel = img_temp_converted->format->BitsPerPixel;
 
 			com_ptr<ID3D12Resource> cpuRes;
 
@@ -99,15 +101,20 @@ namespace ShadowEngine::Rendering::D3D12 {
 			DX_API("Failed to map upload resource")
 				cpuRes->Map(0, &readRange, &mappedPtr);
 
-			memcpy(mappedPtr, img->pixels, img->pitch * img->h);
+			memcpy(mappedPtr, img_temp_converted->pixels, img_temp_converted->pitch * img_temp_converted->h);
 
 
 			cpuRes->Unmap(0, nullptr);
 
 			uploadResource.push_back(cpuRes);
+			*/
+			imgs.push_back(img_temp_converted);
 		}
 
-
+		this->SetupResource(resourceDesc, s2ws("Cubemap: " + asset->path));
+		
+		//TODO: Use SetupResource
+		/*
 		DX_API("failed to create committed resource for texture file")
 			DX12RendererAPI::device->CreateCommittedResource(
 				&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT),
@@ -115,10 +122,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 				&resourceDesc,
 				D3D12_RESOURCE_STATE_COPY_DEST,
 				nullptr,
-				IID_PPV_ARGS(resource.GetAddressOf()));
+				IID_PPV_ARGS(m_d3d12Resource.GetAddressOf()));
 
-		resource->SetName(s2ws("Cubemap: " + asset->path).c_str());
-
+		m_d3d12Resource->SetName(s2ws("Cubemap: " + asset->path).c_str());
+		*/
 
 		ready = false;
 
@@ -126,9 +133,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	void D3D12TextureCubeMap::RecordTransfer(Ref<CommandList> commandList)
 	{
+		/*
 		for (UINT i = 0; i < 6; i++)
 		{
-			CD3DX12_TEXTURE_COPY_LOCATION dst{ resource.Get(), i };
+			CD3DX12_TEXTURE_COPY_LOCATION dst{ m_d3d12Resource.Get(), i };
 
 			D3D12_PLACED_SUBRESOURCE_FOOTPRINT psf;
 			psf.Offset = 0;
@@ -141,7 +149,19 @@ namespace ShadowEngine::Rendering::D3D12 {
 			commandList->CopyTextureRegion(&src, &dst);
 		}
 
-		commandList->ResourceBarrier(&CD3DX12_RESOURCE_BARRIER::Transition(resource.Get(), D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_COMMON));
+		commandList->ResourceBarrier(&CD3DX12_RESOURCE_BARRIER::Transition(m_d3d12Resource.Get(), D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_COMMON));
+		*/
+
+		D3D12_SUBRESOURCE_DATA subresource[6];
+		for (UINT i = 0; i < 6; i++)
+		{
+			subresource[i].RowPitch = imgs[i]->pitch;
+			subresource[i].SlicePitch = (long)imgs[i]->h * imgs[i]->pitch;
+			subresource[i].pData = imgs[i]->pixels;
+		}
+
+		commandList->CopyTextureSubresource(*this, 0, 6, subresource);
+		
 	}
 
 	void D3D12TextureCubeMap::FinishedUploading()
@@ -160,14 +180,32 @@ namespace ShadowEngine::Rendering::D3D12 {
 		DX12RendererAPI::Instance->UploadResource(this->shared_from_this());
 	}
 
-	com_ptr<ID3D12Resource> D3D12TextureCubeMap::GetResource()
+	D3D12_CPU_DESCRIPTOR_HANDLE D3D12TextureCubeMap::GetShaderResourceView(
+		const D3D12_SHADER_RESOURCE_VIEW_DESC* srvDesc) const
 	{
-		return resource;
+		//TODO: Figues out what to give back here
+		return D3D12_CPU_DESCRIPTOR_HANDLE();
 	}
 
+	D3D12_CPU_DESCRIPTOR_HANDLE D3D12TextureCubeMap::GetUnorderedAccessView(
+		const D3D12_UNORDERED_ACCESS_VIEW_DESC* uavDesc) const
+	{
+		//TODO: Figues out what to give back here
+		return D3D12_CPU_DESCRIPTOR_HANDLE();
+	}
+
+	/*
+	com_ptr<ID3D12Resource> D3D12TextureCubeMap::GetResource()
+	{
+		return m_d3d12Resource;
+	}
+	*/
+	
+	/*
 	DXGI_FORMAT D3D12TextureCubeMap::GetDXGIFormat()
 	{
 		return format;
 	}
+	*/
 
 }

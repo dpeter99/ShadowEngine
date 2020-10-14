@@ -6,12 +6,8 @@
 
 namespace ShadowEngine::Rendering::D3D12 {
 
-	/**
-	 * \brief Constructor for Dx12 Vertex Buffer
-	 * \param vertices The vertex data for this buffer to store
-	 * \param size the size of the data (total length in bites)
-	 */
-	D3D12VertexBuffer::D3D12VertexBuffer(void* vertices, uint32_t size)
+
+	D3D12VertexBuffer::D3D12VertexBuffer(void* vertices, uint32_t size, const std::wstring& name): VertexBuffer(size)//, Buffer(name)
 	{
 		//Id of the vertex buffer
 		//TODO: Replace with obj id form SHObject
@@ -25,32 +21,55 @@ namespace ShadowEngine::Rendering::D3D12 {
 				&CD3DX12_RESOURCE_DESC::Buffer(size),
 				D3D12_RESOURCE_STATE_GENERIC_READ,
 				nullptr,
-				IID_PPV_ARGS(vertexBuffer.GetAddressOf()));
+				IID_PPV_ARGS(uploadBuffer.GetAddressOf()));
 
 		//Get the CPU RAM mapped to the resource
 		CD3DX12_RANGE range{ 0,0 };
 		void* mappedPtr;
 		DX_API("Failed to map vertex buffer (IndexedGeometry)")
-			vertexBuffer->Map(0, &range, &mappedPtr);
+			uploadBuffer->Map(0, &range, &mappedPtr);
 
-		//Copy the data to the ram
+		//Copy the data to the Resource RAM
 		memcpy(mappedPtr, vertices, size);
-		vertexBuffer->Unmap(0, nullptr);
+		uploadBuffer->Unmap(0, nullptr);
 
 		//Name for debugging
 		DX_API("Failed to set name for vertex buffer (IndexedGeometry)")
-			vertexBuffer->SetName(WFormat(L"VertexBuffer#%d", id++).c_str());
+			uploadBuffer->SetName(WFormat(L"VertexBuffer#%d", id++).c_str());
+
+	
+	}
+
+	D3D12VertexBuffer::~D3D12VertexBuffer()
+	{
+		SH_CORE_TRACE("Vertex Buffer free");
+	}
+	/*
+	void D3D12VertexBuffer::RecordTransfer(Ref<D3D12::CommandList> cmd)
+	{
+		DX_API("failed to create committed resource for texture file")
+			DX12RendererAPI::device->CreateCommittedResource(
+				&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT),
+				D3D12_HEAP_FLAG_NONE,
+				&CD3DX12_RESOURCE_DESC::Buffer(size),
+				D3D12_RESOURCE_STATE_COPY_DEST,
+				nullptr,
+				IID_PPV_ARGS(vertexBuffer.GetAddressOf()));
+
+		vertexBuffer->SetName(s2ws("Cubemap: ").c_str());
 
 		
+		
+
 		vertexBufferView.BufferLocation = vertexBuffer->GetGPUVirtualAddress();
 		vertexBufferView.SizeInBytes = size;
 		vertexBufferView.StrideInBytes = sizeof(Vertex);
 	}
 
-	D3D12VertexBuffer::~D3D12VertexBuffer()
+	void D3D12VertexBuffer::FinishedUploading()
 	{
-		std::cout << "Vertex Buffer free";
 	}
+	*/
 
 	/**
 	 * \brief Constructor for Dx12 Index Buffer

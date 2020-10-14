@@ -27,7 +27,7 @@ namespace ShadowEngine::Assets {
 	typedef uint64_t UUID;
 
 	/// <summary>
-	/// Contains metadta about the asset
+	/// Contains metadata about the asset
 	/// </summary>
 	class AssetInfo
 	{
@@ -37,7 +37,7 @@ namespace ShadowEngine::Assets {
 		UUID uuid;
 
 		/// <summary>
-		/// UUID the is unique for all assets
+		/// UUID that is unique for all assets
 		/// </summary>
 		UUID global;
 
@@ -98,9 +98,9 @@ namespace ShadowEngine::Assets {
 		bool operator!=(UUID uuid) const;
 
 		/// <summary>
-		/// Operator for comparing with serach tags
+		/// Operator for comparing with search tags
 		/// </summary>
-		/// <param name="search_tags">The tags that the asset needs to incude in order to match</param>
+		/// <param name="search_tags">The tags that the asset needs to include in order to match</param>
 		/// <returns></returns>
 		bool operator==(const std::vector<std::string>& search_tags) const;
 
@@ -231,7 +231,7 @@ namespace ShadowEngine::Assets {
 		*/
 
 		/// <summary>
-		/// Loads an asset based on the suplied asset path
+		/// Loads an asset based on the supplied asset path
 		/// </summary>
 		/// <typeparam name="T"></typeparam>
 		/// <param name="path"></param>

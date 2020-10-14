@@ -1,0 +1,7 @@
+ShadowFileFormat_1_0_0
+Asset:{
+	Name:checker_board,
+}
+Texture:{
+	texture:checker_board.png,
+}

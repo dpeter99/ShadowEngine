@@ -26,7 +26,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 		isBeingRecorded = false;
 
-		
+		//m_ResourceStateTracker = std::make_unique<ResourceStateTracker>();
 	}
 
 	void CommandList::SetName(std::wstring name)
@@ -73,7 +73,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		{
 			// The "before" state is not important. It will be resolved by the resource state tracker.
 			auto barrier = CD3DX12_RESOURCE_BARRIER::Transition(resource.Get(), D3D12_RESOURCE_STATE_COMMON, stateAfter, subresource);
-			m_ResourceStateTracker->ResourceBarrier(barrier);
+			commandAllocator->GetResourceTracker()->ResourceBarrier(barrier);
 		}
 
 		if (flushBarriers)
@@ -106,11 +106,29 @@ namespace ShadowEngine::Rendering::D3D12 {
 	}
 
 
+	void CommandList::FlushResourceBarriers()
+	{
+		commandAllocator->GetResourceTracker()->FlushResourceBarriers(*this);
+	}
+
+	void CommandList::TrackResource(Microsoft::WRL::ComPtr<ID3D12Object> object)
+	{
+		commandAllocator->TrackResource(object);
+	}
+
+	void CommandList::TrackResource(const Resource& res)
+	{
+		TrackResource(res.GetD3D12Resource());
+	}
+
+
+	
+	
 	void CommandList::UploadToBuffer(Buffer& buffer, size_t numElements, size_t elementSize, const void* bufferData, D3D12_RESOURCE_FLAGS flags)
 	{
 		auto device = DX12RendererAPI::device;
 
-		size_t bufferSize = numElements * elementSize;
+		const size_t bufferSize = numElements * elementSize;
 
 
 		if (bufferData != nullptr)
@@ -126,16 +144,16 @@ namespace ShadowEngine::Rendering::D3D12 {
 				nullptr,
 				IID_PPV_ARGS(&uploadResource)));
 
-			D3D12_SUBRESOURCE_DATA subresourceData = {};
-			subresourceData.pData = bufferData;
-			subresourceData.RowPitch = bufferSize;
-			subresourceData.SlicePitch = subresourceData.RowPitch;
+			D3D12_SUBRESOURCE_DATA subResourceData;
+			subResourceData.pData = bufferData;
+			subResourceData.RowPitch = bufferSize;
+			subResourceData.SlicePitch = subResourceData.RowPitch;
 
-			m_ResourceStateTracker->TransitionResource(buffer, D3D12_RESOURCE_STATE_COPY_DEST);
+			commandAllocator->GetResourceTracker()->TransitionResource(buffer, D3D12_RESOURCE_STATE_COPY_DEST);
 			FlushResourceBarriers();
 
 			UpdateSubresources(m_commandList.Get(),  buffer.GetD3D12Resource().Get(),
-				uploadResource.Get(), 0, 0, 1, &subresourceData);
+				uploadResource.Get(), 0, 0, 1, &subResourceData);
 
 			// Add references to resources so they stay in scope until the command list is reset.
 			TrackResource(uploadResource);
@@ -195,6 +213,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		return this->isBeingRecorded;
 	}
 
+	
 	void CommandList::UseShader(const Ref<DX12Shader>& shader)
 	{
 		m_commandList->SetPipelineState(shader->GetPipelineState().Get());
@@ -318,21 +337,6 @@ namespace ShadowEngine::Rendering::D3D12 {
 	}
 	
 
-	void CommandList::FlushResourceBarriers()
-	{
-		m_ResourceStateTracker->FlushResourceBarriers(*this);
-	}
-
-	void CommandList::TrackResource(Microsoft::WRL::ComPtr<ID3D12Object> object)
-	{
-		m_TrackedObjects.push_back(object);
-	}
-
-	void CommandList::TrackResource(const Resource& res)
-	{
-		TrackResource(res.GetD3D12Resource());
-	}
-	
 	void CommandList::CopyTextureRegion(CD3DX12_TEXTURE_COPY_LOCATION* from, CD3DX12_TEXTURE_COPY_LOCATION* to)
 	{
 		m_commandList->CopyTextureRegion(to, 0, 0, 0, from, nullptr);

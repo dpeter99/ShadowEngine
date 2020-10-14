@@ -27,10 +27,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 		bool ready;
 	public:
 			
-		D3D12Texture2D(std::string path);
+		D3D12Texture2D(Assets::Texture2D* asset);
 
 		//com_ptr<ID3D12Resource> GetResource();
-		DXGI_FORMAT GetDXGIFormat();
+		//DXGI_FORMAT GetDXGIFormat();
 
 		// Inherited via D3D12IUploadable
 		virtual void RecordTransfer(Ref<D3D12::CommandList> cmd) override;

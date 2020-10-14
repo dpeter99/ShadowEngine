@@ -80,9 +80,7 @@ namespace ShadowEngine::Assets {
 		SetRootPath("./Resources/");
 	}
 
-	AssetManager::~AssetManager()
-	{
-	}
+	AssetManager::~AssetManager() = default;
 
 	void AssetManager::Init()
 	{
@@ -150,6 +148,7 @@ namespace ShadowEngine::Assets {
 		return *pack;
 	}
 
+	
 	bool AssetManager::CheckLoaded(std::string path, OUT ShadowEngine::Assets::ShadowAsset** asset = nullptr)
 	{
 		/*
