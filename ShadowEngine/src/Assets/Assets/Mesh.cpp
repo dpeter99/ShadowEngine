@@ -14,21 +14,29 @@
 namespace ShadowEngine::Assets {
 
 
-	Mesh::Mesh(void* vertices, unsigned sizeInBytes, unsigned stride, uint32_t* indexData,
-		unsigned indexDataSizeInBytes)
+	//Mesh::Mesh(void* vertices, unsigned sizeInBytes, unsigned stride, uint32_t* indexData,
+	//	unsigned indexDataSizeInBytes)
+	//{
+	//	SH_ASSERT(sizeInBytes == 0, "Vertex buffer can't be 0 size");
+	//	SH_ASSERT(indexDataSizeInBytes == 0, "Index buffer can't be 0 size");
+	//	
+	//	vertex_buffer.reset(ShadowEngine::Rendering::VertexBuffer::Create(vertices, sizeInBytes));
+	//	index_buffer.reset(ShadowEngine::Rendering::IndexBuffer::Create(indexData, indexDataSizeInBytes));
+	//}
+
+	Mesh::Mesh(std::vector<Rendering::Vertex> vertices,
+		std::vector<uint32_t> indexData)
 	{
-		SH_ASSERT(sizeInBytes == 0, "Vertex buffer can't be 0 size");
-		SH_ASSERT(indexDataSizeInBytes == 0, "Index buffer can't be 0 size");
-		
-		vertex_buffer.reset(ShadowEngine::Rendering::VertexBuffer::Create(vertices, sizeInBytes));
-		index_buffer.reset(ShadowEngine::Rendering::IndexBuffer::Create(indexData, indexDataSizeInBytes));
+		vertex_buffer.reset(ShadowEngine::Rendering::VertexBuffer::Create(vertices));
+		index_buffer.reset(ShadowEngine::Rendering::IndexBuffer::Create(indexData));
 	}
 
-	Mesh::Mesh(void* vertices, unsigned vert_count,
-		uint32_t* indexData, unsigned index_count)
+	void Mesh::SetName(std::string name)
 	{
-		vertex_buffer.reset(ShadowEngine::Rendering::VertexBuffer::Create(vertices, vert_count * sizeof(Rendering::Vertex)));
-		index_buffer.reset(ShadowEngine::Rendering::IndexBuffer::Create(indexData, index_count * sizeof(uint32_t)));
+		ShadowAsset::SetName(name);
+
+		index_buffer->SetName(name + "_Index");
+		vertex_buffer->SetName(name + "_Vertex");
 	}
 
 	Ref<Mesh> Mesh::LoadModel_obj(const std::string& filePath) {
@@ -96,8 +104,7 @@ namespace ShadowEngine::Assets {
 			&(indices.at(0)), (unsigned int)(indices.size() * 4), DXGI_FORMAT_R32_UINT);
 		*/
 
-		Ref<Mesh> m = std::make_shared<Mesh>(vertices.data(), vertices.size(),
-			indices.data(), indices.size());
+		Ref<Mesh> m = std::make_shared<Mesh>(vertices, indices);
 
 		return m;
 

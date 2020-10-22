@@ -94,8 +94,10 @@ namespace ShadowEngine::Assets {
 			indices.push_back(var.v3);
 		}
 		
-		return std::make_shared<Mesh>(vertices.data(), vertices.size(),
-									indices.data(), indices.size());
+		auto mesh = std::make_shared<Mesh>(vertices, indices);
+		mesh->SetName("Sphere");
+
+		return mesh;
 	}
 
 
@@ -166,11 +168,12 @@ namespace ShadowEngine::Assets {
 			indices.push_back(var.v2);
 		}
 
-		return std::make_shared<Mesh>(vertices.data(), vertices.size(),
-			indices.data(), indices.size());
+		return std::make_shared<Mesh>(vertices,indices);
 	}
 
 	void Mesh::Load(SFF::SFFElement& root, FileSystem::Path path)
 	{
 	}
+
+
 }

@@ -29,7 +29,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		int id;
 
-		Ref<UploadBuffer> m_UploadBuffer;
+		//###########################
+		//Dynamic Uplaod
+		//###########################
+
+		Scope<UploadBuffer> m_UploadBuffer;
 
 		//###########################
 		//Resource Tracking
@@ -106,6 +110,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 #pragma endregion
 		
 
+		//###########################
+		//Resource Tracking
+		//###########################
+
 		/// <summary>
 		/// Adds a resource to the internal resources list
 		/// </summary>
@@ -119,6 +127,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 		void TrackResource(const Resource& res);
 
 		Scope<ResourceStateTracker>& GetResourceTracker() { return m_ResourceStateTracker; }
+
+		//###########################
+		//Dynamic Uplaod
+		//###########################
+
+		Scope<UploadBuffer>& GetUploadBuffer() { return m_UploadBuffer; }
 	};
 
 }

@@ -38,8 +38,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 	void CommandList::Reset(uint64_t frame, Ref<D3D12CommandQueue> queue)
 	{
 		//if (isBeingRecorded)
-			isBeingRecorded = true;
+		isBeingRecorded = true;
 		
+		commandAllocator->GetResourceTracker()->Reset();
+
 		commandAllocator = DX12RendererAPI::Get().command_allocator_pool->GetFreeCommandAllocator(type, frame, queue);
 		m_commandList->Reset(commandAllocator->Allocator().Get(), nullptr);
 	}
@@ -122,9 +124,82 @@ namespace ShadowEngine::Rendering::D3D12 {
 	}
 
 
+	void CommandList::CopyBuffer(Buffer& buffer, size_t numElements, size_t elementSize, const void* bufferData, D3D12_RESOURCE_FLAGS flags)
+	{
+		auto device = DX12RendererAPI::device;
+
+		const size_t bufferSize = numElements * elementSize;
+
+		com_ptr<ID3D12Resource> d3d12Resource;
+
+		if (bufferSize == 0)
+		{
+			// This will result in a NULL resource (which may be desired to define a default null resource).
+		}
+		else
+		{
+			DX_API("Failled to create commited resource")
+			device->CreateCommittedResource(
+				&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT),
+				D3D12_HEAP_FLAG_NONE,
+				&CD3DX12_RESOURCE_DESC::Buffer(bufferSize, flags),
+				D3D12_RESOURCE_STATE_COMMON,
+				nullptr,
+				IID_PPV_ARGS(&d3d12Resource));
+
+			// Add the resource to the global resource state tracker.
+			ResourceStateTracker::AddGlobalResourceState(d3d12Resource.Get(), D3D12_RESOURCE_STATE_COMMON);
+
+			if (bufferData != nullptr)
+			{
+				// Create an upload resource to use as an intermediate buffer to copy the buffer resource 
+				com_ptr<ID3D12Resource> uploadResource;
+
+				DX_API("Failled to create upload resource")
+				device->CreateCommittedResource(
+					&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_UPLOAD),
+					D3D12_HEAP_FLAG_NONE,
+					&CD3DX12_RESOURCE_DESC::Buffer(bufferSize),
+					D3D12_RESOURCE_STATE_GENERIC_READ,
+					nullptr,
+					IID_PPV_ARGS(&uploadResource));
+
+				D3D12_SUBRESOURCE_DATA subresourceData = {};
+				subresourceData.pData = bufferData;
+				subresourceData.RowPitch = bufferSize;
+				subresourceData.SlicePitch = subresourceData.RowPitch;
+
+				commandAllocator->GetResourceTracker()->TransitionResource(d3d12Resource.Get(), D3D12_RESOURCE_STATE_COPY_DEST);
+				FlushResourceBarriers();
+
+				UpdateSubresources(m_commandList.Get(), d3d12Resource.Get(),
+					uploadResource.Get(), 0, 0, 1, &subresourceData);
+
+				// Add references to resources so they stay in scope until the command list is reset.
+				TrackResource(uploadResource);
+			}
+			TrackResource(d3d12Resource);
+		}
+
+		buffer.SetD3D12Resource(d3d12Resource);
+		buffer.CreateViews(numElements, elementSize);
+	}
+
+	void CommandList::CopyVertexBuffer(DX12VertexBuffer& vertexBuffer, size_t numVertices, size_t vertexStride, const void* vertexBufferData)
+	{
+		CopyBuffer(vertexBuffer, numVertices, vertexStride, vertexBufferData);
+	}
+
+	void CommandList::CopyIndexBuffer(DX12IndexBuffer& indexBuffer, size_t numIndicies, DXGI_FORMAT indexFormat, const void* indexBufferData)
+	{
+		size_t elementSize = indexFormat == DXGI_FORMAT_R16_UINT ? 2 : 4;
+
+		CopyBuffer(indexBuffer, numIndicies, elementSize, indexBufferData);
+	}
 	
 	
-	void CommandList::UploadToBuffer(Buffer& buffer, size_t numElements, size_t elementSize, const void* bufferData, D3D12_RESOURCE_FLAGS flags)
+
+	void CommandList::XDEP_UploadToBuffer(Buffer& buffer, size_t numElements, size_t elementSize, const void* bufferData, D3D12_RESOURCE_FLAGS flags)
 	{
 		auto device = DX12RendererAPI::device;
 
@@ -204,6 +279,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		isBeingRecorded = false;
 
+		commandAllocator->GetResourceTracker()->FlushResourceBarriers(*this);
+
 		DX_API("Failed to close command list")
 			m_commandList->Close();
 	}
@@ -214,13 +291,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 	}
 
 	
-	void CommandList::UseShader(const Ref<DX12Shader>& shader)
+	void CommandList::XDEP_UseShader(const Ref<DX12Shader>& shader)
 	{
 		m_commandList->SetPipelineState(shader->GetPipelineState().Get());
 		m_commandList->SetGraphicsRootSignature(shader->GetRootSignature().Get());
 	}
 	
-	void CommandList::DrawMesh(const std::shared_ptr<Assets::Mesh>& mesh)
+	void CommandList::XDEP_DrawMesh(const std::shared_ptr<Assets::Mesh>& mesh)
 	{
 		auto index = std::dynamic_pointer_cast<D3D12IndexBuffer>(mesh->index_buffer);
 		auto vert = std::dynamic_pointer_cast<D3D12VertexBuffer>(mesh->vertex_buffer);
@@ -231,42 +308,42 @@ namespace ShadowEngine::Rendering::D3D12 {
 		m_commandList->DrawIndexedInstanced(index->GetCount(), 1, 0, 0, 0);
 	}
 
-	void CommandList::BindConstantBuffer(const Ref<ConstantBuffer>& buffer, int registerIndex)
+	void CommandList::XDEP_BindConstantBuffer(const Ref<ConstantBuffer>& buffer, int registerIndex)
 	{
 		DX12ConstantBuffer* dx12_buffer = (DX12ConstantBuffer*)buffer->GetImpl().get();
 		//Ref<DX12ConstantBuffer> dx12_buffer = std::dynamic_pointer_cast<D3D12::DX12ConstantBuffer>(buffer->GetImpl());
 		m_commandList->SetGraphicsRootConstantBufferView(registerIndex, dx12_buffer->GetGPUVirtualAddress());
 	}
 
-	void CommandList::BindConstantBuffer(const ConstantBuffer& buffer, int registerIndex)
+	void CommandList::XDEP_BindConstantBuffer(const ConstantBuffer& buffer, int registerIndex)
 	{
 		DX12ConstantBuffer* dx12_buffer = (DX12ConstantBuffer*)buffer.GetImpl().get();
 		//Ref<DX12ConstantBuffer> dx12_buffer = std::dynamic_pointer_cast<D3D12::DX12ConstantBuffer>(buffer.GetImpl());
 		m_commandList->SetGraphicsRootConstantBufferView(registerIndex, dx12_buffer->GetGPUVirtualAddress());
 	}
 	
-	void CommandList::BindDescriptorTableBuffer(const CD3DX12_GPU_DESCRIPTOR_HANDLE& handle, int registerIndex)
+	void CommandList::XDEP_BindDescriptorTableBuffer(const CD3DX12_GPU_DESCRIPTOR_HANDLE& handle, int registerIndex)
 	{
 		D3D12_GPU_DESCRIPTOR_HANDLE h = handle;
 		m_commandList->SetGraphicsRootDescriptorTable(registerIndex, h);
 	}
 
-	void CommandList::SetDescriptorHeaps(int count, ID3D12DescriptorHeap* const* descriptorHeaps)
+	void CommandList::XDEP_SetDescriptorHeaps(int count, ID3D12DescriptorHeap* const* descriptorHeaps)
 	{
 		m_commandList->SetDescriptorHeaps(count,descriptorHeaps);
 	}
 
-	void CommandList::SetGraphicsDynamicConstantBuffer(uint32_t rootParameterIndex, size_t sizeInBytes, const void* bufferData)
+	void CommandList::XDEP_SetGraphicsDynamicConstantBuffer(uint32_t rootParameterIndex, size_t sizeInBytes, const void* bufferData)
 	{
 		// Constant buffers must be 256-byte aligned.
-		auto heapAllococation = m_UploadBuffer->Allocate(sizeInBytes, D3D12_CONSTANT_BUFFER_DATA_PLACEMENT_ALIGNMENT);
+		auto heapAllococation = commandAllocator->GetUploadBuffer()->Allocate(sizeInBytes, D3D12_CONSTANT_BUFFER_DATA_PLACEMENT_ALIGNMENT);
 		memcpy(heapAllococation.CPU, bufferData, sizeInBytes);
 
 		m_commandList->SetGraphicsRootConstantBufferView(rootParameterIndex, heapAllococation.GPU);
 	}
 	
 	/*
-	void CommandList::SetDescriptorHeaps(std::vector<Ref<D3D12DescriptorHeap>> descriptorHeaps)
+	void CommandList::XDEP_SetDescriptorHeaps(std::vector<Ref<D3D12DescriptorHeap>> descriptorHeaps)
 	{
 		std::vector< ID3D12DescriptorHeap*> heaps;
 		for (auto && descriptorHeap : descriptorHeaps)
@@ -274,7 +351,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 			heaps.push_back(descriptorHeap->Get().Get());
 		}
 		ID3D12DescriptorHeap** data = heaps.data();
-		commandList->SetDescriptorHeaps(descriptorHeaps.size(), data);
+		commandList->XDEP_SetDescriptorHeaps(descriptorHeaps.size(), data);
 	}
 	*/
 	

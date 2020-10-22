@@ -13,6 +13,8 @@
 #include "Buffers/UploadBuffer.h"
 
 #include "CommandAllocator/CommandAllocatorPool.h"
+#include <Platform\D3D12\Buffers\DX12VertexBuffer.h>
+#include <Platform\D3D12\Buffers\DX12IndexBuffer.h>
 
 namespace ShadowEngine::Rendering::D3D12 {
 	class Texture;
@@ -176,6 +178,44 @@ namespace ShadowEngine::Rendering::D3D12 {
 		void FlushResourceBarriers();
 		
 
+
+		/// <summary>
+		/// Copy the contents of a CPU buffer to a GPU buffer (possibly replacing the previous buffer contents).
+		/// </summary>
+		/// <param name="buffer"></param>
+		/// <param name="numElements"></param>
+		/// <param name="elementSize"></param>
+		/// <param name="bufferData"></param>
+		/// <param name="flags"></param>
+		void CopyBuffer(Buffer& buffer, size_t numElements, size_t elementSize, const void* bufferData, D3D12_RESOURCE_FLAGS flags = D3D12_RESOURCE_FLAG_NONE);
+
+		/// <summary>
+		/// Copy the contents to a vertex buffer in GPU memory.
+		/// </summary>
+		/// <param name="vertexBuffer"></param>
+		/// <param name="numVertices"></param>
+		/// <param name="vertexStride"></param>
+		/// <param name="vertexBufferData"></param>
+		void CopyVertexBuffer(DX12VertexBuffer& vertexBuffer, size_t numVertices, size_t vertexStride, const void* vertexBufferData);
+
+		template<typename T>
+		void CopyVertexBuffer(DX12VertexBuffer& vertexBuffer, const std::vector<T>& vertexBufferData)
+		{
+			CopyVertexBuffer(vertexBuffer, vertexBufferData.size(), sizeof(T), vertexBufferData.data());
+		}
+
+
+		void CopyIndexBuffer(DX12IndexBuffer& indexBuffer, size_t numIndicies, DXGI_FORMAT indexFormat, const void* indexBufferData);
+
+		template<typename T>
+		void CopyIndexBuffer(DX12IndexBuffer& indexBuffer, const std::vector<T>& indexBufferData)
+		{
+			assert(sizeof(T) == 2 || sizeof(T) == 4);
+
+			DXGI_FORMAT indexFormat = (sizeof(T) == 2) ? DXGI_FORMAT_R16_UINT : DXGI_FORMAT_R32_UINT;
+			return CopyIndexBuffer(indexBuffer, indexBufferData.size(), indexFormat, indexBufferData.data());
+		}
+
 		
 		/// <summary>
 		/// Uploads the given data to the specified buffer.
@@ -190,10 +230,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 		///	A example usage of this is uploading a single data
 		///	<code>		
 		///	Data* data = new Data;
-		///	UploadToBuffer(buffer, 1, sizeof(Type), data, D3D12_RESOURCE_FLAG_NONE)
+		///	XDEP_UploadToBuffer(buffer, 1, sizeof(Type), data, D3D12_RESOURCE_FLAG_NONE)
 		///	</code>
 		///	</example>
-		void UploadToBuffer(Buffer& buffer, size_t numElements, size_t elementSize, const void* bufferData,
+		void XDEP_UploadToBuffer(Buffer& buffer, size_t numElements, size_t elementSize, const void* bufferData,
 		                D3D12_RESOURCE_FLAGS flags);
 
 
@@ -203,21 +243,21 @@ namespace ShadowEngine::Rendering::D3D12 {
 		void CopyTextureSubresource(Texture& destination, uint32_t firstSubresource, uint32_t numSubresources, D3D12_SUBRESOURCE_DATA* subresourceData);
 		
 		
-		void DrawMesh(const std::shared_ptr<Assets::Mesh>& mesh);
+		void XDEP_DrawMesh(const std::shared_ptr<Assets::Mesh>& mesh);
 
-		void BindConstantBuffer [[deprecated]]  (const Ref<ConstantBuffer>& buffer, int materialSlotIndex);
-		void BindConstantBuffer [[deprecated]]  (const ConstantBuffer& buffer, int registerIndex);
-		void BindDescriptorTableBuffer [[deprecated]] (const CD3DX12_GPU_DESCRIPTOR_HANDLE& handle, int registerIndex);
+		void XDEP_BindConstantBuffer [[deprecated]]  (const Ref<ConstantBuffer>& buffer, int materialSlotIndex);
+		void XDEP_BindConstantBuffer [[deprecated]]  (const ConstantBuffer& buffer, int registerIndex);
+		void XDEP_BindDescriptorTableBuffer [[deprecated]] (const CD3DX12_GPU_DESCRIPTOR_HANDLE& handle, int registerIndex);
 
 		/**
 		* Set a dynamic constant buffer data to an inline descriptor in the root
 		* signature.
 		*/
-		void SetGraphicsDynamicConstantBuffer(uint32_t rootParameterIndex, size_t sizeInBytes, const void* bufferData);
+		void XDEP_SetGraphicsDynamicConstantBuffer(uint32_t rootParameterIndex, size_t sizeInBytes, const void* bufferData);
 		template<typename T>
-		void SetGraphicsDynamicConstantBuffer(uint32_t rootParameterIndex, const T& data)
+		void XDEP_SetGraphicsDynamicConstantBuffer(uint32_t rootParameterIndex, const T& data)
 		{
-			SetGraphicsDynamicConstantBuffer(rootParameterIndex, sizeof(T), &data);
+			XDEP_SetGraphicsDynamicConstantBuffer(rootParameterIndex, sizeof(T), &data);
 		}
 
 		
@@ -227,8 +267,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 	public:
 		void CopyTextureRegion(CD3DX12_TEXTURE_COPY_LOCATION* from, CD3DX12_TEXTURE_COPY_LOCATION* to);
 
-		void SetDescriptorHeaps [[deprecated]] (int count, ID3D12DescriptorHeap* const* descriptorHeaps);
-		//void SetDescriptorHeaps(std::vector<Ref<D3D12DescriptorHeap>> descriptorHeaps);
+		void XDEP_SetDescriptorHeaps [[deprecated]] (int count, ID3D12DescriptorHeap* const* descriptorHeaps);
+		//void XDEP_SetDescriptorHeaps(std::vector<Ref<D3D12DescriptorHeap>> descriptorHeaps);
 
 		/// <summary>
 		/// Set the currently bound descriptor heap.
@@ -250,7 +290,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		 * \param shader The shader to be used
 		 *
 		 */
-		void UseShader(const Ref<DX12Shader>& shader);
+		void XDEP_UseShader(const Ref<DX12Shader>& shader);
 
 		/// <summary>
 		/// Sets a resource as the SRV in the specified place

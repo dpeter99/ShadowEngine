@@ -19,10 +19,10 @@ namespace ShadowEngine::Assets {
 		Ref<Rendering::IndexBuffer> index_buffer;
 		Ref<Rendering::VertexBuffer> vertex_buffer;
 
-		Mesh(void* data, unsigned int sizeInBytes, unsigned int stride,
-			uint32_t* indexData, unsigned int indexDataSizeInBytes);
-		Mesh::Mesh(void* vertices, unsigned vert_count,
-			uint32_t* indexData, unsigned index_count);
+		/*Mesh(void* data, unsigned int sizeInBytes, unsigned int stride,
+			uint32_t* indexData, unsigned int indexDataSizeInBytes);*/
+
+		Mesh(std::vector<Rendering::Vertex> vertices, std::vector<uint32_t> indexData);
 
 		static Ref<Mesh> LoadModel_obj(const std::string& filePath);
 
@@ -30,5 +30,7 @@ namespace ShadowEngine::Assets {
 		static Ref<Mesh> CreateInverseSphere(int LatLines, int LongLines);
 
 		void Load(SFF::SFFElement& root, Assets::FileSystem::Path path) override;
+
+		void SetName(std::string name) override;
 	};
 }

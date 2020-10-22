@@ -74,6 +74,7 @@ namespace ShadowLight::Editor {
 
 			ImGui::TreePop();
 		}
+
 	}
 
 }

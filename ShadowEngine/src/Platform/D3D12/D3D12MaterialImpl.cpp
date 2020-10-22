@@ -40,7 +40,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	void D3D12MaterialImpl::BindMaterialData(Ref<CommandList> commandList)
 	{
-		//commandList->BindDescriptorTableBuffer(table.GPU_TableStart, 2);
+		//commandList->XDEP_BindDescriptorTableBuffer(table.GPU_TableStart, 2);
 
 		//Bind the CB in the table
 		commandList->SetShaderConstandBufferView(rootSigIndex, 0, *dx12_buffer);

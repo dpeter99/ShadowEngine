@@ -5,6 +5,7 @@
 
 namespace ShadowEngine::Rendering {
 
+	struct Vertex;
 
 	enum class ShaderDataType
 	{
@@ -151,7 +152,9 @@ namespace ShadowEngine::Rendering {
 		virtual const BufferLayout& GetLayout() const { return m_Layout; }
 		virtual void SetLayout(const BufferLayout& layout) { m_Layout = layout; }
 
-		static VertexBuffer* Create(void* vertices, uint32_t size);
+		virtual void SetName(std::string name) = 0;
+
+		static VertexBuffer* Create(std::vector<Vertex> verts);
 	};
 
 	/// <summary>
@@ -171,7 +174,11 @@ namespace ShadowEngine::Rendering {
 
 		virtual uint32_t GetCount() const = 0;
 
-		static IndexBuffer* Create(uint32_t* indices, uint32_t size);
+		virtual void SetName(std::string name) = 0;
+
+		static IndexBuffer* Create(std::vector<uint32_t> indices);
+
+
 	};
 
 }

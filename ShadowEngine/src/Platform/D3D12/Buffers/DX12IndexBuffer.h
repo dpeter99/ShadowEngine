@@ -6,17 +6,17 @@
 
 namespace ShadowEngine::Rendering::D3D12 {
 
-	class DX12VertexBuffer : public VertexBuffer, public Buffer
+	class DX12IndexBuffer : public IndexBuffer, public Buffer
 	{
-		std::vector<Vertex> vertices;
+		std::vector<uint32_t> indices;
 
 	public:
-		
+
 		/// <summary>
-		/// Creates the object but doe nothing to allocat or upload anything to the GPU
+		/// Creates the object but does nothing to allocat or upload anything to the GPU
 		/// </summary>
 		/// <param name="name">The name of this Buffer</param>
-		DX12VertexBuffer(const std::wstring& name = L"");
+		DX12IndexBuffer(const std::wstring& name = L"");
 
 		/// <summary>
 		/// Creates a Buffer with the suplied data.
@@ -24,9 +24,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// </summary>
 		/// <param name="verts">The vertex data</param>
 		/// <param name="name">The name of this Buffer</param>
-		DX12VertexBuffer(std::vector<Vertex> verts, const std::wstring& name = L"");
+		DX12IndexBuffer(std::vector<uint32_t> indices, const std::wstring& name = L"");
 
-		
+
 		//#######################
 		// IUploadable
 		//#######################
@@ -47,10 +47,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		virtual D3D12_CPU_DESCRIPTOR_HANDLE GetConstantBufferView(const D3D12_CONSTANT_BUFFER_VIEW_DESC* srvDesc = nullptr) const override;
 
+		// Inherited via IndexBuffer
+		virtual uint32_t GetCount() const override;
 
-		// Inherited via VertexBuffer
+		// Inherited via IndexBuffer
 		virtual void SetName(std::string name) override;
-
 	};
-
 }
+

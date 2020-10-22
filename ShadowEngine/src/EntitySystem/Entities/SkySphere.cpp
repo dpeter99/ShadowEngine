@@ -16,7 +16,7 @@ void SkySphere::Init()
 
 	renderer->SetMesh( ShadowEngine::Assets::Mesh::CreateSphere(0, 0));
 	
-	auto m_Shader = ShadowEngine::Ref<ShadowEngine::Rendering::Shader>(ShadowEngine::Rendering::Shader::CreateFromCompiled("Shaders/SkyBox-VS.cso", "Shaders/SkyBox-FS.cso"));
+	/*auto m_Shader = ShadowEngine::Ref<ShadowEngine::Rendering::Shader>(ShadowEngine::Rendering::Shader::CreateFromCompiled("Shaders/SkyBox-VS.cso", "Shaders/SkyBox-FS.cso"));
 
 	auto m_Material = std::make_shared<ShadowEngine::Assets::Material>(m_Shader);
 
@@ -29,7 +29,7 @@ void SkySphere::Init()
 
 	renderer->SetMaterial(m_Material);
 	renderer->SetScale({ 2,2,2 });
-	renderer->SetPosition({0,0,0});
+	renderer->SetPosition({0,0,0});*/
 }
 
 void SkySphere::Update(float dt)

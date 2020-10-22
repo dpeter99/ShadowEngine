@@ -16,6 +16,7 @@
 #include "ShadowRenderer/Renderer.h"
 #include "Platform/D3D12/DX12RendererAPI.h"
 #include "Platform/D3D12/Textures/D3D12TextureCubeMap.h"
+#include <Assets\Assets\Mesh.cpp>
 
 
 void TestScene::Init()
@@ -40,7 +41,13 @@ void TestScene::Init()
 	api->UploadResource((ShadowEngine::Rendering::D3D12::D3D12TextureCubeMap*)env_map->getImpl().get());
 	
 	
+	//MESH
 	
+	auto m = ShadowEngine::Assets::Mesh::CreateSphere(0, 0);
+	
+
+
+
 	
 	//auto sky = AddEntity<SkySphere>();
 	//sky->name = "Sky";

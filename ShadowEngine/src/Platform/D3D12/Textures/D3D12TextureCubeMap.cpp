@@ -168,11 +168,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 		ready = true;
 
+		/*
 		for each (auto var in uploadResource)
 		{
 			//TODO: This should free up the cpu side resources
 			var.Reset();
 		}
+		*/
 	}
 
 	void D3D12TextureCubeMap::Upload()

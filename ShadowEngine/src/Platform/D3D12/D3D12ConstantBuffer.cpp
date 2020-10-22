@@ -67,7 +67,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	void DX12ConstantBuffer::RecordTransfer(ShadowEngine::Ref<CommandList> cmd)
 	{
-		cmd->UploadToBuffer(*this, 1, m_bufferSize, dataToUpload, D3D12_RESOURCE_FLAG_ALLOW_UNORDERED_ACCESS);
+		cmd->XDEP_UploadToBuffer(*this, 1, m_bufferSize, dataToUpload, D3D12_RESOURCE_FLAG_ALLOW_UNORDERED_ACCESS);
 	}
 
 

@@ -11,7 +11,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		static int nextID = 0;
 		id = nextID++;
 
-		m_UploadBuffer = std::make_shared<UploadBuffer>();
+		m_UploadBuffer = std::make_unique<UploadBuffer>();
 		m_ResourceStateTracker = std::make_unique<ResourceStateTracker>();
 	}
 
