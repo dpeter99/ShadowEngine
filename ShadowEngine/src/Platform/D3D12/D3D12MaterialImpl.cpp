@@ -12,18 +12,20 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//Constant Buffer object
 
 		this->shaderData = std::make_shared<Rendering::ConstantBuffer_ShaderPropertySheet>(propertySheet);
-		dx12_buffer = ((DX12ConstantBuffer*)shaderData->GetImpl().get());
+		dx12_buffer = std::static_pointer_cast<DX12ConstantBuffer>(shaderData->GetImpl());
+
 		shaderData->Upload();
 
 
 		//Descriptor Table
-		//table = DX12RendererAPI::Get().AllocateDescriptors(D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV,1 + propertySheet->GetTextureCount());
+		table = DX12RendererAPI::Get().AllocateDescriptors(D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV,1 + propertySheet->GetTextureCount());
 
 		//Constant Buffer descriptor
 
-		//D3D12_CONSTANT_BUFFER_VIEW_DESC cbvDesc = {};
+		D3D12_CONSTANT_BUFFER_VIEW_DESC cbvDesc = {};
 		//cbvDesc.BufferLocation = dx12_buffer->GetGPUVirtualAddress();
 		//cbvDesc.SizeInBytes = dx12_buffer->GetSize(); // CB size is required to be 256-byte aligned.
+		auto buffer = dx12_buffer->GetConstantBufferView();
 		//DX12RendererAPI::device->CreateConstantBufferView(&cbvDesc, table.GetDescriptorHandle(0));
 
 		//Textures Descriptor
@@ -35,6 +37,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//
 		//	CreateTextureResourceView(i, prop);
 		//}
+
+		rootSigIndex = 0;
 
 	}
 
@@ -50,12 +54,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 		{
 			auto* prop = propertySheet->GetTexture<Assets::Texture>(i);
 			//TODO: FIX this
-			//auto texture = prop->GetPropertyDataTyped();
+			auto texture = prop->GetPropertyDataTyped();
 
-			//auto a = std::dynamic_pointer_cast<D3D12::Texture>(texture.getImpl());
+			auto a = std::dynamic_pointer_cast<D3D12::Texture>(texture->getImpl());
 
-			///CreateTextureResourceView(i, prop);
-			//commandList->SetShaderResourceView(this->rootSigIndex, i+1, *a);
+			CreateTextureResourceView(i, prop);
+			commandList->SetShaderResourceView(this->rootSigIndex, i+1, *a);
 		}
 		
 		

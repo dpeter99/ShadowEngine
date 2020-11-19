@@ -29,6 +29,18 @@ namespace  ShadowEngine::Assets {
 		return this->shader;
 	}
 
+	void Material::SetTexture2D(const std::string& name, Ref<Texture2D> value)
+	{
+		auto property = properties->GetTexture<Texture2D>(name);
+		if (property == nullptr) {
+			SH_CORE_WARN("No property named: '{0}' in shader: '{1}'", name, "....");
+			return;
+		}
+		property->SetValue(value);
+		//properties->UpdataStruct();
+		texture_dirty = true;
+	}
+
 	Ref<MaterialImpl> Material::getImpl()
 	{
 		return impl;

@@ -1,7 +1,7 @@
 #include "shpch.h"
 #include "ConstantBuffer.h"
 #include "RendererAPI.h"
-#include "Platform/D3D12/D3D12ConstantBuffer.h"
+#include "Platform/D3D12/Buffers/DX12ConstantBuffer.h"
 #include "Renderer.h"
 
 namespace ShadowEngine::Rendering {

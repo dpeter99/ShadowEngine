@@ -7,7 +7,7 @@
 
 namespace ShadowEngine::Assets {
 
-	const ShadowAsset* AssetInfo::getAsset() const {
+	const Ref<ShadowAsset> AssetInfo::getAsset() const {
 		if (loaded)
 			return asset;
 		else {
@@ -17,7 +17,7 @@ namespace ShadowEngine::Assets {
 
 	}
 
-	void AssetInfo::SetLoaded(ShadowAsset* asset) {
+	void AssetInfo::SetLoaded(Ref<ShadowAsset> asset) {
 		if (asset != nullptr) {
 			this->asset = asset;
 			this->loaded = true;

@@ -123,8 +123,8 @@ namespace ShadowEngine::Rendering {
 			return value.get();
 		}
 
-		T& GetPropertyDataTyped() {
-			return *value;
+		Ref<T> GetPropertyDataTyped() {
+			return value;
 		}
 
 		bool IsEmpty()

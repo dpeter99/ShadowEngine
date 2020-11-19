@@ -4,7 +4,7 @@
 #include "D3D12DescriptorHeap.h"
 #include "ShadowRenderer/ConstantBuffer.h"
 #include "DX12RendererAPI.h"
-#include "D3D12ConstantBuffer.h"
+#include "Buffers/DX12ConstantBuffer.h"
 #include "Assets/Assets/Textures/Texture.h"
 
 //#include "ShadowRenderer/MaterialImpl.h"
@@ -26,9 +26,11 @@ namespace  ShadowEngine::Rendering::D3D12 {
 		/// <summary>
 		/// The constant buffer that has the non texture data for this material
 		/// </summary>
+		/// This buffer holds the general data for the sahder like floats
+		/// They are all in a single constatnt buffer and uploaded if the data is marked as dirty
 		Ref<Rendering::ConstantBuffer> shaderData;
 
-		DX12ConstantBuffer* dx12_buffer;
+		Ref<DX12ConstantBuffer> dx12_buffer;
 
 		//std::vector<Ref<D3D12Texture2D>> textures;
 		

@@ -9,28 +9,56 @@ namespace ShadowEngineBuild
     {
         private static string baseCodePath;
 
-        private static string baseContentPath;
+        private static DirectoryInfo assetSrc;
+        private static DirectoryInfo outputPath;
 
-        public static void SetBuildEnviroment(string code, string contnent)
+        private static List<DirectoryInfo> packsSrc = new List<DirectoryInfo>();
+
+        public static void SetBuildEnviroment(DirectoryInfo assetRoot,
+                                              DirectoryInfo output)
         {
-            baseCodePath = code;
-            baseContentPath = contnent;
+
+            assetSrc = assetRoot;
+            outputPath = output;
+
+            var packs = assetSrc.GetDirectories();
+            foreach (var pack in packs)
+            {
+                Console.WriteLine("Found asset pack: " + pack.Name);
+                packsSrc.Add(pack);
+            }
         }
 
         public new static string ToString()
         {
             return "Code Folder:" + baseCodePath + "\n" +
-                   "Content Folder:" + baseContentPath + "\n";
+                   "Content Folder:" + assetSrc + "\n";
+        }
+
+        public static List<DirectoryInfo> GetAssetPackSourceDirectories()
+        {
+            return packsSrc;
+        }
+
+        /// <summary>
+        /// The root folder for the asset packs on the output side
+        /// </summary>
+        /// For example: ``C:\EngnieBuild\x64-Win10\Resources\``
+        /// where the build folder is: ``C:\EngnieBuild\x64-Win10\``
+        /// <returns></returns>
+        public static DirectoryInfo GetAssetPackOutputRoot()
+        {
+            return new DirectoryInfo(outputPath.FullName + "/Resources/");
         }
 
         public static string GetMapsFolder()
         {
-            return baseContentPath + "/Worlds/";
+            return assetSrc + "/Worlds/";
         }
 
-        public static string GetResourceFolder()
+        public static string GetResourceSrcFolder()
         {
-            return baseContentPath;
+            return assetSrc.FullName;
         }
     }
 }

@@ -10,6 +10,7 @@
 #include "D3D12MaterialImpl.h"
 #include "Core/ShadowApplication.h"
 #include "ImGui/ImGuiModule.h"
+#include "D3D12SwapChain.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 

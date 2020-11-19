@@ -47,7 +47,7 @@ namespace ShadowEngine::Assets {
 		Ref<FileSystem::AssetPack> pack;
 
 		bool loaded;
-		ShadowAsset* asset;
+		Ref<ShadowAsset> asset;
 
 	public:
 		AssetInfo(UUID uuid, UUID global, std::string path, Ref<FileSystem::AssetPack> pack) : 
@@ -83,10 +83,10 @@ namespace ShadowEngine::Assets {
 			return loaded;
 		}
 
-		const ShadowAsset* getAsset() const;
+		const Ref<ShadowAsset> getAsset() const;
 
 
-		void SetLoaded(ShadowAsset* asset);
+		void SetLoaded(Ref<ShadowAsset> asset);
 
 
 		bool operator==(const FileSystem::Path& name) const;
@@ -237,7 +237,7 @@ namespace ShadowEngine::Assets {
 		/// <param name="path"></param>
 		/// <returns></returns>
 		template <class T>
-		T* GetAsset(const FileSystem::Path path)
+		Ref<T> GetAsset(const FileSystem::Path path)
 		{
 			AssetInfoList::iterator& pair = std::find_if(knownAssets.begin(), knownAssets.end(), [&path](AssetInfoList::value_type& asset) {return asset.second->getPath() == path; });
 			
@@ -250,14 +250,15 @@ namespace ShadowEngine::Assets {
 			auto info = pair->second;
 
 			if (info->getLoaded()) {
-				return (T*)info->getAsset();
+				return std::dynamic_pointer_cast<T>( info->getAsset());
 			}
 
 			//Load in the asset
 			std::string full_path = path.GetFullPath();
 			auto root = SFF::SFFParser::ReadFromFile(full_path);
 
-			T* asset = new T();
+			//T* asset = new T();
+			auto asset = std::make_shared<T>();
 			asset->Load(*root, path);
 
 			info->SetLoaded(asset);

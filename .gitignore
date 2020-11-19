@@ -36,3 +36,5 @@ ShadowEngineInterop/**/*.csproj
 docs/obj/
 
 docs/output/
+
+.VSCodeCounter/

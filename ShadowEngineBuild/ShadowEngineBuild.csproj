@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
 
     <Platforms>AnyCPU;x64</Platforms>
 
@@ -31,6 +31,14 @@
 
   <ItemGroup>
     <ProjectReference Include="dependencies\TiledSharp\TiledSharp\TiledSharp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="src\ResourceCopy\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta1.20371.2" />
   </ItemGroup>
 
   

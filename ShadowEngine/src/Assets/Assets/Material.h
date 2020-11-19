@@ -6,6 +6,7 @@
 #include "ShadowRenderer/Buffer.h"
 #include "ShadowRenderer/Shader.h"
 #include "ShadowRenderer/ShaderProperties/ShaderPropertySheet.h"
+#include <Assets\Assets\Textures\Texture2D.h>
 
 namespace ShadowEngine::Rendering {
 	class ConstantBuffer;
@@ -88,6 +89,8 @@ namespace ShadowEngine::Assets {
 			//properties->UpdataStruct();
 			texture_dirty = true;
 		}
+
+		void SetTexture2D(const std::string& name, Ref<Texture2D> value);
 
 		//Ref<Rendering::ConstantBuffer>& GetBuffer();
 

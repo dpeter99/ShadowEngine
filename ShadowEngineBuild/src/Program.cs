@@ -1,18 +1,36 @@
-﻿using ShadowEngineBuild.src;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using TiledSharp;
+
+using System.CommandLine;
 
 
 namespace ShadowEngineBuild
 {
     class Program
     {
+
+
+
         static int Main(string[] args)
         {
+            RootCommand rootCommand = new RootCommand();
+            Option<DirectoryInfo> assetRootOption = new Option<DirectoryInfo>(
+                    "--asset-root",
+                    getDefaultValue: (() => null),
+                    description: "An option whose argument is parsed as an int"
+                    );
+            Option<DirectoryInfo> output = new Option<DirectoryInfo>(
+                    "--output",
+                    getDefaultValue: (() => null),
+                    description: "An option whose argument is parsed as an int"
+                    );
+
+            rootCommand.Add(assetRootOption);
+            rootCommand.Add(output);
+
             //Debugger.Launch();
             Console.WriteLine("########################################################################");
             Console.WriteLine("########################################################################");
@@ -20,15 +38,18 @@ namespace ShadowEngineBuild
             Console.WriteLine("########################################################################");
             Console.WriteLine("########################################################################");
 
-            if (String.IsNullOrEmpty(args[0]) || String.IsNullOrEmpty(args[1]))
-                return 1;
+            var res = rootCommand.Parse(args);
 
-            BuildEnviroment.SetBuildEnviroment(args[0],args[1]);
-            
+            var assetRoot = res.ValueForOption(assetRootOption);
+            var outFolder = res.ValueForOption(output);
+
+
+            BuildEnviroment.SetBuildEnviroment(assetRoot: assetRoot, output:outFolder);
+
             Console.WriteLine(BuildEnviroment.ToString());
 
 
-            ShadowMapConverter.ConvertMaps();
+            //ShadowMapConverter.ConvertMaps();
 
             BuildSystem system = new BuildSystem();
             system.Init();

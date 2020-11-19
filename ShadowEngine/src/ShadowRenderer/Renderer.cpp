@@ -70,8 +70,8 @@ namespace ShadowEngine::Rendering {
 	{
 		for (auto& node : *instance->scene)
 		{
-			ConstantBuffer& cb = node->GetCB();
-			//s_RendererAPI->Draw(node->GetMesh(), node->GetMaterial(),cb);
+			ConstantBuffer& model_data = node->GetCB();
+			s_RendererAPI->Draw(node->GetMesh(), node->GetMaterial(),model_data);
 		}
 	}
 

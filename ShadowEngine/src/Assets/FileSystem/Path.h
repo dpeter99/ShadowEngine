@@ -14,7 +14,7 @@ namespace ShadowEngine::Assets::FileSystem {
 
 	public:
 
-		Path(std::string p)
+		Path(const std::string p)
 		{
 			auto delim = p.find(pack_delimiter);
 
@@ -30,6 +30,10 @@ namespace ShadowEngine::Assets::FileSystem {
 			}
 
 			this->path = path;
+		}
+
+		Path(const char* c) : Path(std::string(c)) {
+
 		}
 
 		Path(std::string pack, std::string path): pack(pack), path(path)
@@ -53,6 +57,5 @@ namespace ShadowEngine::Assets::FileSystem {
 		operator std::string() const{
 			return pack + ":" + path.generic_string();
 		}
-
 	};
 }

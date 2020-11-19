@@ -11,7 +11,7 @@ namespace ShadowEngine::Assets {
 
 	class Element;
 	
-	class ShadowAsset : public ShadowEngine::SHObject
+	class ShadowAsset : public ShadowEngine::SHObject, public std::enable_shared_from_this<ShadowAsset>
 	{
 		SHObject_Base(ShadowAsset)
 		
@@ -31,5 +31,7 @@ namespace ShadowEngine::Assets {
 		virtual void SetName(std::string s);
 
 		virtual void Load(SFF::SFFElement& root, FileSystem::Path path);
+
+		
 	};
 }

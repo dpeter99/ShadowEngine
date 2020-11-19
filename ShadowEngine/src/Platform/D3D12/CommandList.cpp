@@ -4,8 +4,9 @@
 #include "DX12RendererAPI.h"
 #include "D3D12Shader.h"
 #include "D3D12Buffers.h"
-#include "D3D12ConstantBuffer.h"
+#include "Buffers/DX12ConstantBuffer.h"
 #include "Textures/Texture.h"
+#include "Platform/D3D12/D3D12SwapChain.h"
 
 namespace ShadowEngine::Rendering::D3D12 {
 
@@ -23,7 +24,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 		m_commandList->Close();
 
 		DX12RendererAPI::Get().command_allocator_pool->CheckFinished(0, nullptr);
-		
+
+		for (int i = 0; i < D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES; ++i)
+		{
+			m_DynamicDescriptorHeap[i] = std::make_unique<DynamicDescriptorHeap>(static_cast<D3D12_DESCRIPTOR_HEAP_TYPE>(i));
+			m_DescriptorHeaps[i] = nullptr;
+		}
+
 		isBeingRecorded = false;
 
 		//m_ResourceStateTracker = std::make_unique<ResourceStateTracker>();
@@ -196,6 +203,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		CopyBuffer(indexBuffer, numIndicies, elementSize, indexBufferData);
 	}
+
+	void CommandList::CopyConstantBuffer(DX12ConstantBuffer& constantBuffer, const int& size, const void* bufferData)
+	{
+		CopyBuffer(constantBuffer, 1, size, bufferData);
+	}
 	
 	
 
@@ -312,14 +324,14 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 		DX12ConstantBuffer* dx12_buffer = (DX12ConstantBuffer*)buffer->GetImpl().get();
 		//Ref<DX12ConstantBuffer> dx12_buffer = std::dynamic_pointer_cast<D3D12::DX12ConstantBuffer>(buffer->GetImpl());
-		m_commandList->SetGraphicsRootConstantBufferView(registerIndex, dx12_buffer->GetGPUVirtualAddress());
+		//m_commandList->SetGraphicsRootConstantBufferView(registerIndex, dx12_buffer->GetGPUVirtualAddress());
 	}
 
 	void CommandList::XDEP_BindConstantBuffer(const ConstantBuffer& buffer, int registerIndex)
 	{
 		DX12ConstantBuffer* dx12_buffer = (DX12ConstantBuffer*)buffer.GetImpl().get();
 		//Ref<DX12ConstantBuffer> dx12_buffer = std::dynamic_pointer_cast<D3D12::DX12ConstantBuffer>(buffer.GetImpl());
-		m_commandList->SetGraphicsRootConstantBufferView(registerIndex, dx12_buffer->GetGPUVirtualAddress());
+		//m_commandList->SetGraphicsRootConstantBufferView(registerIndex, dx12_buffer->GetGPUVirtualAddress());
 	}
 	
 	void CommandList::XDEP_BindDescriptorTableBuffer(const CD3DX12_GPU_DESCRIPTOR_HANDLE& handle, int registerIndex)

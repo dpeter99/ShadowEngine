@@ -15,6 +15,7 @@
 #include "CommandAllocator/CommandAllocatorPool.h"
 #include <Platform\D3D12\Buffers\DX12VertexBuffer.h>
 #include <Platform\D3D12\Buffers\DX12IndexBuffer.h>
+#include <Platform\D3D12\Buffers\DX12ConstantBuffer.h>
 
 namespace ShadowEngine::Rendering::D3D12 {
 	class Texture;
@@ -68,10 +69,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 		std::unique_ptr<DynamicDescriptorHeap> m_DynamicDescriptorHeap[D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES];
 
 		/// <summary>
-		/// The currently bound descriptor heaps. Only bind new one if it is not currently bound
+		/// [INTERNAL] The currently bound descriptor heaps.
 		/// </summary>
-		/// Keeps track of the currently bound descriptor heaps. Only change descriptor
-		/// heaps if they are different than the currently bound descriptor heaps.
+		/// These should not be edited manually. We only bind new one if it is not currently bound
+		/// Keeps track of the currently bound descriptor heaps.
 		ID3D12DescriptorHeap* m_DescriptorHeaps[D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES] = {};
 
 
@@ -182,11 +183,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// <summary>
 		/// Copy the contents of a CPU buffer to a GPU buffer (possibly replacing the previous buffer contents).
 		/// </summary>
-		/// <param name="buffer"></param>
-		/// <param name="numElements"></param>
-		/// <param name="elementSize"></param>
-		/// <param name="bufferData"></param>
-		/// <param name="flags"></param>
+		/// <param name="buffer">The buffer to copy into</param>
+		/// <param name="numElements">The number of elements to copy</param>
+		/// <param name="elementSize">The size of a sinlge element</param>
+		/// <param name="bufferData">Pointer to the data to copy</param>
+		/// <param name="flags">extra flags to use for the new GPU side resource</param>
 		void CopyBuffer(Buffer& buffer, size_t numElements, size_t elementSize, const void* bufferData, D3D12_RESOURCE_FLAGS flags = D3D12_RESOURCE_FLAG_NONE);
 
 		/// <summary>
@@ -215,6 +216,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 			DXGI_FORMAT indexFormat = (sizeof(T) == 2) ? DXGI_FORMAT_R16_UINT : DXGI_FORMAT_R32_UINT;
 			return CopyIndexBuffer(indexBuffer, indexBufferData.size(), indexFormat, indexBufferData.data());
 		}
+
+		void CopyConstantBuffer(DX12ConstantBuffer& constantBuffer,const int& size, const void* bufferData);
 
 		
 		/// <summary>

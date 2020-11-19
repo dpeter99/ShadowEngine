@@ -4,7 +4,7 @@
 #include "Common.h"
 #include "Platform/D3D12/D3D12Context.h"
 #include "D3D12CommandQueue.h"
-#include "D3D12SwapChain.h"
+//#include "D3D12SwapChain.h"
 #include "D3D12Fence.h"
 #include "CommandList.h"
 #include "Assets/Assets/Mesh.h"
@@ -15,6 +15,8 @@
 #include <Platform\D3D12\Descriptors\DescriptorAllocator.h>
 
 namespace ShadowEngine::Rendering::D3D12 {
+
+	class D3D12SwapChain;
 
 	/// <summary>
 	/// The DirectX12 Rendering back end

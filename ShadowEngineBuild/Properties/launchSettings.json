@@ -2,7 +2,7 @@
   "profiles": {
     "ShadowEngineBuild": {
       "commandName": "Project",
-      "commandLineArgs": "$(SolutionDir)\\ShadowEngine $(SolutionDir)\\ShadowLight\\Resources"
+      "commandLineArgs": "--asset-root $(SolutionDir)\\ShadowLight\\Resources --output $(SolutionDir)\\bin\\Debug-windows-x86_64\\ShadowLight"
     }
   }
 }

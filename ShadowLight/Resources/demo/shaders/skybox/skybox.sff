@@ -1,0 +1,8 @@
+ShadowFileFormat_1_0_0
+Asset:{
+	Name:skybox_shader,
+}
+Shader:{
+	VertexShader: SkyBox-VS,
+	FragmentShader: SkyBox-FS,
+}

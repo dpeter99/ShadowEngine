@@ -33,10 +33,10 @@ void TestScene::Init()
 	auto assetManager = ShadowEngine::Assets::AssetManager::getInstance();
 	auto env_map = assetManager->GetAsset<ShadowEngine::Assets::TextureCubeMap>({ "demo:/textures/cube_maps/ame_ash/ashcanyon.sff" });
 
-	auto girafe = assetManager->GetAsset<ShadowEngine::Assets::Texture2D>({ "demo:/textures/models/checker_board.sff" });
+	//auto girafe = assetManager->GetAsset<ShadowEngine::Assets::Texture2D>({ "demo:/textures/models/checker_board.sff" });
 
 	auto api = (ShadowEngine::Rendering::D3D12::DX12RendererAPI*) ShadowEngine::Rendering::Renderer::instance->GetRendererAPI();
-	api->UploadResource((ShadowEngine::Rendering::D3D12::D3D12TextureCubeMap*)girafe->getImpl().get());
+	//api->UploadResource((ShadowEngine::Rendering::D3D12::D3D12TextureCubeMap*)girafe->getImpl().get());
 
 	api->UploadResource((ShadowEngine::Rendering::D3D12::D3D12TextureCubeMap*)env_map->getImpl().get());
 	
@@ -49,8 +49,8 @@ void TestScene::Init()
 
 
 	
-	//auto sky = AddEntity<SkySphere>();
-	//sky->name = "Sky";
+	auto sky = AddEntity<SkySphere>();
+	sky->name = "Sky";
 	
 	/*
 	

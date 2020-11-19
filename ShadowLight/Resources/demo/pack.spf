@@ -2,4 +2,5 @@ ShadowFileFormat_1_0_0
 Assets:{
 	9:textures/cube_maps/ame_ash/ashcanyon.sff,
 	10:textures/models/checker_board.sff,
+	12:shaders/skybox/skybox.sff,
 }
