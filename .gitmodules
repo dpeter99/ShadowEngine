@@ -16,7 +16,7 @@
 	url = https://github.com/assimp/assimp.git
 [submodule "docs/templates/docfx-tmpl"]
 	path = docs/templates/docfx-tmpl
-	url = git@github.com:dpeter99/docfx-tmpl.git
+	url = https://github.com/dpeter99/docfx-tmpl
 [submodule "docs/templates/darkfx"]
 	path = docs/templates/darkfx
 	url = https://github.com/steffen-wilke/darkfx.git
