@@ -46,6 +46,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 		TrackResource(res.GetD3D12Resource());
 	}
 
+	void CommandAllocator::TrackObject(Microsoft::WRL::ComPtr<ID3D12Object> object)
+	{
+		m_TrackedObjects.push_back(object);
+	}
+
 	D3D12_COMMAND_LIST_TYPE CommandAllocator::GetType()
 	{
 		return this->type;

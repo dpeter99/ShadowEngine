@@ -7,6 +7,9 @@
 #include "Assets/Assets/Textures/Texture2D.h"
 #include "Assets/Assets/Textures/TextureCubeMap.h"
 
+
+
+
 namespace ShadowEngine::Rendering::D3D12 {
 
 	static DXGI_FORMAT ShaderDataTypeToD3D12BaseType(ShaderDataType type)
@@ -28,7 +31,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	}
 
 
-	DX12Shader::DX12Shader(const std::string& VSfilePath, const std::string& PSfilePath)
+	DX12Shader::DX12Shader(Shader& asset, const std::string& VSfilePath, const std::string& PSfilePath): Shader_Impl(asset)
 	{
 		LoadShader(VSfilePath, PSfilePath);
 	}
@@ -85,8 +88,11 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		//Load Root signature
 		DX_API("Failed to create root signature")
-			DX12RendererAPI::device->CreateRootSignature(0, VertexShaderByteCode->GetBufferPointer(),
-				VertexShaderByteCode->GetBufferSize(), IID_PPV_ARGS(rootSig.GetAddressOf()));
+			DX12RendererAPI::device->CreateRootSignature(0, 
+				VertexShaderByteCode.data(),
+				VertexShaderByteCode.size(),
+				IID_PPV_ARGS(rootSig.GetAddressOf())
+			);
 
 
 		//Create the Pipeline State Descriptor
@@ -94,8 +100,33 @@ namespace ShadowEngine::Rendering::D3D12 {
 		CreatePipelineDescriptor(gpsoDesc);
 
 
+		com_ptr<IDxcUtils> pUtils;
+		DxcCreateInstance(CLSID_DxcUtils, IID_PPV_ARGS(&pUtils));
+
+
+		DxcBuffer shaderBlob;
+		shaderBlob.Ptr = gpsoDesc.VS.pShaderBytecode;
+		shaderBlob.Size = gpsoDesc.VS.BytecodeLength;
+
+		//com_ptr<IDxcBlob> pReflectionData;
+		void* pReflectionData;
+		UINT32 size;
+		pUtils->GetDxilContainerPart(&shaderBlob, DXC_PART_REFLECTION_DATA, &pReflectionData, &size);
+
+		DxcBuffer ReflectionData;
+		ReflectionData.Encoding = DXC_CP_ACP;
+		ReflectionData.Ptr = pReflectionData; //pReflectionData->GetBufferPointer();
+		ReflectionData.Size = size; //pReflectionData->GetBufferSize();
+		
+		com_ptr< ID3D12ShaderReflection > pReflection;
+		DX_API("Failed to reflect vertex shader")
+			pUtils->CreateReflection(&ReflectionData, IID_PPV_ARGS(&pReflection));
+
+		/*
 		DX_API("Failed to reflect vertex shader")
 			D3DReflect(gpsoDesc.VS.pShaderBytecode, gpsoDesc.VS.BytecodeLength, IID_PPV_ARGS(vsReflection.GetAddressOf()));
+			
+			
 
 		DX_API("Failed to reflect pixel shader")
 			D3DReflect(gpsoDesc.PS.pShaderBytecode, gpsoDesc.PS.BytecodeLength, IID_PPV_ARGS(psReflection.GetAddressOf()));
@@ -104,6 +135,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 			DX_API("Failed to reflect geometry shader")
 				D3DReflect(gpsoDesc.GS.pShaderBytecode, gpsoDesc.GS.BytecodeLength, IID_PPV_ARGS(gsReflection.GetAddressOf()));
 		}
+		*/
 
 		DX_API("Failed to deserialize root signature")
 			D3D12CreateRootSignatureDeserializer(gpsoDesc.VS.pShaderBytecode, gpsoDesc.VS.BytecodeLength, IID_PPV_ARGS(rsDeserializer.GetAddressOf()));
@@ -121,23 +153,28 @@ namespace ShadowEngine::Rendering::D3D12 {
 	}
 
 
-	com_ptr<ID3DBlob> DX12Shader::LoadCso(const std::string& VSfilePath)
+	std::vector<char> DX12Shader::LoadCso(const std::string& shaderFilePath)
 	{
-		std::ifstream file{ VSfilePath, std::ios::binary | std::ios::ate };
+		std::ifstream file{ shaderFilePath, std::ios::binary | std::ios::ate };
 
-		ASSERT(file.is_open(), "Failed to open blob file: %s", VSfilePath.c_str());
+		ASSERT(file.is_open(), "Failed to open blob file: {0}", shaderFilePath.c_str());
 
 		std::streamsize size = file.tellg();
+
+		
 
 		file.seekg(0, std::ios::beg);
 
 		com_ptr<ID3DBlob> shaderByteCode{ nullptr };
 
-		DX_API("Failed to allocate memory for blob")
-			D3DCreateBlob((size_t)size, shaderByteCode.GetAddressOf());
+		//DX_API("Failed to allocate memory for blob")
+		//	D3DCreateBlob((size_t)size, shaderByteCode.GetAddressOf());
+		std::vector<char> data;
+		data.resize(size);
 
-		if (file.read(reinterpret_cast<char*>(shaderByteCode->GetBufferPointer()), size)) {
-			return shaderByteCode;
+		if (file.read(data.data(), size)) {
+			SH_CORE_ASSERT(data.size() > 0, "The cso file was empty...? {0}", shaderFilePath.c_str());
+			return data;
 		}
 		else {
 			throw std::exception{ "Failed to load CSO file" };
@@ -153,13 +190,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 		psoDesc.InputLayout = CreateInputDescriptor(Vertex::input_layout);
 
 		psoDesc.pRootSignature = rootSig.Get();
-		psoDesc.VS = CD3DX12_SHADER_BYTECODE(VertexShaderByteCode.Get());
+		psoDesc.VS = CD3DX12_SHADER_BYTECODE(VertexShaderByteCode.data(), VertexShaderByteCode.size());
 		/*
 		if (geometryShader != nullptr) {
 			psoDesc.GS = CD3DX12_SHADER_BYTECODE(geometryShader.Get());
 		}
 		*/
-		psoDesc.PS = CD3DX12_SHADER_BYTECODE(FragmentShaderByteCode.Get());
+		psoDesc.PS = CD3DX12_SHADER_BYTECODE(FragmentShaderByteCode.data(), FragmentShaderByteCode.size());
 		psoDesc.BlendState = blendState;
 		psoDesc.RasterizerState = rasterizerState;
 		psoDesc.DepthStencilState = depthStencilState;
@@ -196,6 +233,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	}
 
 	//old
+	/*
 	void DX12Shader::ExtractProperties()
 	{
 		//################################################################
@@ -274,7 +312,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 				}
 
 			}
-			else*/
+			else/
 			if (param.ParameterType == D3D12_ROOT_PARAMETER_TYPE_CBV &&
 				param.Descriptor.ShaderRegister == bindDesc.BindPoint &&
 				param.Descriptor.RegisterSpace == bindDesc.Space)
@@ -308,6 +346,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		properties.UpdataStruct();
 	}
+	*/
 
 	void DX12Shader::ExtractCBProps(D3D12_SHADER_INPUT_BIND_DESC binding) {
 
@@ -336,7 +375,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 			if (strcmp(type_desc.Name, "float4") == 0)
 			{
-				this->properties.AddProperty(new ShaderProperty<glm::vec4>(var_desc.Name));
+				//this->asset.properties.AddProperty(new ShaderProperty<glm::vec4>(var_desc.Name));
+				this->asset.GetProperties().AddProperty(new ShaderProperty<glm::vec4>(var_desc.Name));
 			}
 		}
 	}
@@ -347,10 +387,15 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//Extract the Material data form the shader
 		//################################################################
 
+
+		//First we extract the shader side properties that we will need to map
+		//These are the ones that start with Mat_
+
 		//Get the shader description
 		D3D12_SHADER_DESC shader_desc;
 		psReflection->GetDesc(&shader_desc);
 
+		//We store the parameters we found in this list for later.
 		std::vector<D3D12_SHADER_INPUT_BIND_DESC> parameters;
 		int descriptorTableParameterIndex = -1;
 
@@ -376,10 +421,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 					switch (binding_desc.Dimension)
 					{
 					case(D3D_SRV_DIMENSION_TEXTURE2D):
-						properties.AddTexture(new ShadowEngine::Rendering::ShaderRefProperty<Assets::Texture2D>(binding_desc.Name));
+						this->asset.GetProperties().AddTexture(new ShadowEngine::Rendering::ShaderRefProperty<Assets::Texture2D>(binding_desc.Name));
 						break;
 					case(D3D_SRV_DIMENSION_TEXTURECUBE):
-						properties.AddTexture(new ShadowEngine::Rendering::ShaderRefProperty<Assets::TextureCubeMap>(binding_desc.Name));
+						this->asset.GetProperties().AddTexture(new ShadowEngine::Rendering::ShaderRefProperty<Assets::TextureCubeMap>(binding_desc.Name));
 						break;
 					default:
 						break;

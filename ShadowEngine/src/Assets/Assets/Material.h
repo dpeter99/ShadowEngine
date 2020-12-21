@@ -15,8 +15,8 @@ namespace ShadowEngine::Rendering {
 namespace ShadowEngine::Assets {
 
 	/// <summary>
-	/// The actual render api implementation of materials
-	/// It shuld not be used by the user directly, but as the field of the Material Asset
+	/// The actual render api implementation of materials.
+	/// It should not be used by the user directly.
 	/// </summary>
 	class MaterialImpl
 	{
@@ -26,7 +26,7 @@ namespace ShadowEngine::Assets {
 		virtual void Upload() = 0;
 		virtual void UploadTextures() = 0;
 	};
-	
+
 	/// <summary>
 	/// Material asset
 	/// A material is the asset that we assign to the meshes. It specifies all the values that will be used for drawing the mesh.
@@ -38,30 +38,42 @@ namespace ShadowEngine::Assets {
 	{
 		SHObject_Base(Material)
 	private:
-			Ref<MaterialImpl> impl;
-		
+		Ref<MaterialImpl> impl;
+
 	private:
 
+		/// <summary>
+		/// The shader this material uses
+		/// </summary>
+		Ref<ShadowEngine::Rendering::Shader> shader;
 		
-		/**
-		 * \brief The shader this material uses
-		 */
-		std::shared_ptr<ShadowEngine::Rendering::Shader> shader;
-
-		
-		/**
-		 * \brief The properties sheet this material is using
-		 */
+		/// <summary>
+		/// The properties sheet this material is using
+		/// </summary>
 		Ref<Rendering::ShaderPropertySheet> properties;
 
-		//Ref<Rendering::ConstantBuffer> [[depricated]] shaderData;
-
-
-		
+		/// <summary>
+		/// Properties dirty
+		/// </summary>
+		/// Indicates if any of the non texture properties have changed.
 		bool dirty = true;
+
+		/// <summary>
+		/// Textures dirty
+		/// </summary>
+		/// Indicates if any textures have changed
 		bool texture_dirty = true;
-	public:		
+	public:
+		/// <summary>
+		/// returns the property sheet
+		/// </summary>
+		/// <returns>The property sheet in use by this material</returns>
 		Ref<Rendering::ShaderPropertySheet>& GetProperties();
+
+		/// <summary>
+		/// returns the shader used by this material
+		/// </summary>
+		/// <returns></returns>
 		Ref<Rendering::Shader> GetShader();
 
 		template<class T>
@@ -92,13 +104,11 @@ namespace ShadowEngine::Assets {
 
 		void SetTexture2D(const std::string& name, Ref<Texture2D> value);
 
-		//Ref<Rendering::ConstantBuffer>& GetBuffer();
-
 		Ref<MaterialImpl> getImpl();
-		
+
 		void UpdateBufferIfDirty();
-		
-		
+
+
 		Material(const Ref<Rendering::Shader>& shader);
 
 		void Load(SFF::SFFElement& root, FileSystem::Path path) override;

@@ -58,6 +58,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// </summary>
 		/// This is the command list that is being written into while recording.
 		/// This is always the current frame's list, it is reset at the end of the recording and assigned a new allocator
+		/// TODO: We should ask for a new command list form the command queu to awoid the awkward constructor part
 		Ref<D3D12::CommandList> command_list;
 
 		uint64_t frame_index;

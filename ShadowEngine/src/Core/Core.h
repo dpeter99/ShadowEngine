@@ -8,7 +8,10 @@
 
 #ifdef SH_ENABLE_ASSERTS
 
-	//Breaks if the test fails
+	/// <summary>
+	/// Breaks if the test fails
+	/// </summary>
+	/// <param name="x"></param>
 	#define SH_ASSERT(x, ...) { if(!(x)) { SH_ERROR(__VA_ARGS__); __debugbreak(); } }
 	
 	#define SH_CORE_ASSERT(x, ...) { if(!(x)) { SH_CORE_ERROR(__VA_ARGS__); __debugbreak(); } }

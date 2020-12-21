@@ -168,6 +168,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	{
 		Ref<DX12Shader> dx12_shader = std::dynamic_pointer_cast<D3D12::DX12Shader>(material->GetShader());
 		command_list->XDEP_UseShader(dx12_shader);
+		
 		command_list->XDEP_BindConstantBuffer(worldData, 0);
 		command_list->XDEP_BindConstantBuffer(meshData, 1);
 

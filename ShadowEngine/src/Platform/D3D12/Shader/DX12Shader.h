@@ -15,19 +15,26 @@ namespace ShadowEngine::Rendering::D3D12 {
 	/// Represents the shader byte code that can be used to draw.
 	/// </summary>
 	///
-	/// 
 	/// DX12Shader is the type ShadowEngine uses to represent byte code that has been compiled form HLSL to be used in
 	/// the Dx12 renderer. Users should not handle DX12Shader's by itself,
-	/// but the ShadowEngine::Rendering::Shader class and it's Create function to make sure the shader class is made for the right render API.
+	/// but use the ShadowEngine::Rendering::Shader class and obtain it form the asset manager
 	/// Sample Usage:
 	/// <code>
-	///     var shader = ShadowEngine::Rendering::Shader::CreateFromCompiled("Shaders/Default-VS.cso", "Shaders/Default-FS.cso");
+	///     auto shader = assetManager->GetAsset<ShadowEngine::Rendering::Shader>("demo:/shaders/skybox/skybox.sff");
 	/// </code>
 	class DX12Shader :
-		public Shader
+		public Shader_Impl
 	{
-		com_ptr<ID3DBlob> VertexShaderByteCode{ nullptr };
-		com_ptr<ID3DBlob> FragmentShaderByteCode{ nullptr };
+		/// <summary>
+		/// The byte code for the Vertex Shader
+		/// </summary>
+		std::vector<char> VertexShaderByteCode;
+
+		/// <summary>
+		/// The byte code for the Fragment Shader
+		/// </summary>
+		std::vector<char> FragmentShaderByteCode;
+
 
 		com_ptr<ID3D12RootSignature> rootSig{ nullptr };
 
@@ -53,7 +60,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// </summary>
 		/// <param name="VSfilePath">Path to the code file (.cso)</param>
 		/// <returns>Com pointer to the code blob</returns>
-		static com_ptr<ID3DBlob> DX12Shader::LoadCso(const std::string& VSfilePath);
+		static std::vector<char> DX12Shader::LoadCso(const std::string& shaderFilePath);
 
 		/// <summary>
 		/// Populates a Pipeline state Descriptor for this shader
@@ -64,34 +71,42 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// <summary>
 		/// Creates an Input Layout descriptor form BufferLayout
 		/// </summary>
+		/// 
+		/// This is used to create the Input layout form the internal engine side representation of the buffer layout
 		/// <param name="layout">The buffer layout to be converted</param>
 		/// <returns>The Input Layout</returns>
 		static D3D12_INPUT_LAYOUT_DESC CreateInputDescriptor(BufferLayout& layout);
 		
-		void ExtractProperties [[deprecated]] ();
+		/*
+		[[deprecated]]
+		void ExtractProperties ();
+		*/
 
 		void ExtractCBProps(D3D12_SHADER_INPUT_BIND_DESC binding);
+
 
 		void Props();
 
 
 	public:
 
+		DX12Shader(Shader& asset) : Shader_Impl(asset) {};
+
 		/// <summary>
-		/// Constructor for D3D12 Shader.
+		/// Constructor for D3D12 Shader. Used only if the shader is not part of the assets
 		/// </summary>
 		/// <param name="VSfilePath">File path to the Compiled HLSL Vertex shader</param>
 		/// <param name="PSfilePath">File path to the Compiled HLSL Fragment shader</param>
-		DX12Shader(const std::string& VSfilePath, const std::string& PSfilePath);
+		DX12Shader(Shader& asset, const std::string& VSfilePath, const std::string& PSfilePath);
 		virtual ~DX12Shader();
 
-		/**
-		 * Used to get the pipe line state object for the represented shader code.
-		 * Returns the default Dx12 ID3D12PipelineState object
-		 *
-		 * \brief Returns the pipeline state
-		 * \return The com pointer of the root signature
-		 */
+		/// <summary>
+		/// Returns the pipeline state
+		/// </summary>
+		/// 
+		/// Used to get the pipe line state object for the represented shader code.
+		/// Returns the default Dx12 ID3D12PipelineState object
+		/// <returns>The com pointer of the Pipeline state object</returns>
 		com_ptr<ID3D12PipelineState> GetPipelineState();
 
 		/**

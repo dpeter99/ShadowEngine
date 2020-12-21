@@ -24,6 +24,7 @@ IncludeDir["glm"] = "%{wks.location}/ShadowEngine/dependencies/glm"
 IncludeDir["stb_image"] = "%{wks.location}/ShadowEngine/dependencies/stb_image"
 IncludeDir["spdlog"] = "%{wks.location}/ShadowEngine/dependencies/spdlog/include"
 IncludeDir["assimp"] = "%{wks.location}/ShadowEngine/dependencies/assimp/include"
+IncludeDir["DXC"] = "%{wks.location}/ShadowEngine/dependencies/dxc/inc"
 
 IncludeDir["ShadowEngine"] = "ShadowEngine/src"
 

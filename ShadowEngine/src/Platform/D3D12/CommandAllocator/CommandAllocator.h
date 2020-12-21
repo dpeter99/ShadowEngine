@@ -15,7 +15,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	/// </summary>
 	///
 	/// Command allocators are the GPU memory that is used for storing the render commands
-	/// A Command list is used to record new commands into them. A command allocators memory cna be reused when all of the recorded commands finished executing.
+	/// A Command list is used to record new commands into them. A command allocators memory can be reused when all of the recorded commands finished executing.
 	class CommandAllocator
 	{
 		com_ptr<ID3D12CommandAllocator> m_commandAllocator;
@@ -36,7 +36,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		Scope<UploadBuffer> m_UploadBuffer;
 
 		//###########################
-		//Resource Tracking
+		//Resource/Object Tracking
 		//###########################
 
 		/// <summary>
@@ -127,6 +127,18 @@ namespace ShadowEngine::Rendering::D3D12 {
 		void TrackResource(const Resource& res);
 
 		Scope<ResourceStateTracker>& GetResourceTracker() { return m_ResourceStateTracker; }
+
+		//###########################
+		//Object tracking
+		//###########################
+
+		/// <summary>
+		/// Adds an object to the tracked objects list
+		/// </summary>
+		/// This prevents the object form being GCd while it is used by the pipeline.
+		/// <param name="object">The object to keep track of</param>
+		void TrackObject(Microsoft::WRL::ComPtr<ID3D12Object> object);
+
 
 		//###########################
 		//Dynamic Uplaod

@@ -26,7 +26,8 @@ project "ShadowLight"
 		"%{wks.location}/ShadowEngine/dependencies",
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.spdlog}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.DXC}"
 	}
 
 	prebuildcommands{
@@ -50,7 +51,7 @@ project "ShadowLight"
 
 	local shader_dir = "../bin/" .. outputdir .. "/%{prj.name}/"
 	
-	shadermodel "5.0"
+	shadermodel "6.3"
 	shaderentry "main"
 
 	filter "files:**.hlsl"

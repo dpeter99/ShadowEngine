@@ -130,6 +130,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 		TrackResource(res.GetD3D12Resource());
 	}
 
+	void CommandList::TrackObject(Microsoft::WRL::ComPtr<ID3D12Object> object)
+	{
+		commandAllocator->TrackObject(object);
+		
+	}
+
 
 	void CommandList::CopyBuffer(Buffer& buffer, size_t numElements, size_t elementSize, const void* bufferData, D3D12_RESOURCE_FLAGS flags)
 	{
@@ -306,7 +312,27 @@ namespace ShadowEngine::Rendering::D3D12 {
 	void CommandList::XDEP_UseShader(const Ref<DX12Shader>& shader)
 	{
 		m_commandList->SetPipelineState(shader->GetPipelineState().Get());
-		m_commandList->SetGraphicsRootSignature(shader->GetRootSignature().Get());
+		//SetGraphicsRootSignature(shader->GetRootSignature().Get());
+	}
+
+	void CommandList::SetGraphicsRootSignature(const RootSignature& rootSignature)
+	{
+		/*
+		auto d3d12RootSignature = rootSignature.GetRootSignature().Get();
+		if (m_RootSignature != d3d12RootSignature)
+		{
+			m_RootSignature = d3d12RootSignature;
+
+			for (int i = 0; i < D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES; ++i)
+			{
+				m_DynamicDescriptorHeap[i]->ParseRootSignature(rootSignature);
+			}
+
+			m_commandList->SetGraphicsRootSignature(m_RootSignature);
+
+			TrackObject(m_RootSignature);
+		}
+		*/
 	}
 	
 	void CommandList::XDEP_DrawMesh(const std::shared_ptr<Assets::Mesh>& mesh)

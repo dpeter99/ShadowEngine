@@ -22,27 +22,41 @@ namespace ShadowEngine::Rendering {
 		}
 	}
 
-	Shader* Shader::CreateFromCompiled(const std::string& VSfilePath, const std::string& PSfilePath)
+	Shader* Shader::CreateFromCompiled (const std::string& VSfilePath, const std::string& PSfilePath)
 	{
 		switch (Renderer::GetAPI())
 		{
 			case RendererAPI::API::None:    SH_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-			case RendererAPI::API::D3D12:  return new D3D12::DX12Shader(VSfilePath, PSfilePath);
+			//case RendererAPI::API::D3D12:  return new D3D12::DX12Shader(VSfilePath, PSfilePath);
 			default: SH_CORE_CRITICAL("Unknown RendererAPI: {0} !", (int)Renderer::GetAPI()); return nullptr;
+		}
+	}
+
+	Shader_Impl* Shader_Impl::Create(Shader& asset)
+	{
+		switch (Renderer::GetAPI())
+		{
+		case RendererAPI::API::None:    SH_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
+		case RendererAPI::API::D3D12:  return new D3D12::DX12Shader(asset);
+		default: SH_CORE_CRITICAL("Unknown RendererAPI: {0} !", (int)Renderer::GetAPI()); return nullptr;
 		}
 	}
 
 	void Shader::Load(SFF::SFFElement& root, Assets::FileSystem::Path path)
 	{
+		impl.reset(Shader_Impl::Create(*this));
 		
 		auto* shader_root = root.GetChildByName("Shader");
 
-		SH_CORE_ASSERT(shader_root == nullptr, "Bad metadata file for {0} shader");
+		SH_CORE_ASSERT(shader_root != nullptr, "Bad metadata file for '{0}' shader", path.GetFullPath());
 		
 		auto vertexShader = shader_root->GetStringProperty("VertexShader");
-		auto fragmentShader = shader_root->GetStringProperty("VertexShader");
+		vertexShader = path.GetFullFolderPath() + vertexShader + ".cso";
+		auto fragmentShader = shader_root->GetStringProperty("FragmentShader");
+		fragmentShader = path.GetFullFolderPath() + fragmentShader + ".cso";
 
 		this->LoadShader(vertexShader, fragmentShader);
 		
 	}
+
 }

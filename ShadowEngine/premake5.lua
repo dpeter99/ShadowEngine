@@ -39,7 +39,8 @@ project "ShadowEngine"
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.stb_image}",
 		"%{IncludeDir.spdlog}",
-		"%{IncludeDir.assimp}"
+		"%{IncludeDir.assimp}",
+		"dependencies/dxc/inc",
 	}
 
 	links 
@@ -47,10 +48,11 @@ project "ShadowEngine"
 		"Glad",
 		"ImGui",
 		
-		"opengl32.lib",
+		--"opengl32.lib",
 		"D3D12.lib",
 		"DXGI.lib",
-		"D3DCompiler.lib",
+		--"D3DCompiler.lib",
+		"dependencies/dxc/lib/x64/dxcompiler.lib",
 		"dxguid.lib"
 	}
 	
@@ -70,7 +72,7 @@ project "ShadowEngine"
 
 	local shader_dir = "../bin/" .. outputdir .. "/%{prj.name}/Shaders/"
 	
-	shadermodel "5.0"
+	shadermodel "6.0"
 	shaderentry "main"
 	
 	filter "files:ShadowEngine/dependencies/**.cpp"

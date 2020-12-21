@@ -74,13 +74,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// These should not be edited manually. We only bind new one if it is not currently bound
 		/// Keeps track of the currently bound descriptor heaps.
 		ID3D12DescriptorHeap* m_DescriptorHeaps[D3D12_DESCRIPTOR_HEAP_TYPE_NUM_TYPES] = {};
-
-
 		
 		// Resource created in an upload heap. Useful for drawing of dynamic geometry
 		// or for uploading constant buffer data that changes every draw call.
 		// Located in allocator now
 		//std::unique_ptr<UploadBuffer> m_UploadBuffer;
+
 
 	private:
 		/// <summary>
@@ -95,13 +94,19 @@ namespace ShadowEngine::Rendering::D3D12 {
 		/// <param name="object">The resource to be added</param>
 		void TrackResource(const Resource& res);
 		
+		/// <summary>
+		/// Adds an object to the tracked objects list
+		/// </summary>
+		/// This prevents the object form being GCd while it is used by the pipeline.
+		/// <param name="object">The object to keep track of</param>
+		void TrackObject(Microsoft::WRL::ComPtr<ID3D12Object> object);
+
 	public:
 		
 		CommandList(D3D12_COMMAND_LIST_TYPE type = D3D12_COMMAND_LIST_TYPE_DIRECT);
 
 		void SetName(std::wstring name);
 
-		
 		/// <summary>
 		/// Returns the underlying command list.
 		/// </summary>
@@ -220,6 +225,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		void CopyConstantBuffer(DX12ConstantBuffer& constantBuffer,const int& size, const void* bufferData);
 
 		
+
+
 		/// <summary>
 		/// Uploads the given data to the specified buffer.
 		/// </summary>
@@ -266,11 +273,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 		
 		
 
-		
-	public:
 		void CopyTextureRegion(CD3DX12_TEXTURE_COPY_LOCATION* from, CD3DX12_TEXTURE_COPY_LOCATION* to);
 
-		void XDEP_SetDescriptorHeaps [[deprecated]] (int count, ID3D12DescriptorHeap* const* descriptorHeaps);
+		[[deprecated("")]]
+		void XDEP_SetDescriptorHeaps (int count, ID3D12DescriptorHeap* const* descriptorHeaps);
 		//void XDEP_SetDescriptorHeaps(std::vector<Ref<D3D12DescriptorHeap>> descriptorHeaps);
 
 		/// <summary>
@@ -294,6 +300,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		 *
 		 */
 		void XDEP_UseShader(const Ref<DX12Shader>& shader);
+
+		void CommandList::SetGraphicsRootSignature(const RootSignature& rootSignature);
 
 		/// <summary>
 		/// Sets a resource as the SRV in the specified place
