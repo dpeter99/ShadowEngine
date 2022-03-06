@@ -8,6 +8,9 @@ namespace ShadowEngine::Rendering {
 
 	class Shader;
 
+	/// <summary>
+	/// Represents the code connected to the shader asset by hte rederer backend
+	/// </summary>
 	class Shader_Impl {
 	protected:
 		Shader& asset;
@@ -24,9 +27,8 @@ namespace ShadowEngine::Rendering {
 
 
 	/// <summary>
-	/// Represents a shared in the engine
+	/// Represents a shader asset in the engine
 	/// </summary>
-	/// TODO: Make shaders assets
 	class Shader : public ShadowEngine::Assets::ShadowAsset
 	{
 	private:
@@ -42,6 +44,8 @@ namespace ShadowEngine::Rendering {
 		
 	public:
 		virtual ~Shader() = default;
+
+		Ref<Shader_Impl> GetImpl() { return impl; }
 
 		ShaderPropertySheet* GetPropertiesCopy() const;
 		

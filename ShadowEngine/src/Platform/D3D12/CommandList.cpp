@@ -312,12 +312,12 @@ namespace ShadowEngine::Rendering::D3D12 {
 	void CommandList::XDEP_UseShader(const Ref<DX12Shader>& shader)
 	{
 		m_commandList->SetPipelineState(shader->GetPipelineState().Get());
-		//SetGraphicsRootSignature(shader->GetRootSignature().Get());
+		SetGraphicsRootSignature(*shader->GetRootSignature());
 	}
 
 	void CommandList::SetGraphicsRootSignature(const RootSignature& rootSignature)
 	{
-		/*
+		
 		auto d3d12RootSignature = rootSignature.GetRootSignature().Get();
 		if (m_RootSignature != d3d12RootSignature)
 		{
@@ -332,7 +332,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 			TrackObject(m_RootSignature);
 		}
-		*/
+		
 	}
 	
 	void CommandList::XDEP_DrawMesh(const std::shared_ptr<Assets::Mesh>& mesh)

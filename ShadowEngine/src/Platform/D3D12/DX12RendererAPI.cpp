@@ -166,8 +166,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 	void DX12RendererAPI::Draw(const std::shared_ptr<Assets::Mesh>& mesh, const std::shared_ptr<Assets::Material>& material, const ConstantBuffer& meshData)
 	{
-		Ref<DX12Shader> dx12_shader = std::dynamic_pointer_cast<D3D12::DX12Shader>(material->GetShader());
+		Ref<DX12Shader> dx12_shader = std::dynamic_pointer_cast<D3D12::DX12Shader>(material->GetShader()->GetImpl());
 		command_list->XDEP_UseShader(dx12_shader);
+		
 		
 		command_list->XDEP_BindConstantBuffer(worldData, 0);
 		command_list->XDEP_BindConstantBuffer(meshData, 1);

@@ -3,6 +3,8 @@
 
 #include "../Common.h"
 
+#include "RootSignature.h"
+
 namespace ShadowEngine {
 	namespace Rendering {
 		class BufferLayout;
@@ -36,7 +38,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		std::vector<char> FragmentShaderByteCode;
 
 
-		com_ptr<ID3D12RootSignature> rootSig{ nullptr };
+		com_ptr<ID3D12RootSignature> rootSig_OLD{ nullptr };
+		Ref<RootSignature> rootSig;
 
 		D3D12_BLEND_DESC blendState{};
 		D3D12_RASTERIZER_DESC rasterizerState{};
@@ -49,7 +52,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		com_ptr<ID3D12ShaderReflection> vsReflection;
 		com_ptr<ID3D12ShaderReflection> gsReflection;
 		com_ptr<ID3D12ShaderReflection> psReflection;
-		com_ptr<ID3D12RootSignatureDeserializer> rsDeserializer;
+		com_ptr<ID3D12VersionedRootSignatureDeserializer> rsDeserializer;
 
 		int materialDataIndex;
 		
@@ -116,7 +119,8 @@ namespace ShadowEngine::Rendering::D3D12 {
 		* \brief Returns the Root signature
 		* \return The com pointer of the root signature
 		*/
-		com_ptr<ID3D12RootSignature> GetRootSignature();
+		//com_ptr<ID3D12RootSignature> GetRootSignature();
+		Ref<RootSignature> GetRootSignature();
 		
 		int GetMaterialSlotIndex();
 		

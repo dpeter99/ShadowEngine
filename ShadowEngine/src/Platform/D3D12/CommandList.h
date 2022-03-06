@@ -81,6 +81,10 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//std::unique_ptr<UploadBuffer> m_UploadBuffer;
 
 
+		// Keep track of the currently bound root signatures to minimize root
+		// signature changes.
+		ID3D12RootSignature* m_RootSignature;
+
 	private:
 		/// <summary>
 		/// Adds a resource to the internal resources list

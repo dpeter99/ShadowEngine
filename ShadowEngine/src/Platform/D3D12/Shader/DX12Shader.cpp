@@ -12,6 +12,18 @@
 
 namespace ShadowEngine::Rendering::D3D12 {
 
+	void MakeReflection(com_ptr<IDxcUtils>& pUtils, const void* blob, SIZE_T size, com_ptr<ID3D12ShaderReflection>& refl) {
+
+		DxcBuffer shaderBlob;
+		shaderBlob.Encoding = DXC_CP_ACP;
+		shaderBlob.Ptr = blob;
+		shaderBlob.Size = size;
+
+		com_ptr< ID3D12ShaderReflection > pReflection;
+		DX_API("Failed to reflect vertex shader")
+			pUtils->CreateReflection(&shaderBlob, IID_PPV_ARGS(refl.GetAddressOf()));
+	}
+
 	static DXGI_FORMAT ShaderDataTypeToD3D12BaseType(ShaderDataType type)
 	{
 		switch (type)
@@ -31,7 +43,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 	}
 
 
-	DX12Shader::DX12Shader(Shader& asset, const std::string& VSfilePath, const std::string& PSfilePath): Shader_Impl(asset)
+	DX12Shader::DX12Shader(Shader& asset, const std::string& VSfilePath, const std::string& PSfilePath) : Shader_Impl(asset)
 	{
 		LoadShader(VSfilePath, PSfilePath);
 	}
@@ -46,7 +58,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		return pipelineState;
 	}
 
-	com_ptr<ID3D12RootSignature> DX12Shader::GetRootSignature()
+	Ref<RootSignature> DX12Shader::GetRootSignature()
 	{
 		return rootSig;
 	}
@@ -56,7 +68,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		return materialDataIndex;
 	}
 
-	
+
 	void DX12Shader::Bind() const
 	{
 		SH_CORE_CRITICAL("This call is not used and should not be called How did we get here?");
@@ -67,7 +79,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		SH_CORE_CRITICAL("This call is not used and should not be called How did we get here?");
 	}
 
-	
+
 	void DX12Shader::LoadShader(const std::string& VSFilePath, const std::string& PSFilePath, bool compiled)
 	{
 		//Load in the default values for now
@@ -88,57 +100,37 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		//Load Root signature
 		DX_API("Failed to create root signature")
-			DX12RendererAPI::device->CreateRootSignature(0, 
+			DX12RendererAPI::device->CreateRootSignature(0,
 				VertexShaderByteCode.data(),
 				VertexShaderByteCode.size(),
-				IID_PPV_ARGS(rootSig.GetAddressOf())
+				IID_PPV_ARGS(rootSig_OLD.GetAddressOf())
 			);
+
+		
 
 
 		//Create the Pipeline State Descriptor
 		ZeroMemory(&gpsoDesc, sizeof(D3D12_GRAPHICS_PIPELINE_STATE_DESC));
 		CreatePipelineDescriptor(gpsoDesc);
 
-
 		com_ptr<IDxcUtils> pUtils;
 		DxcCreateInstance(CLSID_DxcUtils, IID_PPV_ARGS(&pUtils));
 
+		MakeReflection(pUtils,gpsoDesc.VS.pShaderBytecode, gpsoDesc.VS.BytecodeLength, vsReflection);
 
-		DxcBuffer shaderBlob;
-		shaderBlob.Ptr = gpsoDesc.VS.pShaderBytecode;
-		shaderBlob.Size = gpsoDesc.VS.BytecodeLength;
+		MakeReflection(pUtils,gpsoDesc.PS.pShaderBytecode, gpsoDesc.PS.BytecodeLength, psReflection);
 
-		//com_ptr<IDxcBlob> pReflectionData;
-		void* pReflectionData;
-		UINT32 size;
-		pUtils->GetDxilContainerPart(&shaderBlob, DXC_PART_REFLECTION_DATA, &pReflectionData, &size);
-
-		DxcBuffer ReflectionData;
-		ReflectionData.Encoding = DXC_CP_ACP;
-		ReflectionData.Ptr = pReflectionData; //pReflectionData->GetBufferPointer();
-		ReflectionData.Size = size; //pReflectionData->GetBufferSize();
-		
-		com_ptr< ID3D12ShaderReflection > pReflection;
-		DX_API("Failed to reflect vertex shader")
-			pUtils->CreateReflection(&ReflectionData, IID_PPV_ARGS(&pReflection));
-
-		/*
-		DX_API("Failed to reflect vertex shader")
-			D3DReflect(gpsoDesc.VS.pShaderBytecode, gpsoDesc.VS.BytecodeLength, IID_PPV_ARGS(vsReflection.GetAddressOf()));
-			
-			
-
-		DX_API("Failed to reflect pixel shader")
-			D3DReflect(gpsoDesc.PS.pShaderBytecode, gpsoDesc.PS.BytecodeLength, IID_PPV_ARGS(psReflection.GetAddressOf()));
-
-		if (gpsoDesc.GS.pShaderBytecode != nullptr) {
-			DX_API("Failed to reflect geometry shader")
-				D3DReflect(gpsoDesc.GS.pShaderBytecode, gpsoDesc.GS.BytecodeLength, IID_PPV_ARGS(gsReflection.GetAddressOf()));
-		}
-		*/
 
 		DX_API("Failed to deserialize root signature")
-			D3D12CreateRootSignatureDeserializer(gpsoDesc.VS.pShaderBytecode, gpsoDesc.VS.BytecodeLength, IID_PPV_ARGS(rsDeserializer.GetAddressOf()));
+			D3D12CreateVersionedRootSignatureDeserializer(gpsoDesc.VS.pShaderBytecode, gpsoDesc.VS.BytecodeLength, IID_PPV_ARGS(rsDeserializer.GetAddressOf()));
+		
+
+		const D3D12_VERSIONED_ROOT_SIGNATURE_DESC* rsDesc;
+		DX_API("Failed to get 1.1 root sig")
+			rsDeserializer->GetRootSignatureDescAtVersion(D3D_ROOT_SIGNATURE_VERSION_1_1, &rsDesc);
+		rootSig = std::make_shared<RootSignature>(rsDesc->Desc_1_1,D3D_ROOT_SIGNATURE_VERSION_1_1);
+
+
 
 		//Create the pipeline state object from the descriptor
 		com_ptr<ID3D12PipelineState> pso{ nullptr };
@@ -148,7 +140,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		pipelineState = pso;
 
-		Props();
+ 		Props();
 		//ExtractProperties();
 	}
 
@@ -161,7 +153,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 		std::streamsize size = file.tellg();
 
-		
+
 
 		file.seekg(0, std::ios::beg);
 
@@ -189,7 +181,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		psoDesc.RTVFormats[0] = DXGI_FORMAT_R8G8B8A8_UNORM;
 		psoDesc.InputLayout = CreateInputDescriptor(Vertex::input_layout);
 
-		psoDesc.pRootSignature = rootSig.Get();
+		psoDesc.pRootSignature = rootSig_OLD.Get();
 		psoDesc.VS = CD3DX12_SHADER_BYTECODE(VertexShaderByteCode.data(), VertexShaderByteCode.size());
 		/*
 		if (geometryShader != nullptr) {
@@ -206,7 +198,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		psoDesc.SampleMask = UINT_MAX;
 	}
 
-	
+
 	D3D12_INPUT_LAYOUT_DESC DX12Shader::CreateInputDescriptor(BufferLayout& layout)
 	{
 		D3D12_INPUT_LAYOUT_DESC layout_desc;
@@ -387,6 +379,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//Extract the Material data form the shader
 		//################################################################
 
+		// Shader properties    	Root signature			
+		//|----------|		|---------|     |-------------|
+		//| Mat_data |  ->  | CB View |  <- |  Desc table |
+		//|----------|		|---------|     |-------------|
+		//| Texture  |		| CB View |		| IDKSomthing |
+		//|----------|		|---------|		|-------------|
+		//  				
 
 		//First we extract the shader side properties that we will need to map
 		//These are the ones that start with Mat_
@@ -467,21 +466,26 @@ namespace ShadowEngine::Rendering::D3D12 {
 				std::cout << "\t Dim: " << binding_desc.Dimension << std::endl;
 				std::wcout << "\t Material Data: " << (matdata ? "OK" : "NOP") << std::endl;
 
-			}
-#endif
 		}
+#endif
+	}
 
 
-		//Extract the rood signature
-		const D3D12_ROOT_SIGNATURE_DESC& rootSignatureDesc = *(rsDeserializer->GetRootSignatureDesc());
+		//Extract the root signature
+		const D3D12_VERSIONED_ROOT_SIGNATURE_DESC* rsDesc;
+		DX_API("Failed to deserialize root signature")
+			rsDeserializer->GetRootSignatureDescAtVersion(D3D_ROOT_SIGNATURE_VERSION_1_1, &rsDesc);
+
+		const D3D12_ROOT_SIGNATURE_DESC1& rootSignatureDesc = rsDesc->Desc_1_1;
 
 #ifdef DX12_DEBUG
 		std::cout << "RootSig: " << std::endl;
 #endif
 
+		//Iterate the Descriptor parameters
 		for (size_t i = 0; i < rootSignatureDesc.NumParameters; i++)
 		{
-			D3D12_ROOT_PARAMETER param = rootSignatureDesc.pParameters[i];
+			D3D12_ROOT_PARAMETER1 param = rootSignatureDesc.pParameters[i];
 
 			//Debug info
 #ifdef DX12_DEBUG
@@ -512,9 +516,9 @@ namespace ShadowEngine::Rendering::D3D12 {
 
 				std::cout << "\tParameter: Type: " << type << std::endl;
 
-			}
+		}
 #endif
-
+			//We only use descriptor tables for the material data
 			if (param.ParameterType == D3D12_ROOT_PARAMETER_TYPE_DESCRIPTOR_TABLE) {
 
 				//Debug Info
@@ -551,13 +555,13 @@ namespace ShadowEngine::Rendering::D3D12 {
 							std::cout << "\t\t\t Register space: " << range.RegisterSpace << std::endl;
 							std::cout << "\t\t\t Count: " << range.NumDescriptors << std::endl;
 						}
-					}
-				}
+			}
+}
 #endif
 
 				for (size_t j = 0; j < param.DescriptorTable.NumDescriptorRanges; j++)
 				{
-					D3D12_DESCRIPTOR_RANGE range = param.DescriptorTable.pDescriptorRanges[j];
+					D3D12_DESCRIPTOR_RANGE1 range = param.DescriptorTable.pDescriptorRanges[j];
 
 					for each (auto & matBinding in parameters)
 					{
@@ -586,7 +590,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 				{
 					std::cout << "\t\t Register Space: " << param.Descriptor.RegisterSpace << std::endl;
 					std::cout << "\t\t Shader Register: " << param.Descriptor.ShaderRegister << std::endl;
-				}
+			}
 #endif
 
 				for each (auto & matBinding in parameters)
