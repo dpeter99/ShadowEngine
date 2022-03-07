@@ -23,7 +23,7 @@ namespace ShadowEngine::Rendering::D3D12 {
 		//Constant Buffer descriptor
 
 		D3D12_CONSTANT_BUFFER_VIEW_DESC cbvDesc = {};
-		cbvDesc.BufferLocation = dx12_buffer->GetGPUVirtualAddress();
+		//bvDesc.BufferLocation = dx12_buffer->GetGPUVirtualAddress(); TODO:Find the GPU address of this or probably use the descriptor in it.
 		cbvDesc.SizeInBytes = dx12_buffer->GetSize(); // CB size is required to be 256-byte aligned.
 		auto buffer = dx12_buffer->GetConstantBufferView();
 		DX12RendererAPI::device->CreateConstantBufferView(&cbvDesc, table.GetDescriptorHandle(0));

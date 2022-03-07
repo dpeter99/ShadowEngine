@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
 
     <Platforms>AnyCPU;x64</Platforms>
 
@@ -27,10 +27,6 @@
     <Compile Remove="dependencies\**" />
     <EmbeddedResource Remove="dependencies\**" />
     <None Remove="dependencies\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="dependencies\TiledSharp\TiledSharp\TiledSharp.csproj" />
   </ItemGroup>
 
   <ItemGroup>

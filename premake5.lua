@@ -32,12 +32,6 @@ IncludeDir["ShadowEngine"] = "ShadowEngine/src"
 group "Dependencies"
 	include "ShadowEngine/dependencies/Glad"
 	include "ShadowEngine/dependencies/imgui"
-	
-	externalproject "TiledSharp"
-	   location "ShadowEngineBuild/dependencies/TiledSharp/TiledSharp"
-	   uuid "75220C4A-61DA-4D97-CAE1-26F3B6B8E887"
-	   kind "SharedLib"
-	   language "C#"
 
 project "Glm"
 	location "ShadowEngine/dependencies/glm"
