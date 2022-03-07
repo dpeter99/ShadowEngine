@@ -32,7 +32,7 @@ project "ShadowLight"
 
 	prebuildcommands{
 		[[
-			%{wks.location}/bin/]] .. outputdir .. [[/ShadowEngineBuild/net5.0/ShadowEngineBuild.exe --asset-root %{prj.location}/Resources --output %{wks.location}/bin/]] .. outputdir .. [[/%{prj.name}
+			%{wks.location}/bin/]] .. outputdir .. [[/ShadowEngineBuild/net6.0/ShadowEngineBuild.exe --asset-root %{prj.location}/Resources --output %{wks.location}/bin/]] .. outputdir .. [[/%{prj.name}
 		]],
 		--"echo %{prj.location}"
 		--"{COPY} %{prj.location}/dependencies/SDL2/lib/VC/%{cfg.architecture}/SDL2.dll \"%{cfg.buildtarget.directory}\"",
