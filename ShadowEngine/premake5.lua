@@ -98,7 +98,8 @@ project "ShadowEngine"
 		}
 
 		libdirs {
-			"%{prj.name}/dependencies/SDL2/lib/VC/%{cfg.architecture}/"
+			"%{prj.name}/dependencies/SDL2/lib/VC/%{cfg.architecture}/",
+			"%{prj.name}/dependencies/dxc/bin/%{cfg.architecture}/"
 		}
 
 		postbuildcommands{

@@ -21,6 +21,8 @@ namespace ShadowEngineBuild.AssetPacks
 
             extensions.Add(".obj");
             extensions.Add(".fbx");
+
+            extensions.Add(".ttf");
         }
 
         public void FinishSteps()

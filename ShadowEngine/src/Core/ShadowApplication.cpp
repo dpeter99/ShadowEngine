@@ -60,6 +60,8 @@ namespace ShadowEngine {
 		moduleManager.PushModule(new SDLPlatform::SDLModule());
 		moduleManager.PushModule(new Rendering::Renderer());
 
+		moduleManager.PushModule(new Assets::AssetManager());
+
 		if(!no_gui)
 		moduleManager.PushModule(new DebugGui::ImGuiModule());
 		
@@ -67,7 +69,7 @@ namespace ShadowEngine {
 		//moduleManager.PushModule(new Debug::DebugModule());
 		moduleManager.PushModule(new EntitySystem::EntitySystem());
 
-		moduleManager.PushModule(new Assets::AssetManager());
+		
 
 		game->Init();
 		

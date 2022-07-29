@@ -37,12 +37,17 @@ namespace ShadowEngine::DebugGui {
 		static ImWchar ranges[] = { 0xf000, 0xf82f, 0 };
 		ImFontConfig config;
 		config.MergeMode = true;
+
+		auto assetMG = ShadowEngine::ShadowApplication::Get().GetModuleManager().GetModuleByType<Assets::AssetManager>();
+		
+		
+
 		auto fontRegularPath
-			= std::string("./Resources/Fonts/") + FONT_ICON_FILE_NAME_FAR;
+			= std::string("./Resources/demo/fonts/") + FONT_ICON_FILE_NAME_FAR;
 		_fontRegular = io.Fonts->AddFontFromFileTTF(fontRegularPath.c_str(),
 			ImGui::IconSize, &config, ranges);
 		auto fontSolidPath
-			= std::string("./Resources/Fonts/") + FONT_ICON_FILE_NAME_FAS;
+			= std::string("./Resources/demo/fonts/") + FONT_ICON_FILE_NAME_FAS;
 		_fontSolid = io.Fonts->AddFontFromFileTTF(fontSolidPath.c_str(),
 			ImGui::IconSize, &config, ranges);
 	}
